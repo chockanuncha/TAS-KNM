@@ -8,14 +8,14 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("TAS")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("TAS")> 
-<Assembly: AssemblyCopyright("Copyright ©  2012")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("InTAS_Client")>
+<Assembly: AssemblyDescription("InTAS Client for KNM LPG Terminal")>
+<Assembly: AssemblyCompany("Infinitecontrol Co,;Ltd")>
+<Assembly: AssemblyProduct("InTAS_Client")>
+<Assembly: AssemblyCopyright("Copyright ©  2013")>
+<Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("9309ffab-546e-4c5f-b241-f10f55b727e1")> 

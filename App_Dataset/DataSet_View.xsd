@@ -4,36 +4,36 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.RadControlsWinFormsApp1.My.MySettings.GlobalReference.Default.ConnectionString" Provider="Oracle.ManagedDataAccess.Client" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RadControlsWinFormsApp1.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_USERTableAdapter" GeneratorDataComponentClassName="V_USERTableAdapter" Name="V_USER" UserDataComponentName="V_USERTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectName="ICC.V_USER" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectName="TAS.dbo.V_USER" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        ICC.V_USER.*
-FROM            ICC.V_USER</CommandText>
+                    <CommandText>SELECT        U_ID, U_DATE, U_TIME, U_NAME, U_GROUP, U_PASSWD, U_DESC, U_NAME_S, U_STATUS, UPDATE_DATE, G_ID, G_NAME, G_DESC, STATUS_NAME
+FROM            V_USER</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="U_ID" DataSetColumn="U_ID" />
               <Mapping SourceColumn="U_DATE" DataSetColumn="U_DATE" />
               <Mapping SourceColumn="U_TIME" DataSetColumn="U_TIME" />
               <Mapping SourceColumn="U_NAME" DataSetColumn="U_NAME" />
-              <Mapping SourceColumn="U_GROUP" DataSetColumn="U_GROUP" />
               <Mapping SourceColumn="U_PASSWD" DataSetColumn="U_PASSWD" />
               <Mapping SourceColumn="U_DESC" DataSetColumn="U_DESC" />
               <Mapping SourceColumn="U_NAME_S" DataSetColumn="U_NAME_S" />
               <Mapping SourceColumn="U_STATUS" DataSetColumn="U_STATUS" />
               <Mapping SourceColumn="UPDATE_DATE" DataSetColumn="UPDATE_DATE" />
-              <Mapping SourceColumn="G_ID" DataSetColumn="G_ID" />
               <Mapping SourceColumn="G_NAME" DataSetColumn="G_NAME" />
               <Mapping SourceColumn="G_DESC" DataSetColumn="G_DESC" />
               <Mapping SourceColumn="STATUS_NAME" DataSetColumn="STATUS_NAME" />
+              <Mapping SourceColumn="U_ID" DataSetColumn="U_ID" />
+              <Mapping SourceColumn="U_GROUP" DataSetColumn="U_GROUP" />
+              <Mapping SourceColumn="G_ID" DataSetColumn="G_ID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -249,19 +249,35 @@ FROM            ICC.V_LOADINGNOTE</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_TRUCKTableAdapter" GeneratorDataComponentClassName="V_TRUCKTableAdapter" Name="V_TRUCK" UserDataComponentName="V_TRUCKTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectName="ICC.V_TRUCK" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectName="TAS.dbo.V_TRUCK" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        ICC.V_TRUCK.*
-FROM            ICC.V_TRUCK</CommandText>
+                    <CommandText>SELECT        ID, TRUCK_NUMBER, TRUCK_TYPE, TRUCK_CAPASITY, TRUCK_COMP_NUM, TRUCK_CAPA_COPM1, TRUCK_CAPA_COPM2, TRUCK_CAPA_COPM3, TRUCK_CAPA_COPM4, TRUCK_CAPA_COPM5, TRUCK_CAPA_COPM6, 
+                         TRUCK_CAPA_COPM7, TRUCK_CAPA_COPM8, TRUCK_CAPA_COPM9, TRUCK_CAPA_COPM10, TRUCK_CAPA_COPM11, TRUCK_CAPA_COPM12, TRUCK_CAPA_COPM13, TRUCK_CAPA_COPM14, TRUCK_CAPA_COPM15, 
+                         TRUCK_CAPA_COPM16, TRUCK_CAPA_COPM17, TRUCK_CAPA_COPM18, TRUCK_CAPA_COPM19, TRUCK_CAPA_COPM20, TRUCK_BLACK_LIST, TRUCK_COMPANY, TRUCK_DRIVER, DRIVER_ID, TRUCK_DATE, TYPE_ARM, 
+                         TRUCK_SHIPPER, INSURANCE_VALID_FORM, INSURANCE_VALID_TO, INSURANCE_DATEEXPIRE, TRUCK_MEASURELAST, TRUCK_MEASURENEXT, MEASURE_DATEEXPIRE, CONDITION_VALID_FORM, CONDITION_VALID_TO, 
+                         CONDITION_DATEEXPIRE, SP_CODE, TRUCK_COMPANYID
+FROM            V_TRUCK</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="TRUCK_NUMBER" DataSetColumn="TRUCK_NUMBER" />
+              <Mapping SourceColumn="TRUCK_BLACK_LIST" DataSetColumn="TRUCK_BLACK_LIST" />
+              <Mapping SourceColumn="TRUCK_COMPANY" DataSetColumn="TRUCK_COMPANY" />
+              <Mapping SourceColumn="TRUCK_DRIVER" DataSetColumn="TRUCK_DRIVER" />
+              <Mapping SourceColumn="TRUCK_DATE" DataSetColumn="TRUCK_DATE" />
+              <Mapping SourceColumn="TYPE_ARM" DataSetColumn="TYPE_ARM" />
+              <Mapping SourceColumn="INSURANCE_VALID_FORM" DataSetColumn="INSURANCE_VALID_FORM" />
+              <Mapping SourceColumn="INSURANCE_VALID_TO" DataSetColumn="INSURANCE_VALID_TO" />
+              <Mapping SourceColumn="TRUCK_MEASURELAST" DataSetColumn="TRUCK_MEASURELAST" />
+              <Mapping SourceColumn="TRUCK_MEASURENEXT" DataSetColumn="TRUCK_MEASURENEXT" />
+              <Mapping SourceColumn="CONDITION_VALID_FORM" DataSetColumn="CONDITION_VALID_FORM" />
+              <Mapping SourceColumn="CONDITION_VALID_TO" DataSetColumn="CONDITION_VALID_TO" />
+              <Mapping SourceColumn="SP_CODE" DataSetColumn="SP_CODE" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="TRUCK_TYPE" DataSetColumn="TRUCK_TYPE" />
               <Mapping SourceColumn="TRUCK_CAPASITY" DataSetColumn="TRUCK_CAPASITY" />
               <Mapping SourceColumn="TRUCK_COMP_NUM" DataSetColumn="TRUCK_COMP_NUM" />
@@ -285,23 +301,11 @@ FROM            ICC.V_TRUCK</CommandText>
               <Mapping SourceColumn="TRUCK_CAPA_COPM18" DataSetColumn="TRUCK_CAPA_COPM18" />
               <Mapping SourceColumn="TRUCK_CAPA_COPM19" DataSetColumn="TRUCK_CAPA_COPM19" />
               <Mapping SourceColumn="TRUCK_CAPA_COPM20" DataSetColumn="TRUCK_CAPA_COPM20" />
-              <Mapping SourceColumn="TRUCK_BLACK_LIST" DataSetColumn="TRUCK_BLACK_LIST" />
-              <Mapping SourceColumn="TRUCK_COMPANY" DataSetColumn="TRUCK_COMPANY" />
-              <Mapping SourceColumn="TRUCK_DRIVER" DataSetColumn="TRUCK_DRIVER" />
               <Mapping SourceColumn="DRIVER_ID" DataSetColumn="DRIVER_ID" />
-              <Mapping SourceColumn="TRUCK_DATE" DataSetColumn="TRUCK_DATE" />
-              <Mapping SourceColumn="TYPE_ARM" DataSetColumn="TYPE_ARM" />
               <Mapping SourceColumn="TRUCK_SHIPPER" DataSetColumn="TRUCK_SHIPPER" />
-              <Mapping SourceColumn="INSURANCE_VALID_FORM" DataSetColumn="INSURANCE_VALID_FORM" />
-              <Mapping SourceColumn="INSURANCE_VALID_TO" DataSetColumn="INSURANCE_VALID_TO" />
               <Mapping SourceColumn="INSURANCE_DATEEXPIRE" DataSetColumn="INSURANCE_DATEEXPIRE" />
-              <Mapping SourceColumn="TRUCK_MEASURELAST" DataSetColumn="TRUCK_MEASURELAST" />
-              <Mapping SourceColumn="TRUCK_MEASURENEXT" DataSetColumn="TRUCK_MEASURENEXT" />
               <Mapping SourceColumn="MEASURE_DATEEXPIRE" DataSetColumn="MEASURE_DATEEXPIRE" />
-              <Mapping SourceColumn="CONDITION_VALID_FORM" DataSetColumn="CONDITION_VALID_FORM" />
-              <Mapping SourceColumn="CONDITION_VALID_TO" DataSetColumn="CONDITION_VALID_TO" />
               <Mapping SourceColumn="CONDITION_DATEEXPIRE" DataSetColumn="CONDITION_DATEEXPIRE" />
-              <Mapping SourceColumn="SP_CODE" DataSetColumn="SP_CODE" />
               <Mapping SourceColumn="TRUCK_COMPANYID" DataSetColumn="TRUCK_COMPANYID" />
             </Mappings>
             <Sources />
@@ -629,7 +633,6 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
         <xs:element name="V_USER" msprop:Generator_TableClassName="V_USERDataTable" msprop:Generator_TableVarName="tableV_USER" msprop:Generator_TablePropName="V_USER" msprop:Generator_RowDeletingName="V_USERRowDeleting" msprop:Generator_RowChangingName="V_USERRowChanging" msprop:Generator_RowEvHandlerName="V_USERRowChangeEventHandler" msprop:Generator_RowDeletedName="V_USERRowDeleted" msprop:Generator_UserTableName="V_USER" msprop:Generator_RowChangedName="V_USERRowChanged" msprop:Generator_RowEvArgName="V_USERRowChangeEvent" msprop:Generator_RowClassName="V_USERRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="U_ID" msprop:Generator_ColumnVarNameInTable="columnU_ID" msprop:Generator_ColumnPropNameInRow="U_ID" msprop:Generator_ColumnPropNameInTable="U_IDColumn" msprop:Generator_UserColumnName="U_ID" type="xs:long" />
               <xs:element name="U_DATE" msprop:Generator_ColumnVarNameInTable="columnU_DATE" msprop:Generator_ColumnPropNameInRow="U_DATE" msprop:Generator_ColumnPropNameInTable="U_DATEColumn" msprop:Generator_UserColumnName="U_DATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="U_TIME" msprop:Generator_ColumnVarNameInTable="columnU_TIME" msprop:Generator_ColumnPropNameInRow="U_TIME" msprop:Generator_ColumnPropNameInTable="U_TIMEColumn" msprop:Generator_UserColumnName="U_TIME" type="xs:dateTime" minOccurs="0" />
               <xs:element name="U_NAME" msprop:Generator_ColumnVarNameInTable="columnU_NAME" msprop:Generator_ColumnPropNameInRow="U_NAME" msprop:Generator_ColumnPropNameInTable="U_NAMEColumn" msprop:Generator_UserColumnName="U_NAME">
@@ -639,7 +642,6 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="U_GROUP" msprop:Generator_ColumnVarNameInTable="columnU_GROUP" msprop:Generator_ColumnPropNameInRow="U_GROUP" msprop:Generator_ColumnPropNameInTable="U_GROUPColumn" msprop:Generator_UserColumnName="U_GROUP" type="xs:long" />
               <xs:element name="U_PASSWD" msprop:Generator_ColumnVarNameInTable="columnU_PASSWD" msprop:Generator_ColumnPropNameInRow="U_PASSWD" msprop:Generator_ColumnPropNameInTable="U_PASSWDColumn" msprop:Generator_UserColumnName="U_PASSWD" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -663,7 +665,6 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
               </xs:element>
               <xs:element name="U_STATUS" msprop:Generator_ColumnVarNameInTable="columnU_STATUS" msprop:Generator_ColumnPropNameInRow="U_STATUS" msprop:Generator_ColumnPropNameInTable="U_STATUSColumn" msprop:Generator_UserColumnName="U_STATUS" type="xs:int" />
               <xs:element name="UPDATE_DATE" msprop:Generator_ColumnVarNameInTable="columnUPDATE_DATE" msprop:Generator_ColumnPropNameInRow="UPDATE_DATE" msprop:Generator_ColumnPropNameInTable="UPDATE_DATEColumn" msprop:Generator_UserColumnName="UPDATE_DATE" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="G_ID" msprop:Generator_ColumnVarNameInTable="columnG_ID" msprop:Generator_ColumnPropNameInRow="G_ID" msprop:Generator_ColumnPropNameInTable="G_IDColumn" msprop:Generator_UserColumnName="G_ID" type="xs:long" />
               <xs:element name="G_NAME" msprop:Generator_ColumnVarNameInTable="columnG_NAME" msprop:Generator_ColumnPropNameInRow="G_NAME" msprop:Generator_ColumnPropNameInTable="G_NAMEColumn" msprop:Generator_UserColumnName="G_NAME">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -685,6 +686,9 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="U_ID" msprop:Generator_ColumnVarNameInTable="columnU_ID" msprop:Generator_ColumnPropNameInRow="U_ID" msprop:Generator_ColumnPropNameInTable="U_IDColumn" msprop:Generator_UserColumnName="U_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="U_GROUP" msprop:Generator_ColumnVarNameInTable="columnU_GROUP" msprop:Generator_ColumnPropNameInRow="U_GROUP" msprop:Generator_ColumnPropNameInTable="U_GROUPColumn" msprop:Generator_UserColumnName="U_GROUP" type="xs:int" />
+              <xs:element name="G_ID" msprop:Generator_ColumnVarNameInTable="columnG_ID" msprop:Generator_ColumnPropNameInRow="G_ID" msprop:Generator_ColumnPropNameInTable="G_IDColumn" msprop:Generator_UserColumnName="G_ID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1396,7 +1400,6 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
         <xs:element name="V_TRUCK" msprop:Generator_TableClassName="V_TRUCKDataTable" msprop:Generator_TableVarName="tableV_TRUCK" msprop:Generator_TablePropName="V_TRUCK" msprop:Generator_RowDeletingName="V_TRUCKRowDeleting" msprop:Generator_RowChangingName="V_TRUCKRowChanging" msprop:Generator_RowEvHandlerName="V_TRUCKRowChangeEventHandler" msprop:Generator_RowDeletedName="V_TRUCKRowDeleted" msprop:Generator_UserTableName="V_TRUCK" msprop:Generator_RowChangedName="V_TRUCKRowChanged" msprop:Generator_RowEvArgName="V_TRUCKRowChangeEvent" msprop:Generator_RowClassName="V_TRUCKRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" minOccurs="0" />
               <xs:element name="TRUCK_NUMBER" msprop:Generator_ColumnVarNameInTable="columnTRUCK_NUMBER" msprop:Generator_ColumnPropNameInRow="TRUCK_NUMBER" msprop:Generator_ColumnPropNameInTable="TRUCK_NUMBERColumn" msprop:Generator_UserColumnName="TRUCK_NUMBER">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1404,29 +1407,6 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TRUCK_TYPE" msprop:Generator_ColumnVarNameInTable="columnTRUCK_TYPE" msprop:Generator_ColumnPropNameInRow="TRUCK_TYPE" msprop:Generator_ColumnPropNameInTable="TRUCK_TYPEColumn" msprop:Generator_UserColumnName="TRUCK_TYPE" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPASITY" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPASITY" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPASITY" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPASITYColumn" msprop:Generator_UserColumnName="TRUCK_CAPASITY" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_COMP_NUM" msprop:Generator_ColumnVarNameInTable="columnTRUCK_COMP_NUM" msprop:Generator_ColumnPropNameInRow="TRUCK_COMP_NUM" msprop:Generator_ColumnPropNameInTable="TRUCK_COMP_NUMColumn" msprop:Generator_UserColumnName="TRUCK_COMP_NUM" type="xs:long" />
-              <xs:element name="TRUCK_CAPA_COPM1" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM1" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM1" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM1Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM1" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM2" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM2" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM2" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM2Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM2" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM3" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM3" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM3" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM3Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM3" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM4" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM4" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM4" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM4Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM4" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM5" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM5" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM5" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM5Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM5" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM6" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM6" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM6" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM6Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM6" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM7" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM7" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM7" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM7Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM7" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM8" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM8" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM8" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM8Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM8" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM9" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM9" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM9" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM9Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM9" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM10" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM10" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM10" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM10Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM10" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM11" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM11" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM11" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM11Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM11" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM12" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM12" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM12" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM12Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM12" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM13" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM13" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM13" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM13Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM13" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM14" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM14" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM14" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM14Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM14" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM15" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM15" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM15" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM15Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM15" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM16" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM16" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM16" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM16Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM16" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM17" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM17" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM17" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM17Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM17" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM18" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM18" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM18" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM18Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM18" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM19" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM19" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM19" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM19Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM19" type="xs:long" minOccurs="0" />
-              <xs:element name="TRUCK_CAPA_COPM20" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM20" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM20" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM20Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM20" type="xs:long" minOccurs="0" />
               <xs:element name="TRUCK_BLACK_LIST" msprop:Generator_ColumnVarNameInTable="columnTRUCK_BLACK_LIST" msprop:Generator_ColumnPropNameInRow="TRUCK_BLACK_LIST" msprop:Generator_ColumnPropNameInTable="TRUCK_BLACK_LISTColumn" msprop:Generator_UserColumnName="TRUCK_BLACK_LIST" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1448,7 +1428,6 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DRIVER_ID" msprop:Generator_ColumnVarNameInTable="columnDRIVER_ID" msprop:Generator_ColumnPropNameInRow="DRIVER_ID" msprop:Generator_ColumnPropNameInTable="DRIVER_IDColumn" msprop:Generator_UserColumnName="DRIVER_ID" type="xs:long" minOccurs="0" />
               <xs:element name="TRUCK_DATE" msprop:Generator_ColumnVarNameInTable="columnTRUCK_DATE" msprop:Generator_ColumnPropNameInRow="TRUCK_DATE" msprop:Generator_ColumnPropNameInTable="TRUCK_DATEColumn" msprop:Generator_UserColumnName="TRUCK_DATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="TYPE_ARM" msprop:Generator_ColumnVarNameInTable="columnTYPE_ARM" msprop:Generator_ColumnPropNameInRow="TYPE_ARM" msprop:Generator_ColumnPropNameInTable="TYPE_ARMColumn" msprop:Generator_UserColumnName="TYPE_ARM" minOccurs="0">
                 <xs:simpleType>
@@ -1457,16 +1436,12 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TRUCK_SHIPPER" msprop:Generator_ColumnVarNameInTable="columnTRUCK_SHIPPER" msprop:Generator_ColumnPropNameInRow="TRUCK_SHIPPER" msprop:Generator_ColumnPropNameInTable="TRUCK_SHIPPERColumn" msprop:Generator_UserColumnName="TRUCK_SHIPPER" type="xs:long" minOccurs="0" />
               <xs:element name="INSURANCE_VALID_FORM" msprop:Generator_ColumnVarNameInTable="columnINSURANCE_VALID_FORM" msprop:Generator_ColumnPropNameInRow="INSURANCE_VALID_FORM" msprop:Generator_ColumnPropNameInTable="INSURANCE_VALID_FORMColumn" msprop:Generator_UserColumnName="INSURANCE_VALID_FORM" type="xs:dateTime" minOccurs="0" />
               <xs:element name="INSURANCE_VALID_TO" msprop:Generator_ColumnVarNameInTable="columnINSURANCE_VALID_TO" msprop:Generator_ColumnPropNameInRow="INSURANCE_VALID_TO" msprop:Generator_ColumnPropNameInTable="INSURANCE_VALID_TOColumn" msprop:Generator_UserColumnName="INSURANCE_VALID_TO" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="INSURANCE_DATEEXPIRE" msprop:Generator_ColumnVarNameInTable="columnINSURANCE_DATEEXPIRE" msprop:Generator_ColumnPropNameInRow="INSURANCE_DATEEXPIRE" msprop:Generator_ColumnPropNameInTable="INSURANCE_DATEEXPIREColumn" msprop:Generator_UserColumnName="INSURANCE_DATEEXPIRE" type="xs:decimal" minOccurs="0" />
               <xs:element name="TRUCK_MEASURELAST" msprop:Generator_ColumnVarNameInTable="columnTRUCK_MEASURELAST" msprop:Generator_ColumnPropNameInRow="TRUCK_MEASURELAST" msprop:Generator_ColumnPropNameInTable="TRUCK_MEASURELASTColumn" msprop:Generator_UserColumnName="TRUCK_MEASURELAST" type="xs:dateTime" minOccurs="0" />
               <xs:element name="TRUCK_MEASURENEXT" msprop:Generator_ColumnVarNameInTable="columnTRUCK_MEASURENEXT" msprop:Generator_ColumnPropNameInRow="TRUCK_MEASURENEXT" msprop:Generator_ColumnPropNameInTable="TRUCK_MEASURENEXTColumn" msprop:Generator_UserColumnName="TRUCK_MEASURENEXT" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="MEASURE_DATEEXPIRE" msprop:Generator_ColumnVarNameInTable="columnMEASURE_DATEEXPIRE" msprop:Generator_ColumnPropNameInRow="MEASURE_DATEEXPIRE" msprop:Generator_ColumnPropNameInTable="MEASURE_DATEEXPIREColumn" msprop:Generator_UserColumnName="MEASURE_DATEEXPIRE" type="xs:decimal" minOccurs="0" />
               <xs:element name="CONDITION_VALID_FORM" msprop:Generator_ColumnVarNameInTable="columnCONDITION_VALID_FORM" msprop:Generator_ColumnPropNameInRow="CONDITION_VALID_FORM" msprop:Generator_ColumnPropNameInTable="CONDITION_VALID_FORMColumn" msprop:Generator_UserColumnName="CONDITION_VALID_FORM" type="xs:dateTime" minOccurs="0" />
               <xs:element name="CONDITION_VALID_TO" msprop:Generator_ColumnVarNameInTable="columnCONDITION_VALID_TO" msprop:Generator_ColumnPropNameInRow="CONDITION_VALID_TO" msprop:Generator_ColumnPropNameInTable="CONDITION_VALID_TOColumn" msprop:Generator_UserColumnName="CONDITION_VALID_TO" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="CONDITION_DATEEXPIRE" msprop:Generator_ColumnVarNameInTable="columnCONDITION_DATEEXPIRE" msprop:Generator_ColumnPropNameInRow="CONDITION_DATEEXPIRE" msprop:Generator_ColumnPropNameInTable="CONDITION_DATEEXPIREColumn" msprop:Generator_UserColumnName="CONDITION_DATEEXPIRE" type="xs:decimal" minOccurs="0" />
               <xs:element name="SP_CODE" msprop:Generator_ColumnVarNameInTable="columnSP_CODE" msprop:Generator_ColumnPropNameInRow="SP_CODE" msprop:Generator_ColumnPropNameInTable="SP_CODEColumn" msprop:Generator_UserColumnName="SP_CODE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1474,7 +1449,36 @@ FROM            ICC.V_BOL_M1M2_NEW</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TRUCK_COMPANYID" msprop:Generator_ColumnVarNameInTable="columnTRUCK_COMPANYID" msprop:Generator_ColumnPropNameInRow="TRUCK_COMPANYID" msprop:Generator_ColumnPropNameInTable="TRUCK_COMPANYIDColumn" msprop:Generator_UserColumnName="TRUCK_COMPANYID" type="xs:long" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_TYPE" msprop:Generator_ColumnVarNameInTable="columnTRUCK_TYPE" msprop:Generator_ColumnPropNameInRow="TRUCK_TYPE" msprop:Generator_ColumnPropNameInTable="TRUCK_TYPEColumn" msprop:Generator_UserColumnName="TRUCK_TYPE" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPASITY" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPASITY" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPASITY" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPASITYColumn" msprop:Generator_UserColumnName="TRUCK_CAPASITY" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_COMP_NUM" msprop:Generator_ColumnVarNameInTable="columnTRUCK_COMP_NUM" msprop:Generator_ColumnPropNameInRow="TRUCK_COMP_NUM" msprop:Generator_ColumnPropNameInTable="TRUCK_COMP_NUMColumn" msprop:Generator_UserColumnName="TRUCK_COMP_NUM" type="xs:int" />
+              <xs:element name="TRUCK_CAPA_COPM1" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM1" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM1" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM1Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM1" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM2" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM2" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM2" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM2Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM2" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM3" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM3" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM3" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM3Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM3" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM4" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM4" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM4" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM4Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM4" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM5" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM5" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM5" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM5Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM5" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM6" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM6" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM6" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM6Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM6" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM7" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM7" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM7" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM7Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM7" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM8" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM8" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM8" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM8Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM8" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM9" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM9" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM9" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM9Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM9" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM10" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM10" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM10" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM10Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM10" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM11" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM11" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM11" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM11Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM11" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM12" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM12" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM12" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM12Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM12" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM13" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM13" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM13" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM13Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM13" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM14" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM14" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM14" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM14Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM14" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM15" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM15" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM15" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM15Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM15" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM16" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM16" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM16" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM16Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM16" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM17" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM17" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM17" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM17Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM17" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM18" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM18" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM18" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM18Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM18" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM19" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM19" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM19" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM19Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM19" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_CAPA_COPM20" msprop:Generator_ColumnVarNameInTable="columnTRUCK_CAPA_COPM20" msprop:Generator_ColumnPropNameInRow="TRUCK_CAPA_COPM20" msprop:Generator_ColumnPropNameInTable="TRUCK_CAPA_COPM20Column" msprop:Generator_UserColumnName="TRUCK_CAPA_COPM20" type="xs:int" minOccurs="0" />
+              <xs:element name="DRIVER_ID" msprop:Generator_ColumnVarNameInTable="columnDRIVER_ID" msprop:Generator_ColumnPropNameInRow="DRIVER_ID" msprop:Generator_ColumnPropNameInTable="DRIVER_IDColumn" msprop:Generator_UserColumnName="DRIVER_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TRUCK_SHIPPER" msprop:Generator_ColumnVarNameInTable="columnTRUCK_SHIPPER" msprop:Generator_ColumnPropNameInRow="TRUCK_SHIPPER" msprop:Generator_ColumnPropNameInTable="TRUCK_SHIPPERColumn" msprop:Generator_UserColumnName="TRUCK_SHIPPER" type="xs:int" minOccurs="0" />
+              <xs:element name="INSURANCE_DATEEXPIRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINSURANCE_DATEEXPIRE" msprop:Generator_ColumnPropNameInRow="INSURANCE_DATEEXPIRE" msprop:Generator_ColumnPropNameInTable="INSURANCE_DATEEXPIREColumn" msprop:Generator_UserColumnName="INSURANCE_DATEEXPIRE" type="xs:double" minOccurs="0" />
+              <xs:element name="MEASURE_DATEEXPIRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMEASURE_DATEEXPIRE" msprop:Generator_ColumnPropNameInRow="MEASURE_DATEEXPIRE" msprop:Generator_ColumnPropNameInTable="MEASURE_DATEEXPIREColumn" msprop:Generator_UserColumnName="MEASURE_DATEEXPIRE" type="xs:double" minOccurs="0" />
+              <xs:element name="CONDITION_DATEEXPIRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONDITION_DATEEXPIRE" msprop:Generator_ColumnPropNameInRow="CONDITION_DATEEXPIRE" msprop:Generator_ColumnPropNameInTable="CONDITION_DATEEXPIREColumn" msprop:Generator_UserColumnName="CONDITION_DATEEXPIRE" type="xs:double" minOccurs="0" />
+              <xs:element name="TRUCK_COMPANYID" msprop:Generator_ColumnVarNameInTable="columnTRUCK_COMPANYID" msprop:Generator_ColumnPropNameInRow="TRUCK_COMPANYID" msprop:Generator_ColumnPropNameInTable="TRUCK_COMPANYIDColumn" msprop:Generator_UserColumnName="TRUCK_COMPANYID" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -563,15 +563,11 @@ Partial Public Class DataSet_View
     Partial Public Class V_USERDataTable
         Inherits Global.System.Data.TypedTableBase(Of V_USERRow)
         
-        Private columnU_ID As Global.System.Data.DataColumn
-        
         Private columnU_DATE As Global.System.Data.DataColumn
         
         Private columnU_TIME As Global.System.Data.DataColumn
         
         Private columnU_NAME As Global.System.Data.DataColumn
-        
-        Private columnU_GROUP As Global.System.Data.DataColumn
         
         Private columnU_PASSWD As Global.System.Data.DataColumn
         
@@ -583,13 +579,17 @@ Partial Public Class DataSet_View
         
         Private columnUPDATE_DATE As Global.System.Data.DataColumn
         
-        Private columnG_ID As Global.System.Data.DataColumn
-        
         Private columnG_NAME As Global.System.Data.DataColumn
         
         Private columnG_DESC As Global.System.Data.DataColumn
         
         Private columnSTATUS_NAME As Global.System.Data.DataColumn
+        
+        Private columnU_ID As Global.System.Data.DataColumn
+        
+        Private columnU_GROUP As Global.System.Data.DataColumn
+        
+        Private columnG_ID As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -628,14 +628,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property U_IDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnU_ID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property U_DATEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnU_DATE
@@ -655,14 +647,6 @@ Partial Public Class DataSet_View
         Public ReadOnly Property U_NAMEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnU_NAME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property U_GROUPColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnU_GROUP
             End Get
         End Property
         
@@ -708,14 +692,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property G_IDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnG_ID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property G_NAMEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnG_NAME
@@ -735,6 +711,30 @@ Partial Public Class DataSet_View
         Public ReadOnly Property STATUS_NAMEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnSTATUS_NAME
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property U_IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnU_ID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property U_GROUPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnU_GROUP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property G_IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnG_ID
             End Get
         End Property
         
@@ -775,9 +775,9 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddV_USERRow(ByVal U_ID As Long, ByVal U_DATE As Date, ByVal U_TIME As Date, ByVal U_NAME As String, ByVal U_GROUP As Long, ByVal U_PASSWD As String, ByVal U_DESC As String, ByVal U_NAME_S As String, ByVal U_STATUS As Integer, ByVal UPDATE_DATE As Date, ByVal G_ID As Long, ByVal G_NAME As String, ByVal G_DESC As String, ByVal STATUS_NAME As String) As V_USERRow
+        Public Overloads Function AddV_USERRow(ByVal U_DATE As Date, ByVal U_TIME As Date, ByVal U_NAME As String, ByVal U_PASSWD As String, ByVal U_DESC As String, ByVal U_NAME_S As String, ByVal U_STATUS As Integer, ByVal UPDATE_DATE As Date, ByVal G_NAME As String, ByVal G_DESC As String, ByVal STATUS_NAME As String, ByVal U_ID As Integer, ByVal U_GROUP As Integer, ByVal G_ID As Integer) As V_USERRow
             Dim rowV_USERRow As V_USERRow = CType(Me.NewRow,V_USERRow)
-            Dim columnValuesArray() As Object = New Object() {U_ID, U_DATE, U_TIME, U_NAME, U_GROUP, U_PASSWD, U_DESC, U_NAME_S, U_STATUS, UPDATE_DATE, G_ID, G_NAME, G_DESC, STATUS_NAME}
+            Dim columnValuesArray() As Object = New Object() {U_DATE, U_TIME, U_NAME, U_PASSWD, U_DESC, U_NAME_S, U_STATUS, UPDATE_DATE, G_NAME, G_DESC, STATUS_NAME, U_ID, U_GROUP, G_ID}
             rowV_USERRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowV_USERRow)
             Return rowV_USERRow
@@ -800,35 +800,31 @@ Partial Public Class DataSet_View
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnU_ID = MyBase.Columns("U_ID")
             Me.columnU_DATE = MyBase.Columns("U_DATE")
             Me.columnU_TIME = MyBase.Columns("U_TIME")
             Me.columnU_NAME = MyBase.Columns("U_NAME")
-            Me.columnU_GROUP = MyBase.Columns("U_GROUP")
             Me.columnU_PASSWD = MyBase.Columns("U_PASSWD")
             Me.columnU_DESC = MyBase.Columns("U_DESC")
             Me.columnU_NAME_S = MyBase.Columns("U_NAME_S")
             Me.columnU_STATUS = MyBase.Columns("U_STATUS")
             Me.columnUPDATE_DATE = MyBase.Columns("UPDATE_DATE")
-            Me.columnG_ID = MyBase.Columns("G_ID")
             Me.columnG_NAME = MyBase.Columns("G_NAME")
             Me.columnG_DESC = MyBase.Columns("G_DESC")
             Me.columnSTATUS_NAME = MyBase.Columns("STATUS_NAME")
+            Me.columnU_ID = MyBase.Columns("U_ID")
+            Me.columnU_GROUP = MyBase.Columns("U_GROUP")
+            Me.columnG_ID = MyBase.Columns("G_ID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnU_ID = New Global.System.Data.DataColumn("U_ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnU_ID)
             Me.columnU_DATE = New Global.System.Data.DataColumn("U_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnU_DATE)
             Me.columnU_TIME = New Global.System.Data.DataColumn("U_TIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnU_TIME)
             Me.columnU_NAME = New Global.System.Data.DataColumn("U_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnU_NAME)
-            Me.columnU_GROUP = New Global.System.Data.DataColumn("U_GROUP", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnU_GROUP)
             Me.columnU_PASSWD = New Global.System.Data.DataColumn("U_PASSWD", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnU_PASSWD)
             Me.columnU_DESC = New Global.System.Data.DataColumn("U_DESC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -839,27 +835,30 @@ Partial Public Class DataSet_View
             MyBase.Columns.Add(Me.columnU_STATUS)
             Me.columnUPDATE_DATE = New Global.System.Data.DataColumn("UPDATE_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUPDATE_DATE)
-            Me.columnG_ID = New Global.System.Data.DataColumn("G_ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnG_ID)
             Me.columnG_NAME = New Global.System.Data.DataColumn("G_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnG_NAME)
             Me.columnG_DESC = New Global.System.Data.DataColumn("G_DESC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnG_DESC)
             Me.columnSTATUS_NAME = New Global.System.Data.DataColumn("STATUS_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSTATUS_NAME)
-            Me.columnU_ID.AllowDBNull = false
+            Me.columnU_ID = New Global.System.Data.DataColumn("U_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnU_ID)
+            Me.columnU_GROUP = New Global.System.Data.DataColumn("U_GROUP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnU_GROUP)
+            Me.columnG_ID = New Global.System.Data.DataColumn("G_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnG_ID)
             Me.columnU_NAME.AllowDBNull = false
             Me.columnU_NAME.MaxLength = 50
-            Me.columnU_GROUP.AllowDBNull = false
             Me.columnU_PASSWD.MaxLength = 50
             Me.columnU_DESC.MaxLength = 50
             Me.columnU_NAME_S.MaxLength = 50
             Me.columnU_STATUS.AllowDBNull = false
-            Me.columnG_ID.AllowDBNull = false
             Me.columnG_NAME.AllowDBNull = false
             Me.columnG_NAME.MaxLength = 50
             Me.columnG_DESC.MaxLength = 50
             Me.columnSTATUS_NAME.MaxLength = 50
+            Me.columnU_GROUP.AllowDBNull = false
+            Me.columnG_ID.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4040,9 +4039,33 @@ Partial Public Class DataSet_View
     Partial Public Class V_TRUCKDataTable
         Inherits Global.System.Data.TypedTableBase(Of V_TRUCKRow)
         
-        Private columnID As Global.System.Data.DataColumn
-        
         Private columnTRUCK_NUMBER As Global.System.Data.DataColumn
+        
+        Private columnTRUCK_BLACK_LIST As Global.System.Data.DataColumn
+        
+        Private columnTRUCK_COMPANY As Global.System.Data.DataColumn
+        
+        Private columnTRUCK_DRIVER As Global.System.Data.DataColumn
+        
+        Private columnTRUCK_DATE As Global.System.Data.DataColumn
+        
+        Private columnTYPE_ARM As Global.System.Data.DataColumn
+        
+        Private columnINSURANCE_VALID_FORM As Global.System.Data.DataColumn
+        
+        Private columnINSURANCE_VALID_TO As Global.System.Data.DataColumn
+        
+        Private columnTRUCK_MEASURELAST As Global.System.Data.DataColumn
+        
+        Private columnTRUCK_MEASURENEXT As Global.System.Data.DataColumn
+        
+        Private columnCONDITION_VALID_FORM As Global.System.Data.DataColumn
+        
+        Private columnCONDITION_VALID_TO As Global.System.Data.DataColumn
+        
+        Private columnSP_CODE As Global.System.Data.DataColumn
+        
+        Private columnID As Global.System.Data.DataColumn
         
         Private columnTRUCK_TYPE As Global.System.Data.DataColumn
         
@@ -4090,39 +4113,15 @@ Partial Public Class DataSet_View
         
         Private columnTRUCK_CAPA_COPM20 As Global.System.Data.DataColumn
         
-        Private columnTRUCK_BLACK_LIST As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_COMPANY As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_DRIVER As Global.System.Data.DataColumn
-        
         Private columnDRIVER_ID As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_DATE As Global.System.Data.DataColumn
-        
-        Private columnTYPE_ARM As Global.System.Data.DataColumn
         
         Private columnTRUCK_SHIPPER As Global.System.Data.DataColumn
         
-        Private columnINSURANCE_VALID_FORM As Global.System.Data.DataColumn
-        
-        Private columnINSURANCE_VALID_TO As Global.System.Data.DataColumn
-        
         Private columnINSURANCE_DATEEXPIRE As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_MEASURELAST As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_MEASURENEXT As Global.System.Data.DataColumn
         
         Private columnMEASURE_DATEEXPIRE As Global.System.Data.DataColumn
         
-        Private columnCONDITION_VALID_FORM As Global.System.Data.DataColumn
-        
-        Private columnCONDITION_VALID_TO As Global.System.Data.DataColumn
-        
         Private columnCONDITION_DATEEXPIRE As Global.System.Data.DataColumn
-        
-        Private columnSP_CODE As Global.System.Data.DataColumn
         
         Private columnTRUCK_COMPANYID As Global.System.Data.DataColumn
         
@@ -4163,17 +4162,113 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TRUCK_NUMBERColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnID
+                Return Me.columnTRUCK_NUMBER
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_NUMBERColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TRUCK_BLACK_LISTColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTRUCK_NUMBER
+                Return Me.columnTRUCK_BLACK_LIST
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TRUCK_COMPANYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTRUCK_COMPANY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TRUCK_DRIVERColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTRUCK_DRIVER
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TRUCK_DATEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTRUCK_DATE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TYPE_ARMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTYPE_ARM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property INSURANCE_VALID_FORMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnINSURANCE_VALID_FORM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property INSURANCE_VALID_TOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnINSURANCE_VALID_TO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TRUCK_MEASURELASTColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTRUCK_MEASURELAST
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TRUCK_MEASURENEXTColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTRUCK_MEASURENEXT
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CONDITION_VALID_FORMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCONDITION_VALID_FORM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CONDITION_VALID_TOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCONDITION_VALID_TO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SP_CODEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSP_CODE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnID
             End Get
         End Property
         
@@ -4363,49 +4458,9 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_BLACK_LISTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_BLACK_LIST
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_COMPANYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_COMPANY
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_DRIVERColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_DRIVER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property DRIVER_IDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnDRIVER_ID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_DATEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_DATE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TYPE_ARMColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTYPE_ARM
             End Get
         End Property
         
@@ -4419,41 +4474,9 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property INSURANCE_VALID_FORMColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnINSURANCE_VALID_FORM
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property INSURANCE_VALID_TOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnINSURANCE_VALID_TO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property INSURANCE_DATEEXPIREColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnINSURANCE_DATEEXPIRE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_MEASURELASTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_MEASURELAST
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_MEASURENEXTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_MEASURENEXT
             End Get
         End Property
         
@@ -4467,33 +4490,9 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CONDITION_VALID_FORMColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCONDITION_VALID_FORM
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CONDITION_VALID_TOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCONDITION_VALID_TO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property CONDITION_DATEEXPIREColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCONDITION_DATEEXPIRE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_CODEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSP_CODE
             End Get
         End Property
         
@@ -4543,51 +4542,51 @@ Partial Public Class DataSet_View
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overloads Function AddV_TRUCKRow( _
-                    ByVal ID As Long,  _
                     ByVal TRUCK_NUMBER As String,  _
-                    ByVal TRUCK_TYPE As Long,  _
-                    ByVal TRUCK_CAPASITY As Long,  _
-                    ByVal TRUCK_COMP_NUM As Long,  _
-                    ByVal TRUCK_CAPA_COPM1 As Long,  _
-                    ByVal TRUCK_CAPA_COPM2 As Long,  _
-                    ByVal TRUCK_CAPA_COPM3 As Long,  _
-                    ByVal TRUCK_CAPA_COPM4 As Long,  _
-                    ByVal TRUCK_CAPA_COPM5 As Long,  _
-                    ByVal TRUCK_CAPA_COPM6 As Long,  _
-                    ByVal TRUCK_CAPA_COPM7 As Long,  _
-                    ByVal TRUCK_CAPA_COPM8 As Long,  _
-                    ByVal TRUCK_CAPA_COPM9 As Long,  _
-                    ByVal TRUCK_CAPA_COPM10 As Long,  _
-                    ByVal TRUCK_CAPA_COPM11 As Long,  _
-                    ByVal TRUCK_CAPA_COPM12 As Long,  _
-                    ByVal TRUCK_CAPA_COPM13 As Long,  _
-                    ByVal TRUCK_CAPA_COPM14 As Long,  _
-                    ByVal TRUCK_CAPA_COPM15 As Long,  _
-                    ByVal TRUCK_CAPA_COPM16 As Long,  _
-                    ByVal TRUCK_CAPA_COPM17 As Long,  _
-                    ByVal TRUCK_CAPA_COPM18 As Long,  _
-                    ByVal TRUCK_CAPA_COPM19 As Long,  _
-                    ByVal TRUCK_CAPA_COPM20 As Long,  _
                     ByVal TRUCK_BLACK_LIST As String,  _
                     ByVal TRUCK_COMPANY As String,  _
                     ByVal TRUCK_DRIVER As String,  _
-                    ByVal DRIVER_ID As Long,  _
                     ByVal TRUCK_DATE As Date,  _
                     ByVal TYPE_ARM As String,  _
-                    ByVal TRUCK_SHIPPER As Long,  _
                     ByVal INSURANCE_VALID_FORM As Date,  _
                     ByVal INSURANCE_VALID_TO As Date,  _
-                    ByVal INSURANCE_DATEEXPIRE As Decimal,  _
                     ByVal TRUCK_MEASURELAST As Date,  _
                     ByVal TRUCK_MEASURENEXT As Date,  _
-                    ByVal MEASURE_DATEEXPIRE As Decimal,  _
                     ByVal CONDITION_VALID_FORM As Date,  _
                     ByVal CONDITION_VALID_TO As Date,  _
-                    ByVal CONDITION_DATEEXPIRE As Decimal,  _
                     ByVal SP_CODE As String,  _
-                    ByVal TRUCK_COMPANYID As Long) As V_TRUCKRow
+                    ByVal ID As Integer,  _
+                    ByVal TRUCK_TYPE As Integer,  _
+                    ByVal TRUCK_CAPASITY As Integer,  _
+                    ByVal TRUCK_COMP_NUM As Integer,  _
+                    ByVal TRUCK_CAPA_COPM1 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM2 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM3 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM4 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM5 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM6 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM7 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM8 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM9 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM10 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM11 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM12 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM13 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM14 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM15 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM16 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM17 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM18 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM19 As Integer,  _
+                    ByVal TRUCK_CAPA_COPM20 As Integer,  _
+                    ByVal DRIVER_ID As Integer,  _
+                    ByVal TRUCK_SHIPPER As Integer,  _
+                    ByVal INSURANCE_DATEEXPIRE As Double,  _
+                    ByVal MEASURE_DATEEXPIRE As Double,  _
+                    ByVal CONDITION_DATEEXPIRE As Double,  _
+                    ByVal TRUCK_COMPANYID As Integer) As V_TRUCKRow
             Dim rowV_TRUCKRow As V_TRUCKRow = CType(Me.NewRow,V_TRUCKRow)
-            Dim columnValuesArray() As Object = New Object() {ID, TRUCK_NUMBER, TRUCK_TYPE, TRUCK_CAPASITY, TRUCK_COMP_NUM, TRUCK_CAPA_COPM1, TRUCK_CAPA_COPM2, TRUCK_CAPA_COPM3, TRUCK_CAPA_COPM4, TRUCK_CAPA_COPM5, TRUCK_CAPA_COPM6, TRUCK_CAPA_COPM7, TRUCK_CAPA_COPM8, TRUCK_CAPA_COPM9, TRUCK_CAPA_COPM10, TRUCK_CAPA_COPM11, TRUCK_CAPA_COPM12, TRUCK_CAPA_COPM13, TRUCK_CAPA_COPM14, TRUCK_CAPA_COPM15, TRUCK_CAPA_COPM16, TRUCK_CAPA_COPM17, TRUCK_CAPA_COPM18, TRUCK_CAPA_COPM19, TRUCK_CAPA_COPM20, TRUCK_BLACK_LIST, TRUCK_COMPANY, TRUCK_DRIVER, DRIVER_ID, TRUCK_DATE, TYPE_ARM, TRUCK_SHIPPER, INSURANCE_VALID_FORM, INSURANCE_VALID_TO, INSURANCE_DATEEXPIRE, TRUCK_MEASURELAST, TRUCK_MEASURENEXT, MEASURE_DATEEXPIRE, CONDITION_VALID_FORM, CONDITION_VALID_TO, CONDITION_DATEEXPIRE, SP_CODE, TRUCK_COMPANYID}
+            Dim columnValuesArray() As Object = New Object() {TRUCK_NUMBER, TRUCK_BLACK_LIST, TRUCK_COMPANY, TRUCK_DRIVER, TRUCK_DATE, TYPE_ARM, INSURANCE_VALID_FORM, INSURANCE_VALID_TO, TRUCK_MEASURELAST, TRUCK_MEASURENEXT, CONDITION_VALID_FORM, CONDITION_VALID_TO, SP_CODE, ID, TRUCK_TYPE, TRUCK_CAPASITY, TRUCK_COMP_NUM, TRUCK_CAPA_COPM1, TRUCK_CAPA_COPM2, TRUCK_CAPA_COPM3, TRUCK_CAPA_COPM4, TRUCK_CAPA_COPM5, TRUCK_CAPA_COPM6, TRUCK_CAPA_COPM7, TRUCK_CAPA_COPM8, TRUCK_CAPA_COPM9, TRUCK_CAPA_COPM10, TRUCK_CAPA_COPM11, TRUCK_CAPA_COPM12, TRUCK_CAPA_COPM13, TRUCK_CAPA_COPM14, TRUCK_CAPA_COPM15, TRUCK_CAPA_COPM16, TRUCK_CAPA_COPM17, TRUCK_CAPA_COPM18, TRUCK_CAPA_COPM19, TRUCK_CAPA_COPM20, DRIVER_ID, TRUCK_SHIPPER, INSURANCE_DATEEXPIRE, MEASURE_DATEEXPIRE, CONDITION_DATEEXPIRE, TRUCK_COMPANYID}
             rowV_TRUCKRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowV_TRUCKRow)
             Return rowV_TRUCKRow
@@ -4610,8 +4609,20 @@ Partial Public Class DataSet_View
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnID = MyBase.Columns("ID")
             Me.columnTRUCK_NUMBER = MyBase.Columns("TRUCK_NUMBER")
+            Me.columnTRUCK_BLACK_LIST = MyBase.Columns("TRUCK_BLACK_LIST")
+            Me.columnTRUCK_COMPANY = MyBase.Columns("TRUCK_COMPANY")
+            Me.columnTRUCK_DRIVER = MyBase.Columns("TRUCK_DRIVER")
+            Me.columnTRUCK_DATE = MyBase.Columns("TRUCK_DATE")
+            Me.columnTYPE_ARM = MyBase.Columns("TYPE_ARM")
+            Me.columnINSURANCE_VALID_FORM = MyBase.Columns("INSURANCE_VALID_FORM")
+            Me.columnINSURANCE_VALID_TO = MyBase.Columns("INSURANCE_VALID_TO")
+            Me.columnTRUCK_MEASURELAST = MyBase.Columns("TRUCK_MEASURELAST")
+            Me.columnTRUCK_MEASURENEXT = MyBase.Columns("TRUCK_MEASURENEXT")
+            Me.columnCONDITION_VALID_FORM = MyBase.Columns("CONDITION_VALID_FORM")
+            Me.columnCONDITION_VALID_TO = MyBase.Columns("CONDITION_VALID_TO")
+            Me.columnSP_CODE = MyBase.Columns("SP_CODE")
+            Me.columnID = MyBase.Columns("ID")
             Me.columnTRUCK_TYPE = MyBase.Columns("TRUCK_TYPE")
             Me.columnTRUCK_CAPASITY = MyBase.Columns("TRUCK_CAPASITY")
             Me.columnTRUCK_COMP_NUM = MyBase.Columns("TRUCK_COMP_NUM")
@@ -4635,123 +4646,114 @@ Partial Public Class DataSet_View
             Me.columnTRUCK_CAPA_COPM18 = MyBase.Columns("TRUCK_CAPA_COPM18")
             Me.columnTRUCK_CAPA_COPM19 = MyBase.Columns("TRUCK_CAPA_COPM19")
             Me.columnTRUCK_CAPA_COPM20 = MyBase.Columns("TRUCK_CAPA_COPM20")
-            Me.columnTRUCK_BLACK_LIST = MyBase.Columns("TRUCK_BLACK_LIST")
-            Me.columnTRUCK_COMPANY = MyBase.Columns("TRUCK_COMPANY")
-            Me.columnTRUCK_DRIVER = MyBase.Columns("TRUCK_DRIVER")
             Me.columnDRIVER_ID = MyBase.Columns("DRIVER_ID")
-            Me.columnTRUCK_DATE = MyBase.Columns("TRUCK_DATE")
-            Me.columnTYPE_ARM = MyBase.Columns("TYPE_ARM")
             Me.columnTRUCK_SHIPPER = MyBase.Columns("TRUCK_SHIPPER")
-            Me.columnINSURANCE_VALID_FORM = MyBase.Columns("INSURANCE_VALID_FORM")
-            Me.columnINSURANCE_VALID_TO = MyBase.Columns("INSURANCE_VALID_TO")
             Me.columnINSURANCE_DATEEXPIRE = MyBase.Columns("INSURANCE_DATEEXPIRE")
-            Me.columnTRUCK_MEASURELAST = MyBase.Columns("TRUCK_MEASURELAST")
-            Me.columnTRUCK_MEASURENEXT = MyBase.Columns("TRUCK_MEASURENEXT")
             Me.columnMEASURE_DATEEXPIRE = MyBase.Columns("MEASURE_DATEEXPIRE")
-            Me.columnCONDITION_VALID_FORM = MyBase.Columns("CONDITION_VALID_FORM")
-            Me.columnCONDITION_VALID_TO = MyBase.Columns("CONDITION_VALID_TO")
             Me.columnCONDITION_DATEEXPIRE = MyBase.Columns("CONDITION_DATEEXPIRE")
-            Me.columnSP_CODE = MyBase.Columns("SP_CODE")
             Me.columnTRUCK_COMPANYID = MyBase.Columns("TRUCK_COMPANYID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnID)
             Me.columnTRUCK_NUMBER = New Global.System.Data.DataColumn("TRUCK_NUMBER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_NUMBER)
-            Me.columnTRUCK_TYPE = New Global.System.Data.DataColumn("TRUCK_TYPE", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_TYPE)
-            Me.columnTRUCK_CAPASITY = New Global.System.Data.DataColumn("TRUCK_CAPASITY", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPASITY)
-            Me.columnTRUCK_COMP_NUM = New Global.System.Data.DataColumn("TRUCK_COMP_NUM", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_COMP_NUM)
-            Me.columnTRUCK_CAPA_COPM1 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM1", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM1)
-            Me.columnTRUCK_CAPA_COPM2 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM2", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM2)
-            Me.columnTRUCK_CAPA_COPM3 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM3", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM3)
-            Me.columnTRUCK_CAPA_COPM4 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM4", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM4)
-            Me.columnTRUCK_CAPA_COPM5 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM5", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM5)
-            Me.columnTRUCK_CAPA_COPM6 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM6", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM6)
-            Me.columnTRUCK_CAPA_COPM7 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM7", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM7)
-            Me.columnTRUCK_CAPA_COPM8 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM8", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM8)
-            Me.columnTRUCK_CAPA_COPM9 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM9", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM9)
-            Me.columnTRUCK_CAPA_COPM10 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM10", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM10)
-            Me.columnTRUCK_CAPA_COPM11 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM11", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM11)
-            Me.columnTRUCK_CAPA_COPM12 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM12", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM12)
-            Me.columnTRUCK_CAPA_COPM13 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM13", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM13)
-            Me.columnTRUCK_CAPA_COPM14 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM14", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM14)
-            Me.columnTRUCK_CAPA_COPM15 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM15", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM15)
-            Me.columnTRUCK_CAPA_COPM16 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM16", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM16)
-            Me.columnTRUCK_CAPA_COPM17 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM17", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM17)
-            Me.columnTRUCK_CAPA_COPM18 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM18", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM18)
-            Me.columnTRUCK_CAPA_COPM19 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM19", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM19)
-            Me.columnTRUCK_CAPA_COPM20 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM20", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM20)
             Me.columnTRUCK_BLACK_LIST = New Global.System.Data.DataColumn("TRUCK_BLACK_LIST", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_BLACK_LIST)
             Me.columnTRUCK_COMPANY = New Global.System.Data.DataColumn("TRUCK_COMPANY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_COMPANY)
             Me.columnTRUCK_DRIVER = New Global.System.Data.DataColumn("TRUCK_DRIVER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_DRIVER)
-            Me.columnDRIVER_ID = New Global.System.Data.DataColumn("DRIVER_ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDRIVER_ID)
             Me.columnTRUCK_DATE = New Global.System.Data.DataColumn("TRUCK_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_DATE)
             Me.columnTYPE_ARM = New Global.System.Data.DataColumn("TYPE_ARM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTYPE_ARM)
-            Me.columnTRUCK_SHIPPER = New Global.System.Data.DataColumn("TRUCK_SHIPPER", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_SHIPPER)
             Me.columnINSURANCE_VALID_FORM = New Global.System.Data.DataColumn("INSURANCE_VALID_FORM", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnINSURANCE_VALID_FORM)
             Me.columnINSURANCE_VALID_TO = New Global.System.Data.DataColumn("INSURANCE_VALID_TO", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnINSURANCE_VALID_TO)
-            Me.columnINSURANCE_DATEEXPIRE = New Global.System.Data.DataColumn("INSURANCE_DATEEXPIRE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnINSURANCE_DATEEXPIRE)
             Me.columnTRUCK_MEASURELAST = New Global.System.Data.DataColumn("TRUCK_MEASURELAST", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_MEASURELAST)
             Me.columnTRUCK_MEASURENEXT = New Global.System.Data.DataColumn("TRUCK_MEASURENEXT", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_MEASURENEXT)
-            Me.columnMEASURE_DATEEXPIRE = New Global.System.Data.DataColumn("MEASURE_DATEEXPIRE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMEASURE_DATEEXPIRE)
             Me.columnCONDITION_VALID_FORM = New Global.System.Data.DataColumn("CONDITION_VALID_FORM", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCONDITION_VALID_FORM)
             Me.columnCONDITION_VALID_TO = New Global.System.Data.DataColumn("CONDITION_VALID_TO", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCONDITION_VALID_TO)
-            Me.columnCONDITION_DATEEXPIRE = New Global.System.Data.DataColumn("CONDITION_DATEEXPIRE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCONDITION_DATEEXPIRE)
             Me.columnSP_CODE = New Global.System.Data.DataColumn("SP_CODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSP_CODE)
-            Me.columnTRUCK_COMPANYID = New Global.System.Data.DataColumn("TRUCK_COMPANYID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnID)
+            Me.columnTRUCK_TYPE = New Global.System.Data.DataColumn("TRUCK_TYPE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_TYPE)
+            Me.columnTRUCK_CAPASITY = New Global.System.Data.DataColumn("TRUCK_CAPASITY", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPASITY)
+            Me.columnTRUCK_COMP_NUM = New Global.System.Data.DataColumn("TRUCK_COMP_NUM", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_COMP_NUM)
+            Me.columnTRUCK_CAPA_COPM1 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM1)
+            Me.columnTRUCK_CAPA_COPM2 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM2", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM2)
+            Me.columnTRUCK_CAPA_COPM3 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM3", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM3)
+            Me.columnTRUCK_CAPA_COPM4 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM4", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM4)
+            Me.columnTRUCK_CAPA_COPM5 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM5", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM5)
+            Me.columnTRUCK_CAPA_COPM6 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM6", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM6)
+            Me.columnTRUCK_CAPA_COPM7 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM7", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM7)
+            Me.columnTRUCK_CAPA_COPM8 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM8", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM8)
+            Me.columnTRUCK_CAPA_COPM9 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM9", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM9)
+            Me.columnTRUCK_CAPA_COPM10 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM10", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM10)
+            Me.columnTRUCK_CAPA_COPM11 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM11", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM11)
+            Me.columnTRUCK_CAPA_COPM12 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM12", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM12)
+            Me.columnTRUCK_CAPA_COPM13 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM13", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM13)
+            Me.columnTRUCK_CAPA_COPM14 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM14", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM14)
+            Me.columnTRUCK_CAPA_COPM15 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM15", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM15)
+            Me.columnTRUCK_CAPA_COPM16 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM16", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM16)
+            Me.columnTRUCK_CAPA_COPM17 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM17", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM17)
+            Me.columnTRUCK_CAPA_COPM18 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM18", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM18)
+            Me.columnTRUCK_CAPA_COPM19 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM19", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM19)
+            Me.columnTRUCK_CAPA_COPM20 = New Global.System.Data.DataColumn("TRUCK_CAPA_COPM20", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_CAPA_COPM20)
+            Me.columnDRIVER_ID = New Global.System.Data.DataColumn("DRIVER_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDRIVER_ID)
+            Me.columnTRUCK_SHIPPER = New Global.System.Data.DataColumn("TRUCK_SHIPPER", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTRUCK_SHIPPER)
+            Me.columnINSURANCE_DATEEXPIRE = New Global.System.Data.DataColumn("INSURANCE_DATEEXPIRE", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnINSURANCE_DATEEXPIRE)
+            Me.columnMEASURE_DATEEXPIRE = New Global.System.Data.DataColumn("MEASURE_DATEEXPIRE", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMEASURE_DATEEXPIRE)
+            Me.columnCONDITION_DATEEXPIRE = New Global.System.Data.DataColumn("CONDITION_DATEEXPIRE", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCONDITION_DATEEXPIRE)
+            Me.columnTRUCK_COMPANYID = New Global.System.Data.DataColumn("TRUCK_COMPANYID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRUCK_COMPANYID)
             Me.columnTRUCK_NUMBER.AllowDBNull = false
             Me.columnTRUCK_NUMBER.MaxLength = 50
-            Me.columnTRUCK_COMP_NUM.AllowDBNull = false
             Me.columnTRUCK_BLACK_LIST.MaxLength = 20
             Me.columnTRUCK_COMPANY.MaxLength = 50
             Me.columnTRUCK_DRIVER.MaxLength = 50
             Me.columnTYPE_ARM.MaxLength = 30
             Me.columnSP_CODE.MaxLength = 20
+            Me.columnTRUCK_COMP_NUM.AllowDBNull = false
+            Me.columnINSURANCE_DATEEXPIRE.ReadOnly = true
+            Me.columnMEASURE_DATEEXPIRE.ReadOnly = true
+            Me.columnCONDITION_DATEEXPIRE.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9421,17 +9423,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property U_ID() As Long
-            Get
-                Return CType(Me(Me.tableV_USER.U_IDColumn),Long)
-            End Get
-            Set
-                Me(Me.tableV_USER.U_IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property U_DATE() As Date
             Get
                 Try 
@@ -9468,17 +9459,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_USER.U_NAMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property U_GROUP() As Long
-            Get
-                Return CType(Me(Me.tableV_USER.U_GROUPColumn),Long)
-            End Get
-            Set
-                Me(Me.tableV_USER.U_GROUPColumn) = value
             End Set
         End Property
         
@@ -9555,17 +9535,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property G_ID() As Long
-            Get
-                Return CType(Me(Me.tableV_USER.G_IDColumn),Long)
-            End Get
-            Set
-                Me(Me.tableV_USER.G_IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property G_NAME() As String
             Get
                 Return CType(Me(Me.tableV_USER.G_NAMEColumn),String)
@@ -9602,6 +9571,43 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_USER.STATUS_NAMEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property U_ID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_USER.U_IDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'U_ID' in table 'V_USER' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_USER.U_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property U_GROUP() As Integer
+            Get
+                Return CType(Me(Me.tableV_USER.U_GROUPColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableV_USER.U_GROUPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property G_ID() As Integer
+            Get
+                Return CType(Me(Me.tableV_USER.G_IDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableV_USER.G_IDColumn) = value
             End Set
         End Property
         
@@ -9699,6 +9705,18 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetSTATUS_NAMENull()
             Me(Me.tableV_USER.STATUS_NAMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsU_IDNull() As Boolean
+            Return Me.IsNull(Me.tableV_USER.U_IDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetU_IDNull()
+            Me(Me.tableV_USER.U_IDColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -14515,368 +14533,12 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.IDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ID' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property TRUCK_NUMBER() As String
             Get
                 Return CType(Me(Me.tableV_TRUCK.TRUCK_NUMBERColumn),String)
             End Get
             Set
                 Me(Me.tableV_TRUCK.TRUCK_NUMBERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_TYPE() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_TYPEColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_TYPE' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_TYPEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPASITY() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPASITYColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPASITY' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPASITYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_COMP_NUM() As Long
-            Get
-                Return CType(Me(Me.tableV_TRUCK.TRUCK_COMP_NUMColumn),Long)
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_COMP_NUMColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM1() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM1Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM1' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM2() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM2Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM2' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM3() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM3Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM3' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM3Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM4() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM4Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM4' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM4Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM5() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM5Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM5' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM5Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM6() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM6Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM6' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM6Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM7() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM7Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM7' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM7Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM8() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM8Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM8' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM8Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM9() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM9Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM9' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM9Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM10() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM10Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM10' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM10Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM11() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM11Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM11' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM11Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM12() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM12Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM12' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM12Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM13() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM13Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM13' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM13Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM14() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM14Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM14' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM14Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM15() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM15Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM15' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM15Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM16() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM16Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM16' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM16Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM17() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM17Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM17' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM17Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM18() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM18Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM18' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM18Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM19() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM19Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM19' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM19Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CAPA_COPM20() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM20Column),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM20' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM20Column) = value
             End Set
         End Property
         
@@ -14927,21 +14589,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DRIVER_ID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.DRIVER_IDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DRIVER_ID' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.DRIVER_IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property TRUCK_DATE() As Date
             Get
                 Try 
@@ -14967,21 +14614,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_TRUCK.TYPE_ARMColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_SHIPPER() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_SHIPPERColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_SHIPPER' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.TRUCK_SHIPPERColumn) = value
             End Set
         End Property
         
@@ -15017,21 +14649,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property INSURANCE_DATEEXPIRE() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.INSURANCE_DATEEXPIREColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'INSURANCE_DATEEXPIRE' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.INSURANCE_DATEEXPIREColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property TRUCK_MEASURELAST() As Date
             Get
                 Try 
@@ -15057,21 +14674,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_TRUCK.TRUCK_MEASURENEXTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property MEASURE_DATEEXPIRE() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.MEASURE_DATEEXPIREColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'MEASURE_DATEEXPIRE' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.MEASURE_DATEEXPIREColumn) = value
             End Set
         End Property
         
@@ -15107,21 +14709,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CONDITION_DATEEXPIRE() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_TRUCK.CONDITION_DATEEXPIREColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CONDITION_DATEEXPIRE' in table 'V_TRUCK' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_TRUCK.CONDITION_DATEEXPIREColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property SP_CODE() As String
             Get
                 Try 
@@ -15137,10 +14724,441 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_COMPANYID() As Long
+        Public Property ID() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableV_TRUCK.TRUCK_COMPANYIDColumn),Long)
+                    Return CType(Me(Me.tableV_TRUCK.IDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ID' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_TYPE() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_TYPEColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_TYPE' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_TYPEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPASITY() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPASITYColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPASITY' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPASITYColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_COMP_NUM() As Integer
+            Get
+                Return CType(Me(Me.tableV_TRUCK.TRUCK_COMP_NUMColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_COMP_NUMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM1() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM1' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM2() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM2Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM2' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM2Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM3() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM3Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM3' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM3Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM4() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM4Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM4' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM4Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM5() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM5Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM5' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM5Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM6() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM6Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM6' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM6Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM7() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM7Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM7' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM7Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM8() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM8Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM8' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM8Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM9() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM9Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM9' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM9Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM10() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM10Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM10' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM10Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM11() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM11Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM11' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM11Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM12() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM12Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM12' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM12Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM13() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM13Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM13' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM13Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM14() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM14Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM14' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM14Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM15() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM15Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM15' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM15Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM16() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM16Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM16' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM16Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM17() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM17Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM17' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM17Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM18() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM18Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM18' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM18Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM19() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM19Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM19' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM19Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_CAPA_COPM20() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM20Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CAPA_COPM20' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_CAPA_COPM20Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DRIVER_ID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.DRIVER_IDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DRIVER_ID' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.DRIVER_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_SHIPPER() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_SHIPPERColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_SHIPPER' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.TRUCK_SHIPPERColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property INSURANCE_DATEEXPIRE() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.INSURANCE_DATEEXPIREColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'INSURANCE_DATEEXPIRE' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.INSURANCE_DATEEXPIREColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property MEASURE_DATEEXPIRE() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.MEASURE_DATEEXPIREColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'MEASURE_DATEEXPIRE' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.MEASURE_DATEEXPIREColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CONDITION_DATEEXPIRE() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.CONDITION_DATEEXPIREColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CONDITION_DATEEXPIRE' in table 'V_TRUCK' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_TRUCK.CONDITION_DATEEXPIREColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TRUCK_COMPANYID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_TRUCK.TRUCK_COMPANYIDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_COMPANYID' in table 'V_TRUCK' is DBNull.", e)
                 End Try
@@ -15149,6 +15167,150 @@ Partial Public Class DataSet_View
                 Me(Me.tableV_TRUCK.TRUCK_COMPANYIDColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRUCK_BLACK_LISTNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_BLACK_LISTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRUCK_BLACK_LISTNull()
+            Me(Me.tableV_TRUCK.TRUCK_BLACK_LISTColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRUCK_COMPANYNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_COMPANYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRUCK_COMPANYNull()
+            Me(Me.tableV_TRUCK.TRUCK_COMPANYColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRUCK_DRIVERNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_DRIVERColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRUCK_DRIVERNull()
+            Me(Me.tableV_TRUCK.TRUCK_DRIVERColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRUCK_DATENull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_DATEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRUCK_DATENull()
+            Me(Me.tableV_TRUCK.TRUCK_DATEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTYPE_ARMNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TYPE_ARMColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTYPE_ARMNull()
+            Me(Me.tableV_TRUCK.TYPE_ARMColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsINSURANCE_VALID_FORMNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.INSURANCE_VALID_FORMColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetINSURANCE_VALID_FORMNull()
+            Me(Me.tableV_TRUCK.INSURANCE_VALID_FORMColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsINSURANCE_VALID_TONull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.INSURANCE_VALID_TOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetINSURANCE_VALID_TONull()
+            Me(Me.tableV_TRUCK.INSURANCE_VALID_TOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRUCK_MEASURELASTNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_MEASURELASTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRUCK_MEASURELASTNull()
+            Me(Me.tableV_TRUCK.TRUCK_MEASURELASTColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRUCK_MEASURENEXTNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_MEASURENEXTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRUCK_MEASURENEXTNull()
+            Me(Me.tableV_TRUCK.TRUCK_MEASURENEXTColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCONDITION_VALID_FORMNull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.CONDITION_VALID_FORMColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCONDITION_VALID_FORMNull()
+            Me(Me.tableV_TRUCK.CONDITION_VALID_FORMColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCONDITION_VALID_TONull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.CONDITION_VALID_TOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCONDITION_VALID_TONull()
+            Me(Me.tableV_TRUCK.CONDITION_VALID_TOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSP_CODENull() As Boolean
+            Return Me.IsNull(Me.tableV_TRUCK.SP_CODEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSP_CODENull()
+            Me(Me.tableV_TRUCK.SP_CODEColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -15428,42 +15590,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_BLACK_LISTNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_BLACK_LISTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_BLACK_LISTNull()
-            Me(Me.tableV_TRUCK.TRUCK_BLACK_LISTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_COMPANYNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_COMPANYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_COMPANYNull()
-            Me(Me.tableV_TRUCK.TRUCK_COMPANYColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_DRIVERNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_DRIVERColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_DRIVERNull()
-            Me(Me.tableV_TRUCK.TRUCK_DRIVERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsDRIVER_IDNull() As Boolean
             Return Me.IsNull(Me.tableV_TRUCK.DRIVER_IDColumn)
         End Function
@@ -15472,30 +15598,6 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDRIVER_IDNull()
             Me(Me.tableV_TRUCK.DRIVER_IDColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_DATENull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_DATEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_DATENull()
-            Me(Me.tableV_TRUCK.TRUCK_DATEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTYPE_ARMNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TYPE_ARMColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTYPE_ARMNull()
-            Me(Me.tableV_TRUCK.TYPE_ARMColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15512,30 +15614,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsINSURANCE_VALID_FORMNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.INSURANCE_VALID_FORMColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetINSURANCE_VALID_FORMNull()
-            Me(Me.tableV_TRUCK.INSURANCE_VALID_FORMColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsINSURANCE_VALID_TONull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.INSURANCE_VALID_TOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetINSURANCE_VALID_TONull()
-            Me(Me.tableV_TRUCK.INSURANCE_VALID_TOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsINSURANCE_DATEEXPIRENull() As Boolean
             Return Me.IsNull(Me.tableV_TRUCK.INSURANCE_DATEEXPIREColumn)
         End Function
@@ -15544,30 +15622,6 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetINSURANCE_DATEEXPIRENull()
             Me(Me.tableV_TRUCK.INSURANCE_DATEEXPIREColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_MEASURELASTNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_MEASURELASTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_MEASURELASTNull()
-            Me(Me.tableV_TRUCK.TRUCK_MEASURELASTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_MEASURENEXTNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.TRUCK_MEASURENEXTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_MEASURENEXTNull()
-            Me(Me.tableV_TRUCK.TRUCK_MEASURENEXTColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15584,30 +15638,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCONDITION_VALID_FORMNull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.CONDITION_VALID_FORMColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCONDITION_VALID_FORMNull()
-            Me(Me.tableV_TRUCK.CONDITION_VALID_FORMColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCONDITION_VALID_TONull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.CONDITION_VALID_TOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCONDITION_VALID_TONull()
-            Me(Me.tableV_TRUCK.CONDITION_VALID_TOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsCONDITION_DATEEXPIRENull() As Boolean
             Return Me.IsNull(Me.tableV_TRUCK.CONDITION_DATEEXPIREColumn)
         End Function
@@ -15616,18 +15646,6 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetCONDITION_DATEEXPIRENull()
             Me(Me.tableV_TRUCK.CONDITION_DATEEXPIREColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_CODENull() As Boolean
-            Return Me.IsNull(Me.tableV_TRUCK.SP_CODEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_CODENull()
-            Me(Me.tableV_TRUCK.SP_CODEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -22231,13 +22249,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class V_USERTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -22250,7 +22268,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -22261,7 +22279,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -22282,7 +22300,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -22291,7 +22309,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -22319,7 +22337,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -22342,41 +22360,43 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_USER"
-            tableMapping.ColumnMappings.Add("U_ID", "U_ID")
             tableMapping.ColumnMappings.Add("U_DATE", "U_DATE")
             tableMapping.ColumnMappings.Add("U_TIME", "U_TIME")
             tableMapping.ColumnMappings.Add("U_NAME", "U_NAME")
-            tableMapping.ColumnMappings.Add("U_GROUP", "U_GROUP")
             tableMapping.ColumnMappings.Add("U_PASSWD", "U_PASSWD")
             tableMapping.ColumnMappings.Add("U_DESC", "U_DESC")
             tableMapping.ColumnMappings.Add("U_NAME_S", "U_NAME_S")
             tableMapping.ColumnMappings.Add("U_STATUS", "U_STATUS")
             tableMapping.ColumnMappings.Add("UPDATE_DATE", "UPDATE_DATE")
-            tableMapping.ColumnMappings.Add("G_ID", "G_ID")
             tableMapping.ColumnMappings.Add("G_NAME", "G_NAME")
             tableMapping.ColumnMappings.Add("G_DESC", "G_DESC")
             tableMapping.ColumnMappings.Add("STATUS_NAME", "STATUS_NAME")
+            tableMapping.ColumnMappings.Add("U_ID", "U_ID")
+            tableMapping.ColumnMappings.Add("U_GROUP", "U_GROUP")
+            tableMapping.ColumnMappings.Add("G_ID", "G_ID")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        ICC.V_USER.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_USER"
+            Me._commandCollection(0).CommandText = "SELECT        U_ID, U_DATE, U_TIME, U_NAME, U_GROUP, U_PASSWD, U_DESC, U_NAME_S, "& _ 
+                "U_STATUS, UPDATE_DATE, G_ID, G_NAME, G_DESC, STATUS_NAME"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            V_USER"& _ 
+                ""
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -22417,13 +22437,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class VCHECKINTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -22436,7 +22456,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -22447,7 +22467,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -22468,7 +22488,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -22477,7 +22497,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -22505,7 +22525,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -22528,7 +22548,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "VCHECKIN"
@@ -22555,15 +22575,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.VCHECKINLOAD.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.VCHECKINLOAD"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE STATUS="& _ 
                 "2"
@@ -22607,13 +22627,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class V_LOADINGNOTETableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -22626,7 +22646,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -22637,7 +22657,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -22658,7 +22678,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -22667,7 +22687,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -22695,7 +22715,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -22718,7 +22738,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_LOADINGNOTE"
@@ -22888,15 +22908,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.V_LOADINGNOTE.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_LOADINGNOTE"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
@@ -22939,13 +22959,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class V_TRUCKTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -22958,7 +22978,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -22969,7 +22989,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -22990,7 +23010,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -22999,7 +23019,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -23027,7 +23047,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -23050,12 +23070,24 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_TRUCK"
-            tableMapping.ColumnMappings.Add("ID", "ID")
             tableMapping.ColumnMappings.Add("TRUCK_NUMBER", "TRUCK_NUMBER")
+            tableMapping.ColumnMappings.Add("TRUCK_BLACK_LIST", "TRUCK_BLACK_LIST")
+            tableMapping.ColumnMappings.Add("TRUCK_COMPANY", "TRUCK_COMPANY")
+            tableMapping.ColumnMappings.Add("TRUCK_DRIVER", "TRUCK_DRIVER")
+            tableMapping.ColumnMappings.Add("TRUCK_DATE", "TRUCK_DATE")
+            tableMapping.ColumnMappings.Add("TYPE_ARM", "TYPE_ARM")
+            tableMapping.ColumnMappings.Add("INSURANCE_VALID_FORM", "INSURANCE_VALID_FORM")
+            tableMapping.ColumnMappings.Add("INSURANCE_VALID_TO", "INSURANCE_VALID_TO")
+            tableMapping.ColumnMappings.Add("TRUCK_MEASURELAST", "TRUCK_MEASURELAST")
+            tableMapping.ColumnMappings.Add("TRUCK_MEASURENEXT", "TRUCK_MEASURENEXT")
+            tableMapping.ColumnMappings.Add("CONDITION_VALID_FORM", "CONDITION_VALID_FORM")
+            tableMapping.ColumnMappings.Add("CONDITION_VALID_TO", "CONDITION_VALID_TO")
+            tableMapping.ColumnMappings.Add("SP_CODE", "SP_CODE")
+            tableMapping.ColumnMappings.Add("ID", "ID")
             tableMapping.ColumnMappings.Add("TRUCK_TYPE", "TRUCK_TYPE")
             tableMapping.ColumnMappings.Add("TRUCK_CAPASITY", "TRUCK_CAPASITY")
             tableMapping.ColumnMappings.Add("TRUCK_COMP_NUM", "TRUCK_COMP_NUM")
@@ -23079,23 +23111,11 @@ Namespace DataSet_ViewTableAdapters
             tableMapping.ColumnMappings.Add("TRUCK_CAPA_COPM18", "TRUCK_CAPA_COPM18")
             tableMapping.ColumnMappings.Add("TRUCK_CAPA_COPM19", "TRUCK_CAPA_COPM19")
             tableMapping.ColumnMappings.Add("TRUCK_CAPA_COPM20", "TRUCK_CAPA_COPM20")
-            tableMapping.ColumnMappings.Add("TRUCK_BLACK_LIST", "TRUCK_BLACK_LIST")
-            tableMapping.ColumnMappings.Add("TRUCK_COMPANY", "TRUCK_COMPANY")
-            tableMapping.ColumnMappings.Add("TRUCK_DRIVER", "TRUCK_DRIVER")
             tableMapping.ColumnMappings.Add("DRIVER_ID", "DRIVER_ID")
-            tableMapping.ColumnMappings.Add("TRUCK_DATE", "TRUCK_DATE")
-            tableMapping.ColumnMappings.Add("TYPE_ARM", "TYPE_ARM")
             tableMapping.ColumnMappings.Add("TRUCK_SHIPPER", "TRUCK_SHIPPER")
-            tableMapping.ColumnMappings.Add("INSURANCE_VALID_FORM", "INSURANCE_VALID_FORM")
-            tableMapping.ColumnMappings.Add("INSURANCE_VALID_TO", "INSURANCE_VALID_TO")
             tableMapping.ColumnMappings.Add("INSURANCE_DATEEXPIRE", "INSURANCE_DATEEXPIRE")
-            tableMapping.ColumnMappings.Add("TRUCK_MEASURELAST", "TRUCK_MEASURELAST")
-            tableMapping.ColumnMappings.Add("TRUCK_MEASURENEXT", "TRUCK_MEASURENEXT")
             tableMapping.ColumnMappings.Add("MEASURE_DATEEXPIRE", "MEASURE_DATEEXPIRE")
-            tableMapping.ColumnMappings.Add("CONDITION_VALID_FORM", "CONDITION_VALID_FORM")
-            tableMapping.ColumnMappings.Add("CONDITION_VALID_TO", "CONDITION_VALID_TO")
             tableMapping.ColumnMappings.Add("CONDITION_DATEEXPIRE", "CONDITION_DATEEXPIRE")
-            tableMapping.ColumnMappings.Add("SP_CODE", "SP_CODE")
             tableMapping.ColumnMappings.Add("TRUCK_COMPANYID", "TRUCK_COMPANYID")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -23103,17 +23123,28 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        ICC.V_TRUCK.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_TRUCK"
+            Me._commandCollection(0).CommandText = "SELECT        ID, TRUCK_NUMBER, TRUCK_TYPE, TRUCK_CAPASITY, TRUCK_COMP_NUM, TRUCK"& _ 
+                "_CAPA_COPM1, TRUCK_CAPA_COPM2, TRUCK_CAPA_COPM3, TRUCK_CAPA_COPM4, TRUCK_CAPA_CO"& _ 
+                "PM5, TRUCK_CAPA_COPM6, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         TRUCK_CAPA_COPM7, TRUCK_CAPA_C"& _ 
+                "OPM8, TRUCK_CAPA_COPM9, TRUCK_CAPA_COPM10, TRUCK_CAPA_COPM11, TRUCK_CAPA_COPM12,"& _ 
+                " TRUCK_CAPA_COPM13, TRUCK_CAPA_COPM14, TRUCK_CAPA_COPM15, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                    "& _ 
+                "     TRUCK_CAPA_COPM16, TRUCK_CAPA_COPM17, TRUCK_CAPA_COPM18, TRUCK_CAPA_COPM19,"& _ 
+                " TRUCK_CAPA_COPM20, TRUCK_BLACK_LIST, TRUCK_COMPANY, TRUCK_DRIVER, DRIVER_ID, TR"& _ 
+                "UCK_DATE, TYPE_ARM, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         TRUCK_SHIPPER, INSURANCE_VALID_FO"& _ 
+                "RM, INSURANCE_VALID_TO, INSURANCE_DATEEXPIRE, TRUCK_MEASURELAST, TRUCK_MEASURENE"& _ 
+                "XT, MEASURE_DATEEXPIRE, CONDITION_VALID_FORM, CONDITION_VALID_TO, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
+                "             CONDITION_DATEEXPIRE, SP_CODE, TRUCK_COMPANYID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            V_T"& _ 
+                "RUCK"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -23154,13 +23185,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class TIMERESULTTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -23173,7 +23204,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -23184,7 +23215,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -23205,7 +23236,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -23214,7 +23245,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -23242,7 +23273,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -23265,7 +23296,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "TIMERESULT"
@@ -23286,15 +23317,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.TIMERESULT.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.TIMERESULT"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
@@ -23337,13 +23368,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class V_SHIPMENTTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -23356,7 +23387,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -23367,7 +23398,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -23388,7 +23419,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -23397,7 +23428,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -23425,7 +23456,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -23448,7 +23479,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_SHIPMENT"
@@ -23490,15 +23521,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.V_SHIPMENT.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_SHIPMENT"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
@@ -23541,13 +23572,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class VCARDLOADTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -23560,7 +23591,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -23571,7 +23602,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -23592,7 +23623,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -23601,7 +23632,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -23629,7 +23660,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -23652,7 +23683,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "VCARDLOAD"
@@ -23706,15 +23737,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.VCARDLOAD.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.VCARDLOAD"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
@@ -23757,13 +23788,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class V_LOADING_STATUSTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -23776,7 +23807,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -23787,7 +23818,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -23808,7 +23839,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -23817,7 +23848,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -23845,7 +23876,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -23868,7 +23899,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_LOADING_STATUS"
@@ -23910,15 +23941,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.V_LOADING_STATUS.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_LOADING_STATUS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
@@ -23961,13 +23992,13 @@ Namespace DataSet_ViewTableAdapters
     Partial Public Class V_BOL_M1M2_NEWTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
         
-        Private _connection As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
         
-        Private _transaction As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
         
-        Private _commandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -23980,7 +24011,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -23991,7 +24022,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.Oracle.ManagedDataAccess.Client.OracleConnection
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -24012,7 +24043,7 @@ Namespace DataSet_ViewTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.Oracle.ManagedDataAccess.Client.OracleCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -24021,7 +24052,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.Oracle.ManagedDataAccess.Client.OracleTransaction
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
             Get
                 Return Me._transaction
             End Get
@@ -24049,7 +24080,7 @@ Namespace DataSet_ViewTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -24072,7 +24103,7 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.Oracle.ManagedDataAccess.Client.OracleDataAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_BOL_M1M2_NEW"
@@ -24195,15 +24226,15 @@ Namespace DataSet_ViewTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.Oracle.ManagedDataAccess.Client.OracleConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.RadControlsWinFormsApp1.My.MySettings.Default.ConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.Oracle.ManagedDataAccess.Client.OracleCommand(0) {}
-            Me._commandCollection(0) = New Global.Oracle.ManagedDataAccess.Client.OracleCommand()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ICC.V_BOL_M1M2_NEW.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_BOL_M1M2_NEW"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text

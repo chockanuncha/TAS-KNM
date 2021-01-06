@@ -136,6 +136,7 @@ Partial Class Topup
         Me.MasterGridAdvisenote = New Telerik.WinControls.UI.RadGridView()
         Me.V_LoadingnoteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet_View = New RadControlsWinFormsApp1.DataSet_View()
+        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
         Me.RadPanel4 = New Telerik.WinControls.UI.RadPanel()
         Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()

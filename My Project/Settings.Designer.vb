@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=Ping\sqlexpress;Initial Catalog=TAS;Integrated Security=True;Persist "& _ 
-            "Security Info=True;User ID=sa;Password=P@$$w0rd")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PING\SQLEXPRESS;Initial Catalog=TAS;Persist Security Info=True;User I"& _ 
+            "D=sa;Password=P@$$w0rd")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)

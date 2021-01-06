@@ -6511,6 +6511,7 @@ Partial Class Advisenote
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents DataSet_View As DataSet_View
     Friend WithEvents DataSet_Table As DataSet_Table
+    Friend WithEvents IRPCDataset As DataSet_Table
     Friend WithEvents T_PRODUCTTableAdapter As DataSet_TableTableAdapters.T_PRODUCTTableAdapter
     Friend WithEvents T_TRUCKTableAdapter1 As DataSet_TableTableAdapters.T_TRUCKTableAdapter
     Friend WithEvents T_SHIPPERTableAdapter1 As DataSet_TableTableAdapters.T_SHIPPERTableAdapter
@@ -6523,8 +6524,8 @@ Partial Class Advisenote
     Friend WithEvents T_BATCHMETERTableAdapter1 As DataSet_TableTableAdapters.T_BATCHMETERTableAdapter
     Friend WithEvents T_CUSTOMERTableAdapter1 As DataSet_TableTableAdapters.T_CUSTOMERTableAdapter
     Friend WithEvents T_TRUCKTYPETableAdapter1 As DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter
-    Friend WithEvents VCHECKINLOAD1TableAdapter As IRPCDatasetTableAdapters.VCHECKINLOAD1TableAdapter
-    Friend WithEvents V_TRUCK2TableAdapter As IRPCDatasetTableAdapters.V_TRUCK2TableAdapter
+    Friend WithEvents VCHECKINLOAD1TableAdapter As DataSet_ViewTableAdapters.VCHECKINLOAD1TableAdapter
+    Friend WithEvents V_TRUCK2TableAdapter As DataSet_TableTableAdapters.V_TRUCK2TableAdapter
     Friend WithEvents TTRUCKBindingSource1 As BindingSource
 End Class
 
