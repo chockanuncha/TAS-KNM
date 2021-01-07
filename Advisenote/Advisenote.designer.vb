@@ -484,8 +484,8 @@ Partial Class Advisenote
         Me.T_BATCHMETERTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_BATCHMETERTableAdapter()
         Me.T_CUSTOMERTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_CUSTOMERTableAdapter()
         Me.T_TRUCKTYPETableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter()
-        Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.VCHECKINLOAD1TableAdapter()
-        Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_TRUCK2TableAdapter()
+        Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter
+        Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
@@ -5822,7 +5822,7 @@ Partial Class Advisenote
         '
         'V_TRUCK2TableAdapter
         '
-        Me.V_TRUCK2TableAdapter.ClearBeforeFill = True
+        Me.V_TRUCKTableAdapter.ClearBeforeFill = True
         '
         'Advisenote
         '
@@ -6524,8 +6524,8 @@ Partial Class Advisenote
     Friend WithEvents T_BATCHMETERTableAdapter1 As DataSet_TableTableAdapters.T_BATCHMETERTableAdapter
     Friend WithEvents T_CUSTOMERTableAdapter1 As DataSet_TableTableAdapters.T_CUSTOMERTableAdapter
     Friend WithEvents T_TRUCKTYPETableAdapter1 As DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter
-    Friend WithEvents VCHECKINLOAD1TableAdapter As DataSet_ViewTableAdapters.VCHECKINLOAD1TableAdapter
-    Friend WithEvents V_TRUCK2TableAdapter As DataSet_TableTableAdapters.V_TRUCK2TableAdapter
+    Friend WithEvents VCHECKINLOAD1TableAdapter As DataSet_ViewTableAdapters.VCHECKINTableAdapter
+    Friend WithEvents V_TRUCKTableAdapter As DataSet_ViewTableAdapters.V_TRUCKTableAdapter
     Friend WithEvents TTRUCKBindingSource1 As BindingSource
 End Class
 
