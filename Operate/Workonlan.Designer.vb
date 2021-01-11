@@ -33,10 +33,10 @@ Partial Class Workonlan
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TComputerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.T_COMPUTERTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_COMPUTERTableAdapter()
+        Me.T_COMPUTERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.t_c
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.RoundRectShape1 = New Telerik.WinControls.RoundRectShape(Me.components)
         CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,7 +47,7 @@ Partial Class Workonlan
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TComputerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,12 +195,12 @@ Partial Class Workonlan
         'TComputerBindingSource
         '
         Me.TComputerBindingSource.DataMember = "T_COMPUTER"
-        Me.TComputerBindingSource.DataSource = Me.IRPCDataset
+        Me.TComputerBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GridViewTemplate2
         '
@@ -246,7 +246,7 @@ Partial Class Workonlan
         CType(Me.MasterGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TComputerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
@@ -261,8 +261,8 @@ Partial Class Workonlan
     Friend WithEvents GridViewTemplate2 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TComputerBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_COMPUTERTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_COMPUTERTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_COMPUTERTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPUTERTableAdapter
     Friend WithEvents BreezeTheme1 As Telerik.WinControls.Themes.BreezeTheme
     Friend WithEvents RoundRectShape1 As Telerik.WinControls.RoundRectShape
 End Class

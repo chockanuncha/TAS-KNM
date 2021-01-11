@@ -119,8 +119,8 @@ Partial Class Manual
         Me.Editdata = New Telerik.WinControls.UI.RadButton()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TCheckinBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.T_CHECKINTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_CHECKINTableAdapter()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.T_CHECKINTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_CHECKINTableAdapter()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel2.SuspendLayout()
@@ -140,7 +140,7 @@ Partial Class Manual
         CType(Me.Editdata, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TCheckinBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -957,12 +957,12 @@ Partial Class Manual
         'TCheckinBindingSource
         '
         Me.TCheckinBindingSource.DataMember = "T_CHECKIN"
-        Me.TCheckinBindingSource.DataSource = Me.IRPCDataset
+        Me.TCheckinBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'T_CHECKINTableAdapter
         '
@@ -1004,7 +1004,7 @@ Partial Class Manual
         CType(Me.Editdata, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TCheckinBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1093,8 +1093,8 @@ Partial Class Manual
     Friend WithEvents Canceldata As Telerik.WinControls.UI.RadButton
     Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView
     Friend WithEvents TCheckinBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_CHECKINTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_CHECKINTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_CHECKINTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_CHECKINTableAdapter
     Friend WithEvents Bsave As Telerik.WinControls.UI.RadButton
     Friend WithEvents RoundRectShape1 As Telerik.WinControls.RoundRectShape
     Friend WithEvents BCancel As Telerik.WinControls.UI.RadButton

@@ -55,7 +55,7 @@ Partial Class Journal_Events
         Me.ToolStripButton17 = New System.Windows.Forms.ToolStripButton()
         Me.GridAlarm = New Telerik.WinControls.UI.RadGridView()
         Me.TAlarmHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.RadPageViewPage2 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.Eventpanel = New Telerik.WinControls.UI.RadPanel()
@@ -81,10 +81,10 @@ Partial Class Journal_Events
         Me.Printdata = New Telerik.WinControls.UI.RadButton()
         Me.Event_bt = New Telerik.WinControls.UI.RadButton()
         Me.Alarm_bt = New Telerik.WinControls.UI.RadButton()
-        Me.V_EVENTTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_EVENTTableAdapter()
+        Me.V_EVENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_EVENTTableAdapter()
         Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
-        Me.T_ALARMS_BATCH_HISTORYTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_ALARMS_BATCH_HISTORYTableAdapter()
-        Me.T_EVENTTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_EVENTTableAdapter()
+        Me.T_ALARMS_BATCH_HISTORYTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCH_HISTORYTableAdapter()
+        Me.T_EVENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_EVENTTableAdapter()
         CType(Me.Detaildata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Detaildata.SuspendLayout()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +97,7 @@ Partial Class Journal_Events
         CType(Me.GridAlarm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridAlarm.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TAlarmHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPage2.SuspendLayout()
         CType(Me.Eventpanel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -395,12 +395,12 @@ Partial Class Journal_Events
         'TAlarmHistoryBindingSource
         '
         Me.TAlarmHistoryBindingSource.DataMember = "T_ALARMS_BATCH_HISTORY"
-        Me.TAlarmHistoryBindingSource.DataSource = Me.IRPCDataset
+        Me.TAlarmHistoryBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RadPanel3
         '
@@ -650,7 +650,7 @@ Partial Class Journal_Events
         'VEventsBindingSource
         '
         Me.VEventsBindingSource.DataMember = "T_EVENT"
-        Me.VEventsBindingSource.DataSource = Me.IRPCDataset
+        Me.VEventsBindingSource.DataSource = Me.Dataset_table
         '
         'RadPanel1
         '
@@ -813,7 +813,7 @@ Partial Class Journal_Events
         CType(Me.GridAlarm.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridAlarm, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TAlarmHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPage2.ResumeLayout(False)
         CType(Me.Eventpanel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -843,14 +843,14 @@ Partial Class Journal_Events
     Friend WithEvents Detaildata As Telerik.WinControls.UI.RadPanel
     Friend WithEvents GridEvent As Telerik.WinControls.UI.RadGridView
     Friend WithEvents VEventsBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents V_EVENTTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_EVENTTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents V_EVENTTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_EVENTTableAdapter
     Friend WithEvents Eventpanel As Telerik.WinControls.UI.RadPanel
     Friend WithEvents RadPanel2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents AlarmPanel As Telerik.WinControls.UI.RadPanel
     Friend WithEvents GridAlarm As Telerik.WinControls.UI.RadGridView
     Friend WithEvents TAlarmHistoryBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_ALARMS_BATCH_HISTORYTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_ALARMS_BATCH_HISTORYTableAdapter
+    Friend WithEvents T_ALARMS_BATCH_HISTORYTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCH_HISTORYTableAdapter
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents Printdata As Telerik.WinControls.UI.RadButton
     Friend WithEvents Event_bt As Telerik.WinControls.UI.RadButton
@@ -858,7 +858,7 @@ Partial Class Journal_Events
     Friend WithEvents RadPageView1 As Telerik.WinControls.UI.RadPageView
     Friend WithEvents RadPageViewPage1 As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents RadPageViewPage2 As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents T_EVENTTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_EVENTTableAdapter
+    Friend WithEvents T_EVENTTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_EVENTTableAdapter
     Friend WithEvents BindingNavigator3 As System.Windows.Forms.BindingNavigator
     Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripButton13 As System.Windows.Forms.ToolStripButton

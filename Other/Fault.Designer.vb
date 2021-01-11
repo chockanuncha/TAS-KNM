@@ -38,7 +38,7 @@ Partial Class Fault
         Me.P_SUM = New System.Windows.Forms.TextBox()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TUSERBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.Btadd = New System.Windows.Forms.ToolStripButton()
@@ -72,7 +72,7 @@ Partial Class Fault
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
         Me.P_Code = New Telerik.WinControls.UI.RadTextBox()
         Me.P_Name = New Telerik.WinControls.UI.RadTextBox()
-        Me.T_USERTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_USERTableAdapter()
+        Me.T_USERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_USERTableAdapter()
         Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
         Me.RadCalendar2 = New Telerik.WinControls.UI.RadCalendar()
         Me.RadClock2 = New Telerik.WinControls.UI.RadClock()
@@ -155,7 +155,7 @@ Partial Class Fault
         Me.RadPanel3.SuspendLayout()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TUSERBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
@@ -298,12 +298,12 @@ Partial Class Fault
         'TUSERBindingSource
         '
         Me.TUSERBindingSource.DataMember = "T_USER"
-        Me.TUSERBindingSource.DataSource = Me.IRPCDataset
+        Me.TUSERBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigator1
         '
@@ -1193,7 +1193,7 @@ Partial Class Fault
         Me.RadPanel3.PerformLayout()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TUSERBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
@@ -1246,11 +1246,11 @@ Partial Class Fault
     Private Sub TProductBindingSource_PositionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView
     Friend WithEvents GridViewTemplate2 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents TUSERBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_USERTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_USERTableAdapter
+    Friend WithEvents T_USERTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_USERTableAdapter
     Friend WithEvents RadPanel2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents RadCalendar2 As Telerik.WinControls.UI.RadCalendar
     Friend WithEvents RadClock2 As Telerik.WinControls.UI.RadClock

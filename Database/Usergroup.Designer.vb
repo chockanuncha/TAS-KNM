@@ -31,7 +31,7 @@ Partial Class Usergroup
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TUgrpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.Btfirst = New System.Windows.Forms.ToolStripButton()
@@ -65,7 +65,7 @@ Partial Class Usergroup
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
-        'Me.T_UGRPTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_UGRPTableAdapter()
+        'Me.T_UGRPTableAdapter = New RadControlsWinFormsApp1.Dataset_tableTableAdapters.T_UGRPTableAdapter()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         CType(Me.GridViewTemplate1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +73,7 @@ Partial Class Usergroup
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TUgrpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
@@ -177,12 +177,12 @@ Partial Class Usergroup
         'TUgrpBindingSource
         '
         Me.TUgrpBindingSource.DataMember = "T_UGRP"
-        Me.TUgrpBindingSource.DataSource = Me.IRPCDataset
+        Me.TUgrpBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigator1
         '
@@ -574,7 +574,7 @@ Partial Class Usergroup
         CType(Me.MasterGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TUgrpBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
@@ -618,8 +618,8 @@ Partial Class Usergroup
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents TUgrpBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_UGRPTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_UGRPTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_UGRPTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_UGRPTableAdapter
     Friend WithEvents Bsave As Telerik.WinControls.UI.RadButton
     Friend WithEvents RoundRectShape1 As Telerik.WinControls.RoundRectShape
     Friend WithEvents BCancel As Telerik.WinControls.UI.RadButton

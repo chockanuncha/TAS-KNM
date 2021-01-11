@@ -96,12 +96,12 @@ Partial Class Tank_UnloadOrder
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Tank_UnloadOrder))
         Me.TankGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TTankBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
         Me.MasterTemplate = New Telerik.WinControls.UI.RadGridView()
-        Me.T_TANKTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_TANKTableAdapter()
+        Me.T_TANKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TANKTableAdapter()
         Me.G_SUM = New Telerik.WinControls.UI.RadTextBox()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
@@ -113,7 +113,7 @@ Partial Class Tank_UnloadOrder
         CType(Me.TankGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TankGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TTankBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -346,13 +346,13 @@ Partial Class Tank_UnloadOrder
         'TTankBindingSource
         '
         Me.TTankBindingSource.DataMember = "T_TANK"
-        Me.TTankBindingSource.DataSource = Me.IRPCDataset
+        Me.TTankBindingSource.DataSource = Me.Dataset_table
         Me.TTankBindingSource.Sort = "Tankno"
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RadGridView1
         '
@@ -802,7 +802,7 @@ Partial Class Tank_UnloadOrder
         CType(Me.TankGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TankGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TTankBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -819,12 +819,12 @@ Partial Class Tank_UnloadOrder
 
     End Sub
     Friend WithEvents Office2010BlueTheme1 As Telerik.WinControls.Themes.Office2010BlueTheme
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
     'Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView
     Friend WithEvents GridViewTemplate2 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents MasterTemplate As Telerik.WinControls.UI.RadGridView
     Friend WithEvents TTankBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_TANKTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_TANKTableAdapter
+    Friend WithEvents T_TANKTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TANKTableAdapter
     Friend WithEvents G_SUM As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents SaveFileDialog As System.Windows.Forms.SaveFileDialog
     Friend WithEvents BreezeTheme1 As Telerik.WinControls.Themes.BreezeTheme

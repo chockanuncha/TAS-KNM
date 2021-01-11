@@ -32,7 +32,7 @@ Partial Class Shipper
         Me.UPDATEBY = New Telerik.WinControls.UI.RadTextBox()
         Me.U_UPDATE = New Telerik.WinControls.UI.RadTextBox()
         Me.TShipperBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.Bsave = New Telerik.WinControls.UI.RadButton()
         Me.RoundRectShape1 = New Telerik.WinControls.RoundRectShape(Me.components)
         Me.BCancel = New Telerik.WinControls.UI.RadButton()
@@ -47,7 +47,7 @@ Partial Class Shipper
         Me.Sp_code = New Telerik.WinControls.UI.RadTextBox()
         Me.P_Remark = New Telerik.WinControls.UI.RadTextBox()
         Me.Windows7Theme1 = New Telerik.WinControls.Themes.Windows7Theme()
-        Me.T_SHIPPERTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_SHIPPERTableAdapter()
+        Me.T_SHIPPERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SHIPPERTableAdapter()
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
@@ -74,7 +74,7 @@ Partial Class Shipper
         CType(Me.UPDATEBY, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.U_UPDATE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TShipperBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bsave, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BCancel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,12 +166,12 @@ Partial Class Shipper
         'TShipperBindingSource
         '
         Me.TShipperBindingSource.DataMember = "T_SHIPPER"
-        Me.TShipperBindingSource.DataSource = Me.IRPCDataset
+        Me.TShipperBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Bsave
         '
@@ -595,7 +595,7 @@ Partial Class Shipper
         CType(Me.UPDATEBY, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.U_UPDATE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TShipperBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bsave, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BCancel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -634,8 +634,8 @@ Partial Class Shipper
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     'Friend WithEvents RadRichTextBox1 As Telerik.WinControls.RichTextBox.RadRichTextBox
     Friend WithEvents Windows7Theme1 As Telerik.WinControls.Themes.Windows7Theme
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_SHIPPERTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_SHIPPERTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_SHIPPERTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SHIPPERTableAdapter
     Friend WithEvents TShipperBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RadPanel3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView

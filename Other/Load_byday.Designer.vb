@@ -125,7 +125,7 @@ Partial Class Load_byday
         Me.ToolStripMenuItem140 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem141 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem142 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.V_LoadingnoteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MasterGridAdvisenote = New Telerik.WinControls.UI.RadGridView()
         Me.Textpanel = New Telerik.WinControls.UI.RadPanel()
@@ -142,7 +142,7 @@ Partial Class Load_byday
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.V_LoadingnoteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterGridAdvisenote, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Textpanel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -816,14 +816,14 @@ Partial Class Load_byday
         Me.ToolStripMenuItem142.Size = New System.Drawing.Size(186, 22)
         Me.ToolStripMenuItem142.Text = "Close Inventory"
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'V_LoadingnoteBindingSource
         '
-        Me.V_LoadingnoteBindingSource.DataSource = Me.IRPCDataset
+        Me.V_LoadingnoteBindingSource.DataSource = Me.Dataset_table
         Me.V_LoadingnoteBindingSource.Position = 0
         '
         'MasterGridAdvisenote
@@ -1029,7 +1029,7 @@ Partial Class Load_byday
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.V_LoadingnoteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterGridAdvisenote, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Textpanel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1120,7 +1120,7 @@ Partial Class Load_byday
     Friend WithEvents ToolStripMenuItem140 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem141 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem142 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents V_LoadingnoteBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MasterGridAdvisenote As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Textpanel As Telerik.WinControls.UI.RadPanel

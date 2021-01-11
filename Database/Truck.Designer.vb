@@ -1797,7 +1797,7 @@ Partial Class Truck
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadPageView1 As Telerik.WinControls.UI.RadPageView
-    Friend WithEvents T_TRUCKUNITTableAdapter As RadControlsWinFormsApp1.IRPCDataset.T_TRUCKUNITDataTable
+    Friend WithEvents T_TRUCKUNITTableAdapter As RadControlsWinFormsApp1.DataSet_Table.T_TRUCKUNITDataTable
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents VE_BACKNO As System.Windows.Forms.RadioButton
     Friend WithEvents VE_BACKYES As System.Windows.Forms.RadioButton
