@@ -40,8 +40,8 @@ Partial Class Advisenote_Edit
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Status = New Telerik.WinControls.UI.RadDropDownList()
         Me.TStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.T_STATUSTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_STATUSTableAdapter()
+        'Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        'Me.T_STATUSTableAdapter = New RadControlsWinFormsApp1.DataSet_Table.T_STATUSTableAdapter()
         CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTCANCEL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTSave, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class Advisenote_Edit
         Me.RadPanel1.SuspendLayout()
         CType(Me.Status, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        'CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -257,16 +257,21 @@ Partial Class Advisenote_Edit
         '
         'TStatusBindingSource
         '
-        Me.TStatusBindingSource.DataMember = "T_STATUS"
-        Me.TStatusBindingSource.DataSource = Me.IRPCDataset
-        Me.TStatusBindingSource.Filter = "Status_id<6"
-        Me.TStatusBindingSource.Sort = "Status_id"
-        '
-        'IRPCDataset
-        '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
+
+
+        'Me.TStatusBindingSource.DataMember = "T_STATUS"
+        'Me.TStatusBindingSource.DataSource = Me.IRPCDataset
+        'Me.TStatusBindingSource.Filter = "Status_id<6"
+        'Me.TStatusBindingSource.Sort = "Status_id"
+        ''
+        ''IRPCDataset
+        ''
+        'Me.IRPCDataset.DataSetName = "IRPCDataset"
+        'Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        ''
+
+
+
         'T_STATUSTableAdapter
         '
         Me.T_STATUSTableAdapter.ClearBeforeFill = True
@@ -306,7 +311,7 @@ Partial Class Advisenote_Edit
         Me.RadPanel1.PerformLayout()
         CType(Me.Status, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        'CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -328,8 +333,8 @@ Partial Class Advisenote_Edit
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents Status As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents TStatusBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_STATUSTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_STATUSTableAdapter
+    'Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    'Friend WithEvents T_STATUSTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_STATUSTableAdapter
     Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class
 

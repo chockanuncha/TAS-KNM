@@ -132,7 +132,7 @@
     </Reference>
     <Reference Include="System">
       <Private>True</Private>
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Data">
       <Private>True</Private>
@@ -431,12 +431,6 @@
       <DependentUpon>TrucktimeResult.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Database\CardETN.Designer.vb">
-      <DependentUpon>CardETN.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Database\CardETN.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Database\ChangPassword.Designer.vb">
       <DependentUpon>ChangPassword.vb</DependentUpon>
     </Compile>
@@ -623,12 +617,6 @@
     <Compile Include="Operate\Tank_UnloadOrder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Cardreader.Designer.vb">
-      <DependentUpon>Cardreader.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Cardreader.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Database\Customer.Designer.vb">
       <DependentUpon>Customer.vb</DependentUpon>
     </Compile>
@@ -658,9 +646,6 @@
     </Compile>
     <Compile Include="Other\Fault.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IRPCDataset.vb">
-      <DependentUpon>IRPCDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Other\Load_byday.Designer.vb">
       <DependentUpon>Load_byday.vb</DependentUpon>
@@ -811,12 +796,6 @@
     <Compile Include="Database\Truck.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Advisenote\Unloadingnote.designer.vb">
-      <DependentUpon>Unloadingnote.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Advisenote\Unloadingnote.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Database\User.designer.vb">
       <DependentUpon>User.vb</DependentUpon>
     </Compile>
@@ -902,9 +881,6 @@
     <EmbeddedResource Include="bin\TrucktimeResult.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TrucktimeResult.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Database\CardETN.resx">
-      <DependentUpon>CardETN.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Database\ChangPassword.resx">
       <DependentUpon>ChangPassword.vb</DependentUpon>
@@ -1012,9 +988,6 @@
     <EmbeddedResource Include="Operate\Tank_UnloadOrder.resx">
       <DependentUpon>Tank_UnloadOrder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Cardreader.resx">
-      <DependentUpon>Cardreader.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Database\Customer.resx">
       <DependentUpon>Customer.vb</DependentUpon>
     </EmbeddedResource>
@@ -1100,9 +1073,6 @@
     <EmbeddedResource Include="Database\Truck.resx">
       <DependentUpon>Truck.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Advisenote\Unloadingnote.resx">
-      <DependentUpon>Unloadingnote.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Database\User.resx">
       <DependentUpon>User.vb</DependentUpon>
     </EmbeddedResource>
@@ -1150,16 +1120,6 @@
     <None Include="Resources\PTT OR-Cambodia Logo.jpg" />
     <None Include="Resources\PTT OR-Cambodia Logo.png" />
     <Content Include="in_logo.ico" />
-    <None Include="IRPCDataset.xsc">
-      <DependentUpon>IRPCDataset.xsd</DependentUpon>
-    </None>
-    <None Include="IRPCDataset.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IRPCDataset.xss">
-      <DependentUpon>IRPCDataset.xsd</DependentUpon>
-    </None>
     <None Include="My Project\app.manifest" />
     <None Include="Resources\Windows8.png" />
     <None Include="Resources\write %281%291.png" />

@@ -40,7 +40,7 @@ Partial Class Seal_setting
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
         Me.TSealBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        'Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.SealLast = New Telerik.WinControls.UI.RadTextBox()
         Me.SealTotal = New Telerik.WinControls.UI.RadTextBox()
@@ -81,7 +81,7 @@ Partial Class Seal_setting
         Me.G_SUM = New Telerik.WinControls.UI.RadTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.T_SEALTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_SEALTableAdapter()
+        'Me.T_SEALTableAdapter = New RadControlsWinFormsApp1.DataSet_Table.T_SEALDataTable
         CType(Me.DetailGroup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DetailGroup.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -90,7 +90,7 @@ Partial Class Seal_setting
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TSealBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        'CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SealLast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SealTotal, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,12 +255,12 @@ Partial Class Seal_setting
         'TSealBindingSource
         '
         Me.TSealBindingSource.DataMember = "T_SEAL"
-        Me.TSealBindingSource.DataSource = Me.IRPCDataset
+        Me.TSealBindingSource.DataSource = Me.DataSet_Table
         '
         'IRPCDataset
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        'Me.IRPCDataset.DataSetName = "IRPCDataset"
+        'Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RadLabel3
         '
@@ -794,7 +794,7 @@ Partial Class Seal_setting
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TSealBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        'CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SealLast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SealTotal, System.ComponentModel.ISupportInitialize).EndInit()
@@ -858,8 +858,8 @@ Partial Class Seal_setting
     Friend WithEvents SealTotal As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents P_typeEnd As System.Windows.Forms.RadioButton
     Friend WithEvents TSealBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_SEALTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_SEALTableAdapter
+    Friend WithEvents DataSet_Table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_SEALTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SEALTableAdapter
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents PTTRadio As System.Windows.Forms.RadioButton
     Friend WithEvents IRPCRadio As System.Windows.Forms.RadioButton

@@ -136,7 +136,8 @@ Partial Class Topup
         Me.MasterGridAdvisenote = New Telerik.WinControls.UI.RadGridView()
         Me.V_LoadingnoteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet_View = New RadControlsWinFormsApp1.DataSet_View()
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        'Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.RadPanel4 = New Telerik.WinControls.UI.RadPanel()
         Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -432,7 +433,7 @@ Partial Class Topup
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_TRUCK2TableAdapter()
+        'Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_TRUCK2TableAdapter()
         Me.T_PRODUCTTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_PRODUCTTableAdapter()
         Me.T_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTableAdapter()
         Me.T_SHIPPERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SHIPPERTableAdapter()
@@ -5982,7 +5983,7 @@ Partial Class Topup
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents V_TRUCK2TableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_TRUCK2TableAdapter
+    Friend WithEvents V_TRUCK2TableAdapter As RadControlsWinFormsApp1.DataSet_View.V_TRUCKDataTable
     Friend WithEvents Label36 As System.Windows.Forms.Label
     Friend WithEvents authorize_Remark As System.Windows.Forms.RichTextBox
     Friend WithEvents Panel16 As System.Windows.Forms.Panel

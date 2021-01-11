@@ -794,7 +794,7 @@ Partial Class Customer
     Friend WithEvents RadLabel9 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBox3 As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents T_CUSTOMERTableAdapter As RadControlsWinFormsApp1.IRPCDataset.T_CUSTOMERDataTable
+    Friend WithEvents T_CUSTOMERTableAdapter As RadControlsWinFormsApp1.DataSet_Table.T_CUSTOMERDataTable
     Friend WithEvents Customer_No As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel6 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents Bsave As Telerik.WinControls.UI.RadButton

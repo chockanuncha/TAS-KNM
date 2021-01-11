@@ -907,7 +907,7 @@ Partial Class Companyparent
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents Company_Name As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Office2010BlueTheme1 As Telerik.WinControls.Themes.Office2010BlueTheme
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents Company_addr As System.Windows.Forms.RichTextBox
     Friend WithEvents P_UPDATE As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents UPDATEBY As Telerik.WinControls.UI.RadTextBox
@@ -936,7 +936,7 @@ Partial Class Companyparent
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents TCompanyparentBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_COMPANYPARENTTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_COMPANYPARENTTableAdapter
+    Friend WithEvents T_COMPANYPARENTTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYTableAdapter
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
     Friend WithEvents Btfirst As System.Windows.Forms.ToolStripButton
     Friend WithEvents Btprevious As System.Windows.Forms.ToolStripButton

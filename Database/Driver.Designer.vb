@@ -1167,7 +1167,7 @@ Partial Class Driver
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents GridViewTemplate5 As Telerik.WinControls.UI.GridViewTemplate
-    Friend WithEvents IRPCDataset1 As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents IRPCDataset1 As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView
     Friend WithEvents GridViewTemplate4 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
