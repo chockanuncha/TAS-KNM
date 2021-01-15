@@ -35,6 +35,7 @@ Public Class Companyparent
         Try
             TCompanyparentBindingSource.CancelEdit()
             Me.IRPCDataset.T_COMPANYPARENT.RejectChanges()
+            Me.IRPCDataset.t_
             Companyparent_Load(sender, e)
         Catch ex As Exception
 

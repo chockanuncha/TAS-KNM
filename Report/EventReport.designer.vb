@@ -40,8 +40,8 @@ Partial Class EventReport
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.EDFillter = New System.Windows.Forms.ToolStripTextBox()
         Me.MeterGrid = New System.Windows.Forms.DataGridView()
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.T_EVENTTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_EVENTTableAdapter()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.T_EVENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_EVENTTableAdapter()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LDATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LTIME = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,7 +50,7 @@ Partial Class EventReport
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.TEVENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MeterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BindingNavigator1
@@ -74,7 +74,7 @@ Partial Class EventReport
         'TEVENTBindingSource
         '
         Me.TEVENTBindingSource.DataMember = "T_EVENT"
-        Me.TEVENTBindingSource.DataSource = Me.IRPCDataset
+        Me.TEVENTBindingSource.DataSource = Me.Dataset_table
         '
         'BindingNavigatorCountItem
         '
@@ -191,10 +191,10 @@ Partial Class EventReport
         Me.MeterGrid.Size = New System.Drawing.Size(1350, 653)
         Me.MeterGrid.TabIndex = 5
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'T_EVENTTableAdapter
         '
@@ -246,7 +246,7 @@ Partial Class EventReport
         Me.BindingNavigator1.PerformLayout()
         CType(Me.TEVENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MeterGrid, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -266,8 +266,8 @@ Partial Class EventReport
     'Friend WithEvents FPTDataSet As TAS_TOL.FPTDataSet
     Friend WithEvents TEVENTBindingSource As System.Windows.Forms.BindingSource
     'Friend WithEvents T_EVENTTableAdapter As TAS_TOL.FPTDataSetTableAdapters.T_EVENTTableAdapter
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_EVENTTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_EVENTTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_EVENTTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_EVENTTableAdapter
     Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LDATE As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LTIME As System.Windows.Forms.DataGridViewTextBoxColumn

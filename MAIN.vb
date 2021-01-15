@@ -252,8 +252,8 @@ Partial Public Class MAIN
 
 
     Private Sub bugTrackerTile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.AddOwnedForm(Cardreaderform)
-        Cardreaderform.Show()
+        'Me.AddOwnedForm(Cardreaderform)
+        'Cardreaderform.Show()
     End Sub
 
 

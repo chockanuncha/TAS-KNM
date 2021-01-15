@@ -34,11 +34,11 @@ Partial Class Temp
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.Adddata = New Telerik.WinControls.UI.RadButton()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.T_TRUCKTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_TRUCKTableAdapter()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.T_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTableAdapter()
         Me.TDriverBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GridViewTemplate1 = New Telerik.WinControls.UI.GridViewTemplate()
-        Me.T_DRIVERTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_DRIVERTableAdapter()
+        Me.T_DRIVERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_DRIVERTableAdapter()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.GridViewTemplate5 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.GridViewTemplate3 = New Telerik.WinControls.UI.GridViewTemplate()
@@ -69,7 +69,7 @@ Partial Class Temp
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Adddata, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TDriverBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -235,12 +235,12 @@ Partial Class Temp
         'BindingSource1
         '
         Me.BindingSource1.DataMember = "T_TRUCK"
-        Me.BindingSource1.DataSource = Me.IRPCDataset
+        Me.BindingSource1.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'T_TRUCKTableAdapter
         '
@@ -249,7 +249,7 @@ Partial Class Temp
         'TDriverBindingSource
         '
         Me.TDriverBindingSource.DataMember = "T_DRIVER"
-        Me.TDriverBindingSource.DataSource = Me.IRPCDataset
+        Me.TDriverBindingSource.DataSource = Me.Dataset_table
         '
         'T_DRIVERTableAdapter
         '
@@ -473,7 +473,7 @@ Partial Class Temp
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Adddata, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TDriverBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -512,11 +512,11 @@ Partial Class Temp
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_TRUCKTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_TRUCKTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_TRUCKTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTableAdapter
     Friend WithEvents GridViewTemplate1 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents TDriverBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_DRIVERTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_DRIVERTableAdapter
+    Friend WithEvents T_DRIVERTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_DRIVERTableAdapter
     Friend WithEvents GridViewTemplate2 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents GridViewTemplate5 As Telerik.WinControls.UI.GridViewTemplate
     Friend WithEvents GridViewTemplate3 As Telerik.WinControls.UI.GridViewTemplate
@@ -537,6 +537,6 @@ Partial Class Temp
     Friend WithEvents RadButton5 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
-    'Friend WithEvents T_DRIVER1TableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_DRIVER1TableAdapter
+    'Friend WithEvents T_DRIVER1TableAdapter As RadControlsWinFormsApp1.Dataset_tableTableAdapters.T_DRIVER1TableAdapter
 End Class
 

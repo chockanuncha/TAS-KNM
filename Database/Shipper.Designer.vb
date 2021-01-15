@@ -23,9 +23,11 @@ Partial Class Shipper
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Shipper))
         Me.DetailGroup = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -194,6 +196,10 @@ Partial Class Shipper
         CType(Me.Bsave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "บันทึก"
         CType(Me.Bsave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Me.RoundRectShape1
         '
+        'RoundRectShape1
+        '
+        Me.RoundRectShape1.IsRightToLeft = False
+        '
         'BCancel
         '
         Me.BCancel.BackColor = System.Drawing.Color.Transparent
@@ -227,7 +233,6 @@ Partial Class Shipper
         '
         'RadLabel2
         '
-        Me.RadLabel2.AutoSize = True
         Me.RadLabel2.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.RadLabel2.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel2.Location = New System.Drawing.Point(127, 173)
@@ -235,7 +240,7 @@ Partial Class Shipper
         Me.RadLabel2.Size = New System.Drawing.Size(98, 27)
         Me.RadLabel2.TabIndex = 2
         Me.RadLabel2.Text = "รหัสผู้ขนส่ง"
-        Me.RadLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         '
         'Label2
         '
@@ -249,7 +254,6 @@ Partial Class Shipper
         '
         'RadLabel5
         '
-        Me.RadLabel5.AutoSize = True
         Me.RadLabel5.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.RadLabel5.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel5.Location = New System.Drawing.Point(180, 238)
@@ -257,12 +261,11 @@ Partial Class Shipper
         Me.RadLabel5.Size = New System.Drawing.Size(45, 27)
         Me.RadLabel5.TabIndex = 8
         Me.RadLabel5.Text = "ที่อยู่"
-        Me.RadLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel5.TextWrap = False
         '
         'RadLabel6
         '
-        Me.RadLabel6.AutoSize = True
         Me.RadLabel6.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.RadLabel6.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel6.Location = New System.Drawing.Point(147, 301)
@@ -270,7 +273,7 @@ Partial Class Shipper
         Me.RadLabel6.Size = New System.Drawing.Size(78, 27)
         Me.RadLabel6.TabIndex = 10
         Me.RadLabel6.Text = "เบอร์โทร"
-        Me.RadLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'Label1
@@ -285,7 +288,6 @@ Partial Class Shipper
         '
         'RadLabel7
         '
-        Me.RadLabel7.AutoSize = True
         Me.RadLabel7.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.RadLabel7.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel7.Location = New System.Drawing.Point(136, 135)
@@ -293,7 +295,7 @@ Partial Class Shipper
         Me.RadLabel7.Size = New System.Drawing.Size(89, 27)
         Me.RadLabel7.TabIndex = 9
         Me.RadLabel7.Text = "ชื่อผู้ขนส่ง"
-        Me.RadLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel7.TextWrap = False
         '
         'P_Code
@@ -358,7 +360,7 @@ Partial Class Shipper
         Me.MasterGrid.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.MasterGrid.Location = New System.Drawing.Point(0, 39)
         '
-        'MasterGrid
+        '
         '
         Me.MasterGrid.MasterTemplate.AddNewRowPosition = Telerik.WinControls.UI.SystemRowPosition.Bottom
         Me.MasterGrid.MasterTemplate.AllowAddNewRow = False
@@ -374,42 +376,43 @@ Partial Class Shipper
         Me.MasterGrid.MasterTemplate.AllowRowResize = False
         Me.MasterGrid.MasterTemplate.AutoGenerateColumns = False
         Me.MasterGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn4.EnableExpressionEditor = False
-        GridViewTextBoxColumn4.FieldName = "SP_CODE"
-        GridViewTextBoxColumn4.HeaderText = "ShipperCode"
-        GridViewTextBoxColumn4.IsAutoGenerated = True
-        GridViewTextBoxColumn4.MinWidth = 200
-        GridViewTextBoxColumn4.Name = "SP_CODE"
-        GridViewTextBoxColumn4.Width = 200
-        GridViewTextBoxColumn5.EnableExpressionEditor = False
-        GridViewTextBoxColumn5.FieldName = "SP_NAMETH"
-        GridViewTextBoxColumn5.HeaderText = "ชื่อบริษัทขนส่ง"
-        GridViewTextBoxColumn5.IsAutoGenerated = True
-        GridViewTextBoxColumn5.MinWidth = 250
-        GridViewTextBoxColumn5.Name = "NAME"
-        GridViewTextBoxColumn5.Width = 250
-        GridViewTextBoxColumn6.EnableExpressionEditor = False
-        GridViewTextBoxColumn6.FieldName = "SP_TEL"
-        GridViewTextBoxColumn6.HeaderText = "เบอร์ติดต่อ"
-        GridViewTextBoxColumn6.MinWidth = 200
-        GridViewTextBoxColumn6.Name = "SP_TEL"
-        GridViewTextBoxColumn6.Width = 200
-        Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6})
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
+        GridViewTextBoxColumn1.FieldName = "SP_CODE"
+        GridViewTextBoxColumn1.HeaderText = "ShipperCode"
+        GridViewTextBoxColumn1.IsAutoGenerated = True
+        GridViewTextBoxColumn1.MinWidth = 200
+        GridViewTextBoxColumn1.Name = "SP_CODE"
+        GridViewTextBoxColumn1.Width = 200
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
+        GridViewTextBoxColumn2.FieldName = "SP_NAMETH"
+        GridViewTextBoxColumn2.HeaderText = "ชื่อบริษัทขนส่ง"
+        GridViewTextBoxColumn2.IsAutoGenerated = True
+        GridViewTextBoxColumn2.MinWidth = 250
+        GridViewTextBoxColumn2.Name = "NAME"
+        GridViewTextBoxColumn2.Width = 250
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
+        GridViewTextBoxColumn3.FieldName = "SP_TEL"
+        GridViewTextBoxColumn3.HeaderText = "เบอร์ติดต่อ"
+        GridViewTextBoxColumn3.MinWidth = 200
+        GridViewTextBoxColumn3.Name = "SP_TEL"
+        GridViewTextBoxColumn3.Width = 200
+        Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3})
         Me.MasterGrid.MasterTemplate.DataSource = Me.TShipperBindingSource
         Me.MasterGrid.MasterTemplate.EnableFiltering = True
         Me.MasterGrid.MasterTemplate.EnableGrouping = False
         Me.MasterGrid.MasterTemplate.ShowRowHeaderColumn = False
         Me.MasterGrid.MasterTemplate.Templates.AddRange(New Telerik.WinControls.UI.GridViewTemplate() {Me.GridViewTemplate2})
+        Me.MasterGrid.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.MasterGrid.Name = "MasterGrid"
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
-        '
-        '
-        '
-        Me.MasterGrid.RootElement.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.Size = New System.Drawing.Size(655, 601)
         Me.MasterGrid.TabIndex = 1
         Me.MasterGrid.ThemeName = "Office2010Blue"
+        '
+        'GridViewTemplate2
+        '
+        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition1
         '
         'BindingNavigator1
         '

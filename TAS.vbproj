@@ -336,6 +336,12 @@
     <Compile Include="Advisenote\Topup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Advisenote\Unloadingnote.designer.vb">
+      <DependentUpon>Unloadingnote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Advisenote\Unloadingnote.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Advisenote\UnloadtankValue.Designer.vb">
       <DependentUpon>UnloadtankValue.vb</DependentUpon>
     </Compile>
@@ -833,6 +839,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\Topup.resx">
       <DependentUpon>Topup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advisenote\Unloadingnote.resx">
+      <DependentUpon>Unloadingnote.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\UnloadtankValue.resx">
       <DependentUpon>UnloadtankValue.vb</DependentUpon>
@@ -1474,12 +1483,12 @@
   <ItemGroup>
     <PublishFile Include="IRPCTAS.exe">
       <Visible>False</Visible>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Auto</PublishState>
-      <IncludeHash>False</IncludeHash>
       <FileType>ManifestEntryPoint</FileType>
     </PublishFile>
   </ItemGroup>

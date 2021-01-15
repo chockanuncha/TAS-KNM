@@ -47,7 +47,7 @@ Public Class Advisenote_Edit
     End Sub
 
     Private Sub Advisenote_Edit_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_STATUS' table. You can move, or remove it, as needed.
-        Me.T_STATUSTableAdapter.Fill(Me.IRPCDataset.T_STATUS)
+        'TODO: This line of code loads data into the 'Dataset_table.T_STATUS' table. You can move, or remove it, as needed.
+        Me.T_STATUSTableAdapter.Fill(Me.Dataset_table.T_STATUS)
     End Sub
 End Class

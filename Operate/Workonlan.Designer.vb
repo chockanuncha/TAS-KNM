@@ -36,7 +36,7 @@ Partial Class Workonlan
         Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.T_COMPUTERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.t_c
+        Me.T_COMPUTERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPUTERTableAdapter
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.RoundRectShape1 = New Telerik.WinControls.RoundRectShape(Me.components)
         CType(Me.RadPanel2, System.ComponentModel.ISupportInitialize).BeginInit()

@@ -117,8 +117,8 @@ Partial Class ExportExcel
         Dim GridViewDecimalColumn126 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.V_BOL_M1M2_NEWTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_BOL_M1M2_NEWTableAdapter()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.V_BOL_M1M2_NEWTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_BOL_M1M2_NEWTableAdapter()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.DTP3 = New System.Windows.Forms.DateTimePicker()
         Me.DTP2 = New System.Windows.Forms.DateTimePicker()
@@ -129,7 +129,7 @@ Partial Class ExportExcel
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.B_ExportExcel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Header, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -614,12 +614,12 @@ Partial Class ExportExcel
         'BindingSource1
         '
         Me.BindingSource1.DataMember = "V_BOL_M1M2_NEW"
-        Me.BindingSource1.DataSource = Me.IRPCDataset
+        Me.BindingSource1.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'V_BOL_M1M2_NEWTableAdapter
         '
@@ -745,7 +745,7 @@ Partial Class ExportExcel
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.B_ExportExcel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Header, System.ComponentModel.ISupportInitialize).EndInit()
@@ -756,8 +756,8 @@ Partial Class ExportExcel
     End Sub
     Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents V_BOL_M1M2_NEWTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_BOL_M1M2_NEWTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents V_BOL_M1M2_NEWTableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_BOL_M1M2_NEWTableAdapter
     Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents DTP3 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DTP2 As System.Windows.Forms.DateTimePicker

@@ -26,7 +26,7 @@ Partial Class Reportdaily
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.RadCalendar1 = New Telerik.WinControls.UI.RadCalendar()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.BPrint = New Telerik.WinControls.UI.RadButton()
         Me.BClose = New Telerik.WinControls.UI.RadButton()
@@ -45,7 +45,7 @@ Partial Class Reportdaily
         Me.RadPanel1.SuspendLayout()
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel3.SuspendLayout()
         CType(Me.BPrint, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,10 +91,10 @@ Partial Class Reportdaily
         CType(Me.RadCalendar1.GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadCalendar1.GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RadPanel3
         '
@@ -148,7 +148,7 @@ Partial Class Reportdaily
         '
         'BindingSource1
         '
-        Me.BindingSource1.DataSource = Me.IRPCDataset
+        Me.BindingSource1.DataSource = Me.Dataset_table
         Me.BindingSource1.Position = 0
         '
         'RadPanel4
@@ -269,7 +269,7 @@ Partial Class Reportdaily
         Me.RadPanel1.ResumeLayout(False)
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel3.ResumeLayout(False)
         CType(Me.BPrint, System.ComponentModel.ISupportInitialize).EndInit()
@@ -285,7 +285,7 @@ Partial Class Reportdaily
     End Sub
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents GridViewTemplate2 As Telerik.WinControls.UI.GridViewTemplate
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents RadPanel3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents RadPanel4 As Telerik.WinControls.UI.RadPanel

@@ -17,8 +17,8 @@ Public Class Manual
     Dim MyDataSet As New DataSet
 
     Private Sub Manual_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_CHECKIN' table. You can move, or remove it, as needed.
-        Me.T_CHECKINTableAdapter.Fill(Me.IRPCDataset.T_CHECKIN)
+        'TODO: This line of code loads data into the 'Dataset_table.T_CHECKIN' table. You can move, or remove it, as needed.
+        Me.T_CHECKINTableAdapter.Fill(Me.Dataset_table.T_CHECKIN)
 
     End Sub
 
@@ -31,12 +31,12 @@ Public Class Manual
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bsave.Click
         Try
             TCheckinBindingSource.EndEdit()
-            T_CHECKINTableAdapter.Update(IRPCDataset.T_CHECKIN)
+            T_CHECKINTableAdapter.Update(Dataset_table.T_CHECKIN)
         Catch ex As Exception
             MessageBox.Show("ไม่สามารถอัพเดทข้อมูลได้ กรุณาตรวจสอบ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Manual_Load(sender, e)
         End Try
-        Me.T_CHECKINTableAdapter.Fill(Me.IRPCDataset.T_CHECKIN)
+        Me.T_CHECKINTableAdapter.Fill(Me.Dataset_table.T_CHECKIN)
         End
     End Sub
 
@@ -51,12 +51,12 @@ Public Class Manual
     Private Sub BCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         Try
             TCheckinBindingSource.EndEdit()
-            T_CHECKINTableAdapter.Update(IRPCDataset.T_CHECKIN)
+            T_CHECKINTableAdapter.Update(Dataset_table.T_CHECKIN)
         Catch ex As Exception
             MessageBox.Show("ไม่สามารถอัพเดทข้อมูลได้ กรุณาตรวจสอบ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Manual_Load(sender, e)
         End Try
-        Me.T_CHECKINTableAdapter.Fill(Me.IRPCDataset.T_CHECKIN)
+        Me.T_CHECKINTableAdapter.Fill(Me.Dataset_table.T_CHECKIN)
         End
     End Sub
 End Class

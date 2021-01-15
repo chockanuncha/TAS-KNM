@@ -20,7 +20,7 @@ Public Class Fault
 
     Private Sub Fault_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'IRPCDataset.T_USER' table. You can move, or remove it, as needed.
-        Me.T_USERTableAdapter.Fill(Me.IRPCDataset.T_USER)
+        Me.T_USERTableAdapter.Fill(Me.Dataset_table.T_USER)
 
     End Sub
 

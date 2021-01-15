@@ -28,8 +28,8 @@ Partial Class Setting
         Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.TSettingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.T_SETTINGTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_SETTINGTableAdapter()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.T_SETTINGTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SETTINGTableAdapter()
         Me.BTCANCEL = New Telerik.WinControls.UI.RadButton()
         Me.BTSAVE = New Telerik.WinControls.UI.RadButton()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
@@ -42,7 +42,7 @@ Partial Class Setting
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TSettingBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTCANCEL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTSAVE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,12 +115,12 @@ Partial Class Setting
         'TSettingBindingSource
         '
         Me.TSettingBindingSource.DataMember = "T_SETTING"
-        Me.TSettingBindingSource.DataSource = Me.IRPCDataset
+        Me.TSettingBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'T_SETTINGTableAdapter
         '
@@ -252,7 +252,7 @@ Partial Class Setting
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TSettingBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BTCANCEL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BTSAVE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -268,8 +268,8 @@ Partial Class Setting
     Friend WithEvents RadPanel2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
     Friend WithEvents TSettingBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
-    Friend WithEvents T_SETTINGTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_SETTINGTableAdapter
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents T_SETTINGTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SETTINGTableAdapter
     Friend WithEvents BTCANCEL As Telerik.WinControls.UI.RadButton
     Friend WithEvents BTSAVE As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel

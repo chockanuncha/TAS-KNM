@@ -115,7 +115,7 @@ Partial Class MAIN
         Me.RadLiveTileElement8 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.TAlarmsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
 
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
 
         Me.Cardreader = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Status = New Telerik.WinControls.UI.RadLiveTileElement()
@@ -149,7 +149,7 @@ Partial Class MAIN
         Me.RadLiveTileElement42 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement43 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement9 = New Telerik.WinControls.UI.RadLiveTileElement()
-        'Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_ALARMS_BATCHTableAdapter()
+        'Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.Dataset_tableTableAdapters.T_ALARMS_BATCHTableAdapter()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.object_990ead7b_f0c8_47cc_8fb0_8bfcd20c5f31 = New Telerik.WinControls.RootRadElement()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
@@ -175,7 +175,7 @@ Partial Class MAIN
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TAlarmsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -1741,13 +1741,13 @@ Partial Class MAIN
         'TAlarmsBindingSource
         '
         Me.TAlarmsBindingSource.DataMember = "T_ALARMS_BATCH"
-        Me.TAlarmsBindingSource.DataSource = Me.IRPCDataset
+        Me.TAlarmsBindingSource.DataSource = Me.Dataset_table
         Me.TAlarmsBindingSource.Sort = "id desc"
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        'Me.IRPCDataset.DataSetName = "IRPCDataset"
-        'Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        'Me.Dataset_table.DataSetName = "Dataset_table"
+        'Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
 
 
         '
@@ -2450,7 +2450,7 @@ Partial Class MAIN
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TAlarmsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -2562,16 +2562,16 @@ Partial Class MAIN
     Friend WithEvents RadLiveTileElement42 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement43 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents Cardreader As Telerik.WinControls.UI.RadLiveTileElement
-    'Friend WithEvents Tank As Telerik.WinControls.UI.RadLiveTileElement
+    Friend WithEvents Tank As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents Status As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement9 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents TAlarmsBindingSource As System.Windows.Forms.BindingSource
 
 
-    'Public WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Public WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
 
 
-    'Friend WithEvents T_ALARMS_BATCHTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_ALARMS_BATCHTableAdapter
+    Friend WithEvents T_ALARMS_BATCHTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCHTableAdapter
     Public WithEvents Eventext As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Panel1 As Panel

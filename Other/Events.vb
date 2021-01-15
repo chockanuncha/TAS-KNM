@@ -14,10 +14,10 @@ Public Class Journal_Events
 
     Private Sub RadForm3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         My.Application.ChangeCulture("th-TH")
-        'TODO: This line of code loads data into the 'IRPCDataset.T_EVENT' table. You can move, or remove it, as needed.
-        Me.T_EVENTTableAdapter.Fill(Me.IRPCDataset.T_EVENT)
-        'TODO: This line of code loads data into the 'IRPCDataset.T_ALARMS_BATCH_HISTORY' table. You can move, or remove it, as needed.
-        Me.T_ALARMS_BATCH_HISTORYTableAdapter.Fill(Me.IRPCDataset.T_ALARMS_BATCH_HISTORY)
+        'TODO: This line of code loads data into the 'Dataset_table.T_EVENT' table. You can move, or remove it, as needed.
+        Me.T_EVENTTableAdapter.Fill(Me.Dataset_table.T_EVENT)
+        'TODO: This line of code loads data into the 'Dataset_table.T_ALARMS_BATCH_HISTORY' table. You can move, or remove it, as needed.
+        Me.T_ALARMS_BATCH_HISTORYTableAdapter.Fill(Me.Dataset_table.T_ALARMS_BATCH_HISTORY)
         'TODO: This line of code loads data into the 'IRPCDataset.V_EVENT' table. You can move, or remove it, as needed.
         DateTimePicker1.Value = Date.Now
         DateTimePicker2.Value = Date.Now

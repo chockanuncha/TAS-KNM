@@ -5307,7 +5307,7 @@ Partial Class Topup
         '
         'V_TRUCK2TableAdapter
         '
-        Me.V_TRUCK2TableAdapter.ClearBeforeFill = True
+        Me.V_TRUCKTableAdapter.ClearBeforeFill = True
         '
         'T_PRODUCTTableAdapter1
         '

@@ -23,11 +23,11 @@ Partial Class Report
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
-        Me.V_LOADINGNOTETableAdapter1 = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_LOADINGNOTETableAdapter()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.V_LOADINGNOTETableAdapter1 = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADINGNOTETableAdapter()
         Me.V_LoadingnoteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.T_PRODUCTTableAdapter = New RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_PRODUCTTableAdapter()
+        Me.T_PRODUCTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_PRODUCTTableAdapter()
         Me.RadDateTimePicker1 = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadDateTimePicker2 = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
@@ -36,7 +36,7 @@ Partial Class Report
         Me.CbProduct = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.V_LoadingnoteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDateTimePicker1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,10 +46,10 @@ Partial Class Report
         CType(Me.BtScapPrint, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'V_LOADINGNOTETableAdapter1
         '
@@ -58,12 +58,12 @@ Partial Class Report
         'V_LoadingnoteBindingSource
         '
         Me.V_LoadingnoteBindingSource.DataMember = "V_LOADINGNOTE"
-        Me.V_LoadingnoteBindingSource.DataSource = Me.IRPCDataset
+        Me.V_LoadingnoteBindingSource.DataSource = Me.Dataset_table
         '
         'TProductBindingSource
         '
         Me.TProductBindingSource.DataMember = "T_PRODUCT"
-        Me.TProductBindingSource.DataSource = Me.IRPCDataset
+        Me.TProductBindingSource.DataSource = Me.Dataset_table
         '
         'T_PRODUCTTableAdapter
         '
@@ -164,7 +164,7 @@ Partial Class Report
         Me.ClientSize = New System.Drawing.Size(1161, 471)
         Me.Controls.Add(Me.RadPanel1)
         Me.Name = "Report"
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.V_LoadingnoteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDateTimePicker1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -194,7 +194,7 @@ Partial Class Report
     Friend WithEvents LOAD_DRIVER As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LOAD_DOfull As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LC_COMPARTMENT As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents V_LOADINGNOTETableAdapter As IRPCDatasetTableAdapters.V_LOADINGNOTETableAdapter
+    Friend WithEvents V_LOADINGNOTETableAdapter As DataSet_ViewTableAdapters.V_LOADINGNOTETableAdapter
     Friend WithEvents UnloadBut As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     'Friend WithEvents FPTDataSet As TAS_TOL.FPTDataSet
@@ -237,12 +237,12 @@ Partial Class Report
     Friend WithEvents SCAPReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     'Friend WithEvents BtScapPrint As System.Windows.Forms.Button
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents BindingSource2 As System.Windows.Forms.BindingSource
-    Friend WithEvents V_LOADINGNOTETableAdapter1 As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.V_LOADINGNOTETableAdapter
+    Friend WithEvents V_LOADINGNOTETableAdapter1 As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADINGNOTETableAdapter
     Friend WithEvents V_LoadingnoteBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TProductBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_PRODUCTTableAdapter As RadControlsWinFormsApp1.IRPCDatasetTableAdapters.T_PRODUCTTableAdapter
+    Friend WithEvents T_PRODUCTTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_PRODUCTTableAdapter
     Friend WithEvents RadDateTimePicker1 As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadDateTimePicker2 As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel

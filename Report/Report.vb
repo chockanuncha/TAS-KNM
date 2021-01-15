@@ -499,8 +499,8 @@ Public Class Report
     End Sub
 
     Private Sub Report_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_PRODUCT' table. You can move, or remove it, as needed.
-        Me.T_PRODUCTTableAdapter.Fill(Me.IRPCDataset.T_PRODUCT)
+        'TODO: This line of code loads data into the 'Dataset_table.T_PRODUCT' table. You can move, or remove it, as needed.
+        Me.T_PRODUCTTableAdapter.Fill(Me.Dataset_table.T_PRODUCT)
         'TODO: This line of code loads data into the 'FPTDataSet.T_Product' table. You can move, or remove it, as needed.
         With DBGrid1
             .ReadOnly = True
@@ -542,8 +542,8 @@ Public Class Report
 
 
         DataGridView1.SelectAll()
-        Clipboard.SetText( _
-          DataGridView1.GetClipboardContent().GetText, _
+        Clipboard.SetText(
+          DataGridView1.GetClipboardContent().GetText,
           TextDataFormat.Text)
         DataGridView1.ClearSelection()
 
@@ -563,7 +563,7 @@ Public Class Report
                 .Range("A2").Select()
             End With
         End With
-        xlapp.CutCopyMode = False
+        xlapp.CutCopyMode = Falseb
         xlapp.ScreenUpdating = True
 
     End Sub
@@ -687,8 +687,8 @@ Public Class Report
     End Sub
 
     Private Sub Report_Load_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.V_LOADINGNOTE' table. You can move, or remove it, as needed.
-        Me.V_LOADINGNOTETableAdapter1.Fill(Me.IRPCDataset.V_LOADINGNOTE)
+        'TODO: This line of code loads data into the 'Dataset_table.V_LOADINGNOTE' table. You can move, or remove it, as needed.
+        Me.V_LOADINGNOTETableAdapter1.Fill(Me.Dataset_table.V_LOADINGNOTE)
 
     End Sub
 
