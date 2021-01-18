@@ -485,21 +485,21 @@ Partial Class Unloadingnote
         Me.T_SHIPPERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SHIPPERTableAdapter()
         Me.T_PRODUCTTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_PRODUCTTableAdapter()
         Me.T_BAYTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_BAYTableAdapter()
-        Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_TRUCKTableAdapter()
+        Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         Me.T_BATCHMETERTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_BATCHMETERTableAdapter()
         Me.T_TRUCKTYPETableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter()
         Me.T_STATUSTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_STATUSTableAdapter()
-        Me.V_LOADINGNOTETableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_LOADINGNOTETableAdapter()
-        Me.V_LOADING_STATUSTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_LOADING_STATUSTableAdapter()
+        Me.V_LOADINGNOTETableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADINGNOTETableAdapter()
+        Me.V_LOADING_STATUSTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADING_STATUSTableAdapter()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_TRUCK2TableAdapter()
+        Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         Me.T_TANKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TANKTableAdapter()
         Me.BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.T_COMPANYPARENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYPARENTTableAdapter()
-        Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.VCHECKINLOAD1TableAdapter()
+        Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
@@ -6538,7 +6538,7 @@ Partial Class Unloadingnote
     Friend WithEvents TBAYBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents T_BAYTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_BAYTableAdapter
     Friend WithEvents VTruckBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents V_TRUCKTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_TRUCKTableAdapter
+    Friend WithEvents V_TRUCKTableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter
     Friend WithEvents RadMultiColumnComboBox1 As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents DesertTheme1 As Telerik.WinControls.Themes.DesertTheme
     Friend WithEvents TelerikMetroBlueTheme1 As Telerik.WinControls.Themes.TelerikMetroBlueTheme
@@ -6551,7 +6551,7 @@ Partial Class Unloadingnote
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents T_STATUSTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_STATUSTableAdapter
     Friend WithEvents V_LoadingnoteBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents V_LOADINGNOTETableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_LOADINGNOTETableAdapter
+    Friend WithEvents V_LOADINGNOTETableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADINGNOTETableAdapter
     Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView
     Friend WithEvents TBAYBindingSource2 As System.Windows.Forms.BindingSource
     Friend WithEvents TBAYBindingSource3 As System.Windows.Forms.BindingSource
@@ -6594,7 +6594,7 @@ Partial Class Unloadingnote
     Friend WithEvents TBayBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TBatchmeterBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VLoading_StatusBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents V_LOADING_STATUSTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_LOADING_STATUSTableAdapter
+    Friend WithEvents V_LOADING_STATUSTableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADING_STATUSTableAdapter
     Friend WithEvents RadPanel2 As Telerik.WinControls.UI.RadPanel
     'Friend WithEvents MasterGridAdvisenote As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
@@ -6788,7 +6788,7 @@ Partial Class Unloadingnote
     Friend WithEvents Panel15 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents V_TRUCK2TableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.V_TRUCK2TableAdapter
+    Friend WithEvents V_TRUCK2TableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents Label36 As System.Windows.Forms.Label
     Friend WithEvents PresetFinish As Telerik.WinControls.UI.RadTextBox
@@ -6864,7 +6864,7 @@ Partial Class Unloadingnote
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
     Friend WithEvents AddAuto As Telerik.WinControls.UI.RadButton
-    Friend WithEvents VCHECKINLOAD1TableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.VCHECKINLOAD1TableAdapter
+    Friend WithEvents VCHECKINLOAD1TableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter
     Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
     Friend WithEvents Label48 As System.Windows.Forms.Label
