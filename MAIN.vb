@@ -408,8 +408,8 @@ Partial Public Class MAIN
 
 
     Private Sub RadTileElement40_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadTileElement40.Click
-        Me.AddOwnedForm(Unloadingnote)
-        Unloadingnote.Show()
+        'Me.AddOwnedForm(Unloadingnote)
+        'Unloadingnote.Show()
     End Sub
 
     Private Sub RadLiveTileElement23_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BayMenu.Click
@@ -500,8 +500,8 @@ Partial Public Class MAIN
     End Sub
 
     Private Sub Tank_menu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tank_menu.Click
-        Me.AddOwnedForm(Tank)
-        Tank.Show()
+        'Me.AddOwnedForm(Tank)
+        'Tank.Show()
     End Sub
 
     Private Sub AlarmGrid_CellFormatting(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.CellFormattingEventArgs)

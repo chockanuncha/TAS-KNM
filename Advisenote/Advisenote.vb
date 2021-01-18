@@ -1,14 +1,5 @@
-﻿Imports System.Data
-Imports System
-Imports System.IO
-Imports System.Data.Common
-Imports Devart.Data.Oracle
-Imports ExtendedErrorProvider
-Imports CrystalDecisions.CrystalReports
+﻿Imports ExtendedErrorProvider
 Imports CrystalDecisions.CrystalReports.Engine
-Imports System.Threading
-Imports System.Drawing.Printing
-Imports System.ComponentModel
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data

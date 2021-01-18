@@ -97,33 +97,34 @@ Public Class Loginauthorize
                 End If
 
 
-                If Unloadingnote.authorizeUser = 1 Then
-                    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                'If Unloadingnote.authorizeUser = 1 Then
+                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
 
-                    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                End If
-                If Unloadingnote.authorizeUser = 2 Then
-                    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                End If
-                If Unloadingnote.authorizeUser = 3 Then
-                    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                End If
-                If Unloadingnote.authorizeUser = 4 Then
-                    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                End If
+                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                'End If
+                'If Unloadingnote.authorizeUser = 2 Then
+                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                'End If
+                'If Unloadingnote.authorizeUser = 3 Then
+                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                'End If
+                'If Unloadingnote.authorizeUser = 4 Then
+                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
+                'End If
 
-                If Unloadingnote.authorizeUser = 5 Then
-                    Unloadingnote.AuthorRemarkDriver = "User : " & Userauthorize & " Authorize ประวัติใบขับขี่ของ พขร. : " & Unloadingnote.Driver.Text & " , "
-                    Unloadingnote.authorize_Remark.Text = Unloadingnote.AuthorRemark & Unloadingnote.AuthorRemarkDriver
-                End If
+                'If Unloadingnote.authorizeUser = 5 Then
+                '    Unloadingnote.AuthorRemarkDriver = "User : " & Userauthorize & " Authorize ประวัติใบขับขี่ของ พขร. : " & Unloadingnote.Driver.Text & " , "
+                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.AuthorRemark & Unloadingnote.AuthorRemarkDriver
+                'End If
 
-                If Unloadingnote.authorizeUser = 6 Then
-                    Unloadingnote.AuthorRemarkDriver = Unloadingnote.AuthorRemarkDriver & "User : " & Userauthorize & " Authorize ประวัติบัตรอบรมของ พขร. : " & Unloadingnote.Driver.Text & " , "
-                    Unloadingnote.authorize_Remark.Text = Unloadingnote.AuthorRemark & Unloadingnote.AuthorRemarkDriver
-                End If
+                'If Unloadingnote.authorizeUser = 6 Then
+                '    Unloadingnote.AuthorRemarkDriver = Unloadingnote.AuthorRemarkDriver & "User : " & Userauthorize & " Authorize ประวัติบัตรอบรมของ พขร. : " & Unloadingnote.Driver.Text & " , "
+                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.AuthorRemark & Unloadingnote.AuthorRemarkDriver
+                'End If
+
 
                 Me.Close()
 
@@ -146,14 +147,16 @@ Public Class Loginauthorize
             Advisenote.Driver.Focus()
         End If
 
-        If Unloadingnote.authorizeUser < 5 Then
-            Unloadingnote.Cbn2.SelectedIndex = -1
-            Unloadingnote.Cbn2.Focus()
+        'If Unloadingnote.authorizeUser < 5 Then
+        '    Unloadingnote.Cbn2.SelectedIndex = -1
+        '    Unloadingnote.Cbn2.Focus()
 
-        Else
-            Unloadingnote.Driver.SelectedIndex = -1
-            Unloadingnote.Driver.Focus()
-        End If
+        'Else
+        '    Unloadingnote.Driver.SelectedIndex = -1
+        '    Unloadingnote.Driver.Focus()
+        'End If
+
+
 
         If Topup.authorizeUser < 5 Then
             Topup.Cbn2.SelectedIndex = -1

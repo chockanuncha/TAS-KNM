@@ -8,8 +8,8 @@ Public Class Usergroup
     Dim Del As Integer = 0
 
     Private Sub Usergroup_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_UGRP' table. You can move, or remove it, as needed.
-        Me.T_UGRPTableAdapter.Fill(Me.IRPCDataset.T_UGRP)
+        'TODO: This line of code loads data into the 'Dataset_table.T_UGRP' table. You can move, or remove it, as needed.
+        Me.T_UGRPTableAdapter.Fill(Me.Dataset_table.T_UGRP)
         BindingNavigator1.Enabled = True
         DetailGroup.Enabled = False
         MasterGrid.Enabled = True
@@ -87,7 +87,7 @@ Public Class Usergroup
 
     Private Sub BCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         TUgrpBindingSource.CancelEdit()
-        Me.IRPCDataset.T_UGRP.RejectChanges()
+        Me.Dataset_table.T_UGRP.RejectChanges()
         Usergroup_Load(sender, e)
     End Sub
 
@@ -97,8 +97,8 @@ Public Class Usergroup
                 TUgrpBindingSource.Item(TUgrpBindingSource.Position)("UPDATE_DATE") = Now
                 UPDATEBY.Text = MAIN.U_NAME
                 TUgrpBindingSource.EndEdit()
-                T_UGRPTableAdapter.Update(Me.IRPCDataset.T_UGRP)
-                Me.IRPCDataset.T_UGRP.AcceptChanges()
+                T_UGRPTableAdapter.Update(Me.Dataset_table.T_UGRP)
+                Me.Dataset_table.T_UGRP.AcceptChanges()
                 Usergroup_Load(sender, e)
                 Me.BringToFront()
             End If

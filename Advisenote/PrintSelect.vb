@@ -15,8 +15,8 @@ Public Class PrintSelect
     Private cls As New Class_SQKDB
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BPrint.Click
         Dim ref As String
-        ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
-
+        'ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+        ref = Advisenote.MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
         If Default_chk.Checked = True Then
             Dim Myreport As New ReportDocument
             Myreport = New ReportDocument
@@ -56,7 +56,8 @@ Public Class PrintSelect
             ReportPrint.ShowDialog()
             ds.Dispose()
         Else
-            ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("load_id").Value.ToString
+            'ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("load_id").Value.ToString
+            ref = Advisenote.MasterGridAdvisenote.CurrentRow.Cells("load_id").Value.ToString
             Dim Myreport As New ReportDocument
             Myreport = New ReportDocument
             Dim q As String

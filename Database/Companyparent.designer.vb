@@ -26,16 +26,20 @@ Partial Class Companyparent
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Companyparent))
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TCompanyparentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IRPCDataset = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.GridViewTemplate1 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.Btfirst = New System.Windows.Forms.ToolStripButton()
@@ -87,13 +91,15 @@ Partial Class Companyparent
         Me.MasterTemplate = New Telerik.WinControls.UI.RadGridView()
         Me.RadCalendar1 = New Telerik.WinControls.UI.RadCalendar()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
-        Me.T_COMPANYPARENTTableAdapter = New RadControlsWinFormsApp1.DataSet_Table.T_COMPANYDataTable()
+        Me.T_COMPANYPARENTTableAdapter = New RadControlsWinFormsApp1.DataSet_Table.T_COMPANYPARENTDataTable()
+        Me.DirectoryEntry1 = New System.DirectoryServices.DirectoryEntry()
+        Me.T_COMPANYPARENTTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYPARENTTableAdapter()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TCompanyparentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
@@ -126,6 +132,7 @@ Partial Class Companyparent
         CType(Me.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterTemplate.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.T_COMPANYPARENTTableAdapter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -158,7 +165,7 @@ Partial Class Companyparent
         Me.MasterGrid.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.MasterGrid.Location = New System.Drawing.Point(0, 39)
         '
-        'MasterGrid
+        '
         '
         Me.MasterGrid.MasterTemplate.AddNewRowPosition = Telerik.WinControls.UI.SystemRowPosition.Bottom
         Me.MasterGrid.MasterTemplate.AllowAddNewRow = False
@@ -200,13 +207,10 @@ Partial Class Companyparent
         Me.MasterGrid.MasterTemplate.EnableGrouping = False
         Me.MasterGrid.MasterTemplate.ShowRowHeaderColumn = False
         Me.MasterGrid.MasterTemplate.Templates.AddRange(New Telerik.WinControls.UI.GridViewTemplate() {Me.GridViewTemplate1})
+        Me.MasterGrid.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.MasterGrid.Name = "MasterGrid"
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
-        '
-        '
-        '
-        Me.MasterGrid.RootElement.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.Size = New System.Drawing.Size(740, 600)
         Me.MasterGrid.TabIndex = 1
         Me.MasterGrid.ThemeName = "Office2010Blue"
@@ -214,12 +218,16 @@ Partial Class Companyparent
         'TCompanyparentBindingSource
         '
         Me.TCompanyparentBindingSource.DataMember = "T_COMPANYPARENT"
-        Me.TCompanyparentBindingSource.DataSource = Me.IRPCDataset
+        Me.TCompanyparentBindingSource.DataSource = Me.Dataset_table
         '
-        'IRPCDataset
+        'Dataset_table
         '
-        Me.IRPCDataset.DataSetName = "IRPCDataset"
-        Me.IRPCDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GridViewTemplate1
+        '
+        Me.GridViewTemplate1.ViewDefinition = TableViewDefinition1
         '
         'BindingNavigator1
         '
@@ -267,6 +275,7 @@ Partial Class Companyparent
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -413,6 +422,10 @@ Partial Class Companyparent
         Me.Label3.TabIndex = 33
         Me.Label3.Text = "จำนวนช่องจ่าย"
         '
+        'GridViewTemplate2
+        '
+        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition3
+        '
         'DetailGroup
         '
         Me.DetailGroup.Controls.Add(Me.RadLabel7)
@@ -449,7 +462,6 @@ Partial Class Companyparent
         '
         'RadLabel7
         '
-        Me.RadLabel7.AutoSize = True
         Me.RadLabel7.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel7.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel7.Location = New System.Drawing.Point(102, 443)
@@ -457,12 +469,11 @@ Partial Class Companyparent
         Me.RadLabel7.Size = New System.Drawing.Size(86, 27)
         Me.RadLabel7.TabIndex = 131
         Me.RadLabel7.Text = "แก้ไขโดย"
-        Me.RadLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'RadLabel4
         '
-        Me.RadLabel4.AutoSize = True
         Me.RadLabel4.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel4.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel4.Location = New System.Drawing.Point(11, 407)
@@ -470,7 +481,7 @@ Partial Class Companyparent
         Me.RadLabel4.Size = New System.Drawing.Size(177, 27)
         Me.RadLabel4.TabIndex = 130
         Me.RadLabel4.Text = "วัน-เวลาที่แก้ไขล่าสุด"
-        Me.RadLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'Label7
@@ -496,7 +507,6 @@ Partial Class Companyparent
         '
         'RadLabel1
         '
-        Me.RadLabel1.AutoSize = True
         Me.RadLabel1.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel1.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel1.Location = New System.Drawing.Point(74, 335)
@@ -504,7 +514,7 @@ Partial Class Companyparent
         Me.RadLabel1.Size = New System.Drawing.Size(114, 27)
         Me.RadLabel1.TabIndex = 128
         Me.RadLabel1.Text = "รหัสไปรษณีย์"
-        Me.RadLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         '
         'RadTextBox2
         '
@@ -519,7 +529,6 @@ Partial Class Companyparent
         '
         'RadLabel9
         '
-        Me.RadLabel9.AutoSize = True
         Me.RadLabel9.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel9.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel9.Location = New System.Drawing.Point(125, 299)
@@ -527,12 +536,11 @@ Partial Class Companyparent
         Me.RadLabel9.Size = New System.Drawing.Size(63, 27)
         Me.RadLabel9.TabIndex = 123
         Me.RadLabel9.Text = "จังหวัด"
-        Me.RadLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel9.TextWrap = False
         '
         'RadLabel12
         '
-        Me.RadLabel12.AutoSize = True
         Me.RadLabel12.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel12.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel12.Location = New System.Drawing.Point(79, 263)
@@ -540,7 +548,7 @@ Partial Class Companyparent
         Me.RadLabel12.Size = New System.Drawing.Size(109, 27)
         Me.RadLabel12.TabIndex = 124
         Me.RadLabel12.Text = "แขวง/อำเภอ"
-        Me.RadLabel12.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel12.TextWrap = False
         '
         'RadTextBox3
@@ -575,6 +583,10 @@ Partial Class Companyparent
         CType(Me.Bsave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "บันทึก"
         CType(Me.Bsave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Me.RoundRectShape1
         '
+        'RoundRectShape1
+        '
+        Me.RoundRectShape1.IsRightToLeft = False
+        '
         'BCancel
         '
         Me.BCancel.BackColor = System.Drawing.Color.Transparent
@@ -599,7 +611,6 @@ Partial Class Companyparent
         '
         Me.Company_Type.Font = New System.Drawing.Font("Tahoma", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         RadListDataItem1.Text = "-"
-        RadListDataItem1.TextWrap = True
         Me.Company_Type.Items.Add(RadListDataItem1)
         Me.Company_Type.Location = New System.Drawing.Point(194, 159)
         Me.Company_Type.Name = "Company_Type"
@@ -660,7 +671,6 @@ Partial Class Companyparent
         '
         'RadLabel3
         '
-        Me.RadLabel3.AutoSize = True
         Me.RadLabel3.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel3.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel3.Location = New System.Drawing.Point(110, 371)
@@ -668,12 +678,11 @@ Partial Class Companyparent
         Me.RadLabel3.Size = New System.Drawing.Size(78, 27)
         Me.RadLabel3.TabIndex = 72
         Me.RadLabel3.Text = "เบอร์โทร"
-        Me.RadLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'RadLabel2
         '
-        Me.RadLabel2.AutoSize = True
         Me.RadLabel2.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel2.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel2.Location = New System.Drawing.Point(143, 213)
@@ -681,7 +690,7 @@ Partial Class Companyparent
         Me.RadLabel2.Size = New System.Drawing.Size(45, 27)
         Me.RadLabel2.TabIndex = 71
         Me.RadLabel2.Text = "ที่อยู่"
-        Me.RadLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel2.TextWrap = False
         '
         'Company_Name
@@ -697,7 +706,6 @@ Partial Class Companyparent
         '
         'RadLabel8
         '
-        Me.RadLabel8.AutoSize = True
         Me.RadLabel8.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel8.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel8.Location = New System.Drawing.Point(70, 160)
@@ -705,12 +713,11 @@ Partial Class Companyparent
         Me.RadLabel8.Size = New System.Drawing.Size(118, 27)
         Me.RadLabel8.TabIndex = 69
         Me.RadLabel8.Text = "ประเภทบริษัท"
-        Me.RadLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel8.TextWrap = False
         '
         'RadLabel6
         '
-        Me.RadLabel6.AutoSize = True
         Me.RadLabel6.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel6.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel6.Location = New System.Drawing.Point(51, 122)
@@ -718,11 +725,10 @@ Partial Class Companyparent
         Me.RadLabel6.Size = New System.Drawing.Size(137, 27)
         Me.RadLabel6.TabIndex = 66
         Me.RadLabel6.Text = "ชื่อบริษัทต้นทาง"
-        Me.RadLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         '
         'RadLabel5
         '
-        Me.RadLabel5.AutoSize = True
         Me.RadLabel5.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLabel5.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.RadLabel5.Location = New System.Drawing.Point(42, 87)
@@ -730,7 +736,7 @@ Partial Class Companyparent
         Me.RadLabel5.Size = New System.Drawing.Size(146, 27)
         Me.RadLabel5.TabIndex = 65
         Me.RadLabel5.Text = "รหัสบริษัทต้นทาง"
-        Me.RadLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel5.TextWrap = False
         '
         'Company_Code
@@ -798,13 +804,10 @@ Partial Class Companyparent
         Me.MasterTemplate.MasterTemplate.EnableFiltering = True
         Me.MasterTemplate.MasterTemplate.ShowRowHeaderColumn = False
         Me.MasterTemplate.MasterTemplate.Templates.AddRange(New Telerik.WinControls.UI.GridViewTemplate() {Me.GridViewTemplate1})
+        Me.MasterTemplate.MasterTemplate.ViewDefinition = TableViewDefinition4
         Me.MasterTemplate.Name = "MasterTemplate"
         Me.MasterTemplate.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterTemplate.RightToLeft = System.Windows.Forms.RightToLeft.No
-        '
-        '
-        '
-        Me.MasterTemplate.RootElement.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterTemplate.Size = New System.Drawing.Size(658, 571)
         Me.MasterTemplate.TabIndex = 46
         Me.MasterTemplate.ThemeName = "Office2010Blue"
@@ -813,7 +816,7 @@ Partial Class Companyparent
         '
         Me.RadCalendar1.AllowSelect = False
         Me.RadCalendar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadCalendar1.Location = New System.Drawing.Point(523, 3)
         Me.RadCalendar1.Name = "RadCalendar1"
         Me.RadCalendar1.ReadOnly = True
@@ -822,12 +825,16 @@ Partial Class Companyparent
         Me.RadCalendar1.ShowViewHeader = True
         Me.RadCalendar1.Size = New System.Drawing.Size(176, 186)
         Me.RadCalendar1.TabIndex = 189
-        Me.RadCalendar1.Text = "RadCalendar1"
         Me.RadCalendar1.ThemeName = "Office2010Blue"
         '
         'T_COMPANYPARENTTableAdapter
         '
-        Me.T_COMPANYPARENTTableAdapter.ClearBeforeFill = True
+        Me.T_COMPANYPARENTTableAdapter.Constraints.AddRange(New System.Data.Constraint() {New System.Data.UniqueConstraint("Constraint1", New String() {"COMPANY_ID"}, True)})
+        Me.T_COMPANYPARENTTableAdapter.TableName = "T_COMPANYPARENT"
+        '
+        'T_COMPANYPARENTTableAdapter1
+        '
+        Me.T_COMPANYPARENTTableAdapter1.ClearBeforeFill = True
         '
         'Companyparent
         '
@@ -853,7 +860,7 @@ Partial Class Companyparent
         CType(Me.MasterGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TCompanyparentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IRPCDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
@@ -889,6 +896,7 @@ Partial Class Companyparent
         CType(Me.MasterTemplate.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.T_COMPANYPARENTTableAdapter, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -907,7 +915,7 @@ Partial Class Companyparent
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents Company_Name As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Office2010BlueTheme1 As Telerik.WinControls.Themes.Office2010BlueTheme
-    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
     Friend WithEvents Company_addr As System.Windows.Forms.RichTextBox
     Friend WithEvents P_UPDATE As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents UPDATEBY As Telerik.WinControls.UI.RadTextBox
@@ -936,7 +944,6 @@ Partial Class Companyparent
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents TCompanyparentBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents T_COMPANYPARENTTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYTableAdapter
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
     Friend WithEvents Btfirst As System.Windows.Forms.ToolStripButton
     Friend WithEvents Btprevious As System.Windows.Forms.ToolStripButton
@@ -950,5 +957,8 @@ Partial Class Companyparent
     Friend WithEvents Btadd As System.Windows.Forms.ToolStripButton
     Friend WithEvents BtEdit As System.Windows.Forms.ToolStripButton
     Friend WithEvents BtDelete As System.Windows.Forms.ToolStripButton
+    Friend WithEvents DirectoryEntry1 As DirectoryServices.DirectoryEntry
+    Friend T_COMPANYPARENTTableAdapter As DataSet_Table.T_COMPANYPARENTDataTable
+    Friend WithEvents T_COMPANYPARENTTableAdapter1 As DataSet_TableTableAdapters.T_COMPANYPARENTTableAdapter
 End Class
 

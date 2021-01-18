@@ -37,8 +37,8 @@ Public Class Shipper
                 TShipperBindingSource.Item(TShipperBindingSource.Position)("update_date") = Now
                 UPDATEBY.Text = MAIN.U_NAME
                 TShipperBindingSource.EndEdit()
-                T_SHIPPERTableAdapter.Update(Me.IRPCDataset.T_SHIPPER)
-                Me.IRPCDataset.T_SHIPPER.AcceptChanges()
+                T_SHIPPERTableAdapter.Update(Me.Dataset_table.T_SHIPPER)
+                Me.Dataset_table.T_SHIPPER.AcceptChanges()
                 Shipper_Load(sender, e)
                 Me.BringToFront()
             End If
@@ -71,7 +71,7 @@ Public Class Shipper
 
     Private Sub Bcancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         TShipperBindingSource.CancelEdit()
-        Me.IRPCDataset.T_SHIPPER.RejectChanges()
+        Me.Dataset_table.T_SHIPPER.RejectChanges()
         Shipper_Load(sender, e)
     End Sub
 
@@ -122,8 +122,8 @@ Public Class Shipper
 
     Private Sub Shipper_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MasterGrid.FilterDescriptors.Clear()
-        'TODO: This line of code loads data into the 'IRPCDataset.T_SHIPPER' table. You can move, or remove it, as needed.
-        Me.T_SHIPPERTableAdapter.Fill(Me.IRPCDataset.T_SHIPPER)
+        'TODO: This line of code loads data into the 'Dataset_table.T_SHIPPER' table. You can move, or remove it, as needed.
+        Me.T_SHIPPERTableAdapter.Fill(Me.Dataset_table.T_SHIPPER)
         BindingNavigator1.Enabled = True
         DetailGroup.Enabled = False
         MasterGrid.Enabled = True

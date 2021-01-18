@@ -29,27 +29,27 @@ Public Class UnloadtankValue
     End Sub
 
     Private Sub UnloadtankValue_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
-        Trucknumber.Text = ""
-        Tankno.Text = ""
-        Referencetext.Text = ""
-        Tankvalue.Text = ""
-        Tankvaluefinish.Text = ""
-        Try
+        'Trucknumber.Text = ""
+        'Tankno.Text = ""
+        'Referencetext.Text = ""
+        'Tankvalue.Text = ""
+        'Tankvaluefinish.Text = ""
+        'Try
 
-            Ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
-            Tank = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("TANK").Value.ToString
-            Truck = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("LOAD_VEHICLE").Value.ToString
-            Tankvalue.Text = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("Tank_befor").Value.ToString
-            Tankvaluefinish.Text = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("Tank_after").Value.ToString
-            Referencetext.Text = Ref.ToString
-            Trucknumber.Text = Truck.ToString
-            Tankno.Text = Tank.ToString
-            Tank_Befor.Checked = True
-            Tankcheck = 1
+        '    Ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+        '    Tank = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("TANK").Value.ToString
+        '    Truck = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("LOAD_VEHICLE").Value.ToString
+        '    Tankvalue.Text = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("Tank_befor").Value.ToString
+        '    Tankvaluefinish.Text = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("Tank_after").Value.ToString
+        '    Referencetext.Text = Ref.ToString
+        '    Trucknumber.Text = Truck.ToString
+        '    Tankno.Text = Tank.ToString
+        '    Tank_Befor.Checked = True
+        '    Tankcheck = 1
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
     End Sub
 
 

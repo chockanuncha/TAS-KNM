@@ -57,8 +57,8 @@ Public Class Tank_UnloadOrder
     End Sub
 
     Private Sub Tank_Order_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_TANK' table. You can move, or remove it, as needed.
-        Me.T_TANKTableAdapter.Fill(Me.IRPCDataset.T_TANK)
+        'TODO: This line of code loads data into the 'Dataset_table.T_TANK' table. You can move, or remove it, as needed.
+        Me.T_TANKTableAdapter.Fill(Me.Dataset_table.T_TANK)
         RadGridView1.FilterDescriptors.Clear()
     End Sub
 
@@ -86,7 +86,7 @@ Public Class Tank_UnloadOrder
             TTankBindingSource.Item(TTankBindingSource.Position)("Updatedate") = Now
             TTankBindingSource.Item(TTankBindingSource.Position)("Volume_Diff") = "0"
             TTankBindingSource.EndEdit()
-            IRPCDataset.T_TANK.AcceptChanges()
+            Dataset_table.T_TANK.AcceptChanges()
             Tank_Order_Load(sender, e)
         Catch ex As Exception
             MessageBox.Show("ไม่สามารถอัพเดทข้อมูลได้ กรุณาตรวจสอบ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -121,7 +121,7 @@ Public Class Tank_UnloadOrder
 
     Private Sub BTCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTCANCEL.Click
         TTankBindingSource.CancelEdit()
-        IRPCDataset.T_TANK.RejectChanges()
+        Dataset_table.T_TANK.RejectChanges()
         Tank_Order_Load(sender, e)
     End Sub
 End Class

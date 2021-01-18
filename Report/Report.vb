@@ -563,7 +563,7 @@ Public Class Report
                 .Range("A2").Select()
             End With
         End With
-        xlapp.CutCopyMode = Falseb
+        xlapp.CutCopyMode = False
         xlapp.ScreenUpdating = True
 
     End Sub
@@ -688,7 +688,7 @@ Public Class Report
 
     Private Sub Report_Load_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Dataset_table.V_LOADINGNOTE' table. You can move, or remove it, as needed.
-        Me.V_LOADINGNOTETableAdapter1.Fill(Me.Dataset_table.V_LOADINGNOTE)
+        Me.V_LOADINGNOTETableAdapter1.Fill(Me.Dataset_View.V_LOADINGNOTE)
 
     End Sub
 

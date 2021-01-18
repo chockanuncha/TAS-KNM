@@ -51,6 +51,14 @@ Partial Class Report
         Me.Dataset_table.DataSetName = "Dataset_table"
         Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+
+        '
+        'Dataset_View
+        '
+        Me.Dataset_View.DataSetName = "Dataset_View"
+        Me.Dataset_View.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+
         'V_LOADINGNOTETableAdapter1
         '
         Me.V_LOADINGNOTETableAdapter1.ClearBeforeFill = True
@@ -58,7 +66,7 @@ Partial Class Report
         'V_LoadingnoteBindingSource
         '
         Me.V_LoadingnoteBindingSource.DataMember = "V_LOADINGNOTE"
-        Me.V_LoadingnoteBindingSource.DataSource = Me.Dataset_table
+        Me.V_LoadingnoteBindingSource.DataSource = Me.Dataset_View
         '
         'TProductBindingSource
         '
@@ -238,6 +246,7 @@ Partial Class Report
     'Friend WithEvents BtScapPrint As System.Windows.Forms.Button
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents Dataset_View As RadControlsWinFormsApp1.DataSet_View
     Friend WithEvents BindingSource2 As System.Windows.Forms.BindingSource
     Friend WithEvents V_LOADINGNOTETableAdapter1 As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_LOADINGNOTETableAdapter
     Friend WithEvents V_LoadingnoteBindingSource As System.Windows.Forms.BindingSource

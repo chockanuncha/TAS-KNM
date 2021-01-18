@@ -8,8 +8,8 @@ Public Class Seal_setting
     Dim Credate As Integer = 0
 
     Private Sub Seal_setting_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_SEAL' table. You can move, or remove it, as needed.
-        Me.T_SEALTableAdapter.Fill(Me.IRPCDataset.T_SEAL)
+        'TODO: This line of code loads data into the 'Dataset_table.T_SEAL' table. You can move, or remove it, as needed.
+        Me.T_SEALTableAdapter.Fill(Me.DataSet_Table.T_SEAL)
         BindingNavigator1.Enabled = True
         DetailGroup.Enabled = False
         MasterGrid.Enabled = True
@@ -102,7 +102,7 @@ Public Class Seal_setting
 
     Private Sub BCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         TSealBindingSource.CancelEdit()
-        Me.IRPCDataset.T_SEAL.RejectChanges()
+        Me.DataSet_Table.T_SEAL.RejectChanges()
         Seal_setting_Load(sender, e)
     End Sub
 
@@ -119,8 +119,8 @@ Public Class Seal_setting
                 TSealBindingSource.Item(TSealBindingSource.Position)("Seal_no") = SealLast.Text
 
                 TSealBindingSource.EndEdit()
-                T_SEALTableAdapter.Update(Me.IRPCDataset.T_SEAL)
-                Me.IRPCDataset.T_SEAL.AcceptChanges()
+                T_SEALTableAdapter.Update(Me.DataSet_Table.T_SEAL)
+                Me.DataSet_Table.T_SEAL.AcceptChanges()
                 Me.BringToFront()
             End If
             Seal_setting_Load(sender, e)

@@ -212,8 +212,8 @@
     End Function
 
     Private Sub Workonlan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'IRPCDataset.T_COMPUTER' table. You can move, or remove it, as needed.
-        Me.T_COMPUTERTableAdapter.Fill(Me.IRPCDataset.T_COMPUTER)
+        'TODO: This line of code loads data into the 'Dataset_table.T_COMPUTER' table. You can move, or remove it, as needed.
+        Me.T_COMPUTERTableAdapter.Fill(Me.Dataset_table.T_COMPUTER)
 
     End Sub
 

@@ -34,8 +34,7 @@ Public Class Companyparent
     Private Sub BCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         Try
             TCompanyparentBindingSource.CancelEdit()
-            Me.IRPCDataset.T_COMPANYPARENT.RejectChanges()
-            Me.IRPCDataset.t_
+            Me.Dataset_table.T_COMPANYPARENT.RejectChanges()
             Companyparent_Load(sender, e)
         Catch ex As Exception
 
@@ -66,8 +65,9 @@ Public Class Companyparent
                 TCompanyparentBindingSource.Item(TCompanyparentBindingSource.Position)("UPDATE_DATE") = Now
                 UPDATEBY.Text = MAIN.U_NAME
                 TCompanyparentBindingSource.EndEdit()
-                T_COMPANYPARENTTableAdapter.Update(Me.IRPCDataset.T_COMPANYPARENT)
-                Me.IRPCDataset.T_COMPANYPARENT.AcceptChanges()
+                T_COMPANYPARENTTableAdapter1.Update(Me.Dataset_table.T_COMPANYPARENT)
+
+                Me.Dataset_table.T_COMPANYPARENT.AcceptChanges()
                 Companyparent_Load(sender, e)
                 Me.BringToFront()
             End If
@@ -85,9 +85,11 @@ Public Class Companyparent
     End Sub
 
     Private Sub Companyparent_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Dataset_table.T_COMPANYPARENT' table. You can move, or remove it, as needed.
+        Me.T_COMPANYPARENTTableAdapter1.Fill(Me.Dataset_table.T_COMPANYPARENT)
         MasterGrid.FilterDescriptors.Clear()
-        'TODO: This line of code loads data into the 'IRPCDataset.T_COMPANYPARENT' table. You can move, or remove it, as needed.
-        Me.T_COMPANYPARENTTableAdapter.Fill(Me.IRPCDataset.T_COMPANYPARENT)
+        'TODO: This line of code loads data into the 'Dataset_table.T_COMPANYPARENT' table. You can move, or remove it, as needed.
+        'Me.T_COMPANYPARENTTableAdapter.Fill(Me.Dataset_table.T_COMPANYPARENT)
         BindingNavigator1.Enabled = True
         DetailGroup.Enabled = False
         MasterGrid.Enabled = True

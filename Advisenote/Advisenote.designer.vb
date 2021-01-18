@@ -484,7 +484,7 @@ Partial Class Advisenote
         Me.T_BATCHMETERTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_BATCHMETERTableAdapter()
         Me.T_CUSTOMERTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_CUSTOMERTableAdapter()
         Me.T_TRUCKTYPETableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter()
-        Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter
+        Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter()
         Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
@@ -947,6 +947,7 @@ Partial Class Advisenote
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "1"
@@ -1138,6 +1139,7 @@ Partial Class Advisenote
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "1"
@@ -4702,7 +4704,7 @@ Partial Class Advisenote
         Me.Dateedit.Size = New System.Drawing.Size(363, 24)
         Me.Dateedit.TabIndex = 16
         Me.Dateedit.TabStop = False
-        Me.Dateedit.Text = "06/04/2557 00:04:00"
+        Me.Dateedit.Text = "06/04/3100 00:04:00"
         Me.Dateedit.ThemeName = "Office2010Blue"
         Me.Dateedit.Value = New Date(2557, 4, 6, 0, 6, 0, 0)
         CType(Me.Dateedit.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 1
@@ -5820,7 +5822,7 @@ Partial Class Advisenote
         '
         Me.VCHECKINLOAD1TableAdapter.ClearBeforeFill = True
         '
-        'V_TRUCK2TableAdapter
+        'V_TRUCKTableAdapter
         '
         Me.V_TRUCKTableAdapter.ClearBeforeFill = True
         '
@@ -6511,7 +6513,7 @@ Partial Class Advisenote
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents DataSet_View As DataSet_View
     Friend WithEvents DataSet_Table As DataSet_Table
-    Friend WithEvents IRPCDataset As DataSet_Table
+    'Friend WithEvents IRPCDataset As IRPCDataset
     Friend WithEvents T_PRODUCTTableAdapter As DataSet_TableTableAdapters.T_PRODUCTTableAdapter
     Friend WithEvents T_TRUCKTableAdapter1 As DataSet_TableTableAdapters.T_TRUCKTableAdapter
     Friend WithEvents T_SHIPPERTableAdapter1 As DataSet_TableTableAdapters.T_SHIPPERTableAdapter

@@ -1,9 +1,11 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports RadControlsWinFormsApp1.DataSet_TableTableAdapters
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Unloadingnote
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +22,7 @@ Partial Class Unloadingnote
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
@@ -140,7 +142,10 @@ Partial Class Unloadingnote
         Me.RadPanel5 = New Telerik.WinControls.UI.RadPanel()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.VCheckinBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+
+        Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.VCheckinBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet_View = New RadControlsWinFormsApp1.DataSet_View()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -508,7 +513,7 @@ Partial Class Unloadingnote
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VCheckinBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet_View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.RadPanel6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -913,10 +918,16 @@ Partial Class Unloadingnote
         'VCheckinBindingSource
         '
         Me.VCheckinBindingSource.DataMember = "VCHECKINLOAD1"
-        Me.VCheckinBindingSource.DataSource = Me.Dataset_table
+        Me.VCheckinBindingSource.DataSource = Me.DataSet_View
         Me.VCheckinBindingSource.Filter = "Status=1 and load_type=2"
         Me.VCheckinBindingSource.Sort = ""
         '
+        'DataSet_View
+        '
+        Me.DataSet_View.DataSetName = "DataSet_View"
+        Me.DataSet_View.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+
+
         'Dataset_table
         '
         Me.Dataset_table.DataSetName = "Dataset_table"
@@ -1117,7 +1128,7 @@ Partial Class Unloadingnote
         'V_LoadingnoteBindingSource
         '
         Me.V_LoadingnoteBindingSource.DataMember = "V_LOADINGNOTE"
-        Me.V_LoadingnoteBindingSource.DataSource = Me.Dataset_table
+        Me.V_LoadingnoteBindingSource.DataSource = Me.DataSet_View
         '
         'ToolStripLabel1
         '
@@ -1724,7 +1735,7 @@ Partial Class Unloadingnote
         'VTruckBindingSource
         '
         Me.VTruckBindingSource.DataMember = "V_TRUCK"
-        Me.VTruckBindingSource.DataSource = Me.Dataset_table
+        Me.VTruckBindingSource.DataSource = Me.DataSet_View
         Me.VTruckBindingSource.Filter = ""
         Me.VTruckBindingSource.Sort = ""
         '
@@ -6057,7 +6068,7 @@ Partial Class Unloadingnote
         'VLoading_StatusBindingSource
         '
         Me.VLoading_StatusBindingSource.DataMember = "V_LOADING_STATUS"
-        Me.VLoading_StatusBindingSource.DataSource = Me.Dataset_table
+        Me.VLoading_StatusBindingSource.DataSource = Me.DataSet_View
         '
         'TTruckBindingSource
         '
@@ -6469,6 +6480,9 @@ Partial Class Unloadingnote
 
     End Sub
     'RadControlsWinFormsApp1.DataSet1TableAdapters.T_PRODUCTTableAdapter
+    Friend WithEvents DataSet_View As RadControlsWinFormsApp1.DataSet_View
+    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+    Friend WithEvents IRPCDataset As RadControlsWinFormsApp1.IRPCDataset
     Friend WithEvents PRODUCTCODEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PRODUCTDATEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PRODUCTNUMBERDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -6508,7 +6522,7 @@ Partial Class Unloadingnote
     Friend WithEvents TCompanyBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents T_CUSTOMERTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_CUSTOMERTableAdapter
     Friend WithEvents TCUSTOMERTBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Dataset_table As RadControlsWinFormsApp1.DataSet_Table
+
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents Company_sapcode As System.Windows.Forms.ComboBox
     Friend WithEvents P_Weight As System.Windows.Forms.ComboBox
@@ -6539,6 +6553,7 @@ Partial Class Unloadingnote
     Friend WithEvents T_BAYTableAdapter As RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_BAYTableAdapter
     Friend WithEvents VTruckBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents V_TRUCKTableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter
+
     Friend WithEvents RadMultiColumnComboBox1 As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents DesertTheme1 As Telerik.WinControls.Themes.DesertTheme
     Friend WithEvents TelerikMetroBlueTheme1 As Telerik.WinControls.Themes.TelerikMetroBlueTheme
@@ -6852,7 +6867,8 @@ Partial Class Unloadingnote
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents RadPanel6 As Telerik.WinControls.UI.RadPanel
-    Friend WithEvents BindingNavigator2 As System.Windows.Forms.BindingNavigator
+    Friend WithEvents BindingNavigator2 As System.Windows.Forms.BindingSource
+
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
@@ -6864,6 +6880,8 @@ Partial Class Unloadingnote
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
     Friend WithEvents AddAuto As Telerik.WinControls.UI.RadButton
+
+
     Friend WithEvents VCHECKINLOAD1TableAdapter As RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter
     Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton

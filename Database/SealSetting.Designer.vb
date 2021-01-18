@@ -40,7 +40,7 @@ Partial Class Seal_setting
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
         Me.TSealBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        'Me.IRPCDataset = New RadControlsWinFormsApp1.IRPCDataset()
+        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.SealLast = New Telerik.WinControls.UI.RadTextBox()
         Me.SealTotal = New Telerik.WinControls.UI.RadTextBox()

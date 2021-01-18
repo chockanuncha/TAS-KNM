@@ -28,7 +28,7 @@ Partial Class Setting
         Me.RadPanel2 = New Telerik.WinControls.UI.RadPanel()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.TSettingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table
         Me.T_SETTINGTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_SETTINGTableAdapter()
         Me.BTCANCEL = New Telerik.WinControls.UI.RadButton()
         Me.BTSAVE = New Telerik.WinControls.UI.RadButton()

@@ -144,6 +144,7 @@
     <Reference Include="System.Deployment">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
@@ -334,12 +335,6 @@
       <DependentUpon>Topup.vb</DependentUpon>
     </Compile>
     <Compile Include="Advisenote\Topup.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Advisenote\Unloadingnote.designer.vb">
-      <DependentUpon>Unloadingnote.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Advisenote\Unloadingnote.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Advisenote\UnloadtankValue.Designer.vb">
@@ -839,9 +834,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\Topup.resx">
       <DependentUpon>Topup.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Advisenote\Unloadingnote.resx">
-      <DependentUpon>Unloadingnote.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\UnloadtankValue.resx">
       <DependentUpon>UnloadtankValue.vb</DependentUpon>
