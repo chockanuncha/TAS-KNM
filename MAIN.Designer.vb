@@ -149,7 +149,7 @@ Partial Class MAIN
         Me.RadLiveTileElement42 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement43 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement9 = New Telerik.WinControls.UI.RadLiveTileElement()
-        'Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.Dataset_tableTableAdapters.T_ALARMS_BATCHTableAdapter()
+        Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCHTableAdapter()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.object_990ead7b_f0c8_47cc_8fb0_8bfcd20c5f31 = New Telerik.WinControls.RootRadElement()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
@@ -1745,9 +1745,9 @@ Partial Class MAIN
         Me.TAlarmsBindingSource.Sort = "id desc"
         '
         'Dataset_table
-        '
-        'Me.Dataset_table.DataSetName = "Dataset_table"
-        'Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
 
 
         '
