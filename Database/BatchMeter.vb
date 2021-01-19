@@ -38,7 +38,7 @@ Public Class BatchMeter
     Private Sub Btadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btadd.Click, ToolStripButton5.Click
         Try
             Dim sqluser As String
-            sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sqluser)
@@ -82,7 +82,7 @@ Public Class BatchMeter
     Private Sub BtEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtEdit.Click, ToolStripButton6.Click
         Try
             Dim sqluser As String
-            sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sqluser)
@@ -103,7 +103,7 @@ Public Class BatchMeter
         If cls_role.Check_Permission(MAIN.U_GROUP, Page_Group) Then
             Try
                 Dim sqluser As String
-                sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                   & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                 cls.Update(sqluser)
@@ -200,7 +200,7 @@ Public Class BatchMeter
             Me.MasterGrid.TableElement.TableHeaderHeight = 45
             MasterGrid.FilterDescriptors.Clear()
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)

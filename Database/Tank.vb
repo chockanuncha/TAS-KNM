@@ -129,7 +129,7 @@ Public Class Tank
             Me.MasterGrid.TableElement.TableHeaderHeight = 30
 
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)

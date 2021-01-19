@@ -76,7 +76,7 @@ Public Class Truck
 
         Try
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)
@@ -188,7 +188,7 @@ Public Class Truck
                     Else
                         q &= "TRUCK_LOADTYPE ='BOTH', "
                     End If
-                    q &= "Update_date= Sysdate ,"
+                    q &= "Update_date= Getdate() ,"
                     q &= "Update_by  ='" & T_UPDATEBY.Text & "', "
                     ' q &= "Transport_type = '" & TransportTypeBindingSource.Item(TransportTypeBindingSource.Position)("ID") & "',"
                     q &= "Remark  ='" & U_REMARK.Text & "' "
@@ -425,7 +425,7 @@ Public Class Truck
             Me.MasterGrid.TableElement.TableHeaderHeight = 30
 
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)
@@ -615,7 +615,7 @@ Public Class Truck
                     Try
 
                         Dim sql As String
-                        sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                        sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                           & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                         cls.Update(sql)

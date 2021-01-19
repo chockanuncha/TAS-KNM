@@ -76,7 +76,7 @@ Public Class Tank_Order
     Private Sub Tank_Order_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
         Try
             Dim sqluser As String
-            sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sqluser)
@@ -203,7 +203,7 @@ Public Class Tank_Order
         RadGridView1.Enabled = False
         Try
             Dim sqluser As String
-            sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sqluser)

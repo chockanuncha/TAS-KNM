@@ -131,7 +131,7 @@ Public Class Topup
 
         Try
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)
@@ -619,7 +619,7 @@ Public Class Topup
             Update.Visible = False
 
             Try
-                Sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                Sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                   & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                 cls.Update(Sql)
@@ -951,9 +951,9 @@ Public Class Topup
             q = ""
             q = "select count(load_id) as CLoad_id "
             q &= "from T_loadingnote "
-            q &= "where to_char(load_date,'DD') = to_char(Sysdate,'DD') "
-            q &= "AND  to_char(load_date,'MM') = to_char(Sysdate,'MM') "
-            q &= "AND  to_char(load_date,'YY') = to_char(Sysdate,'YY') "
+            q &= "where to_char(load_date,'DD') = to_char(Getdate(),'DD') "
+            q &= "AND  to_char(load_date,'MM') = to_char(Getdate(),'MM') "
+            q &= "AND  to_char(load_date,'YY') = to_char(Getdate(),'YY') "
             q &= "AND (ST_ID NOT IN (SELECT st_id FROM t_st))  "
 
             dt1 = cls.Query(q)
@@ -1070,13 +1070,13 @@ Public Class Topup
             q &= "'" & (Seal_Total.Text) & "',"
             q &= "'" & (TCUSTOMERTBindingSource.Item(TCUSTOMERTBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & (Seal_No.Text) & "',"
-            q &= " Sysdate ,"
+            q &= " Getdate() ,"
 
             q &= "'" & (Load_q.Text) & "',"
             q &= "'" & (Load_q.Text) & "',"
 
-            q &= " Sysdate ,"
-            q &= " Sysdate ,"
+            q &= " Getdate() ,"
+            q &= " Getdate() ,"
 
             'q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", QTIME)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             'q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", Checkintime)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
@@ -1392,7 +1392,7 @@ Public Class Topup
             q &= " Load_seal = "
             q &= "'" & (Seal_No.Text) & "',"
             q &= " Update_date = "
-            q &= " Sysdate, "
+            q &= " Getdate(), "
             q &= " LOAD_Q = "
             q &= "'" & (Load_q.Text) & "',"
             q &= " LOAD_QDASHBOARD = "
@@ -1609,7 +1609,7 @@ Public Class Topup
 
                 If MsgBox("Do you want to delete load no.: " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
                     Try
-                        sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                        sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                           & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                         cls.Update(sql)
@@ -1682,7 +1682,7 @@ Public Class Topup
         Else
             Try
                 Dim sqluser As String
-                sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                   & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                 cls.Update(sqluser)
@@ -2068,7 +2068,7 @@ Public Class Topup
             Next
 
             sql = ""
-            sql = "select (to_date(DRIVER_DATE_END)-to_date(sysdate)) as DRIVER_DATE_END,(to_date(TRAIN_DATE_end)-to_date(sysdate)) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
+            sql = "select (to_date(DRIVER_DATE_END)-to_date(Getdate())) as DRIVER_DATE_END,(to_date(TRAIN_DATE_end)-to_date(Getdate())) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
 
             Dim dt1 As DataTable = cls.Query(sql)
 

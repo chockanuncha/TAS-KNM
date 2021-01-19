@@ -25,7 +25,7 @@ Public Class ChangPassword
         If dt.Rows.Count > 0 Then
             If U_passnew.Text = U_PassConfirm.Text Then
 
-                sql = "UPDATE T_USER SET Update_date=Sysdate" ' ,U_PASSWD_DATE='" & Now.AddDays(90) & "'"
+                sql = "UPDATE T_USER SET Update_date=Getdate()" ' ,U_PASSWD_DATE='" & Now.AddDays(90) & "'"
                 sql &=",U_PASSWD='" & U_passnew.Text & "' Where U_ID='" & UserID.ToString & "'"
 
                 cls.Update(sql)

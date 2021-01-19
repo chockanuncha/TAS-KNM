@@ -292,7 +292,7 @@ Public Class Q_Load
 
             sql = "Insert into t_CHECKIN (" & _
                 " LDATE,TRUCK_CARD,TRUCK_ID) VALUES (" & _
-                " sysdate" & "," & _
+                " Getdate()" & "," & _
                 "'" & dt.Rows(0).Item("CARD_SERIAL").ToString & "'" & "," & _
                 "'" & dt.Rows(0).Item("TRUCK_ID").ToString & "'" & ")"
 
@@ -316,7 +316,7 @@ Public Class Q_Load
                 ref = CheckinGrid.CurrentRow.Cells("id").Value.ToString
 
                 sql = ""
-                sql = "Update t_CHECKIN set Status='50',Chkout_Date=Sysdate where ID ='" & ref & "'"
+                sql = "Update t_CHECKIN set Status='50',Chkout_Date=Getdate() where ID ='" & ref & "'"
 
                 cls.Update(sql)
 
@@ -326,7 +326,7 @@ Public Class Q_Load
 
             Try
                 sql = ""
-                sql = "Update t_loadingnote set Checkout_time=Sysdate where load_ID in(Select Load_id from t_checkin where ID='" & CheckinGrid.CurrentRow.Cells("id").Value.ToString & "')"
+                sql = "Update t_loadingnote set Checkout_time=Getdate() where load_ID in(Select Load_id from t_checkin where ID='" & CheckinGrid.CurrentRow.Cells("id").Value.ToString & "')"
 
                 cls.Update(sql)
 
@@ -500,7 +500,7 @@ Public Class Q_Load
             cls.Delete(sql)
 
             sql = "update  T_CHECKIN Set " &
-                            " STATUS=50,Chkout_date=sysdate where ID ='" & ref & "'"
+                            " STATUS=50,Chkout_date=Getdate() where ID ='" & ref & "'"
 
             cls.Update(sql)
 
@@ -512,12 +512,12 @@ Public Class Q_Load
 
             cls.Delete(sql)
 
-            sql = "update  T_LOADINGNOTE Set load_status=3,CHECKOUT_TIME=sysdate where Load_id " &
+            sql = "update  T_LOADINGNOTE Set load_status=3,CHECKOUT_TIME=Getdate() where Load_id " &
                             " in(select load_id from t_checkin where id ='" & ref & "')"
 
             cls.Update(sql)
 
-            sql = "update  T_UNLOADINGNOTE Set load_status=3,CHECKOUT_TIME=sysdate where Load_id " &
+            sql = "update  T_UNLOADINGNOTE Set load_status=3,CHECKOUT_TIME=Getdate() where Load_id " &
                            " in(select load_id from t_checkin where id ='" & ref & "')"
 
             cls.Update(sql)

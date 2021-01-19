@@ -1116,9 +1116,9 @@ Public Class Advisenote
             q = ""
             q = "select count(load_id) as CLoad_id "
             q &= "from T_loadingnote "
-            q &= "where to_char(load_date,'DD') = to_char(Sysdate,'DD') "
-            q &= "AND  to_char(load_date,'MM') = to_char(Sysdate,'MM') "
-            q &= "AND  to_char(load_date,'YY') = to_char(Sysdate,'YY') "
+            q &= "where to_char(load_date,'DD') = to_char(Getdate(),'DD') "
+            q &= "AND  to_char(load_date,'MM') = to_char(Getdate(),'MM') "
+            q &= "AND  to_char(load_date,'YY') = to_char(Getdate(),'YY') "
             q &= "AND (ST_ID NOT IN (SELECT st_id FROM t_st))  "
 
             tmp = cls.Query(q)
@@ -1157,7 +1157,7 @@ Public Class Advisenote
             Next
 
             Try
-                sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                   & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                 cls.Update(sql)
@@ -1244,7 +1244,7 @@ Public Class Advisenote
             n_year = 543
             'End If
 
-            q &= " Sysdate ,"
+            q &= " Getdate() ,"
             'q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & Preset.ToString & "',"
@@ -1256,7 +1256,7 @@ Public Class Advisenote
             q &= "'" & (Seal_Total.Text) & "',"
             q &= "'" & (TCUSTOMERTBindingSource.Item(TCUSTOMERTBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & (Seal_No.Text) & "',"
-            q &= " Sysdate ,"
+            q &= " Getdate() ,"
 
             q &= "'" & (Load_q.Text) & "',"
             q &= "'" & (Load_q.Text) & "',"
@@ -1265,8 +1265,8 @@ Public Class Advisenote
                 q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", QTIME)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
                 q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", Checkintime)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             Else
-                q &= " Sysdate ,"
-                q &= " Sysdate ,"
+                q &= " Getdate() ,"
+                q &= " Getdate() ,"
             End If
 
             q &= "'" & (TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID").ToString()) & "',"
@@ -1517,7 +1517,7 @@ Public Class Advisenote
                 q &= " -1,"
             End If
             q &= "'" & Call_Terget.ToString & "',"
-            q &= " Sysdate )"
+            q &= " Getdate() )"
 
             cls.Insert(q)
         Catch ex As Exception
@@ -1627,7 +1627,7 @@ Public Class Advisenote
         If MsgBox("Edit advisenote Load No.: ' " & ref & " '?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
 
             Try
-                sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                   & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                 cls.Update(sql)
@@ -1710,7 +1710,7 @@ Public Class Advisenote
             q &= " Load_seal = "
             q &= "'" & (Seal_No.Text) & "',"
             q &= " Update_date = "
-            q &= " Sysdate, "
+            q &= " Getdate(), "
             q &= " LOAD_Q = "
             q &= "'" & (Load_q.Text) & "',"
             q &= " LOAD_QDASHBOARD = "
@@ -1962,7 +1962,7 @@ Public Class Advisenote
 
                         Try
 
-                            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                             cls.Update(sql)
@@ -2611,7 +2611,7 @@ Public Class Advisenote
 
             Dim sql As String
             sql = ""
-            sql = "select (to_date(DRIVER_DATE_END)-to_date(sysdate)) as DRIVER_DATE_END,(to_date(TRAIN_DATE_end)-to_date(sysdate)) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
+            sql = "select (to_date(DRIVER_DATE_END)-to_date(Getdate())) as DRIVER_DATE_END,(to_date(TRAIN_DATE_end)-to_date(Getdate())) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
 
             Dim dt1 As DataTable = cls.Query(sql)
 

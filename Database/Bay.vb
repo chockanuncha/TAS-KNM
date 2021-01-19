@@ -173,7 +173,7 @@ Public Class Bay
             If MsgBox("Bay No.: '" & Bay_No.Text & "', Do you want to delete?", vbYesNo + vbDefaultButton2, "Confirm") = vbYes Then
                 Try
                     Dim sqluser As String
-                    sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                    sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                       & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                     cls.Update(sqluser)
@@ -216,7 +216,7 @@ Public Class Bay
     Private Sub Btadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btadd.Click
         Try
             Dim sqluser As String
-            sqluser = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sqluser = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sqluser)
@@ -278,7 +278,7 @@ Public Class Bay
             MasterGrid.FilterDescriptors.Clear()
 
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)
