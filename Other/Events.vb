@@ -7,7 +7,7 @@ Imports CrystalDecisions.CrystalReports
 Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class Journal_Events
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim n_year As Integer = 543
     Dim reporttype As Integer = 0

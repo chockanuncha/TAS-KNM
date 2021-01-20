@@ -12,7 +12,7 @@ Imports Telerik.Windows.Controls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls
 Public Class Tank_Order
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim MyErrorProvider As New ErrorProviderExtended
     Dim MyDataSet As New DataSet

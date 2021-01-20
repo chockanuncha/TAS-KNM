@@ -11,7 +11,7 @@ Imports System.Drawing.Printing
 Imports System.ComponentModel
 
 Public Class TimeStatus
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Private Sub SelectTime()
         Dim q As String

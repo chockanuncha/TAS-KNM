@@ -13,7 +13,7 @@ Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 
 Public Class F_Tankstock1
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Private Sub BPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BPrint.Click
         Dim q, sql As String

@@ -10,7 +10,7 @@ Imports Telerik.WinControls.Data
 #End Region
 
 Public Class Advisenote
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
 
     Private Page_Group As String = "Operate Data"

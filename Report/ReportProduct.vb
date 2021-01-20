@@ -11,7 +11,7 @@ Imports System.Drawing.Printing
 Imports System.ComponentModel
 Imports System.Globalization
 Public Class ReportProduct
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Private Sub ReportProduct_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         RadCalendar1.SelectedDate = Date.Now.Date

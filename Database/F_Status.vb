@@ -2,7 +2,7 @@
 Imports ExtendedErrorProvider
 
 Public Class F_Status
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
     Dim MyErrorProvider As New ErrorProviderExtended
 

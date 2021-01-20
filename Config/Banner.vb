@@ -10,7 +10,7 @@ Imports System.Threading
 Imports System.Drawing.Printing
 Imports System.ComponentModel
 Public Class Banner
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private Sub BCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         Me.Close()
     End Sub

@@ -11,7 +11,7 @@ Imports System.Drawing.Printing
 Imports System.ComponentModel
 
 Public Class ReportSeal
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Private Sub BPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BPrint.Click
         Dim sql, q As String

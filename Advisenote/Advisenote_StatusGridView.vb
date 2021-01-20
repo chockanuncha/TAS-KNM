@@ -1,5 +1,5 @@
 ﻿Public Class Advisenote_StatusGridView
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Dim reff As String
 
     Private Sub Advisenote_StatusGridView_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

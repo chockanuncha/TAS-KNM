@@ -17,7 +17,7 @@ Imports Excel = Microsoft.Office.Interop.Excel
 
 Public Class ExportExcel
 
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private Sub SelectTime()
         Dim sql As String
         Try

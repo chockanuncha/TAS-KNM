@@ -1,6 +1,6 @@
 ﻿Public Class Class_Permission
     Public Function Check_Permission(ByVal User_Groups As String, ByVal Page_Group As String) As Boolean
-        Dim cls As New Class_SQKDB
+        Dim cls As New Class_SQLSERVERDB
         Dim dt As DataTable
 
         Dim retval As Boolean = False

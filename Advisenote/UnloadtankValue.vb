@@ -9,7 +9,7 @@ Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 Public Class UnloadtankValue
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim Ref, Truck, Tank As String
     Dim Tankcheck As Integer

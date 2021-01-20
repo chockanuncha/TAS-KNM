@@ -11,7 +11,7 @@ Imports System.Drawing.Printing
 Imports System.ComponentModel
 
 Public Class ReportDayBetween
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Dim chk As Integer
     Dim n_year As Integer = 543
     Dim Memory As MemoryManagement.Manage

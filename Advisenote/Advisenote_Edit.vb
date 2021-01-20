@@ -9,7 +9,7 @@ Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 Public Class Advisenote_Edit
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Dim Ref, Truck, loadDO, StatusName, loadid As String
     Dim Tankcheck As Integer
     Private Sub Advisenote_Edit_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown

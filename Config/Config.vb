@@ -2,7 +2,7 @@
 Imports ExtendedErrorProvider
 
 Public Class ConfigQ
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private Sub Config_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Qtarget_last.Text = ""
     End Sub

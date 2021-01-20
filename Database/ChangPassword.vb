@@ -2,7 +2,7 @@
 Imports ExtendedErrorProvider
 
 Public Class ChangPassword
-    Dim cls As New Class_SQKDB
+    Dim cls As New Class_SQLSERVERDB
     Dim Oldpass, Newpass, UserID As String
 
     Private Sub ChangPassword_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
@@ -25,7 +25,8 @@ Public Class ChangPassword
         If dt.Rows.Count > 0 Then
             If U_passnew.Text = U_PassConfirm.Text Then
 
-                sql = "UPDATE T_USER SET Update_date=Getdate()" ' ,U_PASSWD_DATE='" & Now.AddDays(90) & "'"
+                sql = "UPDATE T_USER SET Update_date=Getdate() ,U_PASSWD_DATE= format(convert(datetime, '" & Now.AddDays(90) & "',104),'dd/MM/yyyy HH:mm:ss')  "
+
                 sql &=",U_PASSWD='" & U_passnew.Text & "' Where U_ID='" & UserID.ToString & "'"
 
                 cls.Update(sql)

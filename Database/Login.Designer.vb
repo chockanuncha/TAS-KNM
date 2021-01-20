@@ -39,7 +39,7 @@ Partial Class Login
         Me.Button1.Location = New System.Drawing.Point(96, 106)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Ok"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -49,7 +49,7 @@ Partial Class Login
         Me.Button2.Location = New System.Drawing.Point(177, 106)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
+        Me.Button2.TabIndex = 3
         Me.Button2.Text = "Cancal"
         Me.Button2.UseVisualStyleBackColor = True
         '

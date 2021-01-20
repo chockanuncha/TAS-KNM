@@ -1,27 +1,34 @@
 ﻿Imports System.Data.SqlClient
 
 
-Public Class Class_SQKDB
+Public Class Class_SQLSERVERDB
     'Create Connection
     Private con As SqlConnection = New SqlConnection()
     'Create Connection String Using Builder
     Private ocsb As SqlConnectionStringBuilder = New SqlConnectionStringBuilder
 
     Private Sub Connect()
-        Try
-            con.Close()
-        Catch ex As Exception
+        'Try
+        '    con.Close()
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
-        con.ConnectionString = My.Settings.ConnectionString
+        'con.ConnectionString = My.Settings.ConnectionString
 
-        Try
+        'Try
+        '    con.Open()
+        'Catch ex As Exception
+        '    con.Close()
+        '    con.Open()
+        'End Try
+
+
+        ' Check and open Connect DB 
+        If (con.State = ConnectionState.Closed) Then
+            con.ConnectionString = My.Settings.ConnectionString
             con.Open()
-        Catch ex As Exception
-            con.Close()
-            con.Open()
-        End Try
+        End If
 
     End Sub
 

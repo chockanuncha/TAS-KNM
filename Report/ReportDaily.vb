@@ -11,7 +11,7 @@ Imports System.Drawing.Printing
 Imports System.ComponentModel
 
 Public Class Reportdaily
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim RPT As Integer
 

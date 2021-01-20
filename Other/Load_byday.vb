@@ -10,7 +10,7 @@ Imports System.Threading
 Imports System.Drawing.Printing
 Imports System.ComponentModel
 Public Class Load_byday
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim vpage As Integer = 0
     Private Sub SelectVLoadingNote1()

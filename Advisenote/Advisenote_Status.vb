@@ -3,7 +3,7 @@ Imports System.Drawing.Printing
 Imports System.ComponentModel
 
 Public Class Advisenote_Status
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Public Grid As Integer
 
     Private Sub Advisenote_Status_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown

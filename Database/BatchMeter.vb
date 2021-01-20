@@ -3,7 +3,7 @@ Imports ExtendedErrorProvider
 
 
 Public Class BatchMeter
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
 
     Private Page_Group As String = "Software and Database Management"

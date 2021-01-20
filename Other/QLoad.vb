@@ -12,7 +12,7 @@ Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 Public Class Q_Load
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private cls_ct As New Class_Controls
     Private Function LenSpace(ByVal DataSAP As String, ByVal Length As Integer, ByVal Len As Integer) As String
         Dim i As Integer

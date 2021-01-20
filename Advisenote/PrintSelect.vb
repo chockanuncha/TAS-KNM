@@ -12,7 +12,7 @@ Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 Public Class PrintSelect
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BPrint.Click
         Dim ref As String
         'ref = Unloadingnote.MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString

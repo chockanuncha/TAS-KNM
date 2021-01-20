@@ -5,7 +5,7 @@ Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 
 Public Class Truck
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
 
     Private Page_Group As String = "Operate Data"

@@ -2,7 +2,7 @@
 Imports ExtendedErrorProvider
 
 Public Class Usergroup
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim MyErrorProvider As New ErrorProviderExtended
     Dim Del As Integer = 0

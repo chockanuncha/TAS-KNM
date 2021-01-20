@@ -486,6 +486,8 @@ Partial Class Advisenote
         Me.T_TRUCKTYPETableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter()
         Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter()
         Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
+        Me.BreezeTheme2 = New Telerik.WinControls.Themes.BreezeTheme()
+        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
@@ -744,6 +746,7 @@ Partial Class Advisenote
         CType(Me.Edit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VLoading_StatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TTruckBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -786,6 +789,7 @@ Partial Class Advisenote
         Me.RadPanel5.Name = "RadPanel5"
         Me.RadPanel5.Size = New System.Drawing.Size(1096, 266)
         Me.RadPanel5.TabIndex = 3
+        Me.RadPanel5.ThemeName = "Office2010Blue"
         '
         'RadGridView1
         '
@@ -846,7 +850,7 @@ Partial Class Advisenote
         GridViewDateTimeColumn1.MinWidth = 200
         GridViewDateTimeColumn1.Name = "LDATE"
         GridViewDateTimeColumn1.ReadOnly = True
-        GridViewDateTimeColumn1.Width = 205
+        GridViewDateTimeColumn1.Width = 204
         GridViewTextBoxColumn5.DataType = GetType(Decimal)
         GridViewTextBoxColumn5.EnableExpressionEditor = False
         GridViewTextBoxColumn5.FieldName = "Driver_ID"
@@ -880,7 +884,7 @@ Partial Class Advisenote
         Me.RadGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.RadGridView1.Size = New System.Drawing.Size(1096, 207)
         Me.RadGridView1.TabIndex = 2
-        Me.RadGridView1.ThemeName = "Breeze"
+        Me.RadGridView1.ThemeName = "Office2010Blue"
         Me.RadGridView1.UseScrollbarsInHierarchy = True
         '
         'VCheckinBindingSource
@@ -1010,7 +1014,7 @@ Partial Class Advisenote
         Me.RadPanel6.TabIndex = 3
         Me.RadPanel6.Text = "Truck Waiting"
         Me.RadPanel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadPanel6.ThemeName = "Breeze"
+        Me.RadPanel6.ThemeName = "Office2010Blue"
         '
         'RadPanel4
         '
@@ -1029,7 +1033,7 @@ Partial Class Advisenote
         Me.RadPanel4.TabIndex = 0
         Me.RadPanel4.Text = "รายการทะเบียนรถที่ออกตั๋วแล้ว"
         Me.RadPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadPanel4.ThemeName = "Breeze"
+        Me.RadPanel4.ThemeName = "Office2010Blue"
         '
         'Label15
         '
@@ -1401,7 +1405,7 @@ Partial Class Advisenote
         Me.MasterGridAdvisenote.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.MasterGridAdvisenote.Size = New System.Drawing.Size(1096, 383)
         Me.MasterGridAdvisenote.TabIndex = 1
-        Me.MasterGridAdvisenote.ThemeName = "Breeze"
+        Me.MasterGridAdvisenote.ThemeName = "Office2010Blue"
         Me.MasterGridAdvisenote.UseScrollbarsInHierarchy = True
         '
         'RadPanel1
@@ -1431,7 +1435,7 @@ Partial Class Advisenote
         Me.RadButton5.TabIndex = 5
         Me.RadButton5.Text = "Edit Status"
         Me.RadButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton5.ThemeName = "Breeze"
+        Me.RadButton5.ThemeName = "Office2010Blue"
         Me.RadButton5.Visible = False
         CType(Me.RadButton5.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.write__1_
         CType(Me.RadButton5.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -1458,7 +1462,7 @@ Partial Class Advisenote
         Me.Printdata.TabIndex = 3
         Me.Printdata.Text = "Print DO.      "
         Me.Printdata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Printdata.ThemeName = "Breeze"
+        Me.Printdata.ThemeName = "Office2010Blue"
         CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1483,7 +1487,7 @@ Partial Class Advisenote
         Me.Canceldata.TabIndex = 2
         Me.Canceldata.Text = "Cancel DO.   "
         Me.Canceldata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Canceldata.ThemeName = "Breeze"
+        Me.Canceldata.ThemeName = "Office2010Blue"
         CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1511,7 +1515,7 @@ Partial Class Advisenote
         Me.Editdata.TabIndex = 1
         Me.Editdata.Text = "Edit DO."
         Me.Editdata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Editdata.ThemeName = "Breeze"
+        Me.Editdata.ThemeName = "Office2010Blue"
         CType(Me.Editdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Comic_Icons_3_files_edit_32x32_new
         CType(Me.Editdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Editdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1539,7 +1543,7 @@ Partial Class Advisenote
         Me.Adddata.TabIndex = 0
         Me.Adddata.Text = "Create DO."
         Me.Adddata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Adddata.ThemeName = "Breeze"
+        Me.Adddata.ThemeName = "Office2010Blue"
         CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.add_32
         CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1569,7 +1573,7 @@ Partial Class Advisenote
         Me.AddAuto.TabIndex = 4
         Me.AddAuto.Text = "สร้าง Do Auto    "
         Me.AddAuto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.AddAuto.ThemeName = "Breeze"
+        Me.AddAuto.ThemeName = "Office2010Blue"
         Me.AddAuto.Visible = False
         CType(Me.AddAuto.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.add_32
         CType(Me.AddAuto.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -2265,7 +2269,7 @@ Partial Class Advisenote
         Me.OrderBut.Size = New System.Drawing.Size(106, 68)
         Me.OrderBut.TabIndex = 14
         Me.OrderBut.Text = "ORDER"
-        Me.OrderBut.ThemeName = "Breeze"
+        Me.OrderBut.ThemeName = "Office2010Blue"
         CType(Me.OrderBut.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "ORDER"
         CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor2 = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor3 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -3931,6 +3935,7 @@ Partial Class Advisenote
         'RadPanel3
         '
         Me.RadPanel3.BackColor = System.Drawing.Color.White
+        Me.RadPanel3.Controls.Add(Me.RadButton3)
         Me.RadPanel3.Controls.Add(Me.TruckH)
         Me.RadPanel3.Controls.Add(Me.Cbn2)
         Me.RadPanel3.Controls.Add(Me.Trucktype)
@@ -4068,6 +4073,7 @@ Partial Class Advisenote
         Me.Cbn5.Size = New System.Drawing.Size(363, 24)
         Me.Cbn5.TabIndex = 12
         Me.Cbn5.TabStop = False
+        Me.Cbn5.ThemeName = "Office2010Blue"
         CType(Me.Cbn5.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -4147,6 +4153,7 @@ Partial Class Advisenote
         Me.RadLabel5.Size = New System.Drawing.Size(18, 29)
         Me.RadLabel5.TabIndex = 285
         Me.RadLabel5.Text = "*"
+        Me.RadLabel5.ThemeName = "Office2010Blue"
         '
         'Label27
         '
@@ -4168,6 +4175,7 @@ Partial Class Advisenote
         Me.RadLabel3.Size = New System.Drawing.Size(18, 29)
         Me.RadLabel3.TabIndex = 283
         Me.RadLabel3.Text = "*"
+        Me.RadLabel3.ThemeName = "Office2010Blue"
         '
         'RadLabel2
         '
@@ -4178,6 +4186,7 @@ Partial Class Advisenote
         Me.RadLabel2.Size = New System.Drawing.Size(18, 29)
         Me.RadLabel2.TabIndex = 282
         Me.RadLabel2.Text = "*"
+        Me.RadLabel2.ThemeName = "Office2010Blue"
         '
         'RadLabel1
         '
@@ -4188,6 +4197,7 @@ Partial Class Advisenote
         Me.RadLabel1.Size = New System.Drawing.Size(18, 29)
         Me.RadLabel1.TabIndex = 281
         Me.RadLabel1.Text = "*"
+        Me.RadLabel1.ThemeName = "Office2010Blue"
         '
         'Label32
         '
@@ -4213,7 +4223,7 @@ Partial Class Advisenote
         Me.BCancel.TabIndex = 12
         Me.BCancel.Text = "Cancel"
         Me.BCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancel.ThemeName = "Breeze"
+        Me.BCancel.ThemeName = "Office2010Blue"
         CType(Me.BCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         CType(Me.BCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.BCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -4401,6 +4411,7 @@ Partial Class Advisenote
         Me.RadButton7.Size = New System.Drawing.Size(110, 24)
         Me.RadButton7.TabIndex = 268
         Me.RadButton7.Text = "Test Seal"
+        Me.RadButton7.ThemeName = "Office2010Blue"
         Me.RadButton7.Visible = False
         '
         'Driver
@@ -4755,7 +4766,7 @@ Partial Class Advisenote
         Me.Bsave.ForeColor = System.Drawing.Color.Black
         Me.Bsave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.Bsave.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Bsave.Location = New System.Drawing.Point(237, 530)
+        Me.Bsave.Location = New System.Drawing.Point(410, 598)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(132, 58)
         Me.Bsave.TabIndex = 11
@@ -4783,7 +4794,7 @@ Partial Class Advisenote
         Me.Update.TabIndex = 12
         Me.Update.Text = "Save"
         Me.Update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Update.ThemeName = "Breeze"
+        Me.Update.ThemeName = "Office2010Blue"
         CType(Me.Update.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.refresh
         CType(Me.Update.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Update.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -5603,6 +5614,7 @@ Partial Class Advisenote
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(62, 24)
         Me.RadButton1.TabIndex = 0
+        Me.RadButton1.ThemeName = "Office2010Blue"
         Me.RadButton1.Visible = False
         '
         'RadButton2
@@ -5611,6 +5623,7 @@ Partial Class Advisenote
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(62, 24)
         Me.RadButton2.TabIndex = 185
+        Me.RadButton2.ThemeName = "Office2010Blue"
         Me.RadButton2.Visible = False
         '
         'RadTextBox2
@@ -5620,6 +5633,7 @@ Partial Class Advisenote
         Me.RadTextBox2.Size = New System.Drawing.Size(170, 20)
         Me.RadTextBox2.TabIndex = 186
         Me.RadTextBox2.TabStop = False
+        Me.RadTextBox2.ThemeName = "Office2010Blue"
         Me.RadTextBox2.Visible = False
         '
         'CustomShape1
@@ -5643,6 +5657,7 @@ Partial Class Advisenote
         Me.RadPanel2.TabIndex = 1
         Me.RadPanel2.Text = "Loading Advisenote"
         Me.RadPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadPanel2.ThemeName = "Office2010Blue"
         CType(Me.RadPanel2.GetChildAt(0), Telerik.WinControls.UI.RadPanelElement).Text = "Loading Advisenote"
         CType(Me.RadPanel2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor2 = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.RadPanel2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor3 = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(248, Byte), Integer))
@@ -5825,6 +5840,15 @@ Partial Class Advisenote
         'V_TRUCKTableAdapter
         '
         Me.V_TRUCKTableAdapter.ClearBeforeFill = True
+        '
+        'RadButton3
+        '
+        Me.RadButton3.Location = New System.Drawing.Point(237, 612)
+        Me.RadButton3.Name = "RadButton3"
+        Me.RadButton3.Size = New System.Drawing.Size(137, 58)
+        Me.RadButton3.TabIndex = 286
+        Me.RadButton3.Text = "RadButton3"
+        Me.RadButton3.ThemeName = "Breeze"
         '
         'Advisenote
         '
@@ -6136,6 +6160,7 @@ Partial Class Advisenote
         CType(Me.Edit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VLoading_StatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TTruckBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -6529,5 +6554,7 @@ Partial Class Advisenote
     Friend WithEvents VCHECKINLOAD1TableAdapter As DataSet_ViewTableAdapters.VCHECKINTableAdapter
     Friend WithEvents V_TRUCKTableAdapter As DataSet_ViewTableAdapters.V_TRUCKTableAdapter
     Friend WithEvents TTRUCKBindingSource1 As BindingSource
+    Friend WithEvents BreezeTheme2 As Telerik.WinControls.Themes.BreezeTheme
+    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
 End Class
 

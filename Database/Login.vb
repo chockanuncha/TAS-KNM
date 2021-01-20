@@ -7,15 +7,15 @@ Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Primitives
 Imports System.ComponentModel
 Public Class Login
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim Inumrow As Integer
-        Dim row As String
+        'Dim Inumrow As Integer
+        'Dim row As String
 
 #If DEBUG Then
         If UserName.Text = "" Then
-            UserName.Text = "boss"
-            Pass.Text = "0"
+            UserName.Text = "ping"
+            Pass.Text = "p"
         End If
 #End If
 
@@ -68,7 +68,7 @@ Public Class Login
 
                 If isPassExpire <= 0 Then
                     ChangPassword.RadButton2.Visible = False
-                    ChangPassword.Show()
+                    ChangPassword.ShowDialog()
                 End If
                 Me.Close()
             Else

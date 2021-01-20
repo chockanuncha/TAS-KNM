@@ -10,7 +10,7 @@ Imports System.Threading
 Imports System.Drawing.Printing
 Imports System.ComponentModel
 Public Class EditSeal
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim Ref, LSeal As String
 

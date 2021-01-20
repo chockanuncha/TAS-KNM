@@ -5,7 +5,7 @@ Imports System.ComponentModel
 Imports System.Net.Sockets
 
 Partial Public Class MAIN
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
     Public U_NAME As String = "None"
     Public U_GROUP As String = "None"
     Public U_NAME_ID As Integer
@@ -61,12 +61,13 @@ Partial Public Class MAIN
     Private Sub RefreshShipment()
         While Not ThrShipment.CancellationPending
             Try
-                Dim dt As DataTable = cls.Query("select  to_char(LDATE,'dd-MM-yyyy HH24:MI:SS') || '  ' ||  Detail as EventDetail from t_event Where  ROWNUM=1 order by id desc")
-                If dt.Rows.Count > 0 Then
-                    EventString = dt.Rows(0).Item("EventDetail").ToString()
-                Else
-                    EventString = ""
-                End If
+                Using dt As DataTable = cls.Query("select  top 1 ' + CONVERT(VARCHAR,ldate,120) + ' ' + ISNULL(DETAIL,'') + ' as EventDetail,* from t_event  order by id DESC;")
+                    If dt.Rows.Count > 0 Then
+                        EventString = dt.Rows(0).Item("EventDetail").ToString()
+                    Else
+                        EventString = ""
+                    End If
+                End Using
             Catch ex As Exception
             End Try
 

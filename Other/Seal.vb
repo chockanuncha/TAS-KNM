@@ -10,7 +10,7 @@ Imports System.Threading
 Imports System.Drawing.Printing
 Imports System.ComponentModel
 Public Class Seal
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Private Sub Seal_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
         Dim q As String

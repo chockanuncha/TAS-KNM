@@ -12,7 +12,7 @@ Imports System.ComponentModel
 Imports System.Globalization
 
 Public Class ReportBOL
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim Memory As MemoryManagement.Manage
 

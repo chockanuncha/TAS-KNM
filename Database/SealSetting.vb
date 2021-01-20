@@ -2,7 +2,7 @@
 Imports ExtendedErrorProvider
 
 Public Class Seal_setting
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim MyErrorProvider As New ErrorProviderExtended
     Dim Credate As Integer = 0

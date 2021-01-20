@@ -51,7 +51,7 @@ Partial Class ChangPassword
         Me.U_PassOLD.Name = "U_PassOLD"
         Me.U_PassOLD.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.U_PassOLD.Size = New System.Drawing.Size(221, 22)
-        Me.U_PassOLD.TabIndex = 5
+        Me.U_PassOLD.TabIndex = 0
         Me.U_PassOLD.TabStop = False
         Me.U_PassOLD.ThemeName = "Windows7"
         '
@@ -62,7 +62,7 @@ Partial Class ChangPassword
         Me.U_passnew.Name = "U_passnew"
         Me.U_passnew.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.U_passnew.Size = New System.Drawing.Size(221, 22)
-        Me.U_passnew.TabIndex = 6
+        Me.U_passnew.TabIndex = 1
         Me.U_passnew.TabStop = False
         Me.U_passnew.ThemeName = "Windows7"
         '
@@ -73,7 +73,7 @@ Partial Class ChangPassword
         Me.U_PassConfirm.Name = "U_PassConfirm"
         Me.U_PassConfirm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.U_PassConfirm.Size = New System.Drawing.Size(221, 22)
-        Me.U_PassConfirm.TabIndex = 7
+        Me.U_PassConfirm.TabIndex = 2
         Me.U_PassConfirm.TabStop = False
         Me.U_PassConfirm.ThemeName = "Windows7"
         '
@@ -150,7 +150,7 @@ Partial Class ChangPassword
         Me.RadButton1.Location = New System.Drawing.Point(185, 171)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(97, 27)
-        Me.RadButton1.TabIndex = 8
+        Me.RadButton1.TabIndex = 5
         Me.RadButton1.Text = "Chang password"
         Me.RadButton1.ThemeName = "Windows7"
         '
@@ -159,7 +159,7 @@ Partial Class ChangPassword
         Me.RadButton2.Location = New System.Drawing.Point(288, 171)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(97, 27)
-        Me.RadButton2.TabIndex = 9
+        Me.RadButton2.TabIndex = 4
         Me.RadButton2.Text = "Cancel"
         Me.RadButton2.ThemeName = "Windows7"
         '

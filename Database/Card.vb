@@ -5,7 +5,7 @@ Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
 
 Public Class Card
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim MyErrorProvider As New ErrorProviderExtended
     Dim ED As Integer = 0

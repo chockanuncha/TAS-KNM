@@ -15,7 +15,7 @@ Imports Microsoft.Office.Interop
 
 
 Public Class Report
-    Private cls As New Class_SQKDB
+    Private cls As New Class_SQLSERVERDB
 
     Dim xlApp As New Microsoft.Office.Interop.Excel.Application
 
