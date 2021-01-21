@@ -153,8 +153,8 @@ Partial Class Truck
         Me.RadPanel5 = New Telerik.WinControls.UI.RadPanel()
         Me.T_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTableAdapter()
         Me.T_TRUCKCOMPARTMENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKCOMPARTMENTTableAdapter()
-        Me.T_COMPANYTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYTableAdapter()
         Me.T_TRUCKTYPETableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter()
+        Me.T_COMPANYTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYTableAdapter()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -397,6 +397,7 @@ Partial Class Truck
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -894,7 +895,7 @@ Partial Class Truck
         Me.Condition_VALID_TO.Size = New System.Drawing.Size(242, 28)
         Me.Condition_VALID_TO.TabIndex = 3
         Me.Condition_VALID_TO.TabStop = False
-        Me.Condition_VALID_TO.Text = "22/05/2014"
+        Me.Condition_VALID_TO.Text = "22/05/2557"
         Me.Condition_VALID_TO.ThemeName = "Office2010Blue"
         Me.Condition_VALID_TO.Value = New Date(2014, 5, 22, 14, 1, 36, 0)
         '
@@ -921,7 +922,7 @@ Partial Class Truck
         Me.Condition_VALID_FORM.Size = New System.Drawing.Size(242, 28)
         Me.Condition_VALID_FORM.TabIndex = 2
         Me.Condition_VALID_FORM.TabStop = False
-        Me.Condition_VALID_FORM.Text = "15/05/2014"
+        Me.Condition_VALID_FORM.Text = "15/05/2557"
         Me.Condition_VALID_FORM.ThemeName = "Office2010Blue"
         Me.Condition_VALID_FORM.Value = New Date(2014, 5, 15, 10, 4, 29, 0)
         '
@@ -1013,7 +1014,7 @@ Partial Class Truck
         Me.INSURANCE_VALID_TO.Size = New System.Drawing.Size(242, 28)
         Me.INSURANCE_VALID_TO.TabIndex = 3
         Me.INSURANCE_VALID_TO.TabStop = False
-        Me.INSURANCE_VALID_TO.Text = "22/05/2014"
+        Me.INSURANCE_VALID_TO.Text = "22/05/2557"
         Me.INSURANCE_VALID_TO.ThemeName = "Office2010Blue"
         Me.INSURANCE_VALID_TO.Value = New Date(2014, 5, 22, 14, 1, 36, 0)
         '
@@ -1040,7 +1041,7 @@ Partial Class Truck
         Me.INSURANCE_VALID_FORM.Size = New System.Drawing.Size(242, 28)
         Me.INSURANCE_VALID_FORM.TabIndex = 2
         Me.INSURANCE_VALID_FORM.TabStop = False
-        Me.INSURANCE_VALID_FORM.Text = "15/05/2014"
+        Me.INSURANCE_VALID_FORM.Text = "15/05/2557"
         Me.INSURANCE_VALID_FORM.ThemeName = "Office2010Blue"
         Me.INSURANCE_VALID_FORM.Value = New Date(2014, 5, 15, 10, 4, 29, 0)
         '
@@ -1222,7 +1223,7 @@ Partial Class Truck
         Me.VE_EXPIREDATE.Size = New System.Drawing.Size(235, 28)
         Me.VE_EXPIREDATE.TabIndex = 7
         Me.VE_EXPIREDATE.TabStop = False
-        Me.VE_EXPIREDATE.Text = "22/05/2014"
+        Me.VE_EXPIREDATE.Text = "22/05/2557"
         Me.VE_EXPIREDATE.ThemeName = "Office2010Blue"
         Me.VE_EXPIREDATE.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
         '
@@ -1250,7 +1251,7 @@ Partial Class Truck
         Me.VE_ISSUEDATE.Size = New System.Drawing.Size(235, 28)
         Me.VE_ISSUEDATE.TabIndex = 6
         Me.VE_ISSUEDATE.TabStop = False
-        Me.VE_ISSUEDATE.Text = "14/10/2014"
+        Me.VE_ISSUEDATE.Text = "14/10/2557"
         Me.VE_ISSUEDATE.ThemeName = "Office2010Blue"
         Me.VE_ISSUEDATE.Value = New Date(2014, 10, 14, 0, 0, 0, 0)
         '
@@ -1642,13 +1643,13 @@ Partial Class Truck
         '
         Me.T_TRUCKCOMPARTMENTTableAdapter.ClearBeforeFill = True
         '
-        'T_COMPANYTableAdapter
-        '
-        Me.T_COMPANYTableAdapter.ClearBeforeFill = True
-        '
         'T_TRUCKTYPETableAdapter
         '
         Me.T_TRUCKTYPETableAdapter.ClearBeforeFill = True
+        '
+        'T_COMPANYTableAdapter
+        '
+        Me.T_COMPANYTableAdapter.ClearBeforeFill = True
         '
         'Truck
         '
@@ -1904,8 +1905,8 @@ Partial Class Truck
     Friend WithEvents TTRUCKCOMPARTMENTBindingSource As BindingSource
     Friend WithEvents T_TRUCKCOMPARTMENTTableAdapter As DataSet_TableTableAdapters.T_TRUCKCOMPARTMENTTableAdapter
     Friend WithEvents TCOMPANYBindingSource As BindingSource
-    Friend WithEvents T_COMPANYTableAdapter As DataSet_TableTableAdapters.T_COMPANYTableAdapter
     Friend WithEvents TTRUCKTYPEBindingSource As BindingSource
     Friend WithEvents T_TRUCKTYPETableAdapter As DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter
+    Friend WithEvents T_COMPANYTableAdapter As DataSet_TableTableAdapters.T_COMPANYTableAdapter
 End Class
 

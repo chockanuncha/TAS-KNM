@@ -383,6 +383,11 @@
     <Compile Include="App_Class\Class_Controls.vb" />
     <Compile Include="App_Class\Class_SqlServerDB.vb" />
     <Compile Include="App_Class\Class_Permission.vb" />
+    <Compile Include="App_Dataset\DataSet_Report.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Report.xsd</DependentUpon>
+    </Compile>
     <Compile Include="App_Dataset\DataSet_Table.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -436,6 +441,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Event.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="bin\Debug\TruckTimeResult1.vb">
@@ -893,6 +904,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Event.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report1.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\TruckTimeResult1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TruckTimeResult1.vb</LastGenOutput>
@@ -1110,6 +1125,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+    <None Include="App_Dataset\DataSet_Report.xsc">
+      <DependentUpon>DataSet_Report.xsd</DependentUpon>
+    </None>
+    <None Include="App_Dataset\DataSet_Report.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Report.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App_Dataset\DataSet_Report.xss">
+      <DependentUpon>DataSet_Report.xsd</DependentUpon>
+    </None>
     <None Include="App_Dataset\DataSet_Table.xsc">
       <DependentUpon>DataSet_Table.xsd</DependentUpon>
     </None>

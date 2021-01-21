@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Company
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,22 @@ Partial Class Company
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Company))
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim GridViewTextBoxColumn11 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn12 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn13 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn14 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.MasterGrid = New Telerik.WinControls.UI.RadGridView()
         Me.TCOMPANYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -176,34 +176,34 @@ Partial Class Company
         Me.MasterGrid.MasterTemplate.AllowRowResize = False
         Me.MasterGrid.MasterTemplate.AutoGenerateColumns = False
         Me.MasterGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn1.EnableExpressionEditor = False
-        GridViewTextBoxColumn1.FieldName = "Company_Code"
-        GridViewTextBoxColumn1.HeaderText = "Company Code"
-        GridViewTextBoxColumn1.IsAutoGenerated = True
-        GridViewTextBoxColumn1.MinWidth = 200
-        GridViewTextBoxColumn1.Name = "Company_Code"
-        GridViewTextBoxColumn1.Width = 216
-        GridViewTextBoxColumn2.EnableExpressionEditor = False
-        GridViewTextBoxColumn2.FieldName = "Company_NAME"
-        GridViewTextBoxColumn2.HeaderText = "Company Name"
-        GridViewTextBoxColumn2.IsAutoGenerated = True
-        GridViewTextBoxColumn2.MinWidth = 320
-        GridViewTextBoxColumn2.Name = "Company_NAME"
-        GridViewTextBoxColumn2.Width = 345
-        GridViewTextBoxColumn3.EnableExpressionEditor = False
-        GridViewTextBoxColumn3.FieldName = "COMPANY_TEL"
-        GridViewTextBoxColumn3.HeaderText = "Phone No."
-        GridViewTextBoxColumn3.IsAutoGenerated = True
-        GridViewTextBoxColumn3.MinWidth = 120
-        GridViewTextBoxColumn3.Name = "COMPANY_TEL"
-        GridViewTextBoxColumn3.Width = 147
-        Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3})
+        GridViewTextBoxColumn8.EnableExpressionEditor = False
+        GridViewTextBoxColumn8.FieldName = "Company_Code"
+        GridViewTextBoxColumn8.HeaderText = "Company Code"
+        GridViewTextBoxColumn8.IsAutoGenerated = True
+        GridViewTextBoxColumn8.MinWidth = 200
+        GridViewTextBoxColumn8.Name = "Company_Code"
+        GridViewTextBoxColumn8.Width = 216
+        GridViewTextBoxColumn9.EnableExpressionEditor = False
+        GridViewTextBoxColumn9.FieldName = "Company_NAME"
+        GridViewTextBoxColumn9.HeaderText = "Company Name"
+        GridViewTextBoxColumn9.IsAutoGenerated = True
+        GridViewTextBoxColumn9.MinWidth = 320
+        GridViewTextBoxColumn9.Name = "Company_NAME"
+        GridViewTextBoxColumn9.Width = 345
+        GridViewTextBoxColumn10.EnableExpressionEditor = False
+        GridViewTextBoxColumn10.FieldName = "COMPANY_TEL"
+        GridViewTextBoxColumn10.HeaderText = "Phone No."
+        GridViewTextBoxColumn10.IsAutoGenerated = True
+        GridViewTextBoxColumn10.MinWidth = 120
+        GridViewTextBoxColumn10.Name = "COMPANY_TEL"
+        GridViewTextBoxColumn10.Width = 147
+        Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10})
         Me.MasterGrid.MasterTemplate.DataSource = Me.TCOMPANYBindingSource
         Me.MasterGrid.MasterTemplate.EnableFiltering = True
         Me.MasterGrid.MasterTemplate.EnableGrouping = False
         Me.MasterGrid.MasterTemplate.ShowRowHeaderColumn = False
         Me.MasterGrid.MasterTemplate.Templates.AddRange(New Telerik.WinControls.UI.GridViewTemplate() {Me.GridViewTemplate1})
-        Me.MasterGrid.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.MasterGrid.MasterTemplate.ViewDefinition = TableViewDefinition6
         Me.MasterGrid.Name = "MasterGrid"
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -223,7 +223,7 @@ Partial Class Company
         '
         'GridViewTemplate1
         '
-        Me.GridViewTemplate1.ViewDefinition = TableViewDefinition1
+        Me.GridViewTemplate1.ViewDefinition = TableViewDefinition5
         '
         'BindingNavigator1
         '
@@ -271,6 +271,7 @@ Partial Class Company
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -407,7 +408,7 @@ Partial Class Company
         '
         'GridViewTemplate2
         '
-        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition3
+        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition7
         '
         'DetailGroup
         '
@@ -596,8 +597,8 @@ Partial Class Company
         '
         Me.Company_Type.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TCOMPANYBindingSource, "COMPANY_TYPE", True))
         Me.Company_Type.Font = New System.Drawing.Font("Tahoma", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        RadListDataItem1.Text = "-"
-        Me.Company_Type.Items.Add(RadListDataItem1)
+        RadListDataItem2.Text = "-"
+        Me.Company_Type.Items.Add(RadListDataItem2)
         Me.Company_Type.Location = New System.Drawing.Point(203, 176)
         Me.Company_Type.Name = "Company_Type"
         Me.Company_Type.Size = New System.Drawing.Size(337, 26)
@@ -763,34 +764,34 @@ Partial Class Company
         Me.MasterTemplate.MasterTemplate.AllowRowReorder = True
         Me.MasterTemplate.MasterTemplate.AllowRowResize = False
         Me.MasterTemplate.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn4.EnableExpressionEditor = False
-        GridViewTextBoxColumn4.FieldName = "Company_Code"
-        GridViewTextBoxColumn4.HeaderText = "บัตรประชาชนเลขที่"
-        GridViewTextBoxColumn4.IsAutoGenerated = True
-        GridViewTextBoxColumn4.Name = "DRIVER_LICENSE"
-        GridViewTextBoxColumn4.Width = 120
-        GridViewTextBoxColumn5.EnableExpressionEditor = False
-        GridViewTextBoxColumn5.FieldName = "Company_NAME"
-        GridViewTextBoxColumn5.HeaderText = "ชื่อ"
-        GridViewTextBoxColumn5.IsAutoGenerated = True
-        GridViewTextBoxColumn5.Name = "DRIVER_NAME"
-        GridViewTextBoxColumn5.Width = 130
-        GridViewTextBoxColumn6.EnableExpressionEditor = False
-        GridViewTextBoxColumn6.FieldName = "COMPANY_TYPE"
-        GridViewTextBoxColumn6.HeaderText = "นามสกุล"
-        GridViewTextBoxColumn6.IsAutoGenerated = True
-        GridViewTextBoxColumn6.Name = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn6.Width = 130
-        GridViewTextBoxColumn7.EnableExpressionEditor = False
-        GridViewTextBoxColumn7.HeaderText = "PINCODE"
-        GridViewTextBoxColumn7.IsAutoGenerated = True
-        GridViewTextBoxColumn7.Name = "DRIVER_PINCODE"
-        GridViewTextBoxColumn7.Width = 100
-        Me.MasterTemplate.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7})
+        GridViewTextBoxColumn11.EnableExpressionEditor = False
+        GridViewTextBoxColumn11.FieldName = "Company_Code"
+        GridViewTextBoxColumn11.HeaderText = "บัตรประชาชนเลขที่"
+        GridViewTextBoxColumn11.IsAutoGenerated = True
+        GridViewTextBoxColumn11.Name = "DRIVER_LICENSE"
+        GridViewTextBoxColumn11.Width = 120
+        GridViewTextBoxColumn12.EnableExpressionEditor = False
+        GridViewTextBoxColumn12.FieldName = "Company_NAME"
+        GridViewTextBoxColumn12.HeaderText = "ชื่อ"
+        GridViewTextBoxColumn12.IsAutoGenerated = True
+        GridViewTextBoxColumn12.Name = "DRIVER_NAME"
+        GridViewTextBoxColumn12.Width = 130
+        GridViewTextBoxColumn13.EnableExpressionEditor = False
+        GridViewTextBoxColumn13.FieldName = "COMPANY_TYPE"
+        GridViewTextBoxColumn13.HeaderText = "นามสกุล"
+        GridViewTextBoxColumn13.IsAutoGenerated = True
+        GridViewTextBoxColumn13.Name = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn13.Width = 130
+        GridViewTextBoxColumn14.EnableExpressionEditor = False
+        GridViewTextBoxColumn14.HeaderText = "PINCODE"
+        GridViewTextBoxColumn14.IsAutoGenerated = True
+        GridViewTextBoxColumn14.Name = "DRIVER_PINCODE"
+        GridViewTextBoxColumn14.Width = 100
+        Me.MasterTemplate.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14})
         Me.MasterTemplate.MasterTemplate.EnableFiltering = True
         Me.MasterTemplate.MasterTemplate.ShowRowHeaderColumn = False
         Me.MasterTemplate.MasterTemplate.Templates.AddRange(New Telerik.WinControls.UI.GridViewTemplate() {Me.GridViewTemplate1})
-        Me.MasterTemplate.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.MasterTemplate.MasterTemplate.ViewDefinition = TableViewDefinition8
         Me.MasterTemplate.Name = "MasterTemplate"
         Me.MasterTemplate.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterTemplate.RightToLeft = System.Windows.Forms.RightToLeft.No

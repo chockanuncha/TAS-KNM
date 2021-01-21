@@ -56,7 +56,7 @@ Public Class Advisenote
         ''TODO: This line of code loads data into the 'DataSet_Table.T_PRODUCT' table. You can move, or remove it, as needed.
         'Me.T_PRODUCTTableAdapter.Fill(Me.DataSet_Table.T_PRODUCT)
 
-        My.Application.ChangeCulture("th-TH")
+        'My.Application.ChangeCulture("th-TH")
 
         'Dim ProID(1) As String
         'ProID(0) = 1

@@ -12,6 +12,8 @@ Public Class ChangPassword
         U_PassConfirm.Text = ""
         U_PassOLD.Text = ""
         U_PassOLD.Focus()
+
+        RadTextBox1.Text = Date.Now.ToString
     End Sub
 
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadButton1.Click
@@ -25,9 +27,13 @@ Public Class ChangPassword
         If dt.Rows.Count > 0 Then
             If U_passnew.Text = U_PassConfirm.Text Then
 
-                sql = "UPDATE T_USER SET Update_date=Getdate() ,U_PASSWD_DATE= format(convert(datetime, '" & Now.AddDays(90) & "',104),'dd/MM/yyyy HH:mm:ss')  "
-
+                sql = "UPDATE T_USER SET Update_date=Getdate() ,U_PASSWD_DATE=GETDATE() "
                 sql &=",U_PASSWD='" & U_passnew.Text & "' Where U_ID='" & UserID.ToString & "'"
+
+                'sql &= " from v_bol_m1m2_new where addnotedate between "
+                'sql &= "convert(datetime, '" & Now.AddDays(90) & "') And "
+                'sql &= "convert(datetime, '" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "')  "
+
 
                 cls.Update(sql)
 

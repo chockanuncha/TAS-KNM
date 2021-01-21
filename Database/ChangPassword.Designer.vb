@@ -34,6 +34,7 @@ Partial Class ChangPassword
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
+        Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
         CType(Me.U_PassOLD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.U_passnew, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.U_PassConfirm, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +42,7 @@ Partial Class ChangPassword
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -163,6 +165,17 @@ Partial Class ChangPassword
         Me.RadButton2.Text = "Cancel"
         Me.RadButton2.ThemeName = "Windows7"
         '
+        'RadTextBox1
+        '
+        Me.RadTextBox1.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.RadTextBox1.Location = New System.Drawing.Point(138, 12)
+        Me.RadTextBox1.Name = "RadTextBox1"
+        Me.RadTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.RadTextBox1.Size = New System.Drawing.Size(260, 22)
+        Me.RadTextBox1.TabIndex = 1
+        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.ThemeName = "Windows7"
+        '
         'ChangPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -170,6 +183,7 @@ Partial Class ChangPassword
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(398, 204)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RadTextBox1)
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.PictureBox1)
@@ -197,6 +211,7 @@ Partial Class ChangPassword
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -213,5 +228,6 @@ Partial Class ChangPassword
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
 End Class
 

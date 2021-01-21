@@ -10,7 +10,7 @@
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(ByVal sender As Object, _
                 ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
-            My.Application.ChangeCulture("en-US")
+            My.Application.ChangeCulture("en-GB")
         End Sub
     End Class
 End Namespace

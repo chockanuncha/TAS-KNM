@@ -13,7 +13,7 @@ Public Class Journal_Events
     Dim reporttype As Integer = 0
 
     Private Sub RadForm3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        My.Application.ChangeCulture("th-TH")
+        'My.Application.ChangeCulture("th-TH")
         'TODO: This line of code loads data into the 'Dataset_table.T_EVENT' table. You can move, or remove it, as needed.
         Me.T_EVENTTableAdapter.Fill(Me.Dataset_table.T_EVENT)
         'TODO: This line of code loads data into the 'Dataset_table.T_ALARMS_BATCH_HISTORY' table. You can move, or remove it, as needed.

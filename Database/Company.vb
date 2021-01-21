@@ -52,6 +52,7 @@ Public Class Company
             MasterGrid.Enabled = True
             UPDATEBY.Text = MAIN.U_NAME
             TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("Company_DATE") = Now
+            TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("Insertdate") = Now
             TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("Company_ID") = TCOMPANYBindingSource.Count
             MasterGrid.DataSource = TCOMPANYBindingSource
             MasterGrid.ResumeLayout()
@@ -116,6 +117,8 @@ Public Class Company
     End Sub
 
     Private Sub Company_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DataSet_Table.T_COMPANY' table. You can move, or remove it, as needed.
+        Me.T_COMPANYTableAdapter.Fill(Me.DataSet_Table.T_COMPANY)
         MasterGrid.FilterDescriptors.Clear()
         Me.T_COMPANYTableAdapter.Fill(Me.DataSet_Table.T_COMPANY)
         BindingNavigator1.Enabled = True

@@ -35,7 +35,7 @@ Public Class Topup
 
         'TODO: This line of code loads data into the 'IRPCDataset.V_TRUCK2' table. You can move, or remove it, as needed.
         'Me.V_TRUCK2TableAdapter.Fill(Me.IRPCDataset.V_TRUCK2)
-        My.Application.ChangeCulture("th-TH")
+        'My.Application.ChangeCulture("th-TH")
 
 
         Dim descriptor As New FilterDescriptor(EdCustomer.DisplayMember, FilterOperator.StartsWith, String.Empty)

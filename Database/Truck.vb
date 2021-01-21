@@ -22,6 +22,8 @@ Public Class Truck
     Dim Ref As String
 
     Private Sub Truck_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DataSet_Table.T_COMPANY' table. You can move, or remove it, as needed.
+        Me.T_COMPANYTableAdapter.Fill(Me.DataSet_Table.T_COMPANY)
 
         'TODO: This line of code loads data into the 'DataSet_Table.T_TRUCKCOMPARTMENT' table. You can move, or remove it, as needed.
         Me.T_TRUCKCOMPARTMENTTableAdapter.Fill(Me.DataSet_Table.T_TRUCKCOMPARTMENT)
@@ -90,7 +92,7 @@ Public Class Truck
                 If Evens = 0 Then
                     TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("update_date") = Now
                     TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_COMPANY") = TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID")
-                    TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_OWNER") = Owner.Text
+                    'TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_OWNER") = Owner.Text
                     TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_TYPE") = TTrucktypeBindingSource.Item(TTrucktypeBindingSource.Position)("ID")
                     'TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("Transport_TYPE") = TransportTypeBindingSource.Item(TransportTypeBindingSource.Position)("ID")
 
@@ -665,7 +667,5 @@ Public Class Truck
         End If
     End Sub
 
-    Private Sub TRuckType_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs)
-
-    End Sub
+    Pr
 End Class
