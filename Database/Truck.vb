@@ -7,9 +7,7 @@ Imports Telerik.WinControls.Data
 Public Class Truck
     Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
-
     Private Page_Group As String = "Operate Data"
-
     Dim Addnew As Boolean
     Dim TRUCK_ID As Integer
     Dim MyErrorProvider As New ErrorProviderExtended
@@ -35,7 +33,7 @@ Public Class Truck
 
         MasterGrid.FilterDescriptors.Clear()
 
-        Me.T_COMPANYTableAdapter.Fill(Me.DataSet_Table.T_COMPANY)
+
         'TODO: This line of code loads data into the 'IRPCDataset.T_TRUCKTYPE' table. You can move, or remove it, as needed.
         Me.T_TRUCKTYPETableAdapter.Fill(Me.DataSet_Table.T_TRUCKTYPE)
         'TODO: This line of code loads data into the 'IRPCDataset.T_TRUCKUNIT' table. You can move, or remove it, as needed.
@@ -171,20 +169,32 @@ Public Class Truck
                     q &= "Truck_Company='" & TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID").ToString() & "', "
                     q &= "Truck_type='" & TTrucktypeBindingSource.Item(TTrucktypeBindingSource.Position)("ID").ToString() & "', "
                     Dim n_year As Integer = 0
-                    n_year = 543
-                    q &= "TRUCK_MEASURELAST= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, VE_ISSUEDATE.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "TRUCK_MEASURENEXT= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, VE_EXPIREDATE.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "INSURANCE_VALID_FORM= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, INSURANCE_VALID_FORM.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "INSURANCE_VALID_TO= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, INSURANCE_VALID_TO.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "Condition_VALID_FORM= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Condition_VALID_FORM.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "Condition_VALID_TO= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Condition_VALID_TO.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    n_year = -1
+                    'q &= "TRUCK_MEASURELAST= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, VE_ISSUEDATE.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "TRUCK_MEASURENEXT= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, VE_EXPIREDATE.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "INSURANCE_VALID_FORM= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, INSURANCE_VALID_FORM.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "INSURANCE_VALID_TO= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, INSURANCE_VALID_TO.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "Condition_VALID_FORM= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Condition_VALID_FORM.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "Condition_VALID_TO= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Condition_VALID_TO.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+
+
+                    q &= "TRUCK_MEASURELAST= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", VE_ISSUEDATE.Value)) & "')" & ","
+                    'q &= "TRUCK_MEASURELAST= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, VE_ISSUEDATE.Value))) & "')" & ","
+                    q &= "TRUCK_MEASURENEXT= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, VE_EXPIREDATE.Value))) & "')" & ","
+                    q &= "INSURANCE_VALID_FORM= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, INSURANCE_VALID_FORM.Value))) & "')" & ","
+                    q &= "INSURANCE_VALID_TO= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, INSURANCE_VALID_TO.Value))) & "')" & ","
+                    q &= "Condition_VALID_FORM= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Condition_VALID_FORM.Value))) & "')" & ","
+                    q &= "Condition_VALID_TO= convert(datetime, '" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Condition_VALID_TO.Value))) & "')" & ","
+
+
+
                     q &= "INSURANCE='" & INSURANCE.Text & "', "
                     q &= "INSURANCE_TYPE='" & INSURANCE_Type.Text & "', "
                     q &= "TRUCK_COMP_NUM='" & Comp.ToString & "', "
                     q &= "TRUCK_CAPASITY='" & VE_CAPA.Text & "', "
                     q &= "TRUCK_WEIGHT='" & Min_WEIGHT.Text & "', "
                     q &= "MAX_LOAD_WEIGHT='" & Max_WEIGHT.Text & "', "
-                    q &= "Truck_owner= '" & Owner.Text & "',"
+                    '_q &= "Truck_owner= '" & Owner.Text & "',"
                     If VE_ARMTOP.Checked = True Then
                         q &= "TRUCK_LOADTYPE ='TOP', "
                     Else
@@ -556,7 +566,7 @@ Public Class Truck
             MasterGrid.DataSource = Nothing
             TTruckBindingSource.AddNew()
             Ve_tran1.SelectedIndex = -1
-            Owner.SelectedIndex = -1
+            'Owner.SelectedIndex = -1
             'UNIT.SelectedIndex = 0
             TRuckType.SelectedIndex = -1
 
@@ -574,12 +584,12 @@ Public Class Truck
                 TTruckBindingSource.Item(TTruckBindingSource.Position)("TRUCK_TYPE") = "1"
                 TTruckBindingSource.Item(TTruckBindingSource.Position)("TRUCK_ARM") = "1"
 
-                ''' ประกันภัย
+                ' INSURANCE
 
-                TTruckBindingSource.Item(TTruckBindingSource.Position)("INSURANCE_VALID_TO") = Now
+                TTRUCKBindingSource.Item(TTruckBindingSource.Position)("INSURANCE_VALID_TO") = Now
                 TTruckBindingSource.Item(TTruckBindingSource.Position)("INSURANCE_VALID_FORM") = Now
-                ''' วัดน้ำ
-                TTruckBindingSource.Item(TTruckBindingSource.Position)("TRUCK_MEASURELAST") = Now
+                ' TRUCK_MEASUREL
+                TTRUCKBindingSource.Item(TTruckBindingSource.Position)("TRUCK_MEASURELAST") = Now
                 TTruckBindingSource.Item(TTruckBindingSource.Position)("TRUCK_MEASURENEXT") = Now
                 TTruckBindingSource.Item(TTruckBindingSource.Position)("CONDITION_VALID_FORM") = Now
                 TTruckBindingSource.Item(TTruckBindingSource.Position)("CONDITION_VALID_TO") = Now
@@ -652,6 +662,7 @@ Public Class Truck
     End Sub
 
 
+
     Private Sub Owner_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Owner.Leave
         If adddata = 1 Then
             Try
@@ -667,5 +678,5 @@ Public Class Truck
         End If
     End Sub
 
-    Pr
+
 End Class

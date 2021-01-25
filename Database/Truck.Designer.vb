@@ -397,7 +397,6 @@ Partial Class Truck
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -563,7 +562,7 @@ Partial Class Truck
         Me.DetailGroup.Location = New System.Drawing.Point(0, 0)
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(1256, 656)
-        Me.DetailGroup.TabIndex = 13
+        Me.DetailGroup.TabIndex = 0
         Me.DetailGroup.TabStop = False
         '
         'RadLabel29
@@ -607,7 +606,7 @@ Partial Class Truck
         Me.RadGroupBox3.Location = New System.Drawing.Point(469, 356)
         Me.RadGroupBox3.Name = "RadGroupBox3"
         Me.RadGroupBox3.Size = New System.Drawing.Size(463, 285)
-        Me.RadGroupBox3.TabIndex = 131
+        Me.RadGroupBox3.TabIndex = 8
         Me.RadGroupBox3.Text = "Compartment"
         Me.RadGroupBox3.ThemeName = "Breeze"
         '
@@ -624,7 +623,6 @@ Partial Class Truck
         Me.TRuckType.Size = New System.Drawing.Size(242, 28)
         Me.TRuckType.TabIndex = 0
         Me.TRuckType.ThemeName = "Office2010Blue"
-        Me.TRuckType.ValueMember = "ID"
         '
         'TTRUCKTYPEBindingSource
         '
@@ -893,7 +891,7 @@ Partial Class Truck
         Me.Condition_VALID_TO.Location = New System.Drawing.Point(206, 68)
         Me.Condition_VALID_TO.Name = "Condition_VALID_TO"
         Me.Condition_VALID_TO.Size = New System.Drawing.Size(242, 28)
-        Me.Condition_VALID_TO.TabIndex = 3
+        Me.Condition_VALID_TO.TabIndex = 1
         Me.Condition_VALID_TO.TabStop = False
         Me.Condition_VALID_TO.Text = "22/05/2557"
         Me.Condition_VALID_TO.ThemeName = "Office2010Blue"
@@ -920,7 +918,7 @@ Partial Class Truck
         Me.Condition_VALID_FORM.Location = New System.Drawing.Point(206, 34)
         Me.Condition_VALID_FORM.Name = "Condition_VALID_FORM"
         Me.Condition_VALID_FORM.Size = New System.Drawing.Size(242, 28)
-        Me.Condition_VALID_FORM.TabIndex = 2
+        Me.Condition_VALID_FORM.TabIndex = 0
         Me.Condition_VALID_FORM.TabStop = False
         Me.Condition_VALID_FORM.Text = "15/05/2557"
         Me.Condition_VALID_FORM.ThemeName = "Office2010Blue"
@@ -933,7 +931,7 @@ Partial Class Truck
         Me.Max_WEIGHT.Location = New System.Drawing.Point(176, 193)
         Me.Max_WEIGHT.Name = "Max_WEIGHT"
         Me.Max_WEIGHT.Size = New System.Drawing.Size(235, 28)
-        Me.Max_WEIGHT.TabIndex = 5
+        Me.Max_WEIGHT.TabIndex = 3
         Me.Max_WEIGHT.TabStop = False
         Me.Max_WEIGHT.ThemeName = "Office2010Blue"
         '
@@ -956,7 +954,7 @@ Partial Class Truck
         Me.Min_WEIGHT.Location = New System.Drawing.Point(176, 159)
         Me.Min_WEIGHT.Name = "Min_WEIGHT"
         Me.Min_WEIGHT.Size = New System.Drawing.Size(235, 28)
-        Me.Min_WEIGHT.TabIndex = 4
+        Me.Min_WEIGHT.TabIndex = 2
         Me.Min_WEIGHT.TabStop = False
         Me.Min_WEIGHT.ThemeName = "Office2010Blue"
         '
@@ -987,7 +985,7 @@ Partial Class Truck
         Me.RadGroupBox1.Location = New System.Drawing.Point(469, 13)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         Me.RadGroupBox1.Size = New System.Drawing.Size(463, 208)
-        Me.RadGroupBox1.TabIndex = 101
+        Me.RadGroupBox1.TabIndex = 7
         Me.RadGroupBox1.Text = "Insurance"
         Me.RadGroupBox1.ThemeName = "Breeze"
         '
@@ -1185,7 +1183,7 @@ Partial Class Truck
         Me.U_REMARK.Name = "U_REMARK"
         Me.U_REMARK.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
         Me.U_REMARK.Size = New System.Drawing.Size(235, 80)
-        Me.U_REMARK.TabIndex = 9
+        Me.U_REMARK.TabIndex = 7
         Me.U_REMARK.Text = ""
         '
         'RadLabel5
@@ -1221,7 +1219,7 @@ Partial Class Truck
         Me.VE_EXPIREDATE.Location = New System.Drawing.Point(176, 261)
         Me.VE_EXPIREDATE.Name = "VE_EXPIREDATE"
         Me.VE_EXPIREDATE.Size = New System.Drawing.Size(235, 28)
-        Me.VE_EXPIREDATE.TabIndex = 7
+        Me.VE_EXPIREDATE.TabIndex = 5
         Me.VE_EXPIREDATE.TabStop = False
         Me.VE_EXPIREDATE.Text = "22/05/2557"
         Me.VE_EXPIREDATE.ThemeName = "Office2010Blue"
@@ -1249,7 +1247,7 @@ Partial Class Truck
         Me.VE_ISSUEDATE.MaxDate = New Date(2157, 12, 31, 0, 0, 0, 0)
         Me.VE_ISSUEDATE.Name = "VE_ISSUEDATE"
         Me.VE_ISSUEDATE.Size = New System.Drawing.Size(235, 28)
-        Me.VE_ISSUEDATE.TabIndex = 6
+        Me.VE_ISSUEDATE.TabIndex = 4
         Me.VE_ISSUEDATE.TabStop = False
         Me.VE_ISSUEDATE.Text = "14/10/2557"
         Me.VE_ISSUEDATE.ThemeName = "Office2010Blue"
@@ -1268,6 +1266,7 @@ Partial Class Truck
         Me.Owner.Size = New System.Drawing.Size(235, 28)
         Me.Owner.TabIndex = 2
         Me.Owner.ThemeName = "Office2010Blue"
+        Me.Owner.Visible = False
         '
         'T_UPDATEBY
         '
@@ -1336,6 +1335,7 @@ Partial Class Truck
         Me.RadLabel3.TabIndex = 45
         Me.RadLabel3.Text = "Pick up Type :"
         Me.RadLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel3.Visible = False
         '
         'RadLabel2
         '
@@ -1400,7 +1400,7 @@ Partial Class Truck
         Me.GroupBox1.Location = New System.Drawing.Point(176, 288)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(235, 50)
-        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Tag = ""
         '
