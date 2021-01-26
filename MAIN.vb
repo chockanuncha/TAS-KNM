@@ -259,8 +259,8 @@ Partial Public Class MAIN
 
 
     Private Sub RadLiveTileElement22_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'Me.AddOwnedForm(USER)
-        'USER.Show()
+        Me.AddOwnedForm(USER)
+        USER.Show()
     End Sub
 
     Private Sub RadLiveTileElement11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -305,12 +305,12 @@ Partial Public Class MAIN
         Reportmain.Show()
     End Sub
 
-    Private Sub RadLiveTileElement4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadLiveTileElement4.Click
+    Private Sub RadLiveTileElement4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Truck_Menu.Click
         Me.AddOwnedForm(Truck)
         Truck.Show()
     End Sub
 
-    Private Sub linkTile2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkTile2.Click
+    Private Sub linkTile2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Card_Menu.Click
         Me.AddOwnedForm(Card)
         Card.Show()
     End Sub
@@ -324,7 +324,7 @@ Partial Public Class MAIN
 
     End Sub
 
-    Private Sub Driver_But_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver_But.Click
+    Private Sub Driver_But_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver_Menu.Click
         Me.AddOwnedForm(Driver)
         Driver.Show()
     End Sub
@@ -569,8 +569,15 @@ Partial Public Class MAIN
     End Sub
 
     Private Sub UserMenu_Click(sender As Object, e As EventArgs) Handles UserMenu.Click
+
         Me.AddOwnedForm(USER)
-        USER.Show()
+        If (USER.Chk_View() = False) And U_GROUP_ID <> 1 Then
+            Exit Sub
+        Else
+            USER.Show()
+        End If
+
+
     End Sub
 End Class
 

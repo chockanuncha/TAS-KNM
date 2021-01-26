@@ -92,4 +92,13 @@ Public Class Class_SQLSERVERDB
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
+
+    Public Sub InsertEvent(ByVal eWho As String, ByVal eDo As String, ByVal eWhere As String, ByVal eSQL As String)
+        Dim strSQL As String = "INSERT INTO T_EVENT(LDAY, LMONTH, LYEAR, E_USER, E_TABLE, DETAIL, E_SQL) VALUES (" & Now.Day & ", " & Now.Month & ", " & Now.Year & ", '" & eWho & "', '" & eWhere & "', '" & eDo & "', '" & eSQL & "')"
+        Try
+            Insert(strSQL)
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+    End Sub
 End Class

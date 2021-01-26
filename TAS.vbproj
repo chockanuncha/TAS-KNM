@@ -381,6 +381,7 @@
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="App_Class\Class_Controls.vb" />
+    <Compile Include="App_Class\Class_SelectData.vb" />
     <Compile Include="App_Class\Class_SqlServerDB.vb" />
     <Compile Include="App_Class\Class_Permission.vb" />
     <Compile Include="App_Dataset\DataSet_Report.Designer.vb">
@@ -461,10 +462,16 @@
       <DependentUpon>TrucktimeResult.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Database\ChangPassword.Designer.vb">
+    <Compile Include="Config\GroupRole.Designer.vb">
+      <DependentUpon>GroupRole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\GroupRole.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record Data\ChangPassword.Designer.vb">
       <DependentUpon>ChangPassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\ChangPassword.vb">
+    <Compile Include="Record Data\ChangPassword.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Config\Banner.Designer.vb">
@@ -563,40 +570,40 @@
     <Compile Include="Config\Override.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\BlacklistDrivervb.Designer.vb">
+    <Compile Include="Record Data\BlacklistDrivervb.Designer.vb">
       <DependentUpon>BlacklistDrivervb.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\BlacklistDrivervb.vb">
+    <Compile Include="Record Data\BlacklistDrivervb.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Companyparent.designer.vb">
+    <Compile Include="Record Data\Companyparent.designer.vb">
       <DependentUpon>Companyparent.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Companyparent.vb">
+    <Compile Include="Record Data\Companyparent.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\BatchMeter.designer.vb">
+    <Compile Include="Record Data\BatchMeter.designer.vb">
       <DependentUpon>BatchMeter.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\BatchMeter.vb">
+    <Compile Include="Record Data\BatchMeter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Bay.Designer.vb">
+    <Compile Include="Record Data\Bay.Designer.vb">
       <DependentUpon>Bay.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Bay.vb">
+    <Compile Include="Record Data\Bay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Company.Designer.vb">
+    <Compile Include="Record Data\Company.Designer.vb">
       <DependentUpon>Company.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Company.vb">
+    <Compile Include="Record Data\Company.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\F_Status.Designer.vb">
+    <Compile Include="Record Data\F_Status.Designer.vb">
       <DependentUpon>F_Status.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\F_Status.vb">
+    <Compile Include="Record Data\F_Status.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\ExportExcel.Designer.vb">
@@ -623,10 +630,10 @@
     <Compile Include="Operate\Bay_Settingvb.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Card.Designer.vb">
+    <Compile Include="Record Data\Card.Designer.vb">
       <DependentUpon>Card.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Card.vb">
+    <Compile Include="Record Data\Card.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operate\F_Tankstock.Designer.vb">
@@ -647,22 +654,22 @@
     <Compile Include="Operate\Tank_UnloadOrder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Customer.Designer.vb">
+    <Compile Include="Record Data\Customer.Designer.vb">
       <DependentUpon>Customer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Customer.vb">
+    <Compile Include="Record Data\Customer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Driver.Designer.vb">
+    <Compile Include="Record Data\Driver.Designer.vb">
       <DependentUpon>Driver.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Driver.vb">
+    <Compile Include="Record Data\Driver.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\EditSeal.Designer.vb">
+    <Compile Include="Record Data\EditSeal.Designer.vb">
       <DependentUpon>EditSeal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\EditSeal.vb">
+    <Compile Include="Record Data\EditSeal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Other\Events.Designer.vb">
@@ -732,10 +739,10 @@
     <Compile Include="Other\Seal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\SealSetting.Designer.vb">
+    <Compile Include="Record Data\SealSetting.Designer.vb">
       <DependentUpon>SealSetting.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\SealSetting.vb">
+    <Compile Include="Record Data\SealSetting.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Other\Setting.Designer.vb">
@@ -744,10 +751,10 @@
     <Compile Include="Other\Setting.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Login.Designer.vb">
+    <Compile Include="Record Data\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Login.vb">
+    <Compile Include="Record Data\Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MAIN.Designer.vb">
@@ -772,10 +779,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Database\Product.Designer.vb">
+    <Compile Include="Record Data\Product.Designer.vb">
       <DependentUpon>Product.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Product.vb">
+    <Compile Include="Record Data\Product.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report\ReportBOL.Designer.vb">
@@ -802,16 +809,16 @@
     <Compile Include="Report\ReportPrint.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Shipper.Designer.vb">
+    <Compile Include="Record Data\Shipper.Designer.vb">
       <DependentUpon>Shipper.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Shipper.vb">
+    <Compile Include="Record Data\Shipper.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Tank.designer.vb">
+    <Compile Include="Record Data\Tank.designer.vb">
       <DependentUpon>Tank.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Tank.vb">
+    <Compile Include="Record Data\Tank.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Other\Temp.Designer.vb">
@@ -820,22 +827,22 @@
     <Compile Include="Other\Temp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Truck.Designer.vb">
+    <Compile Include="Record Data\Truck.Designer.vb">
       <DependentUpon>Truck.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Truck.vb">
+    <Compile Include="Record Data\Truck.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\User.designer.vb">
+    <Compile Include="Record Data\User.designer.vb">
       <DependentUpon>User.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\User.vb">
+    <Compile Include="Record Data\User.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database\Usergroup.Designer.vb">
+    <Compile Include="Record Data\Usergroup.Designer.vb">
       <DependentUpon>Usergroup.vb</DependentUpon>
     </Compile>
-    <Compile Include="Database\Usergroup.vb">
+    <Compile Include="Record Data\Usergroup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operate\TimeStatus.Designer.vb">
@@ -916,7 +923,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TrucktimeResult.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\ChangPassword.resx">
+    <EmbeddedResource Include="Config\GroupRole.resx">
+      <DependentUpon>GroupRole.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record Data\ChangPassword.resx">
       <DependentUpon>ChangPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Config\Banner.resx">
@@ -980,22 +990,22 @@
     <EmbeddedResource Include="Config\Override.resx">
       <DependentUpon>Override.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\BlacklistDrivervb.resx">
+    <EmbeddedResource Include="Record Data\BlacklistDrivervb.resx">
       <DependentUpon>BlacklistDrivervb.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Companyparent.resx">
+    <EmbeddedResource Include="Record Data\Companyparent.resx">
       <DependentUpon>Companyparent.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\BatchMeter.resx">
+    <EmbeddedResource Include="Record Data\BatchMeter.resx">
       <DependentUpon>BatchMeter.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Bay.resx">
+    <EmbeddedResource Include="Record Data\Bay.resx">
       <DependentUpon>Bay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Company.resx">
+    <EmbeddedResource Include="Record Data\Company.resx">
       <DependentUpon>Company.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\F_Status.resx">
+    <EmbeddedResource Include="Record Data\F_Status.resx">
       <DependentUpon>F_Status.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ExportExcel.resx">
@@ -1010,7 +1020,7 @@
     <EmbeddedResource Include="Operate\Bay_Settingvb.resx">
       <DependentUpon>Bay_Settingvb.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Card.resx">
+    <EmbeddedResource Include="Record Data\Card.resx">
       <DependentUpon>Card.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operate\F_Tankstock.resx">
@@ -1022,13 +1032,13 @@
     <EmbeddedResource Include="Operate\Tank_UnloadOrder.resx">
       <DependentUpon>Tank_UnloadOrder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Customer.resx">
+    <EmbeddedResource Include="Record Data\Customer.resx">
       <DependentUpon>Customer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Driver.resx">
+    <EmbeddedResource Include="Record Data\Driver.resx">
       <DependentUpon>Driver.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\EditSeal.resx">
+    <EmbeddedResource Include="Record Data\EditSeal.resx">
       <DependentUpon>EditSeal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\Events.resx">
@@ -1040,7 +1050,7 @@
     <EmbeddedResource Include="Other\Load_byday.resx">
       <DependentUpon>Load_byday.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Login.resx">
+    <EmbeddedResource Include="Record Data\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MAIN.resx">
@@ -1056,7 +1066,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Product.resx">
+    <EmbeddedResource Include="Record Data\Product.resx">
       <DependentUpon>Product.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\QLoad.resx">
@@ -1089,28 +1099,28 @@
     <EmbeddedResource Include="Other\Seal.resx">
       <DependentUpon>Seal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\SealSetting.resx">
+    <EmbeddedResource Include="Record Data\SealSetting.resx">
       <DependentUpon>SealSetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\Setting.resx">
       <DependentUpon>Setting.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Shipper.resx">
+    <EmbeddedResource Include="Record Data\Shipper.resx">
       <DependentUpon>Shipper.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Tank.resx">
+    <EmbeddedResource Include="Record Data\Tank.resx">
       <DependentUpon>Tank.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other\Temp.resx">
       <DependentUpon>Temp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Truck.resx">
+    <EmbeddedResource Include="Record Data\Truck.resx">
       <DependentUpon>Truck.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\User.resx">
+    <EmbeddedResource Include="Record Data\User.resx">
       <DependentUpon>User.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Database\Usergroup.resx">
+    <EmbeddedResource Include="Record Data\Usergroup.resx">
       <DependentUpon>Usergroup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportTank.resx">
