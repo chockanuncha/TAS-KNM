@@ -59,8 +59,6 @@ Partial Class Truck
         Me.DataSet_View = New RadControlsWinFormsApp1.DataSet_View()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.TTRUCKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.Btfirst = New System.Windows.Forms.ToolStripButton()
         Me.Btprevious = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -85,7 +83,6 @@ Partial Class Truck
         Me.RadTextBox2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.TRuckType = New Telerik.WinControls.UI.RadDropDownList()
-        Me.TTRUCKTYPEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
         Me.VE_CAPA = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
@@ -99,7 +96,6 @@ Partial Class Truck
         Me.VE_ARMTOP = New System.Windows.Forms.RadioButton()
         Me.GCompartment = New System.Windows.Forms.GroupBox()
         Me.DataComp = New Telerik.WinControls.UI.RadGridView()
-        Me.TTRUCKCOMPARTMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
         Me.Condition_VALID_TO = New Telerik.WinControls.UI.RadDateTimePicker()
@@ -119,7 +115,6 @@ Partial Class Truck
         Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel24 = New Telerik.WinControls.UI.RadLabel()
         Me.Ve_tran1 = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.TCOMPANYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.U_REMARK = New System.Windows.Forms.RichTextBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
@@ -158,11 +153,16 @@ Partial Class Truck
         Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
         Me.RadPanel5 = New Telerik.WinControls.UI.RadPanel()
         Me.Windows8Theme1 = New Telerik.WinControls.Themes.Windows8Theme()
+        Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
+        Me.TTRUCKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.TTRUCKTYPEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TTRUCKCOMPARTMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TCOMPANYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.T_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTableAdapter()
         Me.T_TRUCKCOMPARTMENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKCOMPARTMENTTableAdapter()
         Me.T_COMPANYTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYTableAdapter()
         Me.T_TRUCKTYPETableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTYPETableAdapter()
-        Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
         CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -173,8 +173,6 @@ Partial Class Truck
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel3.SuspendLayout()
         CType(Me.G_SUM, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,7 +187,6 @@ Partial Class Truck
         CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TRuckType, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VE_CAPA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,7 +199,6 @@ Partial Class Truck
         Me.GCompartment.SuspendLayout()
         CType(Me.DataComp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataComp.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox2.SuspendLayout()
         CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -226,7 +222,6 @@ Partial Class Truck
         CType(Me.Ve_tran1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ve_tran1.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ve_tran1.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -258,6 +253,11 @@ Partial Class Truck
         CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel5.SuspendLayout()
+        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -328,13 +328,13 @@ Partial Class Truck
         GridViewTextBoxColumn2.FieldName = "TRUCK_COMPANY"
         GridViewTextBoxColumn2.HeaderText = "Company"
         GridViewTextBoxColumn2.Name = "column6"
-        GridViewTextBoxColumn2.Width = 120
+        GridViewTextBoxColumn2.Width = 119
         GridViewTextBoxColumn3.EnableExpressionEditor = False
         GridViewTextBoxColumn3.FieldName = "TRUCK_LOADTYPE"
         GridViewTextBoxColumn3.HeaderText = "Loading Type"
         GridViewTextBoxColumn3.MinWidth = 100
         GridViewTextBoxColumn3.Name = "column3"
-        GridViewTextBoxColumn3.Width = 109
+        GridViewTextBoxColumn3.Width = 108
         GridViewDecimalColumn2.DataType = GetType(Double)
         GridViewDecimalColumn2.DecimalPlaces = 0
         GridViewDecimalColumn2.EnableExpressionEditor = False
@@ -348,7 +348,7 @@ Partial Class Truck
         GridViewTextBoxColumn4.HeaderText = "Black List"
         GridViewTextBoxColumn4.MinWidth = 80
         GridViewTextBoxColumn4.Name = "column5"
-        GridViewTextBoxColumn4.Width = 87
+        GridViewTextBoxColumn4.Width = 86
         Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn1, GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewDecimalColumn2, GridViewTextBoxColumn4})
         Me.MasterGrid.MasterTemplate.DataSource = Me.VTRUCKBindingSource
         Me.MasterGrid.MasterTemplate.EnableFiltering = True
@@ -395,16 +395,6 @@ Partial Class Truck
         Me.BindingNavigator1.Size = New System.Drawing.Size(597, 39)
         Me.BindingNavigator1.TabIndex = 44
         Me.BindingNavigator1.Text = "BindingNavigator1"
-        '
-        'TTRUCKBindingSource
-        '
-        Me.TTRUCKBindingSource.DataMember = "T_TRUCK"
-        Me.TTRUCKBindingSource.DataSource = Me.DataSet_Table
-        '
-        'DataSet_Table
-        '
-        Me.DataSet_Table.DataSetName = "DataSet_Table"
-        Me.DataSet_Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Btfirst
         '
@@ -556,10 +546,10 @@ Partial Class Truck
         Me.RadPageViewPage1.AutoSize = True
         Me.RadPageViewPage1.Controls.Add(Me.DetailGroup)
         Me.RadPageViewPage1.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(62.0!, 30.0!)
-        Me.RadPageViewPage1.Location = New System.Drawing.Point(12, 40)
+        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(62.0!, 29.0!)
+        Me.RadPageViewPage1.Location = New System.Drawing.Point(12, 39)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(1165, 683)
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(1165, 684)
         Me.RadPageViewPage1.Text = "พาหนะ"
         '
         'DetailGroup
@@ -599,7 +589,7 @@ Partial Class Truck
         Me.DetailGroup.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.DetailGroup.Location = New System.Drawing.Point(0, 0)
         Me.DetailGroup.Name = "DetailGroup"
-        Me.DetailGroup.Size = New System.Drawing.Size(1165, 683)
+        Me.DetailGroup.Size = New System.Drawing.Size(1165, 684)
         Me.DetailGroup.TabIndex = 13
         Me.DetailGroup.TabStop = False
         '
@@ -691,11 +681,6 @@ Partial Class Truck
         Me.TRuckType.TabIndex = 17
         Me.TRuckType.ThemeName = "Windows8"
         Me.TRuckType.ValueMember = "ID"
-        '
-        'TTRUCKTYPEBindingSource
-        '
-        Me.TTRUCKTYPEBindingSource.DataMember = "T_TRUCKTYPE"
-        Me.TTRUCKTYPEBindingSource.DataSource = Me.DataSet_Table
         '
         'RadLabel8
         '
@@ -848,7 +833,7 @@ Partial Class Truck
         Me.GCompartment.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.GCompartment.Location = New System.Drawing.Point(844, 18)
         Me.GCompartment.Name = "GCompartment"
-        Me.GCompartment.Size = New System.Drawing.Size(318, 662)
+        Me.GCompartment.Size = New System.Drawing.Size(318, 663)
         Me.GCompartment.TabIndex = 127
         Me.GCompartment.TabStop = False
         Me.GCompartment.Text = "Compartment"
@@ -881,7 +866,7 @@ Partial Class Truck
         GridViewTextBoxColumn5.Name = "t_truckcompno"
         GridViewTextBoxColumn5.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
         GridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn5.Width = 88
+        GridViewTextBoxColumn5.Width = 87
         GridViewTextBoxColumn6.DataType = GetType(Decimal)
         GridViewTextBoxColumn6.EnableExpressionEditor = False
         GridViewTextBoxColumn6.FieldName = "t_truckcompcap"
@@ -889,7 +874,7 @@ Partial Class Truck
         GridViewTextBoxColumn6.MinWidth = 100
         GridViewTextBoxColumn6.Name = "t_truckcompcap"
         GridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn6.Width = 110
+        GridViewTextBoxColumn6.Width = 109
         GridViewTextBoxColumn7.DataType = GetType(Decimal)
         GridViewTextBoxColumn7.EnableExpressionEditor = False
         GridViewTextBoxColumn7.FieldName = "t_truckcompcap_l"
@@ -920,14 +905,9 @@ Partial Class Truck
         Me.DataComp.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.DataComp.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.DataComp.ShowGroupPanel = False
-        Me.DataComp.Size = New System.Drawing.Size(312, 638)
+        Me.DataComp.Size = New System.Drawing.Size(312, 639)
         Me.DataComp.TabIndex = 0
         Me.DataComp.ThemeName = "Office2010Blue"
-        '
-        'TTRUCKCOMPARTMENTBindingSource
-        '
-        Me.TTRUCKCOMPARTMENTBindingSource.DataMember = "T_TRUCKCOMPARTMENT"
-        Me.TTRUCKCOMPARTMENTBindingSource.DataSource = Me.DataSet_Table
         '
         'RadGroupBox2
         '
@@ -1243,11 +1223,6 @@ Partial Class Truck
         Me.Ve_tran1.ThemeName = "Windows8"
         Me.Ve_tran1.ValueMember = "COMPANY_ID"
         '
-        'TCOMPANYBindingSource
-        '
-        Me.TCOMPANYBindingSource.DataMember = "T_COMPANY"
-        Me.TCOMPANYBindingSource.DataSource = Me.DataSet_Table
-        '
         'RadLabel13
         '
         Me.RadLabel13.BackColor = System.Drawing.Color.Transparent
@@ -1560,10 +1535,10 @@ Partial Class Truck
         'Bsave
         '
         Me.Bsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Bsave.BackColor = System.Drawing.Color.Transparent
+        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bsave.ForeColor = System.Drawing.Color.Black
+        Me.Bsave.ForeColor = System.Drawing.Color.White
         Me.Bsave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.Bsave.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.Bsave.Location = New System.Drawing.Point(904, 6)
@@ -1582,9 +1557,9 @@ Partial Class Truck
         'BCancel
         '
         Me.BCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BCancel.BackColor = System.Drawing.Color.Transparent
+        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BCancel.ForeColor = System.Drawing.Color.Black
+        Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BCancel.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.BCancel.Location = New System.Drawing.Point(1046, 6)
@@ -1731,6 +1706,35 @@ Partial Class Truck
         Me.RadPanel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadPanel5.Visible = False
         '
+        'V_TRUCKTableAdapter
+        '
+        Me.V_TRUCKTableAdapter.ClearBeforeFill = True
+        '
+        'TTRUCKBindingSource
+        '
+        Me.TTRUCKBindingSource.DataMember = "T_TRUCK"
+        Me.TTRUCKBindingSource.DataSource = Me.DataSet_Table
+        '
+        'DataSet_Table
+        '
+        Me.DataSet_Table.DataSetName = "DataSet_Table"
+        Me.DataSet_Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TTRUCKTYPEBindingSource
+        '
+        Me.TTRUCKTYPEBindingSource.DataMember = "T_TRUCKTYPE"
+        Me.TTRUCKTYPEBindingSource.DataSource = Me.DataSet_Table
+        '
+        'TTRUCKCOMPARTMENTBindingSource
+        '
+        Me.TTRUCKCOMPARTMENTBindingSource.DataMember = "T_TRUCKCOMPARTMENT"
+        Me.TTRUCKCOMPARTMENTBindingSource.DataSource = Me.DataSet_Table
+        '
+        'TCOMPANYBindingSource
+        '
+        Me.TCOMPANYBindingSource.DataMember = "T_COMPANY"
+        Me.TCOMPANYBindingSource.DataSource = Me.DataSet_Table
+        '
         'T_TRUCKTableAdapter
         '
         Me.T_TRUCKTableAdapter.ClearBeforeFill = True
@@ -1746,10 +1750,6 @@ Partial Class Truck
         'T_TRUCKTYPETableAdapter
         '
         Me.T_TRUCKTYPETableAdapter.ClearBeforeFill = True
-        '
-        'V_TRUCKTableAdapter
-        '
-        Me.V_TRUCKTableAdapter.ClearBeforeFill = True
         '
         'Truck
         '
@@ -1781,8 +1781,6 @@ Partial Class Truck
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel3.ResumeLayout(False)
         Me.RadPanel3.PerformLayout()
@@ -1801,7 +1799,6 @@ Partial Class Truck
         CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TRuckType, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VE_CAPA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1815,7 +1812,6 @@ Partial Class Truck
         Me.GCompartment.ResumeLayout(False)
         CType(Me.DataComp.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataComp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox2.ResumeLayout(False)
         Me.RadGroupBox2.PerformLayout()
@@ -1841,7 +1837,6 @@ Partial Class Truck
         CType(Me.Ve_tran1.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ve_tran1.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ve_tran1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1875,6 +1870,11 @@ Partial Class Truck
         CType(Me.RadPanel5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel5.ResumeLayout(False)
         Me.RadPanel5.PerformLayout()
+        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

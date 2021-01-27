@@ -132,11 +132,11 @@ Public Class Card
                 End If
                 Dim n_year As Integer = 0
                 n_year = 543
-                q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
-                q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + ","
+                q &= "CONVERT(DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
+                q &= "CONVERT(DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + ","
 
-                'q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", Card_ISSUEDATE.Value)) + "','DD/MM/YYYY')" + ","
-                'q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", Card_Expriredate.Value)) + "','DD/MM/YYYY')" + ","
+                'q &= "CONVERT (DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", Card_ISSUEDATE.Value)) + "','DD/MM/YYYY')" + ","
+                'q &= "CONVERT (DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", Card_Expriredate.Value)) + "','DD/MM/YYYY')" + ","
 
                 q &= "'" + (User_logon.Text) + "'" + ","
                 q &= "'" + (REMARK.Text) + "'" + ","
@@ -155,7 +155,7 @@ Public Class Card
 
         If ED = 1 Then
             Try
-                TDriverBindingSource.CancelEdit()
+                TDRIVERBindingSource.CancelEdit()
                 q = ""
                 q = "select card_serial from vCardload where card_serial=Substr(('000000'||'" & CardSerial.Text & "'),-10,'" & CardSerial.Text & "')"
                 q = "select card_serial from T_CARD where card_serial='" & CardSerial.Text & "'"
@@ -173,16 +173,16 @@ Public Class Card
                 q &= "'" + CardType.Text + "'" + ","
 
                 If CardType.Text = "TRUCK" Then
-                    q &= "CARD_CAR = " + (TTruckBindingSource.Item(TTruckBindingSource.Position)("ID").ToString()) + ","
-                    q &= "TRUCK_ID = " + (TTruckBindingSource.Item(TTruckBindingSource.Position)("ID").ToString()) + ","
+                    q &= "CARD_CAR = " + (TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("ID").ToString()) + ","
+                    q &= "TRUCK_ID = " + (TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("ID").ToString()) + ","
                     q &= "CARD_DRIVER = '' ,"
                     q &= "DRIVER_ID = '' ,"
                 End If
                 If CardType.Text = "DRIVER" Then
                     q &= "CARD_CAR ='' ,"
                     q &= "TRUCK_ID ='' ,"
-                    q &= "CARD_DRIVER = " + (TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_NUMBER").ToString()) + ","
-                    q &= "DRIVER_ID = " + (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) + ","
+                    q &= "CARD_DRIVER = " + (TDRIVERBindingSource.Item(TDRIVERBindingSource.Position)("DRIVER_NUMBER").ToString()) + ","
+                    q &= "DRIVER_ID = " + (TDRIVERBindingSource.Item(TDRIVERBindingSource.Position)("ID").ToString()) + ","
                 End If
                 q &= "CARD_TYPE_READ  = "
                 q &= "'" + CARDREAD.Text + "'" + ","
@@ -191,7 +191,7 @@ Public Class Card
                 q &= "'" + CardSerial.Text + "'" + ","
 
                 q &= "CARD_STATUS  = "
-                If TCardBindingSource.Item(TCardBindingSource.Position)("CARD_STATUS") = 1 Then
+                If TCARDBindingSource.Item(TCARDBindingSource.Position)("CARD_STATUS") = 1 Then
                     q &= " 1 ,"
                 Else
                     q &= " 0 ,"
@@ -200,9 +200,9 @@ Public Class Card
                 Dim n_year As Integer = 0
                 n_year = 543
                 q &= "CARD_DATEBEGIN = "
-                q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
+                q &= "CONVERT (DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
                 q &= "CARD_DATEEND  = "
-                q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + ","
+                q &= "CONVERT (DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + ","
                 q &= "CARD_OPER = "
                 q &= "'" + (User_logon.Text) + "'" + ","
                 q &= "Remark = "
@@ -226,9 +226,9 @@ Public Class Card
         q = ""
         q = " Update T_TRUCK "
         q &= " Set Card_valid_Form = "
-        q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year1, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
+        q &= "CONVERT (DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year1, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
         q &= "Card_valid_TO = "
-         q &= "TO_DATE('" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year1, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + " "
+        q &= "CONVERT (DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year1, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + " "
         q &= "Where ID='" & TTruckBindingSource.Item(TTruckBindingSource.Position)("ID").ToString() & "'"
 
         cls.Update(q)

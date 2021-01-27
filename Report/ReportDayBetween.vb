@@ -38,8 +38,8 @@ Public Class ReportDayBetween
                     sql &= "from (select * from v_loadingnote where lc_status in(3,4)) t1  left join (select * from V_report_meter) t2  "
                     sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
                     sql &= "where t1.load_date between "
-                    sql &= "To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  and lc_status in(3,4)  "
+                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  and lc_status in(3,4)  "
                     sql &= "group by t1.Product_code,lc_tank order by t1.Product_code,lc_tank"
 
                     Dim MyDataSet As New DataSet
@@ -69,8 +69,8 @@ Public Class ReportDayBetween
                     sql &= "max(Avg_temp_m1) as Avg_temp_m1,max(load_dofull) as load_dofull,max(addnotedate) as addnotedate,min(Q_time) as Q_time,min(Checkin_time) as Checkin_time,max(VCF_M1) as VCF_M1,max(Density30C_M1) as Density30C_M1,max(DO_TYPE) as DO_TYPE,max(Product_name) as Product_name,max(LC_Seal) as LC_Seal"
                     sql &= ",max(Customer_name) as Customer_Name,sum(Gross_M1) as Gross_M1 "
                     sql &= " from v_bol_m1m2_new where addnotedate between "
-                    sql &= "To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
                     sql &= "and lc_status in(3,4) "
                     sql &= "group by Reference,Lc_Compartment order by reference,Lc_Compartment"
 
@@ -94,8 +94,8 @@ Public Class ReportDayBetween
                     sql = ""
                     sql = "select L_date,load_customer,Product_name,max(company_name) as company_name, "
                     sql &= "Sum(Presets) as PRESETs,Sum(Grosss) as Grosss,Sum(net) as Net,Sum(loss) as Loss from V_TRUCK_LOADING_REPORT "
-                    sql &= "where L_Date between To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                    sql &= "where L_Date between CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
                     sql &= "Group by L_date,load_customer,product_name Order by L_date,load_customer,product_name"
 
                     Dim MyDataSet As New DataSet
@@ -120,14 +120,14 @@ Public Class ReportDayBetween
 
                     sql = "select t1.batch_name,max(load_date) as L_Date,max(Product_code) as Product_code,"
                     sql &= "max(t1.addnotedate) as ST_DATE,"
-                    sql &= "To_date(max(t1.addnotedate), 'dd/mm/yyyy') as ST_DATE1,"
+                    sql &= "CONVERT (DATETIME,max(t1.addnotedate), 'dd/mm/yyyy') as ST_DATE1,"
                     sql &= "Sum(t1.lc_preset) as Presets,Sum(t2.Gross) as Gross,Sum(t2.net86f) as net,Sum(t1.lc_preset-t2.gross) as Loss "
                     sql &= ",min(Sy_Start_total_m1) as Sy_Start_total_m1,max(Sy_Stop_total_m1) as Sy_Stop_total_m1 "
                     sql &= "from (select * from v_loadingnote where  advisenote_type<>'TOPUP' and lc_status in(3,4)) t1  left join (select * from V_report_meter) t2 "
                     sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
                     sql &= "where T1.addnotedate between "
-                    sql &= "To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
                     sql &= "group by t1.batch_name order by t1.batch_name"
 
                     Dim MyDataSet As New DataSet
@@ -174,8 +174,8 @@ Public Class ReportDayBetween
                     sql = ""
                     sql = "Select * from v_unloadreport "
 
-                    sql &= "where load_Date between To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                    sql &= "where load_Date between CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
                     sql &= " order by load_id"
 
                     Dim MyDataSet As New DataSet
@@ -248,8 +248,8 @@ Public Class ReportDayBetween
 
                     sql = "Select * from V_EVENT "
                     sql &= "where EV_DATE between "
-                    sql &= "To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
                     sql &= " order by EV_ID"
 
                     Dim MyDataSet As New DataSet

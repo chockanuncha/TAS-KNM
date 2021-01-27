@@ -13,15 +13,29 @@ Imports Telerik.WinControls.UI
 Imports Telerik.WinControls
 Public Class Tank_Order
     Private cls As New Class_SQLSERVERDB
-
+    Private cls_role As New Class_Permission
     Dim MyErrorProvider As New ErrorProviderExtended
     Dim MyDataSet As New DataSet
     Dim ED As Integer = 0
     Dim Add As Integer = 0
     Dim Del As Integer = 0
     Private exportVisualSettings As Boolean
-    Private Sub bg_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs)
+    Public Function Chk_View()
+        '------------------------------------------- Start Check Permission
+        RadMessageBox.SetThemeName("Office2010Blue")
 
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 4)
+
+        If cls_role.ChkView = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Return False
+        End If
+        '------------------------------------------- End Check Permission
+        Return True
+    End Function
+
+    Private Sub bg_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs)
         RadMessageBox.SetThemeName(Me.TankGrid.ThemeName)
         RadMessageBox.Show("The data in the grid was exported successfully.", "Export to Excel")
     End Sub

@@ -101,7 +101,7 @@ Public Class Truck
 
         Try
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)
@@ -130,7 +130,7 @@ Public Class Truck
 
 
                     q = ""
-                    q = "select max(ID) as TRUCK_ID   from T_TRUCK order by id desc"
+                    q = "select max(ID) as TRUCK_ID   from T_TRUCK " 'order by id desc"
 
                     dt = cls.Query(q)
 
@@ -202,12 +202,27 @@ Public Class Truck
 
                     Dim n_year As Integer = 0
                     n_year = 543
-                    q &= "TRUCK_MEASURELAST= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", VE_ISSUEDATE.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "TRUCK_MEASURENEXT= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", VE_EXPIREDATE.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "INSURANCE_VALID_FORM= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", INSURANCE_VALID_FORM.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "INSURANCE_VALID_TO= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", INSURANCE_VALID_TO.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "Condition_VALID_FORM= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", Condition_VALID_FORM.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                    q &= "Condition_VALID_TO= TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", Condition_VALID_TO.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "TRUCK_MEASURELAST= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", VE_ISSUEDATE.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                    ''q &= "TRUCK_MEASURELAST= CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", VE_ISSUEDATE.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+
+                    'q &= "TRUCK_MEASURENEXT= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", VE_EXPIREDATE.Value)) & "','MM/dd/yyyy HH24:MI:SS')" & ","
+                    'q &= "INSURANCE_VALID_FORM= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", INSURANCE_VALID_FORM.Value)) & "','MM/dd/yyyy HH24:MI:SS')" & ","
+                    'q &= "INSURANCE_VALID_TO= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", INSURANCE_VALID_TO.Value)) & "','MM/dd/yyyy HH24:MI:SS')" & ","
+                    'q &= "Condition_VALID_FORM= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", Condition_VALID_FORM.Value)) & "','MM/dd/yyyy HH24:MI:SS')" & ","
+                    'q &= "Condition_VALID_TO= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", Condition_VALID_TO.Value)) & "','MM/dd/yyyy HH24:MI:SS')" & ","
+
+
+                    q &= "TRUCK_MEASURELAST= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", VE_ISSUEDATE.Value)) & "')," 'DD/MM/YYYY HH24:MI:SS')" & ","
+                    'q &= "TRUCK_MEASURELAST= CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", VE_ISSUEDATE.Value)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+
+                    q &= "TRUCK_MEASURENEXT= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", VE_EXPIREDATE.Value)) & "')," 'MM/dd/yyyy HH24:MI:SS')" & ","
+                    q &= "INSURANCE_VALID_FORM= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", INSURANCE_VALID_FORM.Value)) & "')," 'MM/dd/yyyy HH24:MI:SS')" & ","
+                    q &= "INSURANCE_VALID_TO= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", INSURANCE_VALID_TO.Value)) & "')," 'MM/dd/yyyy HH24:MI:SS')" & ","
+                    q &= "Condition_VALID_FORM= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", Condition_VALID_FORM.Value)) & "')," 'MM/dd/yyyy HH24:MI:SS')" & ","
+                    q &= "Condition_VALID_TO= CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", Condition_VALID_TO.Value)) & "')," 'MM/dd/yyyy HH24:MI:SS')" & ","
+
+
+
                     q &= "INSURANCE='" & INSURANCE.Text & "', "
                     q &= "INSURANCE_TYPE='" & INSURANCE_Type.Text & "', "
                     q &= "TRUCK_COMP_NUM='" & Comp.ToString & "', "
@@ -220,7 +235,7 @@ Public Class Truck
                     Else
                         q &= "TRUCK_LOADTYPE ='BOTH', "
                     End If
-                    q &= "Update_date= Sysdate ,"
+                    q &= "Update_date= Getdate() ,"
                     q &= "Update_by  ='" & T_UPDATEBY.Text & "', "
                     ' q &= "Transport_type = '" & TransportTypeBindingSource.Item(TransportTypeBindingSource.Position)("ID") & "',"
                     q &= "Remark  ='" & U_REMARK.Text & "' "
@@ -468,7 +483,7 @@ Public Class Truck
             Me.MasterGrid.TableElement.TableHeaderHeight = 30
 
             Dim sql As String
-            sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
             cls.Update(sql)
@@ -600,7 +615,7 @@ Public Class Truck
         If cls_role.ChkAdd = False Then
             Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to add data in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
             Me.Text = ds.ToString()
-            Exit Sub
+            'Exit Sub
         End If
         '------------------------------------------- Check Add Permission
 
@@ -691,7 +706,7 @@ Public Class Truck
                 Try
 
                     Dim sql As String
-                    sql = "UPDATE T_USERLOGIN SET Update_date=Sysdate,USERNAME='" & MAIN.U_NAME & "'" _
+                    sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
                       & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
                     cls.Update(sql)

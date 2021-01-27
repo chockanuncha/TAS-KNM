@@ -687,7 +687,7 @@ Partial Class Manual
         '
         'Bsave
         '
-        Me.Bsave.BackColor = System.Drawing.Color.Transparent
+        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
@@ -708,7 +708,7 @@ Partial Class Manual
         '
         'BCancel
         '
-        Me.BCancel.BackColor = System.Drawing.Color.Transparent
+        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BCancel.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter

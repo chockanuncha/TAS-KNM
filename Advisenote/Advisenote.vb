@@ -1,4 +1,5 @@
-﻿Imports ExtendedErrorProvider
+﻿Imports System.IO
+Imports ExtendedErrorProvider
 Imports CrystalDecisions.CrystalReports.Engine
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
@@ -12,6 +13,7 @@ Imports Telerik.WinControls.Data
 Public Class Advisenote
     Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
+    Private cls_data As New Class_SelectData
 
     Private Page_Group As String = "Operate Data"
 
@@ -29,32 +31,27 @@ Public Class Advisenote
     Public AuthorRemark, AuthorRemarkDriver As String
     Dim Memory As MemoryManagement.Manage
 
+    Dim EditDoc, AddDoc As Boolean
 
+    Public Function Chk_View()
+        '------------------------------------------- Start Check Permission
+        RadMessageBox.SetThemeName("Office2010Blue")
+
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 1)
+
+        If cls_role.ChkView = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Return False
+        End If
+        '------------------------------------------- End Check Permission
+        Return True
+    End Function
     Private Sub Advisenote_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_TRUCKTYPE' table. You can move, or remove it, as needed.
-        'Me.T_TRUCKTYPETableAdapter1.Fill(Me.DataSet_Table.T_TRUCKTYPE)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_CUSTOMER' table. You can move, or remove it, as needed.
-        'Me.T_CUSTOMERTableAdapter1.Fill(Me.DataSet_Table.T_CUSTOMER)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_BATCHMETER' table. You can move, or remove it, as needed.
-        'Me.T_BATCHMETERTableAdapter1.Fill(Me.DataSet_Table.T_BATCHMETER)
-        ''TODO: This line of code loads data into the 'DataSet_View.V_LOADING_STATUS' table. You can move, or remove it, as needed.
-        'Me.V_LOADING_STATUSTableAdapter1.Fill(Me.DataSet_View.V_LOADING_STATUS)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_COMPANY' table. You can move, or remove it, as needed.
-        'Me.T_COMPANYTableAdapter1.Fill(Me.DataSet_Table.T_COMPANY)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_DRIVER' table. You can move, or remove it, as needed.
-        'Me.T_DRIVERTableAdapter1.Fill(Me.DataSet_Table.T_DRIVER)
-        ''TODO: This line of code loads data into the 'DataSet_View.V_TRUCK' table. You can move, or remove it, as needed.
-        'Me.V_TRUCKTableAdapter1.Fill(Me.DataSet_View.V_TRUCK)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_BAY' table. You can move, or remove it, as needed.
-        'Me.T_BAYTableAdapter1.Fill(Me.DataSet_Table.T_BAY)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_STATUS' table. You can move, or remove it, as needed.
-        'Me.T_STATUSTableAdapter1.Fill(Me.DataSet_Table.T_STATUS)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_SHIPPER' table. You can move, or remove it, as needed.
-        'Me.T_SHIPPERTableAdapter1.Fill(Me.DataSet_Table.T_SHIPPER)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_TRUCK' table. You can move, or remove it, as needed.
-        'Me.T_TRUCKTableAdapter1.Fill(Me.DataSet_Table.T_TRUCK)
-        ''TODO: This line of code loads data into the 'DataSet_Table.T_PRODUCT' table. You can move, or remove it, as needed.
-        'Me.T_PRODUCTTableAdapter.Fill(Me.DataSet_Table.T_PRODUCT)
+        EditDoc = False
+        AddDoc = False
+
+        My.Application.ChangeCulture("en-GB")
 
         'My.Application.ChangeCulture("th-TH")
 
@@ -76,9 +73,9 @@ Public Class Advisenote
         EdCustomer.EditorControl.FilterDescriptors.Add(descriptor)
         EdCustomer.DropDownStyle = RadDropDownStyle.DropDown
 
-        Dim descriptor3 As New FilterDescriptor(Cbn3.DisplayMember, FilterOperator.StartsWith, String.Empty)
-        Cbn3.EditorControl.FilterDescriptors.Add(descriptor3)
-        Cbn3.DropDownStyle = RadDropDownStyle.DropDown
+        'Dim descriptor3 As New FilterDescriptor(Cbn3.DisplayMember, FilterOperator.StartsWith, String.Empty)
+        'Cbn3.EditorControl.FilterDescriptors.Add(descriptor3)
+        'Cbn3.DropDownStyle = RadDropDownStyle.DropDown
         Dim descriptor4 As New FilterDescriptor(Driver.DisplayMember, FilterOperator.StartsWith, String.Empty)
         Driver.EditorControl.FilterDescriptors.Add(descriptor4)
         Driver.DropDownStyle = RadDropDownStyle.DropDown
@@ -105,7 +102,7 @@ Public Class Advisenote
         Me.T_PRODUCTTableAdapter.Fill(Me.DataSet_Table.T_PRODUCT)
         'Me.T_SHIPPERTableAdapter.Fill(Me.IRPCDataset.T_SHIPPER)
         Me.T_COMPANYTableAdapter1.Fill(Me.DataSet_Table.T_COMPANY)
-        Me.T_CUSTOMERTableAdapter1.Fill(Me.DataSet_Table.T_CUSTOMER)
+        'Me.T_CUSTOMERTableAdapter1.Fill(Me.DataSet_Table.T_CUSTOMER)
         Me.T_DRIVERTableAdapter1.Fill(Me.DataSet_Table.T_DRIVER)
         SelectVLoadingNote()
 
@@ -136,6 +133,8 @@ Public Class Advisenote
         Catch ex As Exception
         End Try
 
+
+
         Timer1.Enabled = True
 
         baycheck = 0
@@ -162,6 +161,7 @@ Public Class Advisenote
         CompClear()
         'Me.VCHECKINLOADTableAdapter.Fill(Me.DataSet_View.VCHECKINLOAD)
         Me.T_BATCHMETERTableAdapter1.Fill(Me.DataSet_Table.T_BATCHMETER)
+        Me.T_COMPANYTableAdapter1.Fill(Me.DataSet_Table.T_COMPANY)
 
         CanExit = 0
     End Sub
@@ -188,8 +188,8 @@ Public Class Advisenote
             Dim n_year As Integer = 0
             n_year = 543
 
-            q &= "To_date('" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
 
             q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and advisenote_type='Advisenote') T1  "
             q &= "ON T_Customer.ID = T1.LOAD_CUSTOMER  "
@@ -230,6 +230,10 @@ Public Class Advisenote
 
 
     Private Sub Cbn2_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn2.Leave
+        If Cbn2.Text = "" Then
+            Exit Sub
+        End If
+
         Dim tmp As DataTable
         Dim Vdate1, Vdate2, Vdate3 As Integer
 
@@ -237,18 +241,25 @@ Public Class Advisenote
 
         Dim sql As String
         sql = ""
-        sql = "SELECT * FROM T_TRUCK WHERE TRUCK_NUMBER='" & Cbn2.Text.ToUpper & "'"
+        sql = "SELECT * FROM T_TRUCK WHERE TRUCK_NUMBER='" & Cbn2.Text & "'"
         Dim dt5 As DataTable = cls.Query(sql)
 
+        Try
+            'TTruckTypeBindingSource.Position = TTruckTypeBindingSource.Find("ID", dt5(0)("TRUCK_TYPE").ToString)
+            TCompanyBindingSource.Position = TCompanyBindingSource.Find("COMPANY_ID", CInt(dt5(0)("TRUCK_COMPANY")))
+
+            Trucktype.SelectedValue = dt5(0)("TRUCK_TYPE")
+
+        Catch ex As Exception
+            Exit Sub
+        End Try
+
         If EditType <> 1 And CanExit = 0 Then
-            Try
-                TTruckTypeBindingSource.Position = TTruckTypeBindingSource.Find("ID", dt5(0)("TRUCK_TYPE").ToString)
-                TCompanyBindingSource.Position = TCompanyBindingSource.Find("COMPANY_ID", dt5(0)("TRUCK_COMPANY").ToString)
-            Catch ex As Exception
-            End Try
+
+
 
             '''''''' Check Truck in Loading
-            Sql = ""
+            sql = ""
             sql = "select load_vehicle From t_loadingnote where load_vehicle= '" & dt5(0)("ID").ToString & "' and load_status < 3 and Advisenote_type='Advisenote' "
 
             Dim dt2 As DataTable = cls.Query(sql)
@@ -459,7 +470,7 @@ Public Class Advisenote
             CompClear()
             TRUCK_COMP_NUM = dt5(0)("TRUCK_COMP_NUM").ToString
             If sealEdit = 0 Then
-                Seal_Total.Text = TRUCK_COMP_NUM.ToString
+                Seal_Total.Text = "0" 'TRUCK_COMP_NUM.ToString
                 Seal_Total_Leave(sender, e)
             End If
 
@@ -471,37 +482,41 @@ Public Class Advisenote
             'If Cbn2.Text <> "" Then
             q = ""
             q = "select TRUCK_CAPASITY,T_TRUCKCOMPCAP,T_TRUCKCOMPCAP_L from (Select ID,TRUCK_CAPASITY,TRUCK_NUMBER From T_Truck where TRUCK_NUMBER= '" & dt5(0)("TRUCK_NUMBER").ToString & "') T1 "
-            q &= "Left Join (Select T_TRUCKID,T_TRUCKCOMPCAP,T_TRUCKCOMPCAP_L From T_Truckcompartment order by t_truckcompno) T2 On T1.ID = T2.T_TRUCKID "
+            q &= "Left Join (Select ID, T_TRUCKID,T_TRUCKCOMPCAP,T_TRUCKCOMPCAP_L From T_Truckcompartment order by t_truckcompno) T2 On T1.ID = T2.T_TRUCKID ORDER BY T1.ID ASC, T2.ID ASC  "
 
-                Dim dt As DataTable = cls.Query(q)
+            Dim dt As DataTable = cls.Query(q)
 
-                TRUCK_CAPASITY = dt.Rows(0).Item("TRUCK_CAPASITY").ToString()
-                Cbn5.Text = TRUCK_CAPASITY
+            TRUCK_CAPASITY = dt.Rows(0).Item("TRUCK_CAPASITY").ToString()
+            Cbn5.Text = TRUCK_CAPASITY
 
-                RadButton1_Click(sender, e)
+            RadButton1_Click(sender, e)
 
-                For i = 1 To TRUCK_COMP_NUM 'dt.Rows.Count - 1
-                    'Try
-                    DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i).ToString), RadTextBox).Text = "0"
-                    DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i).ToString), RadTextBox).Text = dt.Rows(i - 1).Item("T_TRUCKCOMPCAP").ToString()
-                    DirectCast(Me.GroupBox1.Controls.Item("Capacity_l" + (i).ToString), RadTextBox).Text = dt.Rows(i - 1).Item("T_TRUCKCOMPCAP_L").ToString()
-                    'Catch ex As Exception
-                    '    Exit Sub
-                    'End Try
-                Next i
+            For i = 1 To TRUCK_COMP_NUM 'dt.Rows.Count - 1
+                'Try
+                DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i).ToString), RadTextBox).Text = "0"
+                DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i).ToString), RadTextBox).Text = dt.Rows(i - 1).Item("T_TRUCKCOMPCAP").ToString()
+                DirectCast(Me.GroupBox1.Controls.Item("Capacity_l" + (i).ToString), RadTextBox).Text = dt.Rows(i - 1).Item("T_TRUCKCOMPCAP_L").ToString()
+                'Catch ex As Exception
+                '    Exit Sub
+                'End Try
+            Next i
             'End If
             'conn.Close()
 
             Dim Ttype As String
 
-            q = "Select TRUCK_TYPE from T_truck where TRUCK_NUMBER= '" & dt5(0)("TRUCK_NUMBER") & "'"
+            q = "Select TRUCK_TYPE, TRUCK_COMPANY, TRUCK_TRA from T_truck where TRUCK_NUMBER= '" & dt5(0)("TRUCK_NUMBER") & "'"
 
             tmp = cls.Query(q)
 
             Ttype = tmp(0)("TRUCK_TYPE")
 
+            Cbn3.SelectedValue = tmp(0)("TRUCK_COMPANY")
+            TCompanyBindingSource.Position = TCompanyBindingSource.Find("COMPANY_ID", tmp(0)("TRUCK_COMPANY"))
+
             If Ttype = "1003" Then
-                TruckH.Enabled = True
+                TruckH.Enabled = False
+                TruckH.Text = tmp(0)("TRUCK_TRA")
                 'TruckH.Focus()
                 'Exit Sub
             End If
@@ -512,6 +527,8 @@ Public Class Advisenote
 
     Sub ClearData()
         Try
+            PictureBox1.Image = Nothing
+
             AuthorRemark = ""
             AuthorRemarkDriver = ""
             authorize_Remark.Text = ""
@@ -529,7 +546,8 @@ Public Class Advisenote
             TruckH.SelectedIndex = -1
 
             Cbn3.Text = ""
-            Cbn3.SelectedIndex = -1
+            'Cbn3.SelectedIndex = -1
+
             Driver.Text = ""
             Driver.SelectedIndex = -1
             Cbn5.Text = ""
@@ -542,6 +560,7 @@ Public Class Advisenote
 
             Trucktype.Text = ""
             Trucktype.SelectedIndex = -1
+
             Status.Text = ""
             Status.SelectedIndex = 0
             Seal_Total.Text = ""
@@ -671,7 +690,16 @@ Public Class Advisenote
     End Sub
 
     Private Sub Adddata_CLICK(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Adddata.Click
-        Me.T_CUSTOMERTableAdapter1.Fill(Me.DataSet_Table.T_CUSTOMER)
+
+        '----------------------- Check Add Permission
+        If cls_role.ChkAdd = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to create documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Exit Sub
+        End If
+        '----------------------- Check Add Permission
+
+
         Dim sql As String
         Dim tmp As DataTable
         Dim dt_tmp As DataTable
@@ -679,6 +707,8 @@ Public Class Advisenote
         EditType = 0
         CanExit = 0
         ClearData()
+        Me.T_CUSTOMERTableAdapter1.Fill(Me.DataSet_Table.T_CUSTOMER)
+
         QLOAD = 1
         auto = 0
         DO_Type.SelectedIndex = 0
@@ -734,6 +764,8 @@ Public Class Advisenote
             Bsave.Visible = True
             Update.Visible = False
 
+            EditDoc = False
+            AddDoc = True
         Catch ex As Exception
             MsgBox(ex.Message())
             Timer1.Enabled = True
@@ -890,41 +922,33 @@ Public Class Advisenote
     End Sub
 
     Private Sub Printdata_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Printdata.Click
+
+
+        '----------------------- Check Print Permission
+        If cls_role.ChkPrint = False Then
+            Dim DiR As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to print documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = DiR.ToString()
+            Exit Sub
+        End If
+        '----------------------- Check Print Permission
+
         'Try
         Dim ref As String
-        ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+        Try
+            ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+        Catch ex As Exception
+            Exit Sub
+        End Try
+
         Dim Myreport As New ReportDocument
         Myreport = New ReportDocument
         Dim q As String
-        q = ""
-        q = "SELECT    T1.LOAD_CAPACITY as LOAD_CAPACITY"
-        q &= " , T1.LOAD_PRESET as LOAD_PRESET,T2.lc_preset,  T1.LOAD_CARD as LOAD_CARD"
-        q &= " , T2.LC_COMPARTMENT as LC_COMPARTMENT"
-        q &= " , T2.LC_BAY as LC_BAY,SUBSTR(CAST(T1.Reference AS VARCHAR2(30)),1,30) AS Reference,  T1.LOAD_DATE as LOAD_DATE,T1.Load_qdashboard as LOAD_Q"
-        q &= " , T1.LOAD_DID as LOAD_DID , T_Status.STATUS_NAME as STATUS_NAME , T1.LOADDO as LOAD_DOfull ,  NVL2(t1.Container,(t1.Container|| '/' ||T_TRUCK.TRUCK_NUMBER),T_TRUCK.TRUCK_NUMBER ) as Load_Vehicle, t_customer.Customer_name as LOAD_CUSTOMER "
-        q &= " , T_DRIVER.Driver_NAME || '  ' ||  T_Driver.Driver_Lastname AS LOAD_DRIVER"
-        q &= " , T1.load_id as Load_id, V_DO.DO_STATUS  as DO_STATUS"
-        q &= " , T_customer.Customer_Name,t_product.Product_code  as PRODUCT_CODE, T_Batchmeter.BATCH_NAME as BATCH_NAME"
-        q &= " , T1.Container as Container, T1.LOAD_TRUCKCOMPANY as LOAD_TRUCKCOMPANY"
-        q &= " , LC_SEAL as LC_SEAL, T1.LOAD_SEAL as LOAD_SEAL, T1.LOAD_SEALCOUNT  as LOAD_SEALCOUNT"
-        q &= " , T1.ADDNOTEDATE  as ADDNOTEDATE, T2.LC_STARTTIME  as LC_STARTTIME, T2.LC_ENDTIME  as LC_ENDTIME "
-        q &= "FROM T_Customer  RIGHT OUTER JOIN (Select * from T_LOADINGNOTE  Where Reference  ='" & ref & "' )  T1 "
-        q &= "ON T_Customer.ID = T1.LOAD_CUSTOMER  "
-        q &= "LEFT OUTER JOIN T_STATUS  ON T1.LOAD_STATUS = T_STATUS.STATUS_ID   "
-        q &= "LEFT OUTER JOIN V_DO ON T1.LOAD_ID = V_DO.LOAD_ID    "
-        q &= "LEFT OUTER JOIN T_TRUCK ON T1.LOAD_VEHICLE = T_TRUCK.ID   "
-        q &= "LEFT OUTER JOIN T_DRIVER ON T1.LOAD_DRIVER = T_DRIVER.ID   "
-        q &= "LEFT OUTER JOIN T_CARD  ON T1.LOAD_CARD = T_CARD.CARD_NUMBER   "
-        q &= "Left OUTER JOIN T_BATCHMETER   "
-        q &= "RIGHT OUTER JOIN (Select * From T_LOADINGNOTECOMPARTMENT where lc_status<>'99') T2 "
-        q &= "ON T_BATCHMETER.BATCH_NUMBER = T2.LC_METER   "
-        q &= "LEFT OUTER JOIN T_Product ON T2.LC_PRO = T_Product.ID ON T1.LOAD_ID = T2.LC_LOAD "
-        q &= "Order by T2.lc_compartment"
+        q = cls_data.SelectPrintLoadingNote(ref)
 
         Dim ds As New DataSet
         ds = cls.Query_DS(q, "V_Loadingnote")
 
-        Myreport.Load("advisenoteReport.rpt")
+        Myreport.Load("Report_File/AdvisenoteReport.rpt")
         Myreport.SetDataSource(ds)
         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
         ReportPrint.ShowDialog()
@@ -1065,6 +1089,7 @@ Public Class Advisenote
             Exit Sub
         End If
 
+        Container.Text = TruckH.Text
 
         Dim q, sc, sql As String
         Dim i, SL, ST, r, j As Integer
@@ -1156,14 +1181,14 @@ Public Class Advisenote
                 End Try
             Next
 
-            Try
-                sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
-                  & ",USERGROUP='" & MAIN.U_GROUP & "'"
+            'Try
+            '    sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
+            '      & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
-                cls.Update(sql)
-            Catch ex As Exception
+            '    cls.Update(sql)
+            'Catch ex As Exception
 
-            End Try
+            'End Try
 
             q = ""
             q = "Insert into T_Loadingnote "
@@ -1200,19 +1225,36 @@ Public Class Advisenote
             q &= " LOAD_TYPE )"
             q &= " Values ("
             q &= "'" & (Cbn6.Text) & "',"
+
+            'Random PinCode
+            Dim dt_tmp As DataTable
+            Dim RandGen As New Random
+            Dim strRand As Integer
+
+            Do
+                strRand = RandGen.Next(0, 10000)
+                dt_tmp = cls.Query("SELECT * FROM T_LOADINGNOTE WHERE LOAD_CARD=" & strRand & " AND LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + "")
+
+                If dt_tmp.Rows.Count = 0 Then
+                    Exit Do
+                End If
+            Loop
+
+            q &= "'" & strRand & "',"
+
             '' LOAD_CARD ''
-            Try
-                sql = ""
-                sql = "select Truck_ID,Card_Number from vcardload "
-                sql &= "where Truck_ID= '" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "'"
+            'Try
+            '    sql = ""
+            '    sql = "select Truck_ID,Card_Number from vcardload "
+            '    sql &= "where Truck_ID= '" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "'"
 
-                Dim dt2 As DataTable = cls.Query(sql)
-                If dt2.Rows.Count > 0 Then Card = dt2(0)("Card_Number") Else Card = "0"
+            '    Dim dt2 As DataTable = cls.Query(sql)
+            '    If dt2.Rows.Count > 0 Then Card = dt2(0)("Card_Number") Else Card = "0"
 
-                q &= "'" & Card & "',"
-            Catch ex As Exception
-                q &= "'" & ("0") & "',"
-            End Try
+            '    q &= "'" & Card & "',"
+            'Catch ex As Exception
+            '    q &= "'" & ("0") & "',"
+            'End Try
 
             If Cbn7.Text = "" Then
                 Try
@@ -1245,7 +1287,7 @@ Public Class Advisenote
             'End If
 
             q &= " Getdate() ,"
-            'q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+            'q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & Preset.ToString & "',"
             q &= "'" & (Cbn11.Text) & "',"
@@ -1262,8 +1304,8 @@ Public Class Advisenote
             q &= "'" & (Load_q.Text) & "',"
 
             If Chkin = 0 Then
-                q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", QTIME)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", Checkintime)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", QTIME)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", Checkintime)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             Else
                 q &= " Getdate() ,"
                 q &= " Getdate() ,"
@@ -1303,7 +1345,7 @@ Public Class Advisenote
                     q &= " LC_BAY,"
                     q &= " LC_SEAL,"
                     q &= " LC_TANK,"
-                    q &= " LC_Density_30C,"
+                    q &= " LC_API,"
                     q &= " LC_METER) "
                     q &= "Values ("
                     q &= "'" & Cbn6.Text & "',"
@@ -1335,7 +1377,7 @@ Public Class Advisenote
                     q &= " LC_BAY,"
                     q &= " LC_SEAL,"
                     q &= " LC_TANK,"
-                    q &= " LC_Density_30C,"
+                    q &= " LC_API,"
                     q &= " LC_METER) "
                     q &= "Values ("
                     q &= "'" & Cbn6.Text & "',"
@@ -1400,13 +1442,13 @@ Public Class Advisenote
 
                     Try
                         sql = ""
-                        sql = "select Tankno,DENSITY30 from t_tank where Tankproduct = '" & ProductCom(r) & "' "
-                        sql &= "and Tank_Active = 1 and tank_loadactive = 1 order by updatedate desc"
+                        sql = "select Tankno,TANKAPI from t_tank where Tankproduct = '" & ProductCom(r) & "' "
+                        sql &= "and tank_loadactive = 1 order by updatedate desc"
 
                         Dim dt As DataTable = cls.Query(sql)
 
                         q &= "'" & dt.Rows(0).Item("Tankno").ToString & "',"
-                        q &= "'" & dt.Rows(0).Item("Density30").ToString & "',"
+                        q &= "'" & dt.Rows(0).Item("TANKAPI").ToString & "',"
                     Catch ex As Exception
                         q = ""
                         q = "delete t_loadingnote where load_id = "
@@ -1422,7 +1464,12 @@ Public Class Advisenote
 
                         MessageBox.Show("Invalid tank open '" & ProductCom(r).ToString & "', Cannot create advisenote, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Cursor = Cursors.Default
-                        Tank_Order.ShowDialog()
+
+                        If Tank_Order.Chk_View() = False Then
+                            Exit Sub
+                        Else
+                            Tank_Order.ShowDialog()
+                        End If
                         Exit Sub
                     End Try
                     '' LC_METER ''
@@ -1432,7 +1479,7 @@ Public Class Advisenote
                     'sql &= " order by batch_number "
                     'Cmd.CommandText = sql
                     'Cmd.ExecuteReader()
-                    'Dim da2 As SqlDataAdapter = New SqlDataAdapter(sql, conn)
+                    'Dim da2 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
                     'Dim dt2 As New DataTable
                     'da2.Fill(dt2)
                     'q &= "'" & dt2.Rows(0).Item("batch_number").ToString & "')"
@@ -1564,38 +1611,25 @@ Public Class Advisenote
         End If
 
 
+        If AddDoc Then
+            cls.InsertEvent(MAIN.U_NAME, "User : " & MAIN.U_NAME & "  Create loading advise note : " & Cbn8.Text, "T_LOADINGNOTE", "")
+            EditDoc = False
+            AddDoc = False
+        ElseIf EditDoc Then
+            cls.InsertEvent(MAIN.U_NAME, "User : " & MAIN.U_NAME & "  Edit loading advise note : " & Cbn8.Text, "T_LOADINGNOTE", "")
+            EditDoc = False
+            AddDoc = False
+        End If
+
         Dim Myreport As New ReportDocument
         Myreport = New ReportDocument
 
-        q = ""
-        q = "SELECT    T1.LOAD_CAPACITY as LOAD_CAPACITY"
-        q &= " , T1.LOAD_PRESET as LOAD_PRESET,T2.lc_preset,  T1.LOAD_CARD as LOAD_CARD,T1.Load_qdashboard as LOAD_Q"
-        q &= " , T2.LC_COMPARTMENT as LC_COMPARTMENT"
-        q &= " , T2.LC_BAY as LC_BAY,SUBSTR(CAST(T1.Reference AS VARCHAR2(30)),1,30) AS Reference,  T1.LOAD_DATE as LOAD_DATE"
-        q &= " , T1.LOAD_DID as LOAD_DID , T_Status.STATUS_NAME as STATUS_NAME , T1.LOADDO as LOAD_DOfull ,  NVL2(t1.Container,(t1.Container|| '/' ||T_TRUCK.TRUCK_NUMBER),T_TRUCK.TRUCK_NUMBER ) as Load_Vehicle, t_customer.Customer_name as LOAD_CUSTOMER "
-        q &= " , T_DRIVER.Driver_NAME || '  ' ||  T_Driver.Driver_Lastname AS LOAD_DRIVER"
-        q &= " , T1.load_id as Load_id, V_DO.DO_STATUS  as DO_STATUS"
-        q &= " , T_customer.Customer_Name,t_product.Product_code  as PRODUCT_CODE, T_Batchmeter.BATCH_NAME as BATCH_NAME"
-        q &= " , T1.Container as Container, T1.LOAD_TRUCKCOMPANY as LOAD_TRUCKCOMPANY"
-        q &= " , LC_SEAL as LC_SEAL, T1.LOAD_SEAL as LOAD_SEAL, T1.LOAD_SEALCOUNT  as LOAD_SEALCOUNT"
-        q &= " , T1.ADDNOTEDATE  as ADDNOTEDATE, T2.LC_STARTTIME  as LC_STARTTIME, T2.LC_ENDTIME  as LC_ENDTIME "
-        q &= "FROM T_Customer  RIGHT OUTER JOIN (Select * from T_LOADINGNOTE  Where Reference  ='" & Cbn8.Text & "' )  T1 "
-        q &= "ON T_Customer.ID = T1.LOAD_CUSTOMER  "
-        q &= "LEFT OUTER JOIN T_STATUS  ON T1.LOAD_STATUS = T_STATUS.STATUS_ID   "
-        q &= "LEFT OUTER JOIN V_DO ON T1.LOAD_ID = V_DO.LOAD_ID    "
-        q &= "LEFT OUTER JOIN T_TRUCK ON T1.LOAD_VEHICLE = T_TRUCK.ID   "
-        q &= "LEFT OUTER JOIN T_DRIVER ON T1.LOAD_DRIVER = T_DRIVER.ID   "
-        q &= "LEFT OUTER JOIN T_CARD  ON T1.LOAD_CARD = T_CARD.CARD_NUMBER   "
-        q &= "Left OUTER JOIN T_BATCHMETER   "
-        q &= "RIGHT OUTER JOIN (Select * From T_LOADINGNOTECOMPARTMENT where lc_status<>'99') T2 "
-        q &= "ON T_BATCHMETER.BATCH_NUMBER = T2.LC_METER   "
-        q &= "LEFT OUTER JOIN T_Product ON T2.LC_PRO = T_Product.ID ON T1.LOAD_ID = T2.LC_LOAD "
-        q &= "Order by T2.lc_compartment"
+        q = cls_data.SelectPrintLoadingNote(Cbn8.Text)
 
         Dim ds As New DataSet
         ds = cls.Query_DS(q, "V_Loadingnote")
 
-        Myreport.Load("advisenoteReport.rpt")
+        Myreport.Load("Report_File/AdvisenoteReport.rpt")
         Myreport.SetDataSource(ds)
         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
         ReportPrint.ShowDialog()
@@ -1626,13 +1660,13 @@ Public Class Advisenote
 
         If MsgBox("Edit advisenote Load No.: ' " & ref & " '?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
 
-            Try
-                sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
-                  & ",USERGROUP='" & MAIN.U_GROUP & "'"
+            'Try
+            '    sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
+            '      & ",USERGROUP='" & MAIN.U_GROUP & "'"
 
-                cls.Update(sql)
-            Catch ex As Exception
-            End Try
+            '    cls.Update(sql)
+            'Catch ex As Exception
+            'End Try
 
             Dim Preset As Integer = 0
             For i = 0 To TRUCK_COMP_NUM - 1
@@ -1654,22 +1688,21 @@ Public Class Advisenote
             q = "UPDATE T_LOADINGNOTE "
             q &= "SET LOAD_CARD = "
 
-            Try
-                'If TDriverBindingSource.Item(TDriverBindingSource.Position)("Driver_Pincode").ToString() <> "" Then
-                sql = ""
-                sql = "select Truck_ID,Card_Number from vcardload "
-                sql &= "where Truck_ID= '" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "'"
+            'Random PinCode
+            Dim dt_tmp As DataTable
+            Dim RandGen As New Random
+            Dim strRand As Integer
 
-                Dim tmp2 As DataTable = cls.Query(sql)
+            Do
+                strRand = RandGen.Next(0, 10000)
+                dt_tmp = cls.Query("SELECT * FROM T_LOADINGNOTE WHERE LOAD_CARD=" & strRand & " AND LOAD_DAY=" & Now.Day & " and LOAD_MONTH =" & Now.Month & " and LOAD_YEAR=" & Now.Year & "")
 
-                Dim Card As String
-                If tmp2.Rows.Count > 0 Then Card = tmp2(0)("Card_Number") Else Card = "0"
-                q &= "'" & Card & "',"
-            Catch ex As Exception
-                MessageBox.Show("Cannot edit advisenote, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                MsgBox(ex.Message())
-                Exit Sub
-            End Try
+                If dt_tmp.Rows.Count = 0 Then
+                    Exit Do
+                End If
+            Loop
+
+            q &= "'" & strRand & "', "
 
             q &= " LOAD_DID = "
             q &= "'" & Cbn7.Text & "',"
@@ -1688,7 +1721,9 @@ Public Class Advisenote
             'If Date.Now.Year > "2500" Then
             n_year = 543
             'End If
-            q &= "TO_DATE('" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) + "','DD/MM/YYYY HH24:MI:SS')" + ","
+
+            q &= "Getdate(),"
+            'q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) + "','DD/MM/YYYY HH24:MI:SS')" + ","
             q &= " LOAD_DRIVER = "
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
             q &= " LOAD_PRESET = "
@@ -1740,7 +1775,7 @@ Public Class Advisenote
                 'q &= "'" & loadID & "' order by lc_compartment  "
                 'Cmd.CommandText = q
                 'Cmd.ExecuteNonQuery()
-                'Dim da As SqlDataAdapter = New SqlDataAdapter(q, conn)
+                'Dim da As OracleDataAdapter = New OracleDataAdapter(q, conn)
                 'Dim dt As New DataTable
                 'da.Fill(dt)
 
@@ -1777,7 +1812,7 @@ Public Class Advisenote
                         q &= " LC_BAY='0',"
                         q &= " LC_SEAL='0',"
                         q &= " LC_TANK='0',"
-                        q &= " LC_Density_30C='0', "
+                        q &= " LC_API='0', "
                         q &= " LC_METER='0' "
                         q &= "Where lc_load="
                         q &= "'" & Cbn6.Text & "'"
@@ -1851,8 +1886,8 @@ Public Class Advisenote
                         q &= " LC_TANK="
                         '' LC_TANK ''
                         sql = ""
-                        sql = "select tankno,density30 from t_tank where Tankproduct = '" & ProductCom(r) & "' "
-                        sql &= "and Tank_Active = '1' and tank_loadactive = '1' order by updatedate desc"
+                        sql = "select tankno,TANKAPI from t_tank where Tankproduct = '" & ProductCom(r) & "' "
+                        sql &= "and tank_loadactive = '1' order by updatedate desc"
 
                         Dim dr1 As DataTable = cls.Query(sql)
 
@@ -1887,9 +1922,9 @@ Public Class Advisenote
                         End If
 
 
-                        q &= " LC_Density_30C="
+                        q &= " LC_API="
                         Try
-                            Density = dr1(0)("density30")
+                            Density = dr1(0)("TANKAPI")
                             q &= "'" & Density & "' "
                         Catch ex As Exception
                             q &= "'' "
@@ -1935,82 +1970,106 @@ Public Class Advisenote
     End Sub
 
     Private Sub Canceldata_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Canceldata.Click
-        If cls_role.Check_Permission(MAIN.U_GROUP, Page_Group) Then
-            Try
-                Dim sql As String
 
 
-                Dim ref, LC_ID, load_do, load_status As String
-
-                ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
-                sql = ""
-                sql = "select Load_id,load_dofull,load_status from T_Loadingnote where reference = "
-                sql &= ref
-
-                Dim tmp As DataTable = cls.Query(sql)
-
-                LC_ID = tmp(0)("Load_id")
-                load_do = tmp(0)("load_dofull")
-                load_status = tmp(0)("load_status")
-
-                If load_status = 3 Then
-                    MsgBox("This truck no. loading ended, Cannot cancel", vbOKOnly + vbDefaultButton2, "Error")
-                    Exit Sub
-                Else
-
-                    If MsgBox("Cancel advisenote load no. : " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-
-                        Try
-
-                            sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
-                              & ",USERGROUP='" & MAIN.U_GROUP & "'"
-
-                            cls.Update(sql)
-                        Catch ex As Exception
-
-                        End Try
-
-                        sql = ""
-                        sql = "delete   T_Loadingnote where reference ='" & ref & "'"
-
-                        cls.Delete(sql)
-
-                        sql = ""
-                        sql = "delete t_loadingnotecompartment where lc_load ='" & LC_ID & "'"
-
-                        cls.Delete(sql)
-
-                        Timer1.Enabled = True
-                        RadPageView1.SelectedPage = RadPageViewPage1
-
-                        sql = ""
-                        sql = "Update   T_Checkin set status=1,load_id='',CALL_ACTUAL=0 where load_id ='" & LC_ID & "'"
-
-                        cls.Update(sql)
-
-                        sql = ""
-                        sql = "delete   t_dashboard where load_id ='" & LC_ID & "'"
-
-                        cls.Delete(sql)
-
-                        sql = ""
-                        sql = "delete   T_Qloadend where load_id ='" & LC_ID & "'"
-
-                        cls.Delete(sql)
-
-                        SelectVLoadingNote()
-                        ' Me.VCHECKINLOAD1TableAdapter.Fill(Me.DataSet_Table.VCHECKINLOAD1)
-                    End If
-                End If
-            Catch ex As Exception
-            End Try
-        Else
-            MessageBox.Show("No Permission!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '----------------------- Check Delete Permission
+        If cls_role.ChkDel = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to delete documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
             Exit Sub
         End If
+        '----------------------- Check Delete Permission
+
+
+        Try
+            Dim sql As String
+
+
+            Dim ref, LC_ID, load_do, load_status As String
+
+            Try
+                ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+            Catch ex As Exception
+                Exit Sub
+            End Try
+
+            sql = ""
+            sql = "select Load_id,load_dofull,load_status from T_Loadingnote where reference = "
+            sql &= ref
+
+            Dim tmp As DataTable = cls.Query(sql)
+
+            LC_ID = tmp(0)("Load_id")
+            load_do = tmp(0)("load_dofull")
+            load_status = tmp(0)("load_status")
+
+            If load_status = 3 Then
+                MsgBox("This truck no. loading ended, Cannot cancel", vbOKOnly + vbDefaultButton2, "Error")
+                Exit Sub
+            Else
+
+                If MsgBox("Cancel advisenote load no. : " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
+
+                    Try
+
+                        sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
+                              & ",USERGROUP='" & MAIN.U_GROUP & "'"
+
+                        cls.Update(sql)
+                    Catch ex As Exception
+
+                    End Try
+
+                    sql = ""
+                    sql = "delete   T_Loadingnote where reference ='" & ref & "'"
+
+                    cls.InsertEvent(MAIN.U_NAME, "User : " & MAIN.U_NAME & "  Delete loading advise note : " & ref, "T_LOADINGNOTE", "")
+
+                    cls.Delete(sql)
+
+                    sql = ""
+                    sql = "delete t_loadingnotecompartment where lc_load ='" & LC_ID & "'"
+
+                    cls.Delete(sql)
+
+                    Timer1.Enabled = True
+                    RadPageView1.SelectedPage = RadPageViewPage1
+
+                    sql = ""
+                    sql = "Update   T_Checkin set status=1,load_id='',CALL_ACTUAL=0 where load_id ='" & LC_ID & "'"
+
+                    cls.Update(sql)
+
+                    sql = ""
+                    sql = "delete   t_dashboard where load_id ='" & LC_ID & "'"
+
+                    cls.Delete(sql)
+
+                    sql = ""
+                    sql = "delete   T_Qloadend where load_id ='" & LC_ID & "'"
+
+                    cls.Delete(sql)
+
+                    SelectVLoadingNote()
+                    ' Me.VCHECKINLOAD1TableAdapter.Fill(Me.DataSet_Table.VCHECKINLOAD1)
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+
     End Sub
 
     Private Sub Editdata_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Editdata.Click
+
+        '----------------------- Check Edit Permission
+        If cls_role.ChkEdit = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to edit documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Exit Sub
+        End If
+        '----------------------- Check Edit Permission
+
+
         Dim sql, sealCount As String
 
         Cbn2.Enabled = False
@@ -2059,7 +2118,7 @@ Public Class Advisenote
             q &= "NVL(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
             q &= "NVL(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
             q &= "T_LOADINGNOTE.Container AS Container ,"
-            q &= "NVL(T_LOADINGNOTE.Remark,0) as Remark ,"
+            q &= "NVL(T_LOADINGNOTE.Remark,'') as Remark ,"
             q &= "NVL(T_Customer.Customer_name ,0) as Customer_Code ,"   'T_Customer.Customer_name
             q &= "NVL(T_LOADINGNOTE.load_customer ,0) as Customer_ID ,"
             q &= "NVL(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
@@ -2073,8 +2132,8 @@ Public Class Advisenote
             q &= "NVL(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
             q &= "NVL(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
             q &= "NVL(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
-            q &= "T_LOADINGNOTE.LOAD_AUTHORIZE  AS LOAD_AUTHORIZE, "
-            q &= "T_LOADINGNOTE.remark  AS REmark "
+            q &= "T_LOADINGNOTE.LOAD_AUTHORIZE  AS LOAD_AUTHORIZE "
+            ' q &= "T_LOADINGNOTE.remark  AS REmark "
 
             q &= "FROM "
             q &= "(Select * from T_LOADINGNOTE where Reference = '" & ref & "' and load_Status in(1,2,3,4,5) and load_status <> 99) T_Loadingnote "
@@ -2108,7 +2167,7 @@ Public Class Advisenote
                 Cbn5.Text = dt.Rows(0).Item("load_Capacity").ToString
                 Cbn7.Text = dt.Rows(0).Item("Load_did").ToString
                 Load_q.Text = dt.Rows(0).Item("Load_Q").ToString
-                truck = dt.Rows(0).Item("load_vehicle_ID")
+                'truck = dt.Rows(0).Item("load_vehicle_ID")
                 authorize_Remark.Text = dt.Rows(0).Item("load_Authorize").ToString
                 Update_date.Text = dt.Rows(0).Item("update_date").ToString
 
@@ -2119,9 +2178,9 @@ Public Class Advisenote
                     TTRUCKBindingSource1.Position = TTRUCKBindingSource1.Find("Truck_number", dt.Rows(0).Item("load_vehicle").ToString)
                 End If
 
-                If dt.Rows(0).Item("Container").ToString <> "" Then
-                    TTRUCKBindingSource1.Position = TTRUCKBindingSource1.Find("Truck_number", dt.Rows(0).Item("Container").ToString)
-                End If
+                'If dt.Rows(0).Item("Container").ToString <> "" Then
+                '    TTRUCKBindingSource1.Position = TTRUCKBindingSource1.Find("Truck_number", dt.Rows(0).Item("Container").ToString)
+                'End If
 
 
                 'TDriverBindingSource.Position = TDriverBindingSource.Find("DRIVER_NAME", dt.Rows(0).Item("Driver_Name").ToString)
@@ -2139,6 +2198,25 @@ Public Class Advisenote
                 TTruckTypeBindingSource.Position = TTruckTypeBindingSource.Find("ID", dt.Rows(0).Item("Load_type").ToString)
                 TStatusBindingSource.Position = TStatusBindingSource.Find("Status_ID", dt.Rows(0).Item("load_status").ToString)
 
+                EdCustomer.Text = TCUSTOMERTBindingSource.Item(TCUSTOMERTBindingSource.Position)("CUSTOMER_CODE").ToString
+                Cbn3.Text = TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_CODE").ToString
+                Trucktype.Text = TTruckTypeBindingSource.Item(TTruckTypeBindingSource.Position)("TYPE").ToString
+
+                Driver.Text = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_NAME").ToString
+                Try
+                    Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
+                    Dim Ms As MemoryStream = New MemoryStream(ArrPic)
+                    PictureBox1.Image = Image.FromStream(Ms)
+                    Ms.Dispose()
+                Catch ex As Exception
+                    PictureBox1.Image = Nothing
+                End Try
+
+
+                Status.Text = TStatusBindingSource.Item(TStatusBindingSource.Position)("STATUS_NAME").ToString
+
+                TruckH.Text = dt.Rows(0).Item("Container").ToString
+                Edremark.Text = dt.Rows(0).Item("REMARK").ToString
             Catch ex As Exception
 
             End Try
@@ -2169,23 +2247,6 @@ Public Class Advisenote
                 Next
 
                 For i = 0 To dt1.Rows.Count - 1
-                    'If (dt1.Rows(i).Item("Product_code").ToString) <> "" Then
-                    '    product = ""
-                    '    product = (dt1.Rows(i).Item("Product_code").ToString)
-                    '    index = DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).FindString(product)
-                    '    DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
-
-                    'End If
-
-                    If (dt1.Rows(i).Item("LC_Meter").ToString) <> "0" Then
-                        Meter = ""
-                        Meter = (dt1.Rows(i).Item("Batch_name").ToString)
-                        index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Meter)
-                        DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
-
-                    Else
-                        DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1
-                    End If
 
                     If (dt1.Rows(i).Item("LC_Bay").ToString) <> "0" Then
                         Bay = ""
@@ -2196,7 +2257,18 @@ Public Class Advisenote
                     Else
                         DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1
                     End If
+
                     DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text = (dt1.Rows(i).Item("LC_PRESET").ToString)
+
+                    If (dt1.Rows(i).Item("LC_Meter").ToString) <> "0" Then
+                        Meter = ""
+                        Meter = (dt1.Rows(i).Item("Batch_name").ToString)
+                        index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Meter)
+                        DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
+
+                    Else
+                        DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1
+                    End If
 
                     'Dim lcStatus As String = dt1.Rows(i).Item("LC_Status").ToString
                     If ((dt1.Rows(i).Item("LC_Status").ToString = "1") Or (dt1.Rows(i).Item("LC_Status").ToString = "99")) Then
@@ -2235,10 +2307,19 @@ Public Class Advisenote
     End Sub
 
     Private Sub Seal_Total_TextChange(ByVal sender As Object, ByVal Empty As EventArgs)
-        Throw New NotImplementedException
+
     End Sub
 
     Private Sub RadButton5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadButton5.Click
+
+        '----------------------- Check Edit Permission
+        If cls_role.ChkEdit = False Then
+            Dim DiR As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to edit documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = DiR.ToString()
+            Exit Sub
+        End If
+        '----------------------- Check Edit Permission
+
         Try
             Me.AddOwnedForm(Advisenote_Edit)
             Advisenote_Edit.ShowDialog()
@@ -2250,35 +2331,21 @@ Public Class Advisenote
     End Sub
 
     Private Sub EditSeal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ref, sql, Seal As String
-            ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
-            sql = ""
-            sql = "Select load_id,reference from T_Loadingnote where reference =" + ref + ""
 
-            Dim ds As New DataSet
-            ds = cls.Query_DS(sql, "T_Loadingnote")
-
-            Me.AddOwnedForm(EditSeal)
-            EditSeal.ShowDialog()
-            SelectVLoadingNote()
-            ds.Dispose()
-        Catch ex As Exception
-        End Try
     End Sub
 
-    Private Sub EdCustomer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EdCustomer.Click
-        EdCustomer.MultiColumnComboBoxElement.ShowPopup()
-    End Sub
+    'Private Sub EdCustomer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EdCustomer.Click
+    '    EdCustomer.MultiColumnComboBoxElement.ShowPopup()
+    'End Sub
 
-    Private Sub Cbn3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn3.Click
-        Cbn3.MultiColumnComboBoxElement.ShowPopup()
-    End Sub
+    'Private Sub Cbn3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn3.Click
+    '    Cbn3.MultiColumnComboBoxElement.ShowPopup()
+    'End Sub
 
 
-    Private Sub Driver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver.Click
-        Driver.MultiColumnComboBoxElement.ShowPopup()
-    End Sub
+    'Private Sub Driver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver.Click
+    '    Driver.MultiColumnComboBoxElement.ShowPopup()
+    'End Sub
 
     Private Sub MasterGridAdvisenote_CellFormatting(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles MasterGridAdvisenote.CellFormatting
         e.CellElement.NumberOfColors = 4
@@ -2292,21 +2359,21 @@ Public Class Advisenote
         'SelectVLoadingNote()
     End Sub
 
-    Private Sub Product_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Product.Click
-        Product.MultiColumnComboBoxElement.ShowPopup()
-    End Sub
+    'Private Sub Product_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Product.Click
+    '    Product.MultiColumnComboBoxElement.ShowPopup()
+    'End Sub
 
-    Private Sub Bay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bay.Click
-        Try
-            Bay.MultiColumnComboBoxElement.ShowPopup()
-        Catch ex As Exception
+    'Private Sub Bay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bay.Click
+    '    Try
+    '        Bay.MultiColumnComboBoxElement.ShowPopup()
+    '    Catch ex As Exception
 
-        End Try
-    End Sub
+    '    End Try
+    'End Sub
 
-    Private Sub Meter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Meter.Click
-        Meter.MultiColumnComboBoxElement.ShowPopup()
-    End Sub
+    'Private Sub Meter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Meter.Click
+    '    Meter.MultiColumnComboBoxElement.ShowPopup()
+    'End Sub
 
     Private Sub Product_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Product.Leave
 
@@ -2320,17 +2387,19 @@ Public Class Advisenote
             Dim Product_ID As Integer = 0
             Product_ID = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
 
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+            'sql = ""
+            'sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+            sql = "SELECT * FROM T_BAY WHERE BAY_STATUS=1"
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(sql, "T_bay")
@@ -2339,72 +2408,72 @@ Public Class Advisenote
             TBayBindingSource.DataMember = "T_bay"
 
 
-            TBAYBindingSource1.DataSource = Nothing
-            TBAYBindingSource1.DataMember = Nothing
+            'TBAYBindingSource1.DataSource = Nothing
+            'TBAYBindingSource1.DataMember = Nothing
             TBAYBindingSource1.DataSource = MyDataSet
             TBAYBindingSource1.DataMember = "T_bay"
             IslandBay1.DisplayMember = "Bay_number"
             IslandBay1.SelectedIndex = -1
 
-            TBAYBindingSource2.DataSource = Nothing
-            TBAYBindingSource2.DataMember = Nothing
+            'TBAYBindingSource2.DataSource = Nothing
+            'TBAYBindingSource2.DataMember = Nothing
             TBAYBindingSource2.DataSource = MyDataSet
             TBAYBindingSource2.DataMember = "T_bay"
             IslandBay2.DisplayMember = "Bay_number"
             IslandBay2.SelectedIndex = -1
 
-            TBAYBindingSource3.DataSource = Nothing
-            TBAYBindingSource3.DataMember = Nothing
+            'TBAYBindingSource3.DataSource = Nothing
+            'TBAYBindingSource3.DataMember = Nothing
             TBAYBindingSource3.DataSource = MyDataSet
             TBAYBindingSource3.DataMember = "T_bay"
             IslandBay3.DisplayMember = "Bay_number"
             IslandBay3.SelectedIndex = -1
 
-            TBayBindingSource4.DataSource = Nothing
-            TBayBindingSource4.DataMember = Nothing
+            'TBayBindingSource4.DataSource = Nothing
+            'TBayBindingSource4.DataMember = Nothing
             TBayBindingSource4.DataSource = MyDataSet
             TBayBindingSource4.DataMember = "T_bay"
             IslandBay4.DisplayMember = "Bay_number"
             IslandBay4.SelectedIndex = -1
 
 
-            TBayBindingSource5.DataSource = Nothing
-            TBayBindingSource5.DataMember = Nothing
+            'TBayBindingSource5.DataSource = Nothing
+            'TBayBindingSource5.DataMember = Nothing
             TBayBindingSource5.DataSource = MyDataSet
             TBayBindingSource5.DataMember = "T_bay"
             IslandBay5.DisplayMember = "Bay_number"
             IslandBay5.SelectedIndex = -1
 
-            TBayBindingSource6.DataSource = Nothing
-            TBayBindingSource6.DataMember = Nothing
+            'TBayBindingSource6.DataSource = Nothing
+            'TBayBindingSource6.DataMember = Nothing
             TBayBindingSource6.DataSource = MyDataSet
             TBayBindingSource6.DataMember = "T_bay"
             IslandBay6.DisplayMember = "Bay_number"
             IslandBay6.SelectedIndex = -1
 
-            TBayBindingSource7.DataSource = Nothing
-            TBayBindingSource7.DataMember = Nothing
+            'TBayBindingSource7.DataSource = Nothing
+            'TBayBindingSource7.DataMember = Nothing
             TBayBindingSource7.DataSource = MyDataSet
             TBayBindingSource7.DataMember = "T_bay"
             IslandBay7.DisplayMember = "Bay_number"
             IslandBay7.SelectedIndex = -1
 
-            TBayBindingSource8.DataSource = Nothing
-            TBayBindingSource8.DataMember = Nothing
+            'TBayBindingSource8.DataSource = Nothing
+            'TBayBindingSource8.DataMember = Nothing
             TBayBindingSource8.DataSource = MyDataSet
             TBayBindingSource8.DataMember = "T_bay"
             IslandBay8.DisplayMember = "Bay_number"
             IslandBay8.SelectedIndex = -1
 
-            TBayBindingSource9.DataSource = Nothing
-            TBayBindingSource9.DataMember = Nothing
+            'TBayBindingSource9.DataSource = Nothing
+            'TBayBindingSource9.DataMember = Nothing
             TBayBindingSource9.DataSource = MyDataSet
             TBayBindingSource9.DataMember = "T_bay"
             IslandBay9.DisplayMember = "Bay_number"
             IslandBay9.SelectedIndex = -1
 
-            TBayBindingSource10.DataSource = Nothing
-            TBayBindingSource10.DataMember = Nothing
+            'TBayBindingSource10.DataSource = Nothing
+            'TBayBindingSource10.DataMember = Nothing
             TBayBindingSource10.DataSource = MyDataSet
             TBayBindingSource10.DataMember = "T_bay"
             IslandBay10.DisplayMember = "Bay_number"
@@ -2431,6 +2500,9 @@ Public Class Advisenote
             Next
 
             Bay.Text = dr(0)("Bay").ToString
+
+
+
 
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -2472,86 +2544,86 @@ Public Class Advisenote
             'TBatchmeterBindingSource.Position = 0
             Meter.SelectedIndex = 0
 
-            TBatchmeterBindingSource1.DataSource = Nothing
-            TBatchmeterBindingSource1.DataMember = Nothing
+            'TBatchmeterBindingSource1.DataSource = Nothing
+            'TBatchmeterBindingSource1.DataMember = Nothing
             TBatchmeterBindingSource1.DataSource = MyDataSet
             TBatchmeterBindingSource1.DataMember = "T_batchmeter"
             Meter1.DisplayMember = "Batch_name"
             Meter1.SelectedIndex = -1
 
-            TBatchmeterBindingSource2.DataSource = Nothing
-            TBatchmeterBindingSource2.DataMember = Nothing
+            'TBatchmeterBindingSource2.DataSource = Nothing
+            'TBatchmeterBindingSource2.DataMember = Nothing
             TBatchmeterBindingSource2.DataSource = MyDataSet
             TBatchmeterBindingSource2.DataMember = "T_batchmeter"
             Meter2.DisplayMember = "Batch_name"
             Meter2.SelectedIndex = -1
 
-            TBatchmeterBindingSource3.DataSource = Nothing
-            TBatchmeterBindingSource3.DataMember = Nothing
+            'TBatchmeterBindingSource3.DataSource = Nothing
+            'TBatchmeterBindingSource3.DataMember = Nothing
             TBatchmeterBindingSource3.DataSource = MyDataSet
             TBatchmeterBindingSource3.DataMember = "T_batchmeter"
             Meter3.DisplayMember = "Batch_name"
             Meter3.SelectedIndex = -1
 
-            TBatchmeterBindingSource4.DataSource = Nothing
-            TBatchmeterBindingSource4.DataMember = Nothing
+            'TBatchmeterBindingSource4.DataSource = Nothing
+            'TBatchmeterBindingSource4.DataMember = Nothing
             TBatchmeterBindingSource4.DataSource = MyDataSet
             TBatchmeterBindingSource4.DataMember = "T_batchmeter"
             Meter4.DisplayMember = "Batch_name"
             Meter4.SelectedIndex = -1
 
-            TBatchmeterBindingSource5.DataSource = Nothing
-            TBatchmeterBindingSource5.DataMember = Nothing
+            'TBatchmeterBindingSource5.DataSource = Nothing
+            'TBatchmeterBindingSource5.DataMember = Nothing
             TBatchmeterBindingSource5.DataSource = MyDataSet
             TBatchmeterBindingSource5.DataMember = "T_batchmeter"
             Meter5.DisplayMember = "Batch_name"
             Meter5.SelectedIndex = -1
 
-            TBatchmeterBindingSource6.DataSource = Nothing
-            TBatchmeterBindingSource6.DataMember = Nothing
+            'TBatchmeterBindingSource6.DataSource = Nothing
+            'TBatchmeterBindingSource6.DataMember = Nothing
             TBatchmeterBindingSource6.DataSource = MyDataSet
             TBatchmeterBindingSource6.DataMember = "T_batchmeter"
             Meter6.DisplayMember = "Batch_name"
             Meter6.SelectedIndex = -1
 
-            TBatchmeterBindingSource7.DataSource = Nothing
-            TBatchmeterBindingSource7.DataMember = Nothing
+            'TBatchmeterBindingSource7.DataSource = Nothing
+            'TBatchmeterBindingSource7.DataMember = Nothing
             TBatchmeterBindingSource7.DataSource = MyDataSet
             TBatchmeterBindingSource7.DataMember = "T_batchmeter"
             Meter7.DisplayMember = "Batch_name"
             Meter7.SelectedIndex = -1
 
-            TBatchmeterBindingSource8.DataSource = Nothing
-            TBatchmeterBindingSource8.DataMember = Nothing
+            'TBatchmeterBindingSource8.DataSource = Nothing
+            'TBatchmeterBindingSource8.DataMember = Nothing
             TBatchmeterBindingSource8.DataSource = MyDataSet
             TBatchmeterBindingSource8.DataMember = "T_batchmeter"
             Meter8.DisplayMember = "Batch_name"
             Meter8.SelectedIndex = -1
 
-            TBatchmeterBindingSource9.DataSource = Nothing
-            TBatchmeterBindingSource9.DataMember = Nothing
+            'TBatchmeterBindingSource9.DataSource = Nothing
+            'TBatchmeterBindingSource9.DataMember = Nothing
             TBatchmeterBindingSource9.DataSource = MyDataSet
             TBatchmeterBindingSource9.DataMember = "T_batchmeter"
             Meter9.DisplayMember = "Batch_name"
             Meter9.SelectedIndex = -1
 
-            TBatchmeterBindingSource10.DataSource = Nothing
-            TBatchmeterBindingSource10.DataMember = Nothing
+            'TBatchmeterBindingSource10.DataSource = Nothing
+            'TBatchmeterBindingSource10.DataMember = Nothing
             TBatchmeterBindingSource10.DataSource = MyDataSet
             TBatchmeterBindingSource10.DataMember = "T_batchmeter"
             Meter10.DisplayMember = "Batch_name"
             Meter10.SelectedIndex = -1
 
-            TBatchmeterBindingSource11.DataSource = Nothing
-            TBatchmeterBindingSource11.DataMember = Nothing
+            'TBatchmeterBindingSource11.DataSource = Nothing
+            'TBatchmeterBindingSource11.DataMember = Nothing
             TBatchmeterBindingSource11.DataSource = MyDataSet
             TBatchmeterBindingSource11.DataMember = "T_batchmeter"
             Meter11.DisplayMember = "Batch_name"
             Meter11.SelectedIndex = -1
 
 
-            TBatchmeterBindingSource12.DataSource = Nothing
-            TBatchmeterBindingSource12.DataMember = Nothing
+            'TBatchmeterBindingSource12.DataSource = Nothing
+            'TBatchmeterBindingSource12.DataMember = Nothing
             TBatchmeterBindingSource12.DataSource = MyDataSet
             TBatchmeterBindingSource12.DataMember = "T_batchmeter"
             Meter12.DisplayMember = "Batch_name"
@@ -2601,6 +2673,7 @@ Public Class Advisenote
     Private Sub Driver_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver.Leave
         AuthorRemarkDriver = ""
         If Driver.Text = "" Then
+            PictureBox1.Image = Nothing
             Exit Sub
         End If
 
@@ -2611,7 +2684,7 @@ Public Class Advisenote
 
             Dim sql As String
             sql = ""
-            sql = "select (to_date(DRIVER_DATE_END)-to_date(Getdate())) as DRIVER_DATE_END,(to_date(TRAIN_DATE_end)-to_date(Getdate())) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
+            sql = "select (CONVERT (DATETIME,DRIVER_DATE_END)-CONVERT (DATETIME,Getdate())) as DRIVER_DATE_END,(CONVERT (DATETIME,TRAIN_DATE_end)-CONVERT (DATETIME,Getdate())) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
 
             Dim dt1 As DataTable = cls.Query(sql)
 
@@ -2694,6 +2767,17 @@ Public Class Advisenote
             MessageBox.Show("Training license will expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
         'AuthorRemark = ""
+
+        Try
+            Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
+            Dim Ms As MemoryStream = New MemoryStream(ArrPic)
+            PictureBox1.Image = Image.FromStream(Ms)
+            Ms.Dispose()
+
+
+        Catch ex As Exception
+            PictureBox1.Image = Nothing
+        End Try
     End Sub
 
     Private Sub Preset1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset1.TextChanged
@@ -2862,117 +2946,117 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
 
-                End If
-            Next
+            '    End If
+            'Next
             If ProductList1.Text = "" Then IslandBay1.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
     End Sub
 
-    Private Sub AddAuto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddAuto.Click
-        ClearData()
-        CompClear()
-        EditType = 0
-        QLOAD = 0
-        Status.Enabled = True
-        CanExit = 0
-        auto = 0
-        DO_Type.SelectedIndex = 0
-        Dim q, s_day, s_month, s_year, sql As String
-        s_day = Date.Now.Day
-        s_month = Date.Now.Month
-        s_year = Date.Now.Year
-        Cbn9.Text = Format(Date.Now.Date, "dd/MM/yyyy")
-        Dateedit.Value = Now
+    'Private Sub AddAuto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    ClearData()
+    '    CompClear()
+    '    EditType = 0
+    '    QLOAD = 0
+    '    Status.Enabled = True
+    '    CanExit = 0
+    '    auto = 0
+    '    DO_Type.SelectedIndex = 0
+    '    Dim q, s_day, s_month, s_year, sql As String
+    '    s_day = Date.Now.Day
+    '    s_month = Date.Now.Month
+    '    s_year = Date.Now.Year
+    '    Cbn9.Text = Format(Date.Now.Date, "dd/MM/yyyy")
+    '    Dateedit.Value = Now
 
-        Status.SelectedText = "รอเติม"
-        Status.Enabled = False
-        Update_by.Text = MAIN.U_NAME
+    '    Status.SelectedText = "รอเติม"
+    '    Status.Enabled = False
+    '    Update_by.Text = MAIN.U_NAME
 
-        Me.T_DRIVERTableAdapter1.Fill(Me.DataSet_Table.T_DRIVER)
-        Try
-            Dim yearthai As String
+    '    Me.T_DRIVERTableAdapter1.Fill(Me.DataSet_Table.T_DRIVER)
+    '    Try
+    '        Dim yearthai As String
 
-            q = ""
-            q = "select NVL(max(Load_id),0)+1 as load_id ,NVL(max(Reference),0)+1 as Reference  from T_loadingnote"
+    '        q = ""
+    '        q = "select NVL(max(Load_id),0)+1 as load_id ,NVL(max(Reference),0)+1 as Reference  from T_loadingnote"
 
-            Dim tmp As DataTable = cls.Query(q)
+    '        Dim tmp As DataTable = cls.Query(q)
 
-            Cbn6.Text = tmp(0)("Load_id")
-            Cbn8.Text = tmp(0)("Reference")
-            Cbn11.Focus()
-            'RadPageView1.SelectedPage = RadPageViewPage2
-            Dim DriverName, truck As String
-            Try
-                Load_q.Text = RadGridView1.CurrentRow.Cells("Q_NO").Value.ToString
-                Checkin_ID = RadGridView1.CurrentRow.Cells("ID").Value.ToString
-            Catch ex As Exception
-                MessageBox.Show("กรุณาเลือกคิวที่ต้องการ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Sub
-            End Try
-            Timer1.Enabled = False
-            RadPageView1.SelectedPage = RadPageViewPage2
-            yearthai = Str(Int(s_year + 543))
-            sql = ""
-            sql = "select  NVL(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
-            sql &= " where LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + ""
+    '        Cbn6.Text = tmp(0)("Load_id")
+    '        Cbn8.Text = tmp(0)("Reference")
+    '        Cbn11.Focus()
+    '        'RadPageView1.SelectedPage = RadPageViewPage2
+    '        Dim DriverName, truck As String
+    '        Try
+    '            Load_q.Text = RadGridView1.CurrentRow.Cells("Q_NO").Value.ToString
+    '            Checkin_ID = RadGridView1.CurrentRow.Cells("ID").Value.ToString
+    '        Catch ex As Exception
+    '            MessageBox.Show("กรุณาเลือกคิวที่ต้องการ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '            Exit Sub
+    '        End Try
+    '        Timer1.Enabled = False
+    '        RadPageView1.SelectedPage = RadPageViewPage2
+    '        yearthai = Str(Int(s_year + 543))
+    '        sql = ""
+    '        sql = "select  NVL(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
+    '        sql &= " where LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + ""
 
-            tmp = cls.Query(sql)
+    '        tmp = cls.Query(sql)
 
-            Cbn7.Text = tmp(0)("Load_DID").ToString
+    '        Cbn7.Text = tmp(0)("Load_DID").ToString
 
-            If Cbn7.Text = "" Then
-                'Dim sql As String
-                sql = ""
-                sql = "select Q_NO+1 as Q_NO from T_Q "
+    '        If Cbn7.Text = "" Then
+    '            'Dim sql As String
+    '            sql = ""
+    '            sql = "select Q_NO+1 as Q_NO from T_Q "
 
-                tmp = cls.Query(sql)
+    '            tmp = cls.Query(sql)
 
-                Load_q.Text = tmp(0)("Q_NO").ToString
-                QLOAD = 1
-            End If
+    '            Load_q.Text = tmp(0)("Q_NO").ToString
+    '            QLOAD = 1
+    '        End If
 
-            truck = RadGridView1.CurrentRow.Cells("Truck_number").Value.ToString
+    '        truck = RadGridView1.CurrentRow.Cells("Truck_number").Value.ToString
 
-            Try
-                DriverName = RadGridView1.CurrentRow.Cells("Driver_id").Value.ToString
-                TDriverBindingSource.Position = TDriverBindingSource.Find("ID", DriverName.ToString)
-            Catch ex As Exception
-                Driver.SelectedIndex = -1
-            End Try
-            TTRUCKBindingSource1.Position = TTRUCKBindingSource1.Find("Truck_number", truck.ToString)
+    '        Try
+    '            DriverName = RadGridView1.CurrentRow.Cells("Driver_id").Value.ToString
+    '            TDriverBindingSource.Position = TDriverBindingSource.Find("ID", DriverName.ToString)
+    '        Catch ex As Exception
+    '            Driver.SelectedIndex = -1
+    '        End Try
+    '        TTRUCKBindingSource1.Position = TTRUCKBindingSource1.Find("Truck_number", truck.ToString)
 
-            Cbn2.SelectedIndex = TTRUCKBindingSource1.Position
-            Cbn2_Leave(sender, e)
-            Bsave.Visible = True
-            Update.Visible = False
-            Dim Ttype As String
+    '        Cbn2.SelectedIndex = TTRUCKBindingSource1.Position
+    '        Cbn2_Leave(sender, e)
+    '        Bsave.Visible = True
+    '        Update.Visible = False
+    '        Dim Ttype As String
 
-            q = "Select TRUCK_TYPE from T_truck where TRUCK_NUMBER= '" & (Cbn2.Text) & "'"
+    '        q = "Select TRUCK_TYPE from T_truck where TRUCK_NUMBER= '" & (Cbn2.Text) & "'"
 
-            tmp = cls.Query(q)
+    '        tmp = cls.Query(q)
 
-            Ttype = tmp(0)("TRUCK_TYPE")
+    '        Ttype = tmp(0)("TRUCK_TYPE")
 
-            If Ttype = "1003" Then
-                TruckH.Enabled = True
-                TruckH.Focus()
-            Else
-                Cbn11.Focus()
-            End If
+    '        If Ttype = "1003" Then
+    '            TruckH.Enabled = True
+    '            TruckH.Focus()
+    '        Else
+    '            Cbn11.Focus()
+    '        End If
 
-        Catch ex As Exception
-            Timer1.Enabled = True
-            RadPageView1.SelectedPage = RadPageViewPage1
-        End Try
-    End Sub
+    '    Catch ex As Exception
+    '        Timer1.Enabled = True
+    '        RadPageView1.SelectedPage = RadPageViewPage1
+    '    End Try
+    'End Sub
 
-    Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
+    Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'Me.VCHECKINLOAD1TableAdapter.Fill(Me.IRPCDataset.VCHECKINLOAD1)
     End Sub
 
@@ -2980,19 +3064,28 @@ Public Class Advisenote
         SelectVLoadingNote()
     End Sub
 
-    Private Sub ToolStripButton7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton7.Click
-        Dim ref As String
-        ref = RadGridView1.CurrentRow.Cells("Q_NO").Value.ToString
-        If MsgBox("Do you want cancel queue no.: " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-            Dim sql As String
+    'Private Sub ToolStripButton7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-            sql = ""
-            sql = "Update t_checkin set status=0,load_id='',load_type=0,CALL_ACTUAL=0 where ID='" & VCheckinBindingSource.Item(VCheckinBindingSource.Position)("ID").ToString & "'"
+    '    '----------------------- Check Delete Permission
+    '    If cls_role.ChkDel = False Then
+    '        Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to delete documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+    '        Me.Text = ds.ToString()
+    '        Exit Sub
+    '    End If
+    '    '----------------------- Check Delete Permission
 
-            cls.Update(sql)
-        End If
-        'Me.VCHECKINLOAD1TableAdapter.Fill(Me.IRPCDataset.VCHECKINLOAD1)
-    End Sub
+    '    Dim ref As String
+    '    ref = RadGridView1.CurrentRow.Cells("Q_NO").Value.ToString
+    '    If MsgBox("Do you want cancel queue no.: " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
+    '        Dim sql As String
+
+    '        sql = ""
+    '        sql = "Update t_checkin set status=0,load_id='',load_type=0,CALL_ACTUAL=0 where ID='" & VCheckinBindingSource.Item(VCheckinBindingSource.Position)("ID").ToString & "'"
+
+    '        cls.Update(sql)
+    '    End If
+    '    'Me.VCHECKINLOAD1TableAdapter.Fill(Me.IRPCDataset.VCHECKINLOAD1)
+    'End Sub
 
     Private Sub ToolStripButton8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton8.Click
         Canceldata_Click(sender, e)
@@ -3139,11 +3232,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList3.Text = "" Then IslandBay3.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3188,7 +3281,7 @@ Public Class Advisenote
             Next
             sql = ""
             sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-            'Dim da1 As SqlDataAdapter = New SqlDataAdapter(sql, conn)
+            'Dim da1 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
 
             Dim dt As DataTable = cls.Query(sql)
 
@@ -3207,11 +3300,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList4.Text = "" Then IslandBay4.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3255,7 +3348,7 @@ Public Class Advisenote
         Next
         sql = ""
         sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-        'Dim da1 As SqlDataAdapter = New SqlDataAdapter(sql, conn)
+        'Dim da1 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
 
         Dim dt As DataTable = cls.Query(sql)
 
@@ -3274,11 +3367,11 @@ Public Class Advisenote
                 Bay2 &= "," & dr(i)("Bay").ToString
             End If
         Next
-        For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            End If
-        Next
+        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+        '    End If
+        'Next
         If ProductList2.Text = "" Then IslandBay2.SelectedIndex = -1
         MyDataSet.Dispose()
     End Sub
@@ -3339,11 +3432,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList5.Text = "" Then IslandBay5.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3406,11 +3499,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList6.Text = "" Then IslandBay6.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3473,11 +3566,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList7.Text = "" Then IslandBay7.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3540,11 +3633,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList8.Text = "" Then IslandBay8.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3607,11 +3700,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList9.Text = "" Then IslandBay9.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3675,11 +3768,11 @@ Public Class Advisenote
                 End If
             Next
 
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList10.Text = "" Then IslandBay10.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3742,11 +3835,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList11.Text = "" Then IslandBay11.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3809,11 +3902,11 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-            For i As Integer = 0 To TRUCK_COMP_NUM - 1
-                If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-                End If
-            Next
+            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+            '    End If
+            'Next
             If ProductList12.Text = "" Then IslandBay12.SelectedIndex = -1
             MyDataSet.Dispose()
         Catch ex As Exception
@@ -3828,146 +3921,136 @@ Public Class Advisenote
         'SelectVLoadingNote()
     End Sub
 
-    Private Sub TruckH_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TruckH.Leave
-        Dim Vdate1, Vdate2, Vdate3 As Integer
-
-        If TruckH.Text = "" Then
+    Private Sub Seal_No_Leave(sender As Object, e As EventArgs) Handles Seal_No.Leave
+        If Seal_No.Text = "" Then
+            Seal_Total.Text = "0"
             Exit Sub
         End If
 
-        If EditType <> 1 And CanExit = 0 Then
-            Try
-                TTruckTypeBindingSource.Position = TTruckTypeBindingSource.Find("ID", TTRUCKBindingSource1.Item(Cbn2.SelectedIndex)("TRUCK_TYPE").ToString)
-                TCompanyBindingSource.Position = TCompanyBindingSource.Find("COMPANY_ID", TTRUCKBindingSource1.Item(Cbn2.SelectedIndex)("TRUCK_COMPANYID").ToString)
-            Catch ex As Exception
-            End Try
+        Dim Seal_NumberForCount As New List(Of String)
+        Dim Seal_Number As String = Seal_No.Text
+        Dim Seal_Func01 As String() = Seal_Number.Split(",")
 
-
-            Dim sql As String
-
-            '''''''' Check Override Check in
-            Dim q As String
-            sql = ""
-            sql = "select Insurance_dateexpire,measure_dateexpire,Condition_dateexpire  From V_Truck where TRUCK_NUMBER= '" & (TruckH.Text) & "'"
-
-            Dim dt1 As DataTable = cls.Query(sql)
-            Try
-                Vdate1 = Int(dt1.Rows(0).Item("Insurance_dateexpire").ToString())
-                'Vdate1 = Vdate1 + 1
-            Catch ex As Exception
-                Vdate1 = -1
-            End Try
-
-            If Vdate1 <= 0 Then
-                MessageBox.Show("Truck's insurance expire, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                If MsgBox("Do you want to bypass by Supervisor user?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-                    authorizeUser = 7
-                    Loginauthorize.ShowDialog()
-                    If Loginauthorize.Success = 0 Then
-                        'authorize_Remark.Text = ""
-                        AuthorRemark = ""
-                        authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                        TruckH.SelectedIndex = -1
-                        Cbn3.SelectedIndex = -1
-                        Trucktype.SelectedIndex = -1
-                        TruckH.Focus()
-                        Exit Sub
-                    End If
-                Else
-                    'authorize_Remark.Text = ""
-                    AuthorRemark = ""
-                    authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                    TruckH.SelectedIndex = -1
-                    Cbn3.SelectedIndex = -1
-                    Trucktype.SelectedIndex = -1
-                    TruckH.Focus()
-                    Exit Sub
-                End If
-                authorizeUser = 0
+        For i = 0 To Seal_Func01.Length - 1
+            Dim Seal_Func02 As String() = Seal_Func01(i).Split("-")
+            If Seal_Func02.Length > 1 Then
+                Dim LenStr As Integer = Len(Seal_Func02(1))
+                For ii = CDec(Strings.Right(Seal_Func02(0), LenStr)) To CDec(Seal_Func02(1))
+                    Seal_NumberForCount.Add(ii.ToString)
+                Next
+            Else
+                Seal_NumberForCount.Add(Seal_Func01(i))
             End If
+        Next
 
-            Try
-                Vdate2 = Int(dt1.Rows(0).Item("measure_dateexpire").ToString())
-                'Vdate2 = Vdate2 + 1
-            Catch ex As Exception
-                Vdate2 = -1
-            End Try
-            If (Vdate2 <= 0 And Vdate2 >= -10000) Then
-                MessageBox.Show("Truck's measure certificate expire, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                If MsgBox("Do you want to bypass by Supervisor user?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-                    authorizeUser = 8
-                    Loginauthorize.ShowDialog()
-                    If Loginauthorize.Success = 0 Then
-                        'authorize_Remark.Text = ""
-                        AuthorRemark = ""
-                        authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                        TruckH.SelectedIndex = -1
-                        Cbn3.SelectedIndex = -1
-                        Trucktype.SelectedIndex = -1
-                        TruckH.Focus()
-                        Exit Sub
-                    End If
-                Else
-                    'authorize_Remark.Text = ""
-                    AuthorRemark = ""
-                    authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                    TruckH.SelectedIndex = -1
-                    Cbn3.SelectedIndex = -1
-                    Trucktype.SelectedIndex = -1
-                    TruckH.Focus()
-                    Exit Sub
-                End If
-                authorizeUser = 0
-            End If
-
-            Try
-                Vdate3 = Int(dt1.Rows(0).Item("Condition_dateexpire").ToString())
-
-            Catch ex As Exception
-                Vdate3 = -1
-            End Try
-            If Vdate3 <= 0 Then
-                MessageBox.Show("Truck's inspection expire, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                If MsgBox("Do you want to bypass by Supervisor user?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-                    authorizeUser = 9
-                    Loginauthorize.ShowDialog()
-                    If Loginauthorize.Success = 0 Then
-                        'authorize_Remark.Text = ""
-                        AuthorRemark = ""
-                        authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                        TruckH.SelectedIndex = -1
-                        Cbn3.SelectedIndex = -1
-                        Trucktype.SelectedIndex = -1
-                        TruckH.Focus()
-                        Exit Sub
-                    End If
-                Else
-                    'authorize_Remark.Text = ""
-                    AuthorRemark = ""
-                    authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                    TruckH.SelectedIndex = -1
-                    Cbn3.SelectedIndex = -1
-                    Trucktype.SelectedIndex = -1
-                    TruckH.Focus()
-                    Exit Sub
-                End If
-                authorizeUser = 0
-            End If
-
-
-            If Vdate1 < 30 And Vdate1 > 0 Then
-                MessageBox.Show("Truck's insurance will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-            If Vdate2 < 30 And Vdate2 > 0 Then
-                MessageBox.Show("Truck's measure certificate wil expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-
-        End If
-        Container.Text = TruckH.Text
-        'Cbn11.Focus()
+        Seal_Total.Text = Seal_NumberForCount.Count
     End Sub
 
-    Private Sub Cbn2_SelectedValueChanged(sender As Object, e As EventArgs) Handles Cbn2.SelectedValueChanged
+    Private Sub IslandBay1_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay1.SelectedIndexChanged
+        Try
+            Dim sqlcmd As String = "select * from t_batchmeter where batch_status=10 order by batch_name"
+            Dim dt As DataTable = cls.Query(sqlcmd)
+            TBatchmeterBindingSource1.DataSource = dt
+            TBatchmeterBindingSource1.Filter = "batch_bay=" & TBAYBindingSource1.Item(TBAYBindingSource1.Position)("Bay_Number").ToString()
+            Meter1.DisplayMember = "BATCH_NAME"
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay2_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay2.SelectedIndexChanged
+        Try
+            Dim sqlcmd As String = "select * from t_batchmeter where batch_status=10 order by batch_name"
+            Dim dt As DataTable = cls.Query(sqlcmd)
+            TBatchmeterBindingSource2.DataSource = dt
+            TBatchmeterBindingSource2.Filter = "batch_bay=" & TBAYBindingSource2.Item(TBAYBindingSource2.Position)("Bay_Number").ToString()
+            Meter2.DisplayMember = "BATCH_NAME"
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay3_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay3.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource3.Filter = "batch_bay=" & TBAYBindingSource3.Item(TBAYBindingSource3.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay4_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay4.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource4.Filter = "batch_bay=" & TBayBindingSource4.Item(TBayBindingSource4.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay5_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay5.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource5.Filter = "batch_bay=" & TBayBindingSource5.Item(TBayBindingSource5.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay6_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay6.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource6.Filter = "batch_bay=" & TBayBindingSource6.Item(TBayBindingSource6.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay7_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay7.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource7.Filter = "batch_bay=" & TBayBindingSource7.Item(TBayBindingSource7.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay8_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay8.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource8.Filter = "batch_bay=" & TBayBindingSource8.Item(TBayBindingSource8.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay9_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay9.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource9.Filter = "batch_bay=" & TBayBindingSource9.Item(TBayBindingSource9.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay10_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay10.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource10.Filter = "batch_bay=" & TBayBindingSource10.Item(TBayBindingSource10.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay11_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay11.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource11.Filter = "batch_bay=" & TBayBindingSource11.Item(TBayBindingSource11.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub IslandBay12_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay12.SelectedIndexChanged
+        Try
+            TBatchmeterBindingSource12.Filter = "batch_bay=" & TBayBindingSource12.Item(TBayBindingSource12.Position)("Bay_Number").ToString()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Cbn2_SelectedValueChanged(sender As Object, e As EventArgs)
         If Cbn2.Text = "" Then Exit Sub
         Dim pri As String = "555"
     End Sub

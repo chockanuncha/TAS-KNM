@@ -52,7 +52,6 @@ Public Class Company
             MasterGrid.Enabled = True
             UPDATEBY.Text = MAIN.U_NAME
             TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("Company_DATE") = Now
-            TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("Insertdate") = Now
             TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("Company_ID") = TCOMPANYBindingSource.Count
             MasterGrid.DataSource = TCOMPANYBindingSource
             MasterGrid.ResumeLayout()

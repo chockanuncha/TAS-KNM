@@ -59,8 +59,8 @@ Public Class Journal_Events
 
             q = ""
             q = "Select * from t_Alarms_Batch_History where ADATETIME between "
-            q &= "To_date('" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
             q &= "order by ADATETIME "
 
             Dim MyDataSet As New DataSet
@@ -81,8 +81,8 @@ Public Class Journal_Events
 
             q = ""
             q = "Select * from t_event where  LDATE between  "
-            q &= "To_date('" & DateTimePicker3.Value.Year & "/" & DateTimePicker3.Value.Month & "/" & DateTimePicker3.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DateTimePicker4.Value.Year & "/" & DateTimePicker4.Value.Month & "/" & DateTimePicker4.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker3.Value.Year & "/" & DateTimePicker3.Value.Month & "/" & DateTimePicker3.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker4.Value.Year & "/" & DateTimePicker4.Value.Month & "/" & DateTimePicker4.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
             q &= "Order by LDATE"
 
             Dim MyDataSet As New DataSet
@@ -117,8 +117,8 @@ Public Class Journal_Events
             Dim Myreport As New ReportDocument
             Myreport = New ReportDocument
             sql = "Select * from t_Alarms_Batch_History where ADATETIME between "
-            sql &= "To_date('" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            sql &= "To_date('" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+            sql &= "CONVERT (DATETIME,'" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            sql &= "CONVERT (DATETIME,'" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
             sql &= "order by ADATETIME "
 
             Dim MyDataSet As New DataSet
@@ -141,8 +141,8 @@ Public Class Journal_Events
             Dim Myreport As New ReportDocument
             Myreport = New ReportDocument
             q = "Select ldate as ev_date,detail as ev_detail from t_event where  LDATE between  "
-            q &= "To_date('" & DateTimePicker3.Value.Year & "/" & DateTimePicker3.Value.Month & "/" & DateTimePicker3.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DateTimePicker4.Value.Year & "/" & DateTimePicker4.Value.Month & "/" & DateTimePicker4.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker3.Value.Year & "/" & DateTimePicker3.Value.Month & "/" & DateTimePicker3.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DateTimePicker4.Value.Year & "/" & DateTimePicker4.Value.Month & "/" & DateTimePicker4.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
             q &= "Order by LDATE"
 
             Dim MyDataSet As New DataSet

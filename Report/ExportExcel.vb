@@ -25,9 +25,9 @@ Public Class ExportExcel
             sql &= "from (select * from v_loadingnote where lc_status in(3,4)) t1  left join (select * from V_report_meter) t2  "
             sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
             sql &= "where t1.load_date between "
-            sql &= "To_date('" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            sql &= "To_date('" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  and lc_status in(3,4)  "
-            sql &= "group by Product_code,to_date(load_date,'dd/mm/yyyy') order by to_date(load_date,'dd/mm/yyyy'),t1.Product_code "
+            sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  and lc_status in(3,4)  "
+            sql &= "group by Product_code,CONVERT (DATETIME,load_date,'dd/mm/yyyy') order by CONVERT (DATETIME,load_date,'dd/mm/yyyy'),t1.Product_code "
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(sql, "TimeResult")

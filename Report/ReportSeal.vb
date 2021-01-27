@@ -21,7 +21,7 @@ Public Class ReportSeal
         If Reportmain.Report_Type = "seal" Then
             sql = ""
             sql = "Select * From v_seal "
-            sql &= " where  to_date(Load_date)=To_date('" + String.Format("{0:dd/MM/yyyy}", RadCalendar1.SelectedDate) + "','dd/MM/yyyy,HH:MI AM')"
+            sql &= " where  load_date=CONVERT (DATETIME,'" + String.Format("{0:dd/MM/yyyy}", RadCalendar1.SelectedDate) + "','dd/MM/yyyy,HH:MI AM')"
             Try
 
                 Dim MyDataSet As New DataSet

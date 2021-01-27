@@ -177,8 +177,17 @@ Partial Public Class MAIN
             Memory.FlushMemory()
         Catch ex As Exception
         End Try
+        'Me.AddOwnedForm(Advisenote)
+        'Advisenote.Show()
+
         Me.AddOwnedForm(Advisenote)
-        Advisenote.Show()
+        If Advisenote.Chk_View() = False Then
+            Exit Sub
+        Else
+            Advisenote.Show()
+        End If
+
+
     End Sub
 
     Private Sub linkTile1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkTile1.Click
@@ -305,11 +314,6 @@ Partial Public Class MAIN
         Reportmain.Show()
     End Sub
 
-    Private Sub RadLiveTileElement4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Truck_Menu.Click
-        Me.AddOwnedForm(Truck)
-        Truck.Show()
-    End Sub
-
     Private Sub linkTile2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Card_Menu.Click
         Me.AddOwnedForm(Card)
         Card.Show()
@@ -396,21 +400,12 @@ Partial Public Class MAIN
         Company.Show()
     End Sub
 
-    Private Sub RadTileElement28_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadTileElement28.Click
-        Me.AddOwnedForm(Topup)
-        Topup.Show()
-    End Sub
+
 
     Private Sub rssReaderTile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.AddOwnedForm(Temp)
         Temp.Show()
 
-    End Sub
-
-
-    Private Sub RadTileElement40_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadTileElement40.Click
-        'Me.AddOwnedForm(Unloadingnote)
-        'Unloadingnote.Show()
     End Sub
 
     Private Sub RadLiveTileElement23_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BayMenu.Click
@@ -428,10 +423,7 @@ Partial Public Class MAIN
         BatchMeter.Show()
     End Sub
 
-    Private Sub RadLiveTileElement25_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadLiveTileElement25.Click
-        Me.AddOwnedForm(Bay_Setting)
-        Bay_Setting.Show()
-    End Sub
+
 
 
     Private Sub RadLiveTileElement11_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadLiveTileElement11.Click
@@ -500,12 +492,6 @@ Partial Public Class MAIN
 
 
     End Sub
-
-    Private Sub Tank_menu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tank_menu.Click
-        'Me.AddOwnedForm(Tank)
-        'Tank.Show()
-    End Sub
-
     Private Sub AlarmGrid_CellFormatting(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.CellFormattingEventArgs)
         e.CellElement.NumberOfColors = 4
         e.CellElement.BackColor = Color.FromArgb(253, 141, 142)
@@ -538,10 +524,7 @@ Partial Public Class MAIN
         Q_Load.Show()
     End Sub
 
-    Private Sub RadTileElement29_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadTileElement29.Click
-        Me.AddOwnedForm(Advisenote_Status)
-        Advisenote_Status.Show()
-    End Sub
+
 
     Private Sub RadLiveTileElement23_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.AddOwnedForm(Workonlan)
@@ -578,6 +561,42 @@ Partial Public Class MAIN
         End If
 
 
+    End Sub
+
+    Private Sub Topup_Menu_Click(sender As Object, e As EventArgs) Handles Topup_Menu.Click
+        Me.AddOwnedForm(Topup)
+        If Topup.Chk_View() = False Then
+            Exit Sub
+        Else
+            Topup.Show()
+        End If
+    End Sub
+
+    Private Sub Statusview_Menu_Click(sender As Object, e As EventArgs) Handles Statusview_Menu.Click
+        Me.AddOwnedForm(Advisenote_Status)
+        If Advisenote_Status.Chk_View() = False Then
+            Exit Sub
+        Else
+            Advisenote_Status.Show()
+        End If
+    End Sub
+
+    Private Sub BaySetting_Menu_Click(sender As Object, e As EventArgs) Handles BaySetting_Menu.Click
+        Me.AddOwnedForm(Bay_Setting)
+        If Bay_Setting.Chk_View() = False Then
+            Exit Sub
+        Else
+            Bay_Setting.Show()
+        End If
+    End Sub
+
+    Private Sub Truck_Menu_Click(sender As Object, e As EventArgs) Handles Truck_Menu.Click
+        Me.AddOwnedForm(Truck)
+        If Truck.Chk_View() = False Then
+            Exit Sub
+        Else
+            Truck.Show()
+        End If
     End Sub
 End Class
 

@@ -133,10 +133,10 @@ Partial Class ConfigQ
         '
         'Bsave
         '
-        Me.Bsave.BackColor = System.Drawing.Color.Transparent
+        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bsave.ForeColor = System.Drawing.Color.Black
+        Me.Bsave.ForeColor = System.Drawing.Color.White
         Me.Bsave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.Bsave.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.Bsave.Location = New System.Drawing.Point(467, 104)
@@ -154,9 +154,9 @@ Partial Class ConfigQ
         '
         'BCancel
         '
-        Me.BCancel.BackColor = System.Drawing.Color.Transparent
+        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BCancel.ForeColor = System.Drawing.Color.Black
+        Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BCancel.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.BCancel.Location = New System.Drawing.Point(606, 104)

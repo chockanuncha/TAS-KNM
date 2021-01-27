@@ -1,10 +1,26 @@
 ﻿Imports System.Threading
 Imports System.Drawing.Printing
 Imports System.ComponentModel
+Imports Telerik.WinControls
 
 Public Class Advisenote_Status
     Private cls As New Class_SQLSERVERDB
+
     Public Grid As Integer
+    Private cls_role As New Class_Permission
+    Public Function Chk_View()
+        '------------------------------------------- Start Check Permission
+        RadMessageBox.SetThemeName("Office2010Blue")
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 3)
+        If cls_role.ChkView = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Return False
+        End If
+        '------------------------------------------- End Check Permission
+
+        Return True
+    End Function
 
     Private Sub Advisenote_Status_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
         SelectWaiting()
@@ -23,8 +39,8 @@ Public Class Advisenote_Status
 
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=1 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
-            q &= "To_date('" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
+            q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
 
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "
@@ -49,8 +65,8 @@ Public Class Advisenote_Status
 
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=2 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
-            q &= "To_date('" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
+            q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
 
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "
@@ -76,8 +92,8 @@ Public Class Advisenote_Status
 
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=3 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
-            q &= "To_date('" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
+            q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
 
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "
@@ -101,8 +117,8 @@ Public Class Advisenote_Status
 
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=4 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
-            q &= "To_date('" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "To_date('" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
+            q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
 
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "

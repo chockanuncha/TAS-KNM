@@ -261,7 +261,7 @@ Partial Class Driver
         Me.RadDateTimePicker3.Size = New System.Drawing.Size(320, 28)
         Me.RadDateTimePicker3.TabIndex = 303
         Me.RadDateTimePicker3.TabStop = False
-        Me.RadDateTimePicker3.Text = "22/05/2014"
+        Me.RadDateTimePicker3.Text = "22/05/2557"
         Me.RadDateTimePicker3.ThemeName = "Office2010Blue"
         Me.RadDateTimePicker3.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
         '
@@ -298,7 +298,7 @@ Partial Class Driver
         Me.RadDateTimePicker2.Size = New System.Drawing.Size(320, 28)
         Me.RadDateTimePicker2.TabIndex = 302
         Me.RadDateTimePicker2.TabStop = False
-        Me.RadDateTimePicker2.Text = "22/05/2014"
+        Me.RadDateTimePicker2.Text = "22/05/2557"
         Me.RadDateTimePicker2.ThemeName = "Office2010Blue"
         Me.RadDateTimePicker2.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
         '
@@ -439,7 +439,7 @@ Partial Class Driver
         Me.RadDateTimePicker1.Size = New System.Drawing.Size(320, 28)
         Me.RadDateTimePicker1.TabIndex = 301
         Me.RadDateTimePicker1.TabStop = False
-        Me.RadDateTimePicker1.Text = "22/05/2014"
+        Me.RadDateTimePicker1.Text = "22/05/2557"
         Me.RadDateTimePicker1.ThemeName = "Office2010Blue"
         Me.RadDateTimePicker1.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
         '
@@ -737,9 +737,9 @@ Partial Class Driver
         '
         'BCANCEL
         '
-        Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
+        ''Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCANCEL.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BCANCEL.ForeColor = System.Drawing.Color.Black
+        Me.BCANCEL.ForeColor = System.Drawing.Color.White
         Me.BCANCEL.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BCANCEL.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.BCANCEL.Location = New System.Drawing.Point(573, 14)
@@ -757,10 +757,10 @@ Partial Class Driver
         '
         'BSAVE
         '
-        Me.BSAVE.BackColor = System.Drawing.Color.Transparent
+        ''Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.BSAVE.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.BSAVE.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSAVE.ForeColor = System.Drawing.Color.Black
+        Me.BSAVE.ForeColor = System.Drawing.Color.White
         Me.BSAVE.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.BSAVE.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.BSAVE.Location = New System.Drawing.Point(435, 14)

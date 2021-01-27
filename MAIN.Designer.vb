@@ -69,15 +69,15 @@ Partial Class MAIN
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadClock1 = New Telerik.WinControls.UI.RadClock()
         Me.LoadingGroup = New Telerik.WinControls.UI.TileGroupElement()
-        Me.RadTileElement28 = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.RadTileElement29 = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.Topup_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.Statusview_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadTileElement33 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Advisenote_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.ToolGroup = New Telerik.WinControls.UI.TileGroupElement()
         Me.themeViewerTile = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement11 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement12 = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.RadLiveTileElement25 = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.BaySetting_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.MMIGroups = New Telerik.WinControls.UI.TileGroupElement()
         Me.listViewTile = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.schedulerTile = New Telerik.WinControls.UI.RadLiveTileElement()
@@ -843,7 +843,7 @@ Partial Class MAIN
         Me.LoadingGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LoadingGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.fuel_tanker3_48x48
         Me.LoadingGroup.ImageAlignment = System.Drawing.ContentAlignment.TopRight
-        Me.LoadingGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RadTileElement28, Me.RadTileElement29, Me.RadTileElement33, Me.Advisenote_Menu})
+        Me.LoadingGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Topup_Menu, Me.Statusview_Menu, Me.RadTileElement33, Me.Advisenote_Menu})
         Me.LoadingGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.LoadingGroup.Name = "LoadingGroup"
         Me.LoadingGroup.RowsCount = 4
@@ -851,46 +851,46 @@ Partial Class MAIN
         Me.LoadingGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.LoadingGroup.ToolTipText = "การจ่ายผลิตภัณฑ์"
         '
-        'RadTileElement28
+        'Topup_Menu
         '
-        Me.RadTileElement28.AccessibleDescription = "RadTileElement28"
-        Me.RadTileElement28.AccessibleName = "RadTileElement28"
-        Me.RadTileElement28.AutoSize = True
-        Me.RadTileElement28.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
-        Me.RadTileElement28.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.RadTileElement28.ColSpan = 2
-        Me.RadTileElement28.EnableImageTransparency = True
-        Me.RadTileElement28.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
-        Me.RadTileElement28.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.RadTileElement28.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.logo_U_Top_Up_48x48
-        Me.RadTileElement28.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.RadTileElement28.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadTileElement28.Name = "RadTileElement28"
-        Me.RadTileElement28.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadTileElement28.Row = 1
-        Me.RadTileElement28.Text = "Loading Top Up"
-        Me.RadTileElement28.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTileElement28.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Topup_Menu.AccessibleDescription = "RadTileElement28"
+        Me.Topup_Menu.AccessibleName = "RadTileElement28"
+        Me.Topup_Menu.AutoSize = True
+        Me.Topup_Menu.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.Topup_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.Topup_Menu.ColSpan = 2
+        Me.Topup_Menu.EnableImageTransparency = True
+        Me.Topup_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
+        Me.Topup_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.Topup_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.logo_U_Top_Up_48x48
+        Me.Topup_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.Topup_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Topup_Menu.Name = "Topup_Menu"
+        Me.Topup_Menu.Padding = New System.Windows.Forms.Padding(5)
+        Me.Topup_Menu.Row = 1
+        Me.Topup_Menu.Text = "Loading Top Up"
+        Me.Topup_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.Topup_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
-        'RadTileElement29
+        'Statusview_Menu
         '
-        Me.RadTileElement29.AccessibleDescription = "RadTileElement29"
-        Me.RadTileElement29.AccessibleName = "RadTileElement29"
-        Me.RadTileElement29.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
-        Me.RadTileElement29.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.RadTileElement29.ColSpan = 2
-        Me.RadTileElement29.EnableImageTransparency = True
-        Me.RadTileElement29.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
-        Me.RadTileElement29.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.RadTileElement29.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Changer_d_utilisateur
-        Me.RadTileElement29.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.RadTileElement29.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadTileElement29.Name = "RadTileElement29"
-        Me.RadTileElement29.Padding = New System.Windows.Forms.Padding(1, 5, 5, 5)
-        Me.RadTileElement29.Row = 2
-        Me.RadTileElement29.Text = "Status Overview"
-        Me.RadTileElement29.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTileElement29.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.Statusview_Menu.AccessibleDescription = "RadTileElement29"
+        Me.Statusview_Menu.AccessibleName = "RadTileElement29"
+        Me.Statusview_Menu.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.Statusview_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.Statusview_Menu.ColSpan = 2
+        Me.Statusview_Menu.EnableImageTransparency = True
+        Me.Statusview_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
+        Me.Statusview_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.Statusview_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Changer_d_utilisateur
+        Me.Statusview_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.Statusview_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Statusview_Menu.Name = "Statusview_Menu"
+        Me.Statusview_Menu.Padding = New System.Windows.Forms.Padding(1, 5, 5, 5)
+        Me.Statusview_Menu.Row = 2
+        Me.Statusview_Menu.Text = "Status Overview"
+        Me.Statusview_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.Statusview_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'RadTileElement33
         '
@@ -943,7 +943,7 @@ Partial Class MAIN
         Me.ToolGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ToolGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Comic_Icons_New
         Me.ToolGroup.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.ToolGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.themeViewerTile, Me.RadLiveTileElement11, Me.RadLiveTileElement12, Me.RadLiveTileElement25})
+        Me.ToolGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.themeViewerTile, Me.RadLiveTileElement11, Me.RadLiveTileElement12, Me.BaySetting_Menu})
         Me.ToolGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.ToolGroup.Name = "ToolGroup"
         Me.ToolGroup.NumberOfColors = 3
@@ -1021,26 +1021,26 @@ Partial Class MAIN
         Me.RadLiveTileElement12.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLiveTileElement12.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
-        'RadLiveTileElement25
+        'BaySetting_Menu
         '
-        Me.RadLiveTileElement25.AccessibleDescription = "สถาณะการเข้าจ่าย"
-        Me.RadLiveTileElement25.AccessibleName = "สถาณะการเข้าจ่าย"
-        Me.RadLiveTileElement25.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.RadLiveTileElement25.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.RadLiveTileElement25.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.RadLiveTileElement25.ColSpan = 2
-        Me.RadLiveTileElement25.Column = 2
-        Me.RadLiveTileElement25.EnableImageTransparency = True
-        Me.RadLiveTileElement25.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
-        Me.RadLiveTileElement25.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.RadLiveTileElement25.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources._DO
-        Me.RadLiveTileElement25.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.RadLiveTileElement25.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadLiveTileElement25.Name = "RadLiveTileElement25"
-        Me.RadLiveTileElement25.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadLiveTileElement25.Text = "Bay Settings"
-        Me.RadLiveTileElement25.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLiveTileElement25.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.BaySetting_Menu.AccessibleDescription = "สถาณะการเข้าจ่าย"
+        Me.BaySetting_Menu.AccessibleName = "สถาณะการเข้าจ่าย"
+        Me.BaySetting_Menu.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.BaySetting_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BaySetting_Menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BaySetting_Menu.ColSpan = 2
+        Me.BaySetting_Menu.Column = 2
+        Me.BaySetting_Menu.EnableImageTransparency = True
+        Me.BaySetting_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
+        Me.BaySetting_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.BaySetting_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources._DO
+        Me.BaySetting_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.BaySetting_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BaySetting_Menu.Name = "BaySetting_Menu"
+        Me.BaySetting_Menu.Padding = New System.Windows.Forms.Padding(5)
+        Me.BaySetting_Menu.Text = "Bay Settings"
+        Me.BaySetting_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.BaySetting_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'MMIGroups
         '
@@ -2500,8 +2500,8 @@ Partial Class MAIN
     Private WithEvents RadTileElement25 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents Driver_Menu As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents RadTileElement27 As Telerik.WinControls.UI.RadLiveTileElement
-    Friend WithEvents RadTileElement28 As Telerik.WinControls.UI.RadLiveTileElement
-    Friend WithEvents RadTileElement29 As Telerik.WinControls.UI.RadLiveTileElement
+    Friend WithEvents Topup_Menu As Telerik.WinControls.UI.RadLiveTileElement
+    Friend WithEvents Statusview_Menu As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadTileElement33 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents Advisenote_Menu As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents RadTileElement37 As Telerik.WinControls.UI.RadLiveTileElement
@@ -2531,7 +2531,7 @@ Partial Class MAIN
     Private WithEvents themeViewerTile As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement11 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement12 As Telerik.WinControls.UI.RadLiveTileElement
-    Friend WithEvents RadLiveTileElement25 As Telerik.WinControls.UI.RadLiveTileElement
+    Friend WithEvents BaySetting_Menu As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents TileGroupElement4 As Telerik.WinControls.UI.TileGroupElement
     Private WithEvents RadLiveTileElement14 As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents RadLiveTileElement15 As Telerik.WinControls.UI.RadLiveTileElement

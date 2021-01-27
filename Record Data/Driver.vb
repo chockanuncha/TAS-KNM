@@ -47,7 +47,7 @@ Public Class Driver
             Driver_StatusOn.Checked = True
             Dim q, Driver_Number As String
             q = ""
-            q = "select NVL(max(to_number(Driver_Number)),0)+1 as Driver_Number  from T_Driver"
+            q = "select isnull(max(cast(Driver_Number as int)),0)+1 as Driver_Number  from T_Driver"
 
             Dim dt As DataTable = cls.Query(q)
 
@@ -194,7 +194,7 @@ Public Class Driver
 
         Dim q, Driver_Number As String
         q = ""
-        q = "select NVL(max(to_number(Driver_Number)),0)+1 as Driver_Number  from T_Driver"
+        q = "select isnull(max(cast(Driver_Number as int)),0)+1 as Driver_Number  from T_Driver"
 
         Dim dt As DataTable = cls.Query(q)
 
