@@ -330,7 +330,11 @@ Partial Public Class MAIN
 
     Private Sub Driver_But_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver_Menu.Click
         Me.AddOwnedForm(Driver)
-        Driver.Show()
+        If Driver.Chk_View() = False Then
+            Exit Sub
+        Else
+            Driver.Show()
+        End If
     End Sub
 
     Private Sub RadTileElement2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

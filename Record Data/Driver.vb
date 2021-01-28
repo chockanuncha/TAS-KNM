@@ -1,5 +1,6 @@
 ﻿Imports System
 Imports ExtendedErrorProvider
+Imports Telerik.WinControls
 
 Public Class Driver
     Private cls As New Class_SQLSERVERDB
@@ -14,6 +15,21 @@ Public Class Driver
     Dim Ref As String
     Dim del As Integer = 0
     Dim Add As Integer = 0
+
+    Public Function Chk_View()
+        '------------------------------------------- Start Check Permission
+        RadMessageBox.SetThemeName("Office2010Blue")
+
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 12)
+
+        If cls_role.ChkView = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Return False
+        End If
+        '------------------------------------------- End Check Permission
+        Return True
+    End Function
 
     Private Sub Driver_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MasterGrid.FilterDescriptors.Clear()
@@ -35,6 +51,15 @@ Public Class Driver
     End Sub
 
     Private Sub Btadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btadd.Click
+
+        '------------------------------------------- Check Add Permission
+        If cls_role.ChkAdd = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to add data in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Exit Sub
+        End If
+        '------------------------------------------- Check Add Permission
+
 
         Try
             Bcancel_Click(sender, e)
@@ -88,6 +113,15 @@ Public Class Driver
     End Sub
 
     Private Sub BtEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtEdit.Click
+
+        '------------------------------------------- Check Edit Permission
+        If cls_role.ChkEdit = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to edit data in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Exit Sub
+        End If
+        '------------------------------------------- Check Edit Permission
+
         Try
             ED = 1
             U_UPDATEBY.Text = MAIN.U_NAME
@@ -101,8 +135,15 @@ Public Class Driver
     End Sub
 
     Private Sub BtDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
-        If cls_role.Check_Permission(MAIN.U_GROUP, Page_Group) Then
-            MasterGrid.Enabled = True
+        '------------------------------------------- Check Delete Permission
+        If cls_role.ChkDel = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to delete data in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Exit Sub
+        End If
+        '------------------------------------------- Check Delete Permission
+
+        MasterGrid.Enabled = True
             DetailGroup.Enabled = False
             BindingNavigator1.Enabled = False
 
@@ -124,11 +165,7 @@ Public Class Driver
             Else
                 Driver_Load(sender, e)
             End If
-        Else
-            MessageBox.Show("No Permission!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Driver_Load(sender, e)
-            Exit Sub
-        End If
+
     End Sub
 
     Private Sub Driver_StatusOn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver_StatusOn.Click
@@ -314,16 +351,11 @@ Public Class Driver
     End Sub
     Private Sub SelectDriverlog()
         Dim q As String
-
         Try
             q = ""
-            q = "SELECT * from t_driverlog where driverid='" & TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString & "'"
-
+            q = "SELECT * from t_driverlog where driverid='" & TDRIVERBindingSource.Item(TDRIVERBindingSource.Position)("ID").ToString & "'"
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "T_Driver")
-
-            'TDriverBlacklistBindingSource.DataSource = MyDataSet
-            'TDriverBlacklistBindingSource.DataMember = "T_Driver"
             MyDataSet.Dispose()
         Catch ex As Exception
             MsgBox(ex.Message())

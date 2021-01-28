@@ -737,7 +737,6 @@ Partial Class Driver
         '
         'BCANCEL
         '
-        ''Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCANCEL.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCANCEL.ForeColor = System.Drawing.Color.White
         Me.BCANCEL.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
@@ -757,7 +756,6 @@ Partial Class Driver
         '
         'BSAVE
         '
-        ''Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.BSAVE.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.BSAVE.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BSAVE.ForeColor = System.Drawing.Color.White
@@ -1030,7 +1028,7 @@ Partial Class Driver
         Me.RadButton1.Location = New System.Drawing.Point(12, 14)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(211, 44)
-        Me.RadButton1.TabIndex = 11
+        Me.RadButton1.TabIndex = 0
         Me.RadButton1.Text = "Driver Black List "
         Me.RadButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.RadButton1.ThemeName = "Breeze"
