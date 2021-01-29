@@ -46,7 +46,7 @@ Partial Class Seal
         Me.Seallast.ReadOnly = True
         Me.Seallast.Size = New System.Drawing.Size(188, 38)
         Me.Seallast.TabIndex = 41
-        Me.Seallast.TabStop = False
+        Me.Seallast.TabStop = True
         Me.Seallast.Text = "DDDD"
         Me.Seallast.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -68,7 +68,7 @@ Partial Class Seal
         Me.SealUp.Name = "SealUp"
         Me.SealUp.Size = New System.Drawing.Size(188, 38)
         Me.SealUp.TabIndex = 43
-        Me.SealUp.TabStop = False
+        Me.SealUp.TabStop = True
         Me.SealUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1

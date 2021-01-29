@@ -368,7 +368,7 @@ Partial Public Class USER
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -398,7 +398,7 @@ Partial Public Class USER
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(552, 777)
         Me.DetailGroup.TabIndex = 5
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'RadGroupBox5
         '
@@ -430,7 +430,7 @@ Partial Public Class USER
         Me.RadDateTimePicker1.Name = "RadDateTimePicker1"
         Me.RadDateTimePicker1.Size = New System.Drawing.Size(300, 32)
         Me.RadDateTimePicker1.TabIndex = 73
-        Me.RadDateTimePicker1.TabStop = False
+        Me.RadDateTimePicker1.TabStop = True
         Me.RadDateTimePicker1.Text = "01/04/2563"
         Me.RadDateTimePicker1.ThemeName = "Breeze"
         Me.RadDateTimePicker1.Value = New Date(2020, 4, 1, 11, 23, 38, 842)
@@ -475,7 +475,7 @@ Partial Public Class USER
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(300, 27)
         Me.U_UPDATE.TabIndex = 68
-        Me.U_UPDATE.TabStop = False
+        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Windows8"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -510,7 +510,7 @@ Partial Public Class USER
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(300, 27)
         Me.U_UPDATEBY.TabIndex = 69
-        Me.U_UPDATEBY.TabStop = False
+        Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Windows8"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -543,7 +543,7 @@ Partial Public Class USER
         Me.RadDateTimePicker2.Name = "RadDateTimePicker2"
         Me.RadDateTimePicker2.Size = New System.Drawing.Size(300, 32)
         Me.RadDateTimePicker2.TabIndex = 74
-        Me.RadDateTimePicker2.TabStop = False
+        Me.RadDateTimePicker2.TabStop = True
         Me.RadDateTimePicker2.Text = "01/04/2563"
         Me.RadDateTimePicker2.ThemeName = "Breeze"
         Me.RadDateTimePicker2.Value = New Date(2020, 4, 1, 11, 23, 38, 842)

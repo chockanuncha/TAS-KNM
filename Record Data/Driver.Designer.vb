@@ -183,7 +183,7 @@ Partial Class Driver
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(713, 827)
         Me.DetailGroup.TabIndex = 11
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'Panel1
         '
@@ -260,7 +260,7 @@ Partial Class Driver
         Me.RadDateTimePicker3.Name = "RadDateTimePicker3"
         Me.RadDateTimePicker3.Size = New System.Drawing.Size(320, 28)
         Me.RadDateTimePicker3.TabIndex = 303
-        Me.RadDateTimePicker3.TabStop = False
+        Me.RadDateTimePicker3.TabStop = True
         Me.RadDateTimePicker3.Text = "22/05/2557"
         Me.RadDateTimePicker3.ThemeName = "Office2010Blue"
         Me.RadDateTimePicker3.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
@@ -297,7 +297,7 @@ Partial Class Driver
         Me.RadDateTimePicker2.Name = "RadDateTimePicker2"
         Me.RadDateTimePicker2.Size = New System.Drawing.Size(320, 28)
         Me.RadDateTimePicker2.TabIndex = 302
-        Me.RadDateTimePicker2.TabStop = False
+        Me.RadDateTimePicker2.TabStop = True
         Me.RadDateTimePicker2.Text = "22/05/2557"
         Me.RadDateTimePicker2.ThemeName = "Office2010Blue"
         Me.RadDateTimePicker2.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
@@ -336,7 +336,7 @@ Partial Class Driver
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(320, 28)
         Me.U_UPDATEBY.TabIndex = 315
-        Me.U_UPDATEBY.TabStop = False
+        Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -352,7 +352,7 @@ Partial Class Driver
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(320, 28)
         Me.U_UPDATE.TabIndex = 314
-        Me.U_UPDATE.TabStop = False
+        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -399,7 +399,7 @@ Partial Class Driver
         Me.RadTextBox5.Name = "RadTextBox5"
         Me.RadTextBox5.Size = New System.Drawing.Size(320, 28)
         Me.RadTextBox5.TabIndex = 307
-        Me.RadTextBox5.TabStop = False
+        Me.RadTextBox5.TabStop = True
         Me.RadTextBox5.ThemeName = "Office2010Blue"
         Me.RadTextBox5.Visible = False
         '
@@ -438,7 +438,7 @@ Partial Class Driver
         Me.RadDateTimePicker1.Name = "RadDateTimePicker1"
         Me.RadDateTimePicker1.Size = New System.Drawing.Size(320, 28)
         Me.RadDateTimePicker1.TabIndex = 301
-        Me.RadDateTimePicker1.TabStop = False
+        Me.RadDateTimePicker1.TabStop = True
         Me.RadDateTimePicker1.Text = "22/05/2557"
         Me.RadDateTimePicker1.ThemeName = "Office2010Blue"
         Me.RadDateTimePicker1.Value = New Date(2014, 5, 22, 0, 0, 0, 0)
@@ -464,7 +464,7 @@ Partial Class Driver
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(320, 61)
         Me.GroupBox4.TabIndex = 304
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'Driver_StatusOff
@@ -500,7 +500,7 @@ Partial Class Driver
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(320, 61)
         Me.GroupBox2.TabIndex = 305
-        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.TabStop = True
         Me.GroupBox2.Tag = ""
         '
         'NonBl
@@ -602,7 +602,7 @@ Partial Class Driver
         Me.DriverLname.Name = "DriverLname"
         Me.DriverLname.Size = New System.Drawing.Size(320, 28)
         Me.DriverLname.TabIndex = 286
-        Me.DriverLname.TabStop = False
+        Me.DriverLname.TabStop = True
         Me.DriverLname.ThemeName = "Office2010Blue"
         '
         'RadLabel9
@@ -625,7 +625,7 @@ Partial Class Driver
         Me.RadTextBox4.Name = "RadTextBox4"
         Me.RadTextBox4.Size = New System.Drawing.Size(320, 28)
         Me.RadTextBox4.TabIndex = 288
-        Me.RadTextBox4.TabStop = False
+        Me.RadTextBox4.TabStop = True
         Me.RadTextBox4.ThemeName = "Office2010Blue"
         '
         'RadLabel6
@@ -660,7 +660,7 @@ Partial Class Driver
         Me.Drivername.Name = "Drivername"
         Me.Drivername.Size = New System.Drawing.Size(320, 28)
         Me.Drivername.TabIndex = 285
-        Me.Drivername.TabStop = False
+        Me.Drivername.TabStop = True
         Me.Drivername.ThemeName = "Office2010Blue"
         '
         'RadLabel3
@@ -683,7 +683,7 @@ Partial Class Driver
         Me.RadTextBox1.Name = "RadTextBox1"
         Me.RadTextBox1.Size = New System.Drawing.Size(320, 28)
         Me.RadTextBox1.TabIndex = 287
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.ThemeName = "Office2010Blue"
         '
         'RadLabel2
@@ -708,7 +708,7 @@ Partial Class Driver
         Me.DriverNumber.ReadOnly = True
         Me.DriverNumber.Size = New System.Drawing.Size(320, 28)
         Me.DriverNumber.TabIndex = 290
-        Me.DriverNumber.TabStop = False
+        Me.DriverNumber.TabStop = True
         Me.DriverNumber.ThemeName = "Office2010Blue"
         CType(Me.DriverNumber.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.DriverNumber.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1046,7 +1046,7 @@ Partial Class Driver
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2

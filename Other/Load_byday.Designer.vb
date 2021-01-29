@@ -323,7 +323,7 @@ Partial Class Load_byday
         Me.PictureBox1.Size = New System.Drawing.Size(323, 142)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 193
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'RadCalendar1
         '

@@ -195,9 +195,6 @@ Public Class Tank_Order
         End Try
 
     End Sub
-
-
-
     Private Sub RadGridView1_CellFormatting(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridView1.CellFormatting
         e.CellElement.NumberOfColors = 1
         e.CellElement.BackColor = Color.FromArgb(72, 162, 255)

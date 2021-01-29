@@ -123,7 +123,7 @@ Partial Class Shipper
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(703, 695)
         Me.DetailGroup.TabIndex = 4
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'Label7
         '
@@ -144,7 +144,7 @@ Partial Class Shipper
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(392, 28)
         Me.UPDATEBY.TabIndex = 118
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -159,7 +159,7 @@ Partial Class Shipper
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(392, 28)
         Me.U_UPDATE.TabIndex = 117
-        Me.U_UPDATE.TabStop = False
+        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -306,7 +306,7 @@ Partial Class Shipper
         Me.P_Code.Name = "P_Code"
         Me.P_Code.Size = New System.Drawing.Size(392, 28)
         Me.P_Code.TabIndex = 0
-        Me.P_Code.TabStop = False
+        Me.P_Code.TabStop = True
         Me.P_Code.ThemeName = "Office2010Blue"
         '
         'Sp_code
@@ -317,7 +317,7 @@ Partial Class Shipper
         Me.Sp_code.Name = "Sp_code"
         Me.Sp_code.Size = New System.Drawing.Size(392, 28)
         Me.Sp_code.TabIndex = 1
-        Me.Sp_code.TabStop = False
+        Me.Sp_code.TabStop = True
         Me.Sp_code.ThemeName = "Office2010Blue"
         '
         'P_Remark
@@ -328,7 +328,7 @@ Partial Class Shipper
         Me.P_Remark.Name = "P_Remark"
         Me.P_Remark.Size = New System.Drawing.Size(392, 28)
         Me.P_Remark.TabIndex = 4
-        Me.P_Remark.TabStop = False
+        Me.P_Remark.TabStop = True
         Me.P_Remark.ThemeName = "Office2010Blue"
         '
         'T_SHIPPERTableAdapter
@@ -551,7 +551,7 @@ Partial Class Shipper
         Me.G_SUM.ReadOnly = True
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4

@@ -367,7 +367,7 @@ Partial Class Companyparent
         Me.G_SUM.ReadOnly = True
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -458,7 +458,7 @@ Partial Class Companyparent
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(618, 694)
         Me.DetailGroup.TabIndex = 4
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'RadLabel7
         '
@@ -503,7 +503,7 @@ Partial Class Companyparent
         Me.RadTextBox4.Name = "RadTextBox4"
         Me.RadTextBox4.Size = New System.Drawing.Size(337, 26)
         Me.RadTextBox4.TabIndex = 6
-        Me.RadTextBox4.TabStop = False
+        Me.RadTextBox4.TabStop = True
         '
         'RadLabel1
         '
@@ -524,7 +524,7 @@ Partial Class Companyparent
         Me.RadTextBox2.Name = "RadTextBox2"
         Me.RadTextBox2.Size = New System.Drawing.Size(337, 26)
         Me.RadTextBox2.TabIndex = 4
-        Me.RadTextBox2.TabStop = False
+        Me.RadTextBox2.TabStop = True
         Me.RadTextBox2.ThemeName = "Office2010Blue"
         '
         'RadLabel9
@@ -559,7 +559,7 @@ Partial Class Companyparent
         Me.RadTextBox3.Name = "RadTextBox3"
         Me.RadTextBox3.Size = New System.Drawing.Size(337, 26)
         Me.RadTextBox3.TabIndex = 5
-        Me.RadTextBox3.TabStop = False
+        Me.RadTextBox3.TabStop = True
         Me.RadTextBox3.ThemeName = "Office2010Blue"
         '
         'Bsave
@@ -627,7 +627,7 @@ Partial Class Companyparent
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(337, 26)
         Me.UPDATEBY.TabIndex = 76
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -642,7 +642,7 @@ Partial Class Companyparent
         Me.P_UPDATE.ReadOnly = True
         Me.P_UPDATE.Size = New System.Drawing.Size(337, 26)
         Me.P_UPDATE.TabIndex = 75
-        Me.P_UPDATE.TabStop = False
+        Me.P_UPDATE.TabStop = True
         Me.P_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -666,7 +666,7 @@ Partial Class Companyparent
         Me.Company_Tel.Name = "Company_Tel"
         Me.Company_Tel.Size = New System.Drawing.Size(337, 26)
         Me.Company_Tel.TabIndex = 7
-        Me.Company_Tel.TabStop = False
+        Me.Company_Tel.TabStop = True
         Me.Company_Tel.ThemeName = "Office2010Blue"
         '
         'RadLabel3
@@ -701,7 +701,7 @@ Partial Class Companyparent
         Me.Company_Name.Name = "Company_Name"
         Me.Company_Name.Size = New System.Drawing.Size(337, 26)
         Me.Company_Name.TabIndex = 1
-        Me.Company_Name.TabStop = False
+        Me.Company_Name.TabStop = True
         Me.Company_Name.ThemeName = "Office2010Blue"
         '
         'RadLabel8
@@ -747,7 +747,7 @@ Partial Class Companyparent
         Me.Company_Code.Name = "Company_Code"
         Me.Company_Code.Size = New System.Drawing.Size(337, 26)
         Me.Company_Code.TabIndex = 0
-        Me.Company_Code.TabStop = False
+        Me.Company_Code.TabStop = True
         Me.Company_Code.ThemeName = "Office2010Blue"
         '
         'MasterTemplate

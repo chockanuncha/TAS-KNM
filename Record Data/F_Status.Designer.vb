@@ -312,7 +312,7 @@ Partial Class F_Status
         Me.P_SUM.Name = "P_SUM"
         Me.P_SUM.Size = New System.Drawing.Size(85, 25)
         Me.P_SUM.TabIndex = 39
-        Me.P_SUM.TabStop = False
+        Me.P_SUM.TabStop = True
         Me.P_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -455,7 +455,7 @@ Partial Class F_Status
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(595, 694)
         Me.DetailGroup.TabIndex = 15
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'U_UPDATEBY
         '
@@ -467,7 +467,7 @@ Partial Class F_Status
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(291, 28)
         Me.U_UPDATEBY.TabIndex = 13
-        Me.U_UPDATEBY.TabStop = False
+        Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -483,7 +483,7 @@ Partial Class F_Status
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(291, 28)
         Me.U_UPDATE.TabIndex = 12
-        Me.U_UPDATE.TabStop = False
+        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -497,7 +497,7 @@ Partial Class F_Status
         Me.Island_No.Name = "Island_No"
         Me.Island_No.Size = New System.Drawing.Size(291, 28)
         Me.Island_No.TabIndex = 1
-        Me.Island_No.TabStop = False
+        Me.Island_No.TabStop = True
         Me.Island_No.ThemeName = "Office2010Blue"
         '
         'StatusId
@@ -508,7 +508,7 @@ Partial Class F_Status
         Me.StatusId.Name = "StatusId"
         Me.StatusId.Size = New System.Drawing.Size(291, 28)
         Me.StatusId.TabIndex = 0
-        Me.StatusId.TabStop = False
+        Me.StatusId.TabStop = True
         Me.StatusId.ThemeName = "Office2010Blue"
         '
         'RoundRectShape1

@@ -1267,7 +1267,7 @@ Partial Class Topup
         Me.GDetail.Name = "GDetail"
         Me.GDetail.Size = New System.Drawing.Size(794, 645)
         Me.GDetail.TabIndex = 1
-        Me.GDetail.TabStop = False
+        Me.GDetail.TabStop = True
         '
         'Panel16
         '
@@ -1310,7 +1310,7 @@ Partial Class Topup
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(87, 376)
         Me.GroupBox1.TabIndex = 148
-        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.TabStop = True
         '
         'Capacity_l12
         '
@@ -1321,7 +1321,7 @@ Partial Class Topup
         Me.Capacity_l12.ReadOnly = True
         Me.Capacity_l12.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l12.TabIndex = 237
-        Me.Capacity_l12.TabStop = False
+        Me.Capacity_l12.TabStop = True
         Me.Capacity_l12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l12.ThemeName = "Windows8"
         '
@@ -1334,7 +1334,7 @@ Partial Class Topup
         Me.Capacity_l11.ReadOnly = True
         Me.Capacity_l11.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l11.TabIndex = 236
-        Me.Capacity_l11.TabStop = False
+        Me.Capacity_l11.TabStop = True
         Me.Capacity_l11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l11.ThemeName = "Windows8"
         '
@@ -1347,7 +1347,7 @@ Partial Class Topup
         Me.Capacity_l10.ReadOnly = True
         Me.Capacity_l10.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l10.TabIndex = 235
-        Me.Capacity_l10.TabStop = False
+        Me.Capacity_l10.TabStop = True
         Me.Capacity_l10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l10.ThemeName = "Windows8"
         '
@@ -1360,7 +1360,7 @@ Partial Class Topup
         Me.Capacity_l9.ReadOnly = True
         Me.Capacity_l9.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l9.TabIndex = 234
-        Me.Capacity_l9.TabStop = False
+        Me.Capacity_l9.TabStop = True
         Me.Capacity_l9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l9.ThemeName = "Windows8"
         '
@@ -1373,7 +1373,7 @@ Partial Class Topup
         Me.Capacity_l8.ReadOnly = True
         Me.Capacity_l8.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l8.TabIndex = 233
-        Me.Capacity_l8.TabStop = False
+        Me.Capacity_l8.TabStop = True
         Me.Capacity_l8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l8.ThemeName = "Windows8"
         '
@@ -1386,7 +1386,7 @@ Partial Class Topup
         Me.Capacity_l7.ReadOnly = True
         Me.Capacity_l7.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l7.TabIndex = 232
-        Me.Capacity_l7.TabStop = False
+        Me.Capacity_l7.TabStop = True
         Me.Capacity_l7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l7.ThemeName = "Windows8"
         '
@@ -1399,7 +1399,7 @@ Partial Class Topup
         Me.Capacity_l6.ReadOnly = True
         Me.Capacity_l6.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l6.TabIndex = 231
-        Me.Capacity_l6.TabStop = False
+        Me.Capacity_l6.TabStop = True
         Me.Capacity_l6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l6.ThemeName = "Windows8"
         '
@@ -1412,7 +1412,7 @@ Partial Class Topup
         Me.Capacity_l5.ReadOnly = True
         Me.Capacity_l5.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l5.TabIndex = 230
-        Me.Capacity_l5.TabStop = False
+        Me.Capacity_l5.TabStop = True
         Me.Capacity_l5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l5.ThemeName = "Windows8"
         '
@@ -1425,7 +1425,7 @@ Partial Class Topup
         Me.Capacity_l4.ReadOnly = True
         Me.Capacity_l4.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l4.TabIndex = 229
-        Me.Capacity_l4.TabStop = False
+        Me.Capacity_l4.TabStop = True
         Me.Capacity_l4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l4.ThemeName = "Windows8"
         '
@@ -1438,7 +1438,7 @@ Partial Class Topup
         Me.Capacity_l3.ReadOnly = True
         Me.Capacity_l3.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l3.TabIndex = 228
-        Me.Capacity_l3.TabStop = False
+        Me.Capacity_l3.TabStop = True
         Me.Capacity_l3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l3.ThemeName = "Windows8"
         '
@@ -1451,7 +1451,7 @@ Partial Class Topup
         Me.Capacity_l2.ReadOnly = True
         Me.Capacity_l2.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l2.TabIndex = 227
-        Me.Capacity_l2.TabStop = False
+        Me.Capacity_l2.TabStop = True
         Me.Capacity_l2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l2.ThemeName = "Windows8"
         '
@@ -1464,7 +1464,7 @@ Partial Class Topup
         Me.Capacity_l1.ReadOnly = True
         Me.Capacity_l1.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l1.TabIndex = 226
-        Me.Capacity_l1.TabStop = False
+        Me.Capacity_l1.TabStop = True
         Me.Capacity_l1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l1.ThemeName = "Windows8"
         '
@@ -1504,7 +1504,7 @@ Partial Class Topup
         Me.GroupProduct.Name = "GroupProduct"
         Me.GroupProduct.Size = New System.Drawing.Size(784, 101)
         Me.GroupProduct.TabIndex = 0
-        Me.GroupProduct.TabStop = False
+        Me.GroupProduct.TabStop = True
         Me.GroupProduct.Text = "Preset Quantity"
         '
         'RadGroupBox4
@@ -1662,7 +1662,7 @@ Partial Class Topup
         Me.Meter.Name = "Meter"
         Me.Meter.Size = New System.Drawing.Size(134, 24)
         Me.Meter.TabIndex = 25
-        Me.Meter.TabStop = False
+        Me.Meter.TabStop = True
         Me.Meter.ThemeName = "Windows8"
         '
         'TBatchmeterBindingSource
@@ -1778,7 +1778,7 @@ Partial Class Topup
         Me.Bay.Name = "Bay"
         Me.Bay.Size = New System.Drawing.Size(117, 24)
         Me.Bay.TabIndex = 24
-        Me.Bay.TabStop = False
+        Me.Bay.TabStop = True
         Me.Bay.ThemeName = "Windows8"
         '
         'TBayBindingSource
@@ -1895,7 +1895,7 @@ Partial Class Topup
         Me.Product.Name = "Product"
         Me.Product.Size = New System.Drawing.Size(205, 24)
         Me.Product.TabIndex = 23
-        Me.Product.TabStop = False
+        Me.Product.TabStop = True
         Me.Product.ThemeName = "Windows8"
         Me.Product.ValueMember = "--+------------------------------------------------"
         '
@@ -2115,7 +2115,7 @@ Partial Class Topup
         Me.GroupBox15.Name = "GroupBox15"
         Me.GroupBox15.Size = New System.Drawing.Size(51, 376)
         Me.GroupBox15.TabIndex = 45
-        Me.GroupBox15.TabStop = False
+        Me.GroupBox15.TabStop = True
         '
         'Comp12
         '
@@ -2126,7 +2126,7 @@ Partial Class Topup
         Me.Comp12.ReadOnly = True
         Me.Comp12.Size = New System.Drawing.Size(44, 27)
         Me.Comp12.TabIndex = 225
-        Me.Comp12.TabStop = False
+        Me.Comp12.TabStop = True
         Me.Comp12.Text = "12"
         Me.Comp12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp12.ThemeName = "Office2010Blue"
@@ -2140,7 +2140,7 @@ Partial Class Topup
         Me.Comp5.ReadOnly = True
         Me.Comp5.Size = New System.Drawing.Size(44, 27)
         Me.Comp5.TabIndex = 218
-        Me.Comp5.TabStop = False
+        Me.Comp5.TabStop = True
         Me.Comp5.Text = "5"
         Me.Comp5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp5.ThemeName = "Office2010Blue"
@@ -2154,7 +2154,7 @@ Partial Class Topup
         Me.Comp11.ReadOnly = True
         Me.Comp11.Size = New System.Drawing.Size(44, 27)
         Me.Comp11.TabIndex = 224
-        Me.Comp11.TabStop = False
+        Me.Comp11.TabStop = True
         Me.Comp11.Text = "11"
         Me.Comp11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp11.ThemeName = "Office2010Blue"
@@ -2168,7 +2168,7 @@ Partial Class Topup
         Me.Comp10.ReadOnly = True
         Me.Comp10.Size = New System.Drawing.Size(44, 27)
         Me.Comp10.TabIndex = 223
-        Me.Comp10.TabStop = False
+        Me.Comp10.TabStop = True
         Me.Comp10.Text = "10"
         Me.Comp10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp10.ThemeName = "Office2010Blue"
@@ -2182,7 +2182,7 @@ Partial Class Topup
         Me.Comp9.ReadOnly = True
         Me.Comp9.Size = New System.Drawing.Size(44, 27)
         Me.Comp9.TabIndex = 222
-        Me.Comp9.TabStop = False
+        Me.Comp9.TabStop = True
         Me.Comp9.Text = "9"
         Me.Comp9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp9.ThemeName = "Office2010Blue"
@@ -2196,7 +2196,7 @@ Partial Class Topup
         Me.Comp8.ReadOnly = True
         Me.Comp8.Size = New System.Drawing.Size(44, 27)
         Me.Comp8.TabIndex = 221
-        Me.Comp8.TabStop = False
+        Me.Comp8.TabStop = True
         Me.Comp8.Text = "8"
         Me.Comp8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp8.ThemeName = "Office2010Blue"
@@ -2210,7 +2210,7 @@ Partial Class Topup
         Me.Comp7.ReadOnly = True
         Me.Comp7.Size = New System.Drawing.Size(44, 27)
         Me.Comp7.TabIndex = 220
-        Me.Comp7.TabStop = False
+        Me.Comp7.TabStop = True
         Me.Comp7.Text = "7"
         Me.Comp7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp7.ThemeName = "Office2010Blue"
@@ -2224,7 +2224,7 @@ Partial Class Topup
         Me.Comp6.ReadOnly = True
         Me.Comp6.Size = New System.Drawing.Size(44, 27)
         Me.Comp6.TabIndex = 219
-        Me.Comp6.TabStop = False
+        Me.Comp6.TabStop = True
         Me.Comp6.Text = "6"
         Me.Comp6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp6.ThemeName = "Office2010Blue"
@@ -2238,7 +2238,7 @@ Partial Class Topup
         Me.Comp4.ReadOnly = True
         Me.Comp4.Size = New System.Drawing.Size(44, 27)
         Me.Comp4.TabIndex = 217
-        Me.Comp4.TabStop = False
+        Me.Comp4.TabStop = True
         Me.Comp4.Text = "4"
         Me.Comp4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp4.ThemeName = "Office2010Blue"
@@ -2252,7 +2252,7 @@ Partial Class Topup
         Me.Comp3.ReadOnly = True
         Me.Comp3.Size = New System.Drawing.Size(44, 27)
         Me.Comp3.TabIndex = 216
-        Me.Comp3.TabStop = False
+        Me.Comp3.TabStop = True
         Me.Comp3.Text = "3"
         Me.Comp3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp3.ThemeName = "Office2010Blue"
@@ -2266,7 +2266,7 @@ Partial Class Topup
         Me.Comp2.ReadOnly = True
         Me.Comp2.Size = New System.Drawing.Size(44, 27)
         Me.Comp2.TabIndex = 215
-        Me.Comp2.TabStop = False
+        Me.Comp2.TabStop = True
         Me.Comp2.Text = "2"
         Me.Comp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp2.ThemeName = "Office2010Blue"
@@ -2280,7 +2280,7 @@ Partial Class Topup
         Me.Comp1.ReadOnly = True
         Me.Comp1.Size = New System.Drawing.Size(44, 27)
         Me.Comp1.TabIndex = 214
-        Me.Comp1.TabStop = False
+        Me.Comp1.TabStop = True
         Me.Comp1.Text = "1"
         Me.Comp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp1.ThemeName = "Office2010Blue"
@@ -2304,7 +2304,7 @@ Partial Class Topup
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.Size = New System.Drawing.Size(105, 376)
         Me.GroupBox13.TabIndex = 2
-        Me.GroupBox13.TabStop = False
+        Me.GroupBox13.TabStop = True
         '
         'Preset12
         '
@@ -2313,7 +2313,7 @@ Partial Class Topup
         Me.Preset12.Name = "Preset12"
         Me.Preset12.Size = New System.Drawing.Size(92, 24)
         Me.Preset12.TabIndex = 249
-        Me.Preset12.TabStop = False
+        Me.Preset12.TabStop = True
         Me.Preset12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset12.ThemeName = "Windows8"
         '
@@ -2324,7 +2324,7 @@ Partial Class Topup
         Me.Preset11.Name = "Preset11"
         Me.Preset11.Size = New System.Drawing.Size(92, 24)
         Me.Preset11.TabIndex = 248
-        Me.Preset11.TabStop = False
+        Me.Preset11.TabStop = True
         Me.Preset11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset11.ThemeName = "Windows8"
         '
@@ -2335,7 +2335,7 @@ Partial Class Topup
         Me.Preset10.Name = "Preset10"
         Me.Preset10.Size = New System.Drawing.Size(92, 24)
         Me.Preset10.TabIndex = 247
-        Me.Preset10.TabStop = False
+        Me.Preset10.TabStop = True
         Me.Preset10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset10.ThemeName = "Windows8"
         '
@@ -2346,7 +2346,7 @@ Partial Class Topup
         Me.Preset9.Name = "Preset9"
         Me.Preset9.Size = New System.Drawing.Size(92, 24)
         Me.Preset9.TabIndex = 246
-        Me.Preset9.TabStop = False
+        Me.Preset9.TabStop = True
         Me.Preset9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset9.ThemeName = "Windows8"
         '
@@ -2357,7 +2357,7 @@ Partial Class Topup
         Me.Preset8.Name = "Preset8"
         Me.Preset8.Size = New System.Drawing.Size(92, 24)
         Me.Preset8.TabIndex = 245
-        Me.Preset8.TabStop = False
+        Me.Preset8.TabStop = True
         Me.Preset8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset8.ThemeName = "Windows8"
         '
@@ -2368,7 +2368,7 @@ Partial Class Topup
         Me.Preset7.Name = "Preset7"
         Me.Preset7.Size = New System.Drawing.Size(92, 24)
         Me.Preset7.TabIndex = 244
-        Me.Preset7.TabStop = False
+        Me.Preset7.TabStop = True
         Me.Preset7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset7.ThemeName = "Windows8"
         '
@@ -2379,7 +2379,7 @@ Partial Class Topup
         Me.Preset6.Name = "Preset6"
         Me.Preset6.Size = New System.Drawing.Size(92, 24)
         Me.Preset6.TabIndex = 243
-        Me.Preset6.TabStop = False
+        Me.Preset6.TabStop = True
         Me.Preset6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset6.ThemeName = "Windows8"
         '
@@ -2390,7 +2390,7 @@ Partial Class Topup
         Me.Preset5.Name = "Preset5"
         Me.Preset5.Size = New System.Drawing.Size(92, 24)
         Me.Preset5.TabIndex = 242
-        Me.Preset5.TabStop = False
+        Me.Preset5.TabStop = True
         Me.Preset5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset5.ThemeName = "Windows8"
         '
@@ -2401,7 +2401,7 @@ Partial Class Topup
         Me.Preset4.Name = "Preset4"
         Me.Preset4.Size = New System.Drawing.Size(92, 24)
         Me.Preset4.TabIndex = 241
-        Me.Preset4.TabStop = False
+        Me.Preset4.TabStop = True
         Me.Preset4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset4.ThemeName = "Windows8"
         '
@@ -2412,7 +2412,7 @@ Partial Class Topup
         Me.Preset3.Name = "Preset3"
         Me.Preset3.Size = New System.Drawing.Size(92, 24)
         Me.Preset3.TabIndex = 240
-        Me.Preset3.TabStop = False
+        Me.Preset3.TabStop = True
         Me.Preset3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset3.ThemeName = "Windows8"
         '
@@ -2423,7 +2423,7 @@ Partial Class Topup
         Me.Preset2.Name = "Preset2"
         Me.Preset2.Size = New System.Drawing.Size(92, 24)
         Me.Preset2.TabIndex = 239
-        Me.Preset2.TabStop = False
+        Me.Preset2.TabStop = True
         Me.Preset2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset2.ThemeName = "Windows8"
         '
@@ -2434,7 +2434,7 @@ Partial Class Topup
         Me.Preset1.Name = "Preset1"
         Me.Preset1.Size = New System.Drawing.Size(92, 24)
         Me.Preset1.TabIndex = 238
-        Me.Preset1.TabStop = False
+        Me.Preset1.TabStop = True
         Me.Preset1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset1.ThemeName = "Windows8"
         '
@@ -2457,7 +2457,7 @@ Partial Class Topup
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(116, 376)
         Me.GroupBox10.TabIndex = 4
-        Me.GroupBox10.TabStop = False
+        Me.GroupBox10.TabStop = True
         '
         'Meter12
         '
@@ -2754,7 +2754,7 @@ Partial Class Topup
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(110, 376)
         Me.GroupBox11.TabIndex = 3
-        Me.GroupBox11.TabStop = False
+        Me.GroupBox11.TabStop = True
         '
         'IslandBay12
         '
@@ -3063,7 +3063,7 @@ Partial Class Topup
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(87, 376)
         Me.GroupBox12.TabIndex = 1
-        Me.GroupBox12.TabStop = False
+        Me.GroupBox12.TabStop = True
         '
         'Capacity12
         '
@@ -3074,7 +3074,7 @@ Partial Class Topup
         Me.Capacity12.ReadOnly = True
         Me.Capacity12.Size = New System.Drawing.Size(73, 24)
         Me.Capacity12.TabIndex = 237
-        Me.Capacity12.TabStop = False
+        Me.Capacity12.TabStop = True
         Me.Capacity12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity12.ThemeName = "Windows8"
         '
@@ -3087,7 +3087,7 @@ Partial Class Topup
         Me.Capacity11.ReadOnly = True
         Me.Capacity11.Size = New System.Drawing.Size(73, 24)
         Me.Capacity11.TabIndex = 236
-        Me.Capacity11.TabStop = False
+        Me.Capacity11.TabStop = True
         Me.Capacity11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity11.ThemeName = "Windows8"
         '
@@ -3100,7 +3100,7 @@ Partial Class Topup
         Me.Capacity10.ReadOnly = True
         Me.Capacity10.Size = New System.Drawing.Size(73, 24)
         Me.Capacity10.TabIndex = 235
-        Me.Capacity10.TabStop = False
+        Me.Capacity10.TabStop = True
         Me.Capacity10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity10.ThemeName = "Windows8"
         '
@@ -3113,7 +3113,7 @@ Partial Class Topup
         Me.Capacity9.ReadOnly = True
         Me.Capacity9.Size = New System.Drawing.Size(73, 24)
         Me.Capacity9.TabIndex = 234
-        Me.Capacity9.TabStop = False
+        Me.Capacity9.TabStop = True
         Me.Capacity9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity9.ThemeName = "Windows8"
         '
@@ -3126,7 +3126,7 @@ Partial Class Topup
         Me.Capacity8.ReadOnly = True
         Me.Capacity8.Size = New System.Drawing.Size(73, 24)
         Me.Capacity8.TabIndex = 233
-        Me.Capacity8.TabStop = False
+        Me.Capacity8.TabStop = True
         Me.Capacity8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity8.ThemeName = "Windows8"
         '
@@ -3139,7 +3139,7 @@ Partial Class Topup
         Me.Capacity7.ReadOnly = True
         Me.Capacity7.Size = New System.Drawing.Size(73, 24)
         Me.Capacity7.TabIndex = 232
-        Me.Capacity7.TabStop = False
+        Me.Capacity7.TabStop = True
         Me.Capacity7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity7.ThemeName = "Windows8"
         '
@@ -3152,7 +3152,7 @@ Partial Class Topup
         Me.Capacity6.ReadOnly = True
         Me.Capacity6.Size = New System.Drawing.Size(73, 24)
         Me.Capacity6.TabIndex = 231
-        Me.Capacity6.TabStop = False
+        Me.Capacity6.TabStop = True
         Me.Capacity6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity6.ThemeName = "Windows8"
         '
@@ -3165,7 +3165,7 @@ Partial Class Topup
         Me.Capacity5.ReadOnly = True
         Me.Capacity5.Size = New System.Drawing.Size(73, 24)
         Me.Capacity5.TabIndex = 230
-        Me.Capacity5.TabStop = False
+        Me.Capacity5.TabStop = True
         Me.Capacity5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity5.ThemeName = "Windows8"
         '
@@ -3178,7 +3178,7 @@ Partial Class Topup
         Me.Capacity4.ReadOnly = True
         Me.Capacity4.Size = New System.Drawing.Size(73, 24)
         Me.Capacity4.TabIndex = 229
-        Me.Capacity4.TabStop = False
+        Me.Capacity4.TabStop = True
         Me.Capacity4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity4.ThemeName = "Windows8"
         '
@@ -3191,7 +3191,7 @@ Partial Class Topup
         Me.Capacity3.ReadOnly = True
         Me.Capacity3.Size = New System.Drawing.Size(73, 24)
         Me.Capacity3.TabIndex = 228
-        Me.Capacity3.TabStop = False
+        Me.Capacity3.TabStop = True
         Me.Capacity3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity3.ThemeName = "Windows8"
         '
@@ -3204,7 +3204,7 @@ Partial Class Topup
         Me.Capacity2.ReadOnly = True
         Me.Capacity2.Size = New System.Drawing.Size(73, 24)
         Me.Capacity2.TabIndex = 227
-        Me.Capacity2.TabStop = False
+        Me.Capacity2.TabStop = True
         Me.Capacity2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity2.ThemeName = "Windows8"
         '
@@ -3217,7 +3217,7 @@ Partial Class Topup
         Me.Capacity1.ReadOnly = True
         Me.Capacity1.Size = New System.Drawing.Size(73, 24)
         Me.Capacity1.TabIndex = 226
-        Me.Capacity1.TabStop = False
+        Me.Capacity1.TabStop = True
         Me.Capacity1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity1.ThemeName = "Windows8"
         '
@@ -3241,7 +3241,7 @@ Partial Class Topup
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.Size = New System.Drawing.Size(211, 376)
         Me.GroupBox14.TabIndex = 0
-        Me.GroupBox14.TabStop = False
+        Me.GroupBox14.TabStop = True
         '
         'ProductList12
         '
@@ -3737,7 +3737,7 @@ Partial Class Topup
         Me.Dateedit.ReadOnly = True
         Me.Dateedit.Size = New System.Drawing.Size(187, 23)
         Me.Dateedit.TabIndex = 17
-        Me.Dateedit.TabStop = False
+        Me.Dateedit.TabStop = True
         Me.Dateedit.Text = "04/06/2557 00:06:00"
         Me.Dateedit.ThemeName = "Windows8"
         Me.Dateedit.Value = New Date(2014, 6, 4, 0, 6, 0, 0)
@@ -3948,7 +3948,7 @@ Partial Class Topup
         Me.EdCustomer.Name = "EdCustomer"
         Me.EdCustomer.Size = New System.Drawing.Size(187, 23)
         Me.EdCustomer.TabIndex = 5
-        Me.EdCustomer.TabStop = False
+        Me.EdCustomer.TabStop = True
         Me.EdCustomer.ThemeName = "Windows8"
         Me.EdCustomer.ValueMember = "ID"
         '
@@ -4151,7 +4151,7 @@ Partial Class Topup
         Me.Driver.Name = "Driver"
         Me.Driver.Size = New System.Drawing.Size(187, 23)
         Me.Driver.TabIndex = 11
-        Me.Driver.TabStop = False
+        Me.Driver.TabStop = True
         Me.Driver.ThemeName = "Windows8"
         Me.Driver.ValueMember = "ID"
         '
@@ -4294,7 +4294,7 @@ Partial Class Topup
         Me.Cbn3.Name = "Cbn3"
         Me.Cbn3.Size = New System.Drawing.Size(187, 23)
         Me.Cbn3.TabIndex = 6
-        Me.Cbn3.TabStop = False
+        Me.Cbn3.TabStop = True
         Me.Cbn3.ThemeName = "Windows8"
         Me.Cbn3.ValueMember = "COMPANY_ID"
         '
@@ -4313,7 +4313,7 @@ Partial Class Topup
         Me.Cbn5.ReadOnly = True
         Me.Cbn5.Size = New System.Drawing.Size(187, 23)
         Me.Cbn5.TabIndex = 9
-        Me.Cbn5.TabStop = False
+        Me.Cbn5.TabStop = True
         Me.Cbn5.ThemeName = "Windows8"
         CType(Me.Cbn5.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -4373,7 +4373,7 @@ Partial Class Topup
         Me.PictureBox1.Size = New System.Drawing.Size(111, 132)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 304
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'bt_FindLN
         '
@@ -4487,7 +4487,7 @@ Partial Class Topup
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(205, 22)
         Me.GroupBox6.TabIndex = 209
-        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.TabStop = True
         Me.GroupBox6.Text = "Hidden"
         Me.GroupBox6.Visible = False
         '
@@ -4805,7 +4805,7 @@ Partial Class Topup
         Me.RadMultiColumnComboBox3.Name = "RadMultiColumnComboBox3"
         Me.RadMultiColumnComboBox3.Size = New System.Drawing.Size(249, 26)
         Me.RadMultiColumnComboBox3.TabIndex = 268
-        Me.RadMultiColumnComboBox3.TabStop = False
+        Me.RadMultiColumnComboBox3.TabStop = True
         Me.RadMultiColumnComboBox3.ThemeName = "Office2010Blue"
         Me.RadMultiColumnComboBox3.ValueMember = "ID"
         '
@@ -4958,7 +4958,7 @@ Partial Class Topup
         Me.RadMultiColumnComboBox4.Name = "RadMultiColumnComboBox4"
         Me.RadMultiColumnComboBox4.Size = New System.Drawing.Size(249, 26)
         Me.RadMultiColumnComboBox4.TabIndex = 267
-        Me.RadMultiColumnComboBox4.TabStop = False
+        Me.RadMultiColumnComboBox4.TabStop = True
         Me.RadMultiColumnComboBox4.ThemeName = "Office2010Blue"
         Me.RadMultiColumnComboBox4.ValueMember = "ID"
         '
@@ -5160,7 +5160,7 @@ Partial Class Topup
         Me.RadMultiColumnComboBox5.Name = "RadMultiColumnComboBox5"
         Me.RadMultiColumnComboBox5.Size = New System.Drawing.Size(160, 26)
         Me.RadMultiColumnComboBox5.TabIndex = 265
-        Me.RadMultiColumnComboBox5.TabStop = False
+        Me.RadMultiColumnComboBox5.TabStop = True
         Me.RadMultiColumnComboBox5.ThemeName = "Office2010Blue"
         Me.RadMultiColumnComboBox5.ValueMember = "ID"
         '
@@ -5256,7 +5256,7 @@ Partial Class Topup
         Me.RadMultiColumnComboBox1.Name = "RadMultiColumnComboBox1"
         Me.RadMultiColumnComboBox1.Size = New System.Drawing.Size(149, 26)
         Me.RadMultiColumnComboBox1.TabIndex = 219
-        Me.RadMultiColumnComboBox1.TabStop = False
+        Me.RadMultiColumnComboBox1.TabStop = True
         Me.RadMultiColumnComboBox1.ThemeName = "Windows7"
         '
         'RadButton1
@@ -5281,7 +5281,7 @@ Partial Class Topup
         Me.RadTextBox2.Name = "RadTextBox2"
         Me.RadTextBox2.Size = New System.Drawing.Size(170, 20)
         Me.RadTextBox2.TabIndex = 186
-        Me.RadTextBox2.TabStop = False
+        Me.RadTextBox2.TabStop = True
         Me.RadTextBox2.Visible = False
         '
         'CustomShape1
@@ -5303,7 +5303,7 @@ Partial Class Topup
         Me.Seal_Count.Name = "Seal_Count"
         Me.Seal_Count.Size = New System.Drawing.Size(89, 24)
         Me.Seal_Count.TabIndex = 274
-        Me.Seal_Count.TabStop = False
+        Me.Seal_Count.TabStop = True
         Me.Seal_Count.Text = "DG1000"
         Me.Seal_Count.ThemeName = "Office2010Blue"
         '

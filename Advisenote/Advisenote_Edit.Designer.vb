@@ -126,7 +126,7 @@ Partial Class Advisenote_Edit
         Me.Referencetext.ReadOnly = True
         Me.Referencetext.Size = New System.Drawing.Size(257, 28)
         Me.Referencetext.TabIndex = 45
-        Me.Referencetext.TabStop = False
+        Me.Referencetext.TabStop = True
         Me.Referencetext.Text = "DDDD"
         '
         'Label2
@@ -148,7 +148,7 @@ Partial Class Advisenote_Edit
         Me.Trucktext.ReadOnly = True
         Me.Trucktext.Size = New System.Drawing.Size(257, 28)
         Me.Trucktext.TabIndex = 47
-        Me.Trucktext.TabStop = False
+        Me.Trucktext.TabStop = True
         Me.Trucktext.Text = "DDDD"
         '
         'Label1
@@ -170,7 +170,7 @@ Partial Class Advisenote_Edit
         Me.Drivertext.ReadOnly = True
         Me.Drivertext.Size = New System.Drawing.Size(257, 28)
         Me.Drivertext.TabIndex = 49
-        Me.Drivertext.TabStop = False
+        Me.Drivertext.TabStop = True
         Me.Drivertext.Text = "DDDD"
         '
         'Label3
@@ -192,7 +192,7 @@ Partial Class Advisenote_Edit
         Me.Dotext.ReadOnly = True
         Me.Dotext.Size = New System.Drawing.Size(257, 28)
         Me.Dotext.TabIndex = 51
-        Me.Dotext.TabStop = False
+        Me.Dotext.TabStop = True
         Me.Dotext.Text = "DDDD"
         '
         'Label4

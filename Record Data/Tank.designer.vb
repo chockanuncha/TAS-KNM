@@ -378,7 +378,7 @@ Partial Class Tank
         Me.G_SUM.ReadOnly = True
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
@@ -430,7 +430,7 @@ Partial Class Tank
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(597, 695)
         Me.DetailGroup.TabIndex = 4
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'ComboBox1
         '
@@ -496,7 +496,7 @@ Partial Class Tank
         Me.RadTextBox6.Name = "RadTextBox6"
         Me.RadTextBox6.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox6.TabIndex = 204
-        Me.RadTextBox6.TabStop = False
+        Me.RadTextBox6.TabStop = True
         Me.RadTextBox6.ThemeName = "Office2010Blue"
         '
         'RadLabel7
@@ -519,7 +519,7 @@ Partial Class Tank
         Me.RadTextBox1.Name = "RadTextBox1"
         Me.RadTextBox1.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox1.TabIndex = 9
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.ThemeName = "Office2010Blue"
         '
         'Bsave
@@ -629,7 +629,7 @@ Partial Class Tank
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(300, 28)
         Me.UPDATEBY.TabIndex = 162
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -644,7 +644,7 @@ Partial Class Tank
         Me.Tank_UPDATE.ReadOnly = True
         Me.Tank_UPDATE.Size = New System.Drawing.Size(300, 28)
         Me.Tank_UPDATE.TabIndex = 161
-        Me.Tank_UPDATE.TabStop = False
+        Me.Tank_UPDATE.TabStop = True
         Me.Tank_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.Tank_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.Tank_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -680,7 +680,7 @@ Partial Class Tank
         Me.Tank_Name.Name = "Tank_Name"
         Me.Tank_Name.Size = New System.Drawing.Size(300, 28)
         Me.Tank_Name.TabIndex = 1
-        Me.Tank_Name.TabStop = False
+        Me.Tank_Name.TabStop = True
         Me.Tank_Name.ThemeName = "Office2010Blue"
         '
         'RadLabel8
@@ -728,7 +728,7 @@ Partial Class Tank
         Me.Tank_no.Name = "Tank_no"
         Me.Tank_no.Size = New System.Drawing.Size(300, 28)
         Me.Tank_no.TabIndex = 0
-        Me.Tank_no.TabStop = False
+        Me.Tank_no.TabStop = True
         CType(Me.Tank_no.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.Black
         CType(Me.Tank_no.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.White
         CType(Me.Tank_no.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Tahoma", 14.0!)
@@ -762,7 +762,7 @@ Partial Class Tank
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(300, 44)
         Me.GroupBox4.TabIndex = 10
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'U_StatusOff

@@ -39,7 +39,7 @@ Public Class Customer
 
             Dim q, Customer_Number, CusCode As String
             q = ""
-            q = "select NVL(max(ID),0)+1 as Customer_Number from T_Customer"
+            q = "select isnull(max(ID),0)+1 as Customer_Number from T_Customer"
 
             Dim dt As DataTable = cls.Query(q)
 

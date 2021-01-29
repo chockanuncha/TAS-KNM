@@ -737,7 +737,7 @@ Partial Class Advisenote
         '
         '
         Me.RadPageView1.RootElement.Shape = Nothing
-        Me.RadPageView1.SelectedPage = Me.RadPageViewPage2
+        Me.RadPageView1.SelectedPage = Me.RadPageViewPage1
         Me.RadPageView1.Size = New System.Drawing.Size(1370, 695)
         Me.RadPageView1.TabIndex = 95
         Me.RadPageView1.ThemeName = "Office2010Blue"
@@ -1375,7 +1375,6 @@ Partial Class Advisenote
         Me.Capacity_l12.ReadOnly = True
         Me.Capacity_l12.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l12.TabIndex = 237
-        Me.Capacity_l12.TabStop = False
         Me.Capacity_l12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l12.ThemeName = "Windows8"
         '
@@ -1389,7 +1388,6 @@ Partial Class Advisenote
         Me.Capacity_l11.ReadOnly = True
         Me.Capacity_l11.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l11.TabIndex = 236
-        Me.Capacity_l11.TabStop = False
         Me.Capacity_l11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l11.ThemeName = "Windows8"
         '
@@ -1403,7 +1401,6 @@ Partial Class Advisenote
         Me.Capacity_l10.ReadOnly = True
         Me.Capacity_l10.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l10.TabIndex = 235
-        Me.Capacity_l10.TabStop = False
         Me.Capacity_l10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l10.ThemeName = "Windows8"
         '
@@ -1417,7 +1414,6 @@ Partial Class Advisenote
         Me.Capacity_l9.ReadOnly = True
         Me.Capacity_l9.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l9.TabIndex = 234
-        Me.Capacity_l9.TabStop = False
         Me.Capacity_l9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l9.ThemeName = "Windows8"
         '
@@ -1431,7 +1427,6 @@ Partial Class Advisenote
         Me.Capacity_l8.ReadOnly = True
         Me.Capacity_l8.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l8.TabIndex = 233
-        Me.Capacity_l8.TabStop = False
         Me.Capacity_l8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l8.ThemeName = "Windows8"
         '
@@ -1445,7 +1440,6 @@ Partial Class Advisenote
         Me.Capacity_l7.ReadOnly = True
         Me.Capacity_l7.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l7.TabIndex = 232
-        Me.Capacity_l7.TabStop = False
         Me.Capacity_l7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l7.ThemeName = "Windows8"
         '
@@ -1459,7 +1453,6 @@ Partial Class Advisenote
         Me.Capacity_l6.ReadOnly = True
         Me.Capacity_l6.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l6.TabIndex = 231
-        Me.Capacity_l6.TabStop = False
         Me.Capacity_l6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l6.ThemeName = "Windows8"
         '
@@ -1473,7 +1466,6 @@ Partial Class Advisenote
         Me.Capacity_l5.ReadOnly = True
         Me.Capacity_l5.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l5.TabIndex = 230
-        Me.Capacity_l5.TabStop = False
         Me.Capacity_l5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l5.ThemeName = "Windows8"
         '
@@ -1487,7 +1479,6 @@ Partial Class Advisenote
         Me.Capacity_l4.ReadOnly = True
         Me.Capacity_l4.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l4.TabIndex = 229
-        Me.Capacity_l4.TabStop = False
         Me.Capacity_l4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l4.ThemeName = "Windows8"
         '
@@ -1501,7 +1492,6 @@ Partial Class Advisenote
         Me.Capacity_l3.ReadOnly = True
         Me.Capacity_l3.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l3.TabIndex = 228
-        Me.Capacity_l3.TabStop = False
         Me.Capacity_l3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l3.ThemeName = "Windows8"
         '
@@ -1515,7 +1505,6 @@ Partial Class Advisenote
         Me.Capacity_l2.ReadOnly = True
         Me.Capacity_l2.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l2.TabIndex = 227
-        Me.Capacity_l2.TabStop = False
         Me.Capacity_l2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l2.ThemeName = "Windows8"
         '
@@ -1529,7 +1518,6 @@ Partial Class Advisenote
         Me.Capacity_l1.ReadOnly = True
         Me.Capacity_l1.Size = New System.Drawing.Size(73, 24)
         Me.Capacity_l1.TabIndex = 226
-        Me.Capacity_l1.TabStop = False
         Me.Capacity_l1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity_l1.ThemeName = "Windows8"
         '
@@ -2188,7 +2176,6 @@ Partial Class Advisenote
         Me.Comp12.ReadOnly = True
         Me.Comp12.Size = New System.Drawing.Size(44, 27)
         Me.Comp12.TabIndex = 225
-        Me.Comp12.TabStop = False
         Me.Comp12.Text = "12"
         Me.Comp12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp12.ThemeName = "Office2010Blue"
@@ -2202,7 +2189,6 @@ Partial Class Advisenote
         Me.Comp5.ReadOnly = True
         Me.Comp5.Size = New System.Drawing.Size(44, 27)
         Me.Comp5.TabIndex = 218
-        Me.Comp5.TabStop = False
         Me.Comp5.Text = "5"
         Me.Comp5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp5.ThemeName = "Office2010Blue"
@@ -2216,7 +2202,6 @@ Partial Class Advisenote
         Me.Comp11.ReadOnly = True
         Me.Comp11.Size = New System.Drawing.Size(44, 27)
         Me.Comp11.TabIndex = 224
-        Me.Comp11.TabStop = False
         Me.Comp11.Text = "11"
         Me.Comp11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp11.ThemeName = "Office2010Blue"
@@ -2230,7 +2215,6 @@ Partial Class Advisenote
         Me.Comp10.ReadOnly = True
         Me.Comp10.Size = New System.Drawing.Size(44, 27)
         Me.Comp10.TabIndex = 223
-        Me.Comp10.TabStop = False
         Me.Comp10.Text = "10"
         Me.Comp10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp10.ThemeName = "Office2010Blue"
@@ -2244,7 +2228,6 @@ Partial Class Advisenote
         Me.Comp9.ReadOnly = True
         Me.Comp9.Size = New System.Drawing.Size(44, 27)
         Me.Comp9.TabIndex = 222
-        Me.Comp9.TabStop = False
         Me.Comp9.Text = "9"
         Me.Comp9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp9.ThemeName = "Office2010Blue"
@@ -2258,7 +2241,6 @@ Partial Class Advisenote
         Me.Comp8.ReadOnly = True
         Me.Comp8.Size = New System.Drawing.Size(44, 27)
         Me.Comp8.TabIndex = 221
-        Me.Comp8.TabStop = False
         Me.Comp8.Text = "8"
         Me.Comp8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp8.ThemeName = "Office2010Blue"
@@ -2272,7 +2254,6 @@ Partial Class Advisenote
         Me.Comp7.ReadOnly = True
         Me.Comp7.Size = New System.Drawing.Size(44, 27)
         Me.Comp7.TabIndex = 220
-        Me.Comp7.TabStop = False
         Me.Comp7.Text = "7"
         Me.Comp7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp7.ThemeName = "Office2010Blue"
@@ -2286,7 +2267,6 @@ Partial Class Advisenote
         Me.Comp6.ReadOnly = True
         Me.Comp6.Size = New System.Drawing.Size(44, 27)
         Me.Comp6.TabIndex = 219
-        Me.Comp6.TabStop = False
         Me.Comp6.Text = "6"
         Me.Comp6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp6.ThemeName = "Office2010Blue"
@@ -2300,7 +2280,6 @@ Partial Class Advisenote
         Me.Comp4.ReadOnly = True
         Me.Comp4.Size = New System.Drawing.Size(44, 27)
         Me.Comp4.TabIndex = 217
-        Me.Comp4.TabStop = False
         Me.Comp4.Text = "4"
         Me.Comp4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp4.ThemeName = "Office2010Blue"
@@ -2314,7 +2293,6 @@ Partial Class Advisenote
         Me.Comp3.ReadOnly = True
         Me.Comp3.Size = New System.Drawing.Size(44, 27)
         Me.Comp3.TabIndex = 216
-        Me.Comp3.TabStop = False
         Me.Comp3.Text = "3"
         Me.Comp3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp3.ThemeName = "Office2010Blue"
@@ -2328,7 +2306,6 @@ Partial Class Advisenote
         Me.Comp2.ReadOnly = True
         Me.Comp2.Size = New System.Drawing.Size(44, 27)
         Me.Comp2.TabIndex = 215
-        Me.Comp2.TabStop = False
         Me.Comp2.Text = "2"
         Me.Comp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp2.ThemeName = "Office2010Blue"
@@ -2342,7 +2319,6 @@ Partial Class Advisenote
         Me.Comp1.ReadOnly = True
         Me.Comp1.Size = New System.Drawing.Size(44, 27)
         Me.Comp1.TabIndex = 214
-        Me.Comp1.TabStop = False
         Me.Comp1.Text = "1"
         Me.Comp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp1.ThemeName = "Office2010Blue"
@@ -2375,7 +2351,6 @@ Partial Class Advisenote
         Me.Preset12.Name = "Preset12"
         Me.Preset12.Size = New System.Drawing.Size(92, 24)
         Me.Preset12.TabIndex = 249
-        Me.Preset12.TabStop = False
         Me.Preset12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset12.ThemeName = "Windows8"
         '
@@ -2386,7 +2361,6 @@ Partial Class Advisenote
         Me.Preset11.Name = "Preset11"
         Me.Preset11.Size = New System.Drawing.Size(92, 24)
         Me.Preset11.TabIndex = 248
-        Me.Preset11.TabStop = False
         Me.Preset11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset11.ThemeName = "Windows8"
         '
@@ -2397,7 +2371,6 @@ Partial Class Advisenote
         Me.Preset10.Name = "Preset10"
         Me.Preset10.Size = New System.Drawing.Size(92, 24)
         Me.Preset10.TabIndex = 247
-        Me.Preset10.TabStop = False
         Me.Preset10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset10.ThemeName = "Windows8"
         '
@@ -2408,7 +2381,6 @@ Partial Class Advisenote
         Me.Preset9.Name = "Preset9"
         Me.Preset9.Size = New System.Drawing.Size(92, 24)
         Me.Preset9.TabIndex = 246
-        Me.Preset9.TabStop = False
         Me.Preset9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset9.ThemeName = "Windows8"
         '
@@ -2419,7 +2391,6 @@ Partial Class Advisenote
         Me.Preset8.Name = "Preset8"
         Me.Preset8.Size = New System.Drawing.Size(92, 24)
         Me.Preset8.TabIndex = 245
-        Me.Preset8.TabStop = False
         Me.Preset8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset8.ThemeName = "Windows8"
         '
@@ -2430,7 +2401,6 @@ Partial Class Advisenote
         Me.Preset7.Name = "Preset7"
         Me.Preset7.Size = New System.Drawing.Size(92, 24)
         Me.Preset7.TabIndex = 244
-        Me.Preset7.TabStop = False
         Me.Preset7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset7.ThemeName = "Windows8"
         '
@@ -2441,7 +2411,6 @@ Partial Class Advisenote
         Me.Preset6.Name = "Preset6"
         Me.Preset6.Size = New System.Drawing.Size(92, 24)
         Me.Preset6.TabIndex = 243
-        Me.Preset6.TabStop = False
         Me.Preset6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset6.ThemeName = "Windows8"
         '
@@ -2452,7 +2421,6 @@ Partial Class Advisenote
         Me.Preset5.Name = "Preset5"
         Me.Preset5.Size = New System.Drawing.Size(92, 24)
         Me.Preset5.TabIndex = 242
-        Me.Preset5.TabStop = False
         Me.Preset5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset5.ThemeName = "Windows8"
         '
@@ -2463,7 +2431,6 @@ Partial Class Advisenote
         Me.Preset4.Name = "Preset4"
         Me.Preset4.Size = New System.Drawing.Size(92, 24)
         Me.Preset4.TabIndex = 241
-        Me.Preset4.TabStop = False
         Me.Preset4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset4.ThemeName = "Windows8"
         '
@@ -2474,7 +2441,6 @@ Partial Class Advisenote
         Me.Preset3.Name = "Preset3"
         Me.Preset3.Size = New System.Drawing.Size(92, 24)
         Me.Preset3.TabIndex = 240
-        Me.Preset3.TabStop = False
         Me.Preset3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset3.ThemeName = "Windows8"
         '
@@ -2485,7 +2451,6 @@ Partial Class Advisenote
         Me.Preset2.Name = "Preset2"
         Me.Preset2.Size = New System.Drawing.Size(92, 24)
         Me.Preset2.TabIndex = 239
-        Me.Preset2.TabStop = False
         Me.Preset2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset2.ThemeName = "Windows8"
         '
@@ -2496,7 +2461,6 @@ Partial Class Advisenote
         Me.Preset1.Name = "Preset1"
         Me.Preset1.Size = New System.Drawing.Size(92, 24)
         Me.Preset1.TabIndex = 238
-        Me.Preset1.TabStop = False
         Me.Preset1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset1.ThemeName = "Windows8"
         '
@@ -3168,7 +3132,6 @@ Partial Class Advisenote
         Me.Capacity12.ReadOnly = True
         Me.Capacity12.Size = New System.Drawing.Size(73, 24)
         Me.Capacity12.TabIndex = 237
-        Me.Capacity12.TabStop = False
         Me.Capacity12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity12.ThemeName = "Windows8"
         '
@@ -3182,7 +3145,6 @@ Partial Class Advisenote
         Me.Capacity11.ReadOnly = True
         Me.Capacity11.Size = New System.Drawing.Size(73, 24)
         Me.Capacity11.TabIndex = 236
-        Me.Capacity11.TabStop = False
         Me.Capacity11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity11.ThemeName = "Windows8"
         '
@@ -3196,7 +3158,6 @@ Partial Class Advisenote
         Me.Capacity10.ReadOnly = True
         Me.Capacity10.Size = New System.Drawing.Size(73, 24)
         Me.Capacity10.TabIndex = 235
-        Me.Capacity10.TabStop = False
         Me.Capacity10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity10.ThemeName = "Windows8"
         '
@@ -3210,7 +3171,6 @@ Partial Class Advisenote
         Me.Capacity9.ReadOnly = True
         Me.Capacity9.Size = New System.Drawing.Size(73, 24)
         Me.Capacity9.TabIndex = 234
-        Me.Capacity9.TabStop = False
         Me.Capacity9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity9.ThemeName = "Windows8"
         '
@@ -3224,7 +3184,6 @@ Partial Class Advisenote
         Me.Capacity8.ReadOnly = True
         Me.Capacity8.Size = New System.Drawing.Size(73, 24)
         Me.Capacity8.TabIndex = 233
-        Me.Capacity8.TabStop = False
         Me.Capacity8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity8.ThemeName = "Windows8"
         '
@@ -3238,7 +3197,6 @@ Partial Class Advisenote
         Me.Capacity7.ReadOnly = True
         Me.Capacity7.Size = New System.Drawing.Size(73, 24)
         Me.Capacity7.TabIndex = 232
-        Me.Capacity7.TabStop = False
         Me.Capacity7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity7.ThemeName = "Windows8"
         '
@@ -3252,7 +3210,6 @@ Partial Class Advisenote
         Me.Capacity6.ReadOnly = True
         Me.Capacity6.Size = New System.Drawing.Size(73, 24)
         Me.Capacity6.TabIndex = 231
-        Me.Capacity6.TabStop = False
         Me.Capacity6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity6.ThemeName = "Windows8"
         '
@@ -3266,7 +3223,6 @@ Partial Class Advisenote
         Me.Capacity5.ReadOnly = True
         Me.Capacity5.Size = New System.Drawing.Size(73, 24)
         Me.Capacity5.TabIndex = 230
-        Me.Capacity5.TabStop = False
         Me.Capacity5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity5.ThemeName = "Windows8"
         '
@@ -3280,7 +3236,6 @@ Partial Class Advisenote
         Me.Capacity4.ReadOnly = True
         Me.Capacity4.Size = New System.Drawing.Size(73, 24)
         Me.Capacity4.TabIndex = 229
-        Me.Capacity4.TabStop = False
         Me.Capacity4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity4.ThemeName = "Windows8"
         '
@@ -3294,7 +3249,6 @@ Partial Class Advisenote
         Me.Capacity3.ReadOnly = True
         Me.Capacity3.Size = New System.Drawing.Size(73, 24)
         Me.Capacity3.TabIndex = 228
-        Me.Capacity3.TabStop = False
         Me.Capacity3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity3.ThemeName = "Windows8"
         '
@@ -3308,7 +3262,6 @@ Partial Class Advisenote
         Me.Capacity2.ReadOnly = True
         Me.Capacity2.Size = New System.Drawing.Size(73, 24)
         Me.Capacity2.TabIndex = 227
-        Me.Capacity2.TabStop = False
         Me.Capacity2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity2.ThemeName = "Windows8"
         '
@@ -3322,7 +3275,6 @@ Partial Class Advisenote
         Me.Capacity1.ReadOnly = True
         Me.Capacity1.Size = New System.Drawing.Size(73, 24)
         Me.Capacity1.TabIndex = 226
-        Me.Capacity1.TabStop = False
         Me.Capacity1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Capacity1.ThemeName = "Windows8"
         '
@@ -3717,7 +3669,6 @@ Partial Class Advisenote
         Me.Cbn8.ReadOnly = True
         Me.Cbn8.Size = New System.Drawing.Size(178, 23)
         Me.Cbn8.TabIndex = 19
-        Me.Cbn8.TabStop = False
         Me.Cbn8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Cbn8.ThemeName = "Windows8"
         CType(Me.Cbn8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -3783,7 +3734,6 @@ Partial Class Advisenote
         Me.Cbn7.ReadOnly = True
         Me.Cbn7.Size = New System.Drawing.Size(128, 23)
         Me.Cbn7.TabIndex = 14
-        Me.Cbn7.TabStop = False
         Me.Cbn7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Cbn7.ThemeName = "Windows8"
         CType(Me.Cbn7.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -3810,7 +3760,6 @@ Partial Class Advisenote
         Me.Load_q.ReadOnly = True
         Me.Load_q.Size = New System.Drawing.Size(128, 23)
         Me.Load_q.TabIndex = 15
-        Me.Load_q.TabStop = False
         Me.Load_q.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Load_q.ThemeName = "Windows8"
         CType(Me.Load_q.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -4031,6 +3980,7 @@ Partial Class Advisenote
         Me.Label42.TabIndex = 303
         Me.Label42.Text = "Driver Photo"
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label42.Visible = False
         '
         'PictureBox1
         '
@@ -4041,6 +3991,7 @@ Partial Class Advisenote
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 302
         Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'RadGroupBox6
         '
@@ -4296,7 +4247,6 @@ Partial Class Advisenote
         Me.Cbn5.ReadOnly = True
         Me.Cbn5.Size = New System.Drawing.Size(187, 23)
         Me.Cbn5.TabIndex = 13
-        Me.Cbn5.TabStop = False
         Me.Cbn5.ThemeName = "Windows8"
         CType(Me.Cbn5.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -4461,7 +4411,6 @@ Partial Class Advisenote
         Me.Update_date.ReadOnly = True
         Me.Update_date.Size = New System.Drawing.Size(170, 23)
         Me.Update_date.TabIndex = 17
-        Me.Update_date.TabStop = False
         Me.Update_date.ThemeName = "Windows8"
         CType(Me.Update_date.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.Update_date.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -4475,7 +4424,6 @@ Partial Class Advisenote
         Me.Update_by.ReadOnly = True
         Me.Update_by.Size = New System.Drawing.Size(170, 23)
         Me.Update_by.TabIndex = 18
-        Me.Update_by.TabStop = False
         Me.Update_by.ThemeName = "Windows8"
         CType(Me.Update_by.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.Update_by.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -4523,13 +4471,11 @@ Partial Class Advisenote
         Me.Container.Name = "Container"
         Me.Container.Size = New System.Drawing.Size(58, 27)
         Me.Container.TabIndex = 9
-        Me.Container.TabStop = False
         Me.Container.ThemeName = "Office2010Blue"
         Me.Container.Visible = False
         '
         'BCancel
         '
-        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
@@ -4548,6 +4494,10 @@ Partial Class Advisenote
         CType(Me.BCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Cancel"
         CType(Me.BCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Me.RoundRectShape1
         '
+        'RoundRectShape1
+        '
+        Me.RoundRectShape1.IsRightToLeft = False
+        '
         'RadButton7
         '
         Me.RadButton7.Location = New System.Drawing.Point(73, 628)
@@ -4559,7 +4509,6 @@ Partial Class Advisenote
         '
         'Bsave
         '
-        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.ForeColor = System.Drawing.Color.White
@@ -5430,12 +5379,16 @@ Partial Class Advisenote
         Me.RadTextBox2.Name = "RadTextBox2"
         Me.RadTextBox2.Size = New System.Drawing.Size(170, 20)
         Me.RadTextBox2.TabIndex = 186
-        Me.RadTextBox2.TabStop = False
         Me.RadTextBox2.Visible = False
         '
         'CustomShape1
         '
         Me.CustomShape1.Dimension = New System.Drawing.Rectangle(0, 0, 0, 0)
+        Me.CustomShape1.IsRightToLeft = False
+        '
+        'OfficeShape1
+        '
+        Me.OfficeShape1.IsRightToLeft = False
         '
         'RadPanel2
         '
@@ -5472,7 +5425,6 @@ Partial Class Advisenote
         Me.Seal_Count.Name = "Seal_Count"
         Me.Seal_Count.Size = New System.Drawing.Size(89, 24)
         Me.Seal_Count.TabIndex = 274
-        Me.Seal_Count.TabStop = False
         Me.Seal_Count.Text = "DG1000"
         Me.Seal_Count.ThemeName = "Office2010Blue"
         '

@@ -173,7 +173,7 @@ Partial Class Seal_setting
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(300, 82)
         Me.GroupBox1.TabIndex = 4
-        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.TabStop = True
         Me.GroupBox1.Tag = ""
         '
         'PTTRadio
@@ -247,7 +247,7 @@ Partial Class Seal_setting
         Me.RadTextBox3.ReadOnly = True
         Me.RadTextBox3.Size = New System.Drawing.Size(300, 30)
         Me.RadTextBox3.TabIndex = 115
-        Me.RadTextBox3.TabStop = False
+        Me.RadTextBox3.TabStop = True
         CType(Me.RadTextBox3.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.RadTextBox3.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         CType(Me.RadTextBox3.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 14.0!)
@@ -283,7 +283,7 @@ Partial Class Seal_setting
         Me.SealLast.Name = "SealLast"
         Me.SealLast.Size = New System.Drawing.Size(300, 30)
         Me.SealLast.TabIndex = 2
-        Me.SealLast.TabStop = False
+        Me.SealLast.TabStop = True
         Me.SealLast.ThemeName = "Office2010Blue"
         '
         'SealTotal
@@ -296,7 +296,7 @@ Partial Class Seal_setting
         Me.SealTotal.ReadOnly = True
         Me.SealTotal.Size = New System.Drawing.Size(300, 30)
         Me.SealTotal.TabIndex = 113
-        Me.SealTotal.TabStop = False
+        Me.SealTotal.TabStop = True
         Me.SealTotal.ThemeName = "Office2010Blue"
         CType(Me.SealTotal.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.SealTotal.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -352,7 +352,7 @@ Partial Class Seal_setting
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(300, 30)
         Me.UPDATEBY.TabIndex = 71
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -367,7 +367,7 @@ Partial Class Seal_setting
         Me.P_UPDATE.ReadOnly = True
         Me.P_UPDATE.Size = New System.Drawing.Size(300, 30)
         Me.P_UPDATE.TabIndex = 70
-        Me.P_UPDATE.TabStop = False
+        Me.P_UPDATE.TabStop = True
         Me.P_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -394,7 +394,7 @@ Partial Class Seal_setting
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(300, 117)
         Me.GroupBox4.TabIndex = 3
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'P_typeEnd
@@ -486,7 +486,7 @@ Partial Class Seal_setting
         Me.Sealst.Name = "Sealst"
         Me.Sealst.Size = New System.Drawing.Size(300, 30)
         Me.Sealst.TabIndex = 0
-        Me.Sealst.TabStop = False
+        Me.Sealst.TabStop = True
         Me.Sealst.ThemeName = "Office2010Blue"
         '
         'SealLs
@@ -497,7 +497,7 @@ Partial Class Seal_setting
         Me.SealLs.Name = "SealLs"
         Me.SealLs.Size = New System.Drawing.Size(300, 30)
         Me.SealLs.TabIndex = 1
-        Me.SealLs.TabStop = False
+        Me.SealLs.TabStop = True
         Me.SealLs.ThemeName = "Office2010Blue"
         '
         'RadPanel3
@@ -739,7 +739,7 @@ Partial Class Seal_setting
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4

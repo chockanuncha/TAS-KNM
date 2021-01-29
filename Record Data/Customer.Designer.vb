@@ -79,6 +79,7 @@ Partial Class Customer
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.T_CUSTOMERTableAdapter1 = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_CUSTOMERTableAdapter()
+        Me.Ext_Text1 = New Telerik.WinControls.UI.RadTextBox()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel3.SuspendLayout()
         CType(Me.MasterGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,6 +114,7 @@ Partial Class Customer
         CType(Me.U_Name_s, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ext_Text1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -251,6 +253,7 @@ Partial Class Customer
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -341,7 +344,7 @@ Partial Class Customer
         Me.G_SUM.ReadOnly = True
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -357,6 +360,7 @@ Partial Class Customer
         '
         'DetailGroup
         '
+        Me.DetailGroup.Controls.Add(Me.Ext_Text1)
         Me.DetailGroup.Controls.Add(Me.Label7)
         Me.DetailGroup.Controls.Add(Me.Bsave)
         Me.DetailGroup.Controls.Add(Me.BCancel)
@@ -388,7 +392,7 @@ Partial Class Customer
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(614, 695)
         Me.DetailGroup.TabIndex = 14
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'Label7
         '
@@ -403,7 +407,6 @@ Partial Class Customer
         '
         'Bsave
         '
-        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.ForeColor = System.Drawing.Color.White
@@ -429,7 +432,6 @@ Partial Class Customer
         '
         'BCancel
         '
-        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
@@ -459,7 +461,7 @@ Partial Class Customer
         Me.Customer_No.ReadOnly = True
         Me.Customer_No.Size = New System.Drawing.Size(300, 28)
         Me.Customer_No.TabIndex = 0
-        Me.Customer_No.TabStop = False
+        Me.Customer_No.TabStop = True
         CType(Me.Customer_No.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.Customer_No.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         CType(Me.Customer_No.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Tahoma", 14.0!)
@@ -483,7 +485,7 @@ Partial Class Customer
         Me.RadTextBox4.Name = "RadTextBox4"
         Me.RadTextBox4.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox4.TabIndex = 10
-        Me.RadTextBox4.TabStop = False
+        Me.RadTextBox4.TabStop = True
         '
         'RadTextBox5
         '
@@ -493,9 +495,13 @@ Partial Class Customer
         Me.RadTextBox5.Name = "RadTextBox5"
         Me.RadTextBox5.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox5.TabIndex = 11
-        Me.RadTextBox5.TabStop = False
+        'Me.RadTextBox5.TabStop = True
         Me.RadTextBox5.ThemeName = "Office2010Blue"
+
+
+
         '
+
         'RadLabel5
         '
         Me.RadLabel5.Font = New System.Drawing.Font("Tahoma", 14.0!)
@@ -539,7 +545,7 @@ Partial Class Customer
         Me.RadTextBox6.Name = "RadTextBox6"
         Me.RadTextBox6.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox6.TabIndex = 12
-        Me.RadTextBox6.TabStop = False
+        'Me.RadTextBox6.TabStop = True
         Me.RadTextBox6.ThemeName = "Office2010Blue"
         '
         'RadTextBox2
@@ -550,7 +556,7 @@ Partial Class Customer
         Me.RadTextBox2.Name = "RadTextBox2"
         Me.RadTextBox2.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox2.TabIndex = 8
-        Me.RadTextBox2.TabStop = False
+        'Me.RadTextBox2.TabStop = True
         Me.RadTextBox2.ThemeName = "Office2010Blue"
         '
         'RadLabel9
@@ -585,7 +591,7 @@ Partial Class Customer
         Me.RadTextBox3.Name = "RadTextBox3"
         Me.RadTextBox3.Size = New System.Drawing.Size(300, 28)
         Me.RadTextBox3.TabIndex = 9
-        Me.RadTextBox3.TabStop = False
+        '        Me.RadTextBox3.TabStop = True
         Me.RadTextBox3.ThemeName = "Office2010Blue"
         '
         'U_UPDATEBY
@@ -597,7 +603,7 @@ Partial Class Customer
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(300, 28)
         Me.U_UPDATEBY.TabIndex = 69
-        Me.U_UPDATEBY.TabStop = False
+        'Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -612,7 +618,7 @@ Partial Class Customer
         Me.CustomerCode.Name = "CustomerCode"
         Me.CustomerCode.Size = New System.Drawing.Size(300, 28)
         Me.CustomerCode.TabIndex = 1
-        Me.CustomerCode.TabStop = False
+        'Me.CustomerCode.TabStop = True
         '
         'U_UPDATE
         '
@@ -623,7 +629,7 @@ Partial Class Customer
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(300, 28)
         Me.U_UPDATE.TabIndex = 68
-        Me.U_UPDATE.TabStop = False
+        'Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -660,7 +666,7 @@ Partial Class Customer
         Me.U_Name_s.Name = "U_Name_s"
         Me.U_Name_s.Size = New System.Drawing.Size(300, 28)
         Me.U_Name_s.TabIndex = 3
-        Me.U_Name_s.TabStop = False
+        Me.U_Name_s.TabStop = True
         Me.U_Name_s.ThemeName = "Office2010Blue"
         '
         'RadLabel2
@@ -709,6 +715,13 @@ Partial Class Customer
         'T_CUSTOMERTableAdapter1
         '
         Me.T_CUSTOMERTableAdapter1.ClearBeforeFill = True
+        '
+        'Ext_Text1
+        '
+        Me.Ext_Text1.Location = New System.Drawing.Point(77, 585)
+        Me.Ext_Text1.Name = "Ext_Text1"
+        Me.Ext_Text1.Size = New System.Drawing.Size(122, 20)
+        Me.Ext_Text1.TabIndex = 131
         '
         'Customer
         '
@@ -765,6 +778,7 @@ Partial Class Customer
         CType(Me.U_Name_s, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ext_Text1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -820,5 +834,6 @@ Partial Class Customer
     Friend WithEvents DataSet_Table As DataSet_Table
     Friend WithEvents TCUSTOMERBindingSource As BindingSource
     Friend WithEvents T_CUSTOMERTableAdapter1 As DataSet_TableTableAdapters.T_CUSTOMERTableAdapter
+    Friend WithEvents Ext_Text1 As Telerik.WinControls.UI.RadTextBox
 End Class
 

@@ -123,7 +123,7 @@ Partial Class Temp
         Me.PictureBox2.Size = New System.Drawing.Size(323, 164)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 196
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.TabStop = True
         '
         'RadCalendar1
         '

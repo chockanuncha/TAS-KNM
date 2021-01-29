@@ -391,7 +391,7 @@ Partial Class Card
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -442,7 +442,7 @@ Partial Class Card
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(760, 694)
         Me.DetailGroup.TabIndex = 11
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'Label5
         '
@@ -549,7 +549,7 @@ Partial Class Card
         Me.CardSerial.Name = "CardSerial"
         Me.CardSerial.Size = New System.Drawing.Size(279, 28)
         Me.CardSerial.TabIndex = 4
-        Me.CardSerial.TabStop = False
+        Me.CardSerial.TabStop = True
         Me.CardSerial.ThemeName = "Office2010Blue"
         '
         'RadLabel12
@@ -587,7 +587,7 @@ Partial Class Card
         Me.Card_Expriredate.Name = "Card_Expriredate"
         Me.Card_Expriredate.Size = New System.Drawing.Size(279, 28)
         Me.Card_Expriredate.TabIndex = 6
-        Me.Card_Expriredate.TabStop = False
+        Me.Card_Expriredate.TabStop = True
         Me.Card_Expriredate.Text = "01/01/2013"
         Me.Card_Expriredate.ThemeName = "Office2010Blue"
         Me.Card_Expriredate.Value = New Date(2013, 1, 1, 0, 0, 0, 0)
@@ -602,7 +602,7 @@ Partial Class Card
         Me.Card_ISSUEDATE.Name = "Card_ISSUEDATE"
         Me.Card_ISSUEDATE.Size = New System.Drawing.Size(279, 28)
         Me.Card_ISSUEDATE.TabIndex = 5
-        Me.Card_ISSUEDATE.TabStop = False
+        Me.Card_ISSUEDATE.TabStop = True
         Me.Card_ISSUEDATE.Text = "09/04/2020"
         Me.Card_ISSUEDATE.ThemeName = "Office2010Blue"
         Me.Card_ISSUEDATE.Value = New Date(2013, 8, 25, 20, 50, 45, 0)
@@ -637,7 +637,7 @@ Partial Class Card
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(279, 28)
         Me.U_UPDATEBY.TabIndex = 69
-        Me.U_UPDATEBY.TabStop = False
+        Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -651,7 +651,7 @@ Partial Class Card
         Me.CardNo.Name = "CardNo"
         Me.CardNo.Size = New System.Drawing.Size(279, 28)
         Me.CardNo.TabIndex = 0
-        Me.CardNo.TabStop = False
+        Me.CardNo.TabStop = True
         CType(Me.CardNo.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.SystemColors.ControlLight
         CType(Me.CardNo.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Tahoma", 14.0!)
         '
@@ -664,7 +664,7 @@ Partial Class Card
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(279, 28)
         Me.U_UPDATE.TabIndex = 68
-        Me.U_UPDATE.TabStop = False
+        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -703,7 +703,7 @@ Partial Class Card
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(279, 77)
         Me.GroupBox4.TabIndex = 7
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'U_StatusOff
@@ -785,7 +785,7 @@ Partial Class Card
         Me.User_logon.ReadOnly = True
         Me.User_logon.Size = New System.Drawing.Size(279, 28)
         Me.User_logon.TabIndex = 46
-        Me.User_logon.TabStop = False
+        Me.User_logon.TabStop = True
         Me.User_logon.ThemeName = "Office2010Blue"
         CType(Me.User_logon.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.User_logon.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))

@@ -77,7 +77,7 @@ Partial Class ReportDayBetween
         Me.DTP1.Name = "DTP1"
         Me.DTP1.Size = New System.Drawing.Size(164, 28)
         Me.DTP1.TabIndex = 9
-        Me.DTP1.TabStop = False
+        Me.DTP1.TabStop = True
         Me.DTP1.Text = "16/06/2014"
         Me.DTP1.ThemeName = "Office2010Blue"
         Me.DTP1.Value = New Date(2014, 6, 16, 15, 4, 17, 1)
@@ -129,7 +129,7 @@ Partial Class ReportDayBetween
         Me.DTP2.Name = "DTP2"
         Me.DTP2.Size = New System.Drawing.Size(146, 28)
         Me.DTP2.TabIndex = 0
-        Me.DTP2.TabStop = False
+        Me.DTP2.TabStop = True
         Me.DTP2.Text = "16/06/2014"
         Me.DTP2.ThemeName = "Office2010Blue"
         Me.DTP2.Value = New Date(2014, 6, 16, 15, 4, 17, 1)
@@ -143,7 +143,7 @@ Partial Class ReportDayBetween
         Me.DTP3.Name = "DTP3"
         Me.DTP3.Size = New System.Drawing.Size(146, 28)
         Me.DTP3.TabIndex = 1
-        Me.DTP3.TabStop = False
+        Me.DTP3.TabStop = True
         Me.DTP3.Text = "16/06/2014"
         Me.DTP3.ThemeName = "Office2010Blue"
         Me.DTP3.Value = New Date(2014, 6, 16, 15, 4, 17, 1)
@@ -208,7 +208,7 @@ Partial Class ReportDayBetween
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(69, 41)
         Me.GroupBox4.TabIndex = 20
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         Me.GroupBox4.Text = "Type report"
         Me.GroupBox4.Visible = False

@@ -249,7 +249,7 @@ Partial Class Product
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BindingNavigator1
@@ -468,7 +468,7 @@ Partial Class Product
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(300, 28)
         Me.UPDATEBY.TabIndex = 71
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -483,7 +483,7 @@ Partial Class Product
         Me.P_UPDATE.ReadOnly = True
         Me.P_UPDATE.Size = New System.Drawing.Size(300, 28)
         Me.P_UPDATE.TabIndex = 70
-        Me.P_UPDATE.TabStop = False
+        Me.P_UPDATE.TabStop = True
         Me.P_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -534,7 +534,7 @@ Partial Class Product
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(300, 54)
         Me.GroupBox4.TabIndex = 3
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'P_typeAdd
@@ -667,7 +667,7 @@ Partial Class Product
         Me.P_Code.Name = "P_Code"
         Me.P_Code.Size = New System.Drawing.Size(300, 28)
         Me.P_Code.TabIndex = 1
-        Me.P_Code.TabStop = False
+        Me.P_Code.TabStop = True
         Me.P_Code.ThemeName = "Office2010Blue"
         '
         'P_Name
@@ -678,7 +678,7 @@ Partial Class Product
         Me.P_Name.Name = "P_Name"
         Me.P_Name.Size = New System.Drawing.Size(300, 28)
         Me.P_Name.TabIndex = 2
-        Me.P_Name.TabStop = False
+        Me.P_Name.TabStop = True
         Me.P_Name.ThemeName = "Office2010Blue"
         '
         'T_PRODUCTTableAdapter

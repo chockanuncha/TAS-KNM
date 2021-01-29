@@ -499,7 +499,7 @@ Partial Class BatchMeter
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
@@ -669,7 +669,7 @@ Partial Class BatchMeter
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(246, 28)
         Me.UPDATEBY.TabIndex = 76
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -684,7 +684,7 @@ Partial Class BatchMeter
         Me.P_UPDATE.ReadOnly = True
         Me.P_UPDATE.Size = New System.Drawing.Size(246, 28)
         Me.P_UPDATE.TabIndex = 75
-        Me.P_UPDATE.TabStop = False
+        Me.P_UPDATE.TabStop = True
         Me.P_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.P_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1408,7 +1408,7 @@ Partial Class BatchMeter
         Me.RadTextBox4.Name = "RadTextBox4"
         Me.RadTextBox4.Size = New System.Drawing.Size(207, 28)
         Me.RadTextBox4.TabIndex = 159
-        Me.RadTextBox4.TabStop = False
+        Me.RadTextBox4.TabStop = True
         Me.RadTextBox4.ThemeName = "Office2010Blue"
         '
         'GroupBox2
@@ -1419,7 +1419,7 @@ Partial Class BatchMeter
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(207, 40)
         Me.GroupBox2.TabIndex = 132
-        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.TabStop = True
         Me.GroupBox2.Tag = ""
         '
         'RightChk
@@ -1510,7 +1510,7 @@ Partial Class BatchMeter
         Me.RadTextBox2.Name = "RadTextBox2"
         Me.RadTextBox2.Size = New System.Drawing.Size(207, 28)
         Me.RadTextBox2.TabIndex = 135
-        Me.RadTextBox2.TabStop = False
+        Me.RadTextBox2.TabStop = True
         Me.RadTextBox2.ThemeName = "Office2010Blue"
         '
         'GroupBox4
@@ -1521,7 +1521,7 @@ Partial Class BatchMeter
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(207, 72)
         Me.GroupBox4.TabIndex = 133
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'Meter_StatusOff
@@ -1604,7 +1604,7 @@ Partial Class BatchMeter
         Me.BatchID.Name = "BatchID"
         Me.BatchID.Size = New System.Drawing.Size(207, 28)
         Me.BatchID.TabIndex = 127
-        Me.BatchID.TabStop = False
+        Me.BatchID.TabStop = True
         Me.BatchID.ThemeName = "Office2010Blue"
         '
         'RadLabel2
@@ -1650,7 +1650,7 @@ Partial Class BatchMeter
         Me.BatchName.Name = "BatchName"
         Me.BatchName.Size = New System.Drawing.Size(207, 28)
         Me.BatchName.TabIndex = 128
-        Me.BatchName.TabStop = False
+        Me.BatchName.TabStop = True
         Me.BatchName.ThemeName = "Office2010Blue"
         '
         'RadGroupBox1

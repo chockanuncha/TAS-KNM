@@ -96,7 +96,7 @@ Partial Class Login
         Me.PictureBox1.Size = New System.Drawing.Size(271, 51)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 16
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'Login
         '

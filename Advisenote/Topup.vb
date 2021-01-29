@@ -645,7 +645,7 @@ Public Class Topup
         Next
 
         Sql = ""
-        Sql = "select  NVL(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
+        Sql = "select  Isnull(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
         Sql &= " where LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + ""
 
         Dim dt1 As DataTable = cls.Query(Sql)
@@ -662,7 +662,7 @@ Public Class Topup
 
         Try
             q = ""
-            q = "select NVL(max(Load_id),0)+1 as load_id ,NVL(max(Reference),0)+1 as Reference  from T_loadingnote"
+            q = "select Isnull(max(Load_id),0)+1 as load_id ,Isnull(max(Reference),0)+1 as Reference  from T_loadingnote"
 
             Dim dt2 As DataTable = cls.Query(q)
 
@@ -987,7 +987,7 @@ Public Class Topup
         Try
             ''''   ST  '''''''''
             q = ""
-            q = "select NVL(max(ST_ID),0)+1 as ST_ID"
+            q = "select Isnull(max(ST_ID),0)+1 as ST_ID"
             q &= " from T_ST"
 
             Dim dt1 As DataTable = cls.Query(q)
@@ -1759,34 +1759,34 @@ Public Class Topup
 
         Refresh()
         q &= ""
-        q &= "Select NVL(T_LOADINGNOTE.load_did,0) as Load_did ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_Shipper,0) as load_shipper ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_delivery,0) as load_delivery ,"
-        q &= "NVL(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
-        q &= "Trim(NVL(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
+        q &= "Select Isnull(T_LOADINGNOTE.load_did,0) as Load_did ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_Shipper,0) as load_shipper ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_delivery,0) as load_delivery ,"
+        q &= "Isnull(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
+        q &= "Trim(Isnull(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
         q &= "T_LOADINGNOTE.AddnoteDate as AddnoteDate,"
-        q &= "NVL(T_LOADINGNOTE.Reference,0) as Reference ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
+        q &= "Isnull(T_LOADINGNOTE.Reference,0) as Reference ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
         q &= "T_LOADINGNOTE.Container AS Container ,"
-        q &= "NVL(T_LOADINGNOTE.Remark,'') as Remark ,"
-        q &= "NVL(T_Customer.Customer_name ,0) as Customer_name ,"   'T_Customer.Customer_name
-        q &= "NVL(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
-        q &= "NVL(T_STATUS.status_name,0) as status_Name ,"   'T_STATUS.status_name
-        q &= "NVL(T_COMPANY.COMPANY_CODE ,0) as LOAD_TRUCKCOMPANY ,"  'T_COMPANY.COMPANY_CODE
-        q &= "NVL(T_LOADINGNOTE.LOAD_status,0) as Load_status ,"
+        q &= "Isnull(T_LOADINGNOTE.Remark,'') as Remark ,"
+        q &= "Isnull(T_Customer.Customer_name ,0) as Customer_name ,"   'T_Customer.Customer_name
+        q &= "Isnull(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
+        q &= "Isnull(T_STATUS.status_name,0) as status_Name ,"   'T_STATUS.status_name
+        q &= "Isnull(T_COMPANY.COMPANY_CODE ,0) as LOAD_TRUCKCOMPANY ,"  'T_COMPANY.COMPANY_CODE
+        q &= "Isnull(T_LOADINGNOTE.LOAD_status,0) as Load_status ,"
         q &= "T_LOADINGNOTE.Update_date as Update_date ,"
         q &= "T_LOADINGNOTE.UPDATE_BY as Update_by ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_DOfull,0) as LOAD_DOfull ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_TYPE,-1) as LOAD_TYPE ,"
-        q &= "NVL(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
-        q &= "NVL(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
-        q &= "NVL(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_DOfull,0) as LOAD_DOfull ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_TYPE,-1) as LOAD_TYPE ,"
+        q &= "Isnull(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
+        q &= "Isnull(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
+        q &= "Isnull(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
         q &= "T_LOADINGNOTE.LOAD_AUTHORIZE  AS LOAD_AUTHORIZE "
         'q &= "T_LOADINGNOTE.remark  AS REmark "
 
@@ -1902,34 +1902,34 @@ Public Class Topup
             'Bcancel_Click(sender, e)
             Refresh()
             q &= ""
-            q &= "Select NVL(T_LOADINGNOTE.load_did,0) as Load_did ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_Shipper,0) as load_shipper ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_delivery,0) as load_delivery ,"
-            q &= "NVL(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
-            q &= "Trim(NVL(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
+            q &= "Select Isnull(T_LOADINGNOTE.load_did,0) as Load_did ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_Shipper,0) as load_shipper ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_delivery,0) as load_delivery ,"
+            q &= "Isnull(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
+            q &= "Trim(Isnull(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
             q &= "T_LOADINGNOTE.AddnoteDate as AddnoteDate,"
-            q &= "NVL(T_LOADINGNOTE.Reference,0) as Reference ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
+            q &= "Isnull(T_LOADINGNOTE.Reference,0) as Reference ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
             q &= "T_LOADINGNOTE.Container AS Container ,"
-            q &= "NVL(T_LOADINGNOTE.Remark, '') as Remark ,"
-            q &= "NVL(T_Customer.Customer_name ,0) as Customer_name ,"   'T_Customer.Customer_name
-            q &= "NVL(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
-            q &= "NVL(T_STATUS.status_name,0) as status_Name ,"   'T_STATUS.status_name
-            q &= "NVL(T_COMPANY.COMPANY_CODE ,0) as LOAD_TRUCKCOMPANY ,"  'T_COMPANY.COMPANY_CODE
-            q &= "NVL(T_LOADINGNOTE.LOAD_status,0) as Load_status ,"
+            q &= "Isnull(T_LOADINGNOTE.Remark, '') as Remark ,"
+            q &= "Isnull(T_Customer.Customer_name ,0) as Customer_name ,"   'T_Customer.Customer_name
+            q &= "Isnull(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
+            q &= "Isnull(T_STATUS.status_name,0) as status_Name ,"   'T_STATUS.status_name
+            q &= "Isnull(T_COMPANY.COMPANY_CODE ,0) as LOAD_TRUCKCOMPANY ,"  'T_COMPANY.COMPANY_CODE
+            q &= "Isnull(T_LOADINGNOTE.LOAD_status,0) as Load_status ,"
             q &= "T_LOADINGNOTE.Update_date as Update_date ,"
             q &= "T_LOADINGNOTE.UPDATE_BY as Update_by ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_DOfull,0) as LOAD_DOfull ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_TYPE,-1) as LOAD_TYPE ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
-            q &= "NVL(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
-            q &= "NVL(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_DOfull,0) as LOAD_DOfull ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_TYPE,-1) as LOAD_TYPE ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
+            q &= "Isnull(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
+            q &= "Isnull(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
             q &= "T_LOADINGNOTE.LOAD_AUTHORIZE  AS LOAD_AUTHORIZE, "
             q &= "T_LOADINGNOTE.remark  AS REmark "
 

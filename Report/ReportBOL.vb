@@ -29,7 +29,7 @@ Public Class ReportBOL
             sql = "select max(Reference) as Reference,"
             sql &= "max(St_ST_date) as St_ST_date,sum(Gross_m1) as Gross_m1,sum(net86f) as Net_m1,min(Startm1) as Startm1,max(Stopm1) as Stopm1,min(Startm1_net) as Startm1_net,max(Stopm1_net) as Stopm1_net, "
 
-            sql &= "Nvl(to_char(min(LC_STARTTIME),'HH24:MI:SS'),min(St_ST_time_start)) as St_ST_time_start,to_char(max(LC_ENDTIME),'HH24:MI:SS') as St_ST_time_stop,max(Batch_name) as Batch_name,max(Lc_Compartment) as Lc_Compartment,max(LC_preset) as LC_preset,max(Load_driver) as Load_driver,max(load_customer) as load_customer,max(load_Vehicle) as load_Vehicle,max(Product_code) as Product_code,max(lc_tank) as lc_tank,"
+            sql &= "Isnull(to_char(min(LC_STARTTIME),'HH24:MI:SS'),min(St_ST_time_start)) as St_ST_time_start,to_char(max(LC_ENDTIME),'HH24:MI:SS') as St_ST_time_stop,max(Batch_name) as Batch_name,max(Lc_Compartment) as Lc_Compartment,max(LC_preset) as LC_preset,max(Load_driver) as Load_driver,max(load_customer) as load_customer,max(load_Vehicle) as load_Vehicle,max(Product_code) as Product_code,max(lc_tank) as lc_tank,"
             sql &= "max(Avg_temp_m1) as Avg_temp_m1,max(load_dofull) as load_dofull,max(addnotedate) as addnotedate,min(Q_time) as Q_time,min(Checkin_time) as Checkin_time,max(VCF_M1) as VCF_M1,max(Density30C_M1) as Density30C_M1,max(DO_TYPE) as DO_TYPE,max(Product_name) as Product_name,"
             sql &= "max(LC_Seal) as LC_Seal,MAX(lc_additive) as Lc_additive,max(checkout_time) as checkout_time "
 

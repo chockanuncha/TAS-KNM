@@ -205,7 +205,7 @@ Partial Class ReportBOL
         Me.RadTextBox1.Name = "RadTextBox1"
         Me.RadTextBox1.Size = New System.Drawing.Size(135, 30)
         Me.RadTextBox1.TabIndex = 1
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.Visible = False
         '
         'RadCalendar1
@@ -378,7 +378,7 @@ Partial Class ReportBOL
         Me.P_SUM.Name = "P_SUM"
         Me.P_SUM.Size = New System.Drawing.Size(85, 25)
         Me.P_SUM.TabIndex = 42
-        Me.P_SUM.TabStop = False
+        Me.P_SUM.TabStop = True
         Me.P_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3

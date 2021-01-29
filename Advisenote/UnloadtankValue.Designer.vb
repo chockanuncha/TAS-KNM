@@ -88,7 +88,7 @@ Partial Class UnloadtankValue
         Me.Referencetext.ReadOnly = True
         Me.Referencetext.Size = New System.Drawing.Size(318, 34)
         Me.Referencetext.TabIndex = 43
-        Me.Referencetext.TabStop = False
+        Me.Referencetext.TabStop = True
         Me.Referencetext.Text = "DDDD"
         Me.Referencetext.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -169,7 +169,7 @@ Partial Class UnloadtankValue
         Me.Trucknumber.ReadOnly = True
         Me.Trucknumber.Size = New System.Drawing.Size(318, 34)
         Me.Trucknumber.TabIndex = 48
-        Me.Trucknumber.TabStop = False
+        Me.Trucknumber.TabStop = True
         Me.Trucknumber.Text = "DDDD"
         Me.Trucknumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -192,7 +192,7 @@ Partial Class UnloadtankValue
         Me.Tankvalue.ReadOnly = True
         Me.Tankvalue.Size = New System.Drawing.Size(318, 34)
         Me.Tankvalue.TabIndex = 50
-        Me.Tankvalue.TabStop = False
+        Me.Tankvalue.TabStop = True
         Me.Tankvalue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         CType(Me.Tankvalue.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.Tankvalue.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -216,7 +216,7 @@ Partial Class UnloadtankValue
         Me.Tankno.ReadOnly = True
         Me.Tankno.Size = New System.Drawing.Size(318, 34)
         Me.Tankno.TabIndex = 52
-        Me.Tankno.TabStop = False
+        Me.Tankno.TabStop = True
         Me.Tankno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -238,7 +238,7 @@ Partial Class UnloadtankValue
         Me.Tankvaluefinish.ReadOnly = True
         Me.Tankvaluefinish.Size = New System.Drawing.Size(318, 34)
         Me.Tankvaluefinish.TabIndex = 54
-        Me.Tankvaluefinish.TabStop = False
+        Me.Tankvaluefinish.TabStop = True
         Me.Tankvaluefinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         CType(Me.Tankvaluefinish.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(10, Byte), Integer))
         CType(Me.Tankvaluefinish.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -262,7 +262,7 @@ Partial Class UnloadtankValue
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(192, 90)
         Me.GroupBox4.TabIndex = 0
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'Tank_After

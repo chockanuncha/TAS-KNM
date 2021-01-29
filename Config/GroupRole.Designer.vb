@@ -198,7 +198,7 @@ Partial Class GroupRole
         Me.DocumentTabStrip1.SelectedIndex = 0
         Me.DocumentTabStrip1.Size = New System.Drawing.Size(653, 330)
         Me.DocumentTabStrip1.TabIndex = 0
-        Me.DocumentTabStrip1.TabStop = False
+        Me.DocumentTabStrip1.TabStop = True
         Me.DocumentTabStrip1.ThemeName = "Office2010Blue"
         '
         'ToolTabStrip1
@@ -216,7 +216,7 @@ Partial Class GroupRole
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(66, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-134, 0)
         Me.ToolTabStrip1.TabIndex = 1
-        Me.ToolTabStrip1.TabStop = False
+        Me.ToolTabStrip1.TabStop = True
         Me.ToolTabStrip1.ThemeName = "Office2010Blue"
         '
         'ToolWindow1
@@ -335,7 +335,7 @@ Partial Class GroupRole
         Me.ToolTabStrip2.SizeInfo.AbsoluteSize = New System.Drawing.Size(304, 200)
         Me.ToolTabStrip2.SizeInfo.SplitterCorrection = New System.Drawing.Size(104, 0)
         Me.ToolTabStrip2.TabIndex = 2
-        Me.ToolTabStrip2.TabStop = False
+        Me.ToolTabStrip2.TabStop = True
         Me.ToolTabStrip2.ThemeName = "Office2010Blue"
         '
         'RadDock1
@@ -356,7 +356,7 @@ Partial Class GroupRole
         Me.RadDock1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDock1.Size = New System.Drawing.Size(1031, 330)
         Me.RadDock1.TabIndex = 24
-        Me.RadDock1.TabStop = False
+        Me.RadDock1.TabStop = True
         Me.RadDock1.ThemeName = "Office2010Blue"
         '
         'LUser
@@ -442,7 +442,7 @@ Partial Class GroupRole
         Me.RadMultiColumnComboBox2.Name = "RadMultiColumnComboBox2"
         Me.RadMultiColumnComboBox2.Size = New System.Drawing.Size(100, 23)
         Me.RadMultiColumnComboBox2.TabIndex = 22
-        Me.RadMultiColumnComboBox2.TabStop = False
+        Me.RadMultiColumnComboBox2.TabStop = True
         Me.RadMultiColumnComboBox2.Text = "RadMultiColumnComboBox2"
         Me.RadMultiColumnComboBox2.ThemeName = "Office2010Blue"
         '

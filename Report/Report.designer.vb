@@ -84,7 +84,7 @@ Partial Class Report
         Me.RadDateTimePicker1.Name = "RadDateTimePicker1"
         Me.RadDateTimePicker1.Size = New System.Drawing.Size(239, 31)
         Me.RadDateTimePicker1.TabIndex = 0
-        Me.RadDateTimePicker1.TabStop = False
+        Me.RadDateTimePicker1.TabStop = True
         Me.RadDateTimePicker1.Text = "28 กรกฎาคม 2557"
         Me.RadDateTimePicker1.Value = New Date(2014, 7, 28, 23, 23, 10, 107)
         '
@@ -95,7 +95,7 @@ Partial Class Report
         Me.RadDateTimePicker2.Name = "RadDateTimePicker2"
         Me.RadDateTimePicker2.Size = New System.Drawing.Size(221, 31)
         Me.RadDateTimePicker2.TabIndex = 1
-        Me.RadDateTimePicker2.TabStop = False
+        Me.RadDateTimePicker2.TabStop = True
         Me.RadDateTimePicker2.Text = "28 กรกฎาคม 2557"
         Me.RadDateTimePicker2.Value = New Date(2014, 7, 28, 23, 23, 10, 897)
         '

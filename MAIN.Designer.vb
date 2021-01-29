@@ -786,7 +786,7 @@ Partial Class MAIN
         Me.PictureBox2.Size = New System.Drawing.Size(254, 75)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 193
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.TabStop = True
         '
         'RadProgressBar1
         '
@@ -821,7 +821,7 @@ Partial Class MAIN
         Me.PictureBox1.Size = New System.Drawing.Size(143, 65)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 194
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'RadClock1
         '

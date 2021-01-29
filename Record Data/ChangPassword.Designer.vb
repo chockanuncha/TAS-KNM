@@ -54,7 +54,7 @@ Partial Class ChangPassword
         Me.U_PassOLD.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.U_PassOLD.Size = New System.Drawing.Size(221, 22)
         Me.U_PassOLD.TabIndex = 0
-        Me.U_PassOLD.TabStop = False
+        Me.U_PassOLD.TabStop = True
         Me.U_PassOLD.ThemeName = "Windows7"
         '
         'U_passnew
@@ -65,7 +65,7 @@ Partial Class ChangPassword
         Me.U_passnew.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.U_passnew.Size = New System.Drawing.Size(221, 22)
         Me.U_passnew.TabIndex = 1
-        Me.U_passnew.TabStop = False
+        Me.U_passnew.TabStop = True
         Me.U_passnew.ThemeName = "Windows7"
         '
         'U_PassConfirm
@@ -76,7 +76,7 @@ Partial Class ChangPassword
         Me.U_PassConfirm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.U_PassConfirm.Size = New System.Drawing.Size(221, 22)
         Me.U_PassConfirm.TabIndex = 2
-        Me.U_PassConfirm.TabStop = False
+        Me.U_PassConfirm.TabStop = True
         Me.U_PassConfirm.ThemeName = "Windows7"
         '
         'Label1
@@ -98,7 +98,7 @@ Partial Class ChangPassword
         Me.Username.ReadOnly = True
         Me.Username.Size = New System.Drawing.Size(221, 22)
         Me.Username.TabIndex = 132
-        Me.Username.TabStop = False
+        Me.Username.TabStop = True
         Me.Username.ThemeName = "Windows7"
         Me.Username.WordWrap = False
         CType(Me.Username.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Text = ""
@@ -145,7 +145,7 @@ Partial Class ChangPassword
         Me.PictureBox1.Size = New System.Drawing.Size(398, 51)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 136
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'RadButton1
         '
@@ -173,7 +173,7 @@ Partial Class ChangPassword
         Me.RadTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.RadTextBox1.Size = New System.Drawing.Size(260, 22)
         Me.RadTextBox1.TabIndex = 1
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.ThemeName = "Windows7"
         '
         'ChangPassword

@@ -341,7 +341,7 @@ Partial Class Usergroup
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -387,7 +387,7 @@ Partial Class Usergroup
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(664, 695)
         Me.DetailGroup.TabIndex = 14
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'Label5
         '
@@ -452,7 +452,7 @@ Partial Class Usergroup
         Me.UPDATEBY.ReadOnly = True
         Me.UPDATEBY.Size = New System.Drawing.Size(300, 28)
         Me.UPDATEBY.TabIndex = 69
-        Me.UPDATEBY.TabStop = False
+        Me.UPDATEBY.TabStop = True
         Me.UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -467,7 +467,7 @@ Partial Class Usergroup
         Me.U_Name.ReadOnly = True
         Me.U_Name.Size = New System.Drawing.Size(300, 28)
         Me.U_Name.TabIndex = 0
-        Me.U_Name.TabStop = False
+        Me.U_Name.TabStop = True
         Me.U_Name.ThemeName = "Office2010Blue"
         CType(Me.U_Name.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_Name.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -484,7 +484,7 @@ Partial Class Usergroup
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(300, 28)
         Me.U_UPDATE.TabIndex = 68
-        Me.U_UPDATE.TabStop = False
+        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -521,7 +521,7 @@ Partial Class Usergroup
         Me.U_Name_s.Name = "U_Name_s"
         Me.U_Name_s.Size = New System.Drawing.Size(300, 28)
         Me.U_Name_s.TabIndex = 1
-        Me.U_Name_s.TabStop = False
+        Me.U_Name_s.TabStop = True
         Me.U_Name_s.ThemeName = "Office2010Blue"
         '
         'RadLabel2

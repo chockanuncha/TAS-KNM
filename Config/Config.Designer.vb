@@ -91,7 +91,7 @@ Partial Class ConfigQ
         Me.Qtarget.Name = "Qtarget"
         Me.Qtarget.Size = New System.Drawing.Size(200, 28)
         Me.Qtarget.TabIndex = 122
-        Me.Qtarget.TabStop = False
+        Me.Qtarget.TabStop = True
         Me.Qtarget.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Qtarget.ThemeName = "Office2010Blue"
         '
@@ -114,7 +114,7 @@ Partial Class ConfigQ
         Me.Qtarget_last.ReadOnly = True
         Me.Qtarget_last.Size = New System.Drawing.Size(200, 28)
         Me.Qtarget_last.TabIndex = 120
-        Me.Qtarget_last.TabStop = False
+        Me.Qtarget_last.TabStop = True
         Me.Qtarget_last.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Qtarget_last.ThemeName = "Office2010Blue"
         CType(Me.Qtarget_last.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Text = ""
@@ -216,7 +216,7 @@ Partial Class ConfigQ
         Me.RadTextBox1.Name = "RadTextBox1"
         Me.RadTextBox1.Size = New System.Drawing.Size(200, 28)
         Me.RadTextBox1.TabIndex = 131
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.RadTextBox1.ThemeName = "Office2010Blue"
         '
@@ -239,7 +239,7 @@ Partial Class ConfigQ
         Me.RadTextBox2.ReadOnly = True
         Me.RadTextBox2.Size = New System.Drawing.Size(200, 28)
         Me.RadTextBox2.TabIndex = 129
-        Me.RadTextBox2.TabStop = False
+        Me.RadTextBox2.TabStop = True
         Me.RadTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.RadTextBox2.ThemeName = "Office2010Blue"
         CType(Me.RadTextBox2.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Text = ""
@@ -277,7 +277,7 @@ Partial Class ConfigQ
         Me.RadTextBox3.Name = "RadTextBox3"
         Me.RadTextBox3.Size = New System.Drawing.Size(200, 28)
         Me.RadTextBox3.TabIndex = 131
-        Me.RadTextBox3.TabStop = False
+        Me.RadTextBox3.TabStop = True
         Me.RadTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.RadTextBox3.ThemeName = "Office2010Blue"
         '
@@ -290,7 +290,7 @@ Partial Class ConfigQ
         Me.RadTextBox4.ReadOnly = True
         Me.RadTextBox4.Size = New System.Drawing.Size(200, 28)
         Me.RadTextBox4.TabIndex = 129
-        Me.RadTextBox4.TabStop = False
+        Me.RadTextBox4.TabStop = True
         Me.RadTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.RadTextBox4.ThemeName = "Office2010Blue"
         CType(Me.RadTextBox4.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Text = ""

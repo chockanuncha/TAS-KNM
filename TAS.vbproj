@@ -402,12 +402,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_View.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bin\Debug\AdvisenoteReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdvisenoteReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="bin\Debug\Alarm.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -448,6 +442,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report_File\AdvisenoteReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvisenoteReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="bin\Debug\TruckTimeResult1.vb">
@@ -883,10 +883,6 @@
     <EmbeddedResource Include="Advisenote\Advisenote_StatusGridView.resx">
       <DependentUpon>Advisenote_StatusGridView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\AdvisenoteReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AdvisenoteReport.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Alarm.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Alarm.vb</LastGenOutput>
@@ -914,6 +910,10 @@
     <EmbeddedResource Include="bin\Debug\Report1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report_File\AdvisenoteReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdvisenoteReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\TruckTimeResult1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

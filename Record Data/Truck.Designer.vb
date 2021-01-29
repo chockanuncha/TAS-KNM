@@ -513,7 +513,7 @@ Partial Class Truck
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(106, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
+        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.G_SUM.ThemeName = "Windows8"
         '
@@ -591,7 +591,7 @@ Partial Class Truck
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(1165, 684)
         Me.DetailGroup.TabIndex = 13
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'RadLabel29
         '
@@ -704,7 +704,7 @@ Partial Class Truck
         Me.VE_CAPA.ReadOnly = True
         Me.VE_CAPA.Size = New System.Drawing.Size(235, 23)
         Me.VE_CAPA.TabIndex = 19
-        Me.VE_CAPA.TabStop = False
+        Me.VE_CAPA.TabStop = True
         Me.VE_CAPA.ThemeName = "Windows8"
         CType(Me.VE_CAPA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.VE_CAPA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -769,7 +769,7 @@ Partial Class Truck
         Me.RadTextBox1.ReadOnly = True
         Me.RadTextBox1.Size = New System.Drawing.Size(235, 23)
         Me.RadTextBox1.TabIndex = 16
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.ThemeName = "Windows8"
         CType(Me.RadTextBox1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.RadTextBox1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -797,7 +797,7 @@ Partial Class Truck
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(235, 74)
         Me.GroupBox4.TabIndex = 0
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'VE_ARMBOTH
@@ -835,7 +835,7 @@ Partial Class Truck
         Me.GCompartment.Name = "GCompartment"
         Me.GCompartment.Size = New System.Drawing.Size(318, 663)
         Me.GCompartment.TabIndex = 127
-        Me.GCompartment.TabStop = False
+        Me.GCompartment.TabStop = True
         Me.GCompartment.Text = "Compartment"
         '
         'DataComp
@@ -949,7 +949,7 @@ Partial Class Truck
         Me.Condition_VALID_TO.Name = "Condition_VALID_TO"
         Me.Condition_VALID_TO.Size = New System.Drawing.Size(235, 23)
         Me.Condition_VALID_TO.TabIndex = 15
-        Me.Condition_VALID_TO.TabStop = False
+        Me.Condition_VALID_TO.TabStop = True
         Me.Condition_VALID_TO.Text = "25/01/2021"
         Me.Condition_VALID_TO.ThemeName = "Windows8"
         Me.Condition_VALID_TO.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -978,7 +978,7 @@ Partial Class Truck
         Me.Condition_VALID_FORM.Name = "Condition_VALID_FORM"
         Me.Condition_VALID_FORM.Size = New System.Drawing.Size(235, 23)
         Me.Condition_VALID_FORM.TabIndex = 14
-        Me.Condition_VALID_FORM.TabStop = False
+        Me.Condition_VALID_FORM.TabStop = True
         Me.Condition_VALID_FORM.Text = "25/01/2021"
         Me.Condition_VALID_FORM.ThemeName = "Windows8"
         Me.Condition_VALID_FORM.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1073,7 +1073,7 @@ Partial Class Truck
         Me.INSURANCE_VALID_TO.Name = "INSURANCE_VALID_TO"
         Me.INSURANCE_VALID_TO.Size = New System.Drawing.Size(235, 23)
         Me.INSURANCE_VALID_TO.TabIndex = 13
-        Me.INSURANCE_VALID_TO.TabStop = False
+        Me.INSURANCE_VALID_TO.TabStop = True
         Me.INSURANCE_VALID_TO.Text = "25/01/2021"
         Me.INSURANCE_VALID_TO.ThemeName = "Windows8"
         Me.INSURANCE_VALID_TO.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1102,7 +1102,7 @@ Partial Class Truck
         Me.INSURANCE_VALID_FORM.Name = "INSURANCE_VALID_FORM"
         Me.INSURANCE_VALID_FORM.Size = New System.Drawing.Size(235, 23)
         Me.INSURANCE_VALID_FORM.TabIndex = 12
-        Me.INSURANCE_VALID_FORM.TabStop = False
+        Me.INSURANCE_VALID_FORM.TabStop = True
         Me.INSURANCE_VALID_FORM.Text = "25/01/2021"
         Me.INSURANCE_VALID_FORM.ThemeName = "Windows8"
         Me.INSURANCE_VALID_FORM.Value = New Date(2021, 1, 25, 0, 0, 0, 0)
@@ -1219,7 +1219,7 @@ Partial Class Truck
         Me.Ve_tran1.Name = "Ve_tran1"
         Me.Ve_tran1.Size = New System.Drawing.Size(235, 23)
         Me.Ve_tran1.TabIndex = 2
-        Me.Ve_tran1.TabStop = False
+        Me.Ve_tran1.TabStop = True
         Me.Ve_tran1.ThemeName = "Windows8"
         Me.Ve_tran1.ValueMember = "COMPANY_ID"
         '
@@ -1284,7 +1284,7 @@ Partial Class Truck
         Me.VE_EXPIREDATE.Name = "VE_EXPIREDATE"
         Me.VE_EXPIREDATE.Size = New System.Drawing.Size(235, 23)
         Me.VE_EXPIREDATE.TabIndex = 8
-        Me.VE_EXPIREDATE.TabStop = False
+        Me.VE_EXPIREDATE.TabStop = True
         Me.VE_EXPIREDATE.Text = "25/01/2021"
         Me.VE_EXPIREDATE.ThemeName = "Windows8"
         Me.VE_EXPIREDATE.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1314,7 +1314,7 @@ Partial Class Truck
         Me.VE_ISSUEDATE.Name = "VE_ISSUEDATE"
         Me.VE_ISSUEDATE.Size = New System.Drawing.Size(235, 23)
         Me.VE_ISSUEDATE.TabIndex = 7
-        Me.VE_ISSUEDATE.TabStop = False
+        Me.VE_ISSUEDATE.TabStop = True
         Me.VE_ISSUEDATE.Text = "25/01/2021"
         Me.VE_ISSUEDATE.ThemeName = "Windows8"
         Me.VE_ISSUEDATE.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1342,7 +1342,7 @@ Partial Class Truck
         Me.T_UPDATEBY.ReadOnly = True
         Me.T_UPDATEBY.Size = New System.Drawing.Size(235, 23)
         Me.T_UPDATEBY.TabIndex = 0
-        Me.T_UPDATEBY.TabStop = False
+        Me.T_UPDATEBY.TabStop = True
         Me.T_UPDATEBY.ThemeName = "Windows8"
         CType(Me.T_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.T_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1357,7 +1357,7 @@ Partial Class Truck
         Me.T_ID.ReadOnly = True
         Me.T_ID.Size = New System.Drawing.Size(235, 23)
         Me.T_ID.TabIndex = 0
-        Me.T_ID.TabStop = False
+        Me.T_ID.TabStop = True
         Me.T_ID.ThemeName = "Windows8"
         CType(Me.T_ID.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.T_ID.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1372,7 +1372,7 @@ Partial Class Truck
         Me.T_UPDATE.ReadOnly = True
         Me.T_UPDATE.Size = New System.Drawing.Size(235, 23)
         Me.T_UPDATE.TabIndex = 0
-        Me.T_UPDATE.TabStop = False
+        Me.T_UPDATE.TabStop = True
         Me.T_UPDATE.ThemeName = "Windows8"
         CType(Me.T_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.T_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1470,7 +1470,7 @@ Partial Class Truck
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(235, 50)
         Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.TabStop = True
         Me.GroupBox1.Tag = ""
         '
         'VE_BACKNO
@@ -1509,7 +1509,7 @@ Partial Class Truck
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(1195, 817)
         Me.GroupBox2.TabIndex = 17
-        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.TabStop = True
         '
         'Label7
         '

@@ -215,7 +215,7 @@ Partial Class Workonlan
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(263, 381)
         Me.GroupBox1.TabIndex = 131
-        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.TabStop = True
         Me.GroupBox1.Text = "Startup Computer"
         '
         'T_COMPUTERTableAdapter

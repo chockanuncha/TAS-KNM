@@ -78,7 +78,7 @@ Partial Class EditSeal
         Me.Seallast.ReadOnly = True
         Me.Seallast.Size = New System.Drawing.Size(435, 38)
         Me.Seallast.TabIndex = 120
-        Me.Seallast.TabStop = False
+        Me.Seallast.TabStop = True
         Me.Seallast.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Seallast.ThemeName = "Breeze"
         CType(Me.Seallast.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -103,7 +103,7 @@ Partial Class EditSeal
         Me.Remark.Name = "Remark"
         Me.Remark.Size = New System.Drawing.Size(435, 38)
         Me.Remark.TabIndex = 2
-        Me.Remark.TabStop = False
+        Me.Remark.TabStop = True
         Me.Remark.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
@@ -165,7 +165,7 @@ Partial Class EditSeal
         Me.Seallast_Edit.Name = "Seallast_Edit"
         Me.Seallast_Edit.Size = New System.Drawing.Size(435, 38)
         Me.Seallast_Edit.TabIndex = 1
-        Me.Seallast_Edit.TabStop = False
+        Me.Seallast_Edit.TabStop = True
         Me.Seallast_Edit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -197,7 +197,7 @@ Partial Class EditSeal
         Me.PictureBox1.Size = New System.Drawing.Size(159, 99)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 193
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         Me.PictureBox1.Visible = False
         '
         'EditSeal

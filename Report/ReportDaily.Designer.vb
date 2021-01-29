@@ -173,7 +173,7 @@ Partial Class Reportdaily
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(381, 318)
         Me.GroupBox4.TabIndex = 41
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         '
         'RPT4On

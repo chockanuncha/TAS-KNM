@@ -86,7 +86,7 @@ Partial Class PrintSelect
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(270, 61)
         Me.GroupBox4.TabIndex = 11
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         Me.GroupBox4.Text = "Printer"
         '

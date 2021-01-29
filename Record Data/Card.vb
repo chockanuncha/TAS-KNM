@@ -131,7 +131,7 @@ Public Class Card
                     q &= " 0 ,"
                 End If
                 Dim n_year As Integer = 0
-                n_year = 543
+                n_year = 0
                 q &= "CONVERT(DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_ISSUEDATE.Value))) + "','DD/MM/YYYY')" + ","
                 q &= "CONVERT(DATETIME,'" + (String.Format("{0:dd/MM/yyyy}", DateAdd(DateInterval.Year, -n_year, Card_Expriredate.Value))) + "','DD/MM/YYYY')" + ","
 
@@ -272,7 +272,7 @@ Public Class Card
         Dim q, T_ID As String
         Try
             q = ""
-            q = "select NVL(max(CARD_NUMBER),0)+1 as CARD_NUMBER   from T_CARD"
+            q = "select Isnull(max(CARD_NUMBER),0)+1 as CARD_NUMBER   from T_CARD"
 
             Dim dt As DataTable = cls.Query(q)
 

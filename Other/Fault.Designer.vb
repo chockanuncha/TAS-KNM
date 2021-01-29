@@ -454,7 +454,7 @@ Partial Class Fault
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(546, 537)
         Me.DetailGroup.TabIndex = 4
-        Me.DetailGroup.TabStop = False
+        Me.DetailGroup.TabStop = True
         '
         'RadLabel5
         '
@@ -477,7 +477,7 @@ Partial Class Fault
         Me.RadTextBox1.Name = "RadTextBox1"
         Me.RadTextBox1.Size = New System.Drawing.Size(172, 32)
         Me.RadTextBox1.TabIndex = 46
-        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.ThemeName = "Windows7"
         '
         'RadLabel3
@@ -628,7 +628,7 @@ Partial Class Fault
         Me.P_Code.Name = "P_Code"
         Me.P_Code.Size = New System.Drawing.Size(172, 30)
         Me.P_Code.TabIndex = 0
-        Me.P_Code.TabStop = False
+        Me.P_Code.TabStop = True
         Me.P_Code.ThemeName = "Office2010Blue"
         '
         'P_Name
@@ -638,7 +638,7 @@ Partial Class Fault
         Me.P_Name.Name = "P_Name"
         Me.P_Name.Size = New System.Drawing.Size(172, 32)
         Me.P_Name.TabIndex = 1
-        Me.P_Name.TabStop = False
+        Me.P_Name.TabStop = True
         Me.P_Name.ThemeName = "Windows7"
         '
         'T_USERTableAdapter
@@ -709,7 +709,7 @@ Partial Class Fault
         Me.PictureBox1.Size = New System.Drawing.Size(237, 132)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 197
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'MenuStrip2
         '

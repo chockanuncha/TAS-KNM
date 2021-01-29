@@ -29,61 +29,63 @@ Partial Class Tank_Order
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn29 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn30 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn31 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn32 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn33 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn34 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn35 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn10 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn11 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn12 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn13 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn14 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn15 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn36 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn37 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn16 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn17 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewCheckBoxColumn8 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim GridViewCheckBoxColumn9 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim GridViewCheckBoxColumn10 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim GridViewCheckBoxColumn11 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim GridViewCheckBoxColumn12 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim GridViewTextBoxColumn38 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewCheckBoxColumn13 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim SortDescriptor3 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn39 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn40 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn41 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn42 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn43 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewCheckBoxColumn14 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
-        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn44 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn45 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn46 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn47 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewDecimalColumn18 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDateTimeColumn2 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
-        Dim GridViewTextBoxColumn48 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn49 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn50 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn51 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn52 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn53 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn54 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn55 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn56 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor4 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn1 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn2 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn3 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn4 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn5 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn6 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn7 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn8 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewCheckBoxColumn1 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim GridViewCheckBoxColumn2 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim GridViewCheckBoxColumn3 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim GridViewCheckBoxColumn4 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim GridViewCheckBoxColumn5 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewCheckBoxColumn6 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim SortDescriptor1 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn11 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn12 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn13 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn14 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn15 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewCheckBoxColumn7 As Telerik.WinControls.UI.GridViewCheckBoxColumn = New Telerik.WinControls.UI.GridViewCheckBoxColumn()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn16 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn19 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewDecimalColumn9 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDateTimeColumn1 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
+        Dim GridViewTextBoxColumn20 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn21 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn22 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn23 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn24 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn25 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn26 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn27 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn28 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor2 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Tank_Order))
         Me.TankGrid = New Telerik.WinControls.UI.RadGridView()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
+        Me.TTANKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
         Me.MasterTemplate = New Telerik.WinControls.UI.RadGridView()
@@ -129,13 +131,13 @@ Partial Class Tank_Order
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BreezeTheme2 = New Telerik.WinControls.Themes.BreezeTheme()
-        Me.TTANKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.T_TANKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TANKTableAdapter()
         CType(Me.TankGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TankGrid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TTANKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MasterTemplate.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -167,8 +169,6 @@ Partial Class Tank_Order
         CType(Me.U_UPDATEBY, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.U_UPDATE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TTANKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -186,197 +186,197 @@ Partial Class Tank_Order
         Me.TankGrid.MasterTemplate.AllowAddNewRow = False
         Me.TankGrid.MasterTemplate.AutoGenerateColumns = False
         Me.TankGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn29.EnableExpressionEditor = False
-        GridViewTextBoxColumn29.FieldName = "TANKNO"
-        GridViewTextBoxColumn29.HeaderText = "ชื่อถัง"
-        GridViewTextBoxColumn29.MaxWidth = 100
-        GridViewTextBoxColumn29.MinWidth = 100
-        GridViewTextBoxColumn29.Name = "column1"
-        GridViewTextBoxColumn29.ReadOnly = True
-        GridViewTextBoxColumn29.Width = 100
-        GridViewTextBoxColumn30.EnableExpressionEditor = False
-        GridViewTextBoxColumn30.FieldName = "TANKPRODUCT"
-        GridViewTextBoxColumn30.HeaderText = "ผลิตถัณฑ์"
-        GridViewTextBoxColumn30.MaxWidth = 120
-        GridViewTextBoxColumn30.MinWidth = 100
-        GridViewTextBoxColumn30.Name = "TANKPRODUCT1"
-        GridViewTextBoxColumn30.Width = 100
-        GridViewTextBoxColumn31.AllowResize = False
-        GridViewTextBoxColumn31.EnableExpressionEditor = False
-        GridViewTextBoxColumn31.FieldName = "TANKTEMP"
-        GridViewTextBoxColumn31.HeaderText = "อุณหภูมิ"
-        GridViewTextBoxColumn31.IsAutoGenerated = True
-        GridViewTextBoxColumn31.MaxWidth = 100
-        GridViewTextBoxColumn31.MinWidth = 60
-        GridViewTextBoxColumn31.Name = "TANKTEMP"
-        GridViewTextBoxColumn31.ReadOnly = True
-        GridViewTextBoxColumn31.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn31.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn31.Width = 88
-        GridViewTextBoxColumn32.EnableExpressionEditor = False
-        GridViewTextBoxColumn32.FieldName = "TANKLEVEL"
-        GridViewTextBoxColumn32.HeaderText = "ระดับถัง"
-        GridViewTextBoxColumn32.MaxWidth = 80
-        GridViewTextBoxColumn32.MinWidth = 80
-        GridViewTextBoxColumn32.Name = "ระดับถัง"
-        GridViewTextBoxColumn32.Width = 80
-        GridViewTextBoxColumn33.EnableExpressionEditor = False
-        GridViewTextBoxColumn33.FieldName = "DENSITY"
-        GridViewTextBoxColumn33.HeaderText = "DEN15. (C)"
-        GridViewTextBoxColumn33.IsAutoGenerated = True
-        GridViewTextBoxColumn33.MinWidth = 100
-        GridViewTextBoxColumn33.Name = "DEN15. (C)"
-        GridViewTextBoxColumn33.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn33.Width = 100
-        GridViewTextBoxColumn34.EnableExpressionEditor = False
-        GridViewTextBoxColumn34.FieldName = "DENSITY30"
-        GridViewTextBoxColumn34.HeaderText = "DEN30. (C)"
-        GridViewTextBoxColumn34.MinWidth = 100
-        GridViewTextBoxColumn34.Name = "DEN30. (C)"
-        GridViewTextBoxColumn34.Width = 100
-        GridViewTextBoxColumn35.DataType = GetType(Double)
-        GridViewTextBoxColumn35.EnableExpressionEditor = False
-        GridViewTextBoxColumn35.FieldName = "API60F"
-        GridViewTextBoxColumn35.HeaderText = "API 60F"
-        GridViewTextBoxColumn35.MinWidth = 100
-        GridViewTextBoxColumn35.Name = "API60F"
-        GridViewTextBoxColumn35.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn35.Width = 100
-        GridViewDecimalColumn10.DataType = GetType(Double)
-        GridViewDecimalColumn10.EnableExpressionEditor = False
-        GridViewDecimalColumn10.FieldName = "API86F"
-        GridViewDecimalColumn10.HeaderText = "API 86F"
-        GridViewDecimalColumn10.MinWidth = 100
-        GridViewDecimalColumn10.Name = "API86F"
-        GridViewDecimalColumn10.Width = 100
-        GridViewDecimalColumn11.DataType = GetType(String)
-        GridViewDecimalColumn11.DecimalPlaces = 0
-        GridViewDecimalColumn11.EnableExpressionEditor = False
-        GridViewDecimalColumn11.FieldName = "TOV"
-        GridViewDecimalColumn11.FormatString = "{0:#,###}"
-        GridViewDecimalColumn11.HeaderText = "TOV"
-        GridViewDecimalColumn11.MinWidth = 80
-        GridViewDecimalColumn11.Name = "TOV"
-        GridViewDecimalColumn11.Width = 80
-        GridViewDecimalColumn12.DataType = GetType(Double)
-        GridViewDecimalColumn12.DecimalPlaces = 0
-        GridViewDecimalColumn12.EnableExpressionEditor = False
-        GridViewDecimalColumn12.FieldName = "VOLUME_LIMIT"
-        GridViewDecimalColumn12.HeaderText = "ปริมาณรับได้"
-        GridViewDecimalColumn12.MinWidth = 60
-        GridViewDecimalColumn12.Name = "VOLUME_LIMIT"
-        GridViewDecimalColumn12.Width = 60
-        GridViewDecimalColumn13.DecimalPlaces = 0
-        GridViewDecimalColumn13.EnableExpressionEditor = False
-        GridViewDecimalColumn13.HeaderText = "ปริมาณจ่ายได้"
-        GridViewDecimalColumn13.MaxWidth = 120
-        GridViewDecimalColumn13.MinWidth = 80
-        GridViewDecimalColumn13.Name = "ปริมาณจ่ายได้"
-        GridViewDecimalColumn13.Width = 80
-        GridViewDecimalColumn14.DataType = GetType(Double)
-        GridViewDecimalColumn14.DecimalPlaces = 0
-        GridViewDecimalColumn14.EnableExpressionEditor = False
-        GridViewDecimalColumn14.FieldName = "VOLUME_QUATA"
-        GridViewDecimalColumn14.HeaderText = "ปริมาณโควต้าทั้งหมด"
-        GridViewDecimalColumn14.MinWidth = 80
-        GridViewDecimalColumn14.Name = "VOLUME_QUATA"
-        GridViewDecimalColumn14.Width = 80
-        GridViewDecimalColumn15.DataType = GetType(Double)
-        GridViewDecimalColumn15.DecimalPlaces = 0
-        GridViewDecimalColumn15.EnableExpressionEditor = False
-        GridViewDecimalColumn15.FieldName = "VOLUME_DIFF"
-        GridViewDecimalColumn15.HeaderText = "+/- จ่ายได้"
-        GridViewDecimalColumn15.MinWidth = 80
-        GridViewDecimalColumn15.Name = "VOLUME_DIFF"
-        GridViewDecimalColumn15.Width = 80
-        GridViewTextBoxColumn36.EnableExpressionEditor = False
-        GridViewTextBoxColumn36.FieldName = "OPER_TYPE"
-        GridViewTextBoxColumn36.HeaderText = "Operate Type"
-        GridViewTextBoxColumn36.MinWidth = 110
-        GridViewTextBoxColumn36.Name = "OPER_TYPE"
-        GridViewTextBoxColumn36.Width = 110
-        GridViewTextBoxColumn37.EnableExpressionEditor = False
-        GridViewTextBoxColumn37.FieldName = "BATCH_NO"
-        GridViewTextBoxColumn37.HeaderText = "Batch No."
-        GridViewTextBoxColumn37.MinWidth = 80
-        GridViewTextBoxColumn37.Name = "BATCH_NO"
-        GridViewTextBoxColumn37.Width = 80
-        GridViewDecimalColumn16.DataType = GetType(Double)
-        GridViewDecimalColumn16.DecimalPlaces = 4
-        GridViewDecimalColumn16.EnableExpressionEditor = False
-        GridViewDecimalColumn16.FieldName = "VCF15C"
-        GridViewDecimalColumn16.HeaderText = "VCF 15C."
-        GridViewDecimalColumn16.MinWidth = 80
-        GridViewDecimalColumn16.Name = "VCF15C"
-        GridViewDecimalColumn16.Width = 80
-        GridViewDecimalColumn17.DataType = GetType(Double)
-        GridViewDecimalColumn17.DecimalPlaces = 4
-        GridViewDecimalColumn17.EnableExpressionEditor = False
-        GridViewDecimalColumn17.FieldName = "VCF30C"
-        GridViewDecimalColumn17.HeaderText = "VCF 30C."
-        GridViewDecimalColumn17.MinWidth = 80
-        GridViewDecimalColumn17.Name = "VCF30C"
-        GridViewDecimalColumn17.Width = 80
-        GridViewCheckBoxColumn8.AllowResize = False
-        GridViewCheckBoxColumn8.DataType = GetType(String)
-        GridViewCheckBoxColumn8.EnableExpressionEditor = False
-        GridViewCheckBoxColumn8.FieldName = "QUATA_ST"
-        GridViewCheckBoxColumn8.HeaderText = "โควต้า"
-        GridViewCheckBoxColumn8.MaxWidth = 60
-        GridViewCheckBoxColumn8.MinWidth = 60
-        GridViewCheckBoxColumn8.Name = "QUATA_ST"
-        GridViewCheckBoxColumn8.Width = 60
-        GridViewCheckBoxColumn9.AllowResize = False
-        GridViewCheckBoxColumn9.DataType = GetType(String)
-        GridViewCheckBoxColumn9.EnableExpressionEditor = False
-        GridViewCheckBoxColumn9.FieldName = "TankActive"
-        GridViewCheckBoxColumn9.HeaderText = "จ่าย"
-        GridViewCheckBoxColumn9.MaxWidth = 60
-        GridViewCheckBoxColumn9.MinWidth = 60
-        GridViewCheckBoxColumn9.Name = "Tank_Active"
-        GridViewCheckBoxColumn9.Width = 60
-        GridViewCheckBoxColumn10.AllowResize = False
-        GridViewCheckBoxColumn10.DataType = GetType(String)
-        GridViewCheckBoxColumn10.EnableExpressionEditor = False
-        GridViewCheckBoxColumn10.FieldName = "LOADREADY_ST"
-        GridViewCheckBoxColumn10.HeaderText = "พร้อมจ่าย"
-        GridViewCheckBoxColumn10.MaxWidth = 80
-        GridViewCheckBoxColumn10.MinWidth = 80
-        GridViewCheckBoxColumn10.Name = "LOADREADY_ST"
-        GridViewCheckBoxColumn10.Width = 80
-        GridViewCheckBoxColumn11.AllowResize = False
-        GridViewCheckBoxColumn11.DataType = GetType(String)
-        GridViewCheckBoxColumn11.EnableExpressionEditor = False
-        GridViewCheckBoxColumn11.FieldName = "LAB_ST"
-        GridViewCheckBoxColumn11.HeaderText = "รอ LAB"
-        GridViewCheckBoxColumn11.MaxWidth = 60
-        GridViewCheckBoxColumn11.MinWidth = 60
-        GridViewCheckBoxColumn11.Name = "LAB_ST"
-        GridViewCheckBoxColumn11.Width = 60
-        GridViewCheckBoxColumn12.DataType = GetType(String)
-        GridViewCheckBoxColumn12.EnableExpressionEditor = False
-        GridViewCheckBoxColumn12.FieldName = "UNLOAD_ST"
-        GridViewCheckBoxColumn12.HeaderText = "รอรับเข้า"
-        GridViewCheckBoxColumn12.MaxWidth = 80
-        GridViewCheckBoxColumn12.MinWidth = 80
-        GridViewCheckBoxColumn12.Name = "UNLOAD_ST"
-        GridViewCheckBoxColumn12.Width = 80
-        GridViewTextBoxColumn38.DataType = GetType(Integer)
-        GridViewTextBoxColumn38.EnableExpressionEditor = False
-        GridViewTextBoxColumn38.FieldName = "STATUS_ST"
-        GridViewTextBoxColumn38.HeaderText = "สถานะ"
-        GridViewTextBoxColumn38.MinWidth = 80
-        GridViewTextBoxColumn38.Name = "STATUS_ST"
-        GridViewTextBoxColumn38.Width = 80
-        GridViewCheckBoxColumn13.HeaderText = "column2"
-        GridViewCheckBoxColumn13.Name = "column2"
-        GridViewCheckBoxColumn13.Width = 20
-        Me.TankGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn29, GridViewTextBoxColumn30, GridViewTextBoxColumn31, GridViewTextBoxColumn32, GridViewTextBoxColumn33, GridViewTextBoxColumn34, GridViewTextBoxColumn35, GridViewDecimalColumn10, GridViewDecimalColumn11, GridViewDecimalColumn12, GridViewDecimalColumn13, GridViewDecimalColumn14, GridViewDecimalColumn15, GridViewTextBoxColumn36, GridViewTextBoxColumn37, GridViewDecimalColumn16, GridViewDecimalColumn17, GridViewCheckBoxColumn8, GridViewCheckBoxColumn9, GridViewCheckBoxColumn10, GridViewCheckBoxColumn11, GridViewCheckBoxColumn12, GridViewTextBoxColumn38, GridViewCheckBoxColumn13})
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
+        GridViewTextBoxColumn1.FieldName = "TANKNO"
+        GridViewTextBoxColumn1.HeaderText = "ชื่อถัง"
+        GridViewTextBoxColumn1.MaxWidth = 100
+        GridViewTextBoxColumn1.MinWidth = 100
+        GridViewTextBoxColumn1.Name = "column1"
+        GridViewTextBoxColumn1.ReadOnly = True
+        GridViewTextBoxColumn1.Width = 100
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
+        GridViewTextBoxColumn2.FieldName = "TANKPRODUCT"
+        GridViewTextBoxColumn2.HeaderText = "ผลิตถัณฑ์"
+        GridViewTextBoxColumn2.MaxWidth = 120
+        GridViewTextBoxColumn2.MinWidth = 100
+        GridViewTextBoxColumn2.Name = "TANKPRODUCT1"
+        GridViewTextBoxColumn2.Width = 100
+        GridViewTextBoxColumn3.AllowResize = False
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
+        GridViewTextBoxColumn3.FieldName = "TANKTEMP"
+        GridViewTextBoxColumn3.HeaderText = "อุณหภูมิ"
+        GridViewTextBoxColumn3.IsAutoGenerated = True
+        GridViewTextBoxColumn3.MaxWidth = 100
+        GridViewTextBoxColumn3.MinWidth = 60
+        GridViewTextBoxColumn3.Name = "TANKTEMP"
+        GridViewTextBoxColumn3.ReadOnly = True
+        GridViewTextBoxColumn3.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn3.Width = 88
+        GridViewTextBoxColumn4.EnableExpressionEditor = False
+        GridViewTextBoxColumn4.FieldName = "TANKLEVEL"
+        GridViewTextBoxColumn4.HeaderText = "ระดับถัง"
+        GridViewTextBoxColumn4.MaxWidth = 80
+        GridViewTextBoxColumn4.MinWidth = 80
+        GridViewTextBoxColumn4.Name = "ระดับถัง"
+        GridViewTextBoxColumn4.Width = 80
+        GridViewTextBoxColumn5.EnableExpressionEditor = False
+        GridViewTextBoxColumn5.FieldName = "DENSITY"
+        GridViewTextBoxColumn5.HeaderText = "DEN15. (C)"
+        GridViewTextBoxColumn5.IsAutoGenerated = True
+        GridViewTextBoxColumn5.MinWidth = 100
+        GridViewTextBoxColumn5.Name = "DEN15. (C)"
+        GridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn5.Width = 100
+        GridViewTextBoxColumn6.EnableExpressionEditor = False
+        GridViewTextBoxColumn6.FieldName = "DENSITY30"
+        GridViewTextBoxColumn6.HeaderText = "DEN30. (C)"
+        GridViewTextBoxColumn6.MinWidth = 100
+        GridViewTextBoxColumn6.Name = "DEN30. (C)"
+        GridViewTextBoxColumn6.Width = 100
+        GridViewTextBoxColumn7.DataType = GetType(Double)
+        GridViewTextBoxColumn7.EnableExpressionEditor = False
+        GridViewTextBoxColumn7.FieldName = "API60F"
+        GridViewTextBoxColumn7.HeaderText = "API 60F"
+        GridViewTextBoxColumn7.MinWidth = 100
+        GridViewTextBoxColumn7.Name = "API60F"
+        GridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn7.Width = 100
+        GridViewDecimalColumn1.DataType = GetType(Double)
+        GridViewDecimalColumn1.EnableExpressionEditor = False
+        GridViewDecimalColumn1.FieldName = "API86F"
+        GridViewDecimalColumn1.HeaderText = "API 86F"
+        GridViewDecimalColumn1.MinWidth = 100
+        GridViewDecimalColumn1.Name = "API86F"
+        GridViewDecimalColumn1.Width = 100
+        GridViewDecimalColumn2.DataType = GetType(String)
+        GridViewDecimalColumn2.DecimalPlaces = 0
+        GridViewDecimalColumn2.EnableExpressionEditor = False
+        GridViewDecimalColumn2.FieldName = "TOV"
+        GridViewDecimalColumn2.FormatString = "{0:#,###}"
+        GridViewDecimalColumn2.HeaderText = "TOV"
+        GridViewDecimalColumn2.MinWidth = 80
+        GridViewDecimalColumn2.Name = "TOV"
+        GridViewDecimalColumn2.Width = 80
+        GridViewDecimalColumn3.DataType = GetType(Double)
+        GridViewDecimalColumn3.DecimalPlaces = 0
+        GridViewDecimalColumn3.EnableExpressionEditor = False
+        GridViewDecimalColumn3.FieldName = "VOLUME_LIMIT"
+        GridViewDecimalColumn3.HeaderText = "ปริมาณรับได้"
+        GridViewDecimalColumn3.MinWidth = 60
+        GridViewDecimalColumn3.Name = "VOLUME_LIMIT"
+        GridViewDecimalColumn3.Width = 60
+        GridViewDecimalColumn4.DecimalPlaces = 0
+        GridViewDecimalColumn4.EnableExpressionEditor = False
+        GridViewDecimalColumn4.HeaderText = "ปริมาณจ่ายได้"
+        GridViewDecimalColumn4.MaxWidth = 120
+        GridViewDecimalColumn4.MinWidth = 80
+        GridViewDecimalColumn4.Name = "ปริมาณจ่ายได้"
+        GridViewDecimalColumn4.Width = 80
+        GridViewDecimalColumn5.DataType = GetType(Double)
+        GridViewDecimalColumn5.DecimalPlaces = 0
+        GridViewDecimalColumn5.EnableExpressionEditor = False
+        GridViewDecimalColumn5.FieldName = "VOLUME_QUATA"
+        GridViewDecimalColumn5.HeaderText = "ปริมาณโควต้าทั้งหมด"
+        GridViewDecimalColumn5.MinWidth = 80
+        GridViewDecimalColumn5.Name = "VOLUME_QUATA"
+        GridViewDecimalColumn5.Width = 80
+        GridViewDecimalColumn6.DataType = GetType(Double)
+        GridViewDecimalColumn6.DecimalPlaces = 0
+        GridViewDecimalColumn6.EnableExpressionEditor = False
+        GridViewDecimalColumn6.FieldName = "VOLUME_DIFF"
+        GridViewDecimalColumn6.HeaderText = "+/- จ่ายได้"
+        GridViewDecimalColumn6.MinWidth = 80
+        GridViewDecimalColumn6.Name = "VOLUME_DIFF"
+        GridViewDecimalColumn6.Width = 80
+        GridViewTextBoxColumn8.EnableExpressionEditor = False
+        GridViewTextBoxColumn8.FieldName = "OPER_TYPE"
+        GridViewTextBoxColumn8.HeaderText = "Operate Type"
+        GridViewTextBoxColumn8.MinWidth = 110
+        GridViewTextBoxColumn8.Name = "OPER_TYPE"
+        GridViewTextBoxColumn8.Width = 110
+        GridViewTextBoxColumn9.EnableExpressionEditor = False
+        GridViewTextBoxColumn9.FieldName = "BATCH_NO"
+        GridViewTextBoxColumn9.HeaderText = "Batch No."
+        GridViewTextBoxColumn9.MinWidth = 80
+        GridViewTextBoxColumn9.Name = "BATCH_NO"
+        GridViewTextBoxColumn9.Width = 80
+        GridViewDecimalColumn7.DataType = GetType(Double)
+        GridViewDecimalColumn7.DecimalPlaces = 4
+        GridViewDecimalColumn7.EnableExpressionEditor = False
+        GridViewDecimalColumn7.FieldName = "VCF15C"
+        GridViewDecimalColumn7.HeaderText = "VCF 15C."
+        GridViewDecimalColumn7.MinWidth = 80
+        GridViewDecimalColumn7.Name = "VCF15C"
+        GridViewDecimalColumn7.Width = 80
+        GridViewDecimalColumn8.DataType = GetType(Double)
+        GridViewDecimalColumn8.DecimalPlaces = 4
+        GridViewDecimalColumn8.EnableExpressionEditor = False
+        GridViewDecimalColumn8.FieldName = "VCF30C"
+        GridViewDecimalColumn8.HeaderText = "VCF 30C."
+        GridViewDecimalColumn8.MinWidth = 80
+        GridViewDecimalColumn8.Name = "VCF30C"
+        GridViewDecimalColumn8.Width = 80
+        GridViewCheckBoxColumn1.AllowResize = False
+        GridViewCheckBoxColumn1.DataType = GetType(String)
+        GridViewCheckBoxColumn1.EnableExpressionEditor = False
+        GridViewCheckBoxColumn1.FieldName = "QUATA_ST"
+        GridViewCheckBoxColumn1.HeaderText = "โควต้า"
+        GridViewCheckBoxColumn1.MaxWidth = 60
+        GridViewCheckBoxColumn1.MinWidth = 60
+        GridViewCheckBoxColumn1.Name = "QUATA_ST"
+        GridViewCheckBoxColumn1.Width = 60
+        GridViewCheckBoxColumn2.AllowResize = False
+        GridViewCheckBoxColumn2.DataType = GetType(String)
+        GridViewCheckBoxColumn2.EnableExpressionEditor = False
+        GridViewCheckBoxColumn2.FieldName = "TankActive"
+        GridViewCheckBoxColumn2.HeaderText = "จ่าย"
+        GridViewCheckBoxColumn2.MaxWidth = 60
+        GridViewCheckBoxColumn2.MinWidth = 60
+        GridViewCheckBoxColumn2.Name = "Tank_Active"
+        GridViewCheckBoxColumn2.Width = 60
+        GridViewCheckBoxColumn3.AllowResize = False
+        GridViewCheckBoxColumn3.DataType = GetType(String)
+        GridViewCheckBoxColumn3.EnableExpressionEditor = False
+        GridViewCheckBoxColumn3.FieldName = "LOADREADY_ST"
+        GridViewCheckBoxColumn3.HeaderText = "พร้อมจ่าย"
+        GridViewCheckBoxColumn3.MaxWidth = 80
+        GridViewCheckBoxColumn3.MinWidth = 80
+        GridViewCheckBoxColumn3.Name = "LOADREADY_ST"
+        GridViewCheckBoxColumn3.Width = 80
+        GridViewCheckBoxColumn4.AllowResize = False
+        GridViewCheckBoxColumn4.DataType = GetType(String)
+        GridViewCheckBoxColumn4.EnableExpressionEditor = False
+        GridViewCheckBoxColumn4.FieldName = "LAB_ST"
+        GridViewCheckBoxColumn4.HeaderText = "รอ LAB"
+        GridViewCheckBoxColumn4.MaxWidth = 60
+        GridViewCheckBoxColumn4.MinWidth = 60
+        GridViewCheckBoxColumn4.Name = "LAB_ST"
+        GridViewCheckBoxColumn4.Width = 60
+        GridViewCheckBoxColumn5.DataType = GetType(String)
+        GridViewCheckBoxColumn5.EnableExpressionEditor = False
+        GridViewCheckBoxColumn5.FieldName = "UNLOAD_ST"
+        GridViewCheckBoxColumn5.HeaderText = "รอรับเข้า"
+        GridViewCheckBoxColumn5.MaxWidth = 80
+        GridViewCheckBoxColumn5.MinWidth = 80
+        GridViewCheckBoxColumn5.Name = "UNLOAD_ST"
+        GridViewCheckBoxColumn5.Width = 80
+        GridViewTextBoxColumn10.DataType = GetType(Integer)
+        GridViewTextBoxColumn10.EnableExpressionEditor = False
+        GridViewTextBoxColumn10.FieldName = "STATUS_ST"
+        GridViewTextBoxColumn10.HeaderText = "สถานะ"
+        GridViewTextBoxColumn10.MinWidth = 80
+        GridViewTextBoxColumn10.Name = "STATUS_ST"
+        GridViewTextBoxColumn10.Width = 80
+        GridViewCheckBoxColumn6.HeaderText = "column2"
+        GridViewCheckBoxColumn6.Name = "column2"
+        GridViewCheckBoxColumn6.Width = 20
+        Me.TankGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewDecimalColumn1, GridViewDecimalColumn2, GridViewDecimalColumn3, GridViewDecimalColumn4, GridViewDecimalColumn5, GridViewDecimalColumn6, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewDecimalColumn7, GridViewDecimalColumn8, GridViewCheckBoxColumn1, GridViewCheckBoxColumn2, GridViewCheckBoxColumn3, GridViewCheckBoxColumn4, GridViewCheckBoxColumn5, GridViewTextBoxColumn10, GridViewCheckBoxColumn6})
         Me.TankGrid.MasterTemplate.EnableGrouping = False
         Me.TankGrid.MasterTemplate.ShowFilteringRow = False
-        SortDescriptor3.PropertyName = "TANKTEMP"
-        Me.TankGrid.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor3})
-        Me.TankGrid.MasterTemplate.ViewDefinition = TableViewDefinition6
+        SortDescriptor1.PropertyName = "TANKTEMP"
+        Me.TankGrid.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor1})
+        Me.TankGrid.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.TankGrid.Name = "TankGrid"
         Me.TankGrid.Size = New System.Drawing.Size(1358, 177)
         Me.TankGrid.TabIndex = 48
@@ -397,62 +397,62 @@ Partial Class Tank_Order
         '
         Me.RadGridView1.MasterTemplate.AllowAddNewRow = False
         Me.RadGridView1.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn39.EnableExpressionEditor = False
-        GridViewTextBoxColumn39.FieldName = "TANKNO"
-        GridViewTextBoxColumn39.HeaderText = "Tank Name"
-        GridViewTextBoxColumn39.IsAutoGenerated = True
-        GridViewTextBoxColumn39.IsPinned = True
-        GridViewTextBoxColumn39.MinWidth = 120
-        GridViewTextBoxColumn39.Name = "TANKNO"
-        GridViewTextBoxColumn39.PinPosition = Telerik.WinControls.UI.PinnedColumnPosition.Left
-        GridViewTextBoxColumn39.ReadOnly = True
-        GridViewTextBoxColumn39.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn39.Width = 120
-        GridViewTextBoxColumn40.EnableExpressionEditor = False
-        GridViewTextBoxColumn40.FieldName = "TANKPRODUCT"
-        GridViewTextBoxColumn40.HeaderText = "Product"
-        GridViewTextBoxColumn40.IsAutoGenerated = True
-        GridViewTextBoxColumn40.IsPinned = True
-        GridViewTextBoxColumn40.MinWidth = 150
-        GridViewTextBoxColumn40.Name = "TANKPRODUCT"
-        GridViewTextBoxColumn40.PinPosition = Telerik.WinControls.UI.PinnedColumnPosition.Left
-        GridViewTextBoxColumn40.ReadOnly = True
-        GridViewTextBoxColumn40.Width = 150
-        GridViewTextBoxColumn41.EnableExpressionEditor = False
-        GridViewTextBoxColumn41.FieldName = "TANKLEVEL"
-        GridViewTextBoxColumn41.HeaderText = "Level (mm.)"
-        GridViewTextBoxColumn41.IsAutoGenerated = True
-        GridViewTextBoxColumn41.MinWidth = 150
-        GridViewTextBoxColumn41.Name = "TANKLEVEL"
-        GridViewTextBoxColumn41.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn41.Width = 150
-        GridViewTextBoxColumn42.EnableExpressionEditor = False
-        GridViewTextBoxColumn42.FieldName = "TOV"
-        GridViewTextBoxColumn42.HeaderText = "Volume (Litre)"
-        GridViewTextBoxColumn42.IsAutoGenerated = True
-        GridViewTextBoxColumn42.MinWidth = 150
-        GridViewTextBoxColumn42.Name = "TOV"
-        GridViewTextBoxColumn42.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn42.Width = 150
-        GridViewTextBoxColumn43.EnableExpressionEditor = False
-        GridViewTextBoxColumn43.FieldName = "TANKTEMP"
-        GridViewTextBoxColumn43.HeaderText = "Temp."
-        GridViewTextBoxColumn43.IsAutoGenerated = True
-        GridViewTextBoxColumn43.MinWidth = 80
-        GridViewTextBoxColumn43.Name = "TANKTEMP"
-        GridViewTextBoxColumn43.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn43.Width = 80
-        GridViewCheckBoxColumn14.DataType = GetType(Decimal)
-        GridViewCheckBoxColumn14.EnableExpressionEditor = False
-        GridViewCheckBoxColumn14.FieldName = "TANKSTATUS"
-        GridViewCheckBoxColumn14.HeaderText = "Status"
-        GridViewCheckBoxColumn14.MinWidth = 100
-        GridViewCheckBoxColumn14.Name = "TANKSTATUS"
-        GridViewCheckBoxColumn14.Width = 100
-        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn39, GridViewTextBoxColumn40, GridViewTextBoxColumn41, GridViewTextBoxColumn42, GridViewTextBoxColumn43, GridViewCheckBoxColumn14})
+        GridViewTextBoxColumn11.EnableExpressionEditor = False
+        GridViewTextBoxColumn11.FieldName = "TANKNO"
+        GridViewTextBoxColumn11.HeaderText = "Tank Name"
+        GridViewTextBoxColumn11.IsAutoGenerated = True
+        GridViewTextBoxColumn11.IsPinned = True
+        GridViewTextBoxColumn11.MinWidth = 120
+        GridViewTextBoxColumn11.Name = "TANKNO"
+        GridViewTextBoxColumn11.PinPosition = Telerik.WinControls.UI.PinnedColumnPosition.Left
+        GridViewTextBoxColumn11.ReadOnly = True
+        GridViewTextBoxColumn11.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn11.Width = 120
+        GridViewTextBoxColumn12.EnableExpressionEditor = False
+        GridViewTextBoxColumn12.FieldName = "TANKPRODUCT"
+        GridViewTextBoxColumn12.HeaderText = "Product"
+        GridViewTextBoxColumn12.IsAutoGenerated = True
+        GridViewTextBoxColumn12.IsPinned = True
+        GridViewTextBoxColumn12.MinWidth = 150
+        GridViewTextBoxColumn12.Name = "TANKPRODUCT"
+        GridViewTextBoxColumn12.PinPosition = Telerik.WinControls.UI.PinnedColumnPosition.Left
+        GridViewTextBoxColumn12.ReadOnly = True
+        GridViewTextBoxColumn12.Width = 150
+        GridViewTextBoxColumn13.EnableExpressionEditor = False
+        GridViewTextBoxColumn13.FieldName = "TANKLEVEL"
+        GridViewTextBoxColumn13.HeaderText = "Level (mm.)"
+        GridViewTextBoxColumn13.IsAutoGenerated = True
+        GridViewTextBoxColumn13.MinWidth = 150
+        GridViewTextBoxColumn13.Name = "TANKLEVEL"
+        GridViewTextBoxColumn13.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn13.Width = 150
+        GridViewTextBoxColumn14.EnableExpressionEditor = False
+        GridViewTextBoxColumn14.FieldName = "TOV"
+        GridViewTextBoxColumn14.HeaderText = "Volume (Litre)"
+        GridViewTextBoxColumn14.IsAutoGenerated = True
+        GridViewTextBoxColumn14.MinWidth = 150
+        GridViewTextBoxColumn14.Name = "TOV"
+        GridViewTextBoxColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn14.Width = 150
+        GridViewTextBoxColumn15.EnableExpressionEditor = False
+        GridViewTextBoxColumn15.FieldName = "TANKTEMP"
+        GridViewTextBoxColumn15.HeaderText = "Temp."
+        GridViewTextBoxColumn15.IsAutoGenerated = True
+        GridViewTextBoxColumn15.MinWidth = 80
+        GridViewTextBoxColumn15.Name = "TANKTEMP"
+        GridViewTextBoxColumn15.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn15.Width = 80
+        GridViewCheckBoxColumn7.DataType = GetType(Decimal)
+        GridViewCheckBoxColumn7.EnableExpressionEditor = False
+        GridViewCheckBoxColumn7.FieldName = "TANKSTATUS"
+        GridViewCheckBoxColumn7.HeaderText = "Status"
+        GridViewCheckBoxColumn7.MinWidth = 100
+        GridViewCheckBoxColumn7.Name = "TANKSTATUS"
+        GridViewCheckBoxColumn7.Width = 100
+        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewCheckBoxColumn7})
         Me.RadGridView1.MasterTemplate.DataSource = Me.TTANKBindingSource
         Me.RadGridView1.MasterTemplate.EnableFiltering = True
-        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition7
+        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridView1.Name = "RadGridView1"
         Me.RadGridView1.ReadOnly = True
         Me.RadGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -461,9 +461,19 @@ Partial Class Tank_Order
         Me.RadGridView1.TabIndex = 0
         Me.RadGridView1.ThemeName = "Breeze"
         '
+        'TTANKBindingSource
+        '
+        Me.TTANKBindingSource.DataMember = "T_TANK"
+        Me.TTANKBindingSource.DataSource = Me.DataSet_Table
+        '
+        'DataSet_Table
+        '
+        Me.DataSet_Table.DataSetName = "DataSet_Table"
+        Me.DataSet_Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'GridViewTemplate2
         '
-        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition8
+        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition3
         '
         'MasterTemplate
         '
@@ -492,33 +502,33 @@ Partial Class Tank_Order
         Me.MasterTemplate.MasterTemplate.AllowRowReorder = True
         Me.MasterTemplate.MasterTemplate.AllowRowResize = False
         Me.MasterTemplate.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn44.EnableExpressionEditor = False
-        GridViewTextBoxColumn44.FieldName = "Company_Code"
-        GridViewTextBoxColumn44.HeaderText = "บัตรประชาชนเลขที่"
-        GridViewTextBoxColumn44.IsAutoGenerated = True
-        GridViewTextBoxColumn44.Name = "DRIVER_LICENSE"
-        GridViewTextBoxColumn44.Width = 120
-        GridViewTextBoxColumn45.EnableExpressionEditor = False
-        GridViewTextBoxColumn45.FieldName = "Company_NAME"
-        GridViewTextBoxColumn45.HeaderText = "ชื่อ"
-        GridViewTextBoxColumn45.IsAutoGenerated = True
-        GridViewTextBoxColumn45.Name = "DRIVER_NAME"
-        GridViewTextBoxColumn45.Width = 130
-        GridViewTextBoxColumn46.EnableExpressionEditor = False
-        GridViewTextBoxColumn46.FieldName = "COMPANY_TYPE"
-        GridViewTextBoxColumn46.HeaderText = "นามสกุล"
-        GridViewTextBoxColumn46.IsAutoGenerated = True
-        GridViewTextBoxColumn46.Name = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn46.Width = 130
-        GridViewTextBoxColumn47.EnableExpressionEditor = False
-        GridViewTextBoxColumn47.HeaderText = "PINCODE"
-        GridViewTextBoxColumn47.IsAutoGenerated = True
-        GridViewTextBoxColumn47.Name = "DRIVER_PINCODE"
-        GridViewTextBoxColumn47.Width = 100
-        Me.MasterTemplate.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn44, GridViewTextBoxColumn45, GridViewTextBoxColumn46, GridViewTextBoxColumn47})
+        GridViewTextBoxColumn16.EnableExpressionEditor = False
+        GridViewTextBoxColumn16.FieldName = "Company_Code"
+        GridViewTextBoxColumn16.HeaderText = "บัตรประชาชนเลขที่"
+        GridViewTextBoxColumn16.IsAutoGenerated = True
+        GridViewTextBoxColumn16.Name = "DRIVER_LICENSE"
+        GridViewTextBoxColumn16.Width = 120
+        GridViewTextBoxColumn17.EnableExpressionEditor = False
+        GridViewTextBoxColumn17.FieldName = "Company_NAME"
+        GridViewTextBoxColumn17.HeaderText = "ชื่อ"
+        GridViewTextBoxColumn17.IsAutoGenerated = True
+        GridViewTextBoxColumn17.Name = "DRIVER_NAME"
+        GridViewTextBoxColumn17.Width = 130
+        GridViewTextBoxColumn18.EnableExpressionEditor = False
+        GridViewTextBoxColumn18.FieldName = "COMPANY_TYPE"
+        GridViewTextBoxColumn18.HeaderText = "นามสกุล"
+        GridViewTextBoxColumn18.IsAutoGenerated = True
+        GridViewTextBoxColumn18.Name = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn18.Width = 130
+        GridViewTextBoxColumn19.EnableExpressionEditor = False
+        GridViewTextBoxColumn19.HeaderText = "PINCODE"
+        GridViewTextBoxColumn19.IsAutoGenerated = True
+        GridViewTextBoxColumn19.Name = "DRIVER_PINCODE"
+        GridViewTextBoxColumn19.Width = 100
+        Me.MasterTemplate.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18, GridViewTextBoxColumn19})
         Me.MasterTemplate.MasterTemplate.EnableFiltering = True
         Me.MasterTemplate.MasterTemplate.ShowRowHeaderColumn = False
-        Me.MasterTemplate.MasterTemplate.ViewDefinition = TableViewDefinition9
+        Me.MasterTemplate.MasterTemplate.ViewDefinition = TableViewDefinition4
         Me.MasterTemplate.Name = "MasterTemplate"
         Me.MasterTemplate.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterTemplate.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -534,7 +544,6 @@ Partial Class Tank_Order
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 30)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = False
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'NestedRadGridView
@@ -542,81 +551,81 @@ Partial Class Tank_Order
         Me.NestedRadGridView.AllowAddNewRow = False
         Me.NestedRadGridView.AllowCellContextMenu = False
         Me.NestedRadGridView.AllowColumnChooser = False
-        GridViewDecimalColumn18.DataType = GetType(Integer)
-        GridViewDecimalColumn18.EnableExpressionEditor = False
-        GridViewDecimalColumn18.FieldName = "ID"
-        GridViewDecimalColumn18.HeaderText = "ID"
-        GridViewDecimalColumn18.IsAutoGenerated = True
-        GridViewDecimalColumn18.IsVisible = False
-        GridViewDecimalColumn18.Name = "ID"
-        GridViewDecimalColumn18.ReadOnly = True
-        GridViewDateTimeColumn2.EnableExpressionEditor = False
-        GridViewDateTimeColumn2.FieldName = "LDate"
-        GridViewDateTimeColumn2.HeaderText = "LDate"
-        GridViewDateTimeColumn2.IsAutoGenerated = True
-        GridViewDateTimeColumn2.IsVisible = False
-        GridViewDateTimeColumn2.Name = "LDate"
-        GridViewTextBoxColumn48.EnableExpressionEditor = False
-        GridViewTextBoxColumn48.FieldName = "AssyNo"
-        GridViewTextBoxColumn48.HeaderText = "AssyNo"
-        GridViewTextBoxColumn48.IsAutoGenerated = True
-        GridViewTextBoxColumn48.Name = "AssyNo"
-        GridViewTextBoxColumn48.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn48.Width = 154
-        GridViewTextBoxColumn49.EnableExpressionEditor = False
-        GridViewTextBoxColumn49.FieldName = "AssyName"
-        GridViewTextBoxColumn49.HeaderText = "AssyName"
-        GridViewTextBoxColumn49.IsAutoGenerated = True
-        GridViewTextBoxColumn49.Name = "AssyName"
-        GridViewTextBoxColumn49.Width = 173
-        GridViewTextBoxColumn50.EnableExpressionEditor = False
-        GridViewTextBoxColumn50.FieldName = "AssyModel"
-        GridViewTextBoxColumn50.HeaderText = "AssyModel"
-        GridViewTextBoxColumn50.IsAutoGenerated = True
-        GridViewTextBoxColumn50.Name = "AssyModel"
-        GridViewTextBoxColumn50.Width = 187
-        GridViewTextBoxColumn51.EnableExpressionEditor = False
-        GridViewTextBoxColumn51.FieldName = "Barcode"
-        GridViewTextBoxColumn51.HeaderText = "Barcode"
-        GridViewTextBoxColumn51.IsAutoGenerated = True
-        GridViewTextBoxColumn51.IsVisible = False
-        GridViewTextBoxColumn51.Name = "Barcode"
-        GridViewTextBoxColumn52.EnableExpressionEditor = False
-        GridViewTextBoxColumn52.FieldName = "Remark"
-        GridViewTextBoxColumn52.HeaderText = "Remark"
-        GridViewTextBoxColumn52.IsAutoGenerated = True
-        GridViewTextBoxColumn52.IsVisible = False
-        GridViewTextBoxColumn52.Name = "Remark"
-        GridViewTextBoxColumn53.EnableExpressionEditor = False
-        GridViewTextBoxColumn53.FieldName = "Image1"
-        GridViewTextBoxColumn53.HeaderText = "Image1"
-        GridViewTextBoxColumn53.IsAutoGenerated = True
-        GridViewTextBoxColumn53.IsVisible = False
-        GridViewTextBoxColumn53.Name = "Image1"
-        GridViewTextBoxColumn54.EnableExpressionEditor = False
-        GridViewTextBoxColumn54.FieldName = "Image2"
-        GridViewTextBoxColumn54.HeaderText = "Image2"
-        GridViewTextBoxColumn54.IsAutoGenerated = True
-        GridViewTextBoxColumn54.IsVisible = False
-        GridViewTextBoxColumn54.Name = "Image2"
-        GridViewTextBoxColumn55.EnableExpressionEditor = False
-        GridViewTextBoxColumn55.FieldName = "Image3"
-        GridViewTextBoxColumn55.HeaderText = "Image3"
-        GridViewTextBoxColumn55.IsAutoGenerated = True
-        GridViewTextBoxColumn55.IsVisible = False
-        GridViewTextBoxColumn55.Name = "Image3"
-        GridViewTextBoxColumn56.EnableExpressionEditor = False
-        GridViewTextBoxColumn56.FieldName = "Image4"
-        GridViewTextBoxColumn56.HeaderText = "Image4"
-        GridViewTextBoxColumn56.IsAutoGenerated = True
-        GridViewTextBoxColumn56.IsVisible = False
-        GridViewTextBoxColumn56.Name = "Image4"
-        Me.NestedRadGridView.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn18, GridViewDateTimeColumn2, GridViewTextBoxColumn48, GridViewTextBoxColumn49, GridViewTextBoxColumn50, GridViewTextBoxColumn51, GridViewTextBoxColumn52, GridViewTextBoxColumn53, GridViewTextBoxColumn54, GridViewTextBoxColumn55, GridViewTextBoxColumn56})
+        GridViewDecimalColumn9.DataType = GetType(Integer)
+        GridViewDecimalColumn9.EnableExpressionEditor = False
+        GridViewDecimalColumn9.FieldName = "ID"
+        GridViewDecimalColumn9.HeaderText = "ID"
+        GridViewDecimalColumn9.IsAutoGenerated = True
+        GridViewDecimalColumn9.IsVisible = False
+        GridViewDecimalColumn9.Name = "ID"
+        GridViewDecimalColumn9.ReadOnly = True
+        GridViewDateTimeColumn1.EnableExpressionEditor = False
+        GridViewDateTimeColumn1.FieldName = "LDate"
+        GridViewDateTimeColumn1.HeaderText = "LDate"
+        GridViewDateTimeColumn1.IsAutoGenerated = True
+        GridViewDateTimeColumn1.IsVisible = False
+        GridViewDateTimeColumn1.Name = "LDate"
+        GridViewTextBoxColumn20.EnableExpressionEditor = False
+        GridViewTextBoxColumn20.FieldName = "AssyNo"
+        GridViewTextBoxColumn20.HeaderText = "AssyNo"
+        GridViewTextBoxColumn20.IsAutoGenerated = True
+        GridViewTextBoxColumn20.Name = "AssyNo"
+        GridViewTextBoxColumn20.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn20.Width = 154
+        GridViewTextBoxColumn21.EnableExpressionEditor = False
+        GridViewTextBoxColumn21.FieldName = "AssyName"
+        GridViewTextBoxColumn21.HeaderText = "AssyName"
+        GridViewTextBoxColumn21.IsAutoGenerated = True
+        GridViewTextBoxColumn21.Name = "AssyName"
+        GridViewTextBoxColumn21.Width = 173
+        GridViewTextBoxColumn22.EnableExpressionEditor = False
+        GridViewTextBoxColumn22.FieldName = "AssyModel"
+        GridViewTextBoxColumn22.HeaderText = "AssyModel"
+        GridViewTextBoxColumn22.IsAutoGenerated = True
+        GridViewTextBoxColumn22.Name = "AssyModel"
+        GridViewTextBoxColumn22.Width = 187
+        GridViewTextBoxColumn23.EnableExpressionEditor = False
+        GridViewTextBoxColumn23.FieldName = "Barcode"
+        GridViewTextBoxColumn23.HeaderText = "Barcode"
+        GridViewTextBoxColumn23.IsAutoGenerated = True
+        GridViewTextBoxColumn23.IsVisible = False
+        GridViewTextBoxColumn23.Name = "Barcode"
+        GridViewTextBoxColumn24.EnableExpressionEditor = False
+        GridViewTextBoxColumn24.FieldName = "Remark"
+        GridViewTextBoxColumn24.HeaderText = "Remark"
+        GridViewTextBoxColumn24.IsAutoGenerated = True
+        GridViewTextBoxColumn24.IsVisible = False
+        GridViewTextBoxColumn24.Name = "Remark"
+        GridViewTextBoxColumn25.EnableExpressionEditor = False
+        GridViewTextBoxColumn25.FieldName = "Image1"
+        GridViewTextBoxColumn25.HeaderText = "Image1"
+        GridViewTextBoxColumn25.IsAutoGenerated = True
+        GridViewTextBoxColumn25.IsVisible = False
+        GridViewTextBoxColumn25.Name = "Image1"
+        GridViewTextBoxColumn26.EnableExpressionEditor = False
+        GridViewTextBoxColumn26.FieldName = "Image2"
+        GridViewTextBoxColumn26.HeaderText = "Image2"
+        GridViewTextBoxColumn26.IsAutoGenerated = True
+        GridViewTextBoxColumn26.IsVisible = False
+        GridViewTextBoxColumn26.Name = "Image2"
+        GridViewTextBoxColumn27.EnableExpressionEditor = False
+        GridViewTextBoxColumn27.FieldName = "Image3"
+        GridViewTextBoxColumn27.HeaderText = "Image3"
+        GridViewTextBoxColumn27.IsAutoGenerated = True
+        GridViewTextBoxColumn27.IsVisible = False
+        GridViewTextBoxColumn27.Name = "Image3"
+        GridViewTextBoxColumn28.EnableExpressionEditor = False
+        GridViewTextBoxColumn28.FieldName = "Image4"
+        GridViewTextBoxColumn28.HeaderText = "Image4"
+        GridViewTextBoxColumn28.IsAutoGenerated = True
+        GridViewTextBoxColumn28.IsVisible = False
+        GridViewTextBoxColumn28.Name = "Image4"
+        Me.NestedRadGridView.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn9, GridViewDateTimeColumn1, GridViewTextBoxColumn20, GridViewTextBoxColumn21, GridViewTextBoxColumn22, GridViewTextBoxColumn23, GridViewTextBoxColumn24, GridViewTextBoxColumn25, GridViewTextBoxColumn26, GridViewTextBoxColumn27, GridViewTextBoxColumn28})
         Me.NestedRadGridView.EnableGrouping = False
         Me.NestedRadGridView.ShowFilteringRow = False
-        SortDescriptor4.PropertyName = "AssyNo"
-        Me.NestedRadGridView.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor4})
-        Me.NestedRadGridView.ViewDefinition = TableViewDefinition10
+        SortDescriptor2.PropertyName = "AssyNo"
+        Me.NestedRadGridView.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor2})
+        Me.NestedRadGridView.ViewDefinition = TableViewDefinition5
         '
         'RadPanel3
         '
@@ -635,7 +644,7 @@ Partial Class Tank_Order
         '
         Me.RadButton2.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadButton2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton2.Location = New System.Drawing.Point(435, 2)
+        Me.RadButton2.Location = New System.Drawing.Point(459, 2)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(148, 35)
         Me.RadButton2.TabIndex = 150
@@ -651,7 +660,7 @@ Partial Class Tank_Order
         '
         Me.RadButton1.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadButton1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton1.Location = New System.Drawing.Point(589, 2)
+        Me.RadButton1.Location = New System.Drawing.Point(613, 2)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(148, 35)
         Me.RadButton1.TabIndex = 149
@@ -763,9 +772,8 @@ Partial Class Tank_Order
         '
         'BTCANCEL
         '
-        Me.BTCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BTCANCEL.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTCANCEL.ForeColor = System.Drawing.Color.Black
+        Me.BTCANCEL.ForeColor = System.Drawing.Color.White
         Me.BTCANCEL.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BTCANCEL.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.BTCANCEL.Location = New System.Drawing.Point(392, 505)
@@ -784,7 +792,7 @@ Partial Class Tank_Order
         'BTSave
         '
         Me.BTSave.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTSave.ForeColor = System.Drawing.Color.Black
+        Me.BTSave.ForeColor = System.Drawing.Color.White
         Me.BTSave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.BTSave.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.BTSave.Location = New System.Drawing.Point(271, 505)
@@ -867,7 +875,6 @@ Partial Class Tank_Order
         Me.TOV.Name = "TOV"
         Me.TOV.Size = New System.Drawing.Size(291, 28)
         Me.TOV.TabIndex = 146
-        Me.TOV.TabStop = False
         Me.TOV.ThemeName = "Office2010Blue"
         '
         'RadLabel7
@@ -890,7 +897,6 @@ Partial Class Tank_Order
         Me.Tankno.Name = "Tankno"
         Me.Tankno.Size = New System.Drawing.Size(291, 28)
         Me.Tankno.TabIndex = 144
-        Me.Tankno.TabStop = False
         Me.Tankno.ThemeName = "Office2010Blue"
         '
         'RadGroupBox2
@@ -988,7 +994,6 @@ Partial Class Tank_Order
         Me.Temp.Name = "Temp"
         Me.Temp.Size = New System.Drawing.Size(291, 28)
         Me.Temp.TabIndex = 140
-        Me.Temp.TabStop = False
         Me.Temp.ThemeName = "Office2010Blue"
         '
         'RadLabel8
@@ -1011,7 +1016,6 @@ Partial Class Tank_Order
         Me.Density.Name = "Density"
         Me.Density.Size = New System.Drawing.Size(291, 28)
         Me.Density.TabIndex = 138
-        Me.Density.TabStop = False
         Me.Density.ThemeName = "Office2010Blue"
         '
         'RadLabel4
@@ -1036,7 +1040,6 @@ Partial Class Tank_Order
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(291, 28)
         Me.U_UPDATEBY.TabIndex = 131
-        Me.U_UPDATEBY.TabStop = False
         Me.U_UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1052,7 +1055,6 @@ Partial Class Tank_Order
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(291, 28)
         Me.U_UPDATE.TabIndex = 130
-        Me.U_UPDATE.TabStop = False
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1080,16 +1082,6 @@ Partial Class Tank_Order
         Me.Label2.Size = New System.Drawing.Size(109, 23)
         Me.Label2.TabIndex = 134
         Me.Label2.Text = "Update By :"
-        '
-        'TTANKBindingSource
-        '
-        Me.TTANKBindingSource.DataMember = "T_TANK"
-        Me.TTANKBindingSource.DataSource = Me.DataSet_Table
-        '
-        'DataSet_Table
-        '
-        Me.DataSet_Table.DataSetName = "DataSet_Table"
-        Me.DataSet_Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'T_TANKTableAdapter
         '
@@ -1121,6 +1113,8 @@ Partial Class Tank_Order
         CType(Me.TankGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TTANKBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterTemplate.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1156,8 +1150,6 @@ Partial Class Tank_Order
         CType(Me.U_UPDATEBY, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.U_UPDATE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TTANKBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

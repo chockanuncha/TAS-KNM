@@ -51,7 +51,7 @@ Public Class Advisenote
         EditDoc = False
         AddDoc = False
 
-        My.Application.ChangeCulture("en-GB")
+        'My.Application.ChangeCulture("en-GB")
 
         'My.Application.ChangeCulture("th-TH")
 
@@ -175,10 +175,12 @@ Public Class Advisenote
             q &= " ,max(T1.LOAD_PRESET) as LOAD_PRESET, max(T1.LOAD_CARD) as LOAD_CARD"
             q &= " ,max(T2.LC_COMPARTMENT) as LC_COMPARTMENT"
             q &= " ,max(T2.LC_BAY) as LC_BAY,Reference, max(T1.LOAD_DATE) as LOAD_DATE"
-            q &= " ,max(T1.LOAD_DID) as LOAD_DID ,max(T_Status.STATUS_NAME) as STATUS_NAME ,max(T1.LOADDO) as LOAD_DOfull ,"
-            q &= "NVL2(max(t1.Container),(max(t1.Container)|| '/' ||max(T_TRUCK.TRUCK_NUMBER)),max(T_TRUCK.TRUCK_NUMBER) ) as Load_Vehicle,max(t_customer.Customer_name) as Customer_name "
-            q &= " ,max(T_DRIVER.Driver_NAME)|| '  ' || max(T_Driver.Driver_Lastname) AS LOAD_DRIVER"
-            q &= " ,max(T1.load_id) as Load_id,max(V_DO.DO_STATUS) as DO_STATUS"
+            q &= " ,max(T1.LOAD_DID) as LOAD_DID ,max(T_Status.STATUS_NAME) as STATUS_NAME ,max(T1.LOADDO) as LOAD_DOfull,max(t_customer.Customer_name) as Customer_name  "
+            'q &= " ,NVL2(max(t1.Container),(max(t1.Container)|| '/' ||max(T_TRUCK.TRUCK_NUMBER)),max(T_TRUCK.TRUCK_NUMBER) ) as Load_Vehicle "
+            q &= " ,COALESCE(MAX( t1.Container), MAX ( t1.Container ) + '/' +  MAX ( T_TRUCK.TRUCK_NUMBER ),MAX ( T_TRUCK.TRUCK_NUMBER )) AS Load_Vehicle"
+            'q &= " ,max(T_DRIVER.Driver_NAME)|| '  ' || max(T_Driver.Driver_Lastname) AS LOAD_DRIVER"
+            q &= " ,isnull(max(T_DRIVER.Driver_NAME), '')+ '  ' + isnull(max(T_Driver.Driver_Lastname), '') AS LOAD_DRIVER "
+            q &= " ,max(T1.load_id) as Load_id " ',max(V_DO.DO_STATUS) as DO_STATUS"
             q &= ",max(t_product.Product_code) as PRODUCT_CODE,max(T_Batchmeter.BATCH_NAME) as BATCH_NAME"
             q &= " ,max(T1.Container) as Container,max(T1.LOAD_TRUCKCOMPANY) as LOAD_TRUCKCOMPANY,max(T1.LOAD_PRESET) as LOAD_PRESET"
             q &= " ,max(LC_SEAL) as LC_SEAL,max(T1.LOAD_SEAL) as LOAD_SEAL,max(T1.LOAD_SEALCOUNT) as LOAD_SEALCOUNT"
@@ -188,13 +190,16 @@ Public Class Advisenote
             Dim n_year As Integer = 0
             n_year = 543
 
-            q &= "CONVERT (DATETIME,'" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "CONVERT (DATETIME,'" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+            'q &= "CONVERT (DATETIME,'" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+            'q &= "CONVERT (DATETIME,'" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+
+            q &= "convert(datetime, '" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "') And "
+            q &= "convert(datetime, '" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "')  "
 
             q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and advisenote_type='Advisenote') T1  "
             q &= "ON T_Customer.ID = T1.LOAD_CUSTOMER  "
             q &= "LEFT OUTER JOIN T_STATUS  ON T1.LOAD_STATUS = T_STATUS.STATUS_ID   "
-            q &= "LEFT OUTER JOIN V_DO ON T1.LOAD_ID = V_DO.LOAD_ID    "
+            'q &= "LEFT OUTER JOIN V_DO ON T1.LOAD_ID = V_DO.LOAD_ID    "
             q &= "LEFT OUTER JOIN T_TRUCK ON T1.LOAD_VEHICLE = T_TRUCK.ID   "
             q &= "LEFT OUTER JOIN T_DRIVER ON T1.LOAD_DRIVER = T_DRIVER.ID   "
             q &= "LEFT OUTER JOIN T_CARD  ON T1.LOAD_CARD = T_CARD.CARD_NUMBER   "
@@ -203,7 +208,7 @@ Public Class Advisenote
             q &= "ON T_BATCHMETER.BATCH_NUMBER = T2.LC_METER   "
             q &= "LEFT OUTER JOIN T_Product ON T2.LC_PRO = T_Product.ID ON T1.LOAD_ID = T2.LC_LOAD "
             q &= "group by T1.reference  "
-            q &= "order by load_id "
+            q &= "order by T1.reference "
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "V_LOADINGNOTE")
@@ -482,7 +487,7 @@ Public Class Advisenote
             'If Cbn2.Text <> "" Then
             q = ""
             q = "select TRUCK_CAPASITY,T_TRUCKCOMPCAP,T_TRUCKCOMPCAP_L from (Select ID,TRUCK_CAPASITY,TRUCK_NUMBER From T_Truck where TRUCK_NUMBER= '" & dt5(0)("TRUCK_NUMBER").ToString & "') T1 "
-            q &= "Left Join (Select ID, T_TRUCKID,T_TRUCKCOMPCAP,T_TRUCKCOMPCAP_L From T_Truckcompartment order by t_truckcompno) T2 On T1.ID = T2.T_TRUCKID ORDER BY T1.ID ASC, T2.ID ASC  "
+            q &= "Left Join (Select ID, t_truckcompno,T_TRUCKID,T_TRUCKCOMPCAP,T_TRUCKCOMPCAP_L From T_Truckcompartment) T2 On T1.ID = T2.T_TRUCKID ORDER BY T1.ID ASC, T2.t_truckcompno ASC  "
 
             Dim dt As DataTable = cls.Query(q)
 
@@ -743,7 +748,7 @@ Public Class Advisenote
                 yearthai = Str(Int(s_year + 543))
 
                 sql = ""
-                sql = "select  NVL(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
+                sql = "select  Isnull(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
                 sql &= " where LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + ""
 
                 dt_tmp = cls.Query(sql)
@@ -752,7 +757,7 @@ Public Class Advisenote
 
         Try
             q = ""
-            q = "select NVL(max(Load_id),0)+1 as load_id ,NVL(max(Reference),0)+1 as Reference  from T_loadingnote"
+            q = "select Isnull(max(Load_id),0)+1 as load_id ,Isnull(max(Reference),0)+1 as Reference  from T_loadingnote"
 
             dt_tmp = cls.Query(q)
 
@@ -1107,7 +1112,7 @@ Public Class Advisenote
         Dim tmp As DataTable
 
         q = ""
-        q = "select NVL(max(Load_id),0)+1 as load_id ,NVL(max(Reference),0)+1 as Reference  from T_loadingnote"
+        q = "select Isnull(max(Load_id),0)+1 as load_id ,Isnull(max(Reference),0)+1 as Reference  from T_loadingnote"
 
         tmp = cls.Query(q)
 
@@ -1116,7 +1121,7 @@ Public Class Advisenote
 
         yearthai = Str(Int(s_year + 543))
         sql = ""
-        sql = "select  NVL(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
+        sql = "select  Isnull(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
         sql &= " where LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + ""
 
         tmp = cls.Query("SELECT STATUS FROM T_OVERRIDE WHERE OVERRIDE_NAME='QUEUE'")
@@ -1130,7 +1135,7 @@ Public Class Advisenote
         Try
             ''''   ST  '''''''''
             q = ""
-            q = "select NVL(max(ST_ID),0)+1 as ST_ID"
+            q = "select Isnull(max(ST_ID),0)+1 as ST_ID"
             q &= " from T_ST"
 
             tmp = cls.Query(q)
@@ -1140,11 +1145,12 @@ Public Class Advisenote
             '''''' SC '''''''''''
             q = ""
             q = "select count(load_id) as CLoad_id "
-            q &= "from T_loadingnote "
-            q &= "where to_char(load_date,'DD') = to_char(Getdate(),'DD') "
-            q &= "AND  to_char(load_date,'MM') = to_char(Getdate(),'MM') "
-            q &= "AND  to_char(load_date,'YY') = to_char(Getdate(),'YY') "
-            q &= "AND (ST_ID NOT IN (SELECT st_id FROM t_st))  "
+            q &= "from T_loadingnote  where format(Getdate(),'dd-MM-yyyy')=format(load_date,'dd-MM-yyyy') "
+
+            'q &= "where to_char(load_date,'DD') = to_char(Getdate(),'DD') "
+            'q &= "AND  to_char(load_date,'MM') = to_char(Getdate(),'MM') "
+            'q &= "AND  to_char(load_date,'YY') = to_char(Getdate(),'YY') "
+            'q &= "AND (ST_ID NOT IN (SELECT st_id FROM t_st))  "
 
             tmp = cls.Query(q)
 
@@ -1192,13 +1198,13 @@ Public Class Advisenote
 
             q = ""
             q = "Insert into T_Loadingnote "
-            q &= " (LOAD_ID,"
+            q &= " (Reference,"
             q &= " LOAD_CARD,"
             q &= " LOAD_DID,"
             q &= " LOAD_VEHICLE,"
             q &= " LOAD_STATUS,"
             q &= " LOAD_CAPACITY,"
-            q &= " ST_ID,"
+            'q &= " ST_ID,"
             'q &= " LOAD_Shipper,"
             q &= " LOAD_STARTTIME,"
             q &= " AddnoteDate,"
@@ -1206,7 +1212,7 @@ Public Class Advisenote
             q &= " LOAD_PRESET,"
             q &= " LOAD_DOfull, "
             q &= " LOADDO, "
-            q &= " Reference, "
+            'q &= " Reference, "
             q &= " Remark, "
 
             q &= " Container, "
@@ -1224,7 +1230,7 @@ Public Class Advisenote
             q &= "LOAD_AUTHORIZE,"
             q &= " LOAD_TYPE )"
             q &= " Values ("
-            q &= "'" & (Cbn6.Text) & "',"
+            q &= "'" & (Cbn8.Text) & "',"
 
             'Random PinCode
             Dim dt_tmp As DataTable
@@ -1274,10 +1280,10 @@ Public Class Advisenote
                     q &= "'" & ("0") + "'" & ","
                 End Try
             End If
-            q &= "'" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "',"
+            q &= "'" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "'," ' load_vehicle
             q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & (Cbn5.Text) & "',"
-            q &= "'" & Str(sc) & "',"
+            'q &= "'" & Str(sc) & "'," ' ST_ID
             'q &= "'" & (TShipperBindingSource.Item(TShipperBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & (Cbn9.Text) & "',"
 
@@ -1290,9 +1296,9 @@ Public Class Advisenote
             'q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & Preset.ToString & "',"
-            q &= "'" & (Cbn11.Text) & "',"
-            q &= "'" & (Cbn11.Text) & "',"
-            q &= "'" & (Cbn8.Text) & "',"
+            q &= "'" & (Cbn11.Text) & "'," 'LOAD_DOfull
+            q &= "'" & (Cbn11.Text) & "'," 'Loaddo
+
             q &= "'" & (Edremark.Text) & "',"
             q &= "'" & (Container.Text) & "',"
             q &= "'" & (Seal_Total.Text) & "',"
@@ -1304,8 +1310,9 @@ Public Class Advisenote
             q &= "'" & (Load_q.Text) & "',"
 
             If Chkin = 0 Then
-                q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", QTIME)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
-                q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy hh:mm:ss}", Checkintime)) & "','DD/MM/YYYY HH24:MI:SS')" & ","
+                q &= "CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", QTIME)) & "')," 'DD/MM/YYYY HH24:MI:SS')" & ","
+                q &= "CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", Checkintime)) & "')," 'DD/MM/YYYY HH24:MI:SS')" & ","
+                'CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", VE_EXPIREDATE.Value)) & "')," 'MM/dd/yyyy HH24:MI:SS')" & ","
             Else
                 q &= " Getdate() ,"
                 q &= " Getdate() ,"
@@ -1488,12 +1495,6 @@ Public Class Advisenote
                     'sql = "select batch_number from t_batchmeter where ID in(" & (DirectCast(Me.GroupBox10.Controls.Item("Meter" + (r + 1).ToString), RadDropDownList).SelectedValue.ToString) & ") "
 
                     sql = "select batch_number from t_batchmeter where Batch_name in('" & (DirectCast(Me.GroupBox10.Controls.Item("Meter" + (r + 1).ToString), RadDropDownList).Text) & "') "
-
-
-
-                    'sql &= " and batch_island_no in(select batch_island_no from t_batchmeter where batch_bay in('" & (DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (r + 1).ToString), RadDropDownList).Text) & "'))"
-                    'sql &= " order by batch_number "
-
                     Dim dt2 As DataTable = cls.Query(sql)
 
                     q &= "'" & dt2.Rows(0).Item("batch_number").ToString & "')"
@@ -2104,34 +2105,34 @@ Public Class Advisenote
 
             Refresh()
             q &= ""
-            q &= "Select NVL(T_LOADINGNOTE.load_did,0) as Load_did ,t_loadingnote.load_truckcompany as Company,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_delivery,0) as load_delivery ,"
-            q &= "NVL(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
-            q &= "Trim(NVL(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
+            q &= "Select Isnull(T_LOADINGNOTE.load_did,0) as Load_did ,t_loadingnote.load_truckcompany as Company,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_delivery,0) as load_delivery ,"
+            q &= "Isnull(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
+            q &= "Trim(Isnull(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
             q &= "T_LOADINGNOTE.AddnoteDate as AddnoteDate,"
-            q &= "NVL(T_LOADINGNOTE.Reference,0) as Reference ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
+            q &= "Isnull(T_LOADINGNOTE.Reference,0) as Reference ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_id,0) as load_id ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_Sealcount,0) as load_Sealcount ,"
             q &= "T_LOADINGNOTE.Container AS Container ,"
-            q &= "NVL(T_LOADINGNOTE.Remark,'') as Remark ,"
-            q &= "NVL(T_Customer.Customer_name ,0) as Customer_Code ,"   'T_Customer.Customer_name
-            q &= "NVL(T_LOADINGNOTE.load_customer ,0) as Customer_ID ,"
-            q &= "NVL(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
-            q &= "NVL(T_STATUS.status_name,0) as status_Name ,"   'T_STATUS.status_name
-            q &= "NVL(T_COMPANY.COMPANY_name ,0) as LOAD_TRUCKCOMPANY ,"  'T_COMPANY.COMPANY_CODE
-            q &= "NVL(T_LOADINGNOTE.LOAD_status,0) as Load_status ,"
+            q &= "Isnull(T_LOADINGNOTE.Remark,'') as Remark ,"
+            q &= "Isnull(T_Customer.Customer_name ,0) as Customer_Code ,"   'T_Customer.Customer_name
+            q &= "Isnull(T_LOADINGNOTE.load_customer ,0) as Customer_ID ,"
+            q &= "Isnull(T_DRIVER.Driver_Name ,0) as Driver_Name ,"   'T_DRIVER.Driver
+            q &= "Isnull(T_STATUS.status_name,0) as status_Name ,"   'T_STATUS.status_name
+            q &= "Isnull(T_COMPANY.COMPANY_name ,0) as LOAD_TRUCKCOMPANY ,"  'T_COMPANY.COMPANY_CODE
+            q &= "Isnull(T_LOADINGNOTE.LOAD_status,0) as Load_status ,"
             q &= "T_LOADINGNOTE.Update_date as Update_date ,"
             q &= "T_LOADINGNOTE.UPDATE_BY as Update_by ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_DOfull,0) as LOAD_DOfull ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_TYPE,-1) as LOAD_TYPE ,"
-            q &= "NVL(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
-            q &= "NVL(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
-            q &= "NVL(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_DOfull,0) as LOAD_DOfull ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_TYPE,-1) as LOAD_TYPE ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_Q ,0) as LOAD_Q ,"
+            q &= "Isnull(T_Loadingnote.load_Driver ,0) as Driver_ID ,"
+            q &= "Isnull(T_LOADINGNOTE.DO_TYPE,'0') as DO_TYPE ,"
             q &= "T_LOADINGNOTE.LOAD_AUTHORIZE  AS LOAD_AUTHORIZE "
             ' q &= "T_LOADINGNOTE.remark  AS REmark "
 
@@ -2983,7 +2984,7 @@ Public Class Advisenote
     '        Dim yearthai As String
 
     '        q = ""
-    '        q = "select NVL(max(Load_id),0)+1 as load_id ,NVL(max(Reference),0)+1 as Reference  from T_loadingnote"
+    '        q = "select Isnull(max(Load_id),0)+1 as load_id ,Isnull(max(Reference),0)+1 as Reference  from T_loadingnote"
 
     '        Dim tmp As DataTable = cls.Query(q)
 
@@ -3003,7 +3004,7 @@ Public Class Advisenote
     '        RadPageView1.SelectedPage = RadPageViewPage2
     '        yearthai = Str(Int(s_year + 543))
     '        sql = ""
-    '        sql = "select  NVL(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
+    '        sql = "select  Isnull(max(LOAD_DID),0)+1 as LOAD_DID from T_LOADINGNOTE "
     '        sql &= " where LOAD_DAY=" + s_day + " and LOAD_MONTH =" + s_month + " and LOAD_YEAR=" + yearthai + ""
 
     '        tmp = cls.Query(sql)

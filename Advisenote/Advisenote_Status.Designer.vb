@@ -267,7 +267,7 @@ Partial Class Advisenote_Status
         Me.Meter.Name = "Meter"
         Me.Meter.Size = New System.Drawing.Size(121, 26)
         Me.Meter.TabIndex = 12
-        Me.Meter.TabStop = False
+        Me.Meter.TabStop = True
         Me.Meter.ThemeName = "Office2010Blue"
         '
         'RadPanel2

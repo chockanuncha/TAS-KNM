@@ -178,7 +178,7 @@ Partial Class Manual
         Me.PictureBox1.Size = New System.Drawing.Size(323, 165)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 183
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'RadCalendar1
         '
