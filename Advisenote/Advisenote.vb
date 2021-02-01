@@ -14,9 +14,7 @@ Public Class Advisenote
     Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
     Private cls_data As New Class_SelectData
-
     Private Page_Group As String = "Operate Data"
-
     Private MyErrorProvider As New ErrorProviderExtended
     Private TRUCK_COMP_NUM, sum, auto, sealEdit, Chkin, Chkout, Kiosk, baycheck As Integer
     Private EditType, CanExit As Integer
@@ -24,7 +22,6 @@ Public Class Advisenote
     Dim QLOAD As Integer = 0
     Dim ProductCom(12) As String
     Private product_Do, Seal_Last, Checkin_ID, Truck_id, Call_Tergets As String
-    'Private QTIME, Checkintime As DateTime
     Private Property Advisenote As Object
     Public authorizeUser As Integer = 0
     Private QTIME, Checkintime As String
@@ -173,52 +170,33 @@ Public Class Advisenote
             q = ""
             q = "SELECT   max(T1.LOAD_CAPACITY) as LOAD_CAPACITY,max(load_q) as LOAD_Q"
             q &= " ,max(T1.LOAD_PRESET) as LOAD_PRESET, max(T1.LOAD_CARD) as LOAD_CARD"
-            q &= " ,max(T2.LC_COMPARTMENT) as LC_COMPARTMENT"
-            q &= " ,max(T2.LC_BAY) as LC_BAY,Reference, max(T1.LOAD_DATE) as LOAD_DATE"
+            q &= " ,max(T2.LC_COMPARTMENT) as LC_COMPARTMENT ,max(T2.LC_BAY) as LC_BAY,Reference, max(T1.LOAD_DATE) as LOAD_DATE"
             q &= " ,max(T1.LOAD_DID) as LOAD_DID ,max(T_Status.STATUS_NAME) as STATUS_NAME ,max(T1.LOADDO) as LOAD_DOfull,max(t_customer.Customer_name) as Customer_name  "
-            'q &= " ,NVL2(max(t1.Container),(max(t1.Container)|| '/' ||max(T_TRUCK.TRUCK_NUMBER)),max(T_TRUCK.TRUCK_NUMBER) ) as Load_Vehicle "
-            q &= " ,COALESCE(MAX( t1.Container), MAX ( t1.Container ) + '/' +  MAX ( T_TRUCK.TRUCK_NUMBER ),MAX ( T_TRUCK.TRUCK_NUMBER )) AS Load_Vehicle"
-            'q &= " ,max(T_DRIVER.Driver_NAME)|| '  ' || max(T_Driver.Driver_Lastname) AS LOAD_DRIVER"
+            q &= " , CASE max(t1.Container)	WHEN NULL THEN max(T_TRUCK.TRUCK_NUMBER) WHEN '' THEN max(T_TRUCK.TRUCK_NUMBER) ELSE max(t1.Container)  + '/ ' + max(T_TRUCK.TRUCK_NUMBER) END AS Load_Vehicle "
             q &= " ,isnull(max(T_DRIVER.Driver_NAME), '')+ '  ' + isnull(max(T_Driver.Driver_Lastname), '') AS LOAD_DRIVER "
             q &= " ,max(T1.load_id) as Load_id " ',max(V_DO.DO_STATUS) as DO_STATUS"
-            q &= ",max(t_product.Product_code) as PRODUCT_CODE,max(T_Batchmeter.BATCH_NAME) as BATCH_NAME"
+            q &= " ,max(t_product.Product_code) as PRODUCT_CODE,max(T_Batchmeter.BATCH_NAME) as BATCH_NAME"
             q &= " ,max(T1.Container) as Container,max(T1.LOAD_TRUCKCOMPANY) as LOAD_TRUCKCOMPANY,max(T1.LOAD_PRESET) as LOAD_PRESET"
             q &= " ,max(LC_SEAL) as LC_SEAL,max(T1.LOAD_SEAL) as LOAD_SEAL,max(T1.LOAD_SEALCOUNT) as LOAD_SEALCOUNT"
             q &= " ,max(T1.ADDNOTEDATE) as ADDNOTEDATE,max(T2.LC_STARTTIME) as LC_STARTTIME,max(T2.LC_ENDTIME) as LC_ENDTIME "
             q &= "FROM T_Customer  RIGHT OUTER JOIN (Select * from T_LOADINGNOTE  Where T_LOADINGNOTE.AddnoteDate between "
-
-            Dim n_year As Integer = 0
-            n_year = 543
-
-            'q &= "CONVERT (DATETIME,'" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            'q &= "CONVERT (DATETIME,'" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-
             q &= "convert(datetime, '" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "') And "
             q &= "convert(datetime, '" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "')  "
-
-            q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and advisenote_type='Advisenote') T1  "
-            q &= "ON T_Customer.ID = T1.LOAD_CUSTOMER  "
+            q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and advisenote_type='Advisenote') T1 ON T_Customer.ID = T1.LOAD_CUSTOMER "
             q &= "LEFT OUTER JOIN T_STATUS  ON T1.LOAD_STATUS = T_STATUS.STATUS_ID   "
-            'q &= "LEFT OUTER JOIN V_DO ON T1.LOAD_ID = V_DO.LOAD_ID    "
             q &= "LEFT OUTER JOIN T_TRUCK ON T1.LOAD_VEHICLE = T_TRUCK.ID   "
             q &= "LEFT OUTER JOIN T_DRIVER ON T1.LOAD_DRIVER = T_DRIVER.ID   "
             q &= "LEFT OUTER JOIN T_CARD  ON T1.LOAD_CARD = T_CARD.CARD_NUMBER   "
             q &= "Left OUTER JOIN T_BATCHMETER   "
-            q &= "RIGHT OUTER JOIN (Select * From T_LOADINGNOTECOMPARTMENT) T2 "
-            q &= "ON T_BATCHMETER.BATCH_NUMBER = T2.LC_METER   "
+            q &= "RIGHT OUTER JOIN (Select * From T_LOADINGNOTECOMPARTMENT) T2 ON T_BATCHMETER.BATCH_NUMBER = T2.LC_METER "
             q &= "LEFT OUTER JOIN T_Product ON T2.LC_PRO = T_Product.ID ON T1.LOAD_ID = T2.LC_LOAD "
-            q &= "group by T1.reference  "
-            q &= "order by T1.reference "
+            q &= "group by T1.reference order by T1.reference "
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "V_LOADINGNOTE")
-
             V_LoadingnoteBindingSource.DataSource = MyDataSet
             V_LoadingnoteBindingSource.DataMember = "V_LOADINGNOTE"
             MyDataSet.Dispose()
-
-            n_year = 0
-
             Try
                 Memory = New MemoryManagement.Manage
                 Memory.FlushMemory()
@@ -229,10 +207,6 @@ Public Class Advisenote
         End Try
         EditType = 0
     End Sub
-
-
-
-
 
     Private Sub Cbn2_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn2.Leave
         If Cbn2.Text = "" Then
@@ -607,9 +581,6 @@ Public Class Advisenote
 
         End Try
     End Sub
-
-
-
     Private Sub Bcancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BCancel.Click
         Try
             'CanExit = 1
@@ -625,10 +596,7 @@ Public Class Advisenote
 
         Try
 
-
-
             Dim Sql As String
-
             Sql = ""
             Sql = "Select ID,Batch_name from T_batchmeter where  Batch_Status=10 Order by Batch_name"
 
@@ -1505,14 +1473,17 @@ Public Class Advisenote
                 cls.Insert(q)
             Next r
 
-            q = ""
-            q = "select CALL_TARGET from T_QSETTING order by id"
+            Dim Call_Terget As String = "0"
+            Try
+                q = ""
+                q = "select CALL_TARGET from T_QSETTING order by id"
+                Dim dt1 As DataTable = cls.Query(q)
 
-            Dim dt1 As DataTable = cls.Query(q)
-
-            Dim Call_Terget As String
-            Call_Terget = dt1(0)("CALL_TARGET").ToString
-            Call_Tergets = Call_Terget.ToString
+                Call_Terget = dt1(0)("CALL_TARGET").ToString
+                Call_Tergets = Call_Terget.ToString
+            Catch ex As Exception
+                Call_Tergets = "2"
+            End Try
 
             q = ""
             q = "Insert into t_dashboard "
@@ -1535,9 +1506,7 @@ Public Class Advisenote
                 sql = ""
                 sql = "select Driver_ID,Card_Number from vcardload "
                 sql &= "where Driver_ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
-
                 Dim dt2 As DataTable = cls.Query(sql)
-
                 DriverCard = dt2(0)("Card_Number")
                 q &= "" & DriverCard & "',"
             Catch ex As Exception
@@ -1551,6 +1520,8 @@ Public Class Advisenote
 
                 Dim dt2 As DataTable = cls.Query(sql)
                 If dt2.Rows.Count > 0 Then TruckCard = dt2(0)("Card_Number") Else TruckCard = "0"
+
+                dt2.Dispose()
 
                 q &= "'" & TruckCard & "',"
             Catch ex As Exception
@@ -1568,24 +1539,18 @@ Public Class Advisenote
             q &= " Getdate() )"
 
             cls.Insert(q)
-        Catch ex As Exception
 
-            q = ""
+        Catch ex As Exception
             q = "delete t_loadingnote where load_id = "
             q &= Cbn6.Text
-
             cls.Delete(q)
 
-            q = ""
             q = "delete t_loadingnotecompartment where lc_load = "
             q &= Cbn6.Text
-
             cls.Delete(q)
 
-            q = ""
             q = "delete T_dashboard where load_id = "
             q &= Cbn6.Text
-
             cls.Delete(q)
 
             MessageBox.Show("Cannot create advisenote, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1594,20 +1559,14 @@ Public Class Advisenote
             Exit Sub
         End Try
 
-        q = ""
         q = "Update t_Seal Set Seal_last='" & Seal_Last & "'"
-
         cls.Update(q)
 
-        q = ""
         q = "Update t_Checkin Set Status=2 ,LOAD_ID='" & Cbn6.Text & "',Call_target='" & Call_Tergets.ToString & "' where ID='" & Checkin_ID & "'"
-
         cls.Update(q)
 
         If QLOAD = 1 Then
-            q = ""
             q = "Update T_Q Set Q_NO='" & Load_q.Text & "'"
-
             cls.Update(q)
         End If
 
@@ -1636,6 +1595,9 @@ Public Class Advisenote
         ReportPrint.ShowDialog()
         ds.Dispose()
         Myreport.Close()
+        Myreport.Dispose()
+
+        tmp.Dispose()
 
         Try
             Advisenote_Shown(sender, e)
@@ -1704,7 +1666,6 @@ Public Class Advisenote
             Loop
 
             q &= "'" & strRand & "', "
-
             q &= " LOAD_DID = "
             q &= "'" & Cbn7.Text & "',"
             q &= " LOAD_VEHICLE = "
@@ -1760,7 +1721,6 @@ Public Class Advisenote
             q &= "'" & (Update_by.Text) & "',"
             q &= " LOAD_AUTHORIZE = "
             q &= "'" & (authorize_Remark.Text) & "',"
-
             q &= " LOAD_TRUCKCOMPANY = "
             q &= "'" & (TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID").ToString()) & "' "
             q &= "WHERE reference= "
@@ -1937,6 +1897,9 @@ Public Class Advisenote
                         q &= " and lc_compartment = "
                         q &= "'" & (DirectCast(Me.GroupBox15.Controls.Item("Comp" + (r + 1).ToString), RadTextBox).Text) & "' "
                         q &= " and lc_status in(1,99) "
+
+                        dt1.Dispose()
+
                     End If
 
 
@@ -2021,34 +1984,30 @@ Public Class Advisenote
 
                     End Try
 
-                    sql = ""
-                    sql = "delete   T_Loadingnote where reference ='" & ref & "'"
+                    'sql = "delete   T_Loadingnote where reference ='" & ref & "'"
+                    'cls.InsertEvent(MAIN.U_NAME, "User : " & MAIN.U_NAME & "  Delete loading advise note : " & ref, "T_LOADINGNOTE", "")
+                    'cls.Delete(sql)
 
-                    cls.InsertEvent(MAIN.U_NAME, "User : " & MAIN.U_NAME & "  Delete loading advise note : " & ref, "T_LOADINGNOTE", "")
+                    'sql = "delete t_loadingnotecompartment where lc_load ='" & LC_ID & "'"
+                    'cls.Delete(sql)
 
-                    cls.Delete(sql)
+                    sql = "update T_Loadingnote set load_status=50 where reference ='" & ref & "'"
+                    cls.InsertEvent(MAIN.U_NAME, "User : " & MAIN.U_NAME & "  Cancel loading advise note : " & ref, "T_LOADINGNOTE", "")
+                    cls.Update(sql)
 
-                    sql = ""
-                    sql = "delete t_loadingnotecompartment where lc_load ='" & LC_ID & "'"
-
-                    cls.Delete(sql)
+                    sql = "Update t_loadingnotecompartment set lc_status=50 where lc_load ='" & LC_ID & "'"
+                    cls.Update(sql)
 
                     Timer1.Enabled = True
                     RadPageView1.SelectedPage = RadPageViewPage1
 
-                    sql = ""
                     sql = "Update   T_Checkin set status=1,load_id='',CALL_ACTUAL=0 where load_id ='" & LC_ID & "'"
-
                     cls.Update(sql)
 
-                    sql = ""
                     sql = "delete   t_dashboard where load_id ='" & LC_ID & "'"
-
                     cls.Delete(sql)
 
-                    sql = ""
                     sql = "delete   T_Qloadend where load_id ='" & LC_ID & "'"
-
                     cls.Delete(sql)
 
                     SelectVLoadingNote()
@@ -2110,7 +2069,7 @@ Public Class Advisenote
             q &= "Isnull(T_TRUCK.TRUCK_NUMBER,0) as load_vehicle ,"
             q &= "Isnull(T_LOADINGNOTE.LOAD_vehicle,0) as load_vehicle_ID ,"
             q &= "Isnull(T_LOADINGNOTE.LOAD_capacity,0) as load_capacity ,"
-            q &= "Trim(Isnull(T_LOADINGNOTE.LOAD_driver,0)) as load_driver ,"
+            q &= "Isnull(T_LOADINGNOTE.LOAD_driver,0) as load_driver ,"
             q &= "Isnull(T_LOADINGNOTE.LOAD_preset,0) as load_preset ,"
             q &= "Isnull(T_LOADINGNOTE.LOAD_SEAL,0) as LOAD_SEAL ,"
             q &= "Isnull(T_LOADINGNOTE.LOAD_card,0) as load_card ,"
@@ -2139,8 +2098,8 @@ Public Class Advisenote
             q &= "FROM "
             q &= "(Select * from T_LOADINGNOTE where Reference = '" & ref & "' and load_Status in(1,2,3,4,5) and load_status <> 99) T_Loadingnote "
             q &= "LEFT OUTER JOIN  T_STATUS ON T_LOADINGNOTE.LOAD_STATUS = T_STATUS.STATUS_ID "
-            q &= "Left OUTER JOIN  V_DO ON T_LOADINGNOTE.LOAD_ID = V_DO.LOAD_ID "
-            q &= "Left OUTER JOIN T_Customer  ON T_Customer.ID = T_LOADINGNOTE.LOAD_CUSTOMER "
+            ' &= "Left OUTER JOIN  V_DO ON T_LOADINGNOTE.LOAD_ID = V_DO.LOAD_ID "
+            q &= "Left OUTER JOIN T_Customer  ON  T_LOADINGNOTE.LOAD_CUSTOMER =T_Customer.ID "
             q &= "LEFT OUTER JOIN  T_COMPANY ON T_LOADINGNOTE.LOAD_TRUCKCOMPANY = T_COMPANY.COMPANY_ID  "
             q &= "LEFT OUTER JOIN  T_TRUCK ON T_LOADINGNOTE.LOAD_VEHICLE = T_TRUCK.ID "
             q &= "LEFT OUTER JOIN T_DRIVER ON T_LOADINGNOTE.LOAD_DRIVER = T_DRIVER.ID  "
@@ -2480,7 +2439,6 @@ Public Class Advisenote
             IslandBay10.DisplayMember = "Bay_number"
             IslandBay10.SelectedIndex = -1
 
-
             sql = ""
             sql = "select max(ID) as ID from t_Product where ID in(" & Product_ID & ") Group by ID order by ID"
 
@@ -2499,12 +2457,8 @@ Public Class Advisenote
                     Bay2 &= "," & dr(i)("Bay").ToString
                 End If
             Next
-
             Bay.Text = dr(0)("Bay").ToString
-
-
-
-
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -2541,7 +2495,6 @@ Public Class Advisenote
 
             TBatchmeterBindingSource.DataSource = MyDataSet
             TBatchmeterBindingSource.DataMember = "T_batchmeter"
-            MyDataSet.Dispose()
             'TBatchmeterBindingSource.Position = 0
             Meter.SelectedIndex = 0
 
@@ -2631,6 +2584,7 @@ Public Class Advisenote
             Meter12.SelectedIndex = -1
 
             baycheck = 1
+            MyDataSet.Dispose()
         Catch ex As Exception
         End Try
     End Sub
@@ -2954,6 +2908,8 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList1.Text = "" Then IslandBay1.SelectedIndex = -1
+
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3239,6 +3195,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList3.Text = "" Then IslandBay3.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3266,6 +3223,7 @@ Public Class Advisenote
             sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
             sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
             sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(sql, "T_bay")
@@ -3307,6 +3265,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList4.Text = "" Then IslandBay4.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3374,6 +3333,7 @@ Public Class Advisenote
         '    End If
         'Next
         If ProductList2.Text = "" Then IslandBay2.SelectedIndex = -1
+        dt.Dispose()
         MyDataSet.Dispose()
     End Sub
 
@@ -3439,6 +3399,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList5.Text = "" Then IslandBay5.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3506,6 +3467,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList6.Text = "" Then IslandBay6.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3573,6 +3535,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList7.Text = "" Then IslandBay7.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3640,6 +3603,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList8.Text = "" Then IslandBay8.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3707,6 +3671,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList9.Text = "" Then IslandBay9.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3775,6 +3740,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList10.Text = "" Then IslandBay10.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3842,6 +3808,8 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList11.Text = "" Then IslandBay11.SelectedIndex = -1
+
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -3909,6 +3877,7 @@ Public Class Advisenote
             '    End If
             'Next
             If ProductList12.Text = "" Then IslandBay12.SelectedIndex = -1
+            dt.Dispose()
             MyDataSet.Dispose()
         Catch ex As Exception
         End Try
@@ -4065,7 +4034,7 @@ Public Class Advisenote
         Catch ex As Exception
 
         End Try
-     
+
     End Sub
 
     Private Sub Bay_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bay.SelectedValueChanged
