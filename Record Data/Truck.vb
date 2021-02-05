@@ -804,7 +804,7 @@ Public Class Truck
         If adddata = 1 Then
             Try
                 If Owner.SelectedIndex = 1 Then
-                    VE_EXPIREDATE.MinDate = "31/12/2599 00:00:00"
+                    VE_EXPIREDATE.MinDate = "31/12/2100 00:00:00"
                 Else
                     VE_EXPIREDATE.MinDate = Date.Now
                 End If

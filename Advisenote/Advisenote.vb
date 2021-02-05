@@ -27,7 +27,6 @@ Public Class Advisenote
     Private QTIME, Checkintime As String
     Public AuthorRemark, AuthorRemarkDriver As String
     Dim Memory As MemoryManagement.Manage
-
     Dim EditDoc, AddDoc As Boolean
 
     Public Function Chk_View()
@@ -70,9 +69,11 @@ Public Class Advisenote
         EdCustomer.EditorControl.FilterDescriptors.Add(descriptor)
         EdCustomer.DropDownStyle = RadDropDownStyle.DropDown
 
-        'Dim descriptor3 As New FilterDescriptor(Cbn3.DisplayMember, FilterOperator.StartsWith, String.Empty)
-        'Cbn3.EditorControl.FilterDescriptors.Add(descriptor3)
-        'Cbn3.DropDownStyle = RadDropDownStyle.DropDown
+        Dim descriptor3 As New FilterDescriptor(Cbn3.DisplayMember, FilterOperator.StartsWith, String.Empty)
+        Cbn3.EditorControl.FilterDescriptors.Add(descriptor3)
+        Cbn3.DropDownStyle = RadDropDownStyle.DropDown
+
+
         Dim descriptor4 As New FilterDescriptor(Driver.DisplayMember, FilterOperator.StartsWith, String.Empty)
         Driver.EditorControl.FilterDescriptors.Add(descriptor4)
         Driver.DropDownStyle = RadDropDownStyle.DropDown
@@ -212,35 +213,24 @@ Public Class Advisenote
         If Cbn2.Text = "" Then
             Exit Sub
         End If
-
         Dim tmp As DataTable
         Dim Vdate1, Vdate2, Vdate3 As Integer
-
         If Cbn2.Text = "" Then Exit Sub
-
         Dim sql As String
-        sql = ""
         sql = "SELECT * FROM T_TRUCK WHERE TRUCK_NUMBER='" & Cbn2.Text & "'"
         Dim dt5 As DataTable = cls.Query(sql)
-
         Try
             'TTruckTypeBindingSource.Position = TTruckTypeBindingSource.Find("ID", dt5(0)("TRUCK_TYPE").ToString)
             TCompanyBindingSource.Position = TCompanyBindingSource.Find("COMPANY_ID", CInt(dt5(0)("TRUCK_COMPANY")))
-
             Trucktype.SelectedValue = dt5(0)("TRUCK_TYPE")
-
         Catch ex As Exception
             Exit Sub
         End Try
 
         If EditType <> 1 And CanExit = 0 Then
 
-
-
             '''''''' Check Truck in Loading
-            sql = ""
             sql = "select load_vehicle From t_loadingnote where load_vehicle= '" & dt5(0)("ID").ToString & "' and load_status < 3 and Advisenote_type='Advisenote' "
-
             Dim dt2 As DataTable = cls.Query(sql)
 
             If dt2.Rows.Count > 0 Then
@@ -252,13 +242,13 @@ Public Class Advisenote
                 Cbn2.Focus()
                 Exit Sub
             End If
+            dt2.Dispose()
 
             '''''''' Check Override Check in
             Dim q As String
             Dim Chk_Insurance, Chk_Measure, Chk_Inspection As Integer
             Chk_Insurance = Chk_Measure = Chk_Inspection = 0
 
-            q = ""
             q = "Select OVERRIDE_NAME, STATUS from t_override"
 
             tmp = cls.Query(q)
@@ -281,10 +271,8 @@ Public Class Advisenote
             authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
 
             If Chkin = 1 Then
-                sql = ""
                 sql = "Select * from t_checkin where truck_id='" & dt5(0)("ID").ToString & "'"
                 sql &= " and Status in(1) order by ldate desc"
-
                 Dim dt As DataTable = cls.Query(sql)
 
                 If dt.Rows.Count <> 0 Then
@@ -322,8 +310,6 @@ Public Class Advisenote
                 End If
             End If
 
-
-            sql = ""
             sql = "select Insurance_dateexpire,measure_dateexpire,Condition_dateexpire  From V_Truck where TRUCK_NUMBER= '" & dt5(0)("TRUCK_NUMBER").ToString & "'"
 
             Dim dt1 As DataTable = cls.Query(sql)
@@ -1213,7 +1199,7 @@ Public Class Advisenote
                     Exit Do
                 End If
             Loop
-
+            strRand = 1
             q &= "'" & strRand & "',"
 
             '' LOAD_CARD ''
@@ -1249,7 +1235,7 @@ Public Class Advisenote
                 End Try
             End If
             q &= "'" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "'," ' load_vehicle
-            q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("ID").ToString()) & "',"
+            q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("STATUS_ID").ToString()) & "',"
             q &= "'" & (Cbn5.Text) & "',"
             'q &= "'" & Str(sc) & "'," ' ST_ID
             'q &= "'" & (TShipperBindingSource.Item(TShipperBindingSource.Position)("ID").ToString()) & "',"
@@ -1614,13 +1600,13 @@ Public Class Advisenote
         ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
 
         sql = ""
-        sql = "select load_id from t_loadingnote where reference='" & ref & "' "
+        sql = "select load_id,load_card from t_loadingnote where reference='" & ref & "' "
 
         Dim tmp As DataTable = cls.Query(sql)
 
-        Dim loadID As String
+        Dim loadID, loadcard As String
         loadID = tmp(0)("load_id")
-
+        loadcard = tmp(0)("load_card")
         If MsgBox("Edit advisenote Load No.: ' " & ref & " '?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
 
             'Try
@@ -1652,26 +1638,27 @@ Public Class Advisenote
             q &= "SET LOAD_CARD = "
 
             'Random PinCode
-            Dim dt_tmp As DataTable
-            Dim RandGen As New Random
-            Dim strRand As Integer
+            'Dim dt_tmp As DataTable
+            'Dim RandGen As New Random
+            'Dim strRand As Integer
 
-            Do
-                strRand = RandGen.Next(0, 10000)
-                dt_tmp = cls.Query("SELECT * FROM T_LOADINGNOTE WHERE LOAD_CARD=" & strRand & " AND LOAD_DAY=" & Now.Day & " and LOAD_MONTH =" & Now.Month & " and LOAD_YEAR=" & Now.Year & "")
+            'Do
+            '    strRand = RandGen.Next(0, 10000)
+            '    dt_tmp = cls.Query("SELECT * FROM T_LOADINGNOTE WHERE LOAD_CARD=" & strRand & " AND LOAD_DAY=" & Now.Day & " and LOAD_MONTH =" & Now.Month & " and LOAD_YEAR=" & Now.Year & "")
 
-                If dt_tmp.Rows.Count = 0 Then
-                    Exit Do
-                End If
-            Loop
+            '    If dt_tmp.Rows.Count = 0 Then
+            '        Exit Do
+            '    End If
+            'Loop
 
-            q &= "'" & strRand & "', "
+
+            q &= "'" & loadcard.ToString & "', "
             q &= " LOAD_DID = "
             q &= "'" & Cbn7.Text & "',"
             q &= " LOAD_VEHICLE = "
             q &= "'" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "',"
             q &= " LOAD_STATUS = "
-            q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("ID").ToString()) & "',"
+            q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("STATUS_ID").ToString()) & "',"
             q &= " LOAD_CAPACITY = "
             q &= "'" & (Cbn5.Text) & "',"
             'q &= " LOAD_Shipper = "

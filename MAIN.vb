@@ -156,7 +156,6 @@ Partial Public Class MAIN
         Dim setting As New AnimatedPropertySetting(RadElement.PositionOffsetProperty,
                                                    New SizeF(-Me.radPanorama1.Width, 0),
                                                    SizeF.Empty, CInt(10.0 * 800.0 / Me.Width), 10)
-
         setting.ApplyValue(Me.examplePage)
     End Sub
 
