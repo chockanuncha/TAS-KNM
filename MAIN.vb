@@ -48,8 +48,8 @@ Partial Public Class MAIN
 
     '    bytCommand = Encoding.ASCII.GetBytes(txtMessage.Text)
     '            pRet = udpClient.Send(bytCommand, bytCommand.Length)
-    Public Function Connect(status As String, ip_adds As String) As String
-Public Function send(ByVal str As String) As String
+    'Public Function Connect(status As String, ip_adds As String) As String
+    'Public Function send(ByVal str As String) As String
 
     '#End Region
 
