@@ -5,7 +5,6 @@ Imports Telerik.WinControls
 
 Public Class Advisenote_Status
     Private cls As New Class_SQLSERVERDB
-
     Public Grid As Integer
     Private cls_role As New Class_Permission
     Public Function Chk_View()
@@ -23,25 +22,28 @@ Public Class Advisenote_Status
     End Function
 
     Private Sub Advisenote_Status_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
+
         SelectWaiting()
         SelectLoading()
         SelectFinish()
         SelectPartload()
         Grid = 0
+
     End Sub
 
     Private Sub SelectWaiting()
         Dim q As String
         Try
-            q = "Select t1.Reference,t1.load_id,NVL2(t1.Container,(t1.Container|| '/' ||t2.TRUCK_NUMBER),t2.TRUCK_NUMBER ) as Truck,"
-            q &= "T3.Driver_Name||'  '||T3.Driver_Lastname as Driver "
+            'q = "Select t1.Reference,t1.load_id,NVL2(t1.Container,(t1.Container|| '/' ||t2.TRUCK_NUMBER),t2.TRUCK_NUMBER ) as Truck,"
+            'q &= "T3.Driver_Name||'  '||T3.Driver_Lastname as Driver "
+            q = "Select t1.Reference,t1.load_id "
+            q &= ",CASE t1.Container WHEN NULL THEN t2.TRUCK_NUMBER WHEN '' THEN t2.TRUCK_NUMBER ELSE t1.Container  + '/ ' +  t2.TRUCK_NUMBER END AS Truck "
+            q &= ",isnull( T3.Driver_NAME, '')+ '  ' + isnull( T3.Driver_Lastname, '') AS Driver "
             q &= ",load_preset,t4.customer_name as Customer,t1.load_dofull as DO "
-
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=1 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
-            q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-            q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
-
+            q &= "convert(datetime, '" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "') And "
+            q &= "convert(datetime, '" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "'))  T1 "
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "
             q &= "left join t_customer t4 On t1.load_customer=t4.id "
@@ -52,7 +54,7 @@ Public Class Advisenote_Status
 
             WaitingBindingSource.DataSource = MyDataSet
             WaitingBindingSource.DataMember = "T1"
-
+            MyDataSet.Dispose()
         Catch ex As Exception
         End Try
     End Sub
@@ -73,13 +75,26 @@ Public Class Advisenote_Status
             q &= "left join t_customer t4 On t1.load_customer=t4.id "
             q &= "Order by t1.reference "
 
+            q = "Select t1.Reference,t1.load_id "
+            q &= ",CASE t1.Container WHEN NULL THEN t2.TRUCK_NUMBER WHEN '' THEN t2.TRUCK_NUMBER ELSE t1.Container  + '/ ' +  t2.TRUCK_NUMBER END AS Truck "
+            q &= ",isnull( T3.Driver_NAME, '')+ '  ' + isnull( T3.Driver_Lastname, '') AS Driver "
+            q &= ",load_preset,t4.customer_name as Customer,t1.load_dofull as DO "
+            q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=2 "
+            q &= " and T_LOADINGNOTE.AddnoteDate between "
+            q &= "convert(datetime, '" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "') And "
+            q &= "convert(datetime, '" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "'))  T1 "
+            q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
+            q &= "left join t_driver t3 On t1.load_driver=t3.id "
+            q &= "left join t_customer t4 On t1.load_customer=t4.id "
+            q &= "Order by t1.reference "
+
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "T1")
 
             LoadingBindingSource.DataSource = MyDataSet
             LoadingBindingSource.DataMember = "T1"
-
+            MyDataSet.Dispose()
         Catch ex As Exception
         End Try
     End Sub
@@ -89,17 +104,27 @@ Public Class Advisenote_Status
             q = "Select t1.Reference,t1.load_id,NVL2(t1.Container,(t1.Container|| '/' ||t2.TRUCK_NUMBER),t2.TRUCK_NUMBER ) as Truck,"
             q &= "T3.Driver_Name||'  '||T3.Driver_Lastname as Driver "
             q &= ",load_preset,t4.customer_name as Customer,t1.load_dofull as DO "
-
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=3 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
             q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
             q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
-
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "
             q &= "left join t_customer t4 On t1.load_customer=t4.id "
             q &= "Order by t1.reference "
 
+            q = "Select t1.Reference,t1.load_id "
+            q &= ",CASE t1.Container WHEN NULL THEN t2.TRUCK_NUMBER WHEN '' THEN t2.TRUCK_NUMBER ELSE t1.Container  + '/ ' +  t2.TRUCK_NUMBER END AS Truck "
+            q &= ",isnull( T3.Driver_NAME, '')+ '  ' + isnull( T3.Driver_Lastname, '') AS Driver "
+            q &= ",load_preset,t4.customer_name as Customer,t1.load_dofull as DO "
+            q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=3 "
+            q &= " and T_LOADINGNOTE.AddnoteDate between "
+            q &= "convert(datetime, '" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "') And "
+            q &= "convert(datetime, '" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "'))  T1 "
+            q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
+            q &= "left join t_driver t3 On t1.load_driver=t3.id "
+            q &= "left join t_customer t4 On t1.load_customer=t4.id "
+            q &= "Order by t1.reference "
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "T1")
 
@@ -114,12 +139,23 @@ Public Class Advisenote_Status
             q = "Select t1.Reference,t1.load_id,NVL2(t1.Container,(t1.Container|| '/' ||t2.TRUCK_NUMBER),t2.TRUCK_NUMBER ) as Truck,"
             q &= "T3.Driver_Name||'  '||T3.Driver_Lastname as Driver "
             q &= ",load_preset,t4.customer_name as Customer,t1.load_dofull as DO "
-
             q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=4 "
             q &= " and T_LOADINGNOTE.AddnoteDate between "
             q &= "CONVERT (DATETIME,'" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
             q &= "CONVERT (DATETIME,'" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS') ) T1 "
+            q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
+            q &= "left join t_driver t3 On t1.load_driver=t3.id "
+            q &= "left join t_customer t4 On t1.load_customer=t4.id "
+            q &= "Order by t1.reference "
 
+            q = "Select t1.Reference,t1.load_id "
+            q &= ",CASE t1.Container WHEN NULL THEN t2.TRUCK_NUMBER WHEN '' THEN t2.TRUCK_NUMBER ELSE t1.Container  + '/ ' +  t2.TRUCK_NUMBER END AS Truck "
+            q &= ",isnull( T3.Driver_NAME, '')+ '  ' + isnull( T3.Driver_Lastname, '') AS Driver "
+            q &= ",load_preset,t4.customer_name as Customer,t1.load_dofull as DO "
+            q &= "From (Select Reference,load_preset,load_id,load_vehicle,load_driver,load_customer,load_dofull,Container from T_loadingnote where load_status=4 "
+            q &= " and T_LOADINGNOTE.AddnoteDate between "
+            q &= "convert(datetime, '" & DP1.Value.Year & "/" & DP1.Value.Month & "/" & DP1.Value.Day & " 00:00:00" & "') And "
+            q &= "convert(datetime, '" & DP2.Value.Year & "/" & DP2.Value.Month & "/" & DP2.Value.Day & " 23:59:59" & "'))  T1 "
             q &= "Left join T_Truck t2 on t1.load_vehicle=t2.id "
             q &= "left join t_driver t3 On t1.load_driver=t3.id "
             q &= "left join t_customer t4 On t1.load_customer=t4.id "
@@ -152,26 +188,32 @@ Public Class Advisenote_Status
 
     Private Sub ToolStripButton17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton17.Click
         Try
-            If MsgBox("ต้องการทำ Partload ทะเบียนรถ : " & RadGridView2.CurrentRow.Cells("Truck").Value.ToString & " หรือไม่ ?", vbYesNo + vbDefaultButton2, "ยืนยัน") = vbYes Then
-                Dim sql, ref As String
+
+            '------------------------------------------- Start Check Permission
+            If cls_role.ChkEdit = False Then
+                Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to edit documents this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+                Me.Text = ds.ToString()
+                Exit Sub
+            End If
+            '------------------------------------------- End Check Permission
+
+            If MsgBox("Want to Partload Truck No.: " & RadGridView2.CurrentRow.Cells("Truck").Value.ToString & " ? ", vbYesNo + vbDefaultButton2, "Confirm") = vbYes Then
+                Dim sql, ref, lc_load As String
                 ref = RadGridView2.CurrentRow.Cells("Reference").Value.ToString
+                lc_load = RadGridView2.CurrentRow.Cells("Load_id").Value.ToString
                 Try
-                    sql = ""
                     sql = "Update t_loadingnote set load_Status='4' where reference ='" & ref & "'"
-
                     cls.Update(sql)
                 Catch ex As Exception
                 End Try
 
                 Try
-                    sql = ""
-                    sql = "Update t_loadingnoteCompartment set lc_status='4' where lc_load ='" & ref & "' and lc_status in(1,2) "
-
+                    sql = "Update t_loadingnoteCompartment set lc_status='4' where lc_load ='" & lc_load & "' and lc_status in(1,2) "
                     cls.Update(sql)
                 Catch ex As Exception
                 End Try
-
                 Advisenote_Status_Shown(sender, e)
+
             End If
         Catch ex As Exception
         End Try

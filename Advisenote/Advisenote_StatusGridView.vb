@@ -31,11 +31,16 @@
             q &= "left join T_Status t4 on t1.lc_Status=t4.id "
             q &= "left join V_BOL_M1M2_NEW t3 on t1.lc_load=t3.Reference and t1.lc_compartment=t3.LC_COMPARTMENT "
 
+            q = "SELECT t1.lc_compartment,t1.lc_bay,t2.product_code AS Product,t1.lc_preset ,t3.MASS AS Gross,(t1.lc_preset- t3.MASS) AS Loss," &
+                "t3.AVG_TEMP AS TEMP,t4.STATUS_NAME AS Status FROM (SELECT * FROM t_loadingnotecompartment WHERE lc_load = '" & ref & "') T1 " &
+                "LEFT JOIN t_product t2 ON t1.lc_pro= t2.id LEFT JOIN T_Status t4 ON t1.lc_Status= t4.id LEFT JOIN T_LOG_BATCH_DATA T3 ON T1.LC_ID = T3.LC_ID order by t1.lc_compartment"
+
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "T1")
 
             BindingSource1.DataSource = MyDataSet
             BindingSource1.DataMember = "T1"
+            MyDataSet.Dispose()
         Catch ex As Exception
         End Try
         Timer1.Enabled = True
@@ -52,11 +57,17 @@
             q &= "left join T_Status t4 on t1.lc_Status=t4.id "
             q &= "left join V_BOL_M1M2_NEW t3 on t1.lc_load=t3.Reference and t1.lc_compartment=t3.LC_COMPARTMENT "
 
+            q = "SELECT t1.lc_compartment,t1.lc_bay,t2.product_code AS Product,t1.lc_preset ,t3.MASS AS Gross,(t1.lc_preset- t3.MASS) AS Loss," &
+                "t3.AVG_TEMP AS TEMP,t4.STATUS_NAME AS Status FROM (SELECT * FROM t_loadingnotecompartment WHERE lc_load = '" & reff & "') T1 " &
+                "LEFT JOIN t_product t2 ON t1.lc_pro= t2.id LEFT JOIN T_Status t4 ON t1.lc_Status= t4.id LEFT JOIN T_LOG_BATCH_DATA T3 ON T1.LC_ID = T3.LC_ID order by t1.lc_compartment"
+
+
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "T1")
 
             BindingSource1.DataSource = MyDataSet
             BindingSource1.DataMember = "T1"
+            MyDataSet.Dispose()
         Catch ex As Exception
         End Try
     End Sub
@@ -72,11 +83,17 @@
             q &= "left join T_Status t4 on t1.lc_Status=t4.id "
             q &= "left join V_BOL_M1M2_NEW t3 on t1.lc_load=t3.Reference and t1.lc_compartment=t3.LC_COMPARTMENT "
 
+            q = "SELECT t1.lc_compartment,t1.lc_bay,t2.product_code AS Product,t1.lc_preset ,t3.MASS AS Gross,(t1.lc_preset- t3.MASS) AS Loss," &
+                "t3.AVG_TEMP AS TEMP,t4.STATUS_NAME AS Status FROM (SELECT * FROM t_loadingnotecompartment WHERE lc_load = '" & reff & "') T1 " &
+                "LEFT JOIN t_product t2 ON t1.lc_pro= t2.id LEFT JOIN T_Status t4 ON t1.lc_Status= t4.id LEFT JOIN T_LOG_BATCH_DATA T3 ON T1.LC_ID = T3.LC_ID order by t1.lc_compartment"
+
+
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(q, "T1")
 
             BindingSource1.DataSource = MyDataSet
             BindingSource1.DataMember = "T1"
+            MyDataSet.Dispose()
         Catch ex As Exception
         End Try
     End Sub

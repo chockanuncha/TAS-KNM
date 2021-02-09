@@ -48,9 +48,6 @@ Partial Public Class MAIN
 
     '    bytCommand = Encoding.ASCII.GetBytes(txtMessage.Text)
     '            pRet = udpClient.Send(bytCommand, bytCommand.Length)
-    Public Function Connect(status As String, ip_adds As String) As String
-Public Function send(ByVal str As String) As String
-
     '#End Region
 
 
@@ -192,7 +189,7 @@ Public Function send(ByVal str As String) As String
 
     End Sub
 
-    Private Sub linkTile1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Customer_Menu.Click
+    Private Sub linkTile1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkTile1.Click
         Me.AddOwnedForm(Customer)
         Customer.Show()
     End Sub
@@ -218,7 +215,7 @@ Public Function send(ByVal str As String) As String
         Unloading.Enabled = False
         MMIGroups.Enabled = False
         Report.Enabled = False
-        RecordGroup.Enabled = False
+        DatabaseGroup.Enabled = False
         ConfigGroup.Enabled = False
         'Supervisor.Enabled = False
         ToolGroup.Enabled = False
@@ -399,7 +396,7 @@ Public Function send(ByVal str As String) As String
 
     End Sub
 
-    Private Sub linkTile3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TruckCompany_Menu.Click
+    Private Sub linkTile3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkTile3.Click
         'Me.AddOwnedForm(Shipper)
         'Shipper.Show()
         Me.AddOwnedForm(Company)

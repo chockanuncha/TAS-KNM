@@ -1366,6 +1366,28 @@
     <Content Include="Resources\hunt.png" />
     <None Include="Resources\ICC Logo.png" />
     <None Include="Resources\ICC Logo1.png" />
+    <None Include="Resources\icc_loading_advisenote.png" />
+    <None Include="Resources\icc_loading_topup.png" />
+    <None Include="Resources\icc_config_status.png" />
+    <None Include="Resources\icc_config_tank.png" />
+    <None Include="Resources\icc_datatracking_tankorder.png" />
+    <None Include="Resources\icc_datatracking_new.png" />
+    <None Include="Resources\icc_datatracking_baysettings.png" />
+    <None Include="Resources\icc_datatracking_new1.png" />
+    <None Include="Resources\icc_mmisystem_bayoverview.png" />
+    <None Include="Resources\icc_mmisystem.png" />
+    <None Include="Resources\icc_datatracking.png" />
+    <None Include="Resources\icc_recorddata_driver.png" />
+    <None Include="Resources\icc_config_truck.png" />
+    <None Include="Resources\icc_recorddata_customer.png" />
+    <None Include="Resources\icc_recorddata_truckcompany.png" />
+    <None Include="Resources\icc_datatracking1.png" />
+    <None Include="Resources\icc_config_status1.png" />
+    <None Include="Resources\icc_config_bay.png" />
+    <None Include="Resources\icc_datatracking_editmeter.png" />
+    <None Include="Resources\icc_config.png" />
+    <None Include="Resources\icc_recorddata.png" />
+    <None Include="Resources\icc_mmisystem_tankoverview.png" />
     <Content Include="Resources\icon.ico" />
     <None Include="Resources\icon2 48x48.ico" />
     <Content Include="Resources\ie-logo.png" />
@@ -1490,6 +1512,7 @@
     <Content Include="Resources\TV_search.png" />
     <None Include="Resources\User_48x481.png" />
     <None Include="Resources\user_warning_48.png" />
+    <None Include="Resources\VeGa-T-48.png" />
     <Content Include="Resources\vsb-bg.png" />
     <Content Include="Resources\vsb-icon.png" />
   </ItemGroup>

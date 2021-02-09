@@ -61,7 +61,7 @@ Public Class Login
                 MAIN.ToolGroup.Enabled = True
                 MAIN.MMIGroups.Enabled = True
                 MAIN.Report.Enabled = True
-                MAIN.DatabaseGroup.Enabled = True
+                MAIN.RecordGroup.Enabled = True
                 MAIN.ConfigGroup.Enabled = True
                 'MAIN.Supervisor.Enabled = True
                 MAIN.CEvent("USER : " + MAIN.U_NAME + " Login Tas ")

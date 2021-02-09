@@ -86,12 +86,12 @@ Partial Class MAIN
         Me.RadLiveTileElement10 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement3 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement31 = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.RecordGroup = New Telerik.WinControls.UI.TileGroupElement()
+        Me.DatabaseGroup = New Telerik.WinControls.UI.TileGroupElement()
         Me.Truck_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Card_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Driver_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.Customer_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.TruckCompany_Menu = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.linkTile1 = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.linkTile3 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Tank_menu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.ProductMenu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.LiveTileFrameElement1 = New Telerik.WinControls.UI.LiveTileFrameElement()
@@ -619,11 +619,11 @@ Partial Class MAIN
         Me.radPanorama1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.radPanorama1.EnableTheming = False
         Me.radPanorama1.EnableZooming = False
-        Me.radPanorama1.Groups.AddRange(New Telerik.WinControls.RadItem() {Me.LoadingGroup, Me.ToolGroup, Me.MMIGroups, Me.Report, Me.RecordGroup, Me.ConfigGroup, Me.Unloading})
+        Me.radPanorama1.Groups.AddRange(New Telerik.WinControls.RadItem() {Me.LoadingGroup, Me.ToolGroup, Me.MMIGroups, Me.Report, Me.DatabaseGroup, Me.ConfigGroup, Me.Unloading})
         Me.radPanorama1.Location = New System.Drawing.Point(0, 0)
         Me.radPanorama1.MouseWheelBehavior = Telerik.WinControls.UI.PanoramaMouseWheelBehavior.Scroll
         Me.radPanorama1.Name = "radPanorama1"
-        Me.radPanorama1.PanelImageSize = New System.Drawing.Size(1092, 768)
+        Me.radPanorama1.PanelImageSize = New System.Drawing.Size(1024, 768)
         Me.radPanorama1.RowsCount = 6
         Me.radPanorama1.ScrollBarAlignment = Telerik.WinControls.UI.HorizontalScrollAlignment.Bottom
         Me.radPanorama1.ScrollBarThickness = 10
@@ -742,7 +742,7 @@ Partial Class MAIN
         Me.BLogin.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.BLogin.Font = New System.Drawing.Font("Leelawadee", 12.0!, System.Drawing.FontStyle.Bold)
         Me.BLogin.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.lock
-        Me.BLogin.Location = New System.Drawing.Point(1736, 18)
+        Me.BLogin.Location = New System.Drawing.Point(1736, 16)
         Me.BLogin.Name = "BLogin"
         Me.BLogin.Size = New System.Drawing.Size(152, 50)
         Me.BLogin.TabIndex = 198
@@ -781,12 +781,12 @@ Partial Class MAIN
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 6)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 5)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(254, 75)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 193
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.TabStop = True
         '
         'RadProgressBar1
         '
@@ -821,7 +821,7 @@ Partial Class MAIN
         Me.PictureBox1.Size = New System.Drawing.Size(143, 65)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 194
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = True
         '
         'RadClock1
         '
@@ -841,7 +841,7 @@ Partial Class MAIN
         Me.LoadingGroup.CellSize = New System.Drawing.Size(140, 120)
         Me.LoadingGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!)
         Me.LoadingGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LoadingGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_truck
+        Me.LoadingGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.fuel_tanker3_48x48
         Me.LoadingGroup.ImageAlignment = System.Drawing.ContentAlignment.TopRight
         Me.LoadingGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Topup_Menu, Me.Statusview_Menu, Me.RadTileElement33, Me.Advisenote_Menu})
         Me.LoadingGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
@@ -862,7 +862,7 @@ Partial Class MAIN
         Me.Topup_Menu.EnableImageTransparency = True
         Me.Topup_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.Topup_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.Topup_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_loading_topup
+        Me.Topup_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.logo_U_Top_Up_48x48
         Me.Topup_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.Topup_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Topup_Menu.Name = "Topup_Menu"
@@ -882,7 +882,7 @@ Partial Class MAIN
         Me.Statusview_Menu.EnableImageTransparency = True
         Me.Statusview_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.Statusview_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.Statusview_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_status
+        Me.Statusview_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Changer_d_utilisateur
         Me.Statusview_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.Statusview_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Statusview_Menu.Name = "Statusview_Menu"
@@ -923,7 +923,7 @@ Partial Class MAIN
         Me.Advisenote_Menu.EnableImageTransparency = True
         Me.Advisenote_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.Advisenote_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.Advisenote_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_loading_advisenote
+        Me.Advisenote_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.fuel_tanker3_48x48
         Me.Advisenote_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.Advisenote_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Advisenote_Menu.Name = "Advisenote_Menu"
@@ -941,7 +941,7 @@ Partial Class MAIN
         Me.ToolGroup.EnableImageTransparency = True
         Me.ToolGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ToolGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_new
+        Me.ToolGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Comic_Icons_New
         Me.ToolGroup.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.ToolGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.themeViewerTile, Me.RadLiveTileElement11, Me.RadLiveTileElement12, Me.BaySetting_Menu})
         Me.ToolGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
@@ -976,7 +976,6 @@ Partial Class MAIN
         Me.themeViewerTile.Text = "Loading Queue"
         Me.themeViewerTile.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.themeViewerTile.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.themeViewerTile.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'RadLiveTileElement11
         '
@@ -990,13 +989,13 @@ Partial Class MAIN
         Me.RadLiveTileElement11.EnableImageTransparency = True
         Me.RadLiveTileElement11.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.RadLiveTileElement11.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.RadLiveTileElement11.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_tankorder
+        Me.RadLiveTileElement11.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.rt_21
         Me.RadLiveTileElement11.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.RadLiveTileElement11.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadLiveTileElement11.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RadLiveTileElement11.ImageTransparentColor = System.Drawing.Color.White
         Me.RadLiveTileElement11.Name = "RadLiveTileElement11"
         Me.RadLiveTileElement11.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadLiveTileElement11.Text = "Tank Selection"
+        Me.RadLiveTileElement11.Text = "Tank Order"
         Me.RadLiveTileElement11.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLiveTileElement11.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
@@ -1011,10 +1010,10 @@ Partial Class MAIN
         Me.RadLiveTileElement12.EnableImageTransparency = True
         Me.RadLiveTileElement12.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.RadLiveTileElement12.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.RadLiveTileElement12.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_new1
+        Me.RadLiveTileElement12.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Actions_player_time_icon
         Me.RadLiveTileElement12.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.RadLiveTileElement12.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadLiveTileElement12.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RadLiveTileElement12.ImageTransparentColor = System.Drawing.Color.White
         Me.RadLiveTileElement12.Name = "RadLiveTileElement12"
         Me.RadLiveTileElement12.Padding = New System.Windows.Forms.Padding(1, 5, 5, 5)
         Me.RadLiveTileElement12.Row = 1
@@ -1034,7 +1033,7 @@ Partial Class MAIN
         Me.BaySetting_Menu.EnableImageTransparency = True
         Me.BaySetting_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.BaySetting_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.BaySetting_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_baysettings
+        Me.BaySetting_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources._DO
         Me.BaySetting_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.BaySetting_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BaySetting_Menu.Name = "BaySetting_Menu"
@@ -1051,7 +1050,7 @@ Partial Class MAIN
         Me.MMIGroups.CellSize = New System.Drawing.Size(140, 120)
         Me.MMIGroups.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!)
         Me.MMIGroups.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MMIGroups.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem
+        Me.MMIGroups.Image = CType(resources.GetObject("MMIGroups.Image"), System.Drawing.Image)
         Me.MMIGroups.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.MMIGroups.ImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.MMIGroups.ImageTransparentColor = System.Drawing.Color.White
@@ -1101,10 +1100,10 @@ Partial Class MAIN
         Me.schedulerTile.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.schedulerTile.GradientAngle = 0!
         Me.schedulerTile.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.schedulerTile.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_bayoverview
+        Me.schedulerTile.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.car_48x48
         Me.schedulerTile.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.schedulerTile.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.schedulerTile.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.schedulerTile.ImageTransparentColor = System.Drawing.Color.White
         Me.schedulerTile.Name = "schedulerTile"
         Me.schedulerTile.Padding = New System.Windows.Forms.Padding(5)
         Me.schedulerTile.Text = "Truck Overview"
@@ -1125,7 +1124,7 @@ Partial Class MAIN
         Me.chartViewZoomScrollTile.EnableImageTransparency = True
         Me.chartViewZoomScrollTile.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.chartViewZoomScrollTile.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.chartViewZoomScrollTile.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem
+        Me.chartViewZoomScrollTile.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.sdsd_55x35
         Me.chartViewZoomScrollTile.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.chartViewZoomScrollTile.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.chartViewZoomScrollTile.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1143,7 +1142,7 @@ Partial Class MAIN
         Me.Report.CellSize = New System.Drawing.Size(140, 120)
         Me.Report.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!)
         Me.Report.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Report.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking1
+        Me.Report.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.document_481
         Me.Report.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.Report.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Report.ImageTransparentColor = System.Drawing.Color.White
@@ -1165,7 +1164,7 @@ Partial Class MAIN
         Me.RadLiveTileElement10.EnableImageTransparency = True
         Me.RadLiveTileElement10.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.RadLiveTileElement10.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.RadLiveTileElement10.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking
+        Me.RadLiveTileElement10.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Report31
         Me.RadLiveTileElement10.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.RadLiveTileElement10.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.RadLiveTileElement10.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -1217,24 +1216,24 @@ Partial Class MAIN
         Me.RadLiveTileElement31.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         Me.RadLiveTileElement31.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
-        'RecordGroup
+        'DatabaseGroup
         '
-        Me.RecordGroup.AccessibleDescription = "Links"
-        Me.RecordGroup.AccessibleName = "Links"
-        Me.RecordGroup.CellSize = New System.Drawing.Size(140, 120)
-        Me.RecordGroup.EnableImageTransparency = False
-        Me.RecordGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.RecordGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RecordGroup.HorizontalLineWidth = 1
-        Me.RecordGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata
-        Me.RecordGroup.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.RecordGroup.ImageTransparentColor = System.Drawing.Color.White
-        Me.RecordGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Truck_Menu, Me.Card_Menu, Me.Driver_Menu, Me.Customer_Menu, Me.TruckCompany_Menu, Me.Tank_menu, Me.ProductMenu, Me.MeterMenu, Me.BayMenu, Me.RadLiveTileElement21, Me.ShipperMenu, Me.StatusMenu, Me.HistoryMenu})
-        Me.RecordGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
-        Me.RecordGroup.Name = "RecordGroup"
-        Me.RecordGroup.RowsCount = 4
-        Me.RecordGroup.Text = "Record Data"
-        Me.RecordGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.DatabaseGroup.AccessibleDescription = "Links"
+        Me.DatabaseGroup.AccessibleName = "Links"
+        Me.DatabaseGroup.CellSize = New System.Drawing.Size(140, 120)
+        Me.DatabaseGroup.EnableImageTransparency = False
+        Me.DatabaseGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.DatabaseGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DatabaseGroup.HorizontalLineWidth = 1
+        Me.DatabaseGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.database
+        Me.DatabaseGroup.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.DatabaseGroup.ImageTransparentColor = System.Drawing.Color.White
+        Me.DatabaseGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Truck_Menu, Me.Card_Menu, Me.Driver_Menu, Me.linkTile1, Me.linkTile3, Me.Tank_menu, Me.ProductMenu, Me.MeterMenu, Me.BayMenu, Me.RadLiveTileElement21, Me.ShipperMenu, Me.StatusMenu, Me.HistoryMenu})
+        Me.DatabaseGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
+        Me.DatabaseGroup.Name = "DatabaseGroup"
+        Me.DatabaseGroup.RowsCount = 5
+        Me.DatabaseGroup.Text = "Record Data"
+        Me.DatabaseGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'Truck_Menu
         '
@@ -1248,7 +1247,7 @@ Partial Class MAIN
         Me.Truck_Menu.EnableImageTransparency = True
         Me.Truck_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.Truck_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.Truck_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_truck
+        Me.Truck_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.fuel_tanker2
         Me.Truck_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.Truck_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Truck_Menu.Name = "Truck_Menu"
@@ -1292,7 +1291,7 @@ Partial Class MAIN
         Me.Driver_Menu.EnableImageTransparency = True
         Me.Driver_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.Driver_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.Driver_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata_driver
+        Me.Driver_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.card
         Me.Driver_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.Driver_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Driver_Menu.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -1302,57 +1301,57 @@ Partial Class MAIN
         Me.Driver_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Driver_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
-        'Customer_Menu
+        'linkTile1
         '
-        Me.Customer_Menu.AccessibleDescription = "radTileElement1"
-        Me.Customer_Menu.AccessibleName = "radTileElement1"
-        Me.Customer_Menu.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.Customer_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Customer_Menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.Customer_Menu.CellPadding = New System.Windows.Forms.Padding(5)
-        Me.Customer_Menu.ColSpan = 2
-        Me.Customer_Menu.DrawBorder = True
-        Me.Customer_Menu.EnableImageTransparency = True
-        Me.Customer_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
-        Me.Customer_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.Customer_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata_customer
-        Me.Customer_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.Customer_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Customer_Menu.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Customer_Menu.Name = "Customer_Menu"
-        Me.Customer_Menu.Padding = New System.Windows.Forms.Padding(5)
-        Me.Customer_Menu.Row = 1
-        Me.Customer_Menu.Text = "Customer"
-        Me.Customer_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.Customer_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.Customer_Menu.TextWrap = True
+        Me.linkTile1.AccessibleDescription = "radTileElement1"
+        Me.linkTile1.AccessibleName = "radTileElement1"
+        Me.linkTile1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.linkTile1.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.linkTile1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.linkTile1.CellPadding = New System.Windows.Forms.Padding(5)
+        Me.linkTile1.ColSpan = 2
+        Me.linkTile1.DrawBorder = True
+        Me.linkTile1.EnableImageTransparency = True
+        Me.linkTile1.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
+        Me.linkTile1.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.linkTile1.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Contacts_New
+        Me.linkTile1.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.linkTile1.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.linkTile1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.linkTile1.Name = "linkTile1"
+        Me.linkTile1.Padding = New System.Windows.Forms.Padding(5)
+        Me.linkTile1.Row = 1
+        Me.linkTile1.Text = "Customer"
+        Me.linkTile1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.linkTile1.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.linkTile1.TextWrap = True
         '
-        'TruckCompany_Menu
+        'linkTile3
         '
-        Me.TruckCompany_Menu.AccessibleDescription = "radTileElement3"
-        Me.TruckCompany_Menu.AccessibleName = "radTileElement3"
-        Me.TruckCompany_Menu.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.TruckCompany_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.TruckCompany_Menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
-        Me.TruckCompany_Menu.CellPadding = New System.Windows.Forms.Padding(5)
-        Me.TruckCompany_Menu.ColSpan = 2
-        Me.TruckCompany_Menu.Column = 2
-        Me.TruckCompany_Menu.DrawBorder = True
-        Me.TruckCompany_Menu.EnableImageTransparency = True
-        Me.TruckCompany_Menu.FitToSizeMode = Telerik.WinControls.RadFitToSizeMode.FitToParentContent
-        Me.TruckCompany_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
-        Me.TruckCompany_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.TruckCompany_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata_truckcompany
-        Me.TruckCompany_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.TruckCompany_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.TruckCompany_Menu.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TruckCompany_Menu.Name = "TruckCompany_Menu"
-        Me.TruckCompany_Menu.Padding = New System.Windows.Forms.Padding(5)
-        Me.TruckCompany_Menu.Row = 1
-        Me.TruckCompany_Menu.Text = "Truck Company"
-        Me.TruckCompany_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.TruckCompany_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.TruckCompany_Menu.TextWrap = True
+        Me.linkTile3.AccessibleDescription = "radTileElement3"
+        Me.linkTile3.AccessibleName = "radTileElement3"
+        Me.linkTile3.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.linkTile3.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.linkTile3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
+        Me.linkTile3.CellPadding = New System.Windows.Forms.Padding(5)
+        Me.linkTile3.ColSpan = 2
+        Me.linkTile3.Column = 2
+        Me.linkTile3.DrawBorder = True
+        Me.linkTile3.EnableImageTransparency = True
+        Me.linkTile3.FitToSizeMode = Telerik.WinControls.RadFitToSizeMode.FitToParentContent
+        Me.linkTile3.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
+        Me.linkTile3.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.linkTile3.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.TruckYellow
+        Me.linkTile3.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.linkTile3.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.linkTile3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.linkTile3.Name = "linkTile3"
+        Me.linkTile3.Padding = New System.Windows.Forms.Padding(5)
+        Me.linkTile3.Row = 1
+        Me.linkTile3.Text = "Truck Company"
+        Me.linkTile3.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.linkTile3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.linkTile3.TextWrap = True
         '
         'Tank_menu
         '
@@ -1374,12 +1373,11 @@ Partial Class MAIN
         Me.Tank_menu.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Tank_menu.Name = "Tank_menu"
         Me.Tank_menu.Padding = New System.Windows.Forms.Padding(5)
-        Me.Tank_menu.Row = 3
+        Me.Tank_menu.Row = 1
         Me.Tank_menu.Text = "Tank"
         Me.Tank_menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Tank_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         Me.Tank_menu.TextWrap = True
-        Me.Tank_menu.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'ProductMenu
         '
@@ -1390,7 +1388,7 @@ Partial Class MAIN
         Me.ProductMenu.ColSpan = 2
         Me.ProductMenu.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
         Me.ProductMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.ProductMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_tankoverview
+        Me.ProductMenu.Image = CType(resources.GetObject("ProductMenu.Image"), System.Drawing.Image)
         Me.ProductMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.ProductMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ProductMenu.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LiveTileFrameElement1, Me.LiveTileFrameElement2, Me.LiveTileFrameElement3})
@@ -1403,7 +1401,6 @@ Partial Class MAIN
         '
         'LiveTileFrameElement1
         '
-        Me.LiveTileFrameElement1.AccessibleDescription = "LPG"
         Me.LiveTileFrameElement1.Alignment = System.Drawing.ContentAlignment.TopRight
         Me.LiveTileFrameElement1.Name = "LiveTileFrameElement1"
         Me.LiveTileFrameElement1.Text = "HSD"
@@ -1411,14 +1408,12 @@ Partial Class MAIN
         '
         'LiveTileFrameElement2
         '
-        Me.LiveTileFrameElement2.AccessibleDescription = "LPG"
         Me.LiveTileFrameElement2.Alignment = System.Drawing.ContentAlignment.TopRight
         Me.LiveTileFrameElement2.Name = "LiveTileFrameElement2"
         Me.LiveTileFrameElement2.Text = "G 91"
         '
         'LiveTileFrameElement3
         '
-        Me.LiveTileFrameElement3.AccessibleDescription = "LPG"
         Me.LiveTileFrameElement3.Alignment = System.Drawing.ContentAlignment.TopRight
         Me.LiveTileFrameElement3.Name = "LiveTileFrameElement3"
         Me.LiveTileFrameElement3.Text = "G 95"
@@ -1432,11 +1427,11 @@ Partial Class MAIN
         Me.MeterMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.MeterMenu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.MeterMenu.ColSpan = 2
-        Me.MeterMenu.Column = 6
+        Me.MeterMenu.Column = 2
         Me.MeterMenu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.MeterMenu.ForeColor = System.Drawing.Color.White
         Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.MeterMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.VeGa_T_48
+        Me.MeterMenu.Image = CType(resources.GetObject("MeterMenu.Image"), System.Drawing.Image)
         Me.MeterMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.MeterMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.MeterMenu.Name = "MeterMenu"
@@ -1456,7 +1451,7 @@ Partial Class MAIN
         Me.BayMenu.Column = 2
         Me.BayMenu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.BayMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.BayMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_bay
+        Me.BayMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.sdsd_55x35
         Me.BayMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.BayMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BayMenu.Name = "BayMenu"
@@ -1513,9 +1508,9 @@ Partial Class MAIN
         Me.StatusMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.StatusMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.StatusMenu.ColSpan = 2
-        Me.StatusMenu.Column = 2
+        Me.StatusMenu.Column = 4
         Me.StatusMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.StatusMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_status1
+        Me.StatusMenu.Image = CType(resources.GetObject("StatusMenu.Image"), System.Drawing.Image)
         Me.StatusMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.StatusMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.StatusMenu.Name = "StatusMenu"
@@ -1557,13 +1552,13 @@ Partial Class MAIN
         Me.ConfigGroup.CellSize = New System.Drawing.Size(140, 120)
         Me.ConfigGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Bold)
         Me.ConfigGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ConfigGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config
+        Me.ConfigGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Configuration_48_x_48
         Me.ConfigGroup.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.ConfigGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.BannerMenu, Me.QueueMenu, Me.Tank_menu, Me.StatusMenu, Me.BayMenu, Me.ProductMenu, Me.MeterMenu, Me.OverrideMenu, Me.UserMenu})
         Me.ConfigGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.ConfigGroup.Name = "ConfigGroup"
         Me.ConfigGroup.Padding = New System.Windows.Forms.Padding(0)
-        Me.ConfigGroup.RowsCount = 4
+        Me.ConfigGroup.RowsCount = 5
         Me.ConfigGroup.Text = "Configurations"
         Me.ConfigGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -1579,11 +1574,9 @@ Partial Class MAIN
         Me.BannerMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BannerMenu.Name = "BannerMenu"
         Me.BannerMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.BannerMenu.Row = 3
         Me.BannerMenu.Text = "Banner"
         Me.BannerMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.BannerMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.BannerMenu.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'QueueMenu
         '
@@ -1599,11 +1592,10 @@ Partial Class MAIN
         Me.QueueMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.QueueMenu.Name = "QueueMenu"
         Me.QueueMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.QueueMenu.Row = 3
+        Me.QueueMenu.Row = 2
         Me.QueueMenu.Text = "Queue"
         Me.QueueMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.QueueMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.QueueMenu.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'OverrideMenu
         '
@@ -1611,6 +1603,7 @@ Partial Class MAIN
         Me.OverrideMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.OverrideMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.OverrideMenu.ColSpan = 2
+        Me.OverrideMenu.Column = 2
         Me.OverrideMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.OverrideMenu.Image = CType(resources.GetObject("OverrideMenu.Image"), System.Drawing.Image)
         Me.OverrideMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1629,7 +1622,7 @@ Partial Class MAIN
         Me.UserMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.UserMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.UserMenu.ColSpan = 2
-        Me.UserMenu.Column = 2
+        Me.UserMenu.Column = 4
         Me.UserMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.UserMenu.Image = CType(resources.GetObject("UserMenu.Image"), System.Drawing.Image)
         Me.UserMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2480,9 +2473,9 @@ Partial Class MAIN
     Private WithEvents listViewTile As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents schedulerTile As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents chartViewZoomScrollTile As Telerik.WinControls.UI.RadLiveTileElement
-    Private WithEvents Customer_Menu As Telerik.WinControls.UI.RadLiveTileElement
+    Private WithEvents linkTile1 As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents Card_Menu As Telerik.WinControls.UI.RadLiveTileElement
-    Private WithEvents TruckCompany_Menu As Telerik.WinControls.UI.RadLiveTileElement
+    Private WithEvents linkTile3 As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents Tank_menu As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents RadTileElement5 As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents RadTileElement6 As Telerik.WinControls.UI.RadLiveTileElement
@@ -2563,7 +2556,7 @@ Partial Class MAIN
     Friend WithEvents RadLiveTileElement37 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement38 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents MMIGroups As Telerik.WinControls.UI.TileGroupElement
-    Friend WithEvents RecordGroup As Telerik.WinControls.UI.TileGroupElement
+    Friend WithEvents DatabaseGroup As Telerik.WinControls.UI.TileGroupElement
     Friend WithEvents ConfigGroup As Telerik.WinControls.UI.TileGroupElement
     Friend WithEvents RadLiveTileElement42 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement43 As Telerik.WinControls.UI.RadLiveTileElement
