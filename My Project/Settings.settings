@@ -10,5 +10,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=Intasserver\TAS_INFINITE;Initial Catalog=TAS;Persist Security Info=True;User ID=sa;Password=P@$$w0rd</Value>
     </Setting>
+    <Setting Name="LicStatus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Disconnect</Value>
+    </Setting>
+    <Setting Name="LicServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

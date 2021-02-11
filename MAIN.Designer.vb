@@ -53,7 +53,12 @@ Partial Class MAIN
         Me.RadTileElement25 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadTileElement37 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.radPanorama1 = New Telerik.WinControls.UI.RadPanorama()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.M_GROUP = New Telerik.WinControls.UI.RadLabel()
@@ -113,8 +118,6 @@ Partial Class MAIN
         Me.RadLiveTileElement6 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement7 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement8 = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.TAlarmsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.Cardreader = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Status = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadTileElement13 = New Telerik.WinControls.UI.RadLiveTileElement()
@@ -147,13 +150,15 @@ Partial Class MAIN
         Me.RadLiveTileElement42 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement43 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement9 = New Telerik.WinControls.UI.RadLiveTileElement()
-        Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCHTableAdapter()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.object_990ead7b_f0c8_47cc_8fb0_8bfcd20c5f31 = New Telerik.WinControls.RootRadElement()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.object_699bfc40_6560_40f9_937c_0b7ef60968a2 = New Telerik.WinControls.RootRadElement()
         Me.RadLiveTileElement24 = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.TAlarmsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
+        Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCHTableAdapter()
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.radPanorama1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -612,6 +617,7 @@ Partial Class MAIN
         Me.radPanorama1.AutoScroll = True
         Me.radPanorama1.BackgroundImage = Global.RadControlsWinFormsApp1.My.Resources.Resources.irpc1
         Me.radPanorama1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.radPanorama1.Controls.Add(Me.RichTextBox1)
         Me.radPanorama1.Controls.Add(Me.Panel1)
         Me.radPanorama1.Controls.Add(Me.RadProgressBar1)
         Me.radPanorama1.Controls.Add(Me.PictureBox1)
@@ -649,12 +655,26 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(0).GetChildAt(5), Telerik.WinControls.Primitives.BorderPrimitive).AutoSize = True
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).Alignment = System.Drawing.ContentAlignment.TopLeft
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).RightToLeft = False
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(820.5381!, 0!)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(-1525.0!, 0!)
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(11, 848)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(574, 67)
+        Me.RichTextBox1.TabIndex = 199
+        Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.Visible = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.RadLabel1)
         Me.Panel1.Controls.Add(Me.RadPanel1)
         Me.Panel1.Controls.Add(Me.BLogin)
@@ -666,6 +686,38 @@ Partial Class MAIN
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1912, 86)
         Me.Panel1.TabIndex = 198
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(445, 61)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(164, 20)
+        Me.TextBox2.TabIndex = 205
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(283, 41)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 204
+        Me.Button2.Text = "Connect"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(364, 41)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 203
+        Me.Button1.Text = "Send"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(283, 9)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(164, 20)
+        Me.TextBox1.TabIndex = 202
         '
         'RadLabel1
         '
@@ -792,11 +844,10 @@ Partial Class MAIN
         '
         Me.RadProgressBar1.BackColor = System.Drawing.Color.LightBlue
         Me.RadProgressBar1.Controls.Add(Me.Eventext)
-        Me.RadProgressBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 959)
+        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 921)
         Me.RadProgressBar1.Name = "RadProgressBar1"
         Me.RadProgressBar1.SeparatorColor1 = System.Drawing.Color.Black
-        Me.RadProgressBar1.Size = New System.Drawing.Size(1912, 32)
+        Me.RadProgressBar1.Size = New System.Drawing.Size(1912, 30)
         Me.RadProgressBar1.TabIndex = 197
         Me.RadProgressBar1.ThemeName = "Office2010Blue"
         '
@@ -1265,7 +1316,6 @@ Partial Class MAIN
         Me.Card_Menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Card_Menu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.Card_Menu.ColSpan = 2
-        Me.Card_Menu.Column = 4
         Me.Card_Menu.DrawBorder = True
         Me.Card_Menu.EnableImageTransparency = True
         Me.Card_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
@@ -1276,6 +1326,7 @@ Partial Class MAIN
         Me.Card_Menu.ImageTransparentColor = System.Drawing.Color.White
         Me.Card_Menu.Name = "Card_Menu"
         Me.Card_Menu.Padding = New System.Windows.Forms.Padding(5)
+        Me.Card_Menu.Row = 3
         Me.Card_Menu.Text = "Card"
         Me.Card_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Card_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1289,6 +1340,7 @@ Partial Class MAIN
         Me.Driver_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Driver_Menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.Driver_Menu.ColSpan = 2
+        Me.Driver_Menu.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.Driver_Menu.EnableImageTransparency = True
         Me.Driver_Menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.Driver_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
@@ -1301,6 +1353,8 @@ Partial Class MAIN
         Me.Driver_Menu.Text = "Driver"
         Me.Driver_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Driver_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.Driver_Menu.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.Driver_Menu.UseCompatibleTextRendering = False
         '
         'Customer_Menu
         '
@@ -1363,7 +1417,7 @@ Partial Class MAIN
         Me.Tank_menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.Tank_menu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.Tank_menu.ColSpan = 2
-        Me.Tank_menu.Column = 4
+        Me.Tank_menu.Column = 2
         Me.Tank_menu.DrawBorder = True
         Me.Tank_menu.EnableImageTransparency = True
         Me.Tank_menu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
@@ -1396,7 +1450,6 @@ Partial Class MAIN
         Me.ProductMenu.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LiveTileFrameElement1, Me.LiveTileFrameElement2, Me.LiveTileFrameElement3})
         Me.ProductMenu.Name = "ProductMenu"
         Me.ProductMenu.Padding = New System.Windows.Forms.Padding(5, 5, 5, 8)
-        Me.ProductMenu.Row = 1
         Me.ProductMenu.Text = "Product"
         Me.ProductMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.ProductMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1432,7 +1485,6 @@ Partial Class MAIN
         Me.MeterMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.MeterMenu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.MeterMenu.ColSpan = 2
-        Me.MeterMenu.Column = 6
         Me.MeterMenu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.MeterMenu.ForeColor = System.Drawing.Color.White
         Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
@@ -1441,6 +1493,7 @@ Partial Class MAIN
         Me.MeterMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.MeterMenu.Name = "MeterMenu"
         Me.MeterMenu.Padding = New System.Windows.Forms.Padding(5)
+        Me.MeterMenu.Row = 1
         Me.MeterMenu.Text = "BatchMeter"
         Me.MeterMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.MeterMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1492,7 +1545,7 @@ Partial Class MAIN
         Me.ShipperMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.ShipperMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.ShipperMenu.ColSpan = 2
-        Me.ShipperMenu.Column = 4
+        Me.ShipperMenu.Column = 2
         Me.ShipperMenu.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
         Me.ShipperMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ShipperMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Company2
@@ -1500,7 +1553,7 @@ Partial Class MAIN
         Me.ShipperMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ShipperMenu.Name = "ShipperMenu"
         Me.ShipperMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.ShipperMenu.Row = 1
+        Me.ShipperMenu.Row = 3
         Me.ShipperMenu.Text = "ผู้ขนส่ง"
         Me.ShipperMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.ShipperMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1563,7 +1616,7 @@ Partial Class MAIN
         Me.ConfigGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.ConfigGroup.Name = "ConfigGroup"
         Me.ConfigGroup.Padding = New System.Windows.Forms.Padding(0)
-        Me.ConfigGroup.RowsCount = 4
+        Me.ConfigGroup.RowsCount = 5
         Me.ConfigGroup.Text = "Configurations"
         Me.ConfigGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -1618,10 +1671,11 @@ Partial Class MAIN
         Me.OverrideMenu.Margin = New System.Windows.Forms.Padding(0)
         Me.OverrideMenu.Name = "OverrideMenu"
         Me.OverrideMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.OverrideMenu.Row = 2
+        Me.OverrideMenu.Row = 4
         Me.OverrideMenu.Text = "Override"
         Me.OverrideMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.OverrideMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.OverrideMenu.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'UserMenu
         '
@@ -1629,9 +1683,8 @@ Partial Class MAIN
         Me.UserMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.UserMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.UserMenu.ColSpan = 2
-        Me.UserMenu.Column = 2
         Me.UserMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.UserMenu.Image = CType(resources.GetObject("UserMenu.Image"), System.Drawing.Image)
+        Me.UserMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_user
         Me.UserMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.UserMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.UserMenu.Name = "UserMenu"
@@ -1655,10 +1708,11 @@ Partial Class MAIN
         Me.Unloading.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RadTileElement40, Me.RadLiveTileElement6, Me.RadLiveTileElement7, Me.RadLiveTileElement8})
         Me.Unloading.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.Unloading.Name = "Unloading"
-        Me.Unloading.RowsCount = 3
+        Me.Unloading.RowsCount = 6
         Me.Unloading.Text = "Unloading System"
         Me.Unloading.TextAlignment = System.Drawing.ContentAlignment.BottomLeft
         Me.Unloading.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Unloading.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'RadTileElement40
         '
@@ -1744,17 +1798,6 @@ Partial Class MAIN
         Me.RadLiveTileElement8.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLiveTileElement8.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         Me.RadLiveTileElement8.Visibility = Telerik.WinControls.ElementVisibility.Hidden
-        '
-        'TAlarmsBindingSource
-        '
-        Me.TAlarmsBindingSource.DataMember = "T_ALARMS_BATCH"
-        Me.TAlarmsBindingSource.DataSource = Me.Dataset_table
-        Me.TAlarmsBindingSource.Sort = "id desc"
-        '
-        'Dataset_table
-        '
-        Me.Dataset_table.DataSetName = "Dataset_table"
-        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Cardreader
         '
@@ -2372,10 +2415,6 @@ Partial Class MAIN
         Me.RadLiveTileElement9.Name = "RadLiveTileElement9"
         Me.RadLiveTileElement9.Text = "RadLiveTileElement9"
         '
-        'T_ALARMS_BATCHTableAdapter
-        '
-        Me.T_ALARMS_BATCHTableAdapter.ClearBeforeFill = True
-        '
         'Timer1
         '
         Me.Timer1.Interval = 1
@@ -2414,6 +2453,21 @@ Partial Class MAIN
         Me.RadLiveTileElement24.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         Me.RadLiveTileElement24.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.RadLiveTileElement24.UseCompatibleTextRendering = False
+        '
+        'TAlarmsBindingSource
+        '
+        Me.TAlarmsBindingSource.DataMember = "T_ALARMS_BATCH"
+        Me.TAlarmsBindingSource.DataSource = Me.Dataset_table
+        Me.TAlarmsBindingSource.Sort = "id desc"
+        '
+        'Dataset_table
+        '
+        Me.Dataset_table.DataSetName = "Dataset_table"
+        Me.Dataset_table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'T_ALARMS_BATCHTableAdapter
+        '
+        Me.T_ALARMS_BATCHTableAdapter.ClearBeforeFill = True
         '
         'MAIN
         '
@@ -2594,6 +2648,11 @@ Partial Class MAIN
     Friend WithEvents RadLiveTileElement24 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents OverrideMenu As Telerik.WinControls.UI.RadTileElement
     Friend WithEvents UserMenu As Telerik.WinControls.UI.RadTileElement
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
 'End Namespace
 

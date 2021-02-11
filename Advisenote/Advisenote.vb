@@ -3903,6 +3903,7 @@ Public Class Advisenote
         Seal_Total.Text = Seal_NumberForCount.Count
     End Sub
 
+#Region "Select_Bay"
     Private Sub IslandBay1_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay1.SelectedIndexChanged
         Try
             Dim sqlcmd As String = "select * from t_batchmeter where batch_status=10 order by batch_name"
@@ -4006,6 +4007,8 @@ Public Class Advisenote
 
         End Try
     End Sub
+
+#End Region
 
     Private Sub Cbn2_SelectedValueChanged(sender As Object, e As EventArgs)
         If Cbn2.Text = "" Then Exit Sub
@@ -4394,5 +4397,6 @@ Public Class Advisenote
             End Try
         End If
     End Sub
+
 End Class
 

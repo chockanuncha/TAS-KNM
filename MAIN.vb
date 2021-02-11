@@ -3,7 +3,9 @@ Imports Telerik.WinControls.UI
 Imports System.Threading
 Imports System.ComponentModel
 Imports System.Net.Sockets
-
+Imports BackendTalk.Main
+Imports System.Windows.Forms
+'Imports System.Net.Dns
 Partial Public Class MAIN
     Private cls As New Class_SQLSERVERDB
     Public U_NAME As String = "None"
@@ -24,14 +26,68 @@ Partial Public Class MAIN
     Dim CallBlackShipment As New MethodInvoker(AddressOf Me.DataBlackShipment)
     Dim Memory As MemoryManagement.Manage
     Dim Clearram As Integer = 0
+    Dim strHostName As String = ""
+    Dim strIPAddress As String = ""
 
     'gobal variable
+    Dim LicActive, StrTest As String
     Dim receiveBytes As [Byte]()
     Dim receivePortNum As Integer
     Public ServerReceived As UdpClient
     Public receivedRemoteEndpoint As New System.Net.IPEndPoint(System.Net.IPAddress.Any, receivePortNum)
+    Dim WithEvents Backend_talk As New BackendTalk.Main
+    Dim Count_ConnectLicense As Integer = 0
+    Dim formenable As Boolean = True
 
-    '#Region "Licene Client Send"
+#Region "TAS license"
+    Function GetIPAddress() As String
+        Dim strHostName As String
+        Dim strIPAddress As String
+        strHostName = System.Net.Dns.GetHostName()
+        strIPAddress = System.Net.Dns.GetHostByName(strHostName).AddressList(0).ToString()
+        Return strIPAddress
+    End Function
+    Private Sub Initiallicense()
+        Dim MessCon As String = Backend_talk.Connect(My.Settings.LicStatus, My.Settings.LicServer)
+        TextBox1.Text = MessCon.ToString
+    End Sub
+
+    Private Sub BackendSend()
+        Dim MessSend As String = Backend_talk.send(Process.GetCurrentProcess().Id.ToString + "//4//")
+        If MessSend Is Nothing Then
+            Count_ConnectLicense = 0
+            TextBox2.Text = "OK"
+            Me.radPanorama1.Enabled = True
+            formenable = True
+            EnableControls()
+        Else
+            Count_ConnectLicense = Count_ConnectLicense + 1
+            TextBox2.Text = MessSend.ToString
+            If Count_ConnectLicense = 3 Then
+                formenable = False
+                Me.radPanorama1.Enabled = False
+                EnableControls()
+                Count_ConnectLicense = 0
+                Exit Sub
+            End If
+        End If
+    End Sub
+    Public Sub CallBackEvent(ByVal Str As String) Handles Backend_talk.RtRead
+        Dim ResulBackend() As String = Strings.Split(Str, "//")
+        If ResulBackend(0) = Process.GetCurrentProcess.Id.ToString Then
+            LicActive = ResulBackend(3)
+        End If
+        StrTest = Str
+        'Me.Invoke(New EventHandler(AddressOf BackendRecMessage))
+    End Sub
+    Sub EnableControls()
+        Dim lista As New FormCollection
+        lista = Application.OpenForms
+        For Each a As Form In lista
+            a.Enabled = formenable
+        Next
+    End Sub
+
     '            GLOIP = IPAddress.Parse("127.0.0.1")
     '            GLOINTPORT = "44444"
     '            udpClient.Connect(GLOIP, GLOINTPORT)
@@ -48,10 +104,12 @@ Partial Public Class MAIN
 
     '    bytCommand = Encoding.ASCII.GetBytes(txtMessage.Text)
     '            pRet = udpClient.Send(bytCommand, bytCommand.Length)
-    'Public Function Connect(status As String, ip_adds As String) As String
-    'Public Function send(ByVal str As String) As String
 
-    '#End Region
+
+    'Connect(status As String, ip_adds As String) as
+
+#End Region
+
 
 
     Private Sub FReShipment()
@@ -73,22 +131,42 @@ Partial Public Class MAIN
                 End Using
             Catch ex As Exception
             End Try
-
-            Try
-                Memory = New MemoryManagement.Manage
-                Memory.FlushMemory()
-            Catch ex As Exception
-            End Try
+            Clearram = Clearram + 1
+            If Clearram >= 10 Then
+                Try
+                    Memory = New MemoryManagement.Manage
+                    Memory.FlushMemory()
+                    Clearram = 0
+                Catch ex As Exception
+                End Try
+            End If
 
             Try
                 Me.BeginInvoke(CallBlackShipment)
-                Thread.Sleep(10000)
+                Thread.Sleep(2000)
             Catch ex As Exception
             End Try
         End While
     End Sub
     Private Sub DataBlackShipment()
         Eventext.Text = EventString.ToString
+        Try
+            RichTextBox1.Text = RichTextBox1.Text & "," & StrTest.ToString & vbCrLf
+        Catch ex As Exception
+        End Try
+        If TextBox2.Text <> "OK" Then
+            'Me.radPanorama1.Enabled = False
+            Eventext.Text = TextBox2.Text
+            Initiallicense()
+            BackendSend()
+            'ElseIf TextBox2.Text = "OK" And Me.radPanorama1.Enabled = False Then
+            '   Me.radPanorama1.Enabled = True
+        Else
+            BackendSend()
+        End If
+
+
+
     End Sub
     Private Sub titleBar_MaximizeRestore(ByVal sender As Object, ByVal args As EventArgs)
         If Me.WindowState <> FormWindowState.Maximized Then
@@ -107,15 +185,15 @@ Partial Public Class MAIN
         headerLayout.NotifyParentOnMouseInput = True
         headerLayout.ShouldHandleMouseInput = False
         headerLayout.StretchHorizontally = False
-        Me.backButton = New RadButtonElement() With { _
-         .StretchHorizontally = False _
+        Me.backButton = New RadButtonElement() With {
+         .StretchHorizontally = False
         }
         Me.backButton.Margin = New Padding(40, 0, 28, 0)
         'Me.backButton_Click.Click += New EventHandler(backButton_Click)
         Me.backButton.Visibility = ElementVisibility.Hidden
         headerLayout.Children.Add(Me.backButton)
         Me.headerLabel = New LightVisualElement()
-        Me.headerLabel.Text = "TLAS PREMIER TANK"
+        Me.headerLabel.Text = "TAS KNM LPG Terminal"
         Me.headerLabel.Font = New Font("Segoe UI Light", 42, GraphicsUnit.Point)
         Me.headerLabel.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias
         Me.headerLabel.ForeColor = Color.White
@@ -206,10 +284,11 @@ Partial Public Class MAIN
         RadButton1.Enabled = False
         Me.radPanorama1.Enabled = True
         Unloading.Visibility = ElementVisibility.Collapsed
-
+        Count_ConnectLicense = 0
+        Initiallicense()
         Try
-            Memory = New MemoryManagement.Manage
-            Memory.FlushMemory()
+            'Memory = New MemoryManagement.Manage
+            'Memory.FlushMemory()
             Clearram = 0
         Catch ex As Exception
         End Try
@@ -596,6 +675,8 @@ Partial Public Class MAIN
         End If
     End Sub
 
+
+
     Private Sub Truck_Menu_Click(sender As Object, e As EventArgs) Handles Truck_Menu.Click
         Me.AddOwnedForm(Truck)
         If Truck.Chk_View() = False Then
@@ -603,6 +684,15 @@ Partial Public Class MAIN
         Else
             Truck.Show()
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        EnableControls()
+        'Initiallicense()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        BackendSend()
     End Sub
 End Class
 

@@ -1520,25 +1520,65 @@ Partial Public Class DataSet_View
     Partial Public Class V_LOADINGNOTEDataTable
         Inherits Global.System.Data.TypedTableBase(Of V_LOADINGNOTERow)
         
+        Private columnLOAD_DELIVERY As Global.System.Data.DataColumn
+        
+        Private columnDRIVER_PINCODE As Global.System.Data.DataColumn
+        
+        Private columnLOAD_DATE As Global.System.Data.DataColumn
+        
+        Private columnLOAD_DAY As Global.System.Data.DataColumn
+        
+        Private columnLOAD_MONTH As Global.System.Data.DataColumn
+        
+        Private columnLOAD_YEAR As Global.System.Data.DataColumn
+        
+        Private columnSTATUS_NAME As Global.System.Data.DataColumn
+        
+        Private columnLOAD_DRIVER As Global.System.Data.DataColumn
+        
+        Private columnLOAD_TRUCKCOMPANY As Global.System.Data.DataColumn
+        
+        Private columnLOAD_CUSTOMER As Global.System.Data.DataColumn
+        
+        Private columnLOAD_VEHICLE3 As Global.System.Data.DataColumn
+        
+        Private columnLOAD_SEAL As Global.System.Data.DataColumn
+        
+        Private columnLC_SEAL As Global.System.Data.DataColumn
+        
+        Private columnLC_SHIPPER As Global.System.Data.DataColumn
+        
+        Private columnTRANSPORTER As Global.System.Data.DataColumn
+        
+        Private columnLC_TANK As Global.System.Data.DataColumn
+        
+        Private columnLC_API As Global.System.Data.DataColumn
+        
+        Private columnBATCH_NAME As Global.System.Data.DataColumn
+        
+        Private columnLOAD_TANK As Global.System.Data.DataColumn
+        
+        Private columnTANKFARM As Global.System.Data.DataColumn
+        
+        Private columnLC_STARTTIME As Global.System.Data.DataColumn
+        
+        Private columnLC_ENDTIME As Global.System.Data.DataColumn
+        
+        Private columnUPDATE_DATE As Global.System.Data.DataColumn
+        
+        Private columnUPDATE_BY As Global.System.Data.DataColumn
+        
+        Private columnQ_TIME As Global.System.Data.DataColumn
+        
+        Private columnDO_TYPE As Global.System.Data.DataColumn
+        
         Private columnLOAD_ID As Global.System.Data.DataColumn
-        
-        Private columnSAPLOAD_ID As Global.System.Data.DataColumn
-        
-        Private columnSHIPMENTNUMBER As Global.System.Data.DataColumn
         
         Private columnLOAD_CAPACITY As Global.System.Data.DataColumn
         
         Private columnLOAD_PRESET As Global.System.Data.DataColumn
         
-        Private columnLOAD_DELIVERY As Global.System.Data.DataColumn
-        
-        Private columnLOAD_CARDID As Global.System.Data.DataColumn
-        
         Private columnLOAD_CARD As Global.System.Data.DataColumn
-        
-        Private columnVOL86F As Global.System.Data.DataColumn
-        
-        Private columnVOL86F2 As Global.System.Data.DataColumn
         
         Private columnLC_COMPARTMENT As Global.System.Data.DataColumn
         
@@ -1556,28 +1596,6 @@ Partial Public Class DataSet_View
         
         Private columnLC_BLEND As Global.System.Data.DataColumn
         
-        Private columnREFERENCE As Global.System.Data.DataColumn
-        
-        Private columnCARD_TYPE As Global.System.Data.DataColumn
-        
-        Private columnCARD_SERIAL As Global.System.Data.DataColumn
-        
-        Private columnDRIVER_CARD_SERIAL As Global.System.Data.DataColumn
-        
-        Private columnDRIVER_PINCODE As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_CARD_SERIAL As Global.System.Data.DataColumn
-        
-        Private columnLOAD_DATE As Global.System.Data.DataColumn
-        
-        Private columnLOAD_DAY As Global.System.Data.DataColumn
-        
-        Private columnLOAD_MONTH As Global.System.Data.DataColumn
-        
-        Private columnLOAD_YEAR As Global.System.Data.DataColumn
-        
-        Private columnCARD_NUMBER As Global.System.Data.DataColumn
-        
         Private columnLOAD_DID As Global.System.Data.DataColumn
         
         Private columnLC_METER As Global.System.Data.DataColumn
@@ -1586,197 +1604,129 @@ Partial Public Class DataSet_View
         
         Private columnLOAD_Q As Global.System.Data.DataColumn
         
-        Private columnSTATUS_NAME As Global.System.Data.DataColumn
+        Private columnDriver_ID As Global.System.Data.DataColumn
         
-        Private columnDRIVER_ID As Global.System.Data.DataColumn
+        Private columnDriver_Name As Global.System.Data.DataColumn
         
-        Private columnDRIVER_NAME As Global.System.Data.DataColumn
+        Private columnLoad_Vehicle As Global.System.Data.DataColumn
         
-        Private columnLOAD_DRIVER As Global.System.Data.DataColumn
-        
-        Private columnSHIPEMPLOYEE_NAME As Global.System.Data.DataColumn
-        
-        Private columnLOAD_SHIPDRIVER As Global.System.Data.DataColumn
-        
-        Private columnLOAD_TRUCKCOMPANY As Global.System.Data.DataColumn
-        
-        Private columnLOAD_CUSTOMER As Global.System.Data.DataColumn
-        
-        Private columnLOAD_VEHICLE3 As Global.System.Data.DataColumn
-        
-        Private columnLOAD_VEHICLE As Global.System.Data.DataColumn
-        
-        Private columnLOAD_VEHICLE2 As Global.System.Data.DataColumn
-        
-        Private columnTRUCK_LOADTYPE As Global.System.Data.DataColumn
+        Private columnTruck_Loadtype As Global.System.Data.DataColumn
         
         Private columnLC_PRO As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_NAME As Global.System.Data.DataColumn
+        Private columnCustomer_name As Global.System.Data.DataColumn
         
         Private columnLOAD_WEIGHT_IN As Global.System.Data.DataColumn
         
         Private columnLOAD_WEIGHT_OUT As Global.System.Data.DataColumn
         
-        Private columnLOAD_SEAL As Global.System.Data.DataColumn
-        
-        Private columnLC_SEAL As Global.System.Data.DataColumn
-        
         Private columnLOAD_SEALCOUNT As Global.System.Data.DataColumn
         
-        Private columnLC_SHIPPER_TEMP As Global.System.Data.DataColumn
+        Private columnLC_SHIPPER_Temp As Global.System.Data.DataColumn
         
-        Private columnSP_DATE As Global.System.Data.DataColumn
+        Private columnSP_Date As Global.System.Data.DataColumn
         
         Private columnLOAD_SHIPPER As Global.System.Data.DataColumn
         
-        Private columnLC_SHIPPER As Global.System.Data.DataColumn
+        Private columnSP_Code As Global.System.Data.DataColumn
         
-        Private columnSP_CODE As Global.System.Data.DataColumn
+        Private columnSP_NameTH As Global.System.Data.DataColumn
         
-        Private columnSP_NAMETH As Global.System.Data.DataColumn
+        Private columnSP_AddressTH As Global.System.Data.DataColumn
         
-        Private columnSP_ADDRESSTH As Global.System.Data.DataColumn
+        Private columnSP_AmphurTH As Global.System.Data.DataColumn
         
-        Private columnSP_AMPHURTH As Global.System.Data.DataColumn
+        Private columnSP_ProvinceTH As Global.System.Data.DataColumn
         
-        Private columnSP_PROVINCETH As Global.System.Data.DataColumn
+        Private columnSP_NameEN As Global.System.Data.DataColumn
         
-        Private columnSP_NAMEEN As Global.System.Data.DataColumn
+        Private columnSP_AddressEN As Global.System.Data.DataColumn
         
-        Private columnSP_ADDRESSEN As Global.System.Data.DataColumn
+        Private columnSP_AmphurEN As Global.System.Data.DataColumn
         
-        Private columnSP_AMPHUREN As Global.System.Data.DataColumn
+        Private columnSP_ProvinceEN As Global.System.Data.DataColumn
         
-        Private columnSP_PROVINCEEN As Global.System.Data.DataColumn
+        Private columnSP_Contact As Global.System.Data.DataColumn
         
-        Private columnSP_CONTACT As Global.System.Data.DataColumn
+        Private columnSP_Tel As Global.System.Data.DataColumn
         
-        Private columnSP_TEL As Global.System.Data.DataColumn
+        Private columnSP_Fax As Global.System.Data.DataColumn
         
-        Private columnSP_FAX As Global.System.Data.DataColumn
+        Private columnSP_Type As Global.System.Data.DataColumn
         
-        Private columnSP_TYPE As Global.System.Data.DataColumn
+        Private columnSP_Email As Global.System.Data.DataColumn
         
-        Private columnSP_EMAIL As Global.System.Data.DataColumn
+        Private columnCustomer_address As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_ADDRESS As Global.System.Data.DataColumn
+        Private columnCustomer_amphur As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_AMPHUR As Global.System.Data.DataColumn
+        Private columnCustomer_province As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_PROVINCE As Global.System.Data.DataColumn
-        
-        Private columnPRODUCT_ADDITIVE_RATIO As Global.System.Data.DataColumn
+        Private columnProduct_additive_Ratio As Global.System.Data.DataColumn
         
         Private columnLC_CUSTOMER As Global.System.Data.DataColumn
-        
-        Private columnTRANSPORTER As Global.System.Data.DataColumn
-        
-        Private columnLC_TANK As Global.System.Data.DataColumn
-        
-        Private columnLC_TANK2 As Global.System.Data.DataColumn
-        
-        Private columnLC_API As Global.System.Data.DataColumn
-        
-        Private columnLC_API2 As Global.System.Data.DataColumn
-        
-        Private columnLC_TEMP_MANUAL As Global.System.Data.DataColumn
         
         Private columnLC_TEMP As Global.System.Data.DataColumn
         
         Private columnSP_ZIPCODE As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_TEL As Global.System.Data.DataColumn
+        Private columnCustomer_tel As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_ZIPCODE As Global.System.Data.DataColumn
+        Private columnCustomer_Zipcode As Global.System.Data.DataColumn
         
-        Private columnCUSTOMER_FAX As Global.System.Data.DataColumn
+        Private columnCustomer_fax As Global.System.Data.DataColumn
         
-        Private columnPRODUCT_CODE As Global.System.Data.DataColumn
+        Private columnProduct_code As Global.System.Data.DataColumn
         
-        Private columnREF_TOPCHECK As Global.System.Data.DataColumn
+        Private columnRef_Topcheck As Global.System.Data.DataColumn
         
-        Private columnBATCH_NAME As Global.System.Data.DataColumn
+        Private columnLOAD_DOfull As Global.System.Data.DataColumn
         
-        Private columnLOAD_DOFULL As Global.System.Data.DataColumn
-        
-        Private columnPRODUCT_NAME As Global.System.Data.DataColumn
+        Private columnProduct_name As Global.System.Data.DataColumn
         
         Private columnLOAD_PRINT As Global.System.Data.DataColumn
         
-        Private columnLC_ADDITIVE As Global.System.Data.DataColumn
+        Private columnLC_Additive As Global.System.Data.DataColumn
         
-        Private columnADDNOTEDATE As Global.System.Data.DataColumn
+        Private columnAddnoteDate As Global.System.Data.DataColumn
         
-        Private columnLOADDATE As Global.System.Data.DataColumn
+        Private columnRaw_Weight_in As Global.System.Data.DataColumn
         
-        Private columnSTOCK_STATUS As Global.System.Data.DataColumn
+        Private columnUpdate_Weight_in As Global.System.Data.DataColumn
         
-        Private columnRAW_WEIGHT_IN As Global.System.Data.DataColumn
+        Private columnRaw_Weight_Out As Global.System.Data.DataColumn
         
-        Private columnUPDATE_WEIGHT_IN As Global.System.Data.DataColumn
+        Private columnUpdate_Weight_Out As Global.System.Data.DataColumn
         
-        Private columnRAW_WEIGHT_OUT As Global.System.Data.DataColumn
+        Private columnWeightIN As Global.System.Data.DataColumn
         
-        Private columnUPDATE_WEIGHT_OUT As Global.System.Data.DataColumn
+        Private columnWeightOut As Global.System.Data.DataColumn
         
-        Private columnWEIGHTIN As Global.System.Data.DataColumn
+        Private columnContainer As Global.System.Data.DataColumn
         
-        Private columnWEIGHTOUT As Global.System.Data.DataColumn
+        Private columnRemark As Global.System.Data.DataColumn
         
-        Private columnGI_DATE As Global.System.Data.DataColumn
+        Private columnPacking_weight As Global.System.Data.DataColumn
         
-        Private columnCONTAINER As Global.System.Data.DataColumn
+        Private columnPacking_Qty As Global.System.Data.DataColumn
         
-        Private columnCOA As Global.System.Data.DataColumn
-        
-        Private columnREMARK As Global.System.Data.DataColumn
-        
-        Private columnSHIPMENTNO As Global.System.Data.DataColumn
-        
-        Private columnACCESSCODE As Global.System.Data.DataColumn
-        
-        Private columnPACKING_TYPE As Global.System.Data.DataColumn
-        
-        Private columnPACKING_WEIGHT As Global.System.Data.DataColumn
-        
-        Private columnPACKING_QTY As Global.System.Data.DataColumn
-        
-        Private columnP_CODE As Global.System.Data.DataColumn
-        
-        Private columnP_WEIGHT As Global.System.Data.DataColumn
-        
-        Private columnP_CAPASITY As Global.System.Data.DataColumn
-        
-        Private columnWEIGHTTOTAL As Global.System.Data.DataColumn
+        Private columnWeightTotal As Global.System.Data.DataColumn
         
         Private columnLOAD_TEMP As Global.System.Data.DataColumn
         
-        Private columnLOAD_TANK As Global.System.Data.DataColumn
+        Private columnMeterReader As Global.System.Data.DataColumn
         
-        Private columnMETERREADER As Global.System.Data.DataColumn
+        Private columnDensity As Global.System.Data.DataColumn
         
-        Private columnDENSITY As Global.System.Data.DataColumn
+        Private columnWeightCal As Global.System.Data.DataColumn
         
-        Private columnWEIGHTCAL As Global.System.Data.DataColumn
+        Private columnWeightin_time As Global.System.Data.DataColumn
         
-        Private columnWEIGHTIN_TIME As Global.System.Data.DataColumn
+        Private columnWeightOut_time As Global.System.Data.DataColumn
         
-        Private columnWEIGHTOUT_TIME As Global.System.Data.DataColumn
+        Private columndo_no As Global.System.Data.DataColumn
         
-        Private columnTAKENTIME As Global.System.Data.DataColumn
-        
-        Private columnSHIPMENTTYPE As Global.System.Data.DataColumn
-        
-        Private columnDO_NO As Global.System.Data.DataColumn
-        
-        Private columnBATCHLOT As Global.System.Data.DataColumn
-        
-        Private columnTANKFARM As Global.System.Data.DataColumn
-        
-        Private columnLC_STARTTIME As Global.System.Data.DataColumn
-        
-        Private columnLC_ENDTIME As Global.System.Data.DataColumn
+        Private columnBatchlot As Global.System.Data.DataColumn
         
         Private columnLC_BATCHGROSSBASE As Global.System.Data.DataColumn
         
@@ -1810,35 +1760,17 @@ Partial Public Class DataSet_View
         
         Private columnLC_BATCHNETBLEND_30C1 As Global.System.Data.DataColumn
         
-        Private columnLOADDIFF As Global.System.Data.DataColumn
+        Private columnCheckin_time As Global.System.Data.DataColumn
         
-        Private columnTANK_API_PRO1 As Global.System.Data.DataColumn
+        Private columnCheckout_Time As Global.System.Data.DataColumn
         
-        Private columnTANK_API_PRO2 As Global.System.Data.DataColumn
+        Private columnload_Vehicle_ID As Global.System.Data.DataColumn
         
-        Private columnUPDATE_DATE As Global.System.Data.DataColumn
+        Private columnproduct_color As Global.System.Data.DataColumn
         
-        Private columnUPDATE_BY As Global.System.Data.DataColumn
+        Private columnproduct_Remark As Global.System.Data.DataColumn
         
-        Private columnCHECKIN_TIME As Global.System.Data.DataColumn
-        
-        Private columnQ_TIME As Global.System.Data.DataColumn
-        
-        Private columnCHECKOUT_TIME As Global.System.Data.DataColumn
-        
-        Private columnLOAD_VEHICLE_ID As Global.System.Data.DataColumn
-        
-        Private columnDO_TYPE As Global.System.Data.DataColumn
-        
-        Private columnPRODUCT_COLOR As Global.System.Data.DataColumn
-        
-        Private columnPRODUCT_REMARK As Global.System.Data.DataColumn
-        
-        Private columnADVISENOTE_TYPE As Global.System.Data.DataColumn
-        
-        Private columnADDITIVE As Global.System.Data.DataColumn
-        
-        Private columnDRY As Global.System.Data.DataColumn
+        Private columnadvisenote_type As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -1877,25 +1809,217 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_DELIVERYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_DELIVERY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DRIVER_PINCODEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDRIVER_PINCODE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_DATEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_DATE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_DAYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_DAY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_MONTHColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_MONTH
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_YEARColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_YEAR
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property STATUS_NAMEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSTATUS_NAME
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_DRIVERColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_DRIVER
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_TRUCKCOMPANYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_TRUCKCOMPANY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_CUSTOMERColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_CUSTOMER
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_VEHICLE3Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_VEHICLE3
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_SEALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_SEAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LC_SEALColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLC_SEAL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LC_SHIPPERColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLC_SHIPPER
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TRANSPORTERColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTRANSPORTER
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LC_TANKColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLC_TANK
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LC_APIColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLC_API
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property BATCH_NAMEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBATCH_NAME
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LOAD_TANKColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLOAD_TANK
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TANKFARMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTANKFARM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LC_STARTTIMEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLC_STARTTIME
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LC_ENDTIMEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLC_ENDTIME
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property UPDATE_DATEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUPDATE_DATE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property UPDATE_BYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUPDATE_BY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Q_TIMEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnQ_TIME
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DO_TYPEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDO_TYPE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property LOAD_IDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnLOAD_ID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SAPLOAD_IDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSAPLOAD_ID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SHIPMENTNUMBERColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSHIPMENTNUMBER
             End Get
         End Property
         
@@ -1917,41 +2041,9 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_DELIVERYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_DELIVERY
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_CARDIDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_CARDID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property LOAD_CARDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnLOAD_CARD
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property VOL86FColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnVOL86F
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property VOL86F2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnVOL86F2
             End Get
         End Property
         
@@ -2021,94 +2113,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property REFERENCEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnREFERENCE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CARD_TYPEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCARD_TYPE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CARD_SERIALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCARD_SERIAL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DRIVER_CARD_SERIALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnDRIVER_CARD_SERIAL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DRIVER_PINCODEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnDRIVER_PINCODE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_CARD_SERIALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_CARD_SERIAL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_DATEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_DATE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_DAYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_DAY
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_MONTHColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_MONTH
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_YEARColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_YEAR
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CARD_NUMBERColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCARD_NUMBER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property LOAD_DIDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnLOAD_DID
@@ -2141,97 +2145,33 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property STATUS_NAMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Driver_IDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSTATUS_NAME
+                Return Me.columnDriver_ID
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DRIVER_IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Driver_NameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDRIVER_ID
+                Return Me.columnDriver_Name
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DRIVER_NAMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Load_VehicleColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDRIVER_NAME
+                Return Me.columnLoad_Vehicle
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_DRIVERColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Truck_LoadtypeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLOAD_DRIVER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SHIPEMPLOYEE_NAMEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSHIPEMPLOYEE_NAME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_SHIPDRIVERColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_SHIPDRIVER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_TRUCKCOMPANYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_TRUCKCOMPANY
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_CUSTOMERColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_CUSTOMER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_VEHICLE3Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_VEHICLE3
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_VEHICLEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_VEHICLE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_VEHICLE2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_VEHICLE2
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRUCK_LOADTYPEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRUCK_LOADTYPE
+                Return Me.columnTruck_Loadtype
             End Get
         End Property
         
@@ -2245,9 +2185,9 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_NAMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_NAME
+                Return Me.columnCustomer_name
             End Get
         End Property
         
@@ -2269,22 +2209,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_SEALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_SEAL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_SEALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_SEAL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property LOAD_SEALCOUNTColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnLOAD_SEALCOUNT
@@ -2293,17 +2217,17 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_SHIPPER_TEMPColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property LC_SHIPPER_TempColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLC_SHIPPER_TEMP
+                Return Me.columnLC_SHIPPER_Temp
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_DATEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_DateColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_DATE
+                Return Me.columnSP_Date
             End Get
         End Property
         
@@ -2317,153 +2241,145 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_SHIPPERColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_CodeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLC_SHIPPER
+                Return Me.columnSP_Code
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_CODEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_NameTHColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_CODE
+                Return Me.columnSP_NameTH
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_NAMETHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_AddressTHColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_NAMETH
+                Return Me.columnSP_AddressTH
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_ADDRESSTHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_AmphurTHColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_ADDRESSTH
+                Return Me.columnSP_AmphurTH
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_AMPHURTHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_ProvinceTHColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_AMPHURTH
+                Return Me.columnSP_ProvinceTH
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_PROVINCETHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_NameENColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_PROVINCETH
+                Return Me.columnSP_NameEN
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_NAMEENColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_AddressENColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_NAMEEN
+                Return Me.columnSP_AddressEN
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_ADDRESSENColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_AmphurENColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_ADDRESSEN
+                Return Me.columnSP_AmphurEN
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_AMPHURENColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_ProvinceENColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_AMPHUREN
+                Return Me.columnSP_ProvinceEN
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_PROVINCEENColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_ContactColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_PROVINCEEN
+                Return Me.columnSP_Contact
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_CONTACTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_TelColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_CONTACT
+                Return Me.columnSP_Tel
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_TELColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_FaxColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_TEL
+                Return Me.columnSP_Fax
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_FAXColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_TypeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_FAX
+                Return Me.columnSP_Type
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_TYPEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SP_EmailColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_TYPE
+                Return Me.columnSP_Email
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SP_EMAILColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_addressColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSP_EMAIL
+                Return Me.columnCustomer_address
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_ADDRESSColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_amphurColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_ADDRESS
+                Return Me.columnCustomer_amphur
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_AMPHURColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_provinceColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_AMPHUR
+                Return Me.columnCustomer_province
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_PROVINCEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Product_additive_RatioColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_PROVINCE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PRODUCT_ADDITIVE_RATIOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPRODUCT_ADDITIVE_RATIO
+                Return Me.columnProduct_additive_Ratio
             End Get
         End Property
         
@@ -2472,54 +2388,6 @@ Partial Public Class DataSet_View
         Public ReadOnly Property LC_CUSTOMERColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnLC_CUSTOMER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TRANSPORTERColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTRANSPORTER
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_TANKColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_TANK
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_TANK2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_TANK2
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_APIColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_API
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_API2Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_API2
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_TEMP_MANUALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_TEMP_MANUAL
             End Get
         End Property
         
@@ -2541,65 +2409,57 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_TELColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_telColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_TEL
+                Return Me.columnCustomer_tel
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_ZIPCODEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_ZipcodeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_ZIPCODE
+                Return Me.columnCustomer_Zipcode
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CUSTOMER_FAXColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Customer_faxColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCUSTOMER_FAX
+                Return Me.columnCustomer_fax
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PRODUCT_CODEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Product_codeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnPRODUCT_CODE
+                Return Me.columnProduct_code
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property REF_TOPCHECKColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ref_TopcheckColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnREF_TOPCHECK
+                Return Me.columnRef_Topcheck
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property BATCH_NAMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property LOAD_DOfullColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBATCH_NAME
+                Return Me.columnLOAD_DOfull
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_DOFULLColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Product_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLOAD_DOFULL
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PRODUCT_NAMEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPRODUCT_NAME
+                Return Me.columnProduct_name
             End Get
         End Property
         
@@ -2613,185 +2473,105 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_ADDITIVEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property LC_AdditiveColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLC_ADDITIVE
+                Return Me.columnLC_Additive
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ADDNOTEDATEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property AddnoteDateColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnADDNOTEDATE
+                Return Me.columnAddnoteDate
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOADDATEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Raw_Weight_inColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLOADDATE
+                Return Me.columnRaw_Weight_in
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property STOCK_STATUSColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Update_Weight_inColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnSTOCK_STATUS
+                Return Me.columnUpdate_Weight_in
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property RAW_WEIGHT_INColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Raw_Weight_OutColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnRAW_WEIGHT_IN
+                Return Me.columnRaw_Weight_Out
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UPDATE_WEIGHT_INColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Update_Weight_OutColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUPDATE_WEIGHT_IN
+                Return Me.columnUpdate_Weight_Out
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property RAW_WEIGHT_OUTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property WeightINColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnRAW_WEIGHT_OUT
+                Return Me.columnWeightIN
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UPDATE_WEIGHT_OUTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property WeightOutColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUPDATE_WEIGHT_OUT
+                Return Me.columnWeightOut
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WEIGHTINColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ContainerColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnWEIGHTIN
+                Return Me.columnContainer
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WEIGHTOUTColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property RemarkColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnWEIGHTOUT
+                Return Me.columnRemark
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property GI_DATEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Packing_weightColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnGI_DATE
+                Return Me.columnPacking_weight
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CONTAINERColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Packing_QtyColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCONTAINER
+                Return Me.columnPacking_Qty
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property COAColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property WeightTotalColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCOA
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property REMARKColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnREMARK
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SHIPMENTNOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSHIPMENTNO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ACCESSCODEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnACCESSCODE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PACKING_TYPEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPACKING_TYPE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PACKING_WEIGHTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPACKING_WEIGHT
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PACKING_QTYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPACKING_QTY
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property P_CODEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnP_CODE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property P_WEIGHTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnP_WEIGHT
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property P_CAPASITYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnP_CAPASITY
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WEIGHTTOTALColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnWEIGHTTOTAL
+                Return Me.columnWeightTotal
             End Get
         End Property
         
@@ -2805,105 +2585,57 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_TANKColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property MeterReaderColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLOAD_TANK
+                Return Me.columnMeterReader
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property METERREADERColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property DensityColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMETERREADER
+                Return Me.columnDensity
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DENSITYColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property WeightCalColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDENSITY
+                Return Me.columnWeightCal
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WEIGHTCALColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Weightin_timeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnWEIGHTCAL
+                Return Me.columnWeightin_time
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WEIGHTIN_TIMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property WeightOut_timeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnWEIGHTIN_TIME
+                Return Me.columnWeightOut_time
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property WEIGHTOUT_TIMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property do_noColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnWEIGHTOUT_TIME
+                Return Me.columndo_no
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TAKENTIMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property BatchlotColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTAKENTIME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property SHIPMENTTYPEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSHIPMENTTYPE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DO_NOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnDO_NO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property BATCHLOTColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnBATCHLOT
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TANKFARMColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTANKFARM
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_STARTTIMEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_STARTTIME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LC_ENDTIMEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLC_ENDTIME
+                Return Me.columnBatchlot
             End Get
         End Property
         
@@ -3037,121 +2769,49 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOADDIFFColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Checkin_timeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnLOADDIFF
+                Return Me.columnCheckin_time
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TANK_API_PRO1Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property Checkout_TimeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTANK_API_PRO1
+                Return Me.columnCheckout_Time
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TANK_API_PRO2Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property load_Vehicle_IDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTANK_API_PRO2
+                Return Me.columnload_Vehicle_ID
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UPDATE_DATEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property product_colorColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUPDATE_DATE
+                Return Me.columnproduct_color
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property UPDATE_BYColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property product_RemarkColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUPDATE_BY
+                Return Me.columnproduct_Remark
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CHECKIN_TIMEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property advisenote_typeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCHECKIN_TIME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Q_TIMEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnQ_TIME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CHECKOUT_TIMEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnCHECKOUT_TIME
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property LOAD_VEHICLE_IDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnLOAD_VEHICLE_ID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DO_TYPEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnDO_TYPE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PRODUCT_COLORColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPRODUCT_COLOR
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property PRODUCT_REMARKColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPRODUCT_REMARK
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ADVISENOTE_TYPEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnADVISENOTE_TYPE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ADDITIVEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnADDITIVE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property DRYColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnDRY
+                Return Me.columnadvisenote_type
             End Get
         End Property
         
@@ -3193,168 +2853,134 @@ Partial Public Class DataSet_View
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overloads Function AddV_LOADINGNOTERow( _
-                    ByVal LOAD_ID As Long,  _
-                    ByVal SAPLOAD_ID As String,  _
-                    ByVal SHIPMENTNUMBER As String,  _
-                    ByVal LOAD_CAPACITY As Long,  _
-                    ByVal LOAD_PRESET As Long,  _
                     ByVal LOAD_DELIVERY As String,  _
-                    ByVal LOAD_CARDID As Long,  _
-                    ByVal LOAD_CARD As String,  _
-                    ByVal VOL86F As Decimal,  _
-                    ByVal VOL86F2 As Decimal,  _
-                    ByVal LC_COMPARTMENT As Long,  _
-                    ByVal LC_CAPACITY As Decimal,  _
-                    ByVal LC_PRESET As Decimal,  _
-                    ByVal LC_ISLAND As Long,  _
-                    ByVal LC_BAY As Long,  _
-                    ByVal LC_STATUS As Long,  _
-                    ByVal LC_BASE As Decimal,  _
-                    ByVal LC_BLEND As Decimal,  _
-                    ByVal REFERENCE As String,  _
-                    ByVal CARD_TYPE As String,  _
-                    ByVal CARD_SERIAL As String,  _
-                    ByVal DRIVER_CARD_SERIAL As String,  _
                     ByVal DRIVER_PINCODE As String,  _
-                    ByVal TRUCK_CARD_SERIAL As String,  _
                     ByVal LOAD_DATE As Date,  _
                     ByVal LOAD_DAY As String,  _
                     ByVal LOAD_MONTH As String,  _
                     ByVal LOAD_YEAR As String,  _
-                    ByVal CARD_NUMBER As Long,  _
-                    ByVal LOAD_DID As Long,  _
-                    ByVal LC_METER As Long,  _
-                    ByVal LOAD_STATUS As Long,  _
-                    ByVal LOAD_Q As Long,  _
                     ByVal STATUS_NAME As String,  _
-                    ByVal DRIVER_ID As Long,  _
-                    ByVal DRIVER_NAME As String,  _
                     ByVal LOAD_DRIVER As String,  _
-                    ByVal SHIPEMPLOYEE_NAME As String,  _
-                    ByVal LOAD_SHIPDRIVER As String,  _
                     ByVal LOAD_TRUCKCOMPANY As String,  _
                     ByVal LOAD_CUSTOMER As String,  _
                     ByVal LOAD_VEHICLE3 As String,  _
-                    ByVal LOAD_VEHICLE As String,  _
-                    ByVal LOAD_VEHICLE2 As String,  _
-                    ByVal TRUCK_LOADTYPE As String,  _
-                    ByVal LC_PRO As Long,  _
-                    ByVal CUSTOMER_NAME As String,  _
-                    ByVal LOAD_WEIGHT_IN As Decimal,  _
-                    ByVal LOAD_WEIGHT_OUT As Decimal,  _
                     ByVal LOAD_SEAL As String,  _
                     ByVal LC_SEAL As String,  _
-                    ByVal LOAD_SEALCOUNT As Long,  _
-                    ByVal LC_SHIPPER_TEMP As Long,  _
-                    ByVal SP_DATE As Date,  _
-                    ByVal LOAD_SHIPPER As Long,  _
                     ByVal LC_SHIPPER As String,  _
-                    ByVal SP_CODE As String,  _
-                    ByVal SP_NAMETH As String,  _
-                    ByVal SP_ADDRESSTH As String,  _
-                    ByVal SP_AMPHURTH As String,  _
-                    ByVal SP_PROVINCETH As String,  _
-                    ByVal SP_NAMEEN As String,  _
-                    ByVal SP_ADDRESSEN As String,  _
-                    ByVal SP_AMPHUREN As String,  _
-                    ByVal SP_PROVINCEEN As String,  _
-                    ByVal SP_CONTACT As String,  _
-                    ByVal SP_TEL As String,  _
-                    ByVal SP_FAX As String,  _
-                    ByVal SP_TYPE As String,  _
-                    ByVal SP_EMAIL As String,  _
-                    ByVal CUSTOMER_ADDRESS As String,  _
-                    ByVal CUSTOMER_AMPHUR As String,  _
-                    ByVal CUSTOMER_PROVINCE As String,  _
-                    ByVal PRODUCT_ADDITIVE_RATIO As Decimal,  _
-                    ByVal LC_CUSTOMER As Long,  _
                     ByVal TRANSPORTER As String,  _
                     ByVal LC_TANK As String,  _
-                    ByVal LC_TANK2 As String,  _
                     ByVal LC_API As String,  _
-                    ByVal LC_API2 As String,  _
-                    ByVal LC_TEMP_MANUAL As Decimal,  _
-                    ByVal LC_TEMP As Decimal,  _
-                    ByVal SP_ZIPCODE As Long,  _
-                    ByVal CUSTOMER_TEL As String,  _
-                    ByVal CUSTOMER_ZIPCODE As String,  _
-                    ByVal CUSTOMER_FAX As String,  _
-                    ByVal PRODUCT_CODE As String,  _
-                    ByVal REF_TOPCHECK As Long,  _
                     ByVal BATCH_NAME As String,  _
-                    ByVal LOAD_DOFULL As String,  _
-                    ByVal PRODUCT_NAME As String,  _
-                    ByVal LOAD_PRINT As Long,  _
-                    ByVal LC_ADDITIVE As Decimal,  _
-                    ByVal ADDNOTEDATE As Date,  _
-                    ByVal LOADDATE As String,  _
-                    ByVal STOCK_STATUS As Long,  _
-                    ByVal RAW_WEIGHT_IN As Decimal,  _
-                    ByVal UPDATE_WEIGHT_IN As Decimal,  _
-                    ByVal RAW_WEIGHT_OUT As Decimal,  _
-                    ByVal UPDATE_WEIGHT_OUT As Decimal,  _
-                    ByVal WEIGHTIN As Decimal,  _
-                    ByVal WEIGHTOUT As Decimal,  _
-                    ByVal GI_DATE As Date,  _
-                    ByVal CONTAINER As String,  _
-                    ByVal COA As String,  _
-                    ByVal REMARK As String,  _
-                    ByVal SHIPMENTNO As String,  _
-                    ByVal ACCESSCODE As String,  _
-                    ByVal PACKING_TYPE As Long,  _
-                    ByVal PACKING_WEIGHT As Decimal,  _
-                    ByVal PACKING_QTY As Decimal,  _
-                    ByVal P_CODE As String,  _
-                    ByVal P_WEIGHT As Decimal,  _
-                    ByVal P_CAPASITY As Decimal,  _
-                    ByVal WEIGHTTOTAL As Decimal,  _
-                    ByVal LOAD_TEMP As Decimal,  _
                     ByVal LOAD_TANK As String,  _
-                    ByVal METERREADER As Decimal,  _
-                    ByVal DENSITY As Decimal,  _
-                    ByVal WEIGHTCAL As Decimal,  _
-                    ByVal WEIGHTIN_TIME As Date,  _
-                    ByVal WEIGHTOUT_TIME As Date,  _
-                    ByVal TAKENTIME As String,  _
-                    ByVal SHIPMENTTYPE As String,  _
-                    ByVal DO_NO As String,  _
-                    ByVal BATCHLOT As String,  _
                     ByVal TANKFARM As String,  _
                     ByVal LC_STARTTIME As Date,  _
                     ByVal LC_ENDTIME As Date,  _
-                    ByVal LC_BATCHGROSSBASE As Decimal,  _
-                    ByVal LC_BATCHGROSSBLEND As Decimal,  _
-                    ByVal LC_BATCHNETBASE_30C As Decimal,  _
-                    ByVal LC_BATCHNETBLEND_30C As Decimal,  _
-                    ByVal LC_CUMULBASE_GROSLTR As Decimal,  _
-                    ByVal LC_CUMULBLEND_GROSLTR As Decimal,  _
-                    ByVal LC_CUMULBASE_NETLTR As Decimal,  _
-                    ByVal LC_CUMULBLEND_NETLTR As Decimal,  _
-                    ByVal LC_DENSITY_30C As Decimal,  _
-                    ByVal LC_VCF As Decimal,  _
-                    ByVal LC_METERFACTOR3 As Decimal,  _
-                    ByVal LC_K_FACTOR As Decimal,  _
-                    ByVal LC_BATCHGROSSBASE1 As Decimal,  _
-                    ByVal LC_BATCHGROSSBLEND1 As Decimal,  _
-                    ByVal LC_BATCHNETBASE_30C1 As Decimal,  _
-                    ByVal LC_BATCHNETBLEND_30C1 As Decimal,  _
-                    ByVal LOADDIFF As Decimal,  _
-                    ByVal TANK_API_PRO1 As Decimal,  _
-                    ByVal TANK_API_PRO2 As Decimal,  _
                     ByVal UPDATE_DATE As Date,  _
                     ByVal UPDATE_BY As String,  _
-                    ByVal CHECKIN_TIME As Date,  _
                     ByVal Q_TIME As Date,  _
-                    ByVal CHECKOUT_TIME As Date,  _
-                    ByVal LOAD_VEHICLE_ID As Long,  _
                     ByVal DO_TYPE As String,  _
-                    ByVal PRODUCT_COLOR As String,  _
-                    ByVal PRODUCT_REMARK As String,  _
-                    ByVal ADVISENOTE_TYPE As String,  _
-                    ByVal ADDITIVE As Decimal,  _
-                    ByVal DRY As Decimal) As V_LOADINGNOTERow
+                    ByVal LOAD_ID As Integer,  _
+                    ByVal LOAD_CAPACITY As Integer,  _
+                    ByVal LOAD_PRESET As Integer,  _
+                    ByVal LOAD_CARD As Integer,  _
+                    ByVal LC_COMPARTMENT As Integer,  _
+                    ByVal LC_CAPACITY As Integer,  _
+                    ByVal LC_PRESET As Integer,  _
+                    ByVal LC_ISLAND As Integer,  _
+                    ByVal LC_BAY As Integer,  _
+                    ByVal LC_STATUS As Integer,  _
+                    ByVal LC_BASE As Integer,  _
+                    ByVal LC_BLEND As Integer,  _
+                    ByVal LOAD_DID As Integer,  _
+                    ByVal LC_METER As Integer,  _
+                    ByVal LOAD_STATUS As Integer,  _
+                    ByVal LOAD_Q As Integer,  _
+                    ByVal Driver_ID As Integer,  _
+                    ByVal Driver_Name As String,  _
+                    ByVal Load_Vehicle As String,  _
+                    ByVal Truck_Loadtype As String,  _
+                    ByVal LC_PRO As Integer,  _
+                    ByVal Customer_name As String,  _
+                    ByVal LOAD_WEIGHT_IN As Double,  _
+                    ByVal LOAD_WEIGHT_OUT As Double,  _
+                    ByVal LOAD_SEALCOUNT As Integer,  _
+                    ByVal LC_SHIPPER_Temp As Integer,  _
+                    ByVal SP_Date As Date,  _
+                    ByVal LOAD_SHIPPER As Integer,  _
+                    ByVal SP_Code As String,  _
+                    ByVal SP_NameTH As String,  _
+                    ByVal SP_AddressTH As String,  _
+                    ByVal SP_AmphurTH As String,  _
+                    ByVal SP_ProvinceTH As String,  _
+                    ByVal SP_NameEN As String,  _
+                    ByVal SP_AddressEN As String,  _
+                    ByVal SP_AmphurEN As String,  _
+                    ByVal SP_ProvinceEN As String,  _
+                    ByVal SP_Contact As String,  _
+                    ByVal SP_Tel As String,  _
+                    ByVal SP_Fax As String,  _
+                    ByVal SP_Type As String,  _
+                    ByVal SP_Email As String,  _
+                    ByVal Customer_address As String,  _
+                    ByVal Customer_amphur As String,  _
+                    ByVal Customer_province As String,  _
+                    ByVal Product_additive_Ratio As Integer,  _
+                    ByVal LC_CUSTOMER As Integer,  _
+                    ByVal LC_TEMP As Double,  _
+                    ByVal SP_ZIPCODE As Integer,  _
+                    ByVal Customer_tel As String,  _
+                    ByVal Customer_Zipcode As String,  _
+                    ByVal Customer_fax As String,  _
+                    ByVal Product_code As String,  _
+                    ByVal Ref_Topcheck As Integer,  _
+                    ByVal LOAD_DOfull As String,  _
+                    ByVal Product_name As String,  _
+                    ByVal LOAD_PRINT As Integer,  _
+                    ByVal LC_Additive As Integer,  _
+                    ByVal AddnoteDate As Date,  _
+                    ByVal Raw_Weight_in As Double,  _
+                    ByVal Update_Weight_in As Double,  _
+                    ByVal Raw_Weight_Out As Double,  _
+                    ByVal Update_Weight_Out As Double,  _
+                    ByVal WeightIN As Double,  _
+                    ByVal WeightOut As Double,  _
+                    ByVal Container As String,  _
+                    ByVal Remark As String,  _
+                    ByVal Packing_weight As Double,  _
+                    ByVal Packing_Qty As Double,  _
+                    ByVal WeightTotal As Double,  _
+                    ByVal LOAD_TEMP As Double,  _
+                    ByVal MeterReader As Double,  _
+                    ByVal Density As Double,  _
+                    ByVal WeightCal As Double,  _
+                    ByVal Weightin_time As Date,  _
+                    ByVal WeightOut_time As Date,  _
+                    ByVal do_no As String,  _
+                    ByVal Batchlot As String,  _
+                    ByVal LC_BATCHGROSSBASE As Double,  _
+                    ByVal LC_BATCHGROSSBLEND As Double,  _
+                    ByVal LC_BATCHNETBASE_30C As Double,  _
+                    ByVal LC_BATCHNETBLEND_30C As Double,  _
+                    ByVal LC_CUMULBASE_GROSLTR As Double,  _
+                    ByVal LC_CUMULBLEND_GROSLTR As Double,  _
+                    ByVal LC_CUMULBASE_NETLTR As Double,  _
+                    ByVal LC_CUMULBLEND_NETLTR As Double,  _
+                    ByVal LC_DENSITY_30C As Double,  _
+                    ByVal LC_VCF As Integer,  _
+                    ByVal LC_METERFACTOR3 As Integer,  _
+                    ByVal LC_K_FACTOR As Integer,  _
+                    ByVal LC_BATCHGROSSBASE1 As Double,  _
+                    ByVal LC_BATCHGROSSBLEND1 As Double,  _
+                    ByVal LC_BATCHNETBASE_30C1 As Double,  _
+                    ByVal LC_BATCHNETBLEND_30C1 As Double,  _
+                    ByVal Checkin_time As Date,  _
+                    ByVal Checkout_Time As Date,  _
+                    ByVal load_Vehicle_ID As Integer,  _
+                    ByVal product_color As String,  _
+                    ByVal product_Remark As String,  _
+                    ByVal advisenote_type As String) As V_LOADINGNOTERow
             Dim rowV_LOADINGNOTERow As V_LOADINGNOTERow = CType(Me.NewRow,V_LOADINGNOTERow)
-            Dim columnValuesArray() As Object = New Object() {LOAD_ID, SAPLOAD_ID, SHIPMENTNUMBER, LOAD_CAPACITY, LOAD_PRESET, LOAD_DELIVERY, LOAD_CARDID, LOAD_CARD, VOL86F, VOL86F2, LC_COMPARTMENT, LC_CAPACITY, LC_PRESET, LC_ISLAND, LC_BAY, LC_STATUS, LC_BASE, LC_BLEND, REFERENCE, CARD_TYPE, CARD_SERIAL, DRIVER_CARD_SERIAL, DRIVER_PINCODE, TRUCK_CARD_SERIAL, LOAD_DATE, LOAD_DAY, LOAD_MONTH, LOAD_YEAR, CARD_NUMBER, LOAD_DID, LC_METER, LOAD_STATUS, LOAD_Q, STATUS_NAME, DRIVER_ID, DRIVER_NAME, LOAD_DRIVER, SHIPEMPLOYEE_NAME, LOAD_SHIPDRIVER, LOAD_TRUCKCOMPANY, LOAD_CUSTOMER, LOAD_VEHICLE3, LOAD_VEHICLE, LOAD_VEHICLE2, TRUCK_LOADTYPE, LC_PRO, CUSTOMER_NAME, LOAD_WEIGHT_IN, LOAD_WEIGHT_OUT, LOAD_SEAL, LC_SEAL, LOAD_SEALCOUNT, LC_SHIPPER_TEMP, SP_DATE, LOAD_SHIPPER, LC_SHIPPER, SP_CODE, SP_NAMETH, SP_ADDRESSTH, SP_AMPHURTH, SP_PROVINCETH, SP_NAMEEN, SP_ADDRESSEN, SP_AMPHUREN, SP_PROVINCEEN, SP_CONTACT, SP_TEL, SP_FAX, SP_TYPE, SP_EMAIL, CUSTOMER_ADDRESS, CUSTOMER_AMPHUR, CUSTOMER_PROVINCE, PRODUCT_ADDITIVE_RATIO, LC_CUSTOMER, TRANSPORTER, LC_TANK, LC_TANK2, LC_API, LC_API2, LC_TEMP_MANUAL, LC_TEMP, SP_ZIPCODE, CUSTOMER_TEL, CUSTOMER_ZIPCODE, CUSTOMER_FAX, PRODUCT_CODE, REF_TOPCHECK, BATCH_NAME, LOAD_DOFULL, PRODUCT_NAME, LOAD_PRINT, LC_ADDITIVE, ADDNOTEDATE, LOADDATE, STOCK_STATUS, RAW_WEIGHT_IN, UPDATE_WEIGHT_IN, RAW_WEIGHT_OUT, UPDATE_WEIGHT_OUT, WEIGHTIN, WEIGHTOUT, GI_DATE, CONTAINER, COA, REMARK, SHIPMENTNO, ACCESSCODE, PACKING_TYPE, PACKING_WEIGHT, PACKING_QTY, P_CODE, P_WEIGHT, P_CAPASITY, WEIGHTTOTAL, LOAD_TEMP, LOAD_TANK, METERREADER, DENSITY, WEIGHTCAL, WEIGHTIN_TIME, WEIGHTOUT_TIME, TAKENTIME, SHIPMENTTYPE, DO_NO, BATCHLOT, TANKFARM, LC_STARTTIME, LC_ENDTIME, LC_BATCHGROSSBASE, LC_BATCHGROSSBLEND, LC_BATCHNETBASE_30C, LC_BATCHNETBLEND_30C, LC_CUMULBASE_GROSLTR, LC_CUMULBLEND_GROSLTR, LC_CUMULBASE_NETLTR, LC_CUMULBLEND_NETLTR, LC_DENSITY_30C, LC_VCF, LC_METERFACTOR3, LC_K_FACTOR, LC_BATCHGROSSBASE1, LC_BATCHGROSSBLEND1, LC_BATCHNETBASE_30C1, LC_BATCHNETBLEND_30C1, LOADDIFF, TANK_API_PRO1, TANK_API_PRO2, UPDATE_DATE, UPDATE_BY, CHECKIN_TIME, Q_TIME, CHECKOUT_TIME, LOAD_VEHICLE_ID, DO_TYPE, PRODUCT_COLOR, PRODUCT_REMARK, ADVISENOTE_TYPE, ADDITIVE, DRY}
+            Dim columnValuesArray() As Object = New Object() {LOAD_DELIVERY, DRIVER_PINCODE, LOAD_DATE, LOAD_DAY, LOAD_MONTH, LOAD_YEAR, STATUS_NAME, LOAD_DRIVER, LOAD_TRUCKCOMPANY, LOAD_CUSTOMER, LOAD_VEHICLE3, LOAD_SEAL, LC_SEAL, LC_SHIPPER, TRANSPORTER, LC_TANK, LC_API, BATCH_NAME, LOAD_TANK, TANKFARM, LC_STARTTIME, LC_ENDTIME, UPDATE_DATE, UPDATE_BY, Q_TIME, DO_TYPE, LOAD_ID, LOAD_CAPACITY, LOAD_PRESET, LOAD_CARD, LC_COMPARTMENT, LC_CAPACITY, LC_PRESET, LC_ISLAND, LC_BAY, LC_STATUS, LC_BASE, LC_BLEND, LOAD_DID, LC_METER, LOAD_STATUS, LOAD_Q, Driver_ID, Driver_Name, Load_Vehicle, Truck_Loadtype, LC_PRO, Customer_name, LOAD_WEIGHT_IN, LOAD_WEIGHT_OUT, LOAD_SEALCOUNT, LC_SHIPPER_Temp, SP_Date, LOAD_SHIPPER, SP_Code, SP_NameTH, SP_AddressTH, SP_AmphurTH, SP_ProvinceTH, SP_NameEN, SP_AddressEN, SP_AmphurEN, SP_ProvinceEN, SP_Contact, SP_Tel, SP_Fax, SP_Type, SP_Email, Customer_address, Customer_amphur, Customer_province, Product_additive_Ratio, LC_CUSTOMER, LC_TEMP, SP_ZIPCODE, Customer_tel, Customer_Zipcode, Customer_fax, Product_code, Ref_Topcheck, LOAD_DOfull, Product_name, LOAD_PRINT, LC_Additive, AddnoteDate, Raw_Weight_in, Update_Weight_in, Raw_Weight_Out, Update_Weight_Out, WeightIN, WeightOut, Container, Remark, Packing_weight, Packing_Qty, WeightTotal, LOAD_TEMP, MeterReader, Density, WeightCal, Weightin_time, WeightOut_time, do_no, Batchlot, LC_BATCHGROSSBASE, LC_BATCHGROSSBLEND, LC_BATCHNETBASE_30C, LC_BATCHNETBLEND_30C, LC_CUMULBASE_GROSLTR, LC_CUMULBLEND_GROSLTR, LC_CUMULBASE_NETLTR, LC_CUMULBLEND_NETLTR, LC_DENSITY_30C, LC_VCF, LC_METERFACTOR3, LC_K_FACTOR, LC_BATCHGROSSBASE1, LC_BATCHGROSSBLEND1, LC_BATCHNETBASE_30C1, LC_BATCHNETBLEND_30C1, Checkin_time, Checkout_Time, load_Vehicle_ID, product_color, product_Remark, advisenote_type}
             rowV_LOADINGNOTERow.ItemArray = columnValuesArray
             Me.Rows.Add(rowV_LOADINGNOTERow)
             Return rowV_LOADINGNOTERow
@@ -3377,16 +3003,36 @@ Partial Public Class DataSet_View
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnLOAD_DELIVERY = MyBase.Columns("LOAD_DELIVERY")
+            Me.columnDRIVER_PINCODE = MyBase.Columns("DRIVER_PINCODE")
+            Me.columnLOAD_DATE = MyBase.Columns("LOAD_DATE")
+            Me.columnLOAD_DAY = MyBase.Columns("LOAD_DAY")
+            Me.columnLOAD_MONTH = MyBase.Columns("LOAD_MONTH")
+            Me.columnLOAD_YEAR = MyBase.Columns("LOAD_YEAR")
+            Me.columnSTATUS_NAME = MyBase.Columns("STATUS_NAME")
+            Me.columnLOAD_DRIVER = MyBase.Columns("LOAD_DRIVER")
+            Me.columnLOAD_TRUCKCOMPANY = MyBase.Columns("LOAD_TRUCKCOMPANY")
+            Me.columnLOAD_CUSTOMER = MyBase.Columns("LOAD_CUSTOMER")
+            Me.columnLOAD_VEHICLE3 = MyBase.Columns("LOAD_VEHICLE3")
+            Me.columnLOAD_SEAL = MyBase.Columns("LOAD_SEAL")
+            Me.columnLC_SEAL = MyBase.Columns("LC_SEAL")
+            Me.columnLC_SHIPPER = MyBase.Columns("LC_SHIPPER")
+            Me.columnTRANSPORTER = MyBase.Columns("TRANSPORTER")
+            Me.columnLC_TANK = MyBase.Columns("LC_TANK")
+            Me.columnLC_API = MyBase.Columns("LC_API")
+            Me.columnBATCH_NAME = MyBase.Columns("BATCH_NAME")
+            Me.columnLOAD_TANK = MyBase.Columns("LOAD_TANK")
+            Me.columnTANKFARM = MyBase.Columns("TANKFARM")
+            Me.columnLC_STARTTIME = MyBase.Columns("LC_STARTTIME")
+            Me.columnLC_ENDTIME = MyBase.Columns("LC_ENDTIME")
+            Me.columnUPDATE_DATE = MyBase.Columns("UPDATE_DATE")
+            Me.columnUPDATE_BY = MyBase.Columns("UPDATE_BY")
+            Me.columnQ_TIME = MyBase.Columns("Q_TIME")
+            Me.columnDO_TYPE = MyBase.Columns("DO_TYPE")
             Me.columnLOAD_ID = MyBase.Columns("LOAD_ID")
-            Me.columnSAPLOAD_ID = MyBase.Columns("SAPLOAD_ID")
-            Me.columnSHIPMENTNUMBER = MyBase.Columns("SHIPMENTNUMBER")
             Me.columnLOAD_CAPACITY = MyBase.Columns("LOAD_CAPACITY")
             Me.columnLOAD_PRESET = MyBase.Columns("LOAD_PRESET")
-            Me.columnLOAD_DELIVERY = MyBase.Columns("LOAD_DELIVERY")
-            Me.columnLOAD_CARDID = MyBase.Columns("LOAD_CARDID")
             Me.columnLOAD_CARD = MyBase.Columns("LOAD_CARD")
-            Me.columnVOL86F = MyBase.Columns("VOL86F")
-            Me.columnVOL86F2 = MyBase.Columns("VOL86F2")
             Me.columnLC_COMPARTMENT = MyBase.Columns("LC_COMPARTMENT")
             Me.columnLC_CAPACITY = MyBase.Columns("LC_CAPACITY")
             Me.columnLC_PRESET = MyBase.Columns("LC_PRESET")
@@ -3395,117 +3041,72 @@ Partial Public Class DataSet_View
             Me.columnLC_STATUS = MyBase.Columns("LC_STATUS")
             Me.columnLC_BASE = MyBase.Columns("LC_BASE")
             Me.columnLC_BLEND = MyBase.Columns("LC_BLEND")
-            Me.columnREFERENCE = MyBase.Columns("REFERENCE")
-            Me.columnCARD_TYPE = MyBase.Columns("CARD_TYPE")
-            Me.columnCARD_SERIAL = MyBase.Columns("CARD_SERIAL")
-            Me.columnDRIVER_CARD_SERIAL = MyBase.Columns("DRIVER_CARD_SERIAL")
-            Me.columnDRIVER_PINCODE = MyBase.Columns("DRIVER_PINCODE")
-            Me.columnTRUCK_CARD_SERIAL = MyBase.Columns("TRUCK_CARD_SERIAL")
-            Me.columnLOAD_DATE = MyBase.Columns("LOAD_DATE")
-            Me.columnLOAD_DAY = MyBase.Columns("LOAD_DAY")
-            Me.columnLOAD_MONTH = MyBase.Columns("LOAD_MONTH")
-            Me.columnLOAD_YEAR = MyBase.Columns("LOAD_YEAR")
-            Me.columnCARD_NUMBER = MyBase.Columns("CARD_NUMBER")
             Me.columnLOAD_DID = MyBase.Columns("LOAD_DID")
             Me.columnLC_METER = MyBase.Columns("LC_METER")
             Me.columnLOAD_STATUS = MyBase.Columns("LOAD_STATUS")
             Me.columnLOAD_Q = MyBase.Columns("LOAD_Q")
-            Me.columnSTATUS_NAME = MyBase.Columns("STATUS_NAME")
-            Me.columnDRIVER_ID = MyBase.Columns("DRIVER_ID")
-            Me.columnDRIVER_NAME = MyBase.Columns("DRIVER_NAME")
-            Me.columnLOAD_DRIVER = MyBase.Columns("LOAD_DRIVER")
-            Me.columnSHIPEMPLOYEE_NAME = MyBase.Columns("SHIPEMPLOYEE_NAME")
-            Me.columnLOAD_SHIPDRIVER = MyBase.Columns("LOAD_SHIPDRIVER")
-            Me.columnLOAD_TRUCKCOMPANY = MyBase.Columns("LOAD_TRUCKCOMPANY")
-            Me.columnLOAD_CUSTOMER = MyBase.Columns("LOAD_CUSTOMER")
-            Me.columnLOAD_VEHICLE3 = MyBase.Columns("LOAD_VEHICLE3")
-            Me.columnLOAD_VEHICLE = MyBase.Columns("LOAD_VEHICLE")
-            Me.columnLOAD_VEHICLE2 = MyBase.Columns("LOAD_VEHICLE2")
-            Me.columnTRUCK_LOADTYPE = MyBase.Columns("TRUCK_LOADTYPE")
+            Me.columnDriver_ID = MyBase.Columns("Driver_ID")
+            Me.columnDriver_Name = MyBase.Columns("Driver_Name")
+            Me.columnLoad_Vehicle = MyBase.Columns("Load_Vehicle")
+            Me.columnTruck_Loadtype = MyBase.Columns("Truck_Loadtype")
             Me.columnLC_PRO = MyBase.Columns("LC_PRO")
-            Me.columnCUSTOMER_NAME = MyBase.Columns("CUSTOMER_NAME")
+            Me.columnCustomer_name = MyBase.Columns("Customer_name")
             Me.columnLOAD_WEIGHT_IN = MyBase.Columns("LOAD_WEIGHT_IN")
             Me.columnLOAD_WEIGHT_OUT = MyBase.Columns("LOAD_WEIGHT_OUT")
-            Me.columnLOAD_SEAL = MyBase.Columns("LOAD_SEAL")
-            Me.columnLC_SEAL = MyBase.Columns("LC_SEAL")
             Me.columnLOAD_SEALCOUNT = MyBase.Columns("LOAD_SEALCOUNT")
-            Me.columnLC_SHIPPER_TEMP = MyBase.Columns("LC_SHIPPER_TEMP")
-            Me.columnSP_DATE = MyBase.Columns("SP_DATE")
+            Me.columnLC_SHIPPER_Temp = MyBase.Columns("LC_SHIPPER_Temp")
+            Me.columnSP_Date = MyBase.Columns("SP_Date")
             Me.columnLOAD_SHIPPER = MyBase.Columns("LOAD_SHIPPER")
-            Me.columnLC_SHIPPER = MyBase.Columns("LC_SHIPPER")
-            Me.columnSP_CODE = MyBase.Columns("SP_CODE")
-            Me.columnSP_NAMETH = MyBase.Columns("SP_NAMETH")
-            Me.columnSP_ADDRESSTH = MyBase.Columns("SP_ADDRESSTH")
-            Me.columnSP_AMPHURTH = MyBase.Columns("SP_AMPHURTH")
-            Me.columnSP_PROVINCETH = MyBase.Columns("SP_PROVINCETH")
-            Me.columnSP_NAMEEN = MyBase.Columns("SP_NAMEEN")
-            Me.columnSP_ADDRESSEN = MyBase.Columns("SP_ADDRESSEN")
-            Me.columnSP_AMPHUREN = MyBase.Columns("SP_AMPHUREN")
-            Me.columnSP_PROVINCEEN = MyBase.Columns("SP_PROVINCEEN")
-            Me.columnSP_CONTACT = MyBase.Columns("SP_CONTACT")
-            Me.columnSP_TEL = MyBase.Columns("SP_TEL")
-            Me.columnSP_FAX = MyBase.Columns("SP_FAX")
-            Me.columnSP_TYPE = MyBase.Columns("SP_TYPE")
-            Me.columnSP_EMAIL = MyBase.Columns("SP_EMAIL")
-            Me.columnCUSTOMER_ADDRESS = MyBase.Columns("CUSTOMER_ADDRESS")
-            Me.columnCUSTOMER_AMPHUR = MyBase.Columns("CUSTOMER_AMPHUR")
-            Me.columnCUSTOMER_PROVINCE = MyBase.Columns("CUSTOMER_PROVINCE")
-            Me.columnPRODUCT_ADDITIVE_RATIO = MyBase.Columns("PRODUCT_ADDITIVE_RATIO")
+            Me.columnSP_Code = MyBase.Columns("SP_Code")
+            Me.columnSP_NameTH = MyBase.Columns("SP_NameTH")
+            Me.columnSP_AddressTH = MyBase.Columns("SP_AddressTH")
+            Me.columnSP_AmphurTH = MyBase.Columns("SP_AmphurTH")
+            Me.columnSP_ProvinceTH = MyBase.Columns("SP_ProvinceTH")
+            Me.columnSP_NameEN = MyBase.Columns("SP_NameEN")
+            Me.columnSP_AddressEN = MyBase.Columns("SP_AddressEN")
+            Me.columnSP_AmphurEN = MyBase.Columns("SP_AmphurEN")
+            Me.columnSP_ProvinceEN = MyBase.Columns("SP_ProvinceEN")
+            Me.columnSP_Contact = MyBase.Columns("SP_Contact")
+            Me.columnSP_Tel = MyBase.Columns("SP_Tel")
+            Me.columnSP_Fax = MyBase.Columns("SP_Fax")
+            Me.columnSP_Type = MyBase.Columns("SP_Type")
+            Me.columnSP_Email = MyBase.Columns("SP_Email")
+            Me.columnCustomer_address = MyBase.Columns("Customer_address")
+            Me.columnCustomer_amphur = MyBase.Columns("Customer_amphur")
+            Me.columnCustomer_province = MyBase.Columns("Customer_province")
+            Me.columnProduct_additive_Ratio = MyBase.Columns("Product_additive_Ratio")
             Me.columnLC_CUSTOMER = MyBase.Columns("LC_CUSTOMER")
-            Me.columnTRANSPORTER = MyBase.Columns("TRANSPORTER")
-            Me.columnLC_TANK = MyBase.Columns("LC_TANK")
-            Me.columnLC_TANK2 = MyBase.Columns("LC_TANK2")
-            Me.columnLC_API = MyBase.Columns("LC_API")
-            Me.columnLC_API2 = MyBase.Columns("LC_API2")
-            Me.columnLC_TEMP_MANUAL = MyBase.Columns("LC_TEMP_MANUAL")
             Me.columnLC_TEMP = MyBase.Columns("LC_TEMP")
             Me.columnSP_ZIPCODE = MyBase.Columns("SP_ZIPCODE")
-            Me.columnCUSTOMER_TEL = MyBase.Columns("CUSTOMER_TEL")
-            Me.columnCUSTOMER_ZIPCODE = MyBase.Columns("CUSTOMER_ZIPCODE")
-            Me.columnCUSTOMER_FAX = MyBase.Columns("CUSTOMER_FAX")
-            Me.columnPRODUCT_CODE = MyBase.Columns("PRODUCT_CODE")
-            Me.columnREF_TOPCHECK = MyBase.Columns("REF_TOPCHECK")
-            Me.columnBATCH_NAME = MyBase.Columns("BATCH_NAME")
-            Me.columnLOAD_DOFULL = MyBase.Columns("LOAD_DOFULL")
-            Me.columnPRODUCT_NAME = MyBase.Columns("PRODUCT_NAME")
+            Me.columnCustomer_tel = MyBase.Columns("Customer_tel")
+            Me.columnCustomer_Zipcode = MyBase.Columns("Customer_Zipcode")
+            Me.columnCustomer_fax = MyBase.Columns("Customer_fax")
+            Me.columnProduct_code = MyBase.Columns("Product_code")
+            Me.columnRef_Topcheck = MyBase.Columns("Ref_Topcheck")
+            Me.columnLOAD_DOfull = MyBase.Columns("LOAD_DOfull")
+            Me.columnProduct_name = MyBase.Columns("Product_name")
             Me.columnLOAD_PRINT = MyBase.Columns("LOAD_PRINT")
-            Me.columnLC_ADDITIVE = MyBase.Columns("LC_ADDITIVE")
-            Me.columnADDNOTEDATE = MyBase.Columns("ADDNOTEDATE")
-            Me.columnLOADDATE = MyBase.Columns("LOADDATE")
-            Me.columnSTOCK_STATUS = MyBase.Columns("STOCK_STATUS")
-            Me.columnRAW_WEIGHT_IN = MyBase.Columns("RAW_WEIGHT_IN")
-            Me.columnUPDATE_WEIGHT_IN = MyBase.Columns("UPDATE_WEIGHT_IN")
-            Me.columnRAW_WEIGHT_OUT = MyBase.Columns("RAW_WEIGHT_OUT")
-            Me.columnUPDATE_WEIGHT_OUT = MyBase.Columns("UPDATE_WEIGHT_OUT")
-            Me.columnWEIGHTIN = MyBase.Columns("WEIGHTIN")
-            Me.columnWEIGHTOUT = MyBase.Columns("WEIGHTOUT")
-            Me.columnGI_DATE = MyBase.Columns("GI_DATE")
-            Me.columnCONTAINER = MyBase.Columns("CONTAINER")
-            Me.columnCOA = MyBase.Columns("COA")
-            Me.columnREMARK = MyBase.Columns("REMARK")
-            Me.columnSHIPMENTNO = MyBase.Columns("SHIPMENTNO")
-            Me.columnACCESSCODE = MyBase.Columns("ACCESSCODE")
-            Me.columnPACKING_TYPE = MyBase.Columns("PACKING_TYPE")
-            Me.columnPACKING_WEIGHT = MyBase.Columns("PACKING_WEIGHT")
-            Me.columnPACKING_QTY = MyBase.Columns("PACKING_QTY")
-            Me.columnP_CODE = MyBase.Columns("P_CODE")
-            Me.columnP_WEIGHT = MyBase.Columns("P_WEIGHT")
-            Me.columnP_CAPASITY = MyBase.Columns("P_CAPASITY")
-            Me.columnWEIGHTTOTAL = MyBase.Columns("WEIGHTTOTAL")
+            Me.columnLC_Additive = MyBase.Columns("LC_Additive")
+            Me.columnAddnoteDate = MyBase.Columns("AddnoteDate")
+            Me.columnRaw_Weight_in = MyBase.Columns("Raw_Weight_in")
+            Me.columnUpdate_Weight_in = MyBase.Columns("Update_Weight_in")
+            Me.columnRaw_Weight_Out = MyBase.Columns("Raw_Weight_Out")
+            Me.columnUpdate_Weight_Out = MyBase.Columns("Update_Weight_Out")
+            Me.columnWeightIN = MyBase.Columns("WeightIN")
+            Me.columnWeightOut = MyBase.Columns("WeightOut")
+            Me.columnContainer = MyBase.Columns("Container")
+            Me.columnRemark = MyBase.Columns("Remark")
+            Me.columnPacking_weight = MyBase.Columns("Packing_weight")
+            Me.columnPacking_Qty = MyBase.Columns("Packing_Qty")
+            Me.columnWeightTotal = MyBase.Columns("WeightTotal")
             Me.columnLOAD_TEMP = MyBase.Columns("LOAD_TEMP")
-            Me.columnLOAD_TANK = MyBase.Columns("LOAD_TANK")
-            Me.columnMETERREADER = MyBase.Columns("METERREADER")
-            Me.columnDENSITY = MyBase.Columns("DENSITY")
-            Me.columnWEIGHTCAL = MyBase.Columns("WEIGHTCAL")
-            Me.columnWEIGHTIN_TIME = MyBase.Columns("WEIGHTIN_TIME")
-            Me.columnWEIGHTOUT_TIME = MyBase.Columns("WEIGHTOUT_TIME")
-            Me.columnTAKENTIME = MyBase.Columns("TAKENTIME")
-            Me.columnSHIPMENTTYPE = MyBase.Columns("SHIPMENTTYPE")
-            Me.columnDO_NO = MyBase.Columns("DO_NO")
-            Me.columnBATCHLOT = MyBase.Columns("BATCHLOT")
-            Me.columnTANKFARM = MyBase.Columns("TANKFARM")
-            Me.columnLC_STARTTIME = MyBase.Columns("LC_STARTTIME")
-            Me.columnLC_ENDTIME = MyBase.Columns("LC_ENDTIME")
+            Me.columnMeterReader = MyBase.Columns("MeterReader")
+            Me.columnDensity = MyBase.Columns("Density")
+            Me.columnWeightCal = MyBase.Columns("WeightCal")
+            Me.columnWeightin_time = MyBase.Columns("Weightin_time")
+            Me.columnWeightOut_time = MyBase.Columns("WeightOut_time")
+            Me.columndo_no = MyBase.Columns("do_no")
+            Me.columnBatchlot = MyBase.Columns("Batchlot")
             Me.columnLC_BATCHGROSSBASE = MyBase.Columns("LC_BATCHGROSSBASE")
             Me.columnLC_BATCHGROSSBLEND = MyBase.Columns("LC_BATCHGROSSBLEND")
             Me.columnLC_BATCHNETBASE_30C = MyBase.Columns("LC_BATCHNETBASE_30C")
@@ -3522,74 +3123,21 @@ Partial Public Class DataSet_View
             Me.columnLC_BATCHGROSSBLEND1 = MyBase.Columns("LC_BATCHGROSSBLEND1")
             Me.columnLC_BATCHNETBASE_30C1 = MyBase.Columns("LC_BATCHNETBASE_30C1")
             Me.columnLC_BATCHNETBLEND_30C1 = MyBase.Columns("LC_BATCHNETBLEND_30C1")
-            Me.columnLOADDIFF = MyBase.Columns("LOADDIFF")
-            Me.columnTANK_API_PRO1 = MyBase.Columns("TANK_API_PRO1")
-            Me.columnTANK_API_PRO2 = MyBase.Columns("TANK_API_PRO2")
-            Me.columnUPDATE_DATE = MyBase.Columns("UPDATE_DATE")
-            Me.columnUPDATE_BY = MyBase.Columns("UPDATE_BY")
-            Me.columnCHECKIN_TIME = MyBase.Columns("CHECKIN_TIME")
-            Me.columnQ_TIME = MyBase.Columns("Q_TIME")
-            Me.columnCHECKOUT_TIME = MyBase.Columns("CHECKOUT_TIME")
-            Me.columnLOAD_VEHICLE_ID = MyBase.Columns("LOAD_VEHICLE_ID")
-            Me.columnDO_TYPE = MyBase.Columns("DO_TYPE")
-            Me.columnPRODUCT_COLOR = MyBase.Columns("PRODUCT_COLOR")
-            Me.columnPRODUCT_REMARK = MyBase.Columns("PRODUCT_REMARK")
-            Me.columnADVISENOTE_TYPE = MyBase.Columns("ADVISENOTE_TYPE")
-            Me.columnADDITIVE = MyBase.Columns("ADDITIVE")
-            Me.columnDRY = MyBase.Columns("DRY")
+            Me.columnCheckin_time = MyBase.Columns("Checkin_time")
+            Me.columnCheckout_Time = MyBase.Columns("Checkout_Time")
+            Me.columnload_Vehicle_ID = MyBase.Columns("load_Vehicle_ID")
+            Me.columnproduct_color = MyBase.Columns("product_color")
+            Me.columnproduct_Remark = MyBase.Columns("product_Remark")
+            Me.columnadvisenote_type = MyBase.Columns("advisenote_type")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnLOAD_ID = New Global.System.Data.DataColumn("LOAD_ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_ID)
-            Me.columnSAPLOAD_ID = New Global.System.Data.DataColumn("SAPLOAD_ID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSAPLOAD_ID)
-            Me.columnSHIPMENTNUMBER = New Global.System.Data.DataColumn("SHIPMENTNUMBER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSHIPMENTNUMBER)
-            Me.columnLOAD_CAPACITY = New Global.System.Data.DataColumn("LOAD_CAPACITY", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_CAPACITY)
-            Me.columnLOAD_PRESET = New Global.System.Data.DataColumn("LOAD_PRESET", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_PRESET)
             Me.columnLOAD_DELIVERY = New Global.System.Data.DataColumn("LOAD_DELIVERY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_DELIVERY)
-            Me.columnLOAD_CARDID = New Global.System.Data.DataColumn("LOAD_CARDID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_CARDID)
-            Me.columnLOAD_CARD = New Global.System.Data.DataColumn("LOAD_CARD", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_CARD)
-            Me.columnVOL86F = New Global.System.Data.DataColumn("VOL86F", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnVOL86F)
-            Me.columnVOL86F2 = New Global.System.Data.DataColumn("VOL86F2", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnVOL86F2)
-            Me.columnLC_COMPARTMENT = New Global.System.Data.DataColumn("LC_COMPARTMENT", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_COMPARTMENT)
-            Me.columnLC_CAPACITY = New Global.System.Data.DataColumn("LC_CAPACITY", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_CAPACITY)
-            Me.columnLC_PRESET = New Global.System.Data.DataColumn("LC_PRESET", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_PRESET)
-            Me.columnLC_ISLAND = New Global.System.Data.DataColumn("LC_ISLAND", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_ISLAND)
-            Me.columnLC_BAY = New Global.System.Data.DataColumn("LC_BAY", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BAY)
-            Me.columnLC_STATUS = New Global.System.Data.DataColumn("LC_STATUS", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_STATUS)
-            Me.columnLC_BASE = New Global.System.Data.DataColumn("LC_BASE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BASE)
-            Me.columnLC_BLEND = New Global.System.Data.DataColumn("LC_BLEND", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BLEND)
-            Me.columnREFERENCE = New Global.System.Data.DataColumn("REFERENCE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnREFERENCE)
-            Me.columnCARD_TYPE = New Global.System.Data.DataColumn("CARD_TYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCARD_TYPE)
-            Me.columnCARD_SERIAL = New Global.System.Data.DataColumn("CARD_SERIAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCARD_SERIAL)
-            Me.columnDRIVER_CARD_SERIAL = New Global.System.Data.DataColumn("DRIVER_CARD_SERIAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDRIVER_CARD_SERIAL)
             Me.columnDRIVER_PINCODE = New Global.System.Data.DataColumn("DRIVER_PINCODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDRIVER_PINCODE)
-            Me.columnTRUCK_CARD_SERIAL = New Global.System.Data.DataColumn("TRUCK_CARD_SERIAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_CARD_SERIAL)
             Me.columnLOAD_DATE = New Global.System.Data.DataColumn("LOAD_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_DATE)
             Me.columnLOAD_DAY = New Global.System.Data.DataColumn("LOAD_DAY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3598,345 +3146,304 @@ Partial Public Class DataSet_View
             MyBase.Columns.Add(Me.columnLOAD_MONTH)
             Me.columnLOAD_YEAR = New Global.System.Data.DataColumn("LOAD_YEAR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_YEAR)
-            Me.columnCARD_NUMBER = New Global.System.Data.DataColumn("CARD_NUMBER", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCARD_NUMBER)
-            Me.columnLOAD_DID = New Global.System.Data.DataColumn("LOAD_DID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_DID)
-            Me.columnLC_METER = New Global.System.Data.DataColumn("LC_METER", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_METER)
-            Me.columnLOAD_STATUS = New Global.System.Data.DataColumn("LOAD_STATUS", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_STATUS)
-            Me.columnLOAD_Q = New Global.System.Data.DataColumn("LOAD_Q", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_Q)
             Me.columnSTATUS_NAME = New Global.System.Data.DataColumn("STATUS_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSTATUS_NAME)
-            Me.columnDRIVER_ID = New Global.System.Data.DataColumn("DRIVER_ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDRIVER_ID)
-            Me.columnDRIVER_NAME = New Global.System.Data.DataColumn("DRIVER_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDRIVER_NAME)
             Me.columnLOAD_DRIVER = New Global.System.Data.DataColumn("LOAD_DRIVER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_DRIVER)
-            Me.columnSHIPEMPLOYEE_NAME = New Global.System.Data.DataColumn("SHIPEMPLOYEE_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSHIPEMPLOYEE_NAME)
-            Me.columnLOAD_SHIPDRIVER = New Global.System.Data.DataColumn("LOAD_SHIPDRIVER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_SHIPDRIVER)
             Me.columnLOAD_TRUCKCOMPANY = New Global.System.Data.DataColumn("LOAD_TRUCKCOMPANY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_TRUCKCOMPANY)
             Me.columnLOAD_CUSTOMER = New Global.System.Data.DataColumn("LOAD_CUSTOMER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_CUSTOMER)
             Me.columnLOAD_VEHICLE3 = New Global.System.Data.DataColumn("LOAD_VEHICLE3", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_VEHICLE3)
-            Me.columnLOAD_VEHICLE = New Global.System.Data.DataColumn("LOAD_VEHICLE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_VEHICLE)
-            Me.columnLOAD_VEHICLE2 = New Global.System.Data.DataColumn("LOAD_VEHICLE2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_VEHICLE2)
-            Me.columnTRUCK_LOADTYPE = New Global.System.Data.DataColumn("TRUCK_LOADTYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTRUCK_LOADTYPE)
-            Me.columnLC_PRO = New Global.System.Data.DataColumn("LC_PRO", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_PRO)
-            Me.columnCUSTOMER_NAME = New Global.System.Data.DataColumn("CUSTOMER_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_NAME)
-            Me.columnLOAD_WEIGHT_IN = New Global.System.Data.DataColumn("LOAD_WEIGHT_IN", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_WEIGHT_IN)
-            Me.columnLOAD_WEIGHT_OUT = New Global.System.Data.DataColumn("LOAD_WEIGHT_OUT", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_WEIGHT_OUT)
             Me.columnLOAD_SEAL = New Global.System.Data.DataColumn("LOAD_SEAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_SEAL)
             Me.columnLC_SEAL = New Global.System.Data.DataColumn("LC_SEAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLC_SEAL)
-            Me.columnLOAD_SEALCOUNT = New Global.System.Data.DataColumn("LOAD_SEALCOUNT", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_SEALCOUNT)
-            Me.columnLC_SHIPPER_TEMP = New Global.System.Data.DataColumn("LC_SHIPPER_TEMP", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_SHIPPER_TEMP)
-            Me.columnSP_DATE = New Global.System.Data.DataColumn("SP_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_DATE)
-            Me.columnLOAD_SHIPPER = New Global.System.Data.DataColumn("LOAD_SHIPPER", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_SHIPPER)
             Me.columnLC_SHIPPER = New Global.System.Data.DataColumn("LC_SHIPPER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLC_SHIPPER)
-            Me.columnSP_CODE = New Global.System.Data.DataColumn("SP_CODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_CODE)
-            Me.columnSP_NAMETH = New Global.System.Data.DataColumn("SP_NAMETH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_NAMETH)
-            Me.columnSP_ADDRESSTH = New Global.System.Data.DataColumn("SP_ADDRESSTH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_ADDRESSTH)
-            Me.columnSP_AMPHURTH = New Global.System.Data.DataColumn("SP_AMPHURTH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_AMPHURTH)
-            Me.columnSP_PROVINCETH = New Global.System.Data.DataColumn("SP_PROVINCETH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_PROVINCETH)
-            Me.columnSP_NAMEEN = New Global.System.Data.DataColumn("SP_NAMEEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_NAMEEN)
-            Me.columnSP_ADDRESSEN = New Global.System.Data.DataColumn("SP_ADDRESSEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_ADDRESSEN)
-            Me.columnSP_AMPHUREN = New Global.System.Data.DataColumn("SP_AMPHUREN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_AMPHUREN)
-            Me.columnSP_PROVINCEEN = New Global.System.Data.DataColumn("SP_PROVINCEEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_PROVINCEEN)
-            Me.columnSP_CONTACT = New Global.System.Data.DataColumn("SP_CONTACT", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_CONTACT)
-            Me.columnSP_TEL = New Global.System.Data.DataColumn("SP_TEL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_TEL)
-            Me.columnSP_FAX = New Global.System.Data.DataColumn("SP_FAX", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_FAX)
-            Me.columnSP_TYPE = New Global.System.Data.DataColumn("SP_TYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_TYPE)
-            Me.columnSP_EMAIL = New Global.System.Data.DataColumn("SP_EMAIL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_EMAIL)
-            Me.columnCUSTOMER_ADDRESS = New Global.System.Data.DataColumn("CUSTOMER_ADDRESS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_ADDRESS)
-            Me.columnCUSTOMER_AMPHUR = New Global.System.Data.DataColumn("CUSTOMER_AMPHUR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_AMPHUR)
-            Me.columnCUSTOMER_PROVINCE = New Global.System.Data.DataColumn("CUSTOMER_PROVINCE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_PROVINCE)
-            Me.columnPRODUCT_ADDITIVE_RATIO = New Global.System.Data.DataColumn("PRODUCT_ADDITIVE_RATIO", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPRODUCT_ADDITIVE_RATIO)
-            Me.columnLC_CUSTOMER = New Global.System.Data.DataColumn("LC_CUSTOMER", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_CUSTOMER)
             Me.columnTRANSPORTER = New Global.System.Data.DataColumn("TRANSPORTER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRANSPORTER)
             Me.columnLC_TANK = New Global.System.Data.DataColumn("LC_TANK", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLC_TANK)
-            Me.columnLC_TANK2 = New Global.System.Data.DataColumn("LC_TANK2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_TANK2)
             Me.columnLC_API = New Global.System.Data.DataColumn("LC_API", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLC_API)
-            Me.columnLC_API2 = New Global.System.Data.DataColumn("LC_API2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_API2)
-            Me.columnLC_TEMP_MANUAL = New Global.System.Data.DataColumn("LC_TEMP_MANUAL", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_TEMP_MANUAL)
-            Me.columnLC_TEMP = New Global.System.Data.DataColumn("LC_TEMP", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_TEMP)
-            Me.columnSP_ZIPCODE = New Global.System.Data.DataColumn("SP_ZIPCODE", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSP_ZIPCODE)
-            Me.columnCUSTOMER_TEL = New Global.System.Data.DataColumn("CUSTOMER_TEL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_TEL)
-            Me.columnCUSTOMER_ZIPCODE = New Global.System.Data.DataColumn("CUSTOMER_ZIPCODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_ZIPCODE)
-            Me.columnCUSTOMER_FAX = New Global.System.Data.DataColumn("CUSTOMER_FAX", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCUSTOMER_FAX)
-            Me.columnPRODUCT_CODE = New Global.System.Data.DataColumn("PRODUCT_CODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPRODUCT_CODE)
-            Me.columnREF_TOPCHECK = New Global.System.Data.DataColumn("REF_TOPCHECK", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnREF_TOPCHECK)
             Me.columnBATCH_NAME = New Global.System.Data.DataColumn("BATCH_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBATCH_NAME)
-            Me.columnLOAD_DOFULL = New Global.System.Data.DataColumn("LOAD_DOFULL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_DOFULL)
-            Me.columnPRODUCT_NAME = New Global.System.Data.DataColumn("PRODUCT_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPRODUCT_NAME)
-            Me.columnLOAD_PRINT = New Global.System.Data.DataColumn("LOAD_PRINT", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_PRINT)
-            Me.columnLC_ADDITIVE = New Global.System.Data.DataColumn("LC_ADDITIVE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_ADDITIVE)
-            Me.columnADDNOTEDATE = New Global.System.Data.DataColumn("ADDNOTEDATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnADDNOTEDATE)
-            Me.columnLOADDATE = New Global.System.Data.DataColumn("LOADDATE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOADDATE)
-            Me.columnSTOCK_STATUS = New Global.System.Data.DataColumn("STOCK_STATUS", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSTOCK_STATUS)
-            Me.columnRAW_WEIGHT_IN = New Global.System.Data.DataColumn("RAW_WEIGHT_IN", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRAW_WEIGHT_IN)
-            Me.columnUPDATE_WEIGHT_IN = New Global.System.Data.DataColumn("UPDATE_WEIGHT_IN", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUPDATE_WEIGHT_IN)
-            Me.columnRAW_WEIGHT_OUT = New Global.System.Data.DataColumn("RAW_WEIGHT_OUT", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRAW_WEIGHT_OUT)
-            Me.columnUPDATE_WEIGHT_OUT = New Global.System.Data.DataColumn("UPDATE_WEIGHT_OUT", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUPDATE_WEIGHT_OUT)
-            Me.columnWEIGHTIN = New Global.System.Data.DataColumn("WEIGHTIN", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWEIGHTIN)
-            Me.columnWEIGHTOUT = New Global.System.Data.DataColumn("WEIGHTOUT", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWEIGHTOUT)
-            Me.columnGI_DATE = New Global.System.Data.DataColumn("GI_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnGI_DATE)
-            Me.columnCONTAINER = New Global.System.Data.DataColumn("CONTAINER", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCONTAINER)
-            Me.columnCOA = New Global.System.Data.DataColumn("COA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCOA)
-            Me.columnREMARK = New Global.System.Data.DataColumn("REMARK", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnREMARK)
-            Me.columnSHIPMENTNO = New Global.System.Data.DataColumn("SHIPMENTNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSHIPMENTNO)
-            Me.columnACCESSCODE = New Global.System.Data.DataColumn("ACCESSCODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnACCESSCODE)
-            Me.columnPACKING_TYPE = New Global.System.Data.DataColumn("PACKING_TYPE", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPACKING_TYPE)
-            Me.columnPACKING_WEIGHT = New Global.System.Data.DataColumn("PACKING_WEIGHT", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPACKING_WEIGHT)
-            Me.columnPACKING_QTY = New Global.System.Data.DataColumn("PACKING_QTY", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPACKING_QTY)
-            Me.columnP_CODE = New Global.System.Data.DataColumn("P_CODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnP_CODE)
-            Me.columnP_WEIGHT = New Global.System.Data.DataColumn("P_WEIGHT", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnP_WEIGHT)
-            Me.columnP_CAPASITY = New Global.System.Data.DataColumn("P_CAPASITY", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnP_CAPASITY)
-            Me.columnWEIGHTTOTAL = New Global.System.Data.DataColumn("WEIGHTTOTAL", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWEIGHTTOTAL)
-            Me.columnLOAD_TEMP = New Global.System.Data.DataColumn("LOAD_TEMP", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_TEMP)
             Me.columnLOAD_TANK = New Global.System.Data.DataColumn("LOAD_TANK", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLOAD_TANK)
-            Me.columnMETERREADER = New Global.System.Data.DataColumn("METERREADER", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMETERREADER)
-            Me.columnDENSITY = New Global.System.Data.DataColumn("DENSITY", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDENSITY)
-            Me.columnWEIGHTCAL = New Global.System.Data.DataColumn("WEIGHTCAL", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWEIGHTCAL)
-            Me.columnWEIGHTIN_TIME = New Global.System.Data.DataColumn("WEIGHTIN_TIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWEIGHTIN_TIME)
-            Me.columnWEIGHTOUT_TIME = New Global.System.Data.DataColumn("WEIGHTOUT_TIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnWEIGHTOUT_TIME)
-            Me.columnTAKENTIME = New Global.System.Data.DataColumn("TAKENTIME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTAKENTIME)
-            Me.columnSHIPMENTTYPE = New Global.System.Data.DataColumn("SHIPMENTTYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSHIPMENTTYPE)
-            Me.columnDO_NO = New Global.System.Data.DataColumn("DO_NO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDO_NO)
-            Me.columnBATCHLOT = New Global.System.Data.DataColumn("BATCHLOT", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBATCHLOT)
             Me.columnTANKFARM = New Global.System.Data.DataColumn("TANKFARM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTANKFARM)
             Me.columnLC_STARTTIME = New Global.System.Data.DataColumn("LC_STARTTIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLC_STARTTIME)
             Me.columnLC_ENDTIME = New Global.System.Data.DataColumn("LC_ENDTIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLC_ENDTIME)
-            Me.columnLC_BATCHGROSSBASE = New Global.System.Data.DataColumn("LC_BATCHGROSSBASE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBASE)
-            Me.columnLC_BATCHGROSSBLEND = New Global.System.Data.DataColumn("LC_BATCHGROSSBLEND", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBLEND)
-            Me.columnLC_BATCHNETBASE_30C = New Global.System.Data.DataColumn("LC_BATCHNETBASE_30C", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHNETBASE_30C)
-            Me.columnLC_BATCHNETBLEND_30C = New Global.System.Data.DataColumn("LC_BATCHNETBLEND_30C", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHNETBLEND_30C)
-            Me.columnLC_CUMULBASE_GROSLTR = New Global.System.Data.DataColumn("LC_CUMULBASE_GROSLTR", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_CUMULBASE_GROSLTR)
-            Me.columnLC_CUMULBLEND_GROSLTR = New Global.System.Data.DataColumn("LC_CUMULBLEND_GROSLTR", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_CUMULBLEND_GROSLTR)
-            Me.columnLC_CUMULBASE_NETLTR = New Global.System.Data.DataColumn("LC_CUMULBASE_NETLTR", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_CUMULBASE_NETLTR)
-            Me.columnLC_CUMULBLEND_NETLTR = New Global.System.Data.DataColumn("LC_CUMULBLEND_NETLTR", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_CUMULBLEND_NETLTR)
-            Me.columnLC_DENSITY_30C = New Global.System.Data.DataColumn("LC_DENSITY_30C", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_DENSITY_30C)
-            Me.columnLC_VCF = New Global.System.Data.DataColumn("LC_VCF", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_VCF)
-            Me.columnLC_METERFACTOR3 = New Global.System.Data.DataColumn("LC_METERFACTOR3", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_METERFACTOR3)
-            Me.columnLC_K_FACTOR = New Global.System.Data.DataColumn("LC_K_FACTOR", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_K_FACTOR)
-            Me.columnLC_BATCHGROSSBASE1 = New Global.System.Data.DataColumn("LC_BATCHGROSSBASE1", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBASE1)
-            Me.columnLC_BATCHGROSSBLEND1 = New Global.System.Data.DataColumn("LC_BATCHGROSSBLEND1", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBLEND1)
-            Me.columnLC_BATCHNETBASE_30C1 = New Global.System.Data.DataColumn("LC_BATCHNETBASE_30C1", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHNETBASE_30C1)
-            Me.columnLC_BATCHNETBLEND_30C1 = New Global.System.Data.DataColumn("LC_BATCHNETBLEND_30C1", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLC_BATCHNETBLEND_30C1)
-            Me.columnLOADDIFF = New Global.System.Data.DataColumn("LOADDIFF", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOADDIFF)
-            Me.columnTANK_API_PRO1 = New Global.System.Data.DataColumn("TANK_API_PRO1", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTANK_API_PRO1)
-            Me.columnTANK_API_PRO2 = New Global.System.Data.DataColumn("TANK_API_PRO2", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTANK_API_PRO2)
             Me.columnUPDATE_DATE = New Global.System.Data.DataColumn("UPDATE_DATE", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUPDATE_DATE)
             Me.columnUPDATE_BY = New Global.System.Data.DataColumn("UPDATE_BY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUPDATE_BY)
-            Me.columnCHECKIN_TIME = New Global.System.Data.DataColumn("CHECKIN_TIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCHECKIN_TIME)
             Me.columnQ_TIME = New Global.System.Data.DataColumn("Q_TIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnQ_TIME)
-            Me.columnCHECKOUT_TIME = New Global.System.Data.DataColumn("CHECKOUT_TIME", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCHECKOUT_TIME)
-            Me.columnLOAD_VEHICLE_ID = New Global.System.Data.DataColumn("LOAD_VEHICLE_ID", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnLOAD_VEHICLE_ID)
             Me.columnDO_TYPE = New Global.System.Data.DataColumn("DO_TYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDO_TYPE)
-            Me.columnPRODUCT_COLOR = New Global.System.Data.DataColumn("PRODUCT_COLOR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPRODUCT_COLOR)
-            Me.columnPRODUCT_REMARK = New Global.System.Data.DataColumn("PRODUCT_REMARK", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPRODUCT_REMARK)
-            Me.columnADVISENOTE_TYPE = New Global.System.Data.DataColumn("ADVISENOTE_TYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnADVISENOTE_TYPE)
-            Me.columnADDITIVE = New Global.System.Data.DataColumn("ADDITIVE", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnADDITIVE)
-            Me.columnDRY = New Global.System.Data.DataColumn("DRY", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDRY)
-            Me.columnSAPLOAD_ID.MaxLength = 30
-            Me.columnSHIPMENTNUMBER.MaxLength = 50
+            Me.columnLOAD_ID = New Global.System.Data.DataColumn("LOAD_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_ID)
+            Me.columnLOAD_CAPACITY = New Global.System.Data.DataColumn("LOAD_CAPACITY", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_CAPACITY)
+            Me.columnLOAD_PRESET = New Global.System.Data.DataColumn("LOAD_PRESET", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_PRESET)
+            Me.columnLOAD_CARD = New Global.System.Data.DataColumn("LOAD_CARD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_CARD)
+            Me.columnLC_COMPARTMENT = New Global.System.Data.DataColumn("LC_COMPARTMENT", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_COMPARTMENT)
+            Me.columnLC_CAPACITY = New Global.System.Data.DataColumn("LC_CAPACITY", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_CAPACITY)
+            Me.columnLC_PRESET = New Global.System.Data.DataColumn("LC_PRESET", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_PRESET)
+            Me.columnLC_ISLAND = New Global.System.Data.DataColumn("LC_ISLAND", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_ISLAND)
+            Me.columnLC_BAY = New Global.System.Data.DataColumn("LC_BAY", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BAY)
+            Me.columnLC_STATUS = New Global.System.Data.DataColumn("LC_STATUS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_STATUS)
+            Me.columnLC_BASE = New Global.System.Data.DataColumn("LC_BASE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BASE)
+            Me.columnLC_BLEND = New Global.System.Data.DataColumn("LC_BLEND", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BLEND)
+            Me.columnLOAD_DID = New Global.System.Data.DataColumn("LOAD_DID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_DID)
+            Me.columnLC_METER = New Global.System.Data.DataColumn("LC_METER", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_METER)
+            Me.columnLOAD_STATUS = New Global.System.Data.DataColumn("LOAD_STATUS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_STATUS)
+            Me.columnLOAD_Q = New Global.System.Data.DataColumn("LOAD_Q", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_Q)
+            Me.columnDriver_ID = New Global.System.Data.DataColumn("Driver_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDriver_ID)
+            Me.columnDriver_Name = New Global.System.Data.DataColumn("Driver_Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDriver_Name)
+            Me.columnLoad_Vehicle = New Global.System.Data.DataColumn("Load_Vehicle", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLoad_Vehicle)
+            Me.columnTruck_Loadtype = New Global.System.Data.DataColumn("Truck_Loadtype", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTruck_Loadtype)
+            Me.columnLC_PRO = New Global.System.Data.DataColumn("LC_PRO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_PRO)
+            Me.columnCustomer_name = New Global.System.Data.DataColumn("Customer_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_name)
+            Me.columnLOAD_WEIGHT_IN = New Global.System.Data.DataColumn("LOAD_WEIGHT_IN", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_WEIGHT_IN)
+            Me.columnLOAD_WEIGHT_OUT = New Global.System.Data.DataColumn("LOAD_WEIGHT_OUT", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_WEIGHT_OUT)
+            Me.columnLOAD_SEALCOUNT = New Global.System.Data.DataColumn("LOAD_SEALCOUNT", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_SEALCOUNT)
+            Me.columnLC_SHIPPER_Temp = New Global.System.Data.DataColumn("LC_SHIPPER_Temp", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_SHIPPER_Temp)
+            Me.columnSP_Date = New Global.System.Data.DataColumn("SP_Date", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Date)
+            Me.columnLOAD_SHIPPER = New Global.System.Data.DataColumn("LOAD_SHIPPER", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_SHIPPER)
+            Me.columnSP_Code = New Global.System.Data.DataColumn("SP_Code", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Code)
+            Me.columnSP_NameTH = New Global.System.Data.DataColumn("SP_NameTH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_NameTH)
+            Me.columnSP_AddressTH = New Global.System.Data.DataColumn("SP_AddressTH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_AddressTH)
+            Me.columnSP_AmphurTH = New Global.System.Data.DataColumn("SP_AmphurTH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_AmphurTH)
+            Me.columnSP_ProvinceTH = New Global.System.Data.DataColumn("SP_ProvinceTH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_ProvinceTH)
+            Me.columnSP_NameEN = New Global.System.Data.DataColumn("SP_NameEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_NameEN)
+            Me.columnSP_AddressEN = New Global.System.Data.DataColumn("SP_AddressEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_AddressEN)
+            Me.columnSP_AmphurEN = New Global.System.Data.DataColumn("SP_AmphurEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_AmphurEN)
+            Me.columnSP_ProvinceEN = New Global.System.Data.DataColumn("SP_ProvinceEN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_ProvinceEN)
+            Me.columnSP_Contact = New Global.System.Data.DataColumn("SP_Contact", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Contact)
+            Me.columnSP_Tel = New Global.System.Data.DataColumn("SP_Tel", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Tel)
+            Me.columnSP_Fax = New Global.System.Data.DataColumn("SP_Fax", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Fax)
+            Me.columnSP_Type = New Global.System.Data.DataColumn("SP_Type", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Type)
+            Me.columnSP_Email = New Global.System.Data.DataColumn("SP_Email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_Email)
+            Me.columnCustomer_address = New Global.System.Data.DataColumn("Customer_address", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_address)
+            Me.columnCustomer_amphur = New Global.System.Data.DataColumn("Customer_amphur", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_amphur)
+            Me.columnCustomer_province = New Global.System.Data.DataColumn("Customer_province", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_province)
+            Me.columnProduct_additive_Ratio = New Global.System.Data.DataColumn("Product_additive_Ratio", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProduct_additive_Ratio)
+            Me.columnLC_CUSTOMER = New Global.System.Data.DataColumn("LC_CUSTOMER", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_CUSTOMER)
+            Me.columnLC_TEMP = New Global.System.Data.DataColumn("LC_TEMP", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_TEMP)
+            Me.columnSP_ZIPCODE = New Global.System.Data.DataColumn("SP_ZIPCODE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSP_ZIPCODE)
+            Me.columnCustomer_tel = New Global.System.Data.DataColumn("Customer_tel", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_tel)
+            Me.columnCustomer_Zipcode = New Global.System.Data.DataColumn("Customer_Zipcode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_Zipcode)
+            Me.columnCustomer_fax = New Global.System.Data.DataColumn("Customer_fax", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomer_fax)
+            Me.columnProduct_code = New Global.System.Data.DataColumn("Product_code", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProduct_code)
+            Me.columnRef_Topcheck = New Global.System.Data.DataColumn("Ref_Topcheck", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRef_Topcheck)
+            Me.columnLOAD_DOfull = New Global.System.Data.DataColumn("LOAD_DOfull", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_DOfull)
+            Me.columnProduct_name = New Global.System.Data.DataColumn("Product_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProduct_name)
+            Me.columnLOAD_PRINT = New Global.System.Data.DataColumn("LOAD_PRINT", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_PRINT)
+            Me.columnLC_Additive = New Global.System.Data.DataColumn("LC_Additive", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_Additive)
+            Me.columnAddnoteDate = New Global.System.Data.DataColumn("AddnoteDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAddnoteDate)
+            Me.columnRaw_Weight_in = New Global.System.Data.DataColumn("Raw_Weight_in", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRaw_Weight_in)
+            Me.columnUpdate_Weight_in = New Global.System.Data.DataColumn("Update_Weight_in", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUpdate_Weight_in)
+            Me.columnRaw_Weight_Out = New Global.System.Data.DataColumn("Raw_Weight_Out", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRaw_Weight_Out)
+            Me.columnUpdate_Weight_Out = New Global.System.Data.DataColumn("Update_Weight_Out", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUpdate_Weight_Out)
+            Me.columnWeightIN = New Global.System.Data.DataColumn("WeightIN", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWeightIN)
+            Me.columnWeightOut = New Global.System.Data.DataColumn("WeightOut", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWeightOut)
+            Me.columnContainer = New Global.System.Data.DataColumn("Container", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnContainer)
+            Me.columnRemark = New Global.System.Data.DataColumn("Remark", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRemark)
+            Me.columnPacking_weight = New Global.System.Data.DataColumn("Packing_weight", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPacking_weight)
+            Me.columnPacking_Qty = New Global.System.Data.DataColumn("Packing_Qty", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPacking_Qty)
+            Me.columnWeightTotal = New Global.System.Data.DataColumn("WeightTotal", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWeightTotal)
+            Me.columnLOAD_TEMP = New Global.System.Data.DataColumn("LOAD_TEMP", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLOAD_TEMP)
+            Me.columnMeterReader = New Global.System.Data.DataColumn("MeterReader", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMeterReader)
+            Me.columnDensity = New Global.System.Data.DataColumn("Density", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDensity)
+            Me.columnWeightCal = New Global.System.Data.DataColumn("WeightCal", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWeightCal)
+            Me.columnWeightin_time = New Global.System.Data.DataColumn("Weightin_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWeightin_time)
+            Me.columnWeightOut_time = New Global.System.Data.DataColumn("WeightOut_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWeightOut_time)
+            Me.columndo_no = New Global.System.Data.DataColumn("do_no", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndo_no)
+            Me.columnBatchlot = New Global.System.Data.DataColumn("Batchlot", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBatchlot)
+            Me.columnLC_BATCHGROSSBASE = New Global.System.Data.DataColumn("LC_BATCHGROSSBASE", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBASE)
+            Me.columnLC_BATCHGROSSBLEND = New Global.System.Data.DataColumn("LC_BATCHGROSSBLEND", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBLEND)
+            Me.columnLC_BATCHNETBASE_30C = New Global.System.Data.DataColumn("LC_BATCHNETBASE_30C", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHNETBASE_30C)
+            Me.columnLC_BATCHNETBLEND_30C = New Global.System.Data.DataColumn("LC_BATCHNETBLEND_30C", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHNETBLEND_30C)
+            Me.columnLC_CUMULBASE_GROSLTR = New Global.System.Data.DataColumn("LC_CUMULBASE_GROSLTR", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_CUMULBASE_GROSLTR)
+            Me.columnLC_CUMULBLEND_GROSLTR = New Global.System.Data.DataColumn("LC_CUMULBLEND_GROSLTR", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_CUMULBLEND_GROSLTR)
+            Me.columnLC_CUMULBASE_NETLTR = New Global.System.Data.DataColumn("LC_CUMULBASE_NETLTR", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_CUMULBASE_NETLTR)
+            Me.columnLC_CUMULBLEND_NETLTR = New Global.System.Data.DataColumn("LC_CUMULBLEND_NETLTR", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_CUMULBLEND_NETLTR)
+            Me.columnLC_DENSITY_30C = New Global.System.Data.DataColumn("LC_DENSITY_30C", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_DENSITY_30C)
+            Me.columnLC_VCF = New Global.System.Data.DataColumn("LC_VCF", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_VCF)
+            Me.columnLC_METERFACTOR3 = New Global.System.Data.DataColumn("LC_METERFACTOR3", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_METERFACTOR3)
+            Me.columnLC_K_FACTOR = New Global.System.Data.DataColumn("LC_K_FACTOR", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_K_FACTOR)
+            Me.columnLC_BATCHGROSSBASE1 = New Global.System.Data.DataColumn("LC_BATCHGROSSBASE1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBASE1)
+            Me.columnLC_BATCHGROSSBLEND1 = New Global.System.Data.DataColumn("LC_BATCHGROSSBLEND1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHGROSSBLEND1)
+            Me.columnLC_BATCHNETBASE_30C1 = New Global.System.Data.DataColumn("LC_BATCHNETBASE_30C1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHNETBASE_30C1)
+            Me.columnLC_BATCHNETBLEND_30C1 = New Global.System.Data.DataColumn("LC_BATCHNETBLEND_30C1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLC_BATCHNETBLEND_30C1)
+            Me.columnCheckin_time = New Global.System.Data.DataColumn("Checkin_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheckin_time)
+            Me.columnCheckout_Time = New Global.System.Data.DataColumn("Checkout_Time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheckout_Time)
+            Me.columnload_Vehicle_ID = New Global.System.Data.DataColumn("load_Vehicle_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnload_Vehicle_ID)
+            Me.columnproduct_color = New Global.System.Data.DataColumn("product_color", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproduct_color)
+            Me.columnproduct_Remark = New Global.System.Data.DataColumn("product_Remark", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproduct_Remark)
+            Me.columnadvisenote_type = New Global.System.Data.DataColumn("advisenote_type", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnadvisenote_type)
             Me.columnLOAD_DELIVERY.MaxLength = 50
-            Me.columnLOAD_CARD.MaxLength = 10
-            Me.columnREFERENCE.MaxLength = 30
-            Me.columnCARD_TYPE.MaxLength = 50
-            Me.columnCARD_SERIAL.MaxLength = 10
-            Me.columnDRIVER_CARD_SERIAL.MaxLength = 50
             Me.columnDRIVER_PINCODE.MaxLength = 30
-            Me.columnTRUCK_CARD_SERIAL.MaxLength = 50
             Me.columnLOAD_DAY.MaxLength = 10
             Me.columnLOAD_MONTH.MaxLength = 10
             Me.columnLOAD_YEAR.MaxLength = 10
             Me.columnSTATUS_NAME.MaxLength = 50
-            Me.columnDRIVER_NAME.MaxLength = 50
             Me.columnLOAD_DRIVER.MaxLength = 102
-            Me.columnSHIPEMPLOYEE_NAME.MaxLength = 50
-            Me.columnLOAD_SHIPDRIVER.MaxLength = 102
             Me.columnLOAD_TRUCKCOMPANY.MaxLength = 50
             Me.columnLOAD_CUSTOMER.MaxLength = 50
             Me.columnLOAD_VEHICLE3.MaxLength = 50
-            Me.columnLOAD_VEHICLE.MaxLength = 81
-            Me.columnLOAD_VEHICLE2.MaxLength = 81
-            Me.columnTRUCK_LOADTYPE.MaxLength = 50
-            Me.columnCUSTOMER_NAME.MaxLength = 200
             Me.columnLOAD_SEAL.MaxLength = 50
             Me.columnLC_SEAL.MaxLength = 50
             Me.columnLC_SHIPPER.MaxLength = 20
-            Me.columnSP_CODE.MaxLength = 20
-            Me.columnSP_NAMETH.MaxLength = 50
-            Me.columnSP_ADDRESSTH.MaxLength = 250
-            Me.columnSP_AMPHURTH.MaxLength = 50
-            Me.columnSP_PROVINCETH.MaxLength = 50
-            Me.columnSP_NAMEEN.MaxLength = 50
-            Me.columnSP_ADDRESSEN.MaxLength = 500
-            Me.columnSP_AMPHUREN.MaxLength = 50
-            Me.columnSP_PROVINCEEN.MaxLength = 50
-            Me.columnSP_CONTACT.MaxLength = 50
-            Me.columnSP_TEL.MaxLength = 20
-            Me.columnSP_FAX.MaxLength = 20
-            Me.columnSP_TYPE.MaxLength = 20
-            Me.columnSP_EMAIL.MaxLength = 50
-            Me.columnCUSTOMER_ADDRESS.MaxLength = 250
-            Me.columnCUSTOMER_AMPHUR.MaxLength = 50
-            Me.columnCUSTOMER_PROVINCE.MaxLength = 50
             Me.columnTRANSPORTER.MaxLength = 200
             Me.columnLC_TANK.MaxLength = 53
-            Me.columnLC_TANK2.MaxLength = 50
             Me.columnLC_API.MaxLength = 20
-            Me.columnLC_API2.MaxLength = 20
-            Me.columnCUSTOMER_TEL.MaxLength = 150
-            Me.columnCUSTOMER_ZIPCODE.MaxLength = 20
-            Me.columnCUSTOMER_FAX.MaxLength = 50
-            Me.columnPRODUCT_CODE.MaxLength = 50
             Me.columnBATCH_NAME.MaxLength = 50
-            Me.columnLOAD_DOFULL.MaxLength = 50
-            Me.columnPRODUCT_NAME.MaxLength = 50
-            Me.columnLOADDATE.MaxLength = 32
-            Me.columnCONTAINER.MaxLength = 30
-            Me.columnCOA.MaxLength = 200
-            Me.columnREMARK.MaxLength = 250
-            Me.columnSHIPMENTNO.MaxLength = 20
-            Me.columnACCESSCODE.MaxLength = 20
-            Me.columnP_CODE.MaxLength = 50
             Me.columnLOAD_TANK.MaxLength = 50
-            Me.columnTAKENTIME.MaxLength = 20
-            Me.columnSHIPMENTTYPE.MaxLength = 50
-            Me.columnDO_NO.MaxLength = 50
-            Me.columnBATCHLOT.MaxLength = 100
             Me.columnTANKFARM.MaxLength = 100
             Me.columnUPDATE_BY.MaxLength = 100
             Me.columnDO_TYPE.MaxLength = 10
-            Me.columnPRODUCT_COLOR.MaxLength = 50
-            Me.columnPRODUCT_REMARK.MaxLength = 250
-            Me.columnADVISENOTE_TYPE.MaxLength = 100
+            Me.columnDriver_Name.MaxLength = 50
+            Me.columnLoad_Vehicle.ReadOnly = true
+            Me.columnLoad_Vehicle.MaxLength = 82
+            Me.columnTruck_Loadtype.MaxLength = 50
+            Me.columnCustomer_name.MaxLength = 200
+            Me.columnSP_Code.MaxLength = 20
+            Me.columnSP_NameTH.MaxLength = 50
+            Me.columnSP_AddressTH.MaxLength = 250
+            Me.columnSP_AmphurTH.MaxLength = 50
+            Me.columnSP_ProvinceTH.MaxLength = 50
+            Me.columnSP_NameEN.MaxLength = 50
+            Me.columnSP_AddressEN.MaxLength = 500
+            Me.columnSP_AmphurEN.MaxLength = 50
+            Me.columnSP_ProvinceEN.MaxLength = 50
+            Me.columnSP_Contact.MaxLength = 50
+            Me.columnSP_Tel.MaxLength = 20
+            Me.columnSP_Fax.MaxLength = 20
+            Me.columnSP_Type.MaxLength = 20
+            Me.columnSP_Email.MaxLength = 50
+            Me.columnCustomer_address.MaxLength = 250
+            Me.columnCustomer_amphur.MaxLength = 50
+            Me.columnCustomer_province.MaxLength = 50
+            Me.columnCustomer_tel.MaxLength = 150
+            Me.columnCustomer_Zipcode.MaxLength = 20
+            Me.columnCustomer_fax.MaxLength = 50
+            Me.columnProduct_code.MaxLength = 50
+            Me.columnLOAD_DOfull.MaxLength = 25
+            Me.columnProduct_name.MaxLength = 50
+            Me.columnWeightIN.ReadOnly = true
+            Me.columnWeightOut.ReadOnly = true
+            Me.columnContainer.MaxLength = 30
+            Me.columnRemark.MaxLength = 250
+            Me.columndo_no.MaxLength = 50
+            Me.columnBatchlot.MaxLength = 100
+            Me.columnproduct_color.MaxLength = 50
+            Me.columnproduct_Remark.MaxLength = 250
+            Me.columnadvisenote_type.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10670,81 +10177,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_ID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_IDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SAPLOAD_ID() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SAPLOAD_IDColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SAPLOAD_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SAPLOAD_IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SHIPMENTNUMBER() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SHIPMENTNUMBERColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SHIPMENTNUMBER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SHIPMENTNUMBERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_CAPACITY() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_CAPACITYColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_CAPACITY' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_CAPACITYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_PRESET() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_PRESETColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_PRESET' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_PRESETColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property LOAD_DELIVERY() As String
             Get
                 Try 
@@ -10760,246 +10192,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_CARDID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_CARDIDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_CARDID' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_CARDIDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_CARD() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_CARDColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_CARD' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_CARDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property VOL86F() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.VOL86FColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'VOL86F' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.VOL86FColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property VOL86F2() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.VOL86F2Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'VOL86F2' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.VOL86F2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_COMPARTMENT() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_COMPARTMENTColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_COMPARTMENT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_COMPARTMENTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_CAPACITY() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CAPACITYColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CAPACITY' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_CAPACITYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_PRESET() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_PRESETColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_PRESET' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_PRESETColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_ISLAND() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_ISLANDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_ISLAND' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_ISLANDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BAY() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BAYColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BAY' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BAYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_STATUS() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_STATUSColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_STATUS' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_STATUSColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BASE() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BASEColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BASE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BASEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BLEND() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BLENDColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BLEND' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BLENDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property REFERENCE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.REFERENCEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'REFERENCE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.REFERENCEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CARD_TYPE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CARD_TYPEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CARD_TYPE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CARD_TYPEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CARD_SERIAL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CARD_SERIALColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CARD_SERIAL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CARD_SERIALColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DRIVER_CARD_SERIAL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.DRIVER_CARD_SERIALColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DRIVER_CARD_SERIAL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.DRIVER_CARD_SERIALColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property DRIVER_PINCODE() As String
             Get
                 Try 
@@ -11010,21 +10202,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_LOADINGNOTE.DRIVER_PINCODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_CARD_SERIAL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.TRUCK_CARD_SERIALColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_CARD_SERIAL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.TRUCK_CARD_SERIALColumn) = value
             End Set
         End Property
         
@@ -11090,81 +10267,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CARD_NUMBER() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CARD_NUMBERColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CARD_NUMBER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CARD_NUMBERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_DID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_DIDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_DID' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_DIDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_METER() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_METERColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_METER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_METERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_STATUS() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_STATUSColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_STATUS' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_STATUSColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_Q() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_QColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_Q' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_QColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property STATUS_NAME() As String
             Get
                 Try 
@@ -11180,36 +10282,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DRIVER_ID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.DRIVER_IDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DRIVER_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.DRIVER_IDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DRIVER_NAME() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.DRIVER_NAMEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DRIVER_NAME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.DRIVER_NAMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property LOAD_DRIVER() As String
             Get
                 Try 
@@ -11220,36 +10292,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_LOADINGNOTE.LOAD_DRIVERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SHIPEMPLOYEE_NAME() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SHIPEMPLOYEE_NAMEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SHIPEMPLOYEE_NAME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SHIPEMPLOYEE_NAMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_SHIPDRIVER() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_SHIPDRIVERColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_SHIPDRIVER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_SHIPDRIVERColumn) = value
             End Set
         End Property
         
@@ -11300,111 +10342,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_VEHICLE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_VEHICLE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_VEHICLE2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_VEHICLE2' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TRUCK_LOADTYPE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.TRUCK_LOADTYPEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TRUCK_LOADTYPE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.TRUCK_LOADTYPEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_PRO() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_PROColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_PRO' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_PROColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_NAME() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_NAMEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_NAME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_NAMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_WEIGHT_IN() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_INColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_WEIGHT_IN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_INColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_WEIGHT_OUT() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_OUTColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_WEIGHT_OUT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_OUTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property LOAD_SEAL() As String
             Get
                 Try 
@@ -11435,66 +10372,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_SEALCOUNT() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_SEALCOUNTColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_SEALCOUNT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_SEALCOUNTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_SHIPPER_TEMP() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_SHIPPER_TEMPColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_SHIPPER_TEMP' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_SHIPPER_TEMPColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_DATE() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_DATEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_DATE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_DATEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_SHIPPER() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_SHIPPERColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_SHIPPER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_SHIPPERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property LC_SHIPPER() As String
             Get
                 Try 
@@ -11505,292 +10382,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_LOADINGNOTE.LC_SHIPPERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_CODE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_CODEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_CODE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_CODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_NAMETH() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_NAMETHColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_NAMETH' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_NAMETHColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_ADDRESSTH() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ADDRESSTHColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_ADDRESSTH' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_ADDRESSTHColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_AMPHURTH() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_AMPHURTHColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_AMPHURTH' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_AMPHURTHColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_PROVINCETH() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_PROVINCETHColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_PROVINCETH' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_PROVINCETHColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_NAMEEN() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_NAMEENColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_NAMEEN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_NAMEENColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_ADDRESSEN() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ADDRESSENColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_ADDRESSEN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_ADDRESSENColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_AMPHUREN() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_AMPHURENColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_AMPHUREN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_AMPHURENColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_PROVINCEEN() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_PROVINCEENColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_PROVINCEEN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_PROVINCEENColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_CONTACT() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_CONTACTColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_CONTACT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_CONTACTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_TEL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_TELColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_TEL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_TELColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_FAX() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_FAXColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_FAX' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_FAXColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_TYPE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_TYPEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_TYPE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_TYPEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_EMAIL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_EMAILColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_EMAIL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_EMAILColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_ADDRESS() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_ADDRESSColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_ADDRESS' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_ADDRESSColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_AMPHUR() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_AMPHURColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_AMPHUR' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_AMPHURColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_PROVINCE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_PROVINCEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_PROVINCE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_PROVINCEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PRODUCT_ADDITIVE_RATIO() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PRODUCT_ADDITIVE_RATIOColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PRODUCT_ADDITIVE_RATIO' in table 'V_LOADINGNOTE' is DBNull."& _ 
-                            "", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.PRODUCT_ADDITIVE_RATIOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_CUSTOMER() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUSTOMERColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUSTOMER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_CUSTOMERColumn) = value
             End Set
         End Property
         
@@ -11826,21 +10417,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_TANK2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_TANK2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_TANK2' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_TANK2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property LC_API() As String
             Get
                 Try 
@@ -11851,141 +10427,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_LOADINGNOTE.LC_APIColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_API2() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_API2Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_API2' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_API2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_TEMP_MANUAL() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_TEMP_MANUALColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_TEMP_MANUAL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_TEMP_MANUALColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_TEMP() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_TEMPColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_TEMP' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_TEMPColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SP_ZIPCODE() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ZIPCODEColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_ZIPCODE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SP_ZIPCODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_TEL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_TELColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_TEL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_TELColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_ZIPCODE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_ZIPCODEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_ZIPCODE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_ZIPCODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CUSTOMER_FAX() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CUSTOMER_FAXColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CUSTOMER_FAX' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CUSTOMER_FAXColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PRODUCT_CODE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PRODUCT_CODEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PRODUCT_CODE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.PRODUCT_CODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property REF_TOPCHECK() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.REF_TOPCHECKColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'REF_TOPCHECK' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.REF_TOPCHECKColumn) = value
             End Set
         End Property
         
@@ -12006,411 +10447,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_DOFULL() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_DOFULLColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_DOFULL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_DOFULLColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PRODUCT_NAME() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PRODUCT_NAMEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PRODUCT_NAME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.PRODUCT_NAMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_PRINT() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_PRINTColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_PRINT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_PRINTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_ADDITIVE() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_ADDITIVEColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_ADDITIVE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_ADDITIVEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ADDNOTEDATE() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.ADDNOTEDATEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ADDNOTEDATE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.ADDNOTEDATEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOADDATE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOADDATEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOADDATE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOADDATEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property STOCK_STATUS() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.STOCK_STATUSColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'STOCK_STATUS' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.STOCK_STATUSColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property RAW_WEIGHT_IN() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.RAW_WEIGHT_INColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'RAW_WEIGHT_IN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.RAW_WEIGHT_INColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property UPDATE_WEIGHT_IN() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_INColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'UPDATE_WEIGHT_IN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_INColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property RAW_WEIGHT_OUT() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.RAW_WEIGHT_OUTColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'RAW_WEIGHT_OUT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.RAW_WEIGHT_OUTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property UPDATE_WEIGHT_OUT() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_OUTColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'UPDATE_WEIGHT_OUT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_OUTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WEIGHTIN() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.WEIGHTINColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WEIGHTIN' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.WEIGHTINColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WEIGHTOUT() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.WEIGHTOUTColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WEIGHTOUT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.WEIGHTOUTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property GI_DATE() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.GI_DATEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'GI_DATE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.GI_DATEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CONTAINER() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CONTAINERColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CONTAINER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CONTAINERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property COA() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.COAColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'COA' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.COAColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property REMARK() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.REMARKColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'REMARK' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.REMARKColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SHIPMENTNO() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SHIPMENTNOColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SHIPMENTNO' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SHIPMENTNOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ACCESSCODE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.ACCESSCODEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ACCESSCODE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.ACCESSCODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PACKING_TYPE() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PACKING_TYPEColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PACKING_TYPE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.PACKING_TYPEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PACKING_WEIGHT() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PACKING_WEIGHTColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PACKING_WEIGHT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.PACKING_WEIGHTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PACKING_QTY() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PACKING_QTYColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PACKING_QTY' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.PACKING_QTYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property P_CODE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.P_CODEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'P_CODE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.P_CODEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property P_WEIGHT() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.P_WEIGHTColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'P_WEIGHT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.P_WEIGHTColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property P_CAPASITY() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.P_CAPASITYColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'P_CAPASITY' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.P_CAPASITYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WEIGHTTOTAL() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.WEIGHTTOTALColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WEIGHTTOTAL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.WEIGHTTOTALColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_TEMP() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_TEMPColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_TEMP' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_TEMPColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property LOAD_TANK() As String
             Get
                 Try 
@@ -12421,141 +10457,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_LOADINGNOTE.LOAD_TANKColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property METERREADER() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.METERREADERColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'METERREADER' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.METERREADERColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DENSITY() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.DENSITYColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DENSITY' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.DENSITYColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WEIGHTCAL() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.WEIGHTCALColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WEIGHTCAL' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.WEIGHTCALColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WEIGHTIN_TIME() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.WEIGHTIN_TIMEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WEIGHTIN_TIME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.WEIGHTIN_TIMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property WEIGHTOUT_TIME() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.WEIGHTOUT_TIMEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'WEIGHTOUT_TIME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.WEIGHTOUT_TIMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TAKENTIME() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.TAKENTIMEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TAKENTIME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.TAKENTIMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property SHIPMENTTYPE() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.SHIPMENTTYPEColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'SHIPMENTTYPE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.SHIPMENTTYPEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DO_NO() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.DO_NOColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DO_NO' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.DO_NOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property BATCHLOT() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.BATCHLOTColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BATCHLOT' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.BATCHLOTColumn) = value
             End Set
         End Property
         
@@ -12606,291 +10507,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHGROSSBASE() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASEColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBASE' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHGROSSBLEND() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLENDColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBLEND' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLENDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHNETBASE_30C() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30CColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBASE_30C' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30CColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHNETBLEND_30C() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30CColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBLEND_30C' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30CColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_CUMULBASE_GROSLTR() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_GROSLTRColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBASE_GROSLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_GROSLTRColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_CUMULBLEND_GROSLTR() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_GROSLTRColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBLEND_GROSLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_GROSLTRColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_CUMULBASE_NETLTR() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_NETLTRColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBASE_NETLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_NETLTRColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_CUMULBLEND_NETLTR() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_NETLTRColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBLEND_NETLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_NETLTRColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_DENSITY_30C() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_DENSITY_30CColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_DENSITY_30C' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_DENSITY_30CColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_VCF() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_VCFColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_VCF' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_VCFColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_METERFACTOR3() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_METERFACTOR3Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_METERFACTOR3' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_METERFACTOR3Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_K_FACTOR() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_K_FACTORColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_K_FACTOR' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_K_FACTORColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHGROSSBASE1() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASE1Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBASE1' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASE1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHGROSSBLEND1() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLEND1Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBLEND1' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLEND1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHNETBASE_30C1() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30C1Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBASE_30C1' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30C1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LC_BATCHNETBLEND_30C1() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30C1Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBLEND_30C1' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30C1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOADDIFF() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOADDIFFColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOADDIFF' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOADDIFFColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TANK_API_PRO1() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.TANK_API_PRO1Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TANK_API_PRO1' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.TANK_API_PRO1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TANK_API_PRO2() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.TANK_API_PRO2Column),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TANK_API_PRO2' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.TANK_API_PRO2Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property UPDATE_DATE() As Date
             Get
                 Try 
@@ -12921,21 +10537,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CHECKIN_TIME() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CHECKIN_TIMEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CHECKIN_TIME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CHECKIN_TIMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property Q_TIME() As Date
             Get
                 Try 
@@ -12946,36 +10547,6 @@ Partial Public Class DataSet_View
             End Get
             Set
                 Me(Me.tableV_LOADINGNOTE.Q_TIMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property CHECKOUT_TIME() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.CHECKOUT_TIMEColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CHECKOUT_TIME' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.CHECKOUT_TIMEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property LOAD_VEHICLE_ID() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE_IDColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_VEHICLE_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE_IDColumn) = value
             End Set
         End Property
         
@@ -12996,78 +10567,1816 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PRODUCT_COLOR() As String
+        Public Property LOAD_ID() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PRODUCT_COLORColumn),String)
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_IDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PRODUCT_COLOR' in table 'V_LOADINGNOTE' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableV_LOADINGNOTE.PRODUCT_COLORColumn) = value
+                Me(Me.tableV_LOADINGNOTE.LOAD_IDColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property PRODUCT_REMARK() As String
+        Public Property LOAD_CAPACITY() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.PRODUCT_REMARKColumn),String)
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_CAPACITYColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PRODUCT_REMARK' in table 'V_LOADINGNOTE' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_CAPACITY' in table 'V_LOADINGNOTE' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableV_LOADINGNOTE.PRODUCT_REMARKColumn) = value
+                Me(Me.tableV_LOADINGNOTE.LOAD_CAPACITYColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ADVISENOTE_TYPE() As String
+        Public Property LOAD_PRESET() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.ADVISENOTE_TYPEColumn),String)
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_PRESETColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ADVISENOTE_TYPE' in table 'V_LOADINGNOTE' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_PRESET' in table 'V_LOADINGNOTE' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableV_LOADINGNOTE.ADVISENOTE_TYPEColumn) = value
+                Me(Me.tableV_LOADINGNOTE.LOAD_PRESETColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ADDITIVE() As Decimal
+        Public Property LOAD_CARD() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.ADDITIVEColumn),Decimal)
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_CARDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ADDITIVE' in table 'V_LOADINGNOTE' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_CARD' in table 'V_LOADINGNOTE' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableV_LOADINGNOTE.ADDITIVEColumn) = value
+                Me(Me.tableV_LOADINGNOTE.LOAD_CARDColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DRY() As Decimal
+        Public Property LC_COMPARTMENT() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableV_LOADINGNOTE.DRYColumn),Decimal)
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_COMPARTMENTColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DRY' in table 'V_LOADINGNOTE' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_COMPARTMENT' in table 'V_LOADINGNOTE' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableV_LOADINGNOTE.DRYColumn) = value
+                Me(Me.tableV_LOADINGNOTE.LC_COMPARTMENTColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_CAPACITY() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CAPACITYColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CAPACITY' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_CAPACITYColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_PRESET() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_PRESETColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_PRESET' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_PRESETColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_ISLAND() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_ISLANDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_ISLAND' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_ISLANDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BAY() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BAYColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BAY' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BAYColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_STATUS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_STATUSColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_STATUS' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_STATUSColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BASE() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BASEColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BASE' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BASEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BLEND() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BLENDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BLEND' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BLENDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_DID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_DIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_DID' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_DIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_METER() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_METERColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_METER' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_METERColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_STATUS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_STATUSColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_STATUS' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_STATUSColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_Q() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_QColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_Q' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_QColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Driver_ID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Driver_IDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Driver_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Driver_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Driver_Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Driver_NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Driver_Name' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Driver_NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Load_Vehicle() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Load_VehicleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Load_Vehicle' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Load_VehicleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Truck_Loadtype() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Truck_LoadtypeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Truck_Loadtype' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Truck_LoadtypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_PRO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_PROColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_PRO' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_PROColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_nameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_name' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_nameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_WEIGHT_IN() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_INColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_WEIGHT_IN' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_INColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_WEIGHT_OUT() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_OUTColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_WEIGHT_OUT' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_WEIGHT_OUTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_SEALCOUNT() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_SEALCOUNTColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_SEALCOUNT' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_SEALCOUNTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_SHIPPER_Temp() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_SHIPPER_TempColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_SHIPPER_Temp' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_SHIPPER_TempColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Date() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_DateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Date' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_DateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_SHIPPER() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_SHIPPERColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_SHIPPER' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_SHIPPERColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Code() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_CodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Code' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_CodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_NameTH() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_NameTHColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_NameTH' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_NameTHColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_AddressTH() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_AddressTHColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_AddressTH' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_AddressTHColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_AmphurTH() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_AmphurTHColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_AmphurTH' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_AmphurTHColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_ProvinceTH() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ProvinceTHColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_ProvinceTH' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_ProvinceTHColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_NameEN() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_NameENColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_NameEN' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_NameENColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_AddressEN() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_AddressENColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_AddressEN' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_AddressENColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_AmphurEN() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_AmphurENColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_AmphurEN' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_AmphurENColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_ProvinceEN() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ProvinceENColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_ProvinceEN' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_ProvinceENColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Contact() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ContactColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Contact' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_ContactColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Tel() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_TelColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Tel' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_TelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Fax() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_FaxColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Fax' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_FaxColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Type() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_TypeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Type' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_TypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_Email() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_EmailColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_Email' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_EmailColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_address() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_addressColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_address' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_addressColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_amphur() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_amphurColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_amphur' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_amphurColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_province() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_provinceColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_province' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_provinceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Product_additive_Ratio() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Product_additive_RatioColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Product_additive_Ratio' in table 'V_LOADINGNOTE' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Product_additive_RatioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_CUSTOMER() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUSTOMERColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUSTOMER' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_CUSTOMERColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_TEMP() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_TEMPColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_TEMP' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_TEMPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SP_ZIPCODE() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.SP_ZIPCODEColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SP_ZIPCODE' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.SP_ZIPCODEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_tel() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_telColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_tel' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_telColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_Zipcode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_ZipcodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_Zipcode' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_ZipcodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Customer_fax() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Customer_faxColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Customer_fax' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Customer_faxColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Product_code() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Product_codeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Product_code' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Product_codeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Ref_Topcheck() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Ref_TopcheckColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ref_Topcheck' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Ref_TopcheckColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_DOfull() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_DOfullColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_DOfull' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_DOfullColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Product_name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Product_nameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Product_name' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Product_nameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_PRINT() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_PRINTColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_PRINT' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_PRINTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_Additive() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_AdditiveColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_Additive' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_AdditiveColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property AddnoteDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.AddnoteDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'AddnoteDate' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.AddnoteDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Raw_Weight_in() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Raw_Weight_inColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Raw_Weight_in' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Raw_Weight_inColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Update_Weight_in() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Update_Weight_inColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Update_Weight_in' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Update_Weight_inColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Raw_Weight_Out() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Raw_Weight_OutColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Raw_Weight_Out' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Raw_Weight_OutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Update_Weight_Out() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Update_Weight_OutColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Update_Weight_Out' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Update_Weight_OutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property WeightIN() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.WeightINColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'WeightIN' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.WeightINColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property WeightOut() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.WeightOutColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'WeightOut' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.WeightOutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Container() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.ContainerColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Container' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.ContainerColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Remark() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.RemarkColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Remark' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.RemarkColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Packing_weight() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Packing_weightColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Packing_weight' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Packing_weightColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Packing_Qty() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Packing_QtyColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Packing_Qty' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Packing_QtyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property WeightTotal() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.WeightTotalColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'WeightTotal' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.WeightTotalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LOAD_TEMP() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LOAD_TEMPColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LOAD_TEMP' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LOAD_TEMPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property MeterReader() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.MeterReaderColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'MeterReader' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.MeterReaderColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Density() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.DensityColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Density' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.DensityColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property WeightCal() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.WeightCalColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'WeightCal' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.WeightCalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Weightin_time() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Weightin_timeColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Weightin_time' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Weightin_timeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property WeightOut_time() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.WeightOut_timeColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'WeightOut_time' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.WeightOut_timeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property do_no() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.do_noColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'do_no' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.do_noColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Batchlot() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.BatchlotColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Batchlot' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.BatchlotColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHGROSSBASE() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASEColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBASE' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHGROSSBLEND() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLENDColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBLEND' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLENDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHNETBASE_30C() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30CColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBASE_30C' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30CColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHNETBLEND_30C() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30CColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBLEND_30C' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30CColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_CUMULBASE_GROSLTR() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_GROSLTRColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBASE_GROSLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_GROSLTRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_CUMULBLEND_GROSLTR() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_GROSLTRColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBLEND_GROSLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_GROSLTRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_CUMULBASE_NETLTR() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_NETLTRColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBASE_NETLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_CUMULBASE_NETLTRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_CUMULBLEND_NETLTR() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_NETLTRColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_CUMULBLEND_NETLTR' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_CUMULBLEND_NETLTRColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_DENSITY_30C() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_DENSITY_30CColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_DENSITY_30C' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_DENSITY_30CColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_VCF() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_VCFColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_VCF' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_VCFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_METERFACTOR3() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_METERFACTOR3Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_METERFACTOR3' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_METERFACTOR3Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_K_FACTOR() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_K_FACTORColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_K_FACTOR' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_K_FACTORColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHGROSSBASE1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASE1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBASE1' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBASE1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHGROSSBLEND1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLEND1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHGROSSBLEND1' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHGROSSBLEND1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHNETBASE_30C1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30C1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBASE_30C1' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBASE_30C1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LC_BATCHNETBLEND_30C1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30C1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LC_BATCHNETBLEND_30C1' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.LC_BATCHNETBLEND_30C1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Checkin_time() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Checkin_timeColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Checkin_time' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Checkin_timeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Checkout_Time() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.Checkout_TimeColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Checkout_Time' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.Checkout_TimeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property load_Vehicle_ID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.load_Vehicle_IDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'load_Vehicle_ID' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.load_Vehicle_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property product_color() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.product_colorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'product_color' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.product_colorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property product_Remark() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.product_RemarkColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'product_Remark' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.product_RemarkColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property advisenote_type() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableV_LOADINGNOTE.advisenote_typeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'advisenote_type' in table 'V_LOADINGNOTE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableV_LOADINGNOTE.advisenote_typeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_DELIVERYNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DELIVERYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_DELIVERYNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_DELIVERYColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsDRIVER_PINCODENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.DRIVER_PINCODEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetDRIVER_PINCODENull()
+            Me(Me.tableV_LOADINGNOTE.DRIVER_PINCODEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_DATENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DATEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_DATENull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_DATEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_DAYNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DAYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_DAYNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_DAYColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_MONTHNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_MONTHColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_MONTHNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_MONTHColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_YEARNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_YEARColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_YEARNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_YEARColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSTATUS_NAMENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.STATUS_NAMEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSTATUS_NAMENull()
+            Me(Me.tableV_LOADINGNOTE.STATUS_NAMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_DRIVERNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DRIVERColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_DRIVERNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_DRIVERColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_TRUCKCOMPANYNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_TRUCKCOMPANYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_TRUCKCOMPANYNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_TRUCKCOMPANYColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_CUSTOMERNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_CUSTOMERColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_CUSTOMERNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_CUSTOMERColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_VEHICLE3Null() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_VEHICLE3Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_VEHICLE3Null()
+            Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE3Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_SEALNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_SEALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_SEALNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_SEALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLC_SEALNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_SEALColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLC_SEALNull()
+            Me(Me.tableV_LOADINGNOTE.LC_SEALColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLC_SHIPPERNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_SHIPPERColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLC_SHIPPERNull()
+            Me(Me.tableV_LOADINGNOTE.LC_SHIPPERColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTRANSPORTERNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.TRANSPORTERColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTRANSPORTERNull()
+            Me(Me.tableV_LOADINGNOTE.TRANSPORTERColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLC_TANKNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_TANKColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLC_TANKNull()
+            Me(Me.tableV_LOADINGNOTE.LC_TANKColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLC_APINull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_APIColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLC_APINull()
+            Me(Me.tableV_LOADINGNOTE.LC_APIColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsBATCH_NAMENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.BATCH_NAMEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetBATCH_NAMENull()
+            Me(Me.tableV_LOADINGNOTE.BATCH_NAMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLOAD_TANKNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_TANKColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLOAD_TANKNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_TANKColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTANKFARMNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.TANKFARMColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTANKFARMNull()
+            Me(Me.tableV_LOADINGNOTE.TANKFARMColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLC_STARTTIMENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_STARTTIMEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLC_STARTTIMENull()
+            Me(Me.tableV_LOADINGNOTE.LC_STARTTIMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLC_ENDTIMENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_ENDTIMEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLC_ENDTIMENull()
+            Me(Me.tableV_LOADINGNOTE.LC_ENDTIMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsUPDATE_DATENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.UPDATE_DATEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetUPDATE_DATENull()
+            Me(Me.tableV_LOADINGNOTE.UPDATE_DATEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsUPDATE_BYNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.UPDATE_BYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetUPDATE_BYNull()
+            Me(Me.tableV_LOADINGNOTE.UPDATE_BYColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsQ_TIMENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Q_TIMEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetQ_TIMENull()
+            Me(Me.tableV_LOADINGNOTE.Q_TIMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsDO_TYPENull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.DO_TYPEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetDO_TYPENull()
+            Me(Me.tableV_LOADINGNOTE.DO_TYPEColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -13079,30 +12388,6 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetLOAD_IDNull()
             Me(Me.tableV_LOADINGNOTE.LOAD_IDColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSAPLOAD_IDNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SAPLOAD_IDColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSAPLOAD_IDNull()
-            Me(Me.tableV_LOADINGNOTE.SAPLOAD_IDColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSHIPMENTNUMBERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SHIPMENTNUMBERColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSHIPMENTNUMBERNull()
-            Me(Me.tableV_LOADINGNOTE.SHIPMENTNUMBERColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13131,30 +12416,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_DELIVERYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DELIVERYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_DELIVERYNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_DELIVERYColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_CARDIDNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_CARDIDColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_CARDIDNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_CARDIDColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsLOAD_CARDNull() As Boolean
             Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_CARDColumn)
         End Function
@@ -13163,30 +12424,6 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetLOAD_CARDNull()
             Me(Me.tableV_LOADINGNOTE.LOAD_CARDColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsVOL86FNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.VOL86FColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetVOL86FNull()
-            Me(Me.tableV_LOADINGNOTE.VOL86FColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsVOL86F2Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.VOL86F2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetVOL86F2Null()
-            Me(Me.tableV_LOADINGNOTE.VOL86F2Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13287,138 +12524,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsREFERENCENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.REFERENCEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetREFERENCENull()
-            Me(Me.tableV_LOADINGNOTE.REFERENCEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCARD_TYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CARD_TYPEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCARD_TYPENull()
-            Me(Me.tableV_LOADINGNOTE.CARD_TYPEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCARD_SERIALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CARD_SERIALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCARD_SERIALNull()
-            Me(Me.tableV_LOADINGNOTE.CARD_SERIALColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDRIVER_CARD_SERIALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DRIVER_CARD_SERIALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDRIVER_CARD_SERIALNull()
-            Me(Me.tableV_LOADINGNOTE.DRIVER_CARD_SERIALColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDRIVER_PINCODENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DRIVER_PINCODEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDRIVER_PINCODENull()
-            Me(Me.tableV_LOADINGNOTE.DRIVER_PINCODEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_CARD_SERIALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TRUCK_CARD_SERIALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_CARD_SERIALNull()
-            Me(Me.tableV_LOADINGNOTE.TRUCK_CARD_SERIALColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_DATENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DATEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_DATENull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_DATEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_DAYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DAYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_DAYNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_DAYColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_MONTHNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_MONTHColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_MONTHNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_MONTHColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_YEARNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_YEARColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_YEARNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_YEARColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCARD_NUMBERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CARD_NUMBERColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCARD_NUMBERNull()
-            Me(Me.tableV_LOADINGNOTE.CARD_NUMBERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsLOAD_DIDNull() As Boolean
             Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DIDColumn)
         End Function
@@ -13467,146 +12572,50 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSTATUS_NAMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.STATUS_NAMEColumn)
+        Public Function IsDriver_IDNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Driver_IDColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSTATUS_NAMENull()
-            Me(Me.tableV_LOADINGNOTE.STATUS_NAMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetDriver_IDNull()
+            Me(Me.tableV_LOADINGNOTE.Driver_IDColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDRIVER_IDNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DRIVER_IDColumn)
+        Public Function IsDriver_NameNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Driver_NameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDRIVER_IDNull()
-            Me(Me.tableV_LOADINGNOTE.DRIVER_IDColumn) = Global.System.Convert.DBNull
+        Public Sub SetDriver_NameNull()
+            Me(Me.tableV_LOADINGNOTE.Driver_NameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDRIVER_NAMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DRIVER_NAMEColumn)
+        Public Function IsLoad_VehicleNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Load_VehicleColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDRIVER_NAMENull()
-            Me(Me.tableV_LOADINGNOTE.DRIVER_NAMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetLoad_VehicleNull()
+            Me(Me.tableV_LOADINGNOTE.Load_VehicleColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_DRIVERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DRIVERColumn)
+        Public Function IsTruck_LoadtypeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Truck_LoadtypeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_DRIVERNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_DRIVERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSHIPEMPLOYEE_NAMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SHIPEMPLOYEE_NAMEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSHIPEMPLOYEE_NAMENull()
-            Me(Me.tableV_LOADINGNOTE.SHIPEMPLOYEE_NAMEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_SHIPDRIVERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_SHIPDRIVERColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_SHIPDRIVERNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_SHIPDRIVERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_TRUCKCOMPANYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_TRUCKCOMPANYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_TRUCKCOMPANYNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_TRUCKCOMPANYColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_CUSTOMERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_CUSTOMERColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_CUSTOMERNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_CUSTOMERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_VEHICLE3Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_VEHICLE3Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_VEHICLE3Null()
-            Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE3Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_VEHICLENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_VEHICLEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_VEHICLENull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_VEHICLE2Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_VEHICLE2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_VEHICLE2Null()
-            Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE2Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRUCK_LOADTYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TRUCK_LOADTYPEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRUCK_LOADTYPENull()
-            Me(Me.tableV_LOADINGNOTE.TRUCK_LOADTYPEColumn) = Global.System.Convert.DBNull
+        Public Sub SetTruck_LoadtypeNull()
+            Me(Me.tableV_LOADINGNOTE.Truck_LoadtypeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13623,14 +12632,14 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_NAMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_NAMEColumn)
+        Public Function IsCustomer_nameNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_nameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_NAMENull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_NAMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_nameNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_nameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13659,30 +12668,6 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_SEALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_SEALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_SEALNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_SEALColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_SEALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_SEALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_SEALNull()
-            Me(Me.tableV_LOADINGNOTE.LC_SEALColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsLOAD_SEALCOUNTNull() As Boolean
             Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_SEALCOUNTColumn)
         End Function
@@ -13695,26 +12680,26 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_SHIPPER_TEMPNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_SHIPPER_TEMPColumn)
+        Public Function IsLC_SHIPPER_TempNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_SHIPPER_TempColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_SHIPPER_TEMPNull()
-            Me(Me.tableV_LOADINGNOTE.LC_SHIPPER_TEMPColumn) = Global.System.Convert.DBNull
+        Public Sub SetLC_SHIPPER_TempNull()
+            Me(Me.tableV_LOADINGNOTE.LC_SHIPPER_TempColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_DATENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_DATEColumn)
+        Public Function IsSP_DateNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_DateColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_DATENull()
-            Me(Me.tableV_LOADINGNOTE.SP_DATEColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_DateNull()
+            Me(Me.tableV_LOADINGNOTE.SP_DateColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13731,230 +12716,218 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_SHIPPERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_SHIPPERColumn)
+        Public Function IsSP_CodeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_CodeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_SHIPPERNull()
-            Me(Me.tableV_LOADINGNOTE.LC_SHIPPERColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_CodeNull()
+            Me(Me.tableV_LOADINGNOTE.SP_CodeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_CODENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_CODEColumn)
+        Public Function IsSP_NameTHNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_NameTHColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_CODENull()
-            Me(Me.tableV_LOADINGNOTE.SP_CODEColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_NameTHNull()
+            Me(Me.tableV_LOADINGNOTE.SP_NameTHColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_NAMETHNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_NAMETHColumn)
+        Public Function IsSP_AddressTHNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_AddressTHColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_NAMETHNull()
-            Me(Me.tableV_LOADINGNOTE.SP_NAMETHColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_AddressTHNull()
+            Me(Me.tableV_LOADINGNOTE.SP_AddressTHColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_ADDRESSTHNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_ADDRESSTHColumn)
+        Public Function IsSP_AmphurTHNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_AmphurTHColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_ADDRESSTHNull()
-            Me(Me.tableV_LOADINGNOTE.SP_ADDRESSTHColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_AmphurTHNull()
+            Me(Me.tableV_LOADINGNOTE.SP_AmphurTHColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_AMPHURTHNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_AMPHURTHColumn)
+        Public Function IsSP_ProvinceTHNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_ProvinceTHColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_AMPHURTHNull()
-            Me(Me.tableV_LOADINGNOTE.SP_AMPHURTHColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_ProvinceTHNull()
+            Me(Me.tableV_LOADINGNOTE.SP_ProvinceTHColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_PROVINCETHNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_PROVINCETHColumn)
+        Public Function IsSP_NameENNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_NameENColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_PROVINCETHNull()
-            Me(Me.tableV_LOADINGNOTE.SP_PROVINCETHColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_NameENNull()
+            Me(Me.tableV_LOADINGNOTE.SP_NameENColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_NAMEENNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_NAMEENColumn)
+        Public Function IsSP_AddressENNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_AddressENColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_NAMEENNull()
-            Me(Me.tableV_LOADINGNOTE.SP_NAMEENColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_AddressENNull()
+            Me(Me.tableV_LOADINGNOTE.SP_AddressENColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_ADDRESSENNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_ADDRESSENColumn)
+        Public Function IsSP_AmphurENNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_AmphurENColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_ADDRESSENNull()
-            Me(Me.tableV_LOADINGNOTE.SP_ADDRESSENColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_AmphurENNull()
+            Me(Me.tableV_LOADINGNOTE.SP_AmphurENColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_AMPHURENNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_AMPHURENColumn)
+        Public Function IsSP_ProvinceENNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_ProvinceENColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_AMPHURENNull()
-            Me(Me.tableV_LOADINGNOTE.SP_AMPHURENColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_ProvinceENNull()
+            Me(Me.tableV_LOADINGNOTE.SP_ProvinceENColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_PROVINCEENNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_PROVINCEENColumn)
+        Public Function IsSP_ContactNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_ContactColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_PROVINCEENNull()
-            Me(Me.tableV_LOADINGNOTE.SP_PROVINCEENColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_ContactNull()
+            Me(Me.tableV_LOADINGNOTE.SP_ContactColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_CONTACTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_CONTACTColumn)
+        Public Function IsSP_TelNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_TelColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_CONTACTNull()
-            Me(Me.tableV_LOADINGNOTE.SP_CONTACTColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_TelNull()
+            Me(Me.tableV_LOADINGNOTE.SP_TelColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_TELNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_TELColumn)
+        Public Function IsSP_FaxNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_FaxColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_TELNull()
-            Me(Me.tableV_LOADINGNOTE.SP_TELColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_FaxNull()
+            Me(Me.tableV_LOADINGNOTE.SP_FaxColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_FAXNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_FAXColumn)
+        Public Function IsSP_TypeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_TypeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_FAXNull()
-            Me(Me.tableV_LOADINGNOTE.SP_FAXColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_TypeNull()
+            Me(Me.tableV_LOADINGNOTE.SP_TypeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_TYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_TYPEColumn)
+        Public Function IsSP_EmailNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_EmailColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_TYPENull()
-            Me(Me.tableV_LOADINGNOTE.SP_TYPEColumn) = Global.System.Convert.DBNull
+        Public Sub SetSP_EmailNull()
+            Me(Me.tableV_LOADINGNOTE.SP_EmailColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSP_EMAILNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SP_EMAILColumn)
+        Public Function IsCustomer_addressNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_addressColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSP_EMAILNull()
-            Me(Me.tableV_LOADINGNOTE.SP_EMAILColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_addressNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_addressColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_ADDRESSNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_ADDRESSColumn)
+        Public Function IsCustomer_amphurNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_amphurColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_ADDRESSNull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_ADDRESSColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_amphurNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_amphurColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_AMPHURNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_AMPHURColumn)
+        Public Function IsCustomer_provinceNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_provinceColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_AMPHURNull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_AMPHURColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_provinceNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_provinceColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_PROVINCENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_PROVINCEColumn)
+        Public Function IsProduct_additive_RatioNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Product_additive_RatioColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_PROVINCENull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_PROVINCEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPRODUCT_ADDITIVE_RATIONull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PRODUCT_ADDITIVE_RATIOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPRODUCT_ADDITIVE_RATIONull()
-            Me(Me.tableV_LOADINGNOTE.PRODUCT_ADDITIVE_RATIOColumn) = Global.System.Convert.DBNull
+        Public Sub SetProduct_additive_RatioNull()
+            Me(Me.tableV_LOADINGNOTE.Product_additive_RatioColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13967,78 +12940,6 @@ Partial Public Class DataSet_View
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetLC_CUSTOMERNull()
             Me(Me.tableV_LOADINGNOTE.LC_CUSTOMERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTRANSPORTERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TRANSPORTERColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTRANSPORTERNull()
-            Me(Me.tableV_LOADINGNOTE.TRANSPORTERColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_TANKNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_TANKColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_TANKNull()
-            Me(Me.tableV_LOADINGNOTE.LC_TANKColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_TANK2Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_TANK2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_TANK2Null()
-            Me(Me.tableV_LOADINGNOTE.LC_TANK2Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_APINull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_APIColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_APINull()
-            Me(Me.tableV_LOADINGNOTE.LC_APIColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_API2Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_API2Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_API2Null()
-            Me(Me.tableV_LOADINGNOTE.LC_API2Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_TEMP_MANUALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_TEMP_MANUALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_TEMP_MANUALNull()
-            Me(Me.tableV_LOADINGNOTE.LC_TEMP_MANUALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14067,98 +12968,86 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_TELNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_TELColumn)
+        Public Function IsCustomer_telNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_telColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_TELNull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_TELColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_telNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_telColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_ZIPCODENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_ZIPCODEColumn)
+        Public Function IsCustomer_ZipcodeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_ZipcodeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_ZIPCODENull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_ZIPCODEColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_ZipcodeNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_ZipcodeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCUSTOMER_FAXNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CUSTOMER_FAXColumn)
+        Public Function IsCustomer_faxNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Customer_faxColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCUSTOMER_FAXNull()
-            Me(Me.tableV_LOADINGNOTE.CUSTOMER_FAXColumn) = Global.System.Convert.DBNull
+        Public Sub SetCustomer_faxNull()
+            Me(Me.tableV_LOADINGNOTE.Customer_faxColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPRODUCT_CODENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PRODUCT_CODEColumn)
+        Public Function IsProduct_codeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Product_codeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPRODUCT_CODENull()
-            Me(Me.tableV_LOADINGNOTE.PRODUCT_CODEColumn) = Global.System.Convert.DBNull
+        Public Sub SetProduct_codeNull()
+            Me(Me.tableV_LOADINGNOTE.Product_codeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsREF_TOPCHECKNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.REF_TOPCHECKColumn)
+        Public Function IsRef_TopcheckNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Ref_TopcheckColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetREF_TOPCHECKNull()
-            Me(Me.tableV_LOADINGNOTE.REF_TOPCHECKColumn) = Global.System.Convert.DBNull
+        Public Sub SetRef_TopcheckNull()
+            Me(Me.tableV_LOADINGNOTE.Ref_TopcheckColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsBATCH_NAMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.BATCH_NAMEColumn)
+        Public Function IsLOAD_DOfullNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DOfullColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetBATCH_NAMENull()
-            Me(Me.tableV_LOADINGNOTE.BATCH_NAMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetLOAD_DOfullNull()
+            Me(Me.tableV_LOADINGNOTE.LOAD_DOfullColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_DOFULLNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_DOFULLColumn)
+        Public Function IsProduct_nameNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Product_nameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_DOFULLNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_DOFULLColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPRODUCT_NAMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PRODUCT_NAMEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPRODUCT_NAMENull()
-            Me(Me.tableV_LOADINGNOTE.PRODUCT_NAMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetProduct_nameNull()
+            Me(Me.tableV_LOADINGNOTE.Product_nameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14175,278 +13064,158 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_ADDITIVENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_ADDITIVEColumn)
+        Public Function IsLC_AdditiveNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_AdditiveColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_ADDITIVENull()
-            Me(Me.tableV_LOADINGNOTE.LC_ADDITIVEColumn) = Global.System.Convert.DBNull
+        Public Sub SetLC_AdditiveNull()
+            Me(Me.tableV_LOADINGNOTE.LC_AdditiveColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsADDNOTEDATENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.ADDNOTEDATEColumn)
+        Public Function IsAddnoteDateNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.AddnoteDateColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetADDNOTEDATENull()
-            Me(Me.tableV_LOADINGNOTE.ADDNOTEDATEColumn) = Global.System.Convert.DBNull
+        Public Sub SetAddnoteDateNull()
+            Me(Me.tableV_LOADINGNOTE.AddnoteDateColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOADDATENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOADDATEColumn)
+        Public Function IsRaw_Weight_inNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Raw_Weight_inColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOADDATENull()
-            Me(Me.tableV_LOADINGNOTE.LOADDATEColumn) = Global.System.Convert.DBNull
+        Public Sub SetRaw_Weight_inNull()
+            Me(Me.tableV_LOADINGNOTE.Raw_Weight_inColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSTOCK_STATUSNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.STOCK_STATUSColumn)
+        Public Function IsUpdate_Weight_inNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Update_Weight_inColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSTOCK_STATUSNull()
-            Me(Me.tableV_LOADINGNOTE.STOCK_STATUSColumn) = Global.System.Convert.DBNull
+        Public Sub SetUpdate_Weight_inNull()
+            Me(Me.tableV_LOADINGNOTE.Update_Weight_inColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsRAW_WEIGHT_INNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.RAW_WEIGHT_INColumn)
+        Public Function IsRaw_Weight_OutNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Raw_Weight_OutColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetRAW_WEIGHT_INNull()
-            Me(Me.tableV_LOADINGNOTE.RAW_WEIGHT_INColumn) = Global.System.Convert.DBNull
+        Public Sub SetRaw_Weight_OutNull()
+            Me(Me.tableV_LOADINGNOTE.Raw_Weight_OutColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsUPDATE_WEIGHT_INNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_INColumn)
+        Public Function IsUpdate_Weight_OutNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Update_Weight_OutColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetUPDATE_WEIGHT_INNull()
-            Me(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_INColumn) = Global.System.Convert.DBNull
+        Public Sub SetUpdate_Weight_OutNull()
+            Me(Me.tableV_LOADINGNOTE.Update_Weight_OutColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsRAW_WEIGHT_OUTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.RAW_WEIGHT_OUTColumn)
+        Public Function IsWeightINNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.WeightINColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetRAW_WEIGHT_OUTNull()
-            Me(Me.tableV_LOADINGNOTE.RAW_WEIGHT_OUTColumn) = Global.System.Convert.DBNull
+        Public Sub SetWeightINNull()
+            Me(Me.tableV_LOADINGNOTE.WeightINColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsUPDATE_WEIGHT_OUTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_OUTColumn)
+        Public Function IsWeightOutNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.WeightOutColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetUPDATE_WEIGHT_OUTNull()
-            Me(Me.tableV_LOADINGNOTE.UPDATE_WEIGHT_OUTColumn) = Global.System.Convert.DBNull
+        Public Sub SetWeightOutNull()
+            Me(Me.tableV_LOADINGNOTE.WeightOutColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWEIGHTINNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.WEIGHTINColumn)
+        Public Function IsContainerNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.ContainerColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWEIGHTINNull()
-            Me(Me.tableV_LOADINGNOTE.WEIGHTINColumn) = Global.System.Convert.DBNull
+        Public Sub SetContainerNull()
+            Me(Me.tableV_LOADINGNOTE.ContainerColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWEIGHTOUTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.WEIGHTOUTColumn)
+        Public Function IsRemarkNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.RemarkColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWEIGHTOUTNull()
-            Me(Me.tableV_LOADINGNOTE.WEIGHTOUTColumn) = Global.System.Convert.DBNull
+        Public Sub SetRemarkNull()
+            Me(Me.tableV_LOADINGNOTE.RemarkColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsGI_DATENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.GI_DATEColumn)
+        Public Function IsPacking_weightNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Packing_weightColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetGI_DATENull()
-            Me(Me.tableV_LOADINGNOTE.GI_DATEColumn) = Global.System.Convert.DBNull
+        Public Sub SetPacking_weightNull()
+            Me(Me.tableV_LOADINGNOTE.Packing_weightColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCONTAINERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CONTAINERColumn)
+        Public Function IsPacking_QtyNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Packing_QtyColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCONTAINERNull()
-            Me(Me.tableV_LOADINGNOTE.CONTAINERColumn) = Global.System.Convert.DBNull
+        Public Sub SetPacking_QtyNull()
+            Me(Me.tableV_LOADINGNOTE.Packing_QtyColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCOANull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.COAColumn)
+        Public Function IsWeightTotalNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.WeightTotalColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCOANull()
-            Me(Me.tableV_LOADINGNOTE.COAColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsREMARKNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.REMARKColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetREMARKNull()
-            Me(Me.tableV_LOADINGNOTE.REMARKColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSHIPMENTNONull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SHIPMENTNOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSHIPMENTNONull()
-            Me(Me.tableV_LOADINGNOTE.SHIPMENTNOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsACCESSCODENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.ACCESSCODEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetACCESSCODENull()
-            Me(Me.tableV_LOADINGNOTE.ACCESSCODEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPACKING_TYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PACKING_TYPEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPACKING_TYPENull()
-            Me(Me.tableV_LOADINGNOTE.PACKING_TYPEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPACKING_WEIGHTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PACKING_WEIGHTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPACKING_WEIGHTNull()
-            Me(Me.tableV_LOADINGNOTE.PACKING_WEIGHTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPACKING_QTYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PACKING_QTYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPACKING_QTYNull()
-            Me(Me.tableV_LOADINGNOTE.PACKING_QTYColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsP_CODENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.P_CODEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetP_CODENull()
-            Me(Me.tableV_LOADINGNOTE.P_CODEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsP_WEIGHTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.P_WEIGHTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetP_WEIGHTNull()
-            Me(Me.tableV_LOADINGNOTE.P_WEIGHTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsP_CAPASITYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.P_CAPASITYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetP_CAPASITYNull()
-            Me(Me.tableV_LOADINGNOTE.P_CAPASITYColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWEIGHTTOTALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.WEIGHTTOTALColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWEIGHTTOTALNull()
-            Me(Me.tableV_LOADINGNOTE.WEIGHTTOTALColumn) = Global.System.Convert.DBNull
+        Public Sub SetWeightTotalNull()
+            Me(Me.tableV_LOADINGNOTE.WeightTotalColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14463,158 +13232,86 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_TANKNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_TANKColumn)
+        Public Function IsMeterReaderNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.MeterReaderColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_TANKNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_TANKColumn) = Global.System.Convert.DBNull
+        Public Sub SetMeterReaderNull()
+            Me(Me.tableV_LOADINGNOTE.MeterReaderColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsMETERREADERNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.METERREADERColumn)
+        Public Function IsDensityNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.DensityColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetMETERREADERNull()
-            Me(Me.tableV_LOADINGNOTE.METERREADERColumn) = Global.System.Convert.DBNull
+        Public Sub SetDensityNull()
+            Me(Me.tableV_LOADINGNOTE.DensityColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDENSITYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DENSITYColumn)
+        Public Function IsWeightCalNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.WeightCalColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDENSITYNull()
-            Me(Me.tableV_LOADINGNOTE.DENSITYColumn) = Global.System.Convert.DBNull
+        Public Sub SetWeightCalNull()
+            Me(Me.tableV_LOADINGNOTE.WeightCalColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWEIGHTCALNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.WEIGHTCALColumn)
+        Public Function IsWeightin_timeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Weightin_timeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWEIGHTCALNull()
-            Me(Me.tableV_LOADINGNOTE.WEIGHTCALColumn) = Global.System.Convert.DBNull
+        Public Sub SetWeightin_timeNull()
+            Me(Me.tableV_LOADINGNOTE.Weightin_timeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWEIGHTIN_TIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.WEIGHTIN_TIMEColumn)
+        Public Function IsWeightOut_timeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.WeightOut_timeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWEIGHTIN_TIMENull()
-            Me(Me.tableV_LOADINGNOTE.WEIGHTIN_TIMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetWeightOut_timeNull()
+            Me(Me.tableV_LOADINGNOTE.WeightOut_timeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsWEIGHTOUT_TIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.WEIGHTOUT_TIMEColumn)
+        Public Function Isdo_noNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.do_noColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetWEIGHTOUT_TIMENull()
-            Me(Me.tableV_LOADINGNOTE.WEIGHTOUT_TIMEColumn) = Global.System.Convert.DBNull
+        Public Sub Setdo_noNull()
+            Me(Me.tableV_LOADINGNOTE.do_noColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTAKENTIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TAKENTIMEColumn)
+        Public Function IsBatchlotNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.BatchlotColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTAKENTIMENull()
-            Me(Me.tableV_LOADINGNOTE.TAKENTIMEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsSHIPMENTTYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.SHIPMENTTYPEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetSHIPMENTTYPENull()
-            Me(Me.tableV_LOADINGNOTE.SHIPMENTTYPEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDO_NONull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DO_NOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDO_NONull()
-            Me(Me.tableV_LOADINGNOTE.DO_NOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsBATCHLOTNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.BATCHLOTColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetBATCHLOTNull()
-            Me(Me.tableV_LOADINGNOTE.BATCHLOTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTANKFARMNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TANKFARMColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTANKFARMNull()
-            Me(Me.tableV_LOADINGNOTE.TANKFARMColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_STARTTIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_STARTTIMEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_STARTTIMENull()
-            Me(Me.tableV_LOADINGNOTE.LC_STARTTIMEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLC_ENDTIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LC_ENDTIMEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLC_ENDTIMENull()
-            Me(Me.tableV_LOADINGNOTE.LC_ENDTIMEColumn) = Global.System.Convert.DBNull
+        Public Sub SetBatchlotNull()
+            Me(Me.tableV_LOADINGNOTE.BatchlotColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14811,182 +13508,74 @@ Partial Public Class DataSet_View
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOADDIFFNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOADDIFFColumn)
+        Public Function IsCheckin_timeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Checkin_timeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOADDIFFNull()
-            Me(Me.tableV_LOADINGNOTE.LOADDIFFColumn) = Global.System.Convert.DBNull
+        Public Sub SetCheckin_timeNull()
+            Me(Me.tableV_LOADINGNOTE.Checkin_timeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTANK_API_PRO1Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TANK_API_PRO1Column)
+        Public Function IsCheckout_TimeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.Checkout_TimeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTANK_API_PRO1Null()
-            Me(Me.tableV_LOADINGNOTE.TANK_API_PRO1Column) = Global.System.Convert.DBNull
+        Public Sub SetCheckout_TimeNull()
+            Me(Me.tableV_LOADINGNOTE.Checkout_TimeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTANK_API_PRO2Null() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.TANK_API_PRO2Column)
+        Public Function Isload_Vehicle_IDNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.load_Vehicle_IDColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTANK_API_PRO2Null()
-            Me(Me.tableV_LOADINGNOTE.TANK_API_PRO2Column) = Global.System.Convert.DBNull
+        Public Sub Setload_Vehicle_IDNull()
+            Me(Me.tableV_LOADINGNOTE.load_Vehicle_IDColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsUPDATE_DATENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.UPDATE_DATEColumn)
+        Public Function Isproduct_colorNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.product_colorColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetUPDATE_DATENull()
-            Me(Me.tableV_LOADINGNOTE.UPDATE_DATEColumn) = Global.System.Convert.DBNull
+        Public Sub Setproduct_colorNull()
+            Me(Me.tableV_LOADINGNOTE.product_colorColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsUPDATE_BYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.UPDATE_BYColumn)
+        Public Function Isproduct_RemarkNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.product_RemarkColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetUPDATE_BYNull()
-            Me(Me.tableV_LOADINGNOTE.UPDATE_BYColumn) = Global.System.Convert.DBNull
+        Public Sub Setproduct_RemarkNull()
+            Me(Me.tableV_LOADINGNOTE.product_RemarkColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCHECKIN_TIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CHECKIN_TIMEColumn)
+        Public Function Isadvisenote_typeNull() As Boolean
+            Return Me.IsNull(Me.tableV_LOADINGNOTE.advisenote_typeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCHECKIN_TIMENull()
-            Me(Me.tableV_LOADINGNOTE.CHECKIN_TIMEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsQ_TIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.Q_TIMEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetQ_TIMENull()
-            Me(Me.tableV_LOADINGNOTE.Q_TIMEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsCHECKOUT_TIMENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.CHECKOUT_TIMEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetCHECKOUT_TIMENull()
-            Me(Me.tableV_LOADINGNOTE.CHECKOUT_TIMEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsLOAD_VEHICLE_IDNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.LOAD_VEHICLE_IDColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetLOAD_VEHICLE_IDNull()
-            Me(Me.tableV_LOADINGNOTE.LOAD_VEHICLE_IDColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDO_TYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DO_TYPEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDO_TYPENull()
-            Me(Me.tableV_LOADINGNOTE.DO_TYPEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPRODUCT_COLORNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PRODUCT_COLORColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPRODUCT_COLORNull()
-            Me(Me.tableV_LOADINGNOTE.PRODUCT_COLORColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsPRODUCT_REMARKNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.PRODUCT_REMARKColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetPRODUCT_REMARKNull()
-            Me(Me.tableV_LOADINGNOTE.PRODUCT_REMARKColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsADVISENOTE_TYPENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.ADVISENOTE_TYPEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetADVISENOTE_TYPENull()
-            Me(Me.tableV_LOADINGNOTE.ADVISENOTE_TYPEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsADDITIVENull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.ADDITIVEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetADDITIVENull()
-            Me(Me.tableV_LOADINGNOTE.ADDITIVEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsDRYNull() As Boolean
-            Return Me.IsNull(Me.tableV_LOADINGNOTE.DRYColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetDRYNull()
-            Me(Me.tableV_LOADINGNOTE.DRYColumn) = Global.System.Convert.DBNull
+        Public Sub Setadvisenote_typeNull()
+            Me(Me.tableV_LOADINGNOTE.advisenote_typeColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -23657,16 +22246,36 @@ Namespace DataSet_ViewTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "V_LOADINGNOTE"
+            tableMapping.ColumnMappings.Add("LOAD_DELIVERY", "LOAD_DELIVERY")
+            tableMapping.ColumnMappings.Add("DRIVER_PINCODE", "DRIVER_PINCODE")
+            tableMapping.ColumnMappings.Add("LOAD_DATE", "LOAD_DATE")
+            tableMapping.ColumnMappings.Add("LOAD_DAY", "LOAD_DAY")
+            tableMapping.ColumnMappings.Add("LOAD_MONTH", "LOAD_MONTH")
+            tableMapping.ColumnMappings.Add("LOAD_YEAR", "LOAD_YEAR")
+            tableMapping.ColumnMappings.Add("STATUS_NAME", "STATUS_NAME")
+            tableMapping.ColumnMappings.Add("LOAD_DRIVER", "LOAD_DRIVER")
+            tableMapping.ColumnMappings.Add("LOAD_TRUCKCOMPANY", "LOAD_TRUCKCOMPANY")
+            tableMapping.ColumnMappings.Add("LOAD_CUSTOMER", "LOAD_CUSTOMER")
+            tableMapping.ColumnMappings.Add("LOAD_VEHICLE3", "LOAD_VEHICLE3")
+            tableMapping.ColumnMappings.Add("LOAD_SEAL", "LOAD_SEAL")
+            tableMapping.ColumnMappings.Add("LC_SEAL", "LC_SEAL")
+            tableMapping.ColumnMappings.Add("LC_SHIPPER", "LC_SHIPPER")
+            tableMapping.ColumnMappings.Add("TRANSPORTER", "TRANSPORTER")
+            tableMapping.ColumnMappings.Add("LC_TANK", "LC_TANK")
+            tableMapping.ColumnMappings.Add("LC_API", "LC_API")
+            tableMapping.ColumnMappings.Add("BATCH_NAME", "BATCH_NAME")
+            tableMapping.ColumnMappings.Add("LOAD_TANK", "LOAD_TANK")
+            tableMapping.ColumnMappings.Add("TANKFARM", "TANKFARM")
+            tableMapping.ColumnMappings.Add("LC_STARTTIME", "LC_STARTTIME")
+            tableMapping.ColumnMappings.Add("LC_ENDTIME", "LC_ENDTIME")
+            tableMapping.ColumnMappings.Add("UPDATE_DATE", "UPDATE_DATE")
+            tableMapping.ColumnMappings.Add("UPDATE_BY", "UPDATE_BY")
+            tableMapping.ColumnMappings.Add("Q_TIME", "Q_TIME")
+            tableMapping.ColumnMappings.Add("DO_TYPE", "DO_TYPE")
             tableMapping.ColumnMappings.Add("LOAD_ID", "LOAD_ID")
-            tableMapping.ColumnMappings.Add("SAPLOAD_ID", "SAPLOAD_ID")
-            tableMapping.ColumnMappings.Add("SHIPMENTNUMBER", "SHIPMENTNUMBER")
             tableMapping.ColumnMappings.Add("LOAD_CAPACITY", "LOAD_CAPACITY")
             tableMapping.ColumnMappings.Add("LOAD_PRESET", "LOAD_PRESET")
-            tableMapping.ColumnMappings.Add("LOAD_DELIVERY", "LOAD_DELIVERY")
-            tableMapping.ColumnMappings.Add("LOAD_CARDID", "LOAD_CARDID")
             tableMapping.ColumnMappings.Add("LOAD_CARD", "LOAD_CARD")
-            tableMapping.ColumnMappings.Add("VOL86F", "VOL86F")
-            tableMapping.ColumnMappings.Add("VOL86F2", "VOL86F2")
             tableMapping.ColumnMappings.Add("LC_COMPARTMENT", "LC_COMPARTMENT")
             tableMapping.ColumnMappings.Add("LC_CAPACITY", "LC_CAPACITY")
             tableMapping.ColumnMappings.Add("LC_PRESET", "LC_PRESET")
@@ -23675,117 +22284,72 @@ Namespace DataSet_ViewTableAdapters
             tableMapping.ColumnMappings.Add("LC_STATUS", "LC_STATUS")
             tableMapping.ColumnMappings.Add("LC_BASE", "LC_BASE")
             tableMapping.ColumnMappings.Add("LC_BLEND", "LC_BLEND")
-            tableMapping.ColumnMappings.Add("REFERENCE", "REFERENCE")
-            tableMapping.ColumnMappings.Add("CARD_TYPE", "CARD_TYPE")
-            tableMapping.ColumnMappings.Add("CARD_SERIAL", "CARD_SERIAL")
-            tableMapping.ColumnMappings.Add("DRIVER_CARD_SERIAL", "DRIVER_CARD_SERIAL")
-            tableMapping.ColumnMappings.Add("DRIVER_PINCODE", "DRIVER_PINCODE")
-            tableMapping.ColumnMappings.Add("TRUCK_CARD_SERIAL", "TRUCK_CARD_SERIAL")
-            tableMapping.ColumnMappings.Add("LOAD_DATE", "LOAD_DATE")
-            tableMapping.ColumnMappings.Add("LOAD_DAY", "LOAD_DAY")
-            tableMapping.ColumnMappings.Add("LOAD_MONTH", "LOAD_MONTH")
-            tableMapping.ColumnMappings.Add("LOAD_YEAR", "LOAD_YEAR")
-            tableMapping.ColumnMappings.Add("CARD_NUMBER", "CARD_NUMBER")
             tableMapping.ColumnMappings.Add("LOAD_DID", "LOAD_DID")
             tableMapping.ColumnMappings.Add("LC_METER", "LC_METER")
             tableMapping.ColumnMappings.Add("LOAD_STATUS", "LOAD_STATUS")
             tableMapping.ColumnMappings.Add("LOAD_Q", "LOAD_Q")
-            tableMapping.ColumnMappings.Add("STATUS_NAME", "STATUS_NAME")
-            tableMapping.ColumnMappings.Add("DRIVER_ID", "DRIVER_ID")
-            tableMapping.ColumnMappings.Add("DRIVER_NAME", "DRIVER_NAME")
-            tableMapping.ColumnMappings.Add("LOAD_DRIVER", "LOAD_DRIVER")
-            tableMapping.ColumnMappings.Add("SHIPEMPLOYEE_NAME", "SHIPEMPLOYEE_NAME")
-            tableMapping.ColumnMappings.Add("LOAD_SHIPDRIVER", "LOAD_SHIPDRIVER")
-            tableMapping.ColumnMappings.Add("LOAD_TRUCKCOMPANY", "LOAD_TRUCKCOMPANY")
-            tableMapping.ColumnMappings.Add("LOAD_CUSTOMER", "LOAD_CUSTOMER")
-            tableMapping.ColumnMappings.Add("LOAD_VEHICLE3", "LOAD_VEHICLE3")
-            tableMapping.ColumnMappings.Add("LOAD_VEHICLE", "LOAD_VEHICLE")
-            tableMapping.ColumnMappings.Add("LOAD_VEHICLE2", "LOAD_VEHICLE2")
-            tableMapping.ColumnMappings.Add("TRUCK_LOADTYPE", "TRUCK_LOADTYPE")
+            tableMapping.ColumnMappings.Add("Driver_ID", "Driver_ID")
+            tableMapping.ColumnMappings.Add("Driver_Name", "Driver_Name")
+            tableMapping.ColumnMappings.Add("Load_Vehicle", "Load_Vehicle")
+            tableMapping.ColumnMappings.Add("Truck_Loadtype", "Truck_Loadtype")
             tableMapping.ColumnMappings.Add("LC_PRO", "LC_PRO")
-            tableMapping.ColumnMappings.Add("CUSTOMER_NAME", "CUSTOMER_NAME")
+            tableMapping.ColumnMappings.Add("Customer_name", "Customer_name")
             tableMapping.ColumnMappings.Add("LOAD_WEIGHT_IN", "LOAD_WEIGHT_IN")
             tableMapping.ColumnMappings.Add("LOAD_WEIGHT_OUT", "LOAD_WEIGHT_OUT")
-            tableMapping.ColumnMappings.Add("LOAD_SEAL", "LOAD_SEAL")
-            tableMapping.ColumnMappings.Add("LC_SEAL", "LC_SEAL")
             tableMapping.ColumnMappings.Add("LOAD_SEALCOUNT", "LOAD_SEALCOUNT")
-            tableMapping.ColumnMappings.Add("LC_SHIPPER_TEMP", "LC_SHIPPER_TEMP")
-            tableMapping.ColumnMappings.Add("SP_DATE", "SP_DATE")
+            tableMapping.ColumnMappings.Add("LC_SHIPPER_Temp", "LC_SHIPPER_Temp")
+            tableMapping.ColumnMappings.Add("SP_Date", "SP_Date")
             tableMapping.ColumnMappings.Add("LOAD_SHIPPER", "LOAD_SHIPPER")
-            tableMapping.ColumnMappings.Add("LC_SHIPPER", "LC_SHIPPER")
-            tableMapping.ColumnMappings.Add("SP_CODE", "SP_CODE")
-            tableMapping.ColumnMappings.Add("SP_NAMETH", "SP_NAMETH")
-            tableMapping.ColumnMappings.Add("SP_ADDRESSTH", "SP_ADDRESSTH")
-            tableMapping.ColumnMappings.Add("SP_AMPHURTH", "SP_AMPHURTH")
-            tableMapping.ColumnMappings.Add("SP_PROVINCETH", "SP_PROVINCETH")
-            tableMapping.ColumnMappings.Add("SP_NAMEEN", "SP_NAMEEN")
-            tableMapping.ColumnMappings.Add("SP_ADDRESSEN", "SP_ADDRESSEN")
-            tableMapping.ColumnMappings.Add("SP_AMPHUREN", "SP_AMPHUREN")
-            tableMapping.ColumnMappings.Add("SP_PROVINCEEN", "SP_PROVINCEEN")
-            tableMapping.ColumnMappings.Add("SP_CONTACT", "SP_CONTACT")
-            tableMapping.ColumnMappings.Add("SP_TEL", "SP_TEL")
-            tableMapping.ColumnMappings.Add("SP_FAX", "SP_FAX")
-            tableMapping.ColumnMappings.Add("SP_TYPE", "SP_TYPE")
-            tableMapping.ColumnMappings.Add("SP_EMAIL", "SP_EMAIL")
-            tableMapping.ColumnMappings.Add("CUSTOMER_ADDRESS", "CUSTOMER_ADDRESS")
-            tableMapping.ColumnMappings.Add("CUSTOMER_AMPHUR", "CUSTOMER_AMPHUR")
-            tableMapping.ColumnMappings.Add("CUSTOMER_PROVINCE", "CUSTOMER_PROVINCE")
-            tableMapping.ColumnMappings.Add("PRODUCT_ADDITIVE_RATIO", "PRODUCT_ADDITIVE_RATIO")
+            tableMapping.ColumnMappings.Add("SP_Code", "SP_Code")
+            tableMapping.ColumnMappings.Add("SP_NameTH", "SP_NameTH")
+            tableMapping.ColumnMappings.Add("SP_AddressTH", "SP_AddressTH")
+            tableMapping.ColumnMappings.Add("SP_AmphurTH", "SP_AmphurTH")
+            tableMapping.ColumnMappings.Add("SP_ProvinceTH", "SP_ProvinceTH")
+            tableMapping.ColumnMappings.Add("SP_NameEN", "SP_NameEN")
+            tableMapping.ColumnMappings.Add("SP_AddressEN", "SP_AddressEN")
+            tableMapping.ColumnMappings.Add("SP_AmphurEN", "SP_AmphurEN")
+            tableMapping.ColumnMappings.Add("SP_ProvinceEN", "SP_ProvinceEN")
+            tableMapping.ColumnMappings.Add("SP_Contact", "SP_Contact")
+            tableMapping.ColumnMappings.Add("SP_Tel", "SP_Tel")
+            tableMapping.ColumnMappings.Add("SP_Fax", "SP_Fax")
+            tableMapping.ColumnMappings.Add("SP_Type", "SP_Type")
+            tableMapping.ColumnMappings.Add("SP_Email", "SP_Email")
+            tableMapping.ColumnMappings.Add("Customer_address", "Customer_address")
+            tableMapping.ColumnMappings.Add("Customer_amphur", "Customer_amphur")
+            tableMapping.ColumnMappings.Add("Customer_province", "Customer_province")
+            tableMapping.ColumnMappings.Add("Product_additive_Ratio", "Product_additive_Ratio")
             tableMapping.ColumnMappings.Add("LC_CUSTOMER", "LC_CUSTOMER")
-            tableMapping.ColumnMappings.Add("TRANSPORTER", "TRANSPORTER")
-            tableMapping.ColumnMappings.Add("LC_TANK", "LC_TANK")
-            tableMapping.ColumnMappings.Add("LC_TANK2", "LC_TANK2")
-            tableMapping.ColumnMappings.Add("LC_API", "LC_API")
-            tableMapping.ColumnMappings.Add("LC_API2", "LC_API2")
-            tableMapping.ColumnMappings.Add("LC_TEMP_MANUAL", "LC_TEMP_MANUAL")
             tableMapping.ColumnMappings.Add("LC_TEMP", "LC_TEMP")
             tableMapping.ColumnMappings.Add("SP_ZIPCODE", "SP_ZIPCODE")
-            tableMapping.ColumnMappings.Add("CUSTOMER_TEL", "CUSTOMER_TEL")
-            tableMapping.ColumnMappings.Add("CUSTOMER_ZIPCODE", "CUSTOMER_ZIPCODE")
-            tableMapping.ColumnMappings.Add("CUSTOMER_FAX", "CUSTOMER_FAX")
-            tableMapping.ColumnMappings.Add("PRODUCT_CODE", "PRODUCT_CODE")
-            tableMapping.ColumnMappings.Add("REF_TOPCHECK", "REF_TOPCHECK")
-            tableMapping.ColumnMappings.Add("BATCH_NAME", "BATCH_NAME")
-            tableMapping.ColumnMappings.Add("LOAD_DOFULL", "LOAD_DOFULL")
-            tableMapping.ColumnMappings.Add("PRODUCT_NAME", "PRODUCT_NAME")
+            tableMapping.ColumnMappings.Add("Customer_tel", "Customer_tel")
+            tableMapping.ColumnMappings.Add("Customer_Zipcode", "Customer_Zipcode")
+            tableMapping.ColumnMappings.Add("Customer_fax", "Customer_fax")
+            tableMapping.ColumnMappings.Add("Product_code", "Product_code")
+            tableMapping.ColumnMappings.Add("Ref_Topcheck", "Ref_Topcheck")
+            tableMapping.ColumnMappings.Add("LOAD_DOfull", "LOAD_DOfull")
+            tableMapping.ColumnMappings.Add("Product_name", "Product_name")
             tableMapping.ColumnMappings.Add("LOAD_PRINT", "LOAD_PRINT")
-            tableMapping.ColumnMappings.Add("LC_ADDITIVE", "LC_ADDITIVE")
-            tableMapping.ColumnMappings.Add("ADDNOTEDATE", "ADDNOTEDATE")
-            tableMapping.ColumnMappings.Add("LOADDATE", "LOADDATE")
-            tableMapping.ColumnMappings.Add("STOCK_STATUS", "STOCK_STATUS")
-            tableMapping.ColumnMappings.Add("RAW_WEIGHT_IN", "RAW_WEIGHT_IN")
-            tableMapping.ColumnMappings.Add("UPDATE_WEIGHT_IN", "UPDATE_WEIGHT_IN")
-            tableMapping.ColumnMappings.Add("RAW_WEIGHT_OUT", "RAW_WEIGHT_OUT")
-            tableMapping.ColumnMappings.Add("UPDATE_WEIGHT_OUT", "UPDATE_WEIGHT_OUT")
-            tableMapping.ColumnMappings.Add("WEIGHTIN", "WEIGHTIN")
-            tableMapping.ColumnMappings.Add("WEIGHTOUT", "WEIGHTOUT")
-            tableMapping.ColumnMappings.Add("GI_DATE", "GI_DATE")
-            tableMapping.ColumnMappings.Add("CONTAINER", "CONTAINER")
-            tableMapping.ColumnMappings.Add("COA", "COA")
-            tableMapping.ColumnMappings.Add("REMARK", "REMARK")
-            tableMapping.ColumnMappings.Add("SHIPMENTNO", "SHIPMENTNO")
-            tableMapping.ColumnMappings.Add("ACCESSCODE", "ACCESSCODE")
-            tableMapping.ColumnMappings.Add("PACKING_TYPE", "PACKING_TYPE")
-            tableMapping.ColumnMappings.Add("PACKING_WEIGHT", "PACKING_WEIGHT")
-            tableMapping.ColumnMappings.Add("PACKING_QTY", "PACKING_QTY")
-            tableMapping.ColumnMappings.Add("P_CODE", "P_CODE")
-            tableMapping.ColumnMappings.Add("P_WEIGHT", "P_WEIGHT")
-            tableMapping.ColumnMappings.Add("P_CAPASITY", "P_CAPASITY")
-            tableMapping.ColumnMappings.Add("WEIGHTTOTAL", "WEIGHTTOTAL")
+            tableMapping.ColumnMappings.Add("LC_Additive", "LC_Additive")
+            tableMapping.ColumnMappings.Add("AddnoteDate", "AddnoteDate")
+            tableMapping.ColumnMappings.Add("Raw_Weight_in", "Raw_Weight_in")
+            tableMapping.ColumnMappings.Add("Update_Weight_in", "Update_Weight_in")
+            tableMapping.ColumnMappings.Add("Raw_Weight_Out", "Raw_Weight_Out")
+            tableMapping.ColumnMappings.Add("Update_Weight_Out", "Update_Weight_Out")
+            tableMapping.ColumnMappings.Add("WeightIN", "WeightIN")
+            tableMapping.ColumnMappings.Add("WeightOut", "WeightOut")
+            tableMapping.ColumnMappings.Add("Container", "Container")
+            tableMapping.ColumnMappings.Add("Remark", "Remark")
+            tableMapping.ColumnMappings.Add("Packing_weight", "Packing_weight")
+            tableMapping.ColumnMappings.Add("Packing_Qty", "Packing_Qty")
+            tableMapping.ColumnMappings.Add("WeightTotal", "WeightTotal")
             tableMapping.ColumnMappings.Add("LOAD_TEMP", "LOAD_TEMP")
-            tableMapping.ColumnMappings.Add("LOAD_TANK", "LOAD_TANK")
-            tableMapping.ColumnMappings.Add("METERREADER", "METERREADER")
-            tableMapping.ColumnMappings.Add("DENSITY", "DENSITY")
-            tableMapping.ColumnMappings.Add("WEIGHTCAL", "WEIGHTCAL")
-            tableMapping.ColumnMappings.Add("WEIGHTIN_TIME", "WEIGHTIN_TIME")
-            tableMapping.ColumnMappings.Add("WEIGHTOUT_TIME", "WEIGHTOUT_TIME")
-            tableMapping.ColumnMappings.Add("TAKENTIME", "TAKENTIME")
-            tableMapping.ColumnMappings.Add("SHIPMENTTYPE", "SHIPMENTTYPE")
-            tableMapping.ColumnMappings.Add("DO_NO", "DO_NO")
-            tableMapping.ColumnMappings.Add("BATCHLOT", "BATCHLOT")
-            tableMapping.ColumnMappings.Add("TANKFARM", "TANKFARM")
-            tableMapping.ColumnMappings.Add("LC_STARTTIME", "LC_STARTTIME")
-            tableMapping.ColumnMappings.Add("LC_ENDTIME", "LC_ENDTIME")
+            tableMapping.ColumnMappings.Add("MeterReader", "MeterReader")
+            tableMapping.ColumnMappings.Add("Density", "Density")
+            tableMapping.ColumnMappings.Add("WeightCal", "WeightCal")
+            tableMapping.ColumnMappings.Add("Weightin_time", "Weightin_time")
+            tableMapping.ColumnMappings.Add("WeightOut_time", "WeightOut_time")
+            tableMapping.ColumnMappings.Add("do_no", "do_no")
+            tableMapping.ColumnMappings.Add("Batchlot", "Batchlot")
             tableMapping.ColumnMappings.Add("LC_BATCHGROSSBASE", "LC_BATCHGROSSBASE")
             tableMapping.ColumnMappings.Add("LC_BATCHGROSSBLEND", "LC_BATCHGROSSBLEND")
             tableMapping.ColumnMappings.Add("LC_BATCHNETBASE_30C", "LC_BATCHNETBASE_30C")
@@ -23802,21 +22366,12 @@ Namespace DataSet_ViewTableAdapters
             tableMapping.ColumnMappings.Add("LC_BATCHGROSSBLEND1", "LC_BATCHGROSSBLEND1")
             tableMapping.ColumnMappings.Add("LC_BATCHNETBASE_30C1", "LC_BATCHNETBASE_30C1")
             tableMapping.ColumnMappings.Add("LC_BATCHNETBLEND_30C1", "LC_BATCHNETBLEND_30C1")
-            tableMapping.ColumnMappings.Add("LOADDIFF", "LOADDIFF")
-            tableMapping.ColumnMappings.Add("TANK_API_PRO1", "TANK_API_PRO1")
-            tableMapping.ColumnMappings.Add("TANK_API_PRO2", "TANK_API_PRO2")
-            tableMapping.ColumnMappings.Add("UPDATE_DATE", "UPDATE_DATE")
-            tableMapping.ColumnMappings.Add("UPDATE_BY", "UPDATE_BY")
-            tableMapping.ColumnMappings.Add("CHECKIN_TIME", "CHECKIN_TIME")
-            tableMapping.ColumnMappings.Add("Q_TIME", "Q_TIME")
-            tableMapping.ColumnMappings.Add("CHECKOUT_TIME", "CHECKOUT_TIME")
-            tableMapping.ColumnMappings.Add("LOAD_VEHICLE_ID", "LOAD_VEHICLE_ID")
-            tableMapping.ColumnMappings.Add("DO_TYPE", "DO_TYPE")
-            tableMapping.ColumnMappings.Add("PRODUCT_COLOR", "PRODUCT_COLOR")
-            tableMapping.ColumnMappings.Add("PRODUCT_REMARK", "PRODUCT_REMARK")
-            tableMapping.ColumnMappings.Add("ADVISENOTE_TYPE", "ADVISENOTE_TYPE")
-            tableMapping.ColumnMappings.Add("ADDITIVE", "ADDITIVE")
-            tableMapping.ColumnMappings.Add("DRY", "DRY")
+            tableMapping.ColumnMappings.Add("Checkin_time", "Checkin_time")
+            tableMapping.ColumnMappings.Add("Checkout_Time", "Checkout_Time")
+            tableMapping.ColumnMappings.Add("load_Vehicle_ID", "load_Vehicle_ID")
+            tableMapping.ColumnMappings.Add("product_color", "product_color")
+            tableMapping.ColumnMappings.Add("product_Remark", "product_Remark")
+            tableMapping.ColumnMappings.Add("advisenote_type", "advisenote_type")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -23833,7 +22388,32 @@ Namespace DataSet_ViewTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        ICC.V_LOADINGNOTE.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ICC.V_LOADINGNOTE"
+            Me._commandCollection(0).CommandText = "SELECT        LOAD_ID, LOAD_CAPACITY, LOAD_PRESET, LOAD_DELIVERY, LOAD_CARD, LC_C"& _ 
+                "OMPARTMENT, LC_CAPACITY, LC_PRESET, LC_ISLAND, LC_BAY, LC_STATUS, LC_BASE, LC_BL"& _ 
+                "END, DRIVER_PINCODE, LOAD_DATE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LOAD_DAY, LOAD_MONTH,"& _ 
+                " LOAD_YEAR, LOAD_DID, LC_METER, LOAD_STATUS, LOAD_Q, STATUS_NAME, Driver_ID, Dri"& _ 
+                "ver_Name, LOAD_DRIVER, LOAD_VEHICLE3, Load_Vehicle, LOAD_TRUCKCOMPANY, LOAD_CUST"& _ 
+                "OMER, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Truck_Loadtype, LC_PRO, Customer_name, LOAD_WEI"& _ 
+                "GHT_IN, LOAD_WEIGHT_OUT, LOAD_SEAL, LC_SEAL, LOAD_SEALCOUNT, LC_SHIPPER_Temp, SP"& _ 
+                "_Date, LOAD_SHIPPER, LC_SHIPPER, SP_Code, SP_NameTH, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
+                "SP_AddressTH, SP_AmphurTH, SP_ProvinceTH, SP_NameEN, SP_AddressEN, SP_AmphurEN, "& _ 
+                "SP_ProvinceEN, SP_Contact, SP_Tel, SP_Fax, SP_Type, SP_Email, Customer_address, "& _ 
+                "Customer_amphur, Customer_province, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Product_additive_"& _ 
+                "Ratio, LC_CUSTOMER, TRANSPORTER, LC_TANK, LC_API, LC_TEMP, SP_ZIPCODE, Customer_"& _ 
+                "tel, Customer_Zipcode, Customer_fax, Product_code, Ref_Topcheck, BATCH_NAME, LOA"& _ 
+                "D_DOfull, Product_name, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LOAD_PRINT, LC_Additive, Addn"& _ 
+                "oteDate, Raw_Weight_in, Update_Weight_in, Raw_Weight_Out, Update_Weight_Out, Wei"& _ 
+                "ghtIN, WeightOut, Container, Remark, Packing_weight, Packing_Qty, WeightTotal, L"& _ 
+                "OAD_TEMP, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LOAD_TANK, MeterReader, Density, WeightCal,"& _ 
+                " Weightin_time, WeightOut_time, do_no, Batchlot, TANKFARM, LC_STARTTIME, LC_ENDT"& _ 
+                "IME, LC_BATCHGROSSBASE, LC_BATCHGROSSBLEND, LC_BATCHNETBASE_30C, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
+                "            LC_BATCHNETBLEND_30C, LC_CUMULBASE_GROSLTR, LC_CUMULBLEND_GROSLTR, L"& _ 
+                "C_CUMULBASE_NETLTR, LC_CUMULBLEND_NETLTR, LC_DENSITY_30C, LC_VCF, LC_METERFACTOR"& _ 
+                "3, LC_K_FACTOR, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LC_BATCHGROSSBASE1, LC_BATCHGROSSBLEN"& _ 
+                "D1, LC_BATCHNETBASE_30C1, LC_BATCHNETBLEND_30C1, UPDATE_DATE, UPDATE_BY, Checkin"& _ 
+                "_time, Q_TIME, Checkout_Time, load_Vehicle_ID, DO_TYPE, product_color, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
+                "                  product_Remark, advisenote_type"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            V_Loadingnote"& _ 
+                ""
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
