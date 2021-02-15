@@ -59,16 +59,40 @@ Public Class ReportBOL
             RadTextBox1.Text = RadCalendar1.SelectedDate  'RadCalendar1
             Dim sql As String
 
-            sql = ""
-            sql = "select T1.reference,T1.load_date,T2.Load_Driver,T3.Truck_Number as LOAD_VEHICLE,tcard.card_number as load_card,T1.AddnoteDate as LDate  from "
-            sql &= "(select reference,load_driver,load_vehicle,load_preset,load_date,load_card,AddnoteDate from t_loadingnote where load_status in(3,4) "
-            sql &= "and CAST(EXTRACT(YEAR FROM T_LOADINGNOTE.AddnoteDate) AS VARCHAR2(10)) || '-' || CAST(EXTRACT(MONTH FROM T_LOADINGNOTE.AddnoteDate) AS VARCHAR2(10)) "
-            Dim n_year As Integer = 0
-            n_year = 543
-            sql &= "|| '-' || CAST(EXTRACT(DAY FROM T_LOADINGNOTE.AddnoteDate) AS VARCHAR2(10)) ='" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, RadCalendar1.SelectedDate)) + "') T1 Left Join "
-            sql &= "(select ID,Driver_NAME|| '  ' || Driver_Lastname AS LOAD_DRIVER from T_driver) T2 ON T1.load_driver=T2.ID Left Join "
-            sql &= "(select ID,truck_number from t_truck) T3 ON T1.load_vehicle=T3.ID left join "
-            sql &= "(select ID,card_number  from t_card) TCard  ON T1.load_card=Tcard.ID order by t1.reference "
+            'sql = ""
+            'sql = "select T1.reference,T1.load_date,T2.Load_Driver,T3.Truck_Number as LOAD_VEHICLE,tcard.card_number as load_card,T1.AddnoteDate as LDate  from "
+            'sql &= "(select reference,load_driver,load_vehicle,load_preset,load_date,load_card,AddnoteDate from t_loadingnote where load_status in(3,4) "
+            'sql &= "and CAST(EXTRACT(YEAR FROM T_LOADINGNOTE.AddnoteDate) AS VARCHAR2(10)) || '-' || CAST(EXTRACT(MONTH FROM T_LOADINGNOTE.AddnoteDate) AS VARCHAR2(10)) "
+            'Dim n_year As Integer = 0
+            'n_year = 543
+            'sql &= "|| '-' || CAST(EXTRACT(DAY FROM T_LOADINGNOTE.AddnoteDate) AS VARCHAR2(10)) ='" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, RadCalendar1.SelectedDate)) + "') T1 Left Join "
+            'sql &= "(select ID,Driver_NAME|| '  ' || Driver_Lastname AS LOAD_DRIVER from T_driver) T2 ON T1.load_driver=T2.ID Left Join "
+            'sql &= "(select ID,truck_number from t_truck) T3 ON T1.load_vehicle=T3.ID left join "
+            'sql &= "(select ID,card_number  from t_card) TCard  ON T1.load_card=Tcard.ID order by t1.reference "
+
+
+            sql = "select T1.reference,T1.load_date,T2.Load_Driver,T3.Truck_Number as LOAD_VEHICLE,t1.Load_card as load_card,T1.AddnoteDate as LDate  from "
+            sql &= "(SELECT * FROM T_LOADINGNOTE WHERE (DAY(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Day & "' and MONTH(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Month & "' and YEAR(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Year & "' ) and LOAD_STATUS in (3,4)) T1 Left Join "
+            sql &= "(select ID,isnull(Driver_NAME, '' ) + '  ' + isnull(Driver_Lastname, '' ) AS LOAD_DRIVER from T_driver) T2 ON T1.load_driver=T2.ID "
+            sql &= "Left Join (select ID,truck_number from t_truck) T3 ON T1.load_vehicle=T3.ID order by t1.reference "
+            'sql &= "left join (select ID,card_number  from t_card) TCard  ON T1.load_card=Tcard.ID order by t1.reference "
+
+
+
+
+
+            'sql = "select T1.reference,T1.load_date,T2.Load_Driver,T3.Truck_Number as LOAD_VEHICLE,tcard.card_number as load_card,T1.AddnoteDate as LDate "
+
+            'sql &= "Select REFERENCE,isnull(Driver_NAME, '' ) + '  ' + isnull(Driver_Lastname, '' ) AS ST1,TRUCK_NUMBER As INT2,LOAD_DATE As DT1,LOAD_CARD As INT3 "
+
+            'sql &= "FROM (SELECT * FROM T_LOADINGNOTE WHERE (DAY(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Day & "' and MONTH(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Month & "' and YEAR(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Year & "' ) and LOAD_STATUS in (3,4)) T1 "
+            'sql &= "Left join T_STATUS On T_STATUS.STATUS_ID = T_LOADINGNOTE.LOAD_STATUS "
+            'sql &= "Left Join T_TRUCK on T_LOADINGNOTE.LOAD_VEHICLE = T_TRUCK.ID "
+            'sql &= "Left Join T_CUSTOMER on T_LOADINGNOTE.LOAD_CUSTOMER = T_CUSTOMER.ID "
+            'sql &= "Left Join T_DRIVER on T_LOADINGNOTE.LOAD_DRIVER = T_DRIVER.ID "
+            'sql &= "Left Join T_CARD on T_LOADINGNOTE.LOAD_CARD = T_CARD.CARD_NUMBER "
+            'sql &= "Left Join T_PRODUCT on T_LOADINGNOTE.LOAD_PRODUCT = T_PRODUCT.ID"
+
 
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(sql, "V_BOL_M1M2_NEW")

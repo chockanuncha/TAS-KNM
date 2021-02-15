@@ -655,9 +655,9 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(0).GetChildAt(5), Telerik.WinControls.Primitives.BorderPrimitive).AutoSize = True
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).Alignment = System.Drawing.ContentAlignment.TopLeft
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).RightToLeft = False
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(820.5381!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(-1525.0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         '
         'RichTextBox1
         '
@@ -1274,6 +1274,7 @@ Partial Class MAIN
         Me.RecordGroup.AccessibleName = "Links"
         Me.RecordGroup.CellSize = New System.Drawing.Size(140, 120)
         Me.RecordGroup.EnableImageTransparency = False
+        Me.RecordGroup.FocusBorderWidth = 3
         Me.RecordGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Bold)
         Me.RecordGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RecordGroup.HorizontalLineWidth = 1
@@ -1450,6 +1451,7 @@ Partial Class MAIN
         Me.ProductMenu.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LiveTileFrameElement1, Me.LiveTileFrameElement2, Me.LiveTileFrameElement3})
         Me.ProductMenu.Name = "ProductMenu"
         Me.ProductMenu.Padding = New System.Windows.Forms.Padding(5, 5, 5, 8)
+        Me.ProductMenu.Row = 1
         Me.ProductMenu.Text = "Product"
         Me.ProductMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.ProductMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1493,7 +1495,6 @@ Partial Class MAIN
         Me.MeterMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.MeterMenu.Name = "MeterMenu"
         Me.MeterMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.MeterMenu.Row = 1
         Me.MeterMenu.Text = "BatchMeter"
         Me.MeterMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.MeterMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
