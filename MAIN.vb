@@ -691,6 +691,20 @@ Partial Public Class MAIN
         'Initiallicense()
     End Sub
 
+    Private Sub PictureBox2_DoubleClick(sender As Object, e As EventArgs) Handles PictureBox2.DoubleClick
+        If TextBox1.Visible = False Then
+            TextBox1.Visible = True
+            TextBox2.Visible = True
+            Button1.Visible = True
+            Button2.Visible = True
+        Else
+            TextBox1.Visible = False
+            TextBox2.Visible = False
+            Button1.Visible = False
+            Button2.Visible = False
+        End If
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         BackendSend()
     End Sub

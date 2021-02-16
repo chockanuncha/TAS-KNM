@@ -78,7 +78,7 @@ Partial Class Reportmain
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadPanel1.Location = New System.Drawing.Point(0, 166)
         Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(1205, 333)
+        Me.RadPanel1.Size = New System.Drawing.Size(1106, 376)
         Me.RadPanel1.TabIndex = 11
         Me.RadPanel1.ThemeName = "Office2010Blue"
         '
@@ -92,9 +92,9 @@ Partial Class Reportmain
         Me.RadGroupBox2.Dock = System.Windows.Forms.DockStyle.Right
         Me.RadGroupBox2.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold)
         Me.RadGroupBox2.HeaderText = ""
-        Me.RadGroupBox2.Location = New System.Drawing.Point(1195, 0)
+        Me.RadGroupBox2.Location = New System.Drawing.Point(1096, 0)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(10, 333)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(10, 376)
         Me.RadGroupBox2.TabIndex = 3
         Me.RadGroupBox2.ThemeName = "Breeze"
         Me.RadGroupBox2.Visible = False
@@ -163,7 +163,7 @@ Partial Class Reportmain
         Me.RadGroupBox1.HeaderText = ""
         Me.RadGroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(1205, 333)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(1106, 376)
         Me.RadGroupBox1.TabIndex = 2
         Me.RadGroupBox1.ThemeName = "Breeze"
         CType(Me.RadGroupBox1.GetChildAt(0), Telerik.WinControls.UI.RadGroupBoxElement).NumberOfColors = 1
@@ -218,7 +218,7 @@ Partial Class Reportmain
         'RadButton1
         '
         Me.RadButton1.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton1.Location = New System.Drawing.Point(105, 24)
+        Me.RadButton1.Location = New System.Drawing.Point(616, 179)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(375, 118)
         Me.RadButton1.TabIndex = 2
@@ -228,7 +228,7 @@ Partial Class Reportmain
         'RadButton6
         '
         Me.RadButton6.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton6.Location = New System.Drawing.Point(671, 24)
+        Me.RadButton6.Location = New System.Drawing.Point(366, 21)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(375, 118)
         Me.RadButton6.TabIndex = 5
@@ -244,17 +244,18 @@ Partial Class Reportmain
         'RadButton5
         '
         Me.RadButton5.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton5.Location = New System.Drawing.Point(671, 176)
+        Me.RadButton5.Location = New System.Drawing.Point(1052, 317)
         Me.RadButton5.Name = "RadButton5"
-        Me.RadButton5.Size = New System.Drawing.Size(375, 118)
+        Me.RadButton5.Size = New System.Drawing.Size(165, 71)
         Me.RadButton5.TabIndex = 4
         Me.RadButton5.Text = "Daily Tank Report"
         Me.RadButton5.ThemeName = "Breeze"
+        Me.RadButton5.Visible = False
         '
         'RadButton4
         '
         Me.RadButton4.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton4.Location = New System.Drawing.Point(105, 176)
+        Me.RadButton4.Location = New System.Drawing.Point(131, 179)
         Me.RadButton4.Name = "RadButton4"
         Me.RadButton4.Size = New System.Drawing.Size(375, 118)
         Me.RadButton4.TabIndex = 3
@@ -270,7 +271,7 @@ Partial Class Reportmain
         Me.RadPanel3.ForeColor = System.Drawing.Color.White
         Me.RadPanel3.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel3.Name = "RadPanel3"
-        Me.RadPanel3.Size = New System.Drawing.Size(1205, 166)
+        Me.RadPanel3.Size = New System.Drawing.Size(1106, 166)
         Me.RadPanel3.TabIndex = 12
         Me.RadPanel3.Text = "Report"
         Me.RadPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -287,7 +288,7 @@ Partial Class Reportmain
         Me.RadCalendar1.AllowSelect = False
         Me.RadCalendar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadCalendar1.Location = New System.Drawing.Point(1028, 3)
+        Me.RadCalendar1.Location = New System.Drawing.Point(929, 3)
         Me.RadCalendar1.Name = "RadCalendar1"
         Me.RadCalendar1.ReadOnly = True
         Me.RadCalendar1.ShowHeader = False
@@ -302,7 +303,7 @@ Partial Class Reportmain
         Me.RadClock1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadClock1.BackColor = System.Drawing.Color.Transparent
-        Me.RadClock1.Location = New System.Drawing.Point(889, 16)
+        Me.RadClock1.Location = New System.Drawing.Point(790, 16)
         Me.RadClock1.Name = "RadClock1"
         '
         '
@@ -324,7 +325,7 @@ Partial Class Reportmain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1205, 499)
+        Me.ClientSize = New System.Drawing.Size(1106, 542)
         Me.Controls.Add(Me.RadPanel1)
         Me.Controls.Add(Me.RadPanel3)
         Me.Font = New System.Drawing.Font("Segoe UI", 10.0!)

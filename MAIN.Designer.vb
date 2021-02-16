@@ -689,10 +689,11 @@ Partial Class MAIN
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(445, 61)
+        Me.TextBox2.Location = New System.Drawing.Point(453, 9)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(164, 20)
         Me.TextBox2.TabIndex = 205
+        Me.TextBox2.Visible = False
         '
         'Button2
         '
@@ -702,6 +703,7 @@ Partial Class MAIN
         Me.Button2.TabIndex = 204
         Me.Button2.Text = "Connect"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'Button1
         '
@@ -711,6 +713,7 @@ Partial Class MAIN
         Me.Button1.TabIndex = 203
         Me.Button1.Text = "Send"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'TextBox1
         '
@@ -718,6 +721,7 @@ Partial Class MAIN
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(164, 20)
         Me.TextBox1.TabIndex = 202
+        Me.TextBox1.Visible = False
         '
         'RadLabel1
         '
@@ -844,7 +848,7 @@ Partial Class MAIN
         '
         Me.RadProgressBar1.BackColor = System.Drawing.Color.LightBlue
         Me.RadProgressBar1.Controls.Add(Me.Eventext)
-        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 921)
+        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 955)
         Me.RadProgressBar1.Name = "RadProgressBar1"
         Me.RadProgressBar1.SeparatorColor1 = System.Drawing.Color.Black
         Me.RadProgressBar1.Size = New System.Drawing.Size(1912, 30)
@@ -856,11 +860,11 @@ Partial Class MAIN
         Me.Eventext.AutoSize = True
         Me.Eventext.BackColor = System.Drawing.Color.Transparent
         Me.Eventext.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Eventext.Location = New System.Drawing.Point(1843, 7)
+        Me.Eventext.Location = New System.Drawing.Point(1843, 6)
         Me.Eventext.Name = "Eventext"
-        Me.Eventext.Size = New System.Drawing.Size(55, 19)
+        Me.Eventext.Size = New System.Drawing.Size(69, 19)
         Me.Eventext.TabIndex = 0
-        Me.Eventext.Text = "Label2"
+        Me.Eventext.Text = "#####"
         '
         'PictureBox1
         '
