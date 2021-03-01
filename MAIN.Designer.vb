@@ -630,7 +630,7 @@ Partial Class MAIN
         Me.radPanorama1.MouseWheelBehavior = Telerik.WinControls.UI.PanoramaMouseWheelBehavior.Scroll
         Me.radPanorama1.Name = "radPanorama1"
         Me.radPanorama1.PanelImageSize = New System.Drawing.Size(1092, 768)
-        Me.radPanorama1.RowsCount = 6
+        Me.radPanorama1.RowsCount = 5
         Me.radPanorama1.ScrollBarAlignment = Telerik.WinControls.UI.HorizontalScrollAlignment.Bottom
         Me.radPanorama1.ScrollBarThickness = 10
         Me.radPanorama1.ScrollingBackground = True
@@ -661,9 +661,10 @@ Partial Class MAIN
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(11, 848)
+        Me.RichTextBox1.Location = New System.Drawing.Point(442, 905)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(574, 67)
+        Me.RichTextBox1.ShowSelectionMargin = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(143, 10)
         Me.RichTextBox1.TabIndex = 199
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.Visible = False
@@ -848,7 +849,7 @@ Partial Class MAIN
         '
         Me.RadProgressBar1.BackColor = System.Drawing.Color.LightBlue
         Me.RadProgressBar1.Controls.Add(Me.Eventext)
-        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 955)
+        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 962)
         Me.RadProgressBar1.Name = "RadProgressBar1"
         Me.RadProgressBar1.SeparatorColor1 = System.Drawing.Color.Black
         Me.RadProgressBar1.Size = New System.Drawing.Size(1912, 30)
@@ -871,7 +872,7 @@ Partial Class MAIN
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(1767, 886)
+        Me.PictureBox1.Location = New System.Drawing.Point(1767, 887)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(143, 65)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -882,7 +883,7 @@ Partial Class MAIN
         '
         Me.RadClock1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadClock1.BackColor = System.Drawing.Color.Transparent
-        Me.RadClock1.Location = New System.Drawing.Point(1776, 743)
+        Me.RadClock1.Location = New System.Drawing.Point(1776, 744)
         Me.RadClock1.Name = "RadClock1"
         Me.RadClock1.Size = New System.Drawing.Size(134, 135)
         Me.RadClock1.TabIndex = 8
@@ -1051,9 +1052,11 @@ Partial Class MAIN
         Me.RadLiveTileElement11.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RadLiveTileElement11.Name = "RadLiveTileElement11"
         Me.RadLiveTileElement11.Padding = New System.Windows.Forms.Padding(5)
+        Me.RadLiveTileElement11.Row = 1
         Me.RadLiveTileElement11.Text = "Tank Selection"
         Me.RadLiveTileElement11.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLiveTileElement11.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.RadLiveTileElement11.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'RadLiveTileElement12
         '
@@ -1072,7 +1075,6 @@ Partial Class MAIN
         Me.RadLiveTileElement12.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RadLiveTileElement12.Name = "RadLiveTileElement12"
         Me.RadLiveTileElement12.Padding = New System.Windows.Forms.Padding(1, 5, 5, 5)
-        Me.RadLiveTileElement12.Row = 1
         Me.RadLiveTileElement12.Text = "Truck Tracking"
         Me.RadLiveTileElement12.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLiveTileElement12.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1141,6 +1143,7 @@ Partial Class MAIN
         Me.listViewTile.Text = "Tank Overview"
         Me.listViewTile.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.listViewTile.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.listViewTile.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'schedulerTile
         '
@@ -1162,9 +1165,11 @@ Partial Class MAIN
         Me.schedulerTile.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.schedulerTile.Name = "schedulerTile"
         Me.schedulerTile.Padding = New System.Windows.Forms.Padding(5)
+        Me.schedulerTile.Row = 2
         Me.schedulerTile.Text = "Truck Overview"
         Me.schedulerTile.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.schedulerTile.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.schedulerTile.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'chartViewZoomScrollTile
         '
@@ -1175,7 +1180,6 @@ Partial Class MAIN
         Me.chartViewZoomScrollTile.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(238, Byte), Integer))
         Me.chartViewZoomScrollTile.CellPadding = New System.Windows.Forms.Padding(5)
         Me.chartViewZoomScrollTile.ColSpan = 2
-        Me.chartViewZoomScrollTile.Column = 2
         Me.chartViewZoomScrollTile.DrawBorder = True
         Me.chartViewZoomScrollTile.EnableImageTransparency = True
         Me.chartViewZoomScrollTile.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
@@ -1455,7 +1459,6 @@ Partial Class MAIN
         Me.ProductMenu.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LiveTileFrameElement1, Me.LiveTileFrameElement2, Me.LiveTileFrameElement3})
         Me.ProductMenu.Name = "ProductMenu"
         Me.ProductMenu.Padding = New System.Windows.Forms.Padding(5, 5, 5, 8)
-        Me.ProductMenu.Row = 1
         Me.ProductMenu.Text = "Product"
         Me.ProductMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.ProductMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1491,6 +1494,7 @@ Partial Class MAIN
         Me.MeterMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.MeterMenu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.MeterMenu.ColSpan = 2
+        Me.MeterMenu.Column = 2
         Me.MeterMenu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.MeterMenu.ForeColor = System.Drawing.Color.White
         Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
@@ -1511,7 +1515,6 @@ Partial Class MAIN
         Me.BayMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.BayMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.BayMenu.ColSpan = 2
-        Me.BayMenu.Column = 2
         Me.BayMenu.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!)
         Me.BayMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.BayMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_bay
@@ -1578,9 +1581,11 @@ Partial Class MAIN
         Me.StatusMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.StatusMenu.Name = "StatusMenu"
         Me.StatusMenu.Padding = New System.Windows.Forms.Padding(5)
+        Me.StatusMenu.Row = 2
         Me.StatusMenu.Text = "Status"
         Me.StatusMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.StatusMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.StatusMenu.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'HistoryMenu
         '
@@ -1688,13 +1693,14 @@ Partial Class MAIN
         Me.UserMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.UserMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.UserMenu.ColSpan = 2
+        Me.UserMenu.Column = 2
         Me.UserMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.UserMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_user
         Me.UserMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.UserMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.UserMenu.Name = "UserMenu"
         Me.UserMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.UserMenu.Row = 2
+        Me.UserMenu.Row = 1
         Me.UserMenu.Text = "User"
         Me.UserMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.UserMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay

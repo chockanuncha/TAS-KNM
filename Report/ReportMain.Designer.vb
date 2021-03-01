@@ -174,7 +174,7 @@ Partial Class Reportmain
         'RadButton2
         '
         Me.RadButton2.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton2.Location = New System.Drawing.Point(709, 357)
+        Me.RadButton2.Location = New System.Drawing.Point(738, 417)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(375, 118)
         Me.RadButton2.TabIndex = 13
@@ -196,7 +196,7 @@ Partial Class Reportmain
         'RadButton23
         '
         Me.RadButton23.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton23.Location = New System.Drawing.Point(706, 336)
+        Me.RadButton23.Location = New System.Drawing.Point(735, 396)
         Me.RadButton23.Name = "RadButton23"
         Me.RadButton23.Size = New System.Drawing.Size(375, 118)
         Me.RadButton23.TabIndex = 8
@@ -222,7 +222,7 @@ Partial Class Reportmain
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(375, 118)
         Me.RadButton1.TabIndex = 2
-        Me.RadButton1.Text = "Daily Loading Report"
+        Me.RadButton1.Text = "Daily Truck Report"
         Me.RadButton1.ThemeName = "Breeze"
         '
         'RadButton6
@@ -244,7 +244,7 @@ Partial Class Reportmain
         'RadButton5
         '
         Me.RadButton5.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton5.Location = New System.Drawing.Point(1052, 317)
+        Me.RadButton5.Location = New System.Drawing.Point(1081, 377)
         Me.RadButton5.Name = "RadButton5"
         Me.RadButton5.Size = New System.Drawing.Size(165, 71)
         Me.RadButton5.TabIndex = 4

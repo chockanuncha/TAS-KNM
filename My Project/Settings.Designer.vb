@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.18\TAS_INFINITE;Initial Catalog=TAS;Persist Security Info=T"& _ 
-            "rue;User ID=sa;Password=P@$$w0rd")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=INTASSERVER\TAS_INFINITE;Initial Catalog=TAS;Persist Security Info=Tr"& _ 
+            "ue;User ID=sa;Password=P@$$w0rd")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)
@@ -86,6 +86,18 @@ Namespace My
             End Get
             Set
                 Me("LicServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property LicOverride() As Integer
+            Get
+                Return CType(Me("LicOverride"),Integer)
+            End Get
+            Set
+                Me("LicOverride") = value
             End Set
         End Property
     End Class

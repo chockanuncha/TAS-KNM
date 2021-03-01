@@ -22,13 +22,13 @@ Partial Public Class MAIN
     Private headerLabel As New LightVisualElement
     Private backButton As New RadButtonElement
     Dim TimeText As Integer = 100
+
     Friend WithEvents ThrShipment As BackgroundWorker
     Dim CallBlackShipment As New MethodInvoker(AddressOf Me.DataBlackShipment)
     Dim Memory As MemoryManagement.Manage
     Dim Clearram As Integer = 0
     Dim strHostName As String = ""
     Dim strIPAddress As String = ""
-
     'gobal variable
     Dim LicActive, StrTest As String
     Dim receiveBytes As [Byte]()
@@ -51,26 +51,27 @@ Partial Public Class MAIN
         Dim MessCon As String = Backend_talk.Connect(My.Settings.LicStatus, My.Settings.LicServer)
         TextBox1.Text = MessCon.ToString
     End Sub
-
     Private Sub BackendSend()
+
         Dim MessSend As String = Backend_talk.send(Process.GetCurrentProcess().Id.ToString + "//4//")
-        If MessSend Is Nothing Then
-            Count_ConnectLicense = 0
-            TextBox2.Text = "OK"
-            Me.radPanorama1.Enabled = True
-            formenable = True
-            EnableControls()
-        Else
-            Count_ConnectLicense = Count_ConnectLicense + 1
-            TextBox2.Text = MessSend.ToString
-            If Count_ConnectLicense = 3 Then
-                formenable = False
-                Me.radPanorama1.Enabled = False
-                EnableControls()
+            If MessSend Is Nothing Or My.Settings.LicOverride = 1 Then
                 Count_ConnectLicense = 0
-                Exit Sub
+                TextBox2.Text = "OK"
+                Me.radPanorama1.Enabled = True
+                formenable = True
+                EnableControls()
+            Else
+                Count_ConnectLicense = Count_ConnectLicense + 1
+                TextBox2.Text = MessSend.ToString
+                If Count_ConnectLicense = 3 Then
+                    formenable = False
+                    Me.radPanorama1.Enabled = False
+                    EnableControls()
+                    Count_ConnectLicense = 0
+                    Exit Sub
+                End If
             End If
-        End If
+
     End Sub
     Public Sub CallBackEvent(ByVal Str As String) Handles Backend_talk.RtRead
         Dim ResulBackend() As String = Strings.Split(Str, "//")
@@ -88,28 +89,7 @@ Partial Public Class MAIN
         Next
     End Sub
 
-    '            GLOIP = IPAddress.Parse("127.0.0.1")
-    '            GLOINTPORT = "44444"
-    '            udpClient.Connect(GLOIP, GLOINTPORT)
-    '            bytCommand = Encoding.ASCII.GetBytes(txtMessage.Text)
-    '            pRet = udpClient.Send(bytCommand, bytCommand.Length)
-    '#End Region
-
-    '#Region "Licene Client Recieve"
-
-
-    '        GLOIP = IPAddress.Parse("127.0.0.1")
-    '        GLOINTPORT = "44444"
-    '        udpClient.Connect(GLOIP, GLOINTPORT)
-
-    '    bytCommand = Encoding.ASCII.GetBytes(txtMessage.Text)
-    '            pRet = udpClient.Send(bytCommand, bytCommand.Length)
-
-
-    'Connect(status As String, ip_adds As String) as
-
 #End Region
-
 
 
     Private Sub FReShipment()
@@ -122,9 +102,9 @@ Partial Public Class MAIN
     Private Sub RefreshShipment()
         While Not ThrShipment.CancellationPending
             Try
-                Using dt As DataTable = cls.Query("select  top 1 ' + CONVERT(VARCHAR,ldate,120) + ' ' + ISNULL(DETAIL,'') + ' as EventDetail,* from t_event  order by id DESC;")
-                    If dt.Rows.Count > 0 Then
-                        EventString = dt.Rows(0).Item("EventDetail").ToString()
+                Using dtxx As DataTable = cls.Query("select  top 1  CONVERT(VARCHAR,ldate,120) + ' ' + ISNULL(DETAIL,'')  as EventDetail,* from t_event  order by id DESC")
+                    If dtxx.Rows.Count > 0 Then
+                        EventString = dtxx.Rows(0).Item("EventDetail").ToString()
                     Else
                         EventString = ""
                     End If
@@ -143,7 +123,7 @@ Partial Public Class MAIN
 
             Try
                 Me.BeginInvoke(CallBlackShipment)
-                Thread.Sleep(2000)
+                Thread.Sleep(10000)
             Catch ex As Exception
             End Try
         End While
@@ -151,12 +131,12 @@ Partial Public Class MAIN
     Private Sub DataBlackShipment()
         Eventext.Text = EventString.ToString
         Try
-            RichTextBox1.Text = RichTextBox1.Text & "," & StrTest.ToString & vbCrLf
+            RichTextBox1.Text = RichTextBox1.Text & " , " & StrTest.ToString & " , " & Now() & " " & vbCrLf
         Catch ex As Exception
         End Try
         If TextBox2.Text <> "OK" Then
             'Me.radPanorama1.Enabled = False
-            Eventext.Text = TextBox2.Text
+            Eventext.Text = TextBox2.Text & "  " & Eventext.Text
             Initiallicense()
             BackendSend()
             'ElseIf TextBox2.Text = "OK" And Me.radPanorama1.Enabled = False Then
@@ -508,9 +488,6 @@ Partial Public Class MAIN
         BatchMeter.Show()
     End Sub
 
-
-
-
     Private Sub RadLiveTileElement11_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadLiveTileElement11.Click
         Me.AddOwnedForm(Tank_Order)
         Tank_Order.Show()
@@ -609,8 +586,6 @@ Partial Public Class MAIN
         Q_Load.Show()
     End Sub
 
-
-
     Private Sub RadLiveTileElement23_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.AddOwnedForm(Workonlan)
         Workonlan.Show()
@@ -675,8 +650,6 @@ Partial Public Class MAIN
         End If
     End Sub
 
-
-
     Private Sub Truck_Menu_Click(sender As Object, e As EventArgs) Handles Truck_Menu.Click
         Me.AddOwnedForm(Truck)
         If Truck.Chk_View() = False Then
@@ -708,7 +681,5 @@ Partial Public Class MAIN
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         BackendSend()
     End Sub
+
 End Class
-
-
-
