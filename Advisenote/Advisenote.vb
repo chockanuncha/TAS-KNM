@@ -63,8 +63,8 @@ Public Class Advisenote
 
 
         RadPageView1.SelectedPage = RadPageViewPage1
-        DateTimePicker1.Value = Date.Now
-        DateTimePicker2.Value = Date.Now
+        DateTimePicker1xx.Value = Date.Now
+        DateTimePicker2xx.Value = Date.Now
         Dim descriptor As New FilterDescriptor(EdCustomer.DisplayMember, FilterOperator.StartsWith, String.Empty)
         EdCustomer.EditorControl.FilterDescriptors.Add(descriptor)
         EdCustomer.DropDownStyle = RadDropDownStyle.DropDown
@@ -182,7 +182,7 @@ Public Class Advisenote
             q &= " ,max(T1.ADDNOTEDATE) as ADDNOTEDATE,max(T2.LC_STARTTIME) as LC_STARTTIME,max(T2.LC_ENDTIME) as LC_ENDTIME "
             q &= "FROM T_Customer  RIGHT OUTER JOIN (Select * from T_LOADINGNOTE  Where T_LOADINGNOTE.AddnoteDate between "
             q &= "convert(datetime, '" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "') And "
-            q &= "convert(datetime, '" & DateTimePicker2.Value.Year & "/" & DateTimePicker2.Value.Month & "/" & DateTimePicker2.Value.Day & " 23:59:59" & "')  "
+            q &= "convert(datetime, '" & DatetimePicker2.Value.Year & "/" & DatetimePicker2.Value.Month & "/" & DatetimePicker2.Value.Day & " 23:59:59" & "')  "
             q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and advisenote_type='Advisenote') T1 ON T_Customer.ID = T1.LOAD_CUSTOMER "
             q &= "LEFT OUTER JOIN T_STATUS  ON T1.LOAD_STATUS = T_STATUS.STATUS_ID   "
             q &= "LEFT OUTER JOIN T_TRUCK ON T1.LOAD_VEHICLE = T_TRUCK.ID   "
@@ -2302,7 +2302,7 @@ Public Class Advisenote
         e.CellElement.BackColor4 = Color.FromArgb(254, 31, 32)
     End Sub
 
-    Private Sub DateTimePicker1_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub DateTimePicker1_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker1xx.ValueChanged
         'SelectVLoadingNote()
     End Sub
 
@@ -3874,7 +3874,7 @@ Public Class Advisenote
         SelectVLoadingNote()
     End Sub
 
-    Private Sub DateTimePicker2_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker2.ValueChanged
+    Private Sub DateTimePicker2_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker2xx.ValueChanged
         'SelectVLoadingNote()
     End Sub
 
