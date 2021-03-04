@@ -780,90 +780,8 @@ Public Class Advisenote
     End Sub
 
 
-    Private Sub OrderBut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OrderBut.Click
-        'Cbn2_TextChanged(sender, e)
-        Dim tov, Bayt As Integer
-        Dim Batchmeter, BayIndex As String
-        Dim Index As Integer
-        Try
-            If Order.Text <> "" Then
-                tov = Int(Order.Text)
-                Cbn10.Text = Order.Text
-            Else
-                tov = Int(Cbn10.Text)
-            End If
+    Private Sub OrderBut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-            'ProductList1_Leave(sender, e)
-            'ProductList2_Leave(sender, e)
-            'ProductList3_Leave(sender, e)
-            'ProductList4_Leave(sender, e)
-            'ProductList5_Leave(sender, e)
-            'ProductList6_Leave(sender, e)
-            'ProductList7_Leave(sender, e)
-            'ProductList8_Leave(sender, e)
-            'ProductList9_Leave(sender, e)
-            'ProductList10_Leave(sender, e)
-            'ProductList11_Leave(sender, e)
-            'ProductList12_Leave(sender, e)
-
-
-
-
-            Bayt = Bay.SelectedIndex
-            For i = 0 To TRUCK_COMP_NUM - 1
-                'If Bayt = -1 Then
-                If (Int(DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i + 1).ToString), RadTextBox).Text) <= tov) Then
-                    DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = Product.SelectedIndex
-                    'DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text = Product.Text
-                    ProductCom(i) = TProductBindingSource.Item(TProductBindingSource.Position)("Product_code").ToString()
-                    'DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Bay.SelectedIndex
-
-                    BayIndex = Bay.Text
-                    Index = DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).FindString(BayIndex)
-                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
-
-
-                    'DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Meter.SelectedIndex
-                    Batchmeter = Meter.Text
-                    Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
-                    DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
-
-                    DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text = DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i + 1).ToString), RadTextBox).Text
-                    tov = tov - Int(DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text)
-                Else
-                    DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text = tov
-
-                    If tov <> 0 Then
-                        DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = Product.SelectedIndex
-                        ProductCom(i) = TProductBindingSource.Item(TProductBindingSource.Position)("Product_code").ToString()
-
-
-                        BayIndex = Bay.Text
-                        Index = DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).FindString(BayIndex)
-                        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
-                        Batchmeter = Meter.Text
-                        Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
-                        DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
-
-                        'DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Bay.SelectedIndex
-                        'DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Meter.SelectedIndex
-                    Else
-                        DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1 'Product.SelectedIndex
-                        ProductCom(i) = ""
-                        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1 'Bay.SelectedIndex
-                        DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1 'Meter.SelectedIndex
-                    End If
-                    tov = tov - Int(DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text)
-                End If
-
-            Next i
-
-
-
-
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Function Item(ByVal p1 As String) As Object
@@ -2322,133 +2240,8 @@ Public Class Advisenote
     '    Meter.MultiColumnComboBoxElement.ShowPopup()
     'End Sub
 
-    Private Sub Product_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Product.Leave
+    Private Sub Product_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-            TBayBindingSource.DataSource = Nothing
-            TBayBindingSource.DataMember = Nothing
-
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
-
-            'sql = ""
-            'sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            'sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            sql = "SELECT * FROM T_BAY WHERE BAY_STATUS=1"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource.DataSource = MyDataSet
-            TBayBindingSource.DataMember = "T_bay"
-
-
-            'TBAYBindingSource1.DataSource = Nothing
-            'TBAYBindingSource1.DataMember = Nothing
-            TBAYBindingSource1.DataSource = MyDataSet
-            TBAYBindingSource1.DataMember = "T_bay"
-            IslandBay1.DisplayMember = "Bay_number"
-            IslandBay1.SelectedIndex = -1
-
-            'TBAYBindingSource2.DataSource = Nothing
-            'TBAYBindingSource2.DataMember = Nothing
-            TBAYBindingSource2.DataSource = MyDataSet
-            TBAYBindingSource2.DataMember = "T_bay"
-            IslandBay2.DisplayMember = "Bay_number"
-            IslandBay2.SelectedIndex = -1
-
-            'TBAYBindingSource3.DataSource = Nothing
-            'TBAYBindingSource3.DataMember = Nothing
-            TBAYBindingSource3.DataSource = MyDataSet
-            TBAYBindingSource3.DataMember = "T_bay"
-            IslandBay3.DisplayMember = "Bay_number"
-            IslandBay3.SelectedIndex = -1
-
-            'TBayBindingSource4.DataSource = Nothing
-            'TBayBindingSource4.DataMember = Nothing
-            TBayBindingSource4.DataSource = MyDataSet
-            TBayBindingSource4.DataMember = "T_bay"
-            IslandBay4.DisplayMember = "Bay_number"
-            IslandBay4.SelectedIndex = -1
-
-
-            'TBayBindingSource5.DataSource = Nothing
-            'TBayBindingSource5.DataMember = Nothing
-            TBayBindingSource5.DataSource = MyDataSet
-            TBayBindingSource5.DataMember = "T_bay"
-            IslandBay5.DisplayMember = "Bay_number"
-            IslandBay5.SelectedIndex = -1
-
-            'TBayBindingSource6.DataSource = Nothing
-            'TBayBindingSource6.DataMember = Nothing
-            TBayBindingSource6.DataSource = MyDataSet
-            TBayBindingSource6.DataMember = "T_bay"
-            IslandBay6.DisplayMember = "Bay_number"
-            IslandBay6.SelectedIndex = -1
-
-            'TBayBindingSource7.DataSource = Nothing
-            'TBayBindingSource7.DataMember = Nothing
-            TBayBindingSource7.DataSource = MyDataSet
-            TBayBindingSource7.DataMember = "T_bay"
-            IslandBay7.DisplayMember = "Bay_number"
-            IslandBay7.SelectedIndex = -1
-
-            'TBayBindingSource8.DataSource = Nothing
-            'TBayBindingSource8.DataMember = Nothing
-            TBayBindingSource8.DataSource = MyDataSet
-            TBayBindingSource8.DataMember = "T_bay"
-            IslandBay8.DisplayMember = "Bay_number"
-            IslandBay8.SelectedIndex = -1
-
-            'TBayBindingSource9.DataSource = Nothing
-            'TBayBindingSource9.DataMember = Nothing
-            TBayBindingSource9.DataSource = MyDataSet
-            TBayBindingSource9.DataMember = "T_bay"
-            IslandBay9.DisplayMember = "Bay_number"
-            IslandBay9.SelectedIndex = -1
-
-            'TBayBindingSource10.DataSource = Nothing
-            'TBayBindingSource10.DataMember = Nothing
-            TBayBindingSource10.DataSource = MyDataSet
-            TBayBindingSource10.DataMember = "T_bay"
-            IslandBay10.DisplayMember = "Bay_number"
-            IslandBay10.SelectedIndex = -1
-
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where ID in(" & Product_ID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-            Dim dr() As DataRow = Listbay(ProID)
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            Bay.Text = dr(0)("Bay").ToString
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
     End Sub
 
     Private Sub TProductBindingSource_PositionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TProductBindingSource.PositionChanged
@@ -2461,7 +2254,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Bay_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bay.Leave
+    Private Sub Bay_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim Bay_Number, Product_ID As Integer
             Dim Sql As String
@@ -2576,7 +2369,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Order_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Order.TextChanged
+    Private Sub Order_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Order.Text) > Int(Cbn5.Text) Then
                 Order.Text = Cbn5.Text
@@ -2587,142 +2380,31 @@ Public Class Advisenote
 
     Private Sub Cbn10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn10.Leave
         Try
-            'If EditType <> 1 Then
-            If Int(Cbn10.Text) > Int(Cbn5.Text) Then
-                Cbn10.Text = Cbn5.Text
-                Cbn10.Focus()
+
             End If
-            'End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-
-    Private Sub Cbn10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn10.TextChanged
-        Try
-            'If EditType <> 1 Then
-            If Int(Cbn10.Text) > Int(Cbn5.Text) Then
-                Cbn10.Text = Cbn5.Text
-                Cbn10.Focus()
             End If
-            'End If
-        Catch ex As Exception
 
-        End Try
-    End Sub
-
-    Private Sub Driver_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Driver.Leave
-        AuthorRemarkDriver = ""
-        If Driver.Text = "" Then
-            PictureBox1.Image = Nothing
-            Exit Sub
-        End If
-
-        Dim Vdate1, Vdate2 As Integer
-        Dim Chk_DriverLicense As Integer = 0
-        Dim Chk_DriverTraining As Integer = 0
-        If EditType <> 1 Then
-
-            Dim sql As String
-            sql = ""
-            sql = "select (CONVERT (DATETIME,DRIVER_DATE_END)-CONVERT (DATETIME,Getdate())) as DRIVER_DATE_END,(CONVERT (DATETIME,TRAIN_DATE_end)-CONVERT (DATETIME,Getdate())) TRAIN_DATE_end From T_Driver where ID= '" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "'"
-
-            Dim dt1 As DataTable = cls.Query(sql)
-
-            Dim dt_tmp As DataTable = cls.Query("SELECT * FROM T_OVERRIDE")
-
-
-            For Each dr As DataRow In dt_tmp.Rows
-                Select Case dr("OVERRIDE_NAME").ToString
-                    Case "CHECK DRIVER LICENSE"
-                        Chk_DriverLicense = dr("STATUS")
-                    Case "CHECK DRIVER TRAINING"
-                        Chk_DriverTraining = dr("STATUS")
-                End Select
-            Next
+            If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
+                MessageBox.Show("Driver license will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+            If (Vdate2 < 30 And Vdate2 > 0) And Chk_DriverTraining Then
+                MessageBox.Show("Training license will expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+            'AuthorRemark = ""
 
             Try
-                Vdate1 = Int(dt1.Rows(0).Item("DRIVER_DATE_END").ToString())
+                Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
+                Dim Ms As MemoryStream = New MemoryStream(ArrPic)
+                PictureBox1.Image = Image.FromStream(Ms)
+                Ms.Dispose()
+
+
             Catch ex As Exception
-                Vdate1 = -1
+                PictureBox1.Image = Nothing
             End Try
-
-
-            If Vdate1 <= 0 And Chk_DriverLicense Then
-                MessageBox.Show("Driver license expire, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                If MsgBox("Do you want to bypass by Supervisor user?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-
-                    authorizeUser = 5
-                    Loginauthorize.ShowDialog()
-                    If Loginauthorize.Success = 0 Then
-                        AuthorRemarkDriver = ""
-                        authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                        Driver.SelectedIndex = -1
-                        Driver.Focus()
-                        Exit Sub
-                    End If
-                Else
-                    AuthorRemarkDriver = ""
-                    authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                    Driver.SelectedIndex = -1
-                    Driver.Focus()
-                    Exit Sub
-                End If
-                authorizeUser = 0
-            End If
-
-            Try
-                Vdate2 = Int(dt1.Rows(0).Item("TRAIN_DATE_END").ToString())
-            Catch ex As Exception
-                Vdate2 = -1
-            End Try
-            If Vdate2 <= 0 And Chk_DriverTraining Then
-                MessageBox.Show("Training license expire, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                If MsgBox("Do you want to bypass by Supervisor user?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
-
-                    authorizeUser = 6
-                    Loginauthorize.ShowDialog()
-                    If Loginauthorize.Success = 0 Then
-
-                        AuthorRemarkDriver = ""
-                        authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                        Driver.SelectedIndex = -1
-                        Driver.Focus()
-                        Exit Sub
-                    End If
-                Else
-                    AuthorRemarkDriver = ""
-                    authorize_Remark.Text = AuthorRemark.ToString & AuthorRemarkDriver.ToString
-                    Driver.SelectedIndex = -1
-                    Driver.Focus()
-                    Exit Sub
-                End If
-                authorizeUser = 0
-            End If
-        End If
-
-        If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
-            MessageBox.Show("Driver license will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-        If (Vdate2 < 30 And Vdate2 > 0) And Chk_DriverTraining Then
-            MessageBox.Show("Training license will expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-        'AuthorRemark = ""
-
-        Try
-            Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
-            Dim Ms As MemoryStream = New MemoryStream(ArrPic)
-            PictureBox1.Image = Image.FromStream(Ms)
-            Ms.Dispose()
-
-
-        Catch ex As Exception
-            PictureBox1.Image = Nothing
-        End Try
     End Sub
 
-    Private Sub Preset1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset1.TextChanged
+    Private Sub Preset1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset1.Text) > Int(Capacity1.Text) Then
                 Preset1.Text = Capacity1.Text
@@ -2731,7 +2413,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset2.TextChanged
+    Private Sub Preset2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset2.Text) > Int(Capacity2.Text) Then
                 Preset2.Text = Capacity2.Text
@@ -2740,7 +2422,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset3.TextChanged
+    Private Sub Preset3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset3.Text) > Int(Capacity3.Text) Then
                 Preset3.Text = Capacity3.Text
@@ -2749,7 +2431,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset4.TextChanged
+    Private Sub Preset4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset4.Text) > Int(Capacity4.Text) Then
                 Preset4.Text = Capacity4.Text
@@ -2758,7 +2440,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset5.TextChanged
+    Private Sub Preset5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset5.Text) > Int(Capacity5.Text) Then
                 Preset5.Text = Capacity5.Text
@@ -2767,7 +2449,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset6.TextChanged
+    Private Sub Preset6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset6.Text) > Int(Capacity6.Text) Then
                 Preset6.Text = Capacity6.Text
@@ -2776,7 +2458,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset7.TextChanged
+    Private Sub Preset7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset7.Text) > Int(Capacity7.Text) Then
                 Preset7.Text = Capacity7.Text
@@ -2785,7 +2467,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset8.TextChanged
+    Private Sub Preset8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset8.Text) > Int(Capacity8.Text) Then
                 Preset8.Text = Capacity8.Text
@@ -2794,7 +2476,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset9_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset9.TextChanged
+    Private Sub Preset9_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset9.Text) > Int(Capacity9.Text) Then
                 Preset9.Text = Capacity9.Text
@@ -2803,7 +2485,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset10.TextChanged
+    Private Sub Preset10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset10.Text) > Int(Capacity10.Text) Then
                 Preset10.Text = Capacity10.Text
@@ -2812,16 +2494,11 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Preset11_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset11.TextChanged
-        Try
-            If Int(Preset11.Text) > Int(Capacity11.Text) Then
-                Preset11.Text = Capacity11.Text
-            End If
-        Catch ex As Exception
-        End Try
+    Private Sub Preset11_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 
-    Private Sub Preset12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preset12.TextChanged
+    Private Sub Preset12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             If Int(Preset12.Text) > Int(Capacity12.Text) Then
                 Preset12.Text = Capacity12.Text
@@ -2831,11 +2508,11 @@ Public Class Advisenote
     End Sub
 
 
-    Private Sub Product_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Product.KeyPress
+    Private Sub Product_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         Bay.SelectedIndex = -1
     End Sub
 
-    Private Sub ProductList1_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList1.Leave
+    Private Sub ProductList1_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3036,7 +2713,7 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub Order_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Order.KeyPress
+    Private Sub Order_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If IsNumeric(e.KeyChar) = False AndAlso e.KeyChar <> Chr(8) Then
             e.KeyChar = Chr(0)
         End If
@@ -3073,8 +2750,8 @@ Public Class Advisenote
                         Mt_Bay &= "'" & Ds.Tables("T_BAY").Rows(Bay)("BAY_METER" & mt).ToString & "'"
                     Else
                         Mt_Bay &= ",'" & Ds.Tables("T_BAY").Rows(Bay)("BAY_METER" & mt).ToString & "'"
+
                     End If
-                End If
             Next
             Dim str As String = "select min(batch_number) as batch_number,BATCH_PRO from t_batchmeter where batch_status=10 and batch_number in(" & Mt_Bay & ") and BATCH_PRO in(" & InProductID & ") GROUP By BATCH_PRO"
 
@@ -3120,7 +2797,7 @@ Public Class Advisenote
     End Function
 
 
-    Private Sub ProductList3_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList3.Leave
+    Private Sub ProductList3_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3188,7 +2865,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList4_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList4.Leave
+    Private Sub ProductList4_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3258,7 +2935,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList2_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList2.Leave
+    Private Sub ProductList2_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim ProductID As String = ""
         Dim sql As String
         Dim ProductCount As Integer = 0
@@ -3278,9 +2955,7 @@ Public Class Advisenote
         sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
         sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
         sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
 
-        Dim MyDataSet As New DataSet
         MyDataSet = cls.Query_DS(sql, "T_bay")
 
         TBAYBindingSource2.DataSource = MyDataSet
@@ -3324,7 +2999,7 @@ Public Class Advisenote
         MyDataSet.Dispose()
     End Sub
 
-    Private Sub ProductList5_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList5.Leave
+    Private Sub ProductList5_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3392,7 +3067,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList6_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList6.Leave
+    Private Sub ProductList6_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3460,7 +3135,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList7_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList7.Leave
+    Private Sub ProductList7_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3528,7 +3203,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList8_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList8.Leave
+    Private Sub ProductList8_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3596,7 +3271,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList9_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList9.Leave
+    Private Sub ProductList9_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3664,7 +3339,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList10.Leave
+    Private Sub ProductList10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3733,7 +3408,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList11_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList11.Leave
+    Private Sub ProductList11_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3802,7 +3477,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList12_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductList12.Leave
+    Private Sub ProductList12_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
@@ -3904,7 +3579,7 @@ Public Class Advisenote
     End Sub
 
 #Region "Select_Bay"
-    Private Sub IslandBay1_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay1.SelectedIndexChanged
+    Private Sub IslandBay1_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             Dim sqlcmd As String = "select * from t_batchmeter where batch_status=10 order by batch_name"
             Dim dt As DataTable = cls.Query(sqlcmd)
@@ -3916,7 +3591,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay2_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay2.SelectedIndexChanged
+    Private Sub IslandBay2_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             Dim sqlcmd As String = "select * from t_batchmeter where batch_status=10 order by batch_name"
             Dim dt As DataTable = cls.Query(sqlcmd)
@@ -3928,7 +3603,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay3_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay3.SelectedIndexChanged
+    Private Sub IslandBay3_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource3.Filter = "batch_bay=" & TBAYBindingSource3.Item(TBAYBindingSource3.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3936,7 +3611,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay4_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay4.SelectedIndexChanged
+    Private Sub IslandBay4_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource4.Filter = "batch_bay=" & TBayBindingSource4.Item(TBayBindingSource4.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3944,7 +3619,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay5_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay5.SelectedIndexChanged
+    Private Sub IslandBay5_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource5.Filter = "batch_bay=" & TBayBindingSource5.Item(TBayBindingSource5.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3952,7 +3627,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay6_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay6.SelectedIndexChanged
+    Private Sub IslandBay6_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource6.Filter = "batch_bay=" & TBayBindingSource6.Item(TBayBindingSource6.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3960,7 +3635,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay7_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay7.SelectedIndexChanged
+    Private Sub IslandBay7_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource7.Filter = "batch_bay=" & TBayBindingSource7.Item(TBayBindingSource7.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3968,7 +3643,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay8_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay8.SelectedIndexChanged
+    Private Sub IslandBay8_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource8.Filter = "batch_bay=" & TBayBindingSource8.Item(TBayBindingSource8.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3976,7 +3651,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay9_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay9.SelectedIndexChanged
+    Private Sub IslandBay9_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource9.Filter = "batch_bay=" & TBayBindingSource9.Item(TBayBindingSource9.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3984,7 +3659,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay10_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay10.SelectedIndexChanged
+    Private Sub IslandBay10_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource10.Filter = "batch_bay=" & TBayBindingSource10.Item(TBayBindingSource10.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -3992,7 +3667,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay11_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay11.SelectedIndexChanged
+    Private Sub IslandBay11_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource11.Filter = "batch_bay=" & TBayBindingSource11.Item(TBayBindingSource11.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -4000,7 +3675,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay12_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles IslandBay12.SelectedIndexChanged
+    Private Sub IslandBay12_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs)
         Try
             TBatchmeterBindingSource12.Filter = "batch_bay=" & TBayBindingSource12.Item(TBayBindingSource12.Position)("Bay_Number").ToString()
         Catch ex As Exception
@@ -4027,7 +3702,7 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub Bay_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bay.SelectedValueChanged
+    Private Sub Bay_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Meter.SelectedIndex = -1
             Dim Bay_Number, Product_ID As Integer
@@ -4051,7 +3726,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub IslandBay1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay1.TextChanged
+    Private Sub IslandBay1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter1.SelectedIndex = -1
@@ -4079,7 +3754,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay2.TextChanged
+    Private Sub IslandBay2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (EditType = 0 And baycheck = 1) Then
             Try
                 Meter2.SelectedIndex = -1
@@ -4108,7 +3783,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay3.TextChanged
+    Private Sub IslandBay3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter3.SelectedIndex = -1
@@ -4137,7 +3812,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay4.TextChanged
+    Private Sub IslandBay4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter4.SelectedIndex = -1
@@ -4166,7 +3841,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay5.TextChanged
+    Private Sub IslandBay5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter5.SelectedIndex = -1
@@ -4195,7 +3870,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay6.TextChanged
+    Private Sub IslandBay6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter6.SelectedIndex = -1
@@ -4224,7 +3899,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay7.TextChanged
+    Private Sub IslandBay7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter7.SelectedIndex = -1
@@ -4253,7 +3928,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay8.TextChanged
+    Private Sub IslandBay8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter8.SelectedIndex = -1
@@ -4282,7 +3957,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay9_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay9.TextChanged
+    Private Sub IslandBay9_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter9.SelectedIndex = -1
@@ -4311,7 +3986,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay10.TextChanged
+    Private Sub IslandBay10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter10.SelectedIndex = -1
@@ -4340,7 +4015,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay11_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay11.TextChanged
+    Private Sub IslandBay11_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter11.SelectedIndex = -1
@@ -4369,7 +4044,7 @@ Public Class Advisenote
         End If
     End Sub
 
-    Private Sub IslandBay12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IslandBay12.TextChanged
+    Private Sub IslandBay12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
                 Meter12.SelectedIndex = -1
