@@ -2255,127 +2255,11 @@ Public Class Advisenote
     End Sub
 
     Private Sub Bay_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim Bay_Number, Product_ID As Integer
-            Dim Sql As String
 
-            Bay_Number = TBayBindingSource.Item(TBayBindingSource.Position)("Bay_Number").ToString()
-            Product_ID = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
-
-            Sql = ""
-            Sql = "Select ID,Batch_name from T_batchmeter where Batch_bay='" & Bay_Number & "' and batch_pro='" & Product_ID & "' and Batch_Status=10 Order by Batch_name"
-
-            If EditType = 1 Then
-                Sql = ""
-                Sql = "Select ID,Batch_name from T_batchmeter where  Batch_Status=10 Order by Batch_name"
-            End If
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(Sql, "T_batchmeter")
-
-            TBatchmeterBindingSource.DataSource = MyDataSet
-            TBatchmeterBindingSource.DataMember = "T_batchmeter"
-            'TBatchmeterBindingSource.Position = 0
-            Meter.SelectedIndex = 0
-
-            'TBatchmeterBindingSource1.DataSource = Nothing
-            'TBatchmeterBindingSource1.DataMember = Nothing
-            TBatchmeterBindingSource1.DataSource = MyDataSet
-            TBatchmeterBindingSource1.DataMember = "T_batchmeter"
-            Meter1.DisplayMember = "Batch_name"
-            Meter1.SelectedIndex = -1
-
-            'TBatchmeterBindingSource2.DataSource = Nothing
-            'TBatchmeterBindingSource2.DataMember = Nothing
-            TBatchmeterBindingSource2.DataSource = MyDataSet
-            TBatchmeterBindingSource2.DataMember = "T_batchmeter"
-            Meter2.DisplayMember = "Batch_name"
-            Meter2.SelectedIndex = -1
-
-            'TBatchmeterBindingSource3.DataSource = Nothing
-            'TBatchmeterBindingSource3.DataMember = Nothing
-            TBatchmeterBindingSource3.DataSource = MyDataSet
-            TBatchmeterBindingSource3.DataMember = "T_batchmeter"
-            Meter3.DisplayMember = "Batch_name"
-            Meter3.SelectedIndex = -1
-
-            'TBatchmeterBindingSource4.DataSource = Nothing
-            'TBatchmeterBindingSource4.DataMember = Nothing
-            TBatchmeterBindingSource4.DataSource = MyDataSet
-            TBatchmeterBindingSource4.DataMember = "T_batchmeter"
-            Meter4.DisplayMember = "Batch_name"
-            Meter4.SelectedIndex = -1
-
-            'TBatchmeterBindingSource5.DataSource = Nothing
-            'TBatchmeterBindingSource5.DataMember = Nothing
-            TBatchmeterBindingSource5.DataSource = MyDataSet
-            TBatchmeterBindingSource5.DataMember = "T_batchmeter"
-            Meter5.DisplayMember = "Batch_name"
-            Meter5.SelectedIndex = -1
-
-            'TBatchmeterBindingSource6.DataSource = Nothing
-            'TBatchmeterBindingSource6.DataMember = Nothing
-            TBatchmeterBindingSource6.DataSource = MyDataSet
-            TBatchmeterBindingSource6.DataMember = "T_batchmeter"
-            Meter6.DisplayMember = "Batch_name"
-            Meter6.SelectedIndex = -1
-
-            'TBatchmeterBindingSource7.DataSource = Nothing
-            'TBatchmeterBindingSource7.DataMember = Nothing
-            TBatchmeterBindingSource7.DataSource = MyDataSet
-            TBatchmeterBindingSource7.DataMember = "T_batchmeter"
-            Meter7.DisplayMember = "Batch_name"
-            Meter7.SelectedIndex = -1
-
-            'TBatchmeterBindingSource8.DataSource = Nothing
-            'TBatchmeterBindingSource8.DataMember = Nothing
-            TBatchmeterBindingSource8.DataSource = MyDataSet
-            TBatchmeterBindingSource8.DataMember = "T_batchmeter"
-            Meter8.DisplayMember = "Batch_name"
-            Meter8.SelectedIndex = -1
-
-            'TBatchmeterBindingSource9.DataSource = Nothing
-            'TBatchmeterBindingSource9.DataMember = Nothing
-            TBatchmeterBindingSource9.DataSource = MyDataSet
-            TBatchmeterBindingSource9.DataMember = "T_batchmeter"
-            Meter9.DisplayMember = "Batch_name"
-            Meter9.SelectedIndex = -1
-
-            'TBatchmeterBindingSource10.DataSource = Nothing
-            'TBatchmeterBindingSource10.DataMember = Nothing
-            TBatchmeterBindingSource10.DataSource = MyDataSet
-            TBatchmeterBindingSource10.DataMember = "T_batchmeter"
-            Meter10.DisplayMember = "Batch_name"
-            Meter10.SelectedIndex = -1
-
-            'TBatchmeterBindingSource11.DataSource = Nothing
-            'TBatchmeterBindingSource11.DataMember = Nothing
-            TBatchmeterBindingSource11.DataSource = MyDataSet
-            TBatchmeterBindingSource11.DataMember = "T_batchmeter"
-            Meter11.DisplayMember = "Batch_name"
-            Meter11.SelectedIndex = -1
-
-
-            'TBatchmeterBindingSource12.DataSource = Nothing
-            'TBatchmeterBindingSource12.DataMember = Nothing
-            TBatchmeterBindingSource12.DataSource = MyDataSet
-            TBatchmeterBindingSource12.DataMember = "T_batchmeter"
-            Meter12.DisplayMember = "Batch_name"
-            Meter12.SelectedIndex = -1
-
-            baycheck = 1
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
     End Sub
 
     Private Sub Order_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            If Int(Order.Text) > Int(Cbn5.Text) Then
-                Order.Text = Cbn5.Text
-            End If
-        Catch ex As Exception
-        End Try
+
     End Sub
 
     Private Sub Cbn10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn10.Leave
@@ -2509,7 +2393,7 @@ Public Class Advisenote
 
 
     Private Sub Product_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        Bay.SelectedIndex = -1
+
     End Sub
 
     Private Sub ProductList1_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -2714,9 +2598,7 @@ Public Class Advisenote
     End Sub
 
     Private Sub Order_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        If IsNumeric(e.KeyChar) = False AndAlso e.KeyChar <> Chr(8) Then
-            e.KeyChar = Chr(0)
-        End If
+
     End Sub
 
 

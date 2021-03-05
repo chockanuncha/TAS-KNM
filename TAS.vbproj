@@ -862,6 +862,12 @@
     <Compile Include="Operate\Workonlan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="_Temp\F_Temp.Designer.vb">
+      <DependentUpon>F_Temp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_Temp\F_Temp.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Advisenote\Advisenote.resx">
@@ -1136,6 +1142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operate\Workonlan.resx">
       <DependentUpon>Workonlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Temp\F_Temp.resx">
+      <DependentUpon>F_Temp.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
