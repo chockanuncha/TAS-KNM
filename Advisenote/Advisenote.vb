@@ -2263,29 +2263,26 @@ Public Class Advisenote
     End Sub
 
     Private Sub Cbn10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn10.Leave
-        Try
 
-            End If
-            End If
-
-            If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
+        If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
                 MessageBox.Show("Driver license will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
             If (Vdate2 < 30 And Vdate2 > 0) And Chk_DriverTraining Then
                 MessageBox.Show("Training license will expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
-            'AuthorRemark = ""
+        'AuthorRemark = ""
 
-            Try
-                Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
-                Dim Ms As MemoryStream = New MemoryStream(ArrPic)
-                PictureBox1.Image = Image.FromStream(Ms)
-                Ms.Dispose()
+        Try
+            Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
+            Dim Ms As MemoryStream = New MemoryStream(ArrPic)
+            PictureBox1.Image = Image.FromStream(Ms)
+            Ms.Dispose()
 
 
-            Catch ex As Exception
-                PictureBox1.Image = Nothing
-            End Try
+        Catch ex As Exception
+            PictureBox1.Image = Nothing
+        End Try
+
     End Sub
 
     Private Sub Preset1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -2634,6 +2631,7 @@ Public Class Advisenote
                         Mt_Bay &= ",'" & Ds.Tables("T_BAY").Rows(Bay)("BAY_METER" & mt).ToString & "'"
 
                     End If
+                End If
             Next
             Dim str As String = "select min(batch_number) as batch_number,BATCH_PRO from t_batchmeter where batch_status=10 and batch_number in(" & Mt_Bay & ") and BATCH_PRO in(" & InProductID & ") GROUP By BATCH_PRO"
 
