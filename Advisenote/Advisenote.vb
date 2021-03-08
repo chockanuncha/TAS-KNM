@@ -2264,24 +2264,24 @@ Public Class Advisenote
 
     Private Sub Cbn10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn10.Leave
 
-        If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
-                MessageBox.Show("Driver license will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-            If (Vdate2 < 30 And Vdate2 > 0) And Chk_DriverTraining Then
-                MessageBox.Show("Training license will expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        'AuthorRemark = ""
+        'If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
+        '    MessageBox.Show("Driver license will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'End If
 
-        Try
-            Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
-            Dim Ms As MemoryStream = New MemoryStream(ArrPic)
-            PictureBox1.Image = Image.FromStream(Ms)
-            Ms.Dispose()
+        'If (Vdate2 < 30 And Vdate2 > 0) And Chk_DriverTraining Then
+        '    MessageBox.Show("Training license will expire in : '" & Vdate2.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'End If
+        ''AuthorRemark = ""
 
 
-        Catch ex As Exception
-            PictureBox1.Image = Nothing
-        End Try
+        'Try
+        '    Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
+        '    Dim Ms As MemoryStream = New MemoryStream(ArrPic)
+        '    PictureBox1.Image = Image.FromStream(Ms)
+        '    Ms.Dispose()
+        'Catch ex As Exception
+        '    PictureBox1.Image = Nothing
+        'End Try
 
     End Sub
 
@@ -2393,72 +2393,6 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub ProductList1_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-            TBAYBindingSource1.DataSource = Nothing
-            TBAYBindingSource1.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource1.Item(TProductBindingSource1.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBAYBindingSource1.DataSource = MyDataSet
-            TBAYBindingSource1.DataMember = "T_bay"
-            IslandBay1.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-            Dim dr() As DataRow = Listbay(ProID)
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-
-            '    End If
-            'Next
-            If ProductList1.Text = "" Then IslandBay1.SelectedIndex = -1
-
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
 
     'Private Sub AddAuto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     '    ClearData()
@@ -2676,17 +2610,16 @@ Public Class Advisenote
         Return Dr
     End Function
 
-
-    Private Sub ProductList3_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+#Region "Product_list"
+    Private Sub ProductList1_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             Dim ProductID As String = ""
             Dim sql As String
             Dim ProductCount As Integer = 0
-
-            TBAYBindingSource3.DataSource = Nothing
-            TBAYBindingSource3.DataMember = Nothing
+            TBAYBindingSource1.DataSource = Nothing
+            TBAYBindingSource1.DataMember = Nothing
             Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource3.Item(TProductBindingSource3.Position)("ID").ToString()
+            Product_ID = TProductBindingSource1.Item(TProductBindingSource1.Position)("ID").ToString()
 
             sql = ""
             sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
@@ -2703,9 +2636,9 @@ Public Class Advisenote
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(sql, "T_bay")
 
-            TBAYBindingSource3.DataSource = MyDataSet
-            TBAYBindingSource3.DataMember = "T_bay"
-            IslandBay3.DisplayMember = "Bay_number"
+            TBAYBindingSource1.DataSource = MyDataSet
+            TBAYBindingSource1.DataMember = "T_bay"
+            IslandBay1.DisplayMember = "Bay_number"
             For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
                 If ProductID = "" Then
                     ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
@@ -2722,9 +2655,7 @@ Public Class Advisenote
             For i As Integer = 0 To dt.Rows.Count - 1
                 ProID(i) = dt.Rows(i).Item("ID").ToString
             Next
-
             Dim dr() As DataRow = Listbay(ProID)
-
             Dim Bay2 As String = ""
             For i As Integer = 0 To dr.Length - 1
                 If Bay2 = "" Then
@@ -2736,620 +2667,10 @@ Public Class Advisenote
             'For i As Integer = 0 To TRUCK_COMP_NUM - 1
             '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
             '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+
             '    End If
             'Next
-            If ProductList3.Text = "" Then IslandBay3.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList4_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource4.DataSource = Nothing
-            TBayBindingSource4.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource4.Item(TProductBindingSource4.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource4.DataSource = MyDataSet
-            TBayBindingSource4.DataMember = "T_bay"
-            IslandBay4.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-            'Dim da1 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList4.Text = "" Then IslandBay4.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList2_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim ProductID As String = ""
-        Dim sql As String
-        Dim ProductCount As Integer = 0
-
-        TBAYBindingSource2.DataSource = Nothing
-        TBAYBindingSource2.DataMember = Nothing
-        Dim Product_ID As Integer = 0
-        Product_ID = TProductBindingSource2.Item(TProductBindingSource2.Position)("ID").ToString()
-
-        sql = ""
-        sql = "select bay_number,bay_status from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-
-        MyDataSet = cls.Query_DS(sql, "T_bay")
-
-        TBAYBindingSource2.DataSource = MyDataSet
-        TBAYBindingSource2.DataMember = "T_bay"
-        IslandBay2.DisplayMember = "Bay_number"
-        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-            If ProductID = "" Then
-                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-            End If
-        Next
-        sql = ""
-        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-        'Dim da1 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
-
-        Dim dt As DataTable = cls.Query(sql)
-
-        Dim ProID(dt.Rows.Count - 1) As String
-        For i As Integer = 0 To dt.Rows.Count - 1
-            ProID(i) = dt.Rows(i).Item("ID").ToString
-        Next
-
-        Dim dr() As DataRow = Listbay(ProID)
-
-        Dim Bay2 As String = ""
-        For i As Integer = 0 To dr.Length - 1
-            If Bay2 = "" Then
-                Bay2 &= dr(i)("Bay").ToString
-            Else
-                Bay2 &= "," & dr(i)("Bay").ToString
-            End If
-        Next
-        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-        '    End If
-        'Next
-        If ProductList2.Text = "" Then IslandBay2.SelectedIndex = -1
-        dt.Dispose()
-        MyDataSet.Dispose()
-    End Sub
-
-    Private Sub ProductList5_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource5.DataSource = Nothing
-            TBayBindingSource5.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource5.Item(TProductBindingSource5.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource5.DataSource = MyDataSet
-            TBayBindingSource5.DataMember = "T_bay"
-            IslandBay5.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList5.Text = "" Then IslandBay5.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList6_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource6.DataSource = Nothing
-            TBayBindingSource6.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource6.Item(TProductBindingSource6.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource6.DataSource = MyDataSet
-            TBayBindingSource6.DataMember = "T_bay"
-            IslandBay6.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList6.Text = "" Then IslandBay6.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList7_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource7.DataSource = Nothing
-            TBayBindingSource7.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource7.Item(TProductBindingSource7.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource7.DataSource = MyDataSet
-            TBayBindingSource7.DataMember = "T_bay"
-            IslandBay7.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList7.Text = "" Then IslandBay7.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList8_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource8.DataSource = Nothing
-            TBayBindingSource8.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource8.Item(TProductBindingSource8.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource8.DataSource = MyDataSet
-            TBayBindingSource8.DataMember = "T_bay"
-            IslandBay8.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList8.Text = "" Then IslandBay8.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList9_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource9.DataSource = Nothing
-            TBayBindingSource9.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource9.Item(TProductBindingSource9.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource9.DataSource = MyDataSet
-            TBayBindingSource9.DataMember = "T_bay"
-            IslandBay9.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList9.Text = "" Then IslandBay9.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource10.DataSource = Nothing
-            TBayBindingSource10.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource10.Item(TProductBindingSource10.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource10.DataSource = MyDataSet
-            TBayBindingSource10.DataMember = "T_bay"
-            IslandBay10.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList10.Text = "" Then IslandBay10.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ProductList11_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
-
-            TBayBindingSource11.DataSource = Nothing
-            TBayBindingSource11.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource11.Item(TProductBindingSource11.Position)("ID").ToString()
-
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
-
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
-
-            TBayBindingSource11.DataSource = MyDataSet
-            TBayBindingSource11.DataMember = "T_bay"
-            IslandBay11.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
-
-            Dim dt As DataTable = cls.Query(sql)
-
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
-
-            Dim dr() As DataRow = Listbay(ProID)
-
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList11.Text = "" Then IslandBay11.SelectedIndex = -1
+            If ProductList1.Text = "" Then IslandBay1.SelectedIndex = -1
 
             dt.Dispose()
             MyDataSet.Dispose()
@@ -3357,73 +2678,758 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub ProductList12_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim ProductID As String = ""
-            Dim sql As String
-            Dim ProductCount As Integer = 0
 
-            TBayBindingSource12.DataSource = Nothing
-            TBayBindingSource12.DataMember = Nothing
-            Dim Product_ID As Integer = 0
-            Product_ID = TProductBindingSource12.Item(TProductBindingSource12.Position)("ID").ToString()
 
-            sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
-            sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+    'Private Sub ProductList3_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
 
-            Dim MyDataSet As New DataSet
-            MyDataSet = cls.Query_DS(sql, "T_bay")
+    '        TBAYBindingSource3.DataSource = Nothing
+    '        TBAYBindingSource3.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource3.Item(TProductBindingSource3.Position)("ID").ToString()
 
-            TBayBindingSource12.DataSource = MyDataSet
-            TBayBindingSource12.DataMember = "T_bay"
-            IslandBay12.DisplayMember = "Bay_number"
-            For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
-                If ProductID = "" Then
-                    ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
-                    ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
-                End If
-            Next
-            sql = ""
-            sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
 
-            Dim dt As DataTable = cls.Query(sql)
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
 
-            Dim ProID(dt.Rows.Count - 1) As String
-            For i As Integer = 0 To dt.Rows.Count - 1
-                ProID(i) = dt.Rows(i).Item("ID").ToString
-            Next
+    '        TBAYBindingSource3.DataSource = MyDataSet
+    '        TBAYBindingSource3.DataMember = "T_bay"
+    '        IslandBay3.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
 
-            Dim dr() As DataRow = Listbay(ProID)
+    '        Dim dt As DataTable = cls.Query(sql)
 
-            Dim Bay2 As String = ""
-            For i As Integer = 0 To dr.Length - 1
-                If Bay2 = "" Then
-                    Bay2 &= dr(i)("Bay").ToString
-                Else
-                    Bay2 &= "," & dr(i)("Bay").ToString
-                End If
-            Next
-            'For i As Integer = 0 To TRUCK_COMP_NUM - 1
-            '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
-            '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
-            '    End If
-            'Next
-            If ProductList12.Text = "" Then IslandBay12.SelectedIndex = -1
-            dt.Dispose()
-            MyDataSet.Dispose()
-        Catch ex As Exception
-        End Try
-    End Sub
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList3.Text = "" Then IslandBay3.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList4_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource4.DataSource = Nothing
+    '        TBayBindingSource4.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource4.Item(TProductBindingSource4.Position)("ID").ToString()
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource4.DataSource = MyDataSet
+    '        TBayBindingSource4.DataMember = "T_bay"
+    '        IslandBay4.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+    '        'Dim da1 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList4.Text = "" Then IslandBay4.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList2_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Dim ProductID As String = ""
+    '    Dim sql As String
+    '    Dim ProductCount As Integer = 0
+
+    '    TBAYBindingSource2.DataSource = Nothing
+    '    TBAYBindingSource2.DataMember = Nothing
+    '    Dim Product_ID As Integer = 0
+    '    Product_ID = TProductBindingSource2.Item(TProductBindingSource2.Position)("ID").ToString()
+
+    '    sql = ""
+    '    sql = "select bay_number,bay_status from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '    sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+
+    '    Dim MyDataSet As New DataSet
+    '    MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '    TBAYBindingSource2.DataSource = MyDataSet
+    '    TBAYBindingSource2.DataMember = "T_bay"
+    '    IslandBay2.DisplayMember = "Bay_number"
+    '    For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        If ProductID = "" Then
+    '            ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '        ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '            ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '        End If
+    '    Next
+    '    sql = ""
+    '    sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+    '    'Dim da1 As OracleDataAdapter = New OracleDataAdapter(sql, conn)
+
+    '    Dim dt As DataTable = cls.Query(sql)
+
+    '    Dim ProID(dt.Rows.Count - 1) As String
+    '    For i As Integer = 0 To dt.Rows.Count - 1
+    '        ProID(i) = dt.Rows(i).Item("ID").ToString
+    '    Next
+
+    '    Dim dr() As DataRow = Listbay(ProID)
+
+    '    Dim Bay2 As String = ""
+    '    For i As Integer = 0 To dr.Length - 1
+    '        If Bay2 = "" Then
+    '            Bay2 &= dr(i)("Bay").ToString
+    '        Else
+    '            Bay2 &= "," & dr(i)("Bay").ToString
+    '        End If
+    '    Next
+    '    'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '    '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '    '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '    '    End If
+    '    'Next
+    '    If ProductList2.Text = "" Then IslandBay2.SelectedIndex = -1
+    '    dt.Dispose()
+    '    MyDataSet.Dispose()
+    'End Sub
+
+    'Private Sub ProductList5_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource5.DataSource = Nothing
+    '        TBayBindingSource5.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource5.Item(TProductBindingSource5.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource5.DataSource = MyDataSet
+    '        TBayBindingSource5.DataMember = "T_bay"
+    '        IslandBay5.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList5.Text = "" Then IslandBay5.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList6_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource6.DataSource = Nothing
+    '        TBayBindingSource6.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource6.Item(TProductBindingSource6.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource6.DataSource = MyDataSet
+    '        TBayBindingSource6.DataMember = "T_bay"
+    '        IslandBay6.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList6.Text = "" Then IslandBay6.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList7_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource7.DataSource = Nothing
+    '        TBayBindingSource7.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource7.Item(TProductBindingSource7.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource7.DataSource = MyDataSet
+    '        TBayBindingSource7.DataMember = "T_bay"
+    '        IslandBay7.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList7.Text = "" Then IslandBay7.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList8_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource8.DataSource = Nothing
+    '        TBayBindingSource8.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource8.Item(TProductBindingSource8.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource8.DataSource = MyDataSet
+    '        TBayBindingSource8.DataMember = "T_bay"
+    '        IslandBay8.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList8.Text = "" Then IslandBay8.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList9_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource9.DataSource = Nothing
+    '        TBayBindingSource9.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource9.Item(TProductBindingSource9.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource9.DataSource = MyDataSet
+    '        TBayBindingSource9.DataMember = "T_bay"
+    '        IslandBay9.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList9.Text = "" Then IslandBay9.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource10.DataSource = Nothing
+    '        TBayBindingSource10.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource10.Item(TProductBindingSource10.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource10.DataSource = MyDataSet
+    '        TBayBindingSource10.DataMember = "T_bay"
+    '        IslandBay10.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList10.Text = "" Then IslandBay10.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList11_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource11.DataSource = Nothing
+    '        TBayBindingSource11.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource11.Item(TProductBindingSource11.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource11.DataSource = MyDataSet
+    '        TBayBindingSource11.DataMember = "T_bay"
+    '        IslandBay11.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList11.Text = "" Then IslandBay11.SelectedIndex = -1
+
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+    'Private Sub ProductList12_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Try
+    '        Dim ProductID As String = ""
+    '        Dim sql As String
+    '        Dim ProductCount As Integer = 0
+
+    '        TBayBindingSource12.DataSource = Nothing
+    '        TBayBindingSource12.DataMember = Nothing
+    '        Dim Product_ID As Integer = 0
+    '        Product_ID = TProductBindingSource12.Item(TProductBindingSource12.Position)("ID").ToString()
+
+    '        sql = ""
+    '        sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter5 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter6 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter7 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter8 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter9 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+    '        sql &= "bay_meter10 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') Order by bay_number"
+
+    '        Dim MyDataSet As New DataSet
+    '        MyDataSet = cls.Query_DS(sql, "T_bay")
+
+    '        TBayBindingSource12.DataSource = MyDataSet
+    '        TBayBindingSource12.DataMember = "T_bay"
+    '        IslandBay12.DisplayMember = "Bay_number"
+    '        For ProCount As Integer = 0 To TRUCK_COMP_NUM - 1
+    '            If ProductID = "" Then
+    '                ProductID = "'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            ElseIf DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() <> "" Then
+    '                ProductID &= ",'" & DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (ProCount + 1).ToString), RadDropDownList).Text() & "'"
+    '            End If
+    '        Next
+    '        sql = ""
+    '        sql = "select max(ID) as ID from t_Product where Product_code in(" & ProductID & ") Group by ID order by ID"
+
+    '        Dim dt As DataTable = cls.Query(sql)
+
+    '        Dim ProID(dt.Rows.Count - 1) As String
+    '        For i As Integer = 0 To dt.Rows.Count - 1
+    '            ProID(i) = dt.Rows(i).Item("ID").ToString
+    '        Next
+
+    '        Dim dr() As DataRow = Listbay(ProID)
+
+    '        Dim Bay2 As String = ""
+    '        For i As Integer = 0 To dr.Length - 1
+    '            If Bay2 = "" Then
+    '                Bay2 &= dr(i)("Bay").ToString
+    '            Else
+    '                Bay2 &= "," & dr(i)("Bay").ToString
+    '            End If
+    '        Next
+    '        'For i As Integer = 0 To TRUCK_COMP_NUM - 1
+    '        '    If DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text() <> "" Then
+    '        '        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text = dr(0)("Bay").ToString
+    '        '    End If
+    '        'Next
+    '        If ProductList12.Text = "" Then IslandBay12.SelectedIndex = -1
+    '        dt.Dispose()
+    '        MyDataSet.Dispose()
+    '    Catch ex As Exception
+    '    End Try
+    'End Sub
+
+
+#End Region
 
     Private Sub ToolStripButton9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton9.Click
         SelectVLoadingNote()
@@ -3561,6 +3567,10 @@ Public Class Advisenote
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub WeightScal_TextChanged(sender As Object, e As EventArgs) Handles WeightScal.TextChanged
+
     End Sub
 
 #End Region
