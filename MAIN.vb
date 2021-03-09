@@ -282,8 +282,8 @@ Partial Public Class MAIN
         'Supervisor.Enabled = False
         ToolGroup.Enabled = False
 
-        PrepareExamples()
-        FReShipment()
+        'PrepareExamples()
+        'FReShipment()
     End Sub
 
     Private Sub PreloadControls()
@@ -677,6 +677,7 @@ Partial Public Class MAIN
             Button2.Visible = False
         End If
     End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         BackendSend()

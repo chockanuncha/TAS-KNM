@@ -767,7 +767,7 @@ Public Class Advisenote
 
     Private Sub CompClear()
         Dim i As Integer = 1
-        For i = 1 To 12
+        For i = 1 To 1
             DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i).ToString), RadDropDownList).SelectedIndex = -1
             DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i).ToString), RadTextBox).Text = ""
             DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i).ToString), RadTextBox).Text = ""
@@ -3571,6 +3571,17 @@ Public Class Advisenote
 
     Private Sub WeightScal_TextChanged(sender As Object, e As EventArgs) Handles WeightScal.TextChanged
 
+    End Sub
+
+    Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton8.Click
+        EDW_IN.Text = WeightScal.Text
+        LawWeightIn.Text = EDW_IN.Text
+    End Sub
+
+    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
+        EDW_OUT.Text = WeightScal.Text
+        LawWeightout.Text = EDW_OUT.Text
+        EDW_NET.Text = Int(EDW_OUT.Text) - Int(EDW_IN.Text)
     End Sub
 
 #End Region

@@ -872,7 +872,7 @@ Partial Class MAIN
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(1767, 887)
+        Me.PictureBox1.Location = New System.Drawing.Point(1767, 888)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(143, 65)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -883,7 +883,7 @@ Partial Class MAIN
         '
         Me.RadClock1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadClock1.BackColor = System.Drawing.Color.Transparent
-        Me.RadClock1.Location = New System.Drawing.Point(1776, 744)
+        Me.RadClock1.Location = New System.Drawing.Point(1776, 745)
         Me.RadClock1.Name = "RadClock1"
         Me.RadClock1.Size = New System.Drawing.Size(134, 135)
         Me.RadClock1.TabIndex = 8
@@ -1451,6 +1451,7 @@ Partial Class MAIN
         Me.ProductMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.ProductMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.ProductMenu.ColSpan = 2
+        Me.ProductMenu.Column = 4
         Me.ProductMenu.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
         Me.ProductMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ProductMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_tankoverview

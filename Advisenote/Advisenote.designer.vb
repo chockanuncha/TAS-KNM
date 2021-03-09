@@ -196,10 +196,12 @@ Partial Class Advisenote
         Me.EDW_NET = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel32 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel33 = New Telerik.WinControls.UI.RadLabel()
-        Me.Label36 = New System.Windows.Forms.Label()
         Me.Load_q = New Telerik.WinControls.UI.RadTextBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.RadGroupBox10 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Comp1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.ProductList1 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.TProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupProduct = New System.Windows.Forms.GroupBox()
         Me.RadGroupBox4 = New Telerik.WinControls.UI.RadGroupBox()
         Me.Panel14 = New System.Windows.Forms.Panel()
@@ -226,11 +228,21 @@ Partial Class Advisenote
         Me.TProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label49 = New System.Windows.Forms.Label()
         Me.OrderBut = New Telerik.WinControls.UI.RadButton()
-        Me.authorize_Remark = New System.Windows.Forms.RichTextBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Preset1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.IslandBay1 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.TBAYBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Meter1 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.TBatchmeterBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.Edremark = New System.Windows.Forms.RichTextBox()
         Me.Cbn11 = New Telerik.WinControls.UI.RadTextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Cbn10 = New Telerik.WinControls.UI.RadTextBox()
@@ -246,6 +258,7 @@ Partial Class Advisenote
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBox6 = New Telerik.WinControls.UI.RadGroupBox()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Status = New Telerik.WinControls.UI.RadDropDownList()
         Me.TStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -262,11 +275,14 @@ Partial Class Advisenote
         Me.Dateedit = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.Update_by = New Telerik.WinControls.UI.RadTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.authorize_Remark = New System.Windows.Forms.RichTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.Cbn2 = New Telerik.WinControls.UI.RadDropDownList()
         Me.TTRUCKBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.Edremark = New System.Windows.Forms.RichTextBox()
         Me.TruckH = New Telerik.WinControls.UI.RadDropDownList()
         Me.Trucktype = New Telerik.WinControls.UI.RadDropDownList()
         Me.TTruckTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -323,18 +339,10 @@ Partial Class Advisenote
         Me.Capacity_l2 = New Telerik.WinControls.UI.RadTextBox()
         Me.Capacity_l1 = New Telerik.WinControls.UI.RadTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.Comp12 = New Telerik.WinControls.UI.RadTextBox()
         Me.Comp5 = New Telerik.WinControls.UI.RadTextBox()
@@ -347,7 +355,6 @@ Partial Class Advisenote
         Me.Comp4 = New Telerik.WinControls.UI.RadTextBox()
         Me.Comp3 = New Telerik.WinControls.UI.RadTextBox()
         Me.Comp2 = New Telerik.WinControls.UI.RadTextBox()
-        Me.Comp1 = New Telerik.WinControls.UI.RadTextBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.Preset12 = New Telerik.WinControls.UI.RadTextBox()
         Me.Preset11 = New Telerik.WinControls.UI.RadTextBox()
@@ -360,7 +367,6 @@ Partial Class Advisenote
         Me.Preset4 = New Telerik.WinControls.UI.RadTextBox()
         Me.Preset3 = New Telerik.WinControls.UI.RadTextBox()
         Me.Preset2 = New Telerik.WinControls.UI.RadTextBox()
-        Me.Preset1 = New Telerik.WinControls.UI.RadTextBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Meter12 = New Telerik.WinControls.UI.RadDropDownList()
         Me.TBatchmeterBindingSource12 = New System.Windows.Forms.BindingSource(Me.components)
@@ -384,8 +390,6 @@ Partial Class Advisenote
         Me.TBatchmeterBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Meter2 = New Telerik.WinControls.UI.RadDropDownList()
         Me.TBatchmeterBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Meter1 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.TBatchmeterBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.IslandBay12 = New Telerik.WinControls.UI.RadDropDownList()
         Me.TBayBindingSource12 = New System.Windows.Forms.BindingSource(Me.components)
@@ -409,8 +413,6 @@ Partial Class Advisenote
         Me.TBAYBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IslandBay2 = New Telerik.WinControls.UI.RadDropDownList()
         Me.TBAYBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IslandBay1 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.TBAYBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.Capacity12 = New Telerik.WinControls.UI.RadTextBox()
         Me.Capacity11 = New Telerik.WinControls.UI.RadTextBox()
@@ -447,8 +449,6 @@ Partial Class Advisenote
         Me.TProductBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductList2 = New Telerik.WinControls.UI.RadDropDownList()
         Me.TProductBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductList1 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.TProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.VCheckinBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet_View = New RadControlsWinFormsApp1.DataSet_View()
         Me.RadDropDownList1 = New Telerik.WinControls.UI.RadDropDownList()
@@ -566,6 +566,9 @@ Partial Class Advisenote
         CType(Me.Load_q, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox10.SuspendLayout()
+        CType(Me.Comp1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductList1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupProduct.SuspendLayout()
         CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox4.SuspendLayout()
@@ -593,6 +596,13 @@ Partial Class Advisenote
         CType(Me.Product.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderBut, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.Preset1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IslandBay1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TBAYBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        CType(Me.Meter1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TBatchmeterBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BCancel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -652,12 +662,7 @@ Partial Class Advisenote
         CType(Me.Capacity_l3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Capacity_l2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Capacity_l1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        Me.Panel10.SuspendLayout()
         Me.GroupBox15.SuspendLayout()
         CType(Me.Comp12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -670,7 +675,6 @@ Partial Class Advisenote
         CType(Me.Comp4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Comp1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox13.SuspendLayout()
         CType(Me.Preset12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preset11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -683,7 +687,6 @@ Partial Class Advisenote
         CType(Me.Preset4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preset3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preset2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Preset1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox10.SuspendLayout()
         CType(Me.Meter12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TBatchmeterBindingSource12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -707,8 +710,6 @@ Partial Class Advisenote
         CType(Me.TBatchmeterBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Meter2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TBatchmeterBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Meter1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TBatchmeterBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox11.SuspendLayout()
         CType(Me.IslandBay12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TBayBindingSource12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -732,8 +733,6 @@ Partial Class Advisenote
         CType(Me.TBAYBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IslandBay2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TBAYBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IslandBay1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TBAYBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox12.SuspendLayout()
         CType(Me.Capacity12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Capacity11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -770,8 +769,6 @@ Partial Class Advisenote
         CType(Me.TProductBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductList2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TProductBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductList1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VCheckinBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet_View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -816,14 +813,14 @@ Partial Class Advisenote
         Me.RadPageView1.Controls.Add(Me.RadPageViewPage2)
         Me.RadPageView1.Controls.Add(Me.Page_Temp)
         Me.RadPageView1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadPageView1.Location = New System.Drawing.Point(0, 66)
+        Me.RadPageView1.Location = New System.Drawing.Point(0, 87)
         Me.RadPageView1.Name = "RadPageView1"
         '
         '
         '
         Me.RadPageView1.RootElement.Shape = Nothing
-        Me.RadPageView1.SelectedPage = Me.RadPageViewPage2
-        Me.RadPageView1.Size = New System.Drawing.Size(1370, 698)
+        Me.RadPageView1.SelectedPage = Me.RadPageViewPage1
+        Me.RadPageView1.Size = New System.Drawing.Size(1370, 677)
         Me.RadPageView1.TabIndex = 95
         Me.RadPageView1.ThemeName = "Office2010Blue"
         '
@@ -840,7 +837,7 @@ Partial Class Advisenote
         Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(107.0!, 30.0!)
         Me.RadPageViewPage1.Location = New System.Drawing.Point(12, 40)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(1346, 643)
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(1346, 625)
         Me.RadPageViewPage1.Text = "รายการโหลดจ่าย"
         '
         'DatetimePicker2
@@ -864,12 +861,12 @@ Partial Class Advisenote
         Me.MasterGridAdvisenote.BackColor = System.Drawing.SystemColors.Control
         Me.MasterGridAdvisenote.ColumnChooserSortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
         Me.MasterGridAdvisenote.Cursor = System.Windows.Forms.Cursors.Default
-        Me.MasterGridAdvisenote.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.MasterGridAdvisenote.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MasterGridAdvisenote.EnableCustomGrouping = True
         Me.MasterGridAdvisenote.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.MasterGridAdvisenote.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MasterGridAdvisenote.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.MasterGridAdvisenote.Location = New System.Drawing.Point(250, 35)
+        Me.MasterGridAdvisenote.Location = New System.Drawing.Point(250, 27)
         '
         '
         '
@@ -1061,7 +1058,7 @@ Partial Class Advisenote
         Me.MasterGridAdvisenote.Name = "MasterGridAdvisenote"
         Me.MasterGridAdvisenote.ReadOnly = True
         Me.MasterGridAdvisenote.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.MasterGridAdvisenote.Size = New System.Drawing.Size(1096, 608)
+        Me.MasterGridAdvisenote.Size = New System.Drawing.Size(1096, 598)
         Me.MasterGridAdvisenote.TabIndex = 1
         Me.MasterGridAdvisenote.ThemeName = "Breeze"
         Me.MasterGridAdvisenote.UseScrollbarsInHierarchy = True
@@ -1117,7 +1114,7 @@ Partial Class Advisenote
         Me.BindingNavigator2.BindingSource = Me.V_LoadingnoteBindingSource
         Me.BindingNavigator2.CountItem = Me.ToolStripLabel1
         Me.BindingNavigator2.DeleteItem = Nothing
-        Me.BindingNavigator2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.BindingNavigator2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.BindingNavigator2.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.BindingNavigator2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator3, Me.ToolStripButton6, Me.ToolStripButton8, Me.ToolStripButton9})
         Me.BindingNavigator2.Location = New System.Drawing.Point(250, 0)
@@ -1127,14 +1124,14 @@ Partial Class Advisenote
         Me.BindingNavigator2.MovePreviousItem = Me.ToolStripButton3
         Me.BindingNavigator2.Name = "BindingNavigator2"
         Me.BindingNavigator2.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator2.Size = New System.Drawing.Size(1096, 28)
+        Me.BindingNavigator2.Size = New System.Drawing.Size(1096, 27)
         Me.BindingNavigator2.TabIndex = 5
         Me.BindingNavigator2.Text = "BindingNavigator2"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(47, 25)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(41, 24)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -1144,7 +1141,7 @@ Partial Class Advisenote
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.RightToLeftAutoMirrorImage = True
-        Me.ToolStripButton2.Size = New System.Drawing.Size(24, 25)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(24, 24)
         Me.ToolStripButton2.Text = "Move first"
         '
         'ToolStripButton3
@@ -1153,13 +1150,13 @@ Partial Class Advisenote
         Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
         Me.ToolStripButton3.Name = "ToolStripButton3"
         Me.ToolStripButton3.RightToLeftAutoMirrorImage = True
-        Me.ToolStripButton3.Size = New System.Drawing.Size(24, 25)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(24, 24)
         Me.ToolStripButton3.Text = "Move previous"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'ToolStripTextBox1
         '
@@ -1174,7 +1171,7 @@ Partial Class Advisenote
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'ToolStripButton4
         '
@@ -1182,7 +1179,7 @@ Partial Class Advisenote
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.RightToLeftAutoMirrorImage = True
-        Me.ToolStripButton4.Size = New System.Drawing.Size(24, 25)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(24, 24)
         Me.ToolStripButton4.Text = "Move next"
         '
         'ToolStripButton5
@@ -1191,13 +1188,13 @@ Partial Class Advisenote
         Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.RightToLeftAutoMirrorImage = True
-        Me.ToolStripButton5.Size = New System.Drawing.Size(24, 25)
+        Me.ToolStripButton5.Size = New System.Drawing.Size(24, 24)
         Me.ToolStripButton5.Text = "Move last"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
         'ToolStripButton6
         '
@@ -1205,7 +1202,7 @@ Partial Class Advisenote
         Me.ToolStripButton6.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.refresh
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(87, 25)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(78, 24)
         Me.ToolStripButton6.Text = "Refresh"
         '
         'ToolStripButton8
@@ -1214,7 +1211,7 @@ Partial Class Advisenote
         Me.ToolStripButton8.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.close_32
         Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton8.Name = "ToolStripButton8"
-        Me.ToolStripButton8.Size = New System.Drawing.Size(110, 25)
+        Me.ToolStripButton8.Size = New System.Drawing.Size(101, 24)
         Me.ToolStripButton8.Text = "Cancel DO."
         '
         'ToolStripButton9
@@ -1223,7 +1220,7 @@ Partial Class Advisenote
         Me.ToolStripButton9.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ReportEdit
         Me.ToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton9.Name = "ToolStripButton9"
-        Me.ToolStripButton9.Size = New System.Drawing.Size(81, 25)
+        Me.ToolStripButton9.Size = New System.Drawing.Size(73, 24)
         Me.ToolStripButton9.Text = "Search"
         '
         'RadPanel1
@@ -1236,7 +1233,7 @@ Partial Class Advisenote
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadPanel1.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(250, 643)
+        Me.RadPanel1.Size = New System.Drawing.Size(250, 625)
         Me.RadPanel1.TabIndex = 1
         Me.RadPanel1.ThemeName = "Office2010Blue"
         '
@@ -1400,15 +1397,11 @@ Partial Class Advisenote
         '
         Me.RadGroupBox7.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox7.Controls.Add(Me.RadGroupBox8)
-        Me.RadGroupBox7.Controls.Add(Me.Label36)
         Me.RadGroupBox7.Controls.Add(Me.Load_q)
         Me.RadGroupBox7.Controls.Add(Me.Label31)
         Me.RadGroupBox7.Controls.Add(Me.RadGroupBox10)
-        Me.RadGroupBox7.Controls.Add(Me.authorize_Remark)
         Me.RadGroupBox7.Controls.Add(Me.Label43)
-        Me.RadGroupBox7.Controls.Add(Me.Label28)
         Me.RadGroupBox7.Controls.Add(Me.Label26)
-        Me.RadGroupBox7.Controls.Add(Me.Edremark)
         Me.RadGroupBox7.Controls.Add(Me.Cbn11)
         Me.RadGroupBox7.Controls.Add(Me.Label17)
         Me.RadGroupBox7.Controls.Add(Me.Cbn10)
@@ -1771,7 +1764,6 @@ Partial Class Advisenote
         Me.WeightScal.ForeColor = System.Drawing.Color.Lime
         Me.WeightScal.Location = New System.Drawing.Point(104, 22)
         Me.WeightScal.Name = "WeightScal"
-        Me.WeightScal.ReadOnly = True
         Me.WeightScal.Size = New System.Drawing.Size(121, 45)
         Me.WeightScal.TabIndex = 2199
         Me.WeightScal.Text = "123456"
@@ -1793,7 +1785,7 @@ Partial Class Advisenote
         Me.EDW_OUT.BackColor = System.Drawing.Color.Black
         Me.EDW_OUT.Font = New System.Drawing.Font("DS-Digital", 30.0!, System.Drawing.FontStyle.Bold)
         Me.EDW_OUT.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_OUT.Location = New System.Drawing.Point(320, 72)
+        Me.EDW_OUT.Location = New System.Drawing.Point(320, 73)
         Me.EDW_OUT.Name = "EDW_OUT"
         Me.EDW_OUT.ReadOnly = True
         Me.EDW_OUT.Size = New System.Drawing.Size(121, 45)
@@ -1807,7 +1799,7 @@ Partial Class Advisenote
         Me.EDW_NET.BackColor = System.Drawing.Color.Black
         Me.EDW_NET.Font = New System.Drawing.Font("DS-Digital", 30.0!, System.Drawing.FontStyle.Bold)
         Me.EDW_NET.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_NET.Location = New System.Drawing.Point(536, 71)
+        Me.EDW_NET.Location = New System.Drawing.Point(536, 73)
         Me.EDW_NET.Name = "EDW_NET"
         Me.EDW_NET.ReadOnly = True
         Me.EDW_NET.Size = New System.Drawing.Size(121, 45)
@@ -1835,17 +1827,6 @@ Partial Class Advisenote
         Me.RadLabel33.TabIndex = 2202
         Me.RadLabel33.Text = "Weight out"
         Me.RadLabel33.ThemeName = "TelerikMetro"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label36.Location = New System.Drawing.Point(20, 525)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(84, 21)
-        Me.Label36.TabIndex = 308
-        Me.Label36.Text = "Authorize :"
-        Me.Label36.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Load_q
         '
@@ -1879,18 +1860,68 @@ Partial Class Advisenote
         'RadGroupBox10
         '
         Me.RadGroupBox10.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox10.Controls.Add(Me.Comp1)
+        Me.RadGroupBox10.Controls.Add(Me.ProductList1)
         Me.RadGroupBox10.Controls.Add(Me.GroupProduct)
+        Me.RadGroupBox10.Controls.Add(Me.Panel10)
+        Me.RadGroupBox10.Controls.Add(Me.Preset1)
+        Me.RadGroupBox10.Controls.Add(Me.Label23)
+        Me.RadGroupBox10.Controls.Add(Me.Label8)
+        Me.RadGroupBox10.Controls.Add(Me.IslandBay1)
+        Me.RadGroupBox10.Controls.Add(Me.Label21)
+        Me.RadGroupBox10.Controls.Add(Me.Panel6)
+        Me.RadGroupBox10.Controls.Add(Me.Meter1)
         Me.RadGroupBox10.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadGroupBox10.HeaderText = "Preset Quantity"
         Me.RadGroupBox10.Location = New System.Drawing.Point(11, 312)
         Me.RadGroupBox10.Name = "RadGroupBox10"
-        Me.RadGroupBox10.Size = New System.Drawing.Size(956, 130)
+        Me.RadGroupBox10.Size = New System.Drawing.Size(956, 377)
         Me.RadGroupBox10.TabIndex = 308
         Me.RadGroupBox10.Text = "Preset Quantity"
         Me.RadGroupBox10.ThemeName = "Windows7"
         CType(Me.RadGroupBox10.GetChildAt(0).GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.BorderPrimitive).GradientStyle = Telerik.WinControls.GradientStyles.Linear
         CType(Me.RadGroupBox10.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).ForeColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.RadGroupBox10.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        '
+        'Comp1
+        '
+        Me.Comp1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Comp1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Comp1.Location = New System.Drawing.Point(26, 179)
+        Me.Comp1.Name = "Comp1"
+        Me.Comp1.ReadOnly = True
+        Me.Comp1.Size = New System.Drawing.Size(44, 27)
+        Me.Comp1.TabIndex = 245
+        Me.Comp1.Text = "1"
+        Me.Comp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Comp1.ThemeName = "Office2010Blue"
+        '
+        'ProductList1
+        '
+        Me.ProductList1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProductList1.AutoCompleteDisplayMember = "PRODUCT_CODE"
+        Me.ProductList1.AutoCompleteValueMember = "ID"
+        Me.ProductList1.DataSource = Me.TProductBindingSource1
+        Me.ProductList1.DisplayMember = "PRODUCT_CODE"
+        Me.ProductList1.DropDownMinSize = New System.Drawing.Size(0, 150)
+        Me.ProductList1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.ProductList1.Location = New System.Drawing.Point(22, 138)
+        Me.ProductList1.Name = "ProductList1"
+        '
+        '
+        '
+        Me.ProductList1.RootElement.StretchVertically = True
+        Me.ProductList1.Size = New System.Drawing.Size(205, 24)
+        Me.ProductList1.TabIndex = 244
+        Me.ProductList1.ThemeName = "Windows8"
+        Me.ProductList1.ValueMember = "ID"
+        '
+        'TProductBindingSource1
+        '
+        Me.TProductBindingSource1.DataMember = "T_PRODUCT"
+        Me.TProductBindingSource1.DataSource = Me.DataSet_Table
+        Me.TProductBindingSource1.Sort = "PRODUCT_CODE"
         '
         'GroupProduct
         '
@@ -1903,7 +1934,7 @@ Partial Class Advisenote
         Me.GroupProduct.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.GroupProduct.Location = New System.Drawing.Point(14, 21)
         Me.GroupProduct.Name = "GroupProduct"
-        Me.GroupProduct.Size = New System.Drawing.Size(922, 102)
+        Me.GroupProduct.Size = New System.Drawing.Size(922, 107)
         Me.GroupProduct.TabIndex = 307
         Me.GroupProduct.TabStop = False
         '
@@ -1914,9 +1945,9 @@ Partial Class Advisenote
         Me.RadGroupBox4.Controls.Add(Me.Order)
         Me.RadGroupBox4.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadGroupBox4.HeaderText = ""
-        Me.RadGroupBox4.Location = New System.Drawing.Point(477, 21)
+        Me.RadGroupBox4.Location = New System.Drawing.Point(478, 21)
         Me.RadGroupBox4.Name = "RadGroupBox4"
-        Me.RadGroupBox4.Size = New System.Drawing.Size(163, 78)
+        Me.RadGroupBox4.Size = New System.Drawing.Size(163, 83)
         Me.RadGroupBox4.TabIndex = 3
         Me.RadGroupBox4.ThemeName = "Office2010Blue"
         '
@@ -1971,9 +2002,9 @@ Partial Class Advisenote
         Me.RadGroupBox3.Controls.Add(Me.Meter)
         Me.RadGroupBox3.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadGroupBox3.HeaderText = ""
-        Me.RadGroupBox3.Location = New System.Drawing.Point(335, 21)
+        Me.RadGroupBox3.Location = New System.Drawing.Point(336, 21)
         Me.RadGroupBox3.Name = "RadGroupBox3"
-        Me.RadGroupBox3.Size = New System.Drawing.Size(142, 78)
+        Me.RadGroupBox3.Size = New System.Drawing.Size(142, 83)
         Me.RadGroupBox3.TabIndex = 2
         Me.RadGroupBox3.ThemeName = "Office2010Blue"
         '
@@ -2077,9 +2108,9 @@ Partial Class Advisenote
         Me.RadGroupBox2.Controls.Add(Me.Bay)
         Me.RadGroupBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadGroupBox2.HeaderText = ""
-        Me.RadGroupBox2.Location = New System.Drawing.Point(210, 21)
+        Me.RadGroupBox2.Location = New System.Drawing.Point(211, 21)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(125, 78)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(125, 83)
         Me.RadGroupBox2.TabIndex = 1
         Me.RadGroupBox2.ThemeName = "Office2010Blue"
         '
@@ -2192,7 +2223,7 @@ Partial Class Advisenote
         Me.RadGroupBox1.HeaderText = ""
         Me.RadGroupBox1.Location = New System.Drawing.Point(3, 21)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(207, 78)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(208, 83)
         Me.RadGroupBox1.TabIndex = 0
         Me.RadGroupBox1.ThemeName = "Office2010Blue"
         '
@@ -2324,15 +2355,157 @@ Partial Class Advisenote
         CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 4
         CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         '
-        'authorize_Remark
+        'Panel10
         '
-        Me.authorize_Remark.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.authorize_Remark.Location = New System.Drawing.Point(106, 522)
-        Me.authorize_Remark.Name = "authorize_Remark"
-        Me.authorize_Remark.ReadOnly = True
-        Me.authorize_Remark.Size = New System.Drawing.Size(187, 38)
-        Me.authorize_Remark.TabIndex = 307
-        Me.authorize_Remark.Text = ""
+        Me.Panel10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.Label19)
+        Me.Panel10.Controls.Add(Me.Panel3)
+        Me.Panel10.Location = New System.Drawing.Point(205, 182)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(128, 24)
+        Me.Panel10.TabIndex = 242
+        Me.Panel10.Tag = ""
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label19.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label19.Location = New System.Drawing.Point(73, 4)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(56, 17)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Product"
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.Location = New System.Drawing.Point(2, 24)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(128, 270)
+        Me.Panel3.TabIndex = 117
+        '
+        'Preset1
+        '
+        Me.Preset1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Preset1.Location = New System.Drawing.Point(497, 138)
+        Me.Preset1.Name = "Preset1"
+        Me.Preset1.Size = New System.Drawing.Size(166, 24)
+        Me.Preset1.TabIndex = 248
+        Me.Preset1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Preset1.ThemeName = "Windows8"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label23.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label23.Location = New System.Drawing.Point(565, 171)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(46, 17)
+        Me.Label23.TabIndex = 240
+        Me.Label23.Text = "Preset"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label8.Location = New System.Drawing.Point(397, 209)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 17)
+        Me.Label8.TabIndex = 239
+        Me.Label8.Text = "Comp."
+        '
+        'IslandBay1
+        '
+        Me.IslandBay1.AutoCompleteDisplayMember = "BAY_NUMBER"
+        Me.IslandBay1.AutoCompleteValueMember = "ID"
+        Me.IslandBay1.DataSource = Me.TBAYBindingSource1
+        Me.IslandBay1.DisplayMember = "BAY_NUMBER"
+        Me.IslandBay1.DropDownMinSize = New System.Drawing.Size(0, 150)
+        Me.IslandBay1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.IslandBay1.Location = New System.Drawing.Point(232, 138)
+        Me.IslandBay1.Name = "IslandBay1"
+        '
+        '
+        '
+        Me.IslandBay1.RootElement.StretchVertically = True
+        Me.IslandBay1.Size = New System.Drawing.Size(101, 24)
+        Me.IslandBay1.TabIndex = 246
+        Me.IslandBay1.ThemeName = "Windows8"
+        Me.IslandBay1.ValueMember = "ID"
+        '
+        'TBAYBindingSource1
+        '
+        Me.TBAYBindingSource1.DataMember = "T_BAY"
+        Me.TBAYBindingSource1.DataSource = Me.DataSet_Table
+        Me.TBAYBindingSource1.Filter = "bay_status=1"
+        Me.TBAYBindingSource1.Sort = ""
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label21.Location = New System.Drawing.Point(438, 209)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(30, 17)
+        Me.Label21.TabIndex = 241
+        Me.Label21.Text = "Bay"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.Label22)
+        Me.Panel6.Location = New System.Drawing.Point(1610, 323)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(116, 24)
+        Me.Panel6.TabIndex = 243
+        Me.Panel6.Tag = ""
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label22.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label22.Location = New System.Drawing.Point(39, 5)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(44, 17)
+        Me.Label22.TabIndex = 3
+        Me.Label22.Text = "Meter"
+        '
+        'Meter1
+        '
+        Me.Meter1.AutoCompleteDisplayMember = "BATCH_NAME"
+        Me.Meter1.AutoCompleteValueMember = "ID"
+        Me.Meter1.DataSource = Me.TBatchmeterBindingSource1
+        Me.Meter1.DisplayMember = "BATCH_NAME"
+        Me.Meter1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Meter1.Location = New System.Drawing.Point(357, 138)
+        Me.Meter1.Name = "Meter1"
+        '
+        '
+        '
+        Me.Meter1.RootElement.StretchVertically = True
+        Me.Meter1.Size = New System.Drawing.Size(103, 24)
+        Me.Meter1.TabIndex = 247
+        Me.Meter1.ThemeName = "Windows8"
+        Me.Meter1.ValueMember = "ID"
+        '
+        'TBatchmeterBindingSource1
+        '
+        Me.TBatchmeterBindingSource1.DataMember = "T_BATCHMETER"
+        Me.TBatchmeterBindingSource1.DataSource = Me.DataSet_Table
+        Me.TBatchmeterBindingSource1.Sort = ""
         '
         'Label43
         '
@@ -2345,17 +2518,6 @@ Partial Class Advisenote
         Me.Label43.Text = "Seal Total :"
         Me.Label43.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label28.Location = New System.Drawing.Point(8, 453)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(96, 21)
-        Me.Label28.TabIndex = 306
-        Me.Label28.Text = "Description :"
-        Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
         'Label26
         '
         Me.Label26.AutoSize = True
@@ -2366,15 +2528,6 @@ Partial Class Advisenote
         Me.Label26.TabIndex = 5
         Me.Label26.Text = "DO No. :"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Edremark
-        '
-        Me.Edremark.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Edremark.Location = New System.Drawing.Point(106, 450)
-        Me.Edremark.Name = "Edremark"
-        Me.Edremark.Size = New System.Drawing.Size(187, 64)
-        Me.Edremark.TabIndex = 305
-        Me.Edremark.Text = ""
         '
         'Cbn11
         '
@@ -2600,14 +2753,18 @@ Partial Class Advisenote
         '
         Me.RadGroupBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox6.Controls.Add(Me.Label30)
+        Me.RadGroupBox6.Controls.Add(Me.Label36)
         Me.RadGroupBox6.Controls.Add(Me.Label1)
         Me.RadGroupBox6.Controls.Add(Me.Status)
         Me.RadGroupBox6.Controls.Add(Me.Driver)
         Me.RadGroupBox6.Controls.Add(Me.RadGroupBox5)
+        Me.RadGroupBox6.Controls.Add(Me.authorize_Remark)
         Me.RadGroupBox6.Controls.Add(Me.Label14)
         Me.RadGroupBox6.Controls.Add(Me.Label41)
+        Me.RadGroupBox6.Controls.Add(Me.Label28)
         Me.RadGroupBox6.Controls.Add(Me.Cbn2)
         Me.RadGroupBox6.Controls.Add(Me.Label27)
+        Me.RadGroupBox6.Controls.Add(Me.Edremark)
         Me.RadGroupBox6.Controls.Add(Me.TruckH)
         Me.RadGroupBox6.Controls.Add(Me.Trucktype)
         Me.RadGroupBox6.Controls.Add(Me.Label32)
@@ -2637,6 +2794,17 @@ Partial Class Advisenote
         Me.Label30.TabIndex = 240
         Me.Label30.Text = "Status :"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label36.Location = New System.Drawing.Point(15, 345)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(84, 21)
+        Me.Label36.TabIndex = 308
+        Me.Label36.Text = "Authorize :"
+        Me.Label36.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label1
         '
@@ -2775,13 +2943,12 @@ Partial Class Advisenote
         Me.RadGroupBox5.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.RadGroupBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadGroupBox5.HeaderText = "Loading Log"
-        Me.RadGroupBox5.Location = New System.Drawing.Point(2, 448)
+        Me.RadGroupBox5.Location = New System.Drawing.Point(2, 428)
         Me.RadGroupBox5.Name = "RadGroupBox5"
-        Me.RadGroupBox5.Size = New System.Drawing.Size(339, 178)
+        Me.RadGroupBox5.Size = New System.Drawing.Size(339, 198)
         Me.RadGroupBox5.TabIndex = 286
         Me.RadGroupBox5.Text = "Loading Log"
         Me.RadGroupBox5.ThemeName = "Windows7"
-        Me.RadGroupBox5.Visible = False
         '
         'Cbn7
         '
@@ -2916,6 +3083,16 @@ Partial Class Advisenote
         Me.Label4.Text = "Last Update :"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'authorize_Remark
+        '
+        Me.authorize_Remark.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.authorize_Remark.Location = New System.Drawing.Point(101, 342)
+        Me.authorize_Remark.Name = "authorize_Remark"
+        Me.authorize_Remark.ReadOnly = True
+        Me.authorize_Remark.Size = New System.Drawing.Size(187, 38)
+        Me.authorize_Remark.TabIndex = 307
+        Me.authorize_Remark.Text = ""
+        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -2937,6 +3114,17 @@ Partial Class Advisenote
         Me.Label41.TabIndex = 232
         Me.Label41.Text = "Tail No. :"
         Me.Label41.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label28.Location = New System.Drawing.Point(3, 273)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(96, 21)
+        Me.Label28.TabIndex = 306
+        Me.Label28.Text = "Description :"
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Cbn2
         '
@@ -2968,6 +3156,15 @@ Partial Class Advisenote
         Me.Label27.TabIndex = 231
         Me.Label27.Text = "Head No. :"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Edremark
+        '
+        Me.Edremark.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Edremark.Location = New System.Drawing.Point(101, 270)
+        Me.Edremark.Name = "Edremark"
+        Me.Edremark.Size = New System.Drawing.Size(187, 64)
+        Me.Edremark.TabIndex = 305
+        Me.Edremark.Text = ""
         '
         'TruckH
         '
@@ -3460,7 +3657,7 @@ Partial Class Advisenote
         Me.Page_Temp.ItemSize = New System.Drawing.SizeF(127.0!, 30.0!)
         Me.Page_Temp.Location = New System.Drawing.Point(12, 40)
         Me.Page_Temp.Name = "Page_Temp"
-        Me.Page_Temp.Size = New System.Drawing.Size(1346, 643)
+        Me.Page_Temp.Size = New System.Drawing.Size(1346, 625)
         Me.Page_Temp.Text = "RadPageViewPage3"
         '
         'GDetail
@@ -3472,10 +3669,8 @@ Partial Class Advisenote
         Me.GDetail.Controls.Add(Me.GroupBox1)
         Me.GDetail.Controls.Add(Me.Panel4)
         Me.GDetail.Controls.Add(Me.Panel9)
-        Me.GDetail.Controls.Add(Me.Panel6)
         Me.GDetail.Controls.Add(Me.Panel7)
         Me.GDetail.Controls.Add(Me.Panel8)
-        Me.GDetail.Controls.Add(Me.Panel10)
         Me.GDetail.Controls.Add(Me.GroupBox15)
         Me.GDetail.Controls.Add(Me.GroupBox13)
         Me.GDetail.Controls.Add(Me.GroupBox10)
@@ -3485,7 +3680,7 @@ Partial Class Advisenote
         Me.GDetail.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GDetail.Location = New System.Drawing.Point(0, 0)
         Me.GDetail.Name = "GDetail"
-        Me.GDetail.Size = New System.Drawing.Size(1346, 643)
+        Me.GDetail.Size = New System.Drawing.Size(1346, 625)
         Me.GDetail.TabIndex = 2
         Me.GDetail.TabStop = False
         '
@@ -3719,90 +3914,31 @@ Partial Class Advisenote
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Location = New System.Drawing.Point(4, 118)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(50, 24)
         Me.Panel4.TabIndex = 122
         Me.Panel4.Tag = ""
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label8.Location = New System.Drawing.Point(2, 4)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 17)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Comp."
-        '
         'Panel9
         '
         Me.Panel9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel9.Controls.Add(Me.Label23)
         Me.Panel9.Location = New System.Drawing.Point(993, 118)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(105, 24)
         Me.Panel9.TabIndex = 121
         Me.Panel9.Tag = ""
         '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label23.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label23.Location = New System.Drawing.Point(31, 4)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(46, 17)
-        Me.Label23.TabIndex = 3
-        Me.Label23.Text = "Preset"
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Label22)
-        Me.Panel6.Location = New System.Drawing.Point(1215, 118)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(116, 24)
-        Me.Panel6.TabIndex = 120
-        Me.Panel6.Tag = ""
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label22.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label22.Location = New System.Drawing.Point(39, 5)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(44, 17)
-        Me.Label22.TabIndex = 3
-        Me.Label22.Text = "Meter"
-        '
         'Panel7
         '
         Me.Panel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel7.Controls.Add(Me.Label21)
         Me.Panel7.Location = New System.Drawing.Point(1100, 118)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(112, 24)
         Me.Panel7.TabIndex = 119
         Me.Panel7.Tag = ""
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label21.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label21.Location = New System.Drawing.Point(43, 4)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(30, 17)
-        Me.Label21.TabIndex = 3
-        Me.Label21.Text = "Bay"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Panel8
         '
@@ -3826,42 +3962,6 @@ Partial Class Advisenote
         Me.Label20.TabIndex = 2
         Me.Label20.Text = "Capacity1"
         '
-        'Panel10
-        '
-        Me.Panel10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel10.Controls.Add(Me.Label19)
-        Me.Panel10.Controls.Add(Me.Panel3)
-        Me.Panel10.Location = New System.Drawing.Point(58, 118)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(751, 24)
-        Me.Panel10.TabIndex = 116
-        Me.Panel10.Tag = ""
-        '
-        'Label19
-        '
-        Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label19.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label19.Location = New System.Drawing.Point(73, 4)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(56, 17)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Product"
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.Location = New System.Drawing.Point(2, 24)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(751, 270)
-        Me.Panel3.TabIndex = 117
-        '
         'GroupBox15
         '
         Me.GroupBox15.Controls.Add(Me.Comp12)
@@ -3875,7 +3975,6 @@ Partial Class Advisenote
         Me.GroupBox15.Controls.Add(Me.Comp4)
         Me.GroupBox15.Controls.Add(Me.Comp3)
         Me.GroupBox15.Controls.Add(Me.Comp2)
-        Me.GroupBox15.Controls.Add(Me.Comp1)
         Me.GroupBox15.Location = New System.Drawing.Point(4, 136)
         Me.GroupBox15.Name = "GroupBox15"
         Me.GroupBox15.Size = New System.Drawing.Size(51, 376)
@@ -4025,19 +4124,6 @@ Partial Class Advisenote
         Me.Comp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Comp2.ThemeName = "Office2010Blue"
         '
-        'Comp1
-        '
-        Me.Comp1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Comp1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Comp1.Location = New System.Drawing.Point(3, 14)
-        Me.Comp1.Name = "Comp1"
-        Me.Comp1.ReadOnly = True
-        Me.Comp1.Size = New System.Drawing.Size(44, 27)
-        Me.Comp1.TabIndex = 214
-        Me.Comp1.Text = "1"
-        Me.Comp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.Comp1.ThemeName = "Office2010Blue"
-        '
         'GroupBox13
         '
         Me.GroupBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -4052,7 +4138,6 @@ Partial Class Advisenote
         Me.GroupBox13.Controls.Add(Me.Preset4)
         Me.GroupBox13.Controls.Add(Me.Preset3)
         Me.GroupBox13.Controls.Add(Me.Preset2)
-        Me.GroupBox13.Controls.Add(Me.Preset1)
         Me.GroupBox13.Location = New System.Drawing.Point(994, 136)
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.Size = New System.Drawing.Size(105, 376)
@@ -4169,16 +4254,6 @@ Partial Class Advisenote
         Me.Preset2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Preset2.ThemeName = "Windows8"
         '
-        'Preset1
-        '
-        Me.Preset1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Preset1.Location = New System.Drawing.Point(7, 14)
-        Me.Preset1.Name = "Preset1"
-        Me.Preset1.Size = New System.Drawing.Size(92, 24)
-        Me.Preset1.TabIndex = 238
-        Me.Preset1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.Preset1.ThemeName = "Windows8"
-        '
         'GroupBox10
         '
         Me.GroupBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -4193,7 +4268,6 @@ Partial Class Advisenote
         Me.GroupBox10.Controls.Add(Me.Meter4)
         Me.GroupBox10.Controls.Add(Me.Meter3)
         Me.GroupBox10.Controls.Add(Me.Meter2)
-        Me.GroupBox10.Controls.Add(Me.Meter1)
         Me.GroupBox10.Location = New System.Drawing.Point(1215, 136)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(116, 376)
@@ -4459,30 +4533,6 @@ Partial Class Advisenote
         Me.TBatchmeterBindingSource2.DataSource = Me.DataSet_Table
         Me.TBatchmeterBindingSource2.Sort = ""
         '
-        'Meter1
-        '
-        Me.Meter1.AutoCompleteDisplayMember = "BATCH_NAME"
-        Me.Meter1.AutoCompleteValueMember = "ID"
-        Me.Meter1.DataSource = Me.TBatchmeterBindingSource1
-        Me.Meter1.DisplayMember = "BATCH_NAME"
-        Me.Meter1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Meter1.Location = New System.Drawing.Point(6, 14)
-        Me.Meter1.Name = "Meter1"
-        '
-        '
-        '
-        Me.Meter1.RootElement.StretchVertically = True
-        Me.Meter1.Size = New System.Drawing.Size(103, 24)
-        Me.Meter1.TabIndex = 236
-        Me.Meter1.ThemeName = "Windows8"
-        Me.Meter1.ValueMember = "ID"
-        '
-        'TBatchmeterBindingSource1
-        '
-        Me.TBatchmeterBindingSource1.DataMember = "T_BATCHMETER"
-        Me.TBatchmeterBindingSource1.DataSource = Me.DataSet_Table
-        Me.TBatchmeterBindingSource1.Sort = ""
-        '
         'GroupBox11
         '
         Me.GroupBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -4497,7 +4547,6 @@ Partial Class Advisenote
         Me.GroupBox11.Controls.Add(Me.IslandBay4)
         Me.GroupBox11.Controls.Add(Me.IslandBay3)
         Me.GroupBox11.Controls.Add(Me.IslandBay2)
-        Me.GroupBox11.Controls.Add(Me.IslandBay1)
         Me.GroupBox11.Location = New System.Drawing.Point(1102, 136)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(110, 376)
@@ -4790,32 +4839,6 @@ Partial Class Advisenote
         Me.TBAYBindingSource2.Filter = "bay_status=1"
         Me.TBAYBindingSource2.Sort = ""
         '
-        'IslandBay1
-        '
-        Me.IslandBay1.AutoCompleteDisplayMember = "BAY_NUMBER"
-        Me.IslandBay1.AutoCompleteValueMember = "ID"
-        Me.IslandBay1.DataSource = Me.TBAYBindingSource1
-        Me.IslandBay1.DisplayMember = "BAY_NUMBER"
-        Me.IslandBay1.DropDownMinSize = New System.Drawing.Size(0, 150)
-        Me.IslandBay1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.IslandBay1.Location = New System.Drawing.Point(6, 14)
-        Me.IslandBay1.Name = "IslandBay1"
-        '
-        '
-        '
-        Me.IslandBay1.RootElement.StretchVertically = True
-        Me.IslandBay1.Size = New System.Drawing.Size(101, 24)
-        Me.IslandBay1.TabIndex = 236
-        Me.IslandBay1.ThemeName = "Windows8"
-        Me.IslandBay1.ValueMember = "ID"
-        '
-        'TBAYBindingSource1
-        '
-        Me.TBAYBindingSource1.DataMember = "T_BAY"
-        Me.TBAYBindingSource1.DataSource = Me.DataSet_Table
-        Me.TBAYBindingSource1.Filter = "bay_status=1"
-        Me.TBAYBindingSource1.Sort = ""
-        '
         'GroupBox12
         '
         Me.GroupBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -5008,7 +5031,6 @@ Partial Class Advisenote
         Me.GroupBox14.Controls.Add(Me.ProductList4)
         Me.GroupBox14.Controls.Add(Me.ProductList3)
         Me.GroupBox14.Controls.Add(Me.ProductList2)
-        Me.GroupBox14.Controls.Add(Me.ProductList1)
         Me.GroupBox14.Location = New System.Drawing.Point(58, 136)
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.Size = New System.Drawing.Size(751, 376)
@@ -5311,33 +5333,6 @@ Partial Class Advisenote
         Me.TProductBindingSource2.DataMember = "T_PRODUCT"
         Me.TProductBindingSource2.DataSource = Me.DataSet_Table
         Me.TProductBindingSource2.Sort = "PRODUCT_CODE"
-        '
-        'ProductList1
-        '
-        Me.ProductList1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductList1.AutoCompleteDisplayMember = "PRODUCT_CODE"
-        Me.ProductList1.AutoCompleteValueMember = "ID"
-        Me.ProductList1.DataSource = Me.TProductBindingSource1
-        Me.ProductList1.DisplayMember = "PRODUCT_CODE"
-        Me.ProductList1.DropDownMinSize = New System.Drawing.Size(0, 150)
-        Me.ProductList1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.ProductList1.Location = New System.Drawing.Point(6, 14)
-        Me.ProductList1.Name = "ProductList1"
-        '
-        '
-        '
-        Me.ProductList1.RootElement.StretchVertically = True
-        Me.ProductList1.Size = New System.Drawing.Size(739, 24)
-        Me.ProductList1.TabIndex = 212
-        Me.ProductList1.ThemeName = "Windows8"
-        Me.ProductList1.ValueMember = "ID"
-        '
-        'TProductBindingSource1
-        '
-        Me.TProductBindingSource1.DataMember = "T_PRODUCT"
-        Me.TProductBindingSource1.DataSource = Me.DataSet_Table
-        Me.TProductBindingSource1.Sort = "PRODUCT_CODE"
         '
         'VCheckinBindingSource
         '
@@ -5913,7 +5908,7 @@ Partial Class Advisenote
         Me.RadPanel2.ForeColor = System.Drawing.Color.White
         Me.RadPanel2.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel2.Name = "RadPanel2"
-        Me.RadPanel2.Size = New System.Drawing.Size(1370, 115)
+        Me.RadPanel2.Size = New System.Drawing.Size(1370, 122)
         Me.RadPanel2.TabIndex = 1
         Me.RadPanel2.Text = "Loading advisory note"
         Me.RadPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -6276,6 +6271,10 @@ Partial Class Advisenote
         CType(Me.Load_q, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox10.ResumeLayout(False)
+        Me.RadGroupBox10.PerformLayout()
+        CType(Me.Comp1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductList1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupProduct.ResumeLayout(False)
         CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox4.ResumeLayout(False)
@@ -6309,6 +6308,15 @@ Partial Class Advisenote
         CType(Me.Product, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderBut, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.Preset1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IslandBay1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TBAYBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.Meter1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TBatchmeterBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BCancel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6373,18 +6381,8 @@ Partial Class Advisenote
         CType(Me.Capacity_l3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Capacity_l2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Capacity_l1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
         Me.GroupBox15.ResumeLayout(False)
         Me.GroupBox15.PerformLayout()
         CType(Me.Comp12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6398,7 +6396,6 @@ Partial Class Advisenote
         CType(Me.Comp4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Comp3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Comp2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Comp1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
         CType(Me.Preset12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6412,7 +6409,6 @@ Partial Class Advisenote
         CType(Me.Preset4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preset3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preset2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Preset1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
         CType(Me.Meter12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6437,8 +6433,6 @@ Partial Class Advisenote
         CType(Me.TBatchmeterBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Meter2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TBatchmeterBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Meter1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TBatchmeterBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         CType(Me.IslandBay12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6463,8 +6457,6 @@ Partial Class Advisenote
         CType(Me.TBAYBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IslandBay2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TBAYBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IslandBay1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TBAYBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         CType(Me.Capacity12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6503,8 +6495,6 @@ Partial Class Advisenote
         CType(Me.TProductBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductList2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TProductBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductList1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VCheckinBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet_View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6805,18 +6795,10 @@ Partial Class Advisenote
     Friend WithEvents Capacity_l2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Capacity_l1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label8 As Label
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label22 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label21 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label20 As Label
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents GroupBox15 As GroupBox
     Friend WithEvents Comp12 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Comp5 As Telerik.WinControls.UI.RadTextBox
@@ -6829,7 +6811,6 @@ Partial Class Advisenote
     Friend WithEvents Comp4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Comp3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Comp2 As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents Comp1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents Preset12 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Preset11 As Telerik.WinControls.UI.RadTextBox
@@ -6842,7 +6823,6 @@ Partial Class Advisenote
     Friend WithEvents Preset4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Preset3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Preset2 As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents Preset1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents GroupBox10 As GroupBox
     Friend WithEvents Meter12 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Meter11 As Telerik.WinControls.UI.RadDropDownList
@@ -6855,7 +6835,6 @@ Partial Class Advisenote
     Friend WithEvents Meter4 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Meter3 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Meter2 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents Meter1 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents IslandBay12 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents IslandBay11 As Telerik.WinControls.UI.RadDropDownList
@@ -6868,7 +6847,6 @@ Partial Class Advisenote
     Friend WithEvents IslandBay4 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents IslandBay3 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents IslandBay2 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents IslandBay1 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents GroupBox12 As GroupBox
     Friend WithEvents Capacity12 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Capacity11 As Telerik.WinControls.UI.RadTextBox
@@ -6894,7 +6872,6 @@ Partial Class Advisenote
     Friend WithEvents ProductList4 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents ProductList3 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents ProductList2 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents ProductList1 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label44 As Label
     Friend WithEvents GroupProduct As GroupBox
     Friend WithEvents RadGroupBox4 As Telerik.WinControls.UI.RadGroupBox
@@ -6960,5 +6937,18 @@ Partial Class Advisenote
     Friend WithEvents RadLabel28 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents LawWeightIn As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel26 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Comp1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents ProductList1 As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Preset1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents IslandBay1 As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Meter1 As Telerik.WinControls.UI.RadDropDownList
 End Class
 
