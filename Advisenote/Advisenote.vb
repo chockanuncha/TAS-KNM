@@ -429,7 +429,7 @@ Public Class Advisenote
 
         Try
             If EditType <> 1 Then
-                Cbn10.Text = ""
+                PresetVal.Text = ""
                 Order.Text = ""
             End If
             CompClear()
@@ -493,11 +493,9 @@ Public Class Advisenote
     Sub ClearData()
         Try
             PictureBox1.Image = Nothing
-
             AuthorRemark = ""
             AuthorRemarkDriver = ""
             authorize_Remark.Text = ""
-            'Bay.Text = ""
             Bay.SelectedIndex = -1
             Meter.Text = ""
             Meter.SelectedIndex = -1
@@ -509,29 +507,23 @@ Public Class Advisenote
             Cbn2.SelectedIndex = -1
             TruckH.Text = ""
             TruckH.SelectedIndex = -1
-
             Cbn3.Text = ""
-            'Cbn3.SelectedIndex = -1
-
             Driver.Text = ""
             Driver.SelectedIndex = -1
             Cbn5.Text = ""
             Cbn7.Text = ""
-            Cbn10.Text = ""
-            Cbn11.Enabled = True
-            Cbn11.Text = ""
+            PresetVal.Text = ""
+            DOval.Enabled = True
+            DOval.Text = ""
             Seal_No.Text = ""
             Shipper.Text = ""
-
             Trucktype.Text = ""
             Trucktype.SelectedIndex = -1
-
             Status.Text = ""
             Status.SelectedIndex = 0
             Seal_Total.Text = ""
             Container.Text = ""
             Product.SelectedIndex = -1
-
             Temp.Text = ""
             Update_date.Text = ""
             Update_by.Text = ""
@@ -539,7 +531,7 @@ Public Class Advisenote
             Chkin = 0
             Kiosk = 0
             Chkout = 0
-            For i = 1 To 12 'dt.Rows.Count - 1
+            For i = 2 To 12 'dt.Rows.Count - 1
                 Try
                     DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i).ToString), RadTextBox).Enabled = True
                     DirectCast(Me.GroupBox1.Controls.Item("Capacity_l" + (i).ToString), RadTextBox).Enabled = True
@@ -552,11 +544,12 @@ Public Class Advisenote
                     DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i).ToString), RadTextBox).Text = ""
                     DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i).ToString), RadDropDownList).SelectedIndex = -1
                     DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i).ToString), RadDropDownList).SelectedIndex = -1
-
                 Catch ex As Exception
                     Exit Sub
                 End Try
             Next i
+
+
             Try
                 Memory = New MemoryManagement.Manage
                 Memory.FlushMemory()
@@ -654,7 +647,7 @@ Public Class Advisenote
         If cls_role.ChkAdd = False Then
             Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to create documents in this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
             Me.Text = ds.ToString()
-            Exit Sub
+            ' Exit Sub
         End If
         '----------------------- Check Add Permission
 
@@ -766,8 +759,13 @@ Public Class Advisenote
     End Sub
 
     Private Sub CompClear()
+        ProductList1.SelectedIndex = -1
+        IslandBay1.SelectedIndex = -1
+        Meter1.SelectedIndex = -1
+        Preset1.Text = ""
+
         Dim i As Integer = 1
-        For i = 1 To 1
+        For i = 1 To 12
             DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i).ToString), RadDropDownList).SelectedIndex = -1
             DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i).ToString), RadTextBox).Text = ""
             DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i).ToString), RadTextBox).Text = ""
@@ -780,9 +778,7 @@ Public Class Advisenote
     End Sub
 
 
-    Private Sub OrderBut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-    End Sub
 
     Private Function Item(ByVal p1 As String) As Object
         Throw New NotImplementedException
@@ -932,16 +928,16 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Cbn10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Cbn10.KeyPress
+    Private Sub Cbn10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles PresetVal.KeyPress
         If IsNumeric(e.KeyChar) = False AndAlso e.KeyChar <> Chr(8) Then
             e.KeyChar = Chr(0)
         End If
     End Sub
 
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bsave.Click
-        If Cbn11.Text = "" Then
+        If DOval.Text = "" Then
             MessageBox.Show("Please specify DO.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Cbn11.Focus()
+            DOval.Focus()
             Exit Sub
         End If
         If Cbn2.SelectedIndex = -1 Then
@@ -955,9 +951,9 @@ Public Class Advisenote
             Exit Sub
         End If
 
-        If Cbn10.Text = "" Then
+        If PresetVal.Text = "" Then
             MessageBox.Show("Please specify Total Preset", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Cbn10.Focus()
+            PresetVal.Focus()
             Exit Sub
         End If
         If Driver.SelectedIndex = -1 Then
@@ -972,7 +968,7 @@ Public Class Advisenote
         Dim i, SL, ST, r, j As Integer
 
         Dim s_day, s_month, s_year As String
-        Dim Card As String
+
 
         Update_date.Text = Date.Now
 
@@ -1019,27 +1015,14 @@ Public Class Advisenote
             q = "select count(load_id) as CLoad_id "
             q &= "from T_loadingnote  where format(Getdate(),'dd-MM-yyyy')=format(load_date,'dd-MM-yyyy') "
 
-            'q &= "where to_char(load_date,'DD') = to_char(Getdate(),'DD') "
-            'q &= "AND  to_char(load_date,'MM') = to_char(Getdate(),'MM') "
-            'q &= "AND  to_char(load_date,'YY') = to_char(Getdate(),'YY') "
-            'q &= "AND (ST_ID NOT IN (SELECT st_id FROM t_st))  "
+
 
             tmp = cls.Query(q)
 
             SL = tmp(0)("CLoad_id")
             sc = ST + SL
 
-            'Dim Q_time, Checkin_time As String
-            'q = ""
-            'q = "select ldate,q_date  "
-            'q &= "from T_Checkin where id='" & Checkin_ID & "' order by id desc"
 
-            'Cmd.CommandText = q
-            'Cmd.ExecuteReader()
-            'dr = Cmd.ExecuteReader
-            'dr.Read()
-            'Q_time = dr.Item("LDATE")
-            'Checkin_time = dr.Item("Q_Date")
 
             '''''''' Insert T_Loadingnote'''''''''''''''''''
             Dim Preset As Integer = 0
@@ -1099,7 +1082,12 @@ Public Class Advisenote
             q &= " LOAD_TRUCKCOMPANY, "
             q &= " DO_TYPE, "
             q &= " UPDATE_BY, "
-            q &= "LOAD_AUTHORIZE,"
+            q &= "LOAD_AUTHORIZE," 'RAW_WEIGHT_IN
+
+            ' Weight 
+            q &= "RAW_WEIGHT_IN,"
+            q &= "RAW_WEIGHT_Out,"
+
             q &= " LOAD_TYPE )"
             q &= " Values ("
             q &= "'" & (Cbn8.Text) & "',"
@@ -1168,8 +1156,8 @@ Public Class Advisenote
             'q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & Preset.ToString & "',"
-            q &= "'" & (Cbn11.Text) & "'," 'LOAD_DOfull
-            q &= "'" & (Cbn11.Text) & "'," 'Loaddo
+            q &= "'" & (DOval.Text) & "'," 'LOAD_DOfull
+            q &= "'" & (DOval.Text) & "'," 'Loaddo
 
             q &= "'" & (Edremark.Text) & "',"
             q &= "'" & (Container.Text) & "',"
@@ -1194,6 +1182,14 @@ Public Class Advisenote
             q &= "'" & (DO_Type.Text).ToString & "',"
             q &= "'" & (Update_by.Text).ToString & "',"
             q &= "'" & (authorize_Remark.Text).ToString & "',"
+
+            ' Weight
+
+            q &= "'" & (LawWeightIn.Text).ToString & "',"
+            q &= "'" & (LawWeightout.Text).ToString & "',"
+            ' Weight
+
+
             q &= "'" & (TTruckTypeBindingSource.Item(TTruckTypeBindingSource.Position)("ID").ToString()) & "' )"
 
             cls.Insert(q)
@@ -1261,42 +1257,54 @@ Public Class Advisenote
                     q &= "Values ("
                     q &= "'" & Cbn6.Text & "',"
                     '' LC_COMPARTMENT ''
-                    q &= "'" & (DirectCast(Me.GroupBox15.Controls.Item("Comp" + (r + 1).ToString), RadTextBox).Text) + "',"
-                    '' LC_PRO ''
+                    'q &= "'" & (DirectCast(Me.GroupBox15.Controls.Item("Comp" + (r + 1).ToString), RadTextBox).Text) + "',"
+
+                    q &= "1"
+
+                    '' LC_Status ''
+
                     Try
-                        If DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text > 0 And ProductCom(r) <> "" And ProductCom(r) <> "" Then
-                            q &= "'1',"
-                        Else
-                            q &= "'0',"
-                        End If
+                        'If DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text > 0 And ProductCom(r) <> "" And ProductCom(r) <> "" Then
+                        '    q &= "'1',"
+                        'Else
+                        '    q &= "'0',"
+                        'End If
+                        q &= "'1',"
                     Catch ex As Exception
                         q &= "'99',"
                     End Try
-                    '' LC_BASE ''
-                    If (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) <> "" Then
-                        q &= "'" & (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) & "',"
-                    Else
-                        q &= "'0',"
-                    End If
 
+
+                    '' LC_BASE ''
+                    'If (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) <> "" Then
+                    '    q &= "'" & (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) & "',"
+                    'Else
+                    '    q &= "'0',"
+                    'End If
+                    q &= "'" & Preset.ToString & "',"
                     '' LC_BLEND''
                     q &= "'0',"
 
 
                     '' LC_PRO ''
-                    If (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Then
-                        q &= "'" & (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedValue.ToString) & "',"
-                    Else
-                        q &= "'0',"
-                    End If
 
+                    'If (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Then
+                    'q &= "'" & (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedValue.ToString) & "',"
+                    'Else
+                    '    q &= "'0',"
+                    'End If
+
+                    q &= "'" & Product.SelectedValue.ToString & "',"
 
                     ''LC_PRODUCTNAME
-                    If (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Then
-                        q &= "'" & (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).Text) & "',"
-                    Else
-                        q &= "'0',"
-                    End If
+
+                    q &= "'" & Product.ToString & "',"
+
+                    'If (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Then
+                    '    q &= "'" & (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).Text) & "',"
+                    'Else
+                    '    q &= "'0',"
+                    'End If
 
                     'q &= "'" + (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedValue.ToString) + "'" + ","
                     '' LC_CAPACITY ''
@@ -1432,7 +1440,7 @@ Public Class Advisenote
                 q &= "'" & ("0") & "',"
             End Try
             q &= " 1,"
-            q &= "'" & Cbn11.Text & "',"
+            q &= "'" & DOval.Text & "',"
             q &= "'" & Load_q.Text & "',"
             If Kiosk = 1 Then
                 q &= " 0,"
@@ -1596,9 +1604,9 @@ Public Class Advisenote
             q &= " LOAD_PRESET = "
             q &= "'" & Preset.ToString & "',"
             q &= " LOAD_DOfull = "
-            q &= "'" & (Cbn11.Text) & "',"
+            q &= "'" & (DOval.Text) & "',"
             q &= " LOADDO = "
-            q &= "'" & (Cbn11.Text) & "',"
+            q &= "'" & (DOval.Text) & "',"
             q &= " Reference = "
             q &= "'" & (Cbn8.Text) & "',"
             q &= " Remark = "
@@ -2017,8 +2025,8 @@ Public Class Advisenote
             Try
                 Bcancel_Click(sender, e)
                 Cbn6.Text = dt.Rows(0).Item("load_ID").ToString
-                Cbn11.Text = dt.Rows(0).Item("load_DOfull").ToString
-                Cbn10.Text = dt.Rows(0).Item("load_Preset").ToString
+                DOval.Text = dt.Rows(0).Item("load_DOfull").ToString
+                PresetVal.Text = dt.Rows(0).Item("load_Preset").ToString
                 Cbn8.Text = dt.Rows(0).Item("Reference").ToString
                 Container.Text = dt.Rows(0).Item("Container").ToString
                 Seal_Total.Text = dt.Rows(0).Item("Load_sealcount").ToString
@@ -2161,7 +2169,7 @@ Public Class Advisenote
             RadPageView1.SelectedPage = RadPageViewPage2
             Bsave.Visible = False
             Update.Visible = True
-            Cbn11.Focus()
+            DOval.Focus()
         End If
     End Sub
 
@@ -2240,7 +2248,7 @@ Public Class Advisenote
     '    Meter.MultiColumnComboBoxElement.ShowPopup()
     'End Sub
 
-    Private Sub Product_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub Product_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Product.Leave
 
     End Sub
 
@@ -2259,10 +2267,19 @@ Public Class Advisenote
     End Sub
 
     Private Sub Order_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Try
+            'If EditType <> 1 Then
+            If Int(Cbn10.Text) > Int(Cbn5.Text) Then
+                Cbn10.Text = Cbn5.Text
+                Cbn10.Focus()
+            End If
+            'End If
+        Catch ex As Exception
 
+        End Try
     End Sub
 
-    Private Sub Cbn10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cbn10.Leave
+    Private Sub Cbn10_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         'If (Vdate1 < 30 And Vdate1 > 0) And Chk_DriverLicense Then
         '    MessageBox.Show("Driver license will expire in : '" & Vdate1.ToString & "' Day", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -3573,16 +3590,99 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton8.Click
+    Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton8.Click, RadButton12.Click, RadButton16.Click
         EDW_IN.Text = WeightScal.Text
         LawWeightIn.Text = EDW_IN.Text
     End Sub
 
-    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
-        EDW_OUT.Text = WeightScal.Text
-        LawWeightout.Text = EDW_OUT.Text
-        EDW_NET.Text = Int(EDW_OUT.Text) - Int(EDW_IN.Text)
+    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click, RadButton14.Click
+        EDW_Out.Text = WeightScal.Text
+        LawWeightout.Text = EDW_Out.Text
+        EDW_NET.Text = Int(EDW_Out.Text) - Int(EDW_IN.Text)
+        _Weightouttime.Text = Now()
+
     End Sub
+
+    Private Sub OrderBut_Click(sender As Object, e As EventArgs) Handles OrderBut.Click
+        'Cbn2_TextChanged(sender, e)
+        Dim tov, Bayt As Integer
+        Dim Batchmeter, BayIndex As String
+        Dim Index As Integer
+        Try
+            If Order.Text <> "" Then
+                tov = Int(Order.Text)
+                PresetVal.Text = Order.Text
+            Else
+                tov = Int(PresetVal.Text)
+            End If
+            'ProductList1_Leave(sender, e)
+            'ProductList2_Leave(sender, e)
+            'ProductList3_Leave(sender, e)
+            'ProductList4_Leave(sender, e)
+            'ProductList5_Leave(sender, e)
+            'ProductList6_Leave(sender, e)
+            'ProductList7_Leave(sender, e)
+            'ProductList8_Leave(sender, e)
+            'ProductList9_Leave(sender, e)
+            'ProductList10_Leave(sender, e)
+            'ProductList11_Leave(sender, e)
+            'ProductList12_Leave(sender, e)
+
+            Bayt = Bay.SelectedIndex
+
+            'For i = 0 To TRUCK_COMP_NUM - 1
+            For i = 0 To 1
+                'If Bayt = -1 Then
+                If (Int(DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i + 1).ToString), RadTextBox).Text) <= tov) Then
+                    DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = Product.SelectedIndex
+                    'DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text = Product.Text
+                    ProductCom(i) = TProductBindingSource.Item(TProductBindingSource.Position)("Product_code").ToString()
+                    'DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Bay.SelectedIndex
+
+                    BayIndex = Bay.Text
+                    Index = DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).FindString(BayIndex)
+                    DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
+
+
+                    'DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Meter.SelectedIndex
+                    Batchmeter = Meter.Text
+                    Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
+                    DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
+
+                    DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text = DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i + 1).ToString), RadTextBox).Text
+                    tov = tov - Int(DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text)
+                Else
+                    DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text = tov
+
+                    If tov <> 0 Then
+                        DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = Product.SelectedIndex
+                        ProductCom(i) = TProductBindingSource.Item(TProductBindingSource.Position)("Product_code").ToString()
+                        BayIndex = Bay.Text
+                        Index = DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).FindString(BayIndex)
+                        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
+                        Batchmeter = Meter.Text
+                        Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
+                        DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
+
+                        'DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Bay.SelectedIndex
+                        'DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Meter.SelectedIndex
+                    Else
+                        DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1 'Product.SelectedIndex
+                        ProductCom(i) = ""
+                        DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1 'Bay.SelectedIndex
+                        DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1 'Meter.SelectedIndex
+                    End If
+                    tov = tov - Int(DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text)
+                End If
+
+            Next i
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+
 
 #End Region
 

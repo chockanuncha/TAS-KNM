@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PING\SQLEXPRESS;Initial Catalog=TAS;Persist Security Info=True;User I"& _ 
-            "D=sa;Password=P@$$w0rd")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=KNM_TASSERVER;Initial Catalog=TAS;Persist Security Info=True;User ID="& _ 
+            "icc;Password=P@$$w0rd")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)
@@ -79,7 +79,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.18")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.10")>  _
         Public Property LicServer() As String
             Get
                 Return CType(Me("LicServer"),String)

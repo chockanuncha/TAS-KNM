@@ -131,10 +131,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.ManagedDataAccess, Version=2.0.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\iAlarm\bin\Debug\Oracle.ManagedDataAccess.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Private>True</Private>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -145,11 +141,12 @@
     <Reference Include="System.Data.Linq">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
@@ -1148,6 +1145,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\weight-in-A.png" />
     <None Include=".editorconfig" />
     <None Include="App_Dataset\DataSet_Report.xsc">
       <DependentUpon>DataSet_Report.xsd</DependentUpon>

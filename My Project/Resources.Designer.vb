@@ -2453,6 +2453,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property weight_in_A() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("weight-in-A", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Windows8() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Windows8", resourceCulture)
