@@ -429,8 +429,8 @@ Public Class Advisenote
 
         Try
             If EditType <> 1 Then
+                PresetTotal.Text = ""
                 PresetVal.Text = ""
-                Order.Text = ""
             End If
             CompClear()
             TRUCK_COMP_NUM = dt5(0)("TRUCK_COMP_NUM").ToString
@@ -452,7 +452,7 @@ Public Class Advisenote
             Dim dt As DataTable = cls.Query(q)
 
             TRUCK_CAPASITY = dt.Rows(0).Item("TRUCK_CAPASITY").ToString()
-            Cbn5.Text = TRUCK_CAPASITY
+            Capacity.Text = TRUCK_CAPASITY
 
             RadButton1_Click(sender, e)
 
@@ -482,8 +482,6 @@ Public Class Advisenote
             If Ttype = "1003" Then
                 TruckH.Enabled = False
                 TruckH.Text = tmp(0)("TRUCK_TRA")
-                'TruckH.Focus()
-                'Exit Sub
             End If
         Catch ex As Exception
             'conn.Close()
@@ -510,9 +508,9 @@ Public Class Advisenote
             Cbn3.Text = ""
             Driver.Text = ""
             Driver.SelectedIndex = -1
-            Cbn5.Text = ""
+            Capacity.Text = ""
             Cbn7.Text = ""
-            PresetVal.Text = ""
+            PresetTotal.Text = ""
             DOval.Enabled = True
             DOval.Text = ""
             Seal_No.Text = ""
@@ -527,11 +525,11 @@ Public Class Advisenote
             Temp.Text = ""
             Update_date.Text = ""
             Update_by.Text = ""
-            Order.Text = ""
+            PresetVal.Text = ""
             Chkin = 0
             Kiosk = 0
             Chkout = 0
-            For i = 2 To 12 'dt.Rows.Count - 1
+            For i = 1 To 12 'dt.Rows.Count - 1
                 Try
                     DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (i).ToString), RadTextBox).Enabled = True
                     DirectCast(Me.GroupBox1.Controls.Item("Capacity_l" + (i).ToString), RadTextBox).Enabled = True
@@ -928,7 +926,7 @@ Public Class Advisenote
         End Try
     End Sub
 
-    Private Sub Cbn10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles PresetVal.KeyPress
+    Private Sub Cbn10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles PresetTotal.KeyPress
         If IsNumeric(e.KeyChar) = False AndAlso e.KeyChar <> Chr(8) Then
             e.KeyChar = Chr(0)
         End If
@@ -951,9 +949,9 @@ Public Class Advisenote
             Exit Sub
         End If
 
-        If PresetVal.Text = "" Then
+        If PresetTotal.Text = "" Then
             MessageBox.Show("Please specify Total Preset", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            PresetVal.Focus()
+            PresetTotal.Focus()
             Exit Sub
         End If
         If Driver.SelectedIndex = -1 Then
@@ -1087,6 +1085,8 @@ Public Class Advisenote
             ' Weight 
             q &= "RAW_WEIGHT_IN,"
             q &= "RAW_WEIGHT_Out,"
+            q &= "WEIGHTin_Time,"
+
 
             q &= " LOAD_TYPE )"
             q &= " Values ("
@@ -1142,7 +1142,7 @@ Public Class Advisenote
             End If
             q &= "'" & (TTRUCKBindingSource1.Item(TTRUCKBindingSource1.Position)("ID").ToString()) & "'," ' load_vehicle
             q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("STATUS_ID").ToString()) & "',"
-            q &= "'" & (Cbn5.Text) & "',"
+            q &= "'" & (Capacity.Text) & "',"
             'q &= "'" & Str(sc) & "'," ' ST_ID
             'q &= "'" & (TShipperBindingSource.Item(TShipperBindingSource.Position)("ID").ToString()) & "',"
             q &= "'" & (Cbn9.Text) & "',"
@@ -1155,7 +1155,7 @@ Public Class Advisenote
             q &= " Getdate() ,"
             'q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) & "','DD/MM/YYYY HH24:MI:SS')" & ","
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
-            q &= "'" & Preset.ToString & "',"
+            q &= "'" & PresetVal.Text & "',"
             q &= "'" & (DOval.Text) & "'," 'LOAD_DOfull
             q &= "'" & (DOval.Text) & "'," 'Loaddo
 
@@ -1187,6 +1187,7 @@ Public Class Advisenote
 
             q &= "'" & (LawWeightIn.Text).ToString & "',"
             q &= "'" & (LawWeightout.Text).ToString & "',"
+            q &= " Getdate() ,"
             ' Weight
 
 
@@ -1224,12 +1225,20 @@ Public Class Advisenote
                     q &= " LC_METER) "
                     q &= "Values ("
                     q &= "'" & Cbn6.Text & "',"
-                    q &= "'" & (DirectCast(Me.GroupBox15.Controls.Item("Comp" + (r + 1).ToString), RadTextBox).Text) & "',"
+
+                    'q &= "'" & (DirectCast(Me.GroupBox15.Controls.Item("Comp" + (r + 1).ToString), RadTextBox).Text) & "',"
+                    q &= "'1',"
+
                     q &= "'99',"
                     q &= "'0',"
                     q &= "'0',"
-                    q &= "'0'," 'LC_pro
-                    q &= "'" & (DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (r + 1).ToString), RadTextBox).Text) & "',"
+                    q &= "'0',"
+                    'LC_pro
+                    'q &= "'" & (DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (r + 1).ToString), RadTextBox).Text) & "',"
+
+                    q &= "'" & Capacity.Text & "',"
+
+
                     q &= "'0',"
                     q &= "'0',"
                     q &= "'0',"
@@ -1276,17 +1285,21 @@ Public Class Advisenote
 
 
                     '' LC_BASE ''
+                    q &= "'" & Preset.ToString & "',"
+
                     'If (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) <> "" Then
                     '    q &= "'" & (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) & "',"
                     'Else
                     '    q &= "'0',"
                     'End If
-                    q &= "'" & Preset.ToString & "',"
+
+
                     '' LC_BLEND''
                     q &= "'0',"
 
 
                     '' LC_PRO ''
+                    q &= "'" & Product.SelectedValue.ToString & "',"
 
                     'If (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Then
                     'q &= "'" & (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedValue.ToString) & "',"
@@ -1294,7 +1307,7 @@ Public Class Advisenote
                     '    q &= "'0',"
                     'End If
 
-                    q &= "'" & Product.SelectedValue.ToString & "',"
+
 
                     ''LC_PRODUCTNAME
 
@@ -1308,8 +1321,11 @@ Public Class Advisenote
 
                     'q &= "'" + (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (r + 1).ToString), RadDropDownList).SelectedValue.ToString) + "'" + ","
                     '' LC_CAPACITY ''
-                    q &= "'" & (DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (r + 1).ToString), RadTextBox).Text) & "',"
+                    q &= "'" & Capacity.ToString & "',"
+
+                    'q &= "'" & (DirectCast(Me.GroupBox12.Controls.Item("Capacity" + (r + 1).ToString), RadTextBox).Text) & "',"
                     '' LC_PRESET ''
+
                     If (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) <> "" Then
                         q &= "'" & (DirectCast(Me.GroupBox13.Controls.Item("Preset" + (r + 1).ToString), RadTextBox).Text) & "',"
                     Else
@@ -1586,7 +1602,7 @@ Public Class Advisenote
             q &= " LOAD_STATUS = "
             q &= "'" & (TStatusBindingSource.Item(TStatusBindingSource.Position)("STATUS_ID").ToString()) & "',"
             q &= " LOAD_CAPACITY = "
-            q &= "'" & (Cbn5.Text) & "',"
+            q &= "'" & (Capacity.Text) & "',"
             'q &= " LOAD_Shipper = "
             'q &= "'" & (TShipperBindingSource.Item(TShipperBindingSource.Position)("ID").ToString()) & "',"
             q &= " LOAD_STARTTIME = "
@@ -2026,7 +2042,7 @@ Public Class Advisenote
                 Bcancel_Click(sender, e)
                 Cbn6.Text = dt.Rows(0).Item("load_ID").ToString
                 DOval.Text = dt.Rows(0).Item("load_DOfull").ToString
-                PresetVal.Text = dt.Rows(0).Item("load_Preset").ToString
+                PresetTotal.Text = dt.Rows(0).Item("load_Preset").ToString
                 Cbn8.Text = dt.Rows(0).Item("Reference").ToString
                 Container.Text = dt.Rows(0).Item("Container").ToString
                 Seal_Total.Text = dt.Rows(0).Item("Load_sealcount").ToString
@@ -2037,7 +2053,7 @@ Public Class Advisenote
                 sealCount = dt.Rows(0).Item("Load_sealcount").ToString
                 Seal_Total.Text = sealCount.ToString
                 Seal_No.Text = dt.Rows(0).Item("Load_seal").ToString
-                Cbn5.Text = dt.Rows(0).Item("load_Capacity").ToString
+                Capacity.Text = dt.Rows(0).Item("load_Capacity").ToString
                 Cbn7.Text = dt.Rows(0).Item("Load_did").ToString
                 Load_q.Text = dt.Rows(0).Item("Load_Q").ToString
                 'truck = dt.Rows(0).Item("load_vehicle_ID")
@@ -2269,9 +2285,9 @@ Public Class Advisenote
     Private Sub Order_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             'If EditType <> 1 Then
-            If Int(Cbn10.Text) > Int(Cbn5.Text) Then
-                Cbn10.Text = Cbn5.Text
-                Cbn10.Focus()
+            If Int(PresetTotal.Text) > Int(Capacity.Text) Then
+                PresetTotal.Text = Capacity.Text
+                PresetTotal.Focus()
             End If
             'End If
         Catch ex As Exception
@@ -3590,12 +3606,12 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton8.Click, RadButton12.Click, RadButton16.Click
+    Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton16.Click
         EDW_IN.Text = WeightScal.Text
         LawWeightIn.Text = EDW_IN.Text
     End Sub
 
-    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click, RadButton14.Click
+    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
         EDW_Out.Text = WeightScal.Text
         LawWeightout.Text = EDW_Out.Text
         EDW_NET.Text = Int(EDW_Out.Text) - Int(EDW_IN.Text)
@@ -3609,11 +3625,11 @@ Public Class Advisenote
         Dim Batchmeter, BayIndex As String
         Dim Index As Integer
         Try
-            If Order.Text <> "" Then
-                tov = Int(Order.Text)
-                PresetVal.Text = Order.Text
-            Else
+            If PresetVal.Text <> "" Then
                 tov = Int(PresetVal.Text)
+                PresetTotal.Text = PresetVal.Text
+            Else
+                tov = Int(PresetTotal.Text)
             End If
             'ProductList1_Leave(sender, e)
             'ProductList2_Leave(sender, e)
@@ -3680,6 +3696,7 @@ Public Class Advisenote
 
         End Try
     End Sub
+
 
 
 

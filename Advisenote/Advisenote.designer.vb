@@ -165,10 +165,10 @@ Partial Class Advisenote
         Me.RadPageViewPage2 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.AdviseDetail_G = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadButton14 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton15 = New Telerik.WinControls.UI.RadButton()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.RadGroupBox8 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
         Me.EDW_Out = New Telerik.WinControls.UI.RadTextBox()
         Me.RadGroupBox11 = New Telerik.WinControls.UI.RadGroupBox()
         Me.W_Weightouttime = New Telerik.WinControls.UI.RadLabel()
@@ -181,6 +181,7 @@ Partial Class Advisenote
         Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel29 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel39 = New Telerik.WinControls.UI.RadLabel()
+        Me.OrderBut = New Telerik.WinControls.UI.RadButton()
         Me.UpdateWeightOut = New Telerik.WinControls.UI.RadTextBox()
         Me.LawWeightout = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
@@ -191,7 +192,6 @@ Partial Class Advisenote
         Me.RadLabel36 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel38 = New Telerik.WinControls.UI.RadLabel()
         Me.UpdateWeightIn = New Telerik.WinControls.UI.RadTextBox()
-        Me.OrderBut = New Telerik.WinControls.UI.RadButton()
         Me.EDW_IN = New Telerik.WinControls.UI.RadTextBox()
         Me.WeightScal = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
@@ -200,11 +200,7 @@ Partial Class Advisenote
         Me.Weightintime = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel33 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel40 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadButton12 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton13 = New Telerik.WinControls.UI.RadButton()
         Me.Weightouttime = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadButton8 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton9 = New Telerik.WinControls.UI.RadButton()
         Me.Load_q = New Telerik.WinControls.UI.RadTextBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.RadGroupBox10 = New Telerik.WinControls.UI.RadGroupBox()
@@ -213,7 +209,7 @@ Partial Class Advisenote
         Me.RadGroupBox4 = New Telerik.WinControls.UI.RadGroupBox()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.Order = New Telerik.WinControls.UI.RadTextBox()
+        Me.PresetVal = New Telerik.WinControls.UI.RadTextBox()
         Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -242,7 +238,7 @@ Partial Class Advisenote
         Me.Label26 = New System.Windows.Forms.Label()
         Me.DOval = New Telerik.WinControls.UI.RadTextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.PresetVal = New Telerik.WinControls.UI.RadTextBox()
+        Me.PresetTotal = New Telerik.WinControls.UI.RadTextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Seal_Total = New Telerik.WinControls.UI.RadTextBox()
         Me.Seal_No = New Telerik.WinControls.UI.RadTextBox()
@@ -282,7 +278,7 @@ Partial Class Advisenote
         Me.TTruckTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label32 = New System.Windows.Forms.Label()
         Me.DO_Type = New Telerik.WinControls.UI.RadDropDownList()
-        Me.Cbn5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.Capacity = New Telerik.WinControls.UI.RadTextBox()
         Me.Cbn3 = New Telerik.WinControls.UI.RadMultiColumnComboBox()
         Me.TCompanyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label18 = New System.Windows.Forms.Label()
@@ -530,11 +526,10 @@ Partial Class Advisenote
         Me.RadPanel3.SuspendLayout()
         CType(Me.AdviseDetail_G, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AdviseDetail_G.SuspendLayout()
-        CType(Me.RadButton14, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadButton14.SuspendLayout()
-        CType(Me.RadButton15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox8.SuspendLayout()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EDW_Out, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox11.SuspendLayout()
@@ -551,6 +546,7 @@ Partial Class Advisenote
         CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadLabel29.SuspendLayout()
         CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderBut, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UpdateWeightOut, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LawWeightout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -561,7 +557,6 @@ Partial Class Advisenote
         CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UpdateWeightIn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OrderBut, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EDW_IN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.WeightScal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -570,13 +565,7 @@ Partial Class Advisenote
         CType(Me.Weightintime, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton12, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadButton12.SuspendLayout()
-        CType(Me.RadButton13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Weightouttime, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadButton8.SuspendLayout()
-        CType(Me.RadButton9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Load_q, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox10.SuspendLayout()
@@ -585,7 +574,7 @@ Partial Class Advisenote
         CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox4.SuspendLayout()
         Me.Panel14.SuspendLayout()
-        CType(Me.Order, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PresetVal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox3.SuspendLayout()
         Me.Panel12.SuspendLayout()
@@ -611,7 +600,7 @@ Partial Class Advisenote
         CType(Me.BCancel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.DOval, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PresetVal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PresetTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Seal_Total, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Seal_No, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EdCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -640,7 +629,7 @@ Partial Class Advisenote
         CType(Me.Trucktype, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TTruckTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DO_Type, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Cbn5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Capacity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn3.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn3.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -825,14 +814,14 @@ Partial Class Advisenote
         Me.RadPageView1.Controls.Add(Me.RadPageViewPage2)
         Me.RadPageView1.Controls.Add(Me.Page_Temp)
         Me.RadPageView1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadPageView1.Location = New System.Drawing.Point(0, 83)
+        Me.RadPageView1.Location = New System.Drawing.Point(0, 66)
         Me.RadPageView1.Name = "RadPageView1"
         '
         '
         '
         Me.RadPageView1.RootElement.Shape = Nothing
         Me.RadPageView1.SelectedPage = Me.RadPageViewPage2
-        Me.RadPageView1.Size = New System.Drawing.Size(1370, 681)
+        Me.RadPageView1.Size = New System.Drawing.Size(1370, 698)
         Me.RadPageView1.TabIndex = 95
         Me.RadPageView1.ThemeName = "Office2010Blue"
         '
@@ -849,7 +838,7 @@ Partial Class Advisenote
         Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(107.0!, 30.0!)
         Me.RadPageViewPage1.Location = New System.Drawing.Point(12, 40)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(1346, 625)
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(1346, 629)
         Me.RadPageViewPage1.Text = "รายการโหลดจ่าย"
         '
         'DatetimePicker2
@@ -1070,7 +1059,7 @@ Partial Class Advisenote
         Me.MasterGridAdvisenote.Name = "MasterGridAdvisenote"
         Me.MasterGridAdvisenote.ReadOnly = True
         Me.MasterGridAdvisenote.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.MasterGridAdvisenote.Size = New System.Drawing.Size(1096, 598)
+        Me.MasterGridAdvisenote.Size = New System.Drawing.Size(1096, 602)
         Me.MasterGridAdvisenote.TabIndex = 1
         Me.MasterGridAdvisenote.ThemeName = "Breeze"
         Me.MasterGridAdvisenote.UseScrollbarsInHierarchy = True
@@ -1245,7 +1234,7 @@ Partial Class Advisenote
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadPanel1.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(250, 625)
+        Me.RadPanel1.Size = New System.Drawing.Size(250, 629)
         Me.RadPanel1.TabIndex = 1
         Me.RadPanel1.ThemeName = "Office2010Blue"
         '
@@ -1387,7 +1376,7 @@ Partial Class Advisenote
         Me.RadPageViewPage2.ItemSize = New System.Drawing.SizeF(74.0!, 30.0!)
         Me.RadPageViewPage2.Location = New System.Drawing.Point(12, 40)
         Me.RadPageViewPage2.Name = "RadPageViewPage2"
-        Me.RadPageViewPage2.Size = New System.Drawing.Size(1346, 629)
+        Me.RadPageViewPage2.Size = New System.Drawing.Size(1346, 646)
         Me.RadPageViewPage2.Text = "เพิมข้อมูล"
         '
         'RadPanel3
@@ -1401,20 +1390,17 @@ Partial Class Advisenote
         Me.RadPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadPanel3.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel3.Name = "RadPanel3"
-        Me.RadPanel3.Size = New System.Drawing.Size(1346, 629)
+        Me.RadPanel3.Size = New System.Drawing.Size(1346, 646)
         Me.RadPanel3.TabIndex = 0
         Me.RadPanel3.ThemeName = "Office2010Blue"
         '
         'AdviseDetail_G
         '
         Me.AdviseDetail_G.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.AdviseDetail_G.Controls.Add(Me.RadButton14)
         Me.AdviseDetail_G.Controls.Add(Me.Panel15)
         Me.AdviseDetail_G.Controls.Add(Me.RadGroupBox8)
         Me.AdviseDetail_G.Controls.Add(Me.RadLabel40)
-        Me.AdviseDetail_G.Controls.Add(Me.RadButton12)
         Me.AdviseDetail_G.Controls.Add(Me.Weightouttime)
-        Me.AdviseDetail_G.Controls.Add(Me.RadButton8)
         Me.AdviseDetail_G.Controls.Add(Me.Load_q)
         Me.AdviseDetail_G.Controls.Add(Me.Label31)
         Me.AdviseDetail_G.Controls.Add(Me.RadGroupBox10)
@@ -1422,7 +1408,7 @@ Partial Class Advisenote
         Me.AdviseDetail_G.Controls.Add(Me.Label26)
         Me.AdviseDetail_G.Controls.Add(Me.DOval)
         Me.AdviseDetail_G.Controls.Add(Me.Label17)
-        Me.AdviseDetail_G.Controls.Add(Me.PresetVal)
+        Me.AdviseDetail_G.Controls.Add(Me.PresetTotal)
         Me.AdviseDetail_G.Controls.Add(Me.Label16)
         Me.AdviseDetail_G.Controls.Add(Me.Seal_Total)
         Me.AdviseDetail_G.Controls.Add(Me.Seal_No)
@@ -1437,48 +1423,6 @@ Partial Class Advisenote
         Me.AdviseDetail_G.Text = "Loading advisory note Details"
         Me.AdviseDetail_G.ThemeName = "Windows7"
         '
-        'RadButton14
-        '
-        Me.RadButton14.Controls.Add(Me.RadButton15)
-        Me.RadButton14.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton14.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton14.ForeColor = System.Drawing.Color.White
-        Me.RadButton14.Image = CType(resources.GetObject("RadButton14.Image"), System.Drawing.Image)
-        Me.RadButton14.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton14.Location = New System.Drawing.Point(141, 280)
-        Me.RadButton14.Name = "RadButton14"
-        Me.RadButton14.Size = New System.Drawing.Size(106, 36)
-        Me.RadButton14.TabIndex = 2213
-        Me.RadButton14.Text = "Weight Out"
-        Me.RadButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton14.TextWrap = True
-        Me.RadButton14.ThemeName = "Breeze"
-        CType(Me.RadButton14.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
-        CType(Me.RadButton14.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton14.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton14.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton14.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight Out"
-        '
-        'RadButton15
-        '
-        Me.RadButton15.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton15.ForeColor = System.Drawing.Color.White
-        Me.RadButton15.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        Me.RadButton15.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton15.Location = New System.Drawing.Point(554, 311)
-        Me.RadButton15.Name = "RadButton15"
-        Me.RadButton15.Size = New System.Drawing.Size(132, 49)
-        Me.RadButton15.TabIndex = 20
-        Me.RadButton15.Text = "Save"
-        Me.RadButton15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton15.ThemeName = "Breeze"
-        CType(Me.RadButton15.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        CType(Me.RadButton15.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton15.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton15.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton15.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
-        '
         'Panel15
         '
         Me.Panel15.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1492,12 +1436,13 @@ Partial Class Advisenote
         'RadGroupBox8
         '
         Me.RadGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel1)
+        Me.RadGroupBox8.Controls.Add(Me.RadTextBox3)
         Me.RadGroupBox8.Controls.Add(Me.EDW_Out)
         Me.RadGroupBox8.Controls.Add(Me.RadGroupBox11)
         Me.RadGroupBox8.Controls.Add(Me.RadLabel36)
         Me.RadGroupBox8.Controls.Add(Me.RadLabel38)
         Me.RadGroupBox8.Controls.Add(Me.UpdateWeightIn)
-        Me.RadGroupBox8.Controls.Add(Me.OrderBut)
         Me.RadGroupBox8.Controls.Add(Me.EDW_IN)
         Me.RadGroupBox8.Controls.Add(Me.WeightScal)
         Me.RadGroupBox8.Controls.Add(Me.RadLabel5)
@@ -1508,10 +1453,10 @@ Partial Class Advisenote
         Me.RadGroupBox8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadGroupBox8.ForeColor = System.Drawing.Color.Black
         Me.RadGroupBox8.HeaderText = "WEIGHT :"
-        Me.RadGroupBox8.Location = New System.Drawing.Point(294, 24)
+        Me.RadGroupBox8.Location = New System.Drawing.Point(294, 21)
         Me.RadGroupBox8.Name = "RadGroupBox8"
         Me.RadGroupBox8.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
-        Me.RadGroupBox8.Size = New System.Drawing.Size(672, 350)
+        Me.RadGroupBox8.Size = New System.Drawing.Size(672, 353)
         Me.RadGroupBox8.TabIndex = 305
         Me.RadGroupBox8.Text = "WEIGHT :"
         Me.RadGroupBox8.ThemeName = "Breeze"
@@ -1522,15 +1467,39 @@ Partial Class Advisenote
         CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Segoe UI", 9.75!)
         CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'RadLabel1
+        '
+        Me.RadLabel1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadLabel1.Location = New System.Drawing.Point(318, 39)
+        Me.RadLabel1.Name = "RadLabel1"
+        Me.RadLabel1.Size = New System.Drawing.Size(87, 19)
+        Me.RadLabel1.TabIndex = 2214
+        Me.RadLabel1.Text = "Law Weight"
+        Me.RadLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel1.ThemeName = "TelerikMetro"
+        '
+        'RadTextBox3
+        '
+        Me.RadTextBox3.Enabled = False
+        Me.RadTextBox3.Font = New System.Drawing.Font("DS-Digital", 26.0!, System.Drawing.FontStyle.Bold)
+        Me.RadTextBox3.ForeColor = System.Drawing.Color.Lime
+        Me.RadTextBox3.Location = New System.Drawing.Point(138, 26)
+        Me.RadTextBox3.Name = "RadTextBox3"
+        Me.RadTextBox3.Size = New System.Drawing.Size(156, 45)
+        Me.RadTextBox3.TabIndex = 2213
+        Me.RadTextBox3.Text = "1"
+        Me.RadTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.RadTextBox3.ThemeName = "Breeze"
+        '
         'EDW_Out
         '
         Me.EDW_Out.BackColor = System.Drawing.Color.Black
         Me.EDW_Out.Font = New System.Drawing.Font("DS-Digital", 26.0!, System.Drawing.FontStyle.Bold)
         Me.EDW_Out.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_Out.Location = New System.Drawing.Point(408, 87)
+        Me.EDW_Out.Location = New System.Drawing.Point(419, 80)
         Me.EDW_Out.Name = "EDW_Out"
         Me.EDW_Out.ReadOnly = True
-        Me.EDW_Out.Size = New System.Drawing.Size(156, 40)
+        Me.EDW_Out.Size = New System.Drawing.Size(145, 40)
         Me.EDW_Out.TabIndex = 2212
         Me.EDW_Out.Text = "0"
         Me.EDW_Out.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1546,6 +1515,7 @@ Partial Class Advisenote
         Me.RadGroupBox11.Controls.Add(Me.RadButton10)
         Me.RadGroupBox11.Controls.Add(Me.RadLabel27)
         Me.RadGroupBox11.Controls.Add(Me.RadLabel29)
+        Me.RadGroupBox11.Controls.Add(Me.OrderBut)
         Me.RadGroupBox11.Controls.Add(Me.UpdateWeightOut)
         Me.RadGroupBox11.Controls.Add(Me.LawWeightout)
         Me.RadGroupBox11.Controls.Add(Me.RadLabel30)
@@ -1555,7 +1525,7 @@ Partial Class Advisenote
         Me.RadGroupBox11.Controls.Add(Me.RadLabel26)
         Me.RadGroupBox11.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadGroupBox11.HeaderText = "Weight log"
-        Me.RadGroupBox11.Location = New System.Drawing.Point(5, 184)
+        Me.RadGroupBox11.Location = New System.Drawing.Point(8, 190)
         Me.RadGroupBox11.Name = "RadGroupBox11"
         Me.RadGroupBox11.Size = New System.Drawing.Size(658, 153)
         Me.RadGroupBox11.TabIndex = 2211
@@ -1650,7 +1620,7 @@ Partial Class Advisenote
         Me.RadButton3.TextWrap = True
         Me.RadButton3.ThemeName = "Breeze"
         Me.RadButton3.Visible = False
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
         CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1714,6 +1684,22 @@ Partial Class Advisenote
         Me.RadLabel39.TabIndex = 2130
         Me.RadLabel39.Text = "Weight In :"
         Me.RadLabel39.ThemeName = "TelerikMetro"
+        '
+        'OrderBut
+        '
+        Me.OrderBut.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OrderBut.Location = New System.Drawing.Point(560, 67)
+        Me.OrderBut.Name = "OrderBut"
+        Me.OrderBut.Size = New System.Drawing.Size(93, 54)
+        Me.OrderBut.TabIndex = 27
+        Me.OrderBut.Text = "ORDER"
+        Me.OrderBut.ThemeName = "Breeze"
+        CType(Me.OrderBut.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "ORDER"
+        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor2 = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor3 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor4 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 4
+        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'UpdateWeightOut
         '
@@ -1789,17 +1775,17 @@ Partial Class Advisenote
         'RadLabel36
         '
         Me.RadLabel36.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel36.Location = New System.Drawing.Point(47, 43)
+        Me.RadLabel36.Location = New System.Drawing.Point(60, 39)
         Me.RadLabel36.Name = "RadLabel36"
-        Me.RadLabel36.Size = New System.Drawing.Size(87, 19)
+        Me.RadLabel36.Size = New System.Drawing.Size(74, 19)
         Me.RadLabel36.TabIndex = 2206
-        Me.RadLabel36.Text = "Raw weight"
+        Me.RadLabel36.Text = "weight ID"
         Me.RadLabel36.ThemeName = "TelerikMetro"
         '
         'RadLabel38
         '
         Me.RadLabel38.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.RadLabel38.Location = New System.Drawing.Point(426, 162)
+        Me.RadLabel38.Location = New System.Drawing.Point(426, 163)
         Me.RadLabel38.Name = "RadLabel38"
         Me.RadLabel38.Size = New System.Drawing.Size(45, 19)
         Me.RadLabel38.TabIndex = 2129
@@ -1810,34 +1796,18 @@ Partial Class Advisenote
         '
         Me.UpdateWeightIn.Enabled = False
         Me.UpdateWeightIn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateWeightIn.Location = New System.Drawing.Point(327, 154)
+        Me.UpdateWeightIn.Location = New System.Drawing.Point(327, 155)
         Me.UpdateWeightIn.Name = "UpdateWeightIn"
         Me.UpdateWeightIn.Size = New System.Drawing.Size(65, 21)
         Me.UpdateWeightIn.TabIndex = 2129
         Me.UpdateWeightIn.ThemeName = "TelerikMetro"
-        '
-        'OrderBut
-        '
-        Me.OrderBut.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OrderBut.Location = New System.Drawing.Point(570, 42)
-        Me.OrderBut.Name = "OrderBut"
-        Me.OrderBut.Size = New System.Drawing.Size(93, 54)
-        Me.OrderBut.TabIndex = 27
-        Me.OrderBut.Text = "ORDER"
-        Me.OrderBut.ThemeName = "Breeze"
-        CType(Me.OrderBut.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "ORDER"
-        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor2 = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(255, Byte), Integer))
-        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor3 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor4 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
-        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 4
-        CType(Me.OrderBut.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'EDW_IN
         '
         Me.EDW_IN.BackColor = System.Drawing.Color.Black
         Me.EDW_IN.Font = New System.Drawing.Font("DS-Digital", 26.0!, System.Drawing.FontStyle.Bold)
         Me.EDW_IN.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_IN.Location = New System.Drawing.Point(138, 86)
+        Me.EDW_IN.Location = New System.Drawing.Point(138, 80)
         Me.EDW_IN.Name = "EDW_IN"
         Me.EDW_IN.ReadOnly = True
         Me.EDW_IN.Size = New System.Drawing.Size(156, 40)
@@ -1852,9 +1822,9 @@ Partial Class Advisenote
         Me.WeightScal.BackColor = System.Drawing.Color.Black
         Me.WeightScal.Font = New System.Drawing.Font("DS-Digital", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WeightScal.ForeColor = System.Drawing.Color.Lime
-        Me.WeightScal.Location = New System.Drawing.Point(138, 23)
+        Me.WeightScal.Location = New System.Drawing.Point(419, 19)
         Me.WeightScal.Name = "WeightScal"
-        Me.WeightScal.Size = New System.Drawing.Size(426, 59)
+        Me.WeightScal.Size = New System.Drawing.Size(181, 59)
         Me.WeightScal.TabIndex = 2199
         Me.WeightScal.Text = "123456"
         Me.WeightScal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1863,7 +1833,7 @@ Partial Class Advisenote
         'RadLabel5
         '
         Me.RadLabel5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel5.Location = New System.Drawing.Point(53, 145)
+        Me.RadLabel5.Location = New System.Drawing.Point(53, 144)
         Me.RadLabel5.Name = "RadLabel5"
         Me.RadLabel5.Size = New System.Drawing.Size(81, 19)
         Me.RadLabel5.TabIndex = 2204
@@ -1875,7 +1845,7 @@ Partial Class Advisenote
         Me.EDW_NET.BackColor = System.Drawing.Color.Black
         Me.EDW_NET.Font = New System.Drawing.Font("DS-Digital", 26.0!, System.Drawing.FontStyle.Bold)
         Me.EDW_NET.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_NET.Location = New System.Drawing.Point(138, 130)
+        Me.EDW_NET.Location = New System.Drawing.Point(138, 123)
         Me.EDW_NET.Name = "EDW_NET"
         Me.EDW_NET.ReadOnly = True
         Me.EDW_NET.Size = New System.Drawing.Size(156, 40)
@@ -1887,7 +1857,7 @@ Partial Class Advisenote
         'RadLabel32
         '
         Me.RadLabel32.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel32.Location = New System.Drawing.Point(62, 100)
+        Me.RadLabel32.Location = New System.Drawing.Point(62, 101)
         Me.RadLabel32.Name = "RadLabel32"
         Me.RadLabel32.Size = New System.Drawing.Size(72, 19)
         Me.RadLabel32.TabIndex = 2201
@@ -1898,7 +1868,7 @@ Partial Class Advisenote
         '
         Me.Weightintime.Enabled = False
         Me.Weightintime.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.Weightintime.Location = New System.Drawing.Point(472, 155)
+        Me.Weightintime.Location = New System.Drawing.Point(472, 156)
         Me.Weightintime.Name = "Weightintime"
         Me.Weightintime.ReadOnly = True
         Me.Weightintime.Size = New System.Drawing.Size(164, 28)
@@ -1908,12 +1878,13 @@ Partial Class Advisenote
         'RadLabel33
         '
         Me.RadLabel33.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel33.Location = New System.Drawing.Point(324, 100)
+        Me.RadLabel33.Location = New System.Drawing.Point(324, 101)
         Me.RadLabel33.Name = "RadLabel33"
         Me.RadLabel33.Size = New System.Drawing.Size(81, 19)
         Me.RadLabel33.TabIndex = 2202
         Me.RadLabel33.Text = "Weight out"
         Me.RadLabel33.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel33.TextWrap = False
         Me.RadLabel33.ThemeName = "TelerikMetro"
         '
         'RadLabel40
@@ -1926,48 +1897,6 @@ Partial Class Advisenote
         Me.RadLabel40.Text = "Time :"
         Me.RadLabel40.ThemeName = "TelerikMetro"
         '
-        'RadButton12
-        '
-        Me.RadButton12.Controls.Add(Me.RadButton13)
-        Me.RadButton12.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton12.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton12.ForeColor = System.Drawing.Color.White
-        Me.RadButton12.Image = CType(resources.GetObject("RadButton12.Image"), System.Drawing.Image)
-        Me.RadButton12.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton12.Location = New System.Drawing.Point(167, 236)
-        Me.RadButton12.Name = "RadButton12"
-        Me.RadButton12.Size = New System.Drawing.Size(106, 36)
-        Me.RadButton12.TabIndex = 2212
-        Me.RadButton12.Text = "Weight in"
-        Me.RadButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton12.TextWrap = True
-        Me.RadButton12.ThemeName = "Breeze"
-        CType(Me.RadButton12.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
-        CType(Me.RadButton12.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton12.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton12.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton12.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight in"
-        '
-        'RadButton13
-        '
-        Me.RadButton13.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton13.ForeColor = System.Drawing.Color.White
-        Me.RadButton13.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        Me.RadButton13.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton13.Location = New System.Drawing.Point(554, 311)
-        Me.RadButton13.Name = "RadButton13"
-        Me.RadButton13.Size = New System.Drawing.Size(132, 49)
-        Me.RadButton13.TabIndex = 20
-        Me.RadButton13.Text = "Save"
-        Me.RadButton13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton13.ThemeName = "Breeze"
-        CType(Me.RadButton13.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        CType(Me.RadButton13.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton13.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton13.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton13.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
-        '
         'Weightouttime
         '
         Me.Weightouttime.Enabled = False
@@ -1979,55 +1908,12 @@ Partial Class Advisenote
         Me.Weightouttime.TabIndex = 2196
         Me.Weightouttime.ThemeName = "Breeze"
         '
-        'RadButton8
-        '
-        Me.RadButton8.Controls.Add(Me.RadButton9)
-        Me.RadButton8.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton8.ForeColor = System.Drawing.Color.White
-        Me.RadButton8.Image = CType(resources.GetObject("RadButton8.Image"), System.Drawing.Image)
-        Me.RadButton8.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton8.Location = New System.Drawing.Point(40, 216)
-        Me.RadButton8.Name = "RadButton8"
-        Me.RadButton8.Size = New System.Drawing.Size(121, 49)
-        Me.RadButton8.TabIndex = 2210
-        Me.RadButton8.Text = "Weight in"
-        Me.RadButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton8.TextWrap = True
-        Me.RadButton8.ThemeName = "Breeze"
-        Me.RadButton8.Visible = False
-        CType(Me.RadButton8.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image6"), System.Drawing.Image)
-        CType(Me.RadButton8.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton8.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton8.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton8.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight in"
-        '
-        'RadButton9
-        '
-        Me.RadButton9.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton9.ForeColor = System.Drawing.Color.White
-        Me.RadButton9.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        Me.RadButton9.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton9.Location = New System.Drawing.Point(554, 311)
-        Me.RadButton9.Name = "RadButton9"
-        Me.RadButton9.Size = New System.Drawing.Size(132, 49)
-        Me.RadButton9.TabIndex = 20
-        Me.RadButton9.Text = "Save"
-        Me.RadButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton9.ThemeName = "Breeze"
-        CType(Me.RadButton9.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        CType(Me.RadButton9.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton9.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton9.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton9.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
-        '
         'Load_q
         '
         Me.Load_q.BackColor = System.Drawing.SystemColors.Control
         Me.Load_q.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Load_q.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Load_q.Location = New System.Drawing.Point(246, 591)
+        Me.Load_q.Location = New System.Drawing.Point(148, 542)
         Me.Load_q.Name = "Load_q"
         Me.Load_q.ReadOnly = True
         Me.Load_q.Size = New System.Drawing.Size(187, 23)
@@ -2062,10 +1948,12 @@ Partial Class Advisenote
         Me.RadGroupBox10.HeaderText = "Preset Quantity"
         Me.RadGroupBox10.Location = New System.Drawing.Point(10, 366)
         Me.RadGroupBox10.Name = "RadGroupBox10"
-        Me.RadGroupBox10.Size = New System.Drawing.Size(956, 140)
+        Me.RadGroupBox10.Padding = New System.Windows.Forms.Padding(2, 18, 2, 10)
+        Me.RadGroupBox10.Size = New System.Drawing.Size(956, 124)
         Me.RadGroupBox10.TabIndex = 308
         Me.RadGroupBox10.Text = "Preset Quantity"
         Me.RadGroupBox10.ThemeName = "Windows7"
+        CType(Me.RadGroupBox10.GetChildAt(0), Telerik.WinControls.UI.RadGroupBoxElement).Padding = New System.Windows.Forms.Padding(2, 18, 2, 10)
         CType(Me.RadGroupBox10.GetChildAt(0).GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.BorderPrimitive).GradientStyle = Telerik.WinControls.GradientStyles.Linear
         CType(Me.RadGroupBox10.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).ForeColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.RadGroupBox10.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
@@ -2080,10 +1968,11 @@ Partial Class Advisenote
         Me.GroupProduct.Controls.Add(Me.Label49)
         Me.GroupProduct.Controls.Add(Me.Update)
         Me.GroupProduct.Controls.Add(Me.BCancel)
+        Me.GroupProduct.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupProduct.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.GroupProduct.Location = New System.Drawing.Point(5, 21)
+        Me.GroupProduct.Location = New System.Drawing.Point(2, 18)
         Me.GroupProduct.Name = "GroupProduct"
-        Me.GroupProduct.Size = New System.Drawing.Size(946, 100)
+        Me.GroupProduct.Size = New System.Drawing.Size(952, 96)
         Me.GroupProduct.TabIndex = 307
         Me.GroupProduct.TabStop = False
         '
@@ -2094,7 +1983,7 @@ Partial Class Advisenote
         Me.Bsave.ForeColor = System.Drawing.Color.White
         Me.Bsave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.Bsave.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Bsave.Location = New System.Drawing.Point(670, 38)
+        Me.Bsave.Location = New System.Drawing.Point(670, 33)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(132, 49)
         Me.Bsave.TabIndex = 20
@@ -2111,12 +2000,13 @@ Partial Class Advisenote
         '
         Me.RadGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox4.Controls.Add(Me.Panel14)
-        Me.RadGroupBox4.Controls.Add(Me.Order)
+        Me.RadGroupBox4.Controls.Add(Me.PresetVal)
         Me.RadGroupBox4.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadGroupBox4.HeaderText = ""
-        Me.RadGroupBox4.Location = New System.Drawing.Point(456, 21)
+        Me.RadGroupBox4.Location = New System.Drawing.Point(479, 21)
         Me.RadGroupBox4.Name = "RadGroupBox4"
-        Me.RadGroupBox4.Size = New System.Drawing.Size(183, 76)
+        Me.RadGroupBox4.Padding = New System.Windows.Forms.Padding(2)
+        Me.RadGroupBox4.Size = New System.Drawing.Size(183, 72)
         Me.RadGroupBox4.TabIndex = 3
         Me.RadGroupBox4.ThemeName = "Office2010Blue"
         '
@@ -2125,7 +2015,7 @@ Partial Class Advisenote
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel14.Controls.Add(Me.Label35)
         Me.Panel14.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel14.Location = New System.Drawing.Point(2, 18)
+        Me.Panel14.Location = New System.Drawing.Point(2, 2)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(179, 24)
         Me.Panel14.TabIndex = 117
@@ -2133,7 +2023,7 @@ Partial Class Advisenote
         '
         'Label35
         '
-        Me.Label35.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label35.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label35.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label35.ForeColor = System.Drawing.SystemColors.Window
         Me.Label35.Location = New System.Drawing.Point(0, 0)
@@ -2143,16 +2033,16 @@ Partial Class Advisenote
         Me.Label35.Text = "Preset (Kg.)"
         Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Order
+        'PresetVal
         '
-        Me.Order.AutoSize = False
-        Me.Order.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Order.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Order.Location = New System.Drawing.Point(2, 48)
-        Me.Order.Name = "Order"
-        Me.Order.Size = New System.Drawing.Size(179, 26)
-        Me.Order.TabIndex = 26
-        Me.Order.ThemeName = "Windows8"
+        Me.PresetVal.AutoSize = False
+        Me.PresetVal.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PresetVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.PresetVal.Location = New System.Drawing.Point(2, 44)
+        Me.PresetVal.Name = "PresetVal"
+        Me.PresetVal.Size = New System.Drawing.Size(179, 26)
+        Me.PresetVal.TabIndex = 26
+        Me.PresetVal.ThemeName = "Windows8"
         '
         'RadGroupBox3
         '
@@ -2163,7 +2053,8 @@ Partial Class Advisenote
         Me.RadGroupBox3.HeaderText = ""
         Me.RadGroupBox3.Location = New System.Drawing.Point(314, 21)
         Me.RadGroupBox3.Name = "RadGroupBox3"
-        Me.RadGroupBox3.Size = New System.Drawing.Size(142, 76)
+        Me.RadGroupBox3.Padding = New System.Windows.Forms.Padding(2)
+        Me.RadGroupBox3.Size = New System.Drawing.Size(165, 72)
         Me.RadGroupBox3.TabIndex = 2
         Me.RadGroupBox3.ThemeName = "Office2010Blue"
         '
@@ -2172,9 +2063,9 @@ Partial Class Advisenote
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel12.Controls.Add(Me.Label34)
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel12.Location = New System.Drawing.Point(2, 18)
+        Me.Panel12.Location = New System.Drawing.Point(2, 2)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(138, 24)
+        Me.Panel12.Size = New System.Drawing.Size(161, 24)
         Me.Panel12.TabIndex = 117
         Me.Panel12.Tag = ""
         '
@@ -2185,7 +2076,7 @@ Partial Class Advisenote
         Me.Label34.ForeColor = System.Drawing.SystemColors.Window
         Me.Label34.Location = New System.Drawing.Point(0, 0)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(138, 24)
+        Me.Label34.Size = New System.Drawing.Size(161, 24)
         Me.Label34.TabIndex = 3
         Me.Label34.Text = "Meter"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2239,9 +2130,9 @@ Partial Class Advisenote
         Me.Meter.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.Meter.EditorControl.TabIndex = 0
         Me.Meter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Meter.Location = New System.Drawing.Point(2, 50)
+        Me.Meter.Location = New System.Drawing.Point(2, 46)
         Me.Meter.Name = "Meter"
-        Me.Meter.Size = New System.Drawing.Size(138, 24)
+        Me.Meter.Size = New System.Drawing.Size(161, 24)
         Me.Meter.TabIndex = 25
         Me.Meter.TabStop = False
         Me.Meter.ThemeName = "Windows8"
@@ -2260,7 +2151,8 @@ Partial Class Advisenote
         Me.RadGroupBox2.HeaderText = ""
         Me.RadGroupBox2.Location = New System.Drawing.Point(205, 21)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(109, 76)
+        Me.RadGroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(109, 72)
         Me.RadGroupBox2.TabIndex = 1
         Me.RadGroupBox2.ThemeName = "Office2010Blue"
         '
@@ -2270,7 +2162,7 @@ Partial Class Advisenote
         Me.Panel5.Controls.Add(Me.Label39)
         Me.Panel5.Controls.Add(Me.Panel11)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(2, 18)
+        Me.Panel5.Location = New System.Drawing.Point(2, 2)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(105, 24)
         Me.Panel5.TabIndex = 117
@@ -2352,7 +2244,7 @@ Partial Class Advisenote
         Me.Bay.EditorControl.Size = New System.Drawing.Size(120, 30)
         Me.Bay.EditorControl.TabIndex = 0
         Me.Bay.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Bay.Location = New System.Drawing.Point(2, 50)
+        Me.Bay.Location = New System.Drawing.Point(2, 46)
         Me.Bay.Name = "Bay"
         Me.Bay.Size = New System.Drawing.Size(105, 24)
         Me.Bay.TabIndex = 24
@@ -2375,7 +2267,8 @@ Partial Class Advisenote
         Me.RadGroupBox1.HeaderText = ""
         Me.RadGroupBox1.Location = New System.Drawing.Point(3, 21)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(202, 76)
+        Me.RadGroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(202, 72)
         Me.RadGroupBox1.TabIndex = 0
         Me.RadGroupBox1.ThemeName = "Office2010Blue"
         '
@@ -2384,9 +2277,10 @@ Partial Class Advisenote
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label38)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Location = New System.Drawing.Point(0, 12)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 24)
+        Me.Panel1.Size = New System.Drawing.Size(198, 24)
         Me.Panel1.TabIndex = 117
         Me.Panel1.Tag = ""
         '
@@ -2397,7 +2291,7 @@ Partial Class Advisenote
         Me.Label38.ForeColor = System.Drawing.SystemColors.Window
         Me.Label38.Location = New System.Drawing.Point(0, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(200, 24)
+        Me.Label38.Size = New System.Drawing.Size(198, 24)
         Me.Label38.TabIndex = 3
         Me.Label38.Text = "Product"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2409,7 +2303,7 @@ Partial Class Advisenote
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.Location = New System.Drawing.Point(2, 24)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 39)
+        Me.Panel2.Size = New System.Drawing.Size(198, 39)
         Me.Panel2.TabIndex = 0
         '
         'Product
@@ -2419,6 +2313,7 @@ Partial Class Advisenote
         Me.Product.AutoSizeDropDownToBestFit = True
         Me.Product.DataSource = Me.TProductBindingSource
         Me.Product.DisplayMember = "PRODUCT_CODE"
+        Me.Product.Dock = System.Windows.Forms.DockStyle.Bottom
         '
         'Product.NestedRadGridView
         '
@@ -2468,9 +2363,9 @@ Partial Class Advisenote
         Me.Product.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.Product.EditorControl.TabIndex = 0
         Me.Product.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Product.Location = New System.Drawing.Point(0, 45)
+        Me.Product.Location = New System.Drawing.Point(2, 46)
         Me.Product.Name = "Product"
-        Me.Product.Size = New System.Drawing.Size(200, 24)
+        Me.Product.Size = New System.Drawing.Size(198, 24)
         Me.Product.TabIndex = 23
         Me.Product.TabStop = False
         Me.Product.ThemeName = "Windows8"
@@ -2499,7 +2394,7 @@ Partial Class Advisenote
         Me.Update.ForeColor = System.Drawing.Color.White
         Me.Update.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.refresh
         Me.Update.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Update.Location = New System.Drawing.Point(670, 38)
+        Me.Update.Location = New System.Drawing.Point(670, 33)
         Me.Update.Name = "Update"
         Me.Update.Size = New System.Drawing.Size(132, 49)
         Me.Update.TabIndex = 12
@@ -2518,7 +2413,7 @@ Partial Class Advisenote
         Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BCancel.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BCancel.Location = New System.Drawing.Point(808, 38)
+        Me.BCancel.Location = New System.Drawing.Point(808, 33)
         Me.BCancel.Name = "BCancel"
         Me.BCancel.Size = New System.Drawing.Size(132, 49)
         Me.BCancel.TabIndex = 21
@@ -2617,14 +2512,14 @@ Partial Class Advisenote
         Me.Label17.TabIndex = 239
         Me.Label17.Text = "Total Preset :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'PresetVal
+        'PresetTotal
         '
-        Me.PresetVal.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PresetVal.Location = New System.Drawing.Point(101, 63)
-        Me.PresetVal.Name = "PresetVal"
-        Me.PresetVal.Size = New System.Drawing.Size(187, 23)
-        Me.PresetVal.TabIndex = 5
-        Me.PresetVal.ThemeName = "Windows8"
+        Me.PresetTotal.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PresetTotal.Location = New System.Drawing.Point(101, 63)
+        Me.PresetTotal.Name = "PresetTotal"
+        Me.PresetTotal.Size = New System.Drawing.Size(187, 23)
+        Me.PresetTotal.TabIndex = 5
+        Me.PresetTotal.ThemeName = "Windows8"
         '
         'Label16
         '
@@ -2778,7 +2673,7 @@ Partial Class Advisenote
         Me.RadGroupBox6.Controls.Add(Me.Trucktype)
         Me.RadGroupBox6.Controls.Add(Me.Label32)
         Me.RadGroupBox6.Controls.Add(Me.DO_Type)
-        Me.RadGroupBox6.Controls.Add(Me.Cbn5)
+        Me.RadGroupBox6.Controls.Add(Me.Capacity)
         Me.RadGroupBox6.Controls.Add(Me.Cbn3)
         Me.RadGroupBox6.Controls.Add(Me.Label18)
         Me.RadGroupBox6.Controls.Add(Me.Label33)
@@ -3239,22 +3134,22 @@ Partial Class Advisenote
         Me.DO_Type.ThemeName = "Windows8"
         Me.DO_Type.ValueMember = "G_ID"
         '
-        'Cbn5
+        'Capacity
         '
-        Me.Cbn5.BackColor = System.Drawing.SystemColors.Control
-        Me.Cbn5.Enabled = False
-        Me.Cbn5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cbn5.Location = New System.Drawing.Point(101, 179)
-        Me.Cbn5.Name = "Cbn5"
-        Me.Cbn5.ReadOnly = True
-        Me.Cbn5.Size = New System.Drawing.Size(187, 23)
-        Me.Cbn5.TabIndex = 13
-        Me.Cbn5.ThemeName = "Windows8"
-        CType(Me.Cbn5.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        CType(Me.Cbn5.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CType(Me.Cbn5.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 4
+        Me.Capacity.BackColor = System.Drawing.SystemColors.Control
+        Me.Capacity.Enabled = False
+        Me.Capacity.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Capacity.Location = New System.Drawing.Point(101, 179)
+        Me.Capacity.Name = "Capacity"
+        Me.Capacity.ReadOnly = True
+        Me.Capacity.Size = New System.Drawing.Size(187, 23)
+        Me.Capacity.TabIndex = 13
+        Me.Capacity.ThemeName = "Windows8"
+        CType(Me.Capacity.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.Capacity.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        CType(Me.Capacity.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        CType(Me.Capacity.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CType(Me.Capacity.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 4
         '
         'Cbn3
         '
@@ -5162,7 +5057,7 @@ Partial Class Advisenote
         Me.ProductList1.DataSource = Me.TProductBindingSource1
         Me.ProductList1.DisplayMember = "PRODUCT_CODE"
         Me.ProductList1.DropDownMinSize = New System.Drawing.Size(0, 150)
-        Me.ProductList1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductList1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ProductList1.Location = New System.Drawing.Point(9, 14)
         Me.ProductList1.Name = "ProductList1"
         '
@@ -6366,12 +6261,11 @@ Partial Class Advisenote
         CType(Me.AdviseDetail_G, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AdviseDetail_G.ResumeLayout(False)
         Me.AdviseDetail_G.PerformLayout()
-        CType(Me.RadButton14, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadButton14.ResumeLayout(False)
-        CType(Me.RadButton15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox8.ResumeLayout(False)
         Me.RadGroupBox8.PerformLayout()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EDW_Out, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox11.ResumeLayout(False)
@@ -6390,6 +6284,7 @@ Partial Class Advisenote
         Me.RadLabel29.ResumeLayout(False)
         Me.RadLabel29.PerformLayout()
         CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderBut, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UpdateWeightOut, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LawWeightout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6400,7 +6295,6 @@ Partial Class Advisenote
         CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UpdateWeightIn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OrderBut, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EDW_IN, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.WeightScal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6409,13 +6303,7 @@ Partial Class Advisenote
         CType(Me.Weightintime, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton12, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadButton12.ResumeLayout(False)
-        CType(Me.RadButton13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Weightouttime, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadButton8.ResumeLayout(False)
-        CType(Me.RadButton9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Load_q, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox10.ResumeLayout(False)
@@ -6425,7 +6313,7 @@ Partial Class Advisenote
         CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox4.ResumeLayout(False)
         Me.Panel14.ResumeLayout(False)
-        CType(Me.Order, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PresetVal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox3.ResumeLayout(False)
         Me.Panel12.ResumeLayout(False)
@@ -6453,7 +6341,7 @@ Partial Class Advisenote
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         CType(Me.DOval, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PresetVal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PresetTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Seal_Total, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Seal_No, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EdCustomer.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6484,7 +6372,7 @@ Partial Class Advisenote
         CType(Me.Trucktype, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TTruckTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DO_Type, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Cbn5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Capacity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn3.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn3.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6834,8 +6722,8 @@ Partial Class Advisenote
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Cbn3 As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents Container As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents PresetVal As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents Cbn5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents PresetTotal As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents Capacity As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents DOval As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Cbn7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadDropDownList1 As Telerik.WinControls.UI.RadDropDownList
@@ -7018,7 +6906,7 @@ Partial Class Advisenote
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Label35 As Label
     Friend WithEvents Panel15 As Panel
-    Friend WithEvents Order As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents PresetVal As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label34 As Label
@@ -7055,8 +6943,6 @@ Partial Class Advisenote
     Friend WithEvents RadLabel33 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton6 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton8 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton9 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadGroupBox11 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadLabel40 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel38 As Telerik.WinControls.UI.RadLabel
@@ -7084,14 +6970,12 @@ Partial Class Advisenote
     Friend WithEvents Meter1 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents IslandBay1 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents ProductList1 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadButton14 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton15 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton12 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton13 As Telerik.WinControls.UI.RadButton
     Friend WithEvents EDW_Out As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents W_Weightouttime As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadButton16 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton17 As Telerik.WinControls.UI.RadButton
     Friend WithEvents W_Weightintime As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadTextBox3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
 End Class
 
