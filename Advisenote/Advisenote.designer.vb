@@ -23,117 +23,117 @@ Partial Class Advisenote
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn1 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDateTimeColumn1 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
-        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn2 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn3 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn4 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn11 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn12 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn13 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn14 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn15 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor1 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn150 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn151 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn152 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn153 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn109 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn154 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn155 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDateTimeColumn10 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
+        Dim GridViewTextBoxColumn156 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn157 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn110 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn111 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn112 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn158 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn159 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn160 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn161 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn162 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn163 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn164 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor24 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition43 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Advisenote))
-        Dim GridViewTextBoxColumn16 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor2 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewMultiComboBoxColumn1 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
-        Dim GridViewMultiComboBoxColumn2 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor3 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn19 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn20 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor4 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn21 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn22 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn23 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn24 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor5 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn25 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn26 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn27 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn28 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn29 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn5 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn6 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn7 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn8 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim SortDescriptor6 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn30 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn31 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn32 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn9 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn33 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor7 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewDecimalColumn10 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn34 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn35 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn11 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn12 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn36 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn37 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn38 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDateTimeColumn2 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
-        Dim GridViewTextBoxColumn39 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn13 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn14 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn15 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn16 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn17 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn18 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn19 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn20 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn21 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn22 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn23 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn24 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn25 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn26 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn27 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn28 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn29 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn30 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn31 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn32 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn33 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn34 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn40 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn35 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim TableViewDefinition11 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn41 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn42 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn36 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn43 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn44 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDateTimeColumn3 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
-        Dim GridViewTextBoxColumn45 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn46 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn47 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition12 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition13 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn165 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor25 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition44 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewMultiComboBoxColumn7 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
+        Dim GridViewMultiComboBoxColumn8 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
+        Dim TableViewDefinition45 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn166 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn167 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor26 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition46 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn142 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn143 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor22 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition40 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn144 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn145 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn146 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn147 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor23 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition41 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim GridViewTextBoxColumn148 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn149 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition42 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn168 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn169 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition47 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn170 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn113 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn114 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn115 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn116 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim SortDescriptor27 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition48 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn171 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn172 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn173 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn117 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn174 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor28 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition49 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewDecimalColumn118 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn175 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn176 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn119 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn120 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn177 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn178 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn179 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDateTimeColumn11 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
+        Dim GridViewTextBoxColumn180 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn121 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn122 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn123 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn124 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn125 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn126 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn127 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn128 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn129 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn130 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn131 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn132 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn133 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn134 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn135 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn136 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn137 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn138 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn139 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn140 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn141 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn142 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn181 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn143 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim TableViewDefinition50 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn182 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn183 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn144 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn184 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn185 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDateTimeColumn12 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
+        Dim GridViewTextBoxColumn186 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn187 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn188 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition51 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition52 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
         Me.RadPageViewPage1 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.DatetimePicker2 = New Telerik.WinControls.UI.RadDateTimePicker()
@@ -166,6 +166,31 @@ Partial Class Advisenote
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.AdviseDetail_G = New Telerik.WinControls.UI.RadGroupBox()
         Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Company_sapcode = New System.Windows.Forms.ComboBox()
+        Me.TCompanyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.P_Weight = New System.Windows.Forms.ComboBox()
+        Me.PackingId = New System.Windows.Forms.ComboBox()
+        Me.Shipment_id = New System.Windows.Forms.ComboBox()
+        Me.Cbn9 = New System.Windows.Forms.TextBox()
+        Me.Updatedate = New System.Windows.Forms.TextBox()
+        Me.Loadid = New System.Windows.Forms.TextBox()
+        Me.TruckId = New System.Windows.Forms.ComboBox()
+        Me.Prono = New System.Windows.Forms.ComboBox()
+        Me.ProductId = New System.Windows.Forms.ComboBox()
+        Me.StatusId = New System.Windows.Forms.ComboBox()
+        Me.TruckCompanyId = New System.Windows.Forms.ComboBox()
+        Me.DriverID = New System.Windows.Forms.ComboBox()
+        Me.TDriverBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustomerID = New System.Windows.Forms.ComboBox()
+        Me.TCUSTOMERTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShipperId = New System.Windows.Forms.ComboBox()
+        Me.TShipperBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DateeditTemp = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ShipmentNo1 = New System.Windows.Forms.TextBox()
         Me.RadGroupBox8 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
@@ -238,12 +263,10 @@ Partial Class Advisenote
         Me.Label26 = New System.Windows.Forms.Label()
         Me.DOval = New Telerik.WinControls.UI.RadTextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.PresetTotal = New Telerik.WinControls.UI.RadTextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Seal_Total = New Telerik.WinControls.UI.RadTextBox()
         Me.Seal_No = New Telerik.WinControls.UI.RadTextBox()
         Me.EdCustomer = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.TCUSTOMERTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadGroupBox6 = New Telerik.WinControls.UI.RadGroupBox()
@@ -253,12 +276,11 @@ Partial Class Advisenote
         Me.Status = New Telerik.WinControls.UI.RadDropDownList()
         Me.TStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Driver = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.TDriverBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadGroupBox5 = New Telerik.WinControls.UI.RadGroupBox()
         Me.Cbn7 = New Telerik.WinControls.UI.RadTextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
-        Me.Cbn8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.Reference = New Telerik.WinControls.UI.RadTextBox()
         Me.Update_date = New Telerik.WinControls.UI.RadTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -280,35 +302,12 @@ Partial Class Advisenote
         Me.DO_Type = New Telerik.WinControls.UI.RadDropDownList()
         Me.Capacity = New Telerik.WinControls.UI.RadTextBox()
         Me.Cbn3 = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.TCompanyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Container = New Telerik.WinControls.UI.RadTextBox()
         Me.RadButton7 = New Telerik.WinControls.UI.RadButton()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Company_sapcode = New System.Windows.Forms.ComboBox()
-        Me.P_Weight = New System.Windows.Forms.ComboBox()
-        Me.PackingId = New System.Windows.Forms.ComboBox()
-        Me.Shipment_id = New System.Windows.Forms.ComboBox()
-        Me.Cbn9 = New System.Windows.Forms.TextBox()
-        Me.Updatedate = New System.Windows.Forms.TextBox()
-        Me.Cbn6 = New System.Windows.Forms.TextBox()
-        Me.TruckId = New System.Windows.Forms.ComboBox()
-        Me.Prono = New System.Windows.Forms.ComboBox()
-        Me.ProductId = New System.Windows.Forms.ComboBox()
-        Me.StatusId = New System.Windows.Forms.ComboBox()
-        Me.TruckCompanyId = New System.Windows.Forms.ComboBox()
-        Me.DriverID = New System.Windows.Forms.ComboBox()
-        Me.CustomerID = New System.Windows.Forms.ComboBox()
-        Me.ShipperId = New System.Windows.Forms.ComboBox()
-        Me.TShipperBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DateeditTemp = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.ShipmentNo1 = New System.Windows.Forms.TextBox()
         Me.Page_Temp = New Telerik.WinControls.UI.RadPageViewPage()
         Me.GDetail = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker2xx = New System.Windows.Forms.DateTimePicker()
@@ -503,6 +502,12 @@ Partial Class Advisenote
         Me.VCHECKINLOAD1TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.VCHECKINTableAdapter()
         Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         Me.Windows8Theme1 = New Telerik.WinControls.Themes.Windows8Theme()
+        Me.PresetTotal = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBox4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadDropDownList3 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadButton8 = New Telerik.WinControls.UI.RadButton()
+        Me.RadTextBox5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBox6 = New Telerik.WinControls.UI.RadTextBox()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
@@ -526,6 +531,11 @@ Partial Class Advisenote
         Me.RadPanel3.SuspendLayout()
         CType(Me.AdviseDetail_G, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AdviseDetail_G.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        CType(Me.TCompanyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TDriverBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TCUSTOMERTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TShipperBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox8.SuspendLayout()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -600,13 +610,11 @@ Partial Class Advisenote
         CType(Me.BCancel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.DOval, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PresetTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Seal_Total, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Seal_No, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EdCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EdCustomer.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EdCustomer.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TCUSTOMERTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox6.SuspendLayout()
@@ -615,11 +623,10 @@ Partial Class Advisenote
         CType(Me.Driver, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Driver.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Driver.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TDriverBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox5.SuspendLayout()
         CType(Me.Cbn7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Cbn8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Reference, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Update_date, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dateedit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Update_by, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -633,11 +640,8 @@ Partial Class Advisenote
         CType(Me.Cbn3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn3.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Cbn3.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TCompanyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Container, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox6.SuspendLayout()
-        CType(Me.TShipperBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Page_Temp.SuspendLayout()
         Me.GDetail.SuspendLayout()
         Me.Panel16.SuspendLayout()
@@ -805,6 +809,12 @@ Partial Class Advisenote
         CType(Me.Edit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VLoading_StatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TTruckBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PresetTotal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDropDownList3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -876,186 +886,186 @@ Partial Class Advisenote
         Me.MasterGridAdvisenote.MasterTemplate.AllowColumnResize = False
         Me.MasterGridAdvisenote.MasterTemplate.AllowRowResize = False
         Me.MasterGridAdvisenote.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn1.EnableExpressionEditor = False
-        GridViewTextBoxColumn1.FieldName = "REFERENCE"
-        GridViewTextBoxColumn1.HeaderText = "Load No."
-        GridViewTextBoxColumn1.IsAutoGenerated = True
-        GridViewTextBoxColumn1.MaxWidth = 100
-        GridViewTextBoxColumn1.MinWidth = 100
-        GridViewTextBoxColumn1.Name = "REFERENCE"
-        GridViewTextBoxColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn1.Width = 100
-        GridViewTextBoxColumn2.DataType = GetType(Decimal)
-        GridViewTextBoxColumn2.EnableExpressionEditor = False
-        GridViewTextBoxColumn2.FieldName = "LOAD_Q"
-        GridViewTextBoxColumn2.HeaderText = "Queue No."
-        GridViewTextBoxColumn2.IsVisible = False
-        GridViewTextBoxColumn2.MinWidth = 100
-        GridViewTextBoxColumn2.Name = "LOAD_Q"
-        GridViewTextBoxColumn2.Width = 100
-        GridViewTextBoxColumn3.DataType = GetType(Decimal)
-        GridViewTextBoxColumn3.EnableExpressionEditor = False
-        GridViewTextBoxColumn3.FieldName = "LC_BAY"
-        GridViewTextBoxColumn3.HeaderText = "Bay No."
-        GridViewTextBoxColumn3.MinWidth = 60
-        GridViewTextBoxColumn3.Name = "LC_BAY"
-        GridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn3.Width = 60
-        GridViewTextBoxColumn4.EnableExpressionEditor = False
-        GridViewTextBoxColumn4.FieldName = "LOAD_VEHICLE"
-        GridViewTextBoxColumn4.HeaderText = "Truck No."
-        GridViewTextBoxColumn4.IsAutoGenerated = True
-        GridViewTextBoxColumn4.MaxWidth = 200
-        GridViewTextBoxColumn4.MinWidth = 200
-        GridViewTextBoxColumn4.Name = "LOAD_VEHICLE"
-        GridViewTextBoxColumn4.ReadOnly = True
-        GridViewTextBoxColumn4.Width = 200
-        GridViewDecimalColumn1.DataType = GetType(String)
-        GridViewDecimalColumn1.EnableExpressionEditor = False
-        GridViewDecimalColumn1.FieldName = "CARD_Serial"
-        GridViewDecimalColumn1.HeaderText = "Card No."
-        GridViewDecimalColumn1.IsAutoGenerated = True
-        GridViewDecimalColumn1.IsVisible = False
-        GridViewDecimalColumn1.MinWidth = 120
-        GridViewDecimalColumn1.Name = "CARD_Serial"
-        GridViewDecimalColumn1.ReadOnly = True
-        GridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-        GridViewDecimalColumn1.Width = 120
-        GridViewTextBoxColumn5.EnableExpressionEditor = False
-        GridViewTextBoxColumn5.FieldName = "LOAD_DRIVER"
-        GridViewTextBoxColumn5.HeaderText = "Driver Name"
-        GridViewTextBoxColumn5.IsAutoGenerated = True
-        GridViewTextBoxColumn5.MinWidth = 200
-        GridViewTextBoxColumn5.Name = "LOAD_DRIVER"
-        GridViewTextBoxColumn5.ReadOnly = True
-        GridViewTextBoxColumn5.Width = 200
-        GridViewTextBoxColumn6.EnableExpressionEditor = False
-        GridViewTextBoxColumn6.FieldName = "STATUS_NAME"
-        GridViewTextBoxColumn6.HeaderText = "Loading Status"
-        GridViewTextBoxColumn6.IsAutoGenerated = True
-        GridViewTextBoxColumn6.MinWidth = 120
-        GridViewTextBoxColumn6.Name = "STATUS"
-        GridViewTextBoxColumn6.ReadOnly = True
-        GridViewTextBoxColumn6.Width = 120
-        GridViewDateTimeColumn1.EnableExpressionEditor = False
-        GridViewDateTimeColumn1.FieldName = "ADDNOTEDATE"
-        GridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        GridViewDateTimeColumn1.FormatString = "{0:dd/MM/yyyy HH:mm:ss}"
-        GridViewDateTimeColumn1.HeaderText = "Create Date"
-        GridViewDateTimeColumn1.IsAutoGenerated = True
-        GridViewDateTimeColumn1.MinWidth = 200
-        GridViewDateTimeColumn1.Name = "ADDNOTEDATE"
-        GridViewDateTimeColumn1.ReadOnly = True
-        GridViewDateTimeColumn1.Width = 200
-        GridViewTextBoxColumn7.EnableExpressionEditor = False
-        GridViewTextBoxColumn7.FieldName = "LOAD_DOFULL"
-        GridViewTextBoxColumn7.HeaderText = "DO. No."
-        GridViewTextBoxColumn7.IsAutoGenerated = True
-        GridViewTextBoxColumn7.MinWidth = 120
-        GridViewTextBoxColumn7.Name = "LOAD_DOFULL"
-        GridViewTextBoxColumn7.ReadOnly = True
-        GridViewTextBoxColumn7.Width = 120
-        GridViewTextBoxColumn8.EnableExpressionEditor = False
-        GridViewTextBoxColumn8.FieldName = "PRODUCT_CODE"
-        GridViewTextBoxColumn8.HeaderText = "Product"
-        GridViewTextBoxColumn8.IsAutoGenerated = True
-        GridViewTextBoxColumn8.MinWidth = 150
-        GridViewTextBoxColumn8.Name = "PRODUCT_CODE"
-        GridViewTextBoxColumn8.ReadOnly = True
-        GridViewTextBoxColumn8.Width = 150
-        GridViewDecimalColumn2.DecimalPlaces = 5
-        GridViewDecimalColumn2.EnableExpressionEditor = True
-        GridViewDecimalColumn2.FieldName = "LOAD_CAPACITY"
-        GridViewDecimalColumn2.FormatString = "{0:#,###}"
-        GridViewDecimalColumn2.HeaderText = "Max Capacity"
-        GridViewDecimalColumn2.IsAutoGenerated = True
-        GridViewDecimalColumn2.MinWidth = 95
-        GridViewDecimalColumn2.Name = "LOAD_CAPACITY"
-        GridViewDecimalColumn2.ReadOnly = True
-        GridViewDecimalColumn2.Width = 95
-        GridViewDecimalColumn3.EnableExpressionEditor = False
-        GridViewDecimalColumn3.FieldName = "LOAD_PRESET"
-        GridViewDecimalColumn3.FormatString = "{0:#,###}"
-        GridViewDecimalColumn3.HeaderText = "Total Preset"
-        GridViewDecimalColumn3.IsAutoGenerated = True
-        GridViewDecimalColumn3.MinWidth = 95
-        GridViewDecimalColumn3.Name = "LOAD_PRESET"
-        GridViewDecimalColumn3.ReadOnly = True
-        GridViewDecimalColumn3.Width = 95
-        GridViewDecimalColumn4.EnableExpressionEditor = False
-        GridViewDecimalColumn4.FieldName = "LOAD_SEALCOUNT"
-        GridViewDecimalColumn4.HeaderText = "Total Seal"
-        GridViewDecimalColumn4.IsAutoGenerated = True
-        GridViewDecimalColumn4.MinWidth = 80
-        GridViewDecimalColumn4.Name = "LOAD_SEALCOUNT"
-        GridViewDecimalColumn4.ReadOnly = True
-        GridViewDecimalColumn4.Width = 80
-        GridViewTextBoxColumn9.EnableExpressionEditor = False
-        GridViewTextBoxColumn9.FieldName = "LOAD_SEAL"
-        GridViewTextBoxColumn9.HeaderText = "Seal No."
-        GridViewTextBoxColumn9.IsAutoGenerated = True
-        GridViewTextBoxColumn9.MinWidth = 125
-        GridViewTextBoxColumn9.Name = "LOAD_SEAL"
-        GridViewTextBoxColumn9.ReadOnly = True
-        GridViewTextBoxColumn9.Width = 125
-        GridViewTextBoxColumn10.EnableExpressionEditor = False
-        GridViewTextBoxColumn10.FieldName = "BATCH_NAME"
-        GridViewTextBoxColumn10.HeaderText = "Meter"
-        GridViewTextBoxColumn10.IsAutoGenerated = True
-        GridViewTextBoxColumn10.MinWidth = 90
-        GridViewTextBoxColumn10.Name = "BATCH_NAME"
-        GridViewTextBoxColumn10.ReadOnly = True
-        GridViewTextBoxColumn10.Width = 90
-        GridViewTextBoxColumn11.EnableExpressionEditor = False
-        GridViewTextBoxColumn11.FieldName = "LOAD_TRUCKCOMPANY"
-        GridViewTextBoxColumn11.HeaderText = "Truck's Company"
-        GridViewTextBoxColumn11.IsAutoGenerated = True
-        GridViewTextBoxColumn11.IsVisible = False
-        GridViewTextBoxColumn11.MinWidth = 200
-        GridViewTextBoxColumn11.Name = "LOAD_TRUCKCOMPANY"
-        GridViewTextBoxColumn11.ReadOnly = True
-        GridViewTextBoxColumn11.Width = 200
-        GridViewTextBoxColumn12.EnableExpressionEditor = False
-        GridViewTextBoxColumn12.FieldName = "CUSTOMER_NAME"
-        GridViewTextBoxColumn12.HeaderText = "Destination"
-        GridViewTextBoxColumn12.IsAutoGenerated = True
-        GridViewTextBoxColumn12.MinWidth = 250
-        GridViewTextBoxColumn12.Name = "CUSTOMER_NAME"
-        GridViewTextBoxColumn12.ReadOnly = True
-        GridViewTextBoxColumn12.Width = 250
-        GridViewTextBoxColumn13.EnableExpressionEditor = False
-        GridViewTextBoxColumn13.FieldName = "LC_STARTTIME"
-        GridViewTextBoxColumn13.HeaderText = "Begin Loading"
-        GridViewTextBoxColumn13.IsAutoGenerated = True
-        GridViewTextBoxColumn13.MinWidth = 90
-        GridViewTextBoxColumn13.Name = "LC_STARTTIME"
-        GridViewTextBoxColumn13.ReadOnly = True
-        GridViewTextBoxColumn13.Width = 90
-        GridViewTextBoxColumn14.EnableExpressionEditor = False
-        GridViewTextBoxColumn14.FieldName = "LC_ENDTIME"
-        GridViewTextBoxColumn14.HeaderText = "End Loading"
-        GridViewTextBoxColumn14.IsAutoGenerated = True
-        GridViewTextBoxColumn14.MinWidth = 90
-        GridViewTextBoxColumn14.Name = "LC_ENDTIME"
-        GridViewTextBoxColumn14.ReadOnly = True
-        GridViewTextBoxColumn14.Width = 90
-        GridViewTextBoxColumn15.DataType = GetType(Decimal)
-        GridViewTextBoxColumn15.EnableExpressionEditor = False
-        GridViewTextBoxColumn15.FieldName = "load_id"
-        GridViewTextBoxColumn15.HeaderText = "Load No."
-        GridViewTextBoxColumn15.IsVisible = False
-        GridViewTextBoxColumn15.Name = "load_id"
-        Me.MasterGridAdvisenote.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewDecimalColumn1, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewDateTimeColumn1, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewDecimalColumn2, GridViewDecimalColumn3, GridViewDecimalColumn4, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15})
+        GridViewTextBoxColumn150.EnableExpressionEditor = False
+        GridViewTextBoxColumn150.FieldName = "REFERENCE"
+        GridViewTextBoxColumn150.HeaderText = "Load No."
+        GridViewTextBoxColumn150.IsAutoGenerated = True
+        GridViewTextBoxColumn150.MaxWidth = 100
+        GridViewTextBoxColumn150.MinWidth = 100
+        GridViewTextBoxColumn150.Name = "REFERENCE"
+        GridViewTextBoxColumn150.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn150.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn150.Width = 100
+        GridViewTextBoxColumn151.DataType = GetType(Decimal)
+        GridViewTextBoxColumn151.EnableExpressionEditor = False
+        GridViewTextBoxColumn151.FieldName = "LOAD_Q"
+        GridViewTextBoxColumn151.HeaderText = "Queue No."
+        GridViewTextBoxColumn151.IsVisible = False
+        GridViewTextBoxColumn151.MinWidth = 100
+        GridViewTextBoxColumn151.Name = "LOAD_Q"
+        GridViewTextBoxColumn151.Width = 100
+        GridViewTextBoxColumn152.DataType = GetType(Decimal)
+        GridViewTextBoxColumn152.EnableExpressionEditor = False
+        GridViewTextBoxColumn152.FieldName = "LC_BAY"
+        GridViewTextBoxColumn152.HeaderText = "Bay No."
+        GridViewTextBoxColumn152.MinWidth = 60
+        GridViewTextBoxColumn152.Name = "LC_BAY"
+        GridViewTextBoxColumn152.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn152.Width = 60
+        GridViewTextBoxColumn153.EnableExpressionEditor = False
+        GridViewTextBoxColumn153.FieldName = "LOAD_VEHICLE"
+        GridViewTextBoxColumn153.HeaderText = "Truck No."
+        GridViewTextBoxColumn153.IsAutoGenerated = True
+        GridViewTextBoxColumn153.MaxWidth = 200
+        GridViewTextBoxColumn153.MinWidth = 200
+        GridViewTextBoxColumn153.Name = "LOAD_VEHICLE"
+        GridViewTextBoxColumn153.ReadOnly = True
+        GridViewTextBoxColumn153.Width = 200
+        GridViewDecimalColumn109.DataType = GetType(String)
+        GridViewDecimalColumn109.EnableExpressionEditor = False
+        GridViewDecimalColumn109.FieldName = "CARD_Serial"
+        GridViewDecimalColumn109.HeaderText = "Card No."
+        GridViewDecimalColumn109.IsAutoGenerated = True
+        GridViewDecimalColumn109.IsVisible = False
+        GridViewDecimalColumn109.MinWidth = 120
+        GridViewDecimalColumn109.Name = "CARD_Serial"
+        GridViewDecimalColumn109.ReadOnly = True
+        GridViewDecimalColumn109.TextAlignment = System.Drawing.ContentAlignment.TopCenter
+        GridViewDecimalColumn109.Width = 120
+        GridViewTextBoxColumn154.EnableExpressionEditor = False
+        GridViewTextBoxColumn154.FieldName = "LOAD_DRIVER"
+        GridViewTextBoxColumn154.HeaderText = "Driver Name"
+        GridViewTextBoxColumn154.IsAutoGenerated = True
+        GridViewTextBoxColumn154.MinWidth = 200
+        GridViewTextBoxColumn154.Name = "LOAD_DRIVER"
+        GridViewTextBoxColumn154.ReadOnly = True
+        GridViewTextBoxColumn154.Width = 200
+        GridViewTextBoxColumn155.EnableExpressionEditor = False
+        GridViewTextBoxColumn155.FieldName = "STATUS_NAME"
+        GridViewTextBoxColumn155.HeaderText = "Loading Status"
+        GridViewTextBoxColumn155.IsAutoGenerated = True
+        GridViewTextBoxColumn155.MinWidth = 120
+        GridViewTextBoxColumn155.Name = "STATUS"
+        GridViewTextBoxColumn155.ReadOnly = True
+        GridViewTextBoxColumn155.Width = 120
+        GridViewDateTimeColumn10.EnableExpressionEditor = False
+        GridViewDateTimeColumn10.FieldName = "ADDNOTEDATE"
+        GridViewDateTimeColumn10.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        GridViewDateTimeColumn10.FormatString = "{0:dd/MM/yyyy HH:mm:ss}"
+        GridViewDateTimeColumn10.HeaderText = "Create Date"
+        GridViewDateTimeColumn10.IsAutoGenerated = True
+        GridViewDateTimeColumn10.MinWidth = 200
+        GridViewDateTimeColumn10.Name = "ADDNOTEDATE"
+        GridViewDateTimeColumn10.ReadOnly = True
+        GridViewDateTimeColumn10.Width = 200
+        GridViewTextBoxColumn156.EnableExpressionEditor = False
+        GridViewTextBoxColumn156.FieldName = "LOAD_DOFULL"
+        GridViewTextBoxColumn156.HeaderText = "DO. No."
+        GridViewTextBoxColumn156.IsAutoGenerated = True
+        GridViewTextBoxColumn156.MinWidth = 120
+        GridViewTextBoxColumn156.Name = "LOAD_DOFULL"
+        GridViewTextBoxColumn156.ReadOnly = True
+        GridViewTextBoxColumn156.Width = 120
+        GridViewTextBoxColumn157.EnableExpressionEditor = False
+        GridViewTextBoxColumn157.FieldName = "PRODUCT_CODE"
+        GridViewTextBoxColumn157.HeaderText = "Product"
+        GridViewTextBoxColumn157.IsAutoGenerated = True
+        GridViewTextBoxColumn157.MinWidth = 150
+        GridViewTextBoxColumn157.Name = "PRODUCT_CODE"
+        GridViewTextBoxColumn157.ReadOnly = True
+        GridViewTextBoxColumn157.Width = 150
+        GridViewDecimalColumn110.DecimalPlaces = 5
+        GridViewDecimalColumn110.EnableExpressionEditor = True
+        GridViewDecimalColumn110.FieldName = "LOAD_CAPACITY"
+        GridViewDecimalColumn110.FormatString = "{0:#,###}"
+        GridViewDecimalColumn110.HeaderText = "Max Capacity"
+        GridViewDecimalColumn110.IsAutoGenerated = True
+        GridViewDecimalColumn110.MinWidth = 95
+        GridViewDecimalColumn110.Name = "LOAD_CAPACITY"
+        GridViewDecimalColumn110.ReadOnly = True
+        GridViewDecimalColumn110.Width = 95
+        GridViewDecimalColumn111.EnableExpressionEditor = False
+        GridViewDecimalColumn111.FieldName = "LOAD_PRESET"
+        GridViewDecimalColumn111.FormatString = "{0:#,###}"
+        GridViewDecimalColumn111.HeaderText = "Total Preset"
+        GridViewDecimalColumn111.IsAutoGenerated = True
+        GridViewDecimalColumn111.MinWidth = 95
+        GridViewDecimalColumn111.Name = "LOAD_PRESET"
+        GridViewDecimalColumn111.ReadOnly = True
+        GridViewDecimalColumn111.Width = 95
+        GridViewDecimalColumn112.EnableExpressionEditor = False
+        GridViewDecimalColumn112.FieldName = "LOAD_SEALCOUNT"
+        GridViewDecimalColumn112.HeaderText = "Total Seal"
+        GridViewDecimalColumn112.IsAutoGenerated = True
+        GridViewDecimalColumn112.MinWidth = 80
+        GridViewDecimalColumn112.Name = "LOAD_SEALCOUNT"
+        GridViewDecimalColumn112.ReadOnly = True
+        GridViewDecimalColumn112.Width = 80
+        GridViewTextBoxColumn158.EnableExpressionEditor = False
+        GridViewTextBoxColumn158.FieldName = "LOAD_SEAL"
+        GridViewTextBoxColumn158.HeaderText = "Seal No."
+        GridViewTextBoxColumn158.IsAutoGenerated = True
+        GridViewTextBoxColumn158.MinWidth = 125
+        GridViewTextBoxColumn158.Name = "LOAD_SEAL"
+        GridViewTextBoxColumn158.ReadOnly = True
+        GridViewTextBoxColumn158.Width = 125
+        GridViewTextBoxColumn159.EnableExpressionEditor = False
+        GridViewTextBoxColumn159.FieldName = "BATCH_NAME"
+        GridViewTextBoxColumn159.HeaderText = "Meter"
+        GridViewTextBoxColumn159.IsAutoGenerated = True
+        GridViewTextBoxColumn159.MinWidth = 90
+        GridViewTextBoxColumn159.Name = "BATCH_NAME"
+        GridViewTextBoxColumn159.ReadOnly = True
+        GridViewTextBoxColumn159.Width = 90
+        GridViewTextBoxColumn160.EnableExpressionEditor = False
+        GridViewTextBoxColumn160.FieldName = "LOAD_TRUCKCOMPANY"
+        GridViewTextBoxColumn160.HeaderText = "Truck's Company"
+        GridViewTextBoxColumn160.IsAutoGenerated = True
+        GridViewTextBoxColumn160.IsVisible = False
+        GridViewTextBoxColumn160.MinWidth = 200
+        GridViewTextBoxColumn160.Name = "LOAD_TRUCKCOMPANY"
+        GridViewTextBoxColumn160.ReadOnly = True
+        GridViewTextBoxColumn160.Width = 200
+        GridViewTextBoxColumn161.EnableExpressionEditor = False
+        GridViewTextBoxColumn161.FieldName = "CUSTOMER_NAME"
+        GridViewTextBoxColumn161.HeaderText = "Destination"
+        GridViewTextBoxColumn161.IsAutoGenerated = True
+        GridViewTextBoxColumn161.MinWidth = 250
+        GridViewTextBoxColumn161.Name = "CUSTOMER_NAME"
+        GridViewTextBoxColumn161.ReadOnly = True
+        GridViewTextBoxColumn161.Width = 250
+        GridViewTextBoxColumn162.EnableExpressionEditor = False
+        GridViewTextBoxColumn162.FieldName = "LC_STARTTIME"
+        GridViewTextBoxColumn162.HeaderText = "Begin Loading"
+        GridViewTextBoxColumn162.IsAutoGenerated = True
+        GridViewTextBoxColumn162.MinWidth = 90
+        GridViewTextBoxColumn162.Name = "LC_STARTTIME"
+        GridViewTextBoxColumn162.ReadOnly = True
+        GridViewTextBoxColumn162.Width = 90
+        GridViewTextBoxColumn163.EnableExpressionEditor = False
+        GridViewTextBoxColumn163.FieldName = "LC_ENDTIME"
+        GridViewTextBoxColumn163.HeaderText = "End Loading"
+        GridViewTextBoxColumn163.IsAutoGenerated = True
+        GridViewTextBoxColumn163.MinWidth = 90
+        GridViewTextBoxColumn163.Name = "LC_ENDTIME"
+        GridViewTextBoxColumn163.ReadOnly = True
+        GridViewTextBoxColumn163.Width = 90
+        GridViewTextBoxColumn164.DataType = GetType(Decimal)
+        GridViewTextBoxColumn164.EnableExpressionEditor = False
+        GridViewTextBoxColumn164.FieldName = "load_id"
+        GridViewTextBoxColumn164.HeaderText = "Load No."
+        GridViewTextBoxColumn164.IsVisible = False
+        GridViewTextBoxColumn164.Name = "load_id"
+        Me.MasterGridAdvisenote.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn150, GridViewTextBoxColumn151, GridViewTextBoxColumn152, GridViewTextBoxColumn153, GridViewDecimalColumn109, GridViewTextBoxColumn154, GridViewTextBoxColumn155, GridViewDateTimeColumn10, GridViewTextBoxColumn156, GridViewTextBoxColumn157, GridViewDecimalColumn110, GridViewDecimalColumn111, GridViewDecimalColumn112, GridViewTextBoxColumn158, GridViewTextBoxColumn159, GridViewTextBoxColumn160, GridViewTextBoxColumn161, GridViewTextBoxColumn162, GridViewTextBoxColumn163, GridViewTextBoxColumn164})
         Me.MasterGridAdvisenote.MasterTemplate.DataSource = Me.V_LoadingnoteBindingSource
         Me.MasterGridAdvisenote.MasterTemplate.EnableCustomGrouping = True
         Me.MasterGridAdvisenote.MasterTemplate.EnableFiltering = True
         Me.MasterGridAdvisenote.MasterTemplate.EnableGrouping = False
         Me.MasterGridAdvisenote.MasterTemplate.ShowGroupedColumns = True
         Me.MasterGridAdvisenote.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor1.PropertyName = "REFERENCE"
-        Me.MasterGridAdvisenote.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor1})
-        Me.MasterGridAdvisenote.MasterTemplate.ViewDefinition = TableViewDefinition1
+        SortDescriptor24.PropertyName = "REFERENCE"
+        Me.MasterGridAdvisenote.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor24})
+        Me.MasterGridAdvisenote.MasterTemplate.ViewDefinition = TableViewDefinition43
         Me.MasterGridAdvisenote.Name = "MasterGridAdvisenote"
         Me.MasterGridAdvisenote.ReadOnly = True
         Me.MasterGridAdvisenote.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1278,7 +1288,7 @@ Partial Class Advisenote
         Me.Printdata.Text = "Print DO.      "
         Me.Printdata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Printdata.ThemeName = "Breeze"
-        CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.Printdata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Print DO.      "
@@ -1303,7 +1313,7 @@ Partial Class Advisenote
         Me.Canceldata.Text = "Cancel DO.   "
         Me.Canceldata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Canceldata.ThemeName = "Breeze"
-        CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+        CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
         CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.Canceldata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Cancel DO.   "
@@ -1355,7 +1365,7 @@ Partial Class Advisenote
         Me.Adddata.Text = "Create DO.   "
         Me.Adddata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Adddata.ThemeName = "Breeze"
-        CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
         CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.Adddata.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Create DO.   "
@@ -1372,7 +1382,6 @@ Partial Class Advisenote
         '
         Me.RadPageViewPage2.BackColor = System.Drawing.SystemColors.Control
         Me.RadPageViewPage2.Controls.Add(Me.RadPanel3)
-        Me.RadPageViewPage2.Controls.Add(Me.GroupBox6)
         Me.RadPageViewPage2.ItemSize = New System.Drawing.SizeF(74.0!, 30.0!)
         Me.RadPageViewPage2.Location = New System.Drawing.Point(12, 40)
         Me.RadPageViewPage2.Name = "RadPageViewPage2"
@@ -1397,7 +1406,13 @@ Partial Class Advisenote
         'AdviseDetail_G
         '
         Me.AdviseDetail_G.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.AdviseDetail_G.Controls.Add(Me.RadTextBox6)
+        Me.AdviseDetail_G.Controls.Add(Me.RadTextBox5)
+        Me.AdviseDetail_G.Controls.Add(Me.RadButton8)
+        Me.AdviseDetail_G.Controls.Add(Me.RadDropDownList3)
+        Me.AdviseDetail_G.Controls.Add(Me.PresetTotal)
         Me.AdviseDetail_G.Controls.Add(Me.Panel15)
+        Me.AdviseDetail_G.Controls.Add(Me.GroupBox6)
         Me.AdviseDetail_G.Controls.Add(Me.RadGroupBox8)
         Me.AdviseDetail_G.Controls.Add(Me.RadLabel40)
         Me.AdviseDetail_G.Controls.Add(Me.Weightouttime)
@@ -1407,8 +1422,6 @@ Partial Class Advisenote
         Me.AdviseDetail_G.Controls.Add(Me.Label43)
         Me.AdviseDetail_G.Controls.Add(Me.Label26)
         Me.AdviseDetail_G.Controls.Add(Me.DOval)
-        Me.AdviseDetail_G.Controls.Add(Me.Label17)
-        Me.AdviseDetail_G.Controls.Add(Me.PresetTotal)
         Me.AdviseDetail_G.Controls.Add(Me.Label16)
         Me.AdviseDetail_G.Controls.Add(Me.Seal_Total)
         Me.AdviseDetail_G.Controls.Add(Me.Seal_No)
@@ -1432,6 +1445,296 @@ Partial Class Advisenote
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(153, 37)
         Me.Panel15.TabIndex = 117
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Company_sapcode)
+        Me.GroupBox6.Controls.Add(Me.P_Weight)
+        Me.GroupBox6.Controls.Add(Me.PackingId)
+        Me.GroupBox6.Controls.Add(Me.Shipment_id)
+        Me.GroupBox6.Controls.Add(Me.Cbn9)
+        Me.GroupBox6.Controls.Add(Me.Updatedate)
+        Me.GroupBox6.Controls.Add(Me.Loadid)
+        Me.GroupBox6.Controls.Add(Me.TruckId)
+        Me.GroupBox6.Controls.Add(Me.Prono)
+        Me.GroupBox6.Controls.Add(Me.ProductId)
+        Me.GroupBox6.Controls.Add(Me.StatusId)
+        Me.GroupBox6.Controls.Add(Me.TruckCompanyId)
+        Me.GroupBox6.Controls.Add(Me.DriverID)
+        Me.GroupBox6.Controls.Add(Me.CustomerID)
+        Me.GroupBox6.Controls.Add(Me.ShipperId)
+        Me.GroupBox6.Controls.Add(Me.TextBox1)
+        Me.GroupBox6.Controls.Add(Me.DateeditTemp)
+        Me.GroupBox6.Controls.Add(Me.ComboBox1)
+        Me.GroupBox6.Controls.Add(Me.Label11)
+        Me.GroupBox6.Controls.Add(Me.ShipmentNo1)
+        Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.GroupBox6.Location = New System.Drawing.Point(39, 240)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(205, 80)
+        Me.GroupBox6.TabIndex = 209
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Hidden"
+        Me.GroupBox6.Visible = False
+        '
+        'Company_sapcode
+        '
+        Me.Company_sapcode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.Company_sapcode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.Company_sapcode.DataSource = Me.TCompanyBindingSource
+        Me.Company_sapcode.DisplayMember = "COMPANY_NUMBER"
+        Me.Company_sapcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Company_sapcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Company_sapcode.FormattingEnabled = True
+        Me.Company_sapcode.Location = New System.Drawing.Point(67, 90)
+        Me.Company_sapcode.Name = "Company_sapcode"
+        Me.Company_sapcode.Size = New System.Drawing.Size(62, 21)
+        Me.Company_sapcode.TabIndex = 202
+        Me.Company_sapcode.ValueMember = "COMPANY_NUMBER"
+        '
+        'TCompanyBindingSource
+        '
+        Me.TCompanyBindingSource.DataMember = "T_COMPANY"
+        Me.TCompanyBindingSource.DataSource = Me.DataSet_Table
+        '
+        'P_Weight
+        '
+        Me.P_Weight.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.P_Weight.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.P_Weight.DisplayMember = "P_WEIGHT"
+        Me.P_Weight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.P_Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.P_Weight.FormattingEnabled = True
+        Me.P_Weight.Location = New System.Drawing.Point(135, 90)
+        Me.P_Weight.Name = "P_Weight"
+        Me.P_Weight.Size = New System.Drawing.Size(62, 21)
+        Me.P_Weight.TabIndex = 199
+        Me.P_Weight.ValueMember = "P_WEIGHT"
+        '
+        'PackingId
+        '
+        Me.PackingId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.PackingId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PackingId.DisplayMember = "P_ID"
+        Me.PackingId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PackingId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.PackingId.FormattingEnabled = True
+        Me.PackingId.Location = New System.Drawing.Point(125, 49)
+        Me.PackingId.Name = "PackingId"
+        Me.PackingId.Size = New System.Drawing.Size(59, 21)
+        Me.PackingId.TabIndex = 180
+        Me.PackingId.ValueMember = "P_ID"
+        '
+        'Shipment_id
+        '
+        Me.Shipment_id.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.Shipment_id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.Shipment_id.DisplayMember = "ID"
+        Me.Shipment_id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Shipment_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Shipment_id.FormattingEnabled = True
+        Me.Shipment_id.Location = New System.Drawing.Point(131, 72)
+        Me.Shipment_id.Name = "Shipment_id"
+        Me.Shipment_id.Size = New System.Drawing.Size(62, 21)
+        Me.Shipment_id.TabIndex = 201
+        Me.Shipment_id.ValueMember = "ID"
+        '
+        'Cbn9
+        '
+        Me.Cbn9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Cbn9.Location = New System.Drawing.Point(6, 480)
+        Me.Cbn9.Name = "Cbn9"
+        Me.Cbn9.Size = New System.Drawing.Size(77, 20)
+        Me.Cbn9.TabIndex = 158
+        Me.Cbn9.Visible = False
+        '
+        'Updatedate
+        '
+        Me.Updatedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Updatedate.Location = New System.Drawing.Point(6, 456)
+        Me.Updatedate.Name = "Updatedate"
+        Me.Updatedate.Size = New System.Drawing.Size(53, 20)
+        Me.Updatedate.TabIndex = 111
+        Me.Updatedate.Visible = False
+        '
+        'Loadid
+        '
+        Me.Loadid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Loadid.Location = New System.Drawing.Point(5, 428)
+        Me.Loadid.Name = "Loadid"
+        Me.Loadid.Size = New System.Drawing.Size(55, 20)
+        Me.Loadid.TabIndex = 149
+        Me.Loadid.Visible = False
+        '
+        'TruckId
+        '
+        Me.TruckId.DisplayMember = "ID"
+        Me.TruckId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TruckId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.TruckId.FormattingEnabled = True
+        Me.TruckId.Location = New System.Drawing.Point(6, 90)
+        Me.TruckId.Name = "TruckId"
+        Me.TruckId.Size = New System.Drawing.Size(55, 21)
+        Me.TruckId.TabIndex = 154
+        Me.TruckId.ValueMember = "ID"
+        '
+        'Prono
+        '
+        Me.Prono.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Prono.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Prono.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Prono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Prono.FormattingEnabled = True
+        Me.Prono.Location = New System.Drawing.Point(14, 117)
+        Me.Prono.Name = "Prono"
+        Me.Prono.Size = New System.Drawing.Size(152, 21)
+        Me.Prono.TabIndex = 160
+        '
+        'ProductId
+        '
+        Me.ProductId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ProductId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ProductId.DisplayMember = "ID"
+        Me.ProductId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ProductId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.ProductId.FormattingEnabled = True
+        Me.ProductId.Location = New System.Drawing.Point(66, 49)
+        Me.ProductId.Name = "ProductId"
+        Me.ProductId.Size = New System.Drawing.Size(53, 21)
+        Me.ProductId.TabIndex = 175
+        Me.ProductId.ValueMember = "ID"
+        '
+        'StatusId
+        '
+        Me.StatusId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.StatusId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.StatusId.DisplayMember = "STATUS_ID"
+        Me.StatusId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.StatusId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.StatusId.FormattingEnabled = True
+        Me.StatusId.Location = New System.Drawing.Point(66, 70)
+        Me.StatusId.Name = "StatusId"
+        Me.StatusId.Size = New System.Drawing.Size(59, 21)
+        Me.StatusId.TabIndex = 177
+        Me.StatusId.ValueMember = "STATUS_ID"
+        '
+        'TruckCompanyId
+        '
+        Me.TruckCompanyId.DataSource = Me.TCompanyBindingSource
+        Me.TruckCompanyId.DisplayMember = "COMPANY_ID"
+        Me.TruckCompanyId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TruckCompanyId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.TruckCompanyId.FormattingEnabled = True
+        Me.TruckCompanyId.Location = New System.Drawing.Point(14, 25)
+        Me.TruckCompanyId.Name = "TruckCompanyId"
+        Me.TruckCompanyId.Size = New System.Drawing.Size(55, 21)
+        Me.TruckCompanyId.TabIndex = 156
+        Me.TruckCompanyId.ValueMember = "COMPANY_ID"
+        '
+        'DriverID
+        '
+        Me.DriverID.DataSource = Me.TDriverBindingSource
+        Me.DriverID.DisplayMember = "ID"
+        Me.DriverID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.DriverID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.DriverID.FormattingEnabled = True
+        Me.DriverID.Location = New System.Drawing.Point(40, 15)
+        Me.DriverID.Name = "DriverID"
+        Me.DriverID.Size = New System.Drawing.Size(55, 21)
+        Me.DriverID.TabIndex = 157
+        Me.DriverID.ValueMember = "ID"
+        '
+        'TDriverBindingSource
+        '
+        Me.TDriverBindingSource.DataMember = "T_DRIVER"
+        Me.TDriverBindingSource.DataSource = Me.DataSet_Table
+        '
+        'CustomerID
+        '
+        Me.CustomerID.DataSource = Me.TCUSTOMERTBindingSource
+        Me.CustomerID.DisplayMember = "ID"
+        Me.CustomerID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CustomerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CustomerID.FormattingEnabled = True
+        Me.CustomerID.Location = New System.Drawing.Point(5, 49)
+        Me.CustomerID.Name = "CustomerID"
+        Me.CustomerID.Size = New System.Drawing.Size(55, 21)
+        Me.CustomerID.TabIndex = 170
+        Me.CustomerID.ValueMember = "ID"
+        '
+        'TCUSTOMERTBindingSource
+        '
+        Me.TCUSTOMERTBindingSource.DataMember = "T_CUSTOMER"
+        Me.TCUSTOMERTBindingSource.DataSource = Me.DataSet_Table
+        '
+        'ShipperId
+        '
+        Me.ShipperId.DataSource = Me.TShipperBindingSource
+        Me.ShipperId.DisplayMember = "ID"
+        Me.ShipperId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ShipperId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.ShipperId.FormattingEnabled = True
+        Me.ShipperId.Location = New System.Drawing.Point(5, 70)
+        Me.ShipperId.Name = "ShipperId"
+        Me.ShipperId.Size = New System.Drawing.Size(55, 21)
+        Me.ShipperId.TabIndex = 155
+        Me.ShipperId.ValueMember = "ID"
+        '
+        'TShipperBindingSource
+        '
+        Me.TShipperBindingSource.DataMember = "T_SHIPPER"
+        Me.TShipperBindingSource.DataSource = Me.DataSet_Table
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(190, 50)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(31, 20)
+        Me.TextBox1.TabIndex = 174
+        '
+        'DateeditTemp
+        '
+        Me.DateeditTemp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.DateeditTemp.Location = New System.Drawing.Point(4, 402)
+        Me.DateeditTemp.Name = "DateeditTemp"
+        Me.DateeditTemp.Size = New System.Drawing.Size(57, 20)
+        Me.DateeditTemp.TabIndex = 139
+        Me.DateeditTemp.Visible = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"a", "b", "c"})
+        Me.ComboBox1.Location = New System.Drawing.Point(101, 22)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(46, 21)
+        Me.ComboBox1.TabIndex = 153
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label11.Location = New System.Drawing.Point(-75, 28)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(109, 20)
+        Me.Label11.TabIndex = 167
+        Me.Label11.Text = "Shipment No.:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'ShipmentNo1
+        '
+        Me.ShipmentNo1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ShipmentNo1.Enabled = False
+        Me.ShipmentNo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.ShipmentNo1.Location = New System.Drawing.Point(40, 25)
+        Me.ShipmentNo1.Name = "ShipmentNo1"
+        Me.ShipmentNo1.Size = New System.Drawing.Size(264, 26)
+        Me.ShipmentNo1.TabIndex = 30
         '
         'RadGroupBox8
         '
@@ -1470,7 +1773,7 @@ Partial Class Advisenote
         'RadLabel1
         '
         Me.RadLabel1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel1.Location = New System.Drawing.Point(318, 39)
+        Me.RadLabel1.Location = New System.Drawing.Point(326, 39)
         Me.RadLabel1.Name = "RadLabel1"
         Me.RadLabel1.Size = New System.Drawing.Size(87, 19)
         Me.RadLabel1.TabIndex = 2214
@@ -1480,6 +1783,7 @@ Partial Class Advisenote
         '
         'RadTextBox3
         '
+        Me.RadTextBox3.BackColor = System.Drawing.Color.Gray
         Me.RadTextBox3.Enabled = False
         Me.RadTextBox3.Font = New System.Drawing.Font("DS-Digital", 26.0!, System.Drawing.FontStyle.Bold)
         Me.RadTextBox3.ForeColor = System.Drawing.Color.Lime
@@ -1562,7 +1866,6 @@ Partial Class Advisenote
         Me.RadButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.RadButton16.TextWrap = True
         Me.RadButton16.ThemeName = "Breeze"
-        Me.RadButton16.Visible = False
         CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.weight_in_A
         CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1619,8 +1922,7 @@ Partial Class Advisenote
         Me.RadButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.RadButton3.TextWrap = True
         Me.RadButton3.ThemeName = "Breeze"
-        Me.RadButton3.Visible = False
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1878,7 +2180,7 @@ Partial Class Advisenote
         'RadLabel33
         '
         Me.RadLabel33.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel33.Location = New System.Drawing.Point(324, 101)
+        Me.RadLabel33.Location = New System.Drawing.Point(332, 101)
         Me.RadLabel33.Name = "RadLabel33"
         Me.RadLabel33.Size = New System.Drawing.Size(81, 19)
         Me.RadLabel33.TabIndex = 2202
@@ -2105,25 +2407,25 @@ Partial Class Advisenote
         Me.Meter.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.Meter.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Meter.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn16.EnableExpressionEditor = False
-        GridViewTextBoxColumn16.FieldName = "BATCH_NAME"
-        GridViewTextBoxColumn16.HeaderText = "Meter Name"
-        GridViewTextBoxColumn16.IsAutoGenerated = True
-        GridViewTextBoxColumn16.MaxWidth = 120
-        GridViewTextBoxColumn16.MinWidth = 120
-        GridViewTextBoxColumn16.Name = "BATCH_NAME"
-        GridViewTextBoxColumn16.ReadOnly = True
-        GridViewTextBoxColumn16.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn16.Width = 120
-        Me.Meter.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn16})
+        GridViewTextBoxColumn165.EnableExpressionEditor = False
+        GridViewTextBoxColumn165.FieldName = "BATCH_NAME"
+        GridViewTextBoxColumn165.HeaderText = "Meter Name"
+        GridViewTextBoxColumn165.IsAutoGenerated = True
+        GridViewTextBoxColumn165.MaxWidth = 120
+        GridViewTextBoxColumn165.MinWidth = 120
+        GridViewTextBoxColumn165.Name = "BATCH_NAME"
+        GridViewTextBoxColumn165.ReadOnly = True
+        GridViewTextBoxColumn165.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn165.Width = 120
+        Me.Meter.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn165})
         Me.Meter.EditorControl.MasterTemplate.DataSource = Me.TBatchmeterBindingSource
         Me.Meter.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Meter.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Meter.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Meter.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor2.PropertyName = "BATCH_NAME"
-        Me.Meter.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor2})
-        Me.Meter.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
+        SortDescriptor25.PropertyName = "BATCH_NAME"
+        Me.Meter.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor25})
+        Me.Meter.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition44
         Me.Meter.EditorControl.Name = "NestedRadGridView"
         Me.Meter.EditorControl.ReadOnly = True
         Me.Meter.EditorControl.ShowGroupPanel = False
@@ -2213,30 +2515,30 @@ Partial Class Advisenote
         Me.Bay.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.Bay.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Bay.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewMultiComboBoxColumn1.DataType = GetType(Decimal)
-        GridViewMultiComboBoxColumn1.EnableExpressionEditor = False
-        GridViewMultiComboBoxColumn1.FieldName = "BAY_NUMBER"
-        GridViewMultiComboBoxColumn1.HeaderText = "BAY"
-        GridViewMultiComboBoxColumn1.MinWidth = 60
-        GridViewMultiComboBoxColumn1.Name = "BAY_NUMBER"
-        GridViewMultiComboBoxColumn1.ReadOnly = True
-        GridViewMultiComboBoxColumn1.Width = 60
-        GridViewMultiComboBoxColumn2.DataType = GetType(Decimal)
-        GridViewMultiComboBoxColumn2.EnableExpressionEditor = False
-        GridViewMultiComboBoxColumn2.FieldName = "ISLAND_NUMBER"
-        GridViewMultiComboBoxColumn2.HeaderText = "ISLAND"
-        GridViewMultiComboBoxColumn2.MaxWidth = 60
-        GridViewMultiComboBoxColumn2.MinWidth = 60
-        GridViewMultiComboBoxColumn2.Name = "ISLAND"
-        GridViewMultiComboBoxColumn2.ReadOnly = True
-        GridViewMultiComboBoxColumn2.Width = 60
-        Me.Bay.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewMultiComboBoxColumn1, GridViewMultiComboBoxColumn2})
+        GridViewMultiComboBoxColumn7.DataType = GetType(Decimal)
+        GridViewMultiComboBoxColumn7.EnableExpressionEditor = False
+        GridViewMultiComboBoxColumn7.FieldName = "BAY_NUMBER"
+        GridViewMultiComboBoxColumn7.HeaderText = "BAY"
+        GridViewMultiComboBoxColumn7.MinWidth = 60
+        GridViewMultiComboBoxColumn7.Name = "BAY_NUMBER"
+        GridViewMultiComboBoxColumn7.ReadOnly = True
+        GridViewMultiComboBoxColumn7.Width = 60
+        GridViewMultiComboBoxColumn8.DataType = GetType(Decimal)
+        GridViewMultiComboBoxColumn8.EnableExpressionEditor = False
+        GridViewMultiComboBoxColumn8.FieldName = "ISLAND_NUMBER"
+        GridViewMultiComboBoxColumn8.HeaderText = "ISLAND"
+        GridViewMultiComboBoxColumn8.MaxWidth = 60
+        GridViewMultiComboBoxColumn8.MinWidth = 60
+        GridViewMultiComboBoxColumn8.Name = "ISLAND"
+        GridViewMultiComboBoxColumn8.ReadOnly = True
+        GridViewMultiComboBoxColumn8.Width = 60
+        Me.Bay.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewMultiComboBoxColumn7, GridViewMultiComboBoxColumn8})
         Me.Bay.EditorControl.MasterTemplate.DataSource = Me.TBayBindingSource
         Me.Bay.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Bay.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Bay.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Bay.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        Me.Bay.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.Bay.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition45
         Me.Bay.EditorControl.Name = "NestedRadGridView"
         Me.Bay.EditorControl.ReadOnly = True
         Me.Bay.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2331,32 +2633,32 @@ Partial Class Advisenote
         Me.Product.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Product.EditorControl.MasterTemplate.AutoGenerateColumns = False
         Me.Product.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn17.EnableExpressionEditor = False
-        GridViewTextBoxColumn17.FieldName = "PRODUCT_CODE"
-        GridViewTextBoxColumn17.HeaderText = "PRODUCT-CODE"
-        GridViewTextBoxColumn17.IsAutoGenerated = True
-        GridViewTextBoxColumn17.MinWidth = 100
-        GridViewTextBoxColumn17.Name = "PRODUCT_CODE"
-        GridViewTextBoxColumn17.ReadOnly = True
-        GridViewTextBoxColumn17.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn17.Width = 120
-        GridViewTextBoxColumn18.EnableExpressionEditor = False
-        GridViewTextBoxColumn18.FieldName = "PRODUCT_NAME"
-        GridViewTextBoxColumn18.HeaderText = "PRODUCT-NAME"
-        GridViewTextBoxColumn18.IsAutoGenerated = True
-        GridViewTextBoxColumn18.MinWidth = 100
-        GridViewTextBoxColumn18.Name = "PRODUCT_NAME"
-        GridViewTextBoxColumn18.ReadOnly = True
-        GridViewTextBoxColumn18.Width = 120
-        Me.Product.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn17, GridViewTextBoxColumn18})
+        GridViewTextBoxColumn166.EnableExpressionEditor = False
+        GridViewTextBoxColumn166.FieldName = "PRODUCT_CODE"
+        GridViewTextBoxColumn166.HeaderText = "PRODUCT-CODE"
+        GridViewTextBoxColumn166.IsAutoGenerated = True
+        GridViewTextBoxColumn166.MinWidth = 100
+        GridViewTextBoxColumn166.Name = "PRODUCT_CODE"
+        GridViewTextBoxColumn166.ReadOnly = True
+        GridViewTextBoxColumn166.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn166.Width = 120
+        GridViewTextBoxColumn167.EnableExpressionEditor = False
+        GridViewTextBoxColumn167.FieldName = "PRODUCT_NAME"
+        GridViewTextBoxColumn167.HeaderText = "PRODUCT-NAME"
+        GridViewTextBoxColumn167.IsAutoGenerated = True
+        GridViewTextBoxColumn167.MinWidth = 100
+        GridViewTextBoxColumn167.Name = "PRODUCT_NAME"
+        GridViewTextBoxColumn167.ReadOnly = True
+        GridViewTextBoxColumn167.Width = 120
+        Me.Product.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn166, GridViewTextBoxColumn167})
         Me.Product.EditorControl.MasterTemplate.DataSource = Me.TProductBindingSource
         Me.Product.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Product.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Product.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Product.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor3.PropertyName = "PRODUCT_CODE"
-        Me.Product.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor3})
-        Me.Product.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition4
+        SortDescriptor26.PropertyName = "PRODUCT_CODE"
+        Me.Product.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor26})
+        Me.Product.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition46
         Me.Product.EditorControl.Name = "NestedRadGridView"
         Me.Product.EditorControl.ReadOnly = True
         Me.Product.EditorControl.ShowGroupPanel = False
@@ -2369,7 +2671,7 @@ Partial Class Advisenote
         Me.Product.TabIndex = 23
         Me.Product.TabStop = False
         Me.Product.ThemeName = "Windows8"
-        Me.Product.ValueMember = "--+------------------------------------------------"
+        Me.Product.ValueMember = "ID"
         '
         'TProductBindingSource
         '
@@ -2475,7 +2777,7 @@ Partial Class Advisenote
         '
         Me.Label43.AutoSize = True
         Me.Label43.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(28, 153)
+        Me.Label43.Location = New System.Drawing.Point(28, 124)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(71, 17)
         Me.Label43.TabIndex = 240
@@ -2506,26 +2808,17 @@ Partial Class Advisenote
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(16, 66)
+        Me.Label17.Location = New System.Drawing.Point(16, 177)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(83, 17)
         Me.Label17.TabIndex = 239
         Me.Label17.Text = "Total Preset :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'PresetTotal
-        '
-        Me.PresetTotal.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PresetTotal.Location = New System.Drawing.Point(101, 63)
-        Me.PresetTotal.Name = "PresetTotal"
-        Me.PresetTotal.Size = New System.Drawing.Size(187, 23)
-        Me.PresetTotal.TabIndex = 5
-        Me.PresetTotal.ThemeName = "Windows8"
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(28, 95)
+        Me.Label16.Location = New System.Drawing.Point(28, 66)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(71, 17)
         Me.Label16.TabIndex = 14
@@ -2537,7 +2830,7 @@ Partial Class Advisenote
         Me.Seal_Total.BackColor = System.Drawing.SystemColors.Control
         Me.Seal_Total.Enabled = False
         Me.Seal_Total.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Seal_Total.Location = New System.Drawing.Point(101, 150)
+        Me.Seal_Total.Location = New System.Drawing.Point(101, 121)
         Me.Seal_Total.Name = "Seal_Total"
         Me.Seal_Total.Size = New System.Drawing.Size(187, 23)
         Me.Seal_Total.TabIndex = 9
@@ -2548,7 +2841,7 @@ Partial Class Advisenote
         '
         Me.Seal_No.BackColor = System.Drawing.Color.White
         Me.Seal_No.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Seal_No.Location = New System.Drawing.Point(101, 121)
+        Me.Seal_No.Location = New System.Drawing.Point(101, 92)
         Me.Seal_No.Name = "Seal_No"
         Me.Seal_No.Size = New System.Drawing.Size(187, 23)
         Me.Seal_No.TabIndex = 10
@@ -2583,33 +2876,33 @@ Partial Class Advisenote
         Me.EdCustomer.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.EdCustomer.EditorControl.MasterTemplate.AutoGenerateColumns = False
         Me.EdCustomer.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn19.AllowResize = False
-        GridViewTextBoxColumn19.EnableExpressionEditor = False
-        GridViewTextBoxColumn19.FieldName = "CUSTOMER_CODE"
-        GridViewTextBoxColumn19.HeaderText = "Destination Code"
-        GridViewTextBoxColumn19.IsAutoGenerated = True
-        GridViewTextBoxColumn19.MinWidth = 210
-        GridViewTextBoxColumn19.Name = "CUSTOMER_CODE"
-        GridViewTextBoxColumn19.ReadOnly = True
-        GridViewTextBoxColumn19.Width = 210
-        GridViewTextBoxColumn20.AllowResize = False
-        GridViewTextBoxColumn20.EnableExpressionEditor = False
-        GridViewTextBoxColumn20.FieldName = "CUSTOMER_NAME"
-        GridViewTextBoxColumn20.HeaderText = "Destination Name"
-        GridViewTextBoxColumn20.IsAutoGenerated = True
-        GridViewTextBoxColumn20.MinWidth = 210
-        GridViewTextBoxColumn20.Name = "CUSTOMER_NAME"
-        GridViewTextBoxColumn20.ReadOnly = True
-        GridViewTextBoxColumn20.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn20.Width = 210
-        Me.EdCustomer.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn19, GridViewTextBoxColumn20})
+        GridViewTextBoxColumn142.AllowResize = False
+        GridViewTextBoxColumn142.EnableExpressionEditor = False
+        GridViewTextBoxColumn142.FieldName = "CUSTOMER_CODE"
+        GridViewTextBoxColumn142.HeaderText = "Destination Code"
+        GridViewTextBoxColumn142.IsAutoGenerated = True
+        GridViewTextBoxColumn142.MinWidth = 210
+        GridViewTextBoxColumn142.Name = "CUSTOMER_CODE"
+        GridViewTextBoxColumn142.ReadOnly = True
+        GridViewTextBoxColumn142.Width = 210
+        GridViewTextBoxColumn143.AllowResize = False
+        GridViewTextBoxColumn143.EnableExpressionEditor = False
+        GridViewTextBoxColumn143.FieldName = "CUSTOMER_NAME"
+        GridViewTextBoxColumn143.HeaderText = "Destination Name"
+        GridViewTextBoxColumn143.IsAutoGenerated = True
+        GridViewTextBoxColumn143.MinWidth = 210
+        GridViewTextBoxColumn143.Name = "CUSTOMER_NAME"
+        GridViewTextBoxColumn143.ReadOnly = True
+        GridViewTextBoxColumn143.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn143.Width = 210
+        Me.EdCustomer.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn142, GridViewTextBoxColumn143})
         Me.EdCustomer.EditorControl.MasterTemplate.DataSource = Me.TCUSTOMERTBindingSource
         Me.EdCustomer.EditorControl.MasterTemplate.EnableFiltering = True
         Me.EdCustomer.EditorControl.MasterTemplate.EnableGrouping = False
         Me.EdCustomer.EditorControl.MasterTemplate.ShowFilteringRow = False
-        SortDescriptor4.PropertyName = "CUSTOMER_NAME"
-        Me.EdCustomer.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor4})
-        Me.EdCustomer.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition5
+        SortDescriptor22.PropertyName = "CUSTOMER_NAME"
+        Me.EdCustomer.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor22})
+        Me.EdCustomer.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition40
         Me.EdCustomer.EditorControl.Name = "NestedRadGridView"
         Me.EdCustomer.EditorControl.ReadOnly = True
         Me.EdCustomer.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2618,7 +2911,7 @@ Partial Class Advisenote
         Me.EdCustomer.EditorControl.TabIndex = 0
         Me.EdCustomer.EnableKeyMap = True
         Me.EdCustomer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EdCustomer.Location = New System.Drawing.Point(101, 92)
+        Me.EdCustomer.Location = New System.Drawing.Point(101, 63)
         Me.EdCustomer.Name = "EdCustomer"
         Me.EdCustomer.Size = New System.Drawing.Size(187, 23)
         Me.EdCustomer.TabIndex = 7
@@ -2626,16 +2919,11 @@ Partial Class Advisenote
         Me.EdCustomer.ThemeName = "Windows8"
         Me.EdCustomer.ValueMember = "ID"
         '
-        'TCUSTOMERTBindingSource
-        '
-        Me.TCUSTOMERTBindingSource.DataMember = "T_CUSTOMER"
-        Me.TCUSTOMERTBindingSource.DataSource = Me.DataSet_Table
-        '
         'Label25
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(8, 124)
+        Me.Label25.Location = New System.Drawing.Point(8, 95)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(91, 17)
         Me.Label25.TabIndex = 235
@@ -2768,47 +3056,47 @@ Partial Class Advisenote
         Me.Driver.EditorControl.MasterTemplate.AllowDeleteRow = False
         Me.Driver.EditorControl.MasterTemplate.AllowEditRow = False
         Me.Driver.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn21.EnableExpressionEditor = False
-        GridViewTextBoxColumn21.FieldName = "Driver_Number"
-        GridViewTextBoxColumn21.HeaderText = "DriverNumber"
-        GridViewTextBoxColumn21.IsVisible = False
-        GridViewTextBoxColumn21.Name = "DriverNumber"
-        GridViewTextBoxColumn21.ReadOnly = True
-        GridViewTextBoxColumn21.Width = 135
-        GridViewTextBoxColumn22.EnableExpressionEditor = False
-        GridViewTextBoxColumn22.FieldName = "DRIVER_NAME"
-        GridViewTextBoxColumn22.HeaderText = "First Name"
-        GridViewTextBoxColumn22.IsAutoGenerated = True
-        GridViewTextBoxColumn22.MinWidth = 200
-        GridViewTextBoxColumn22.Name = "DRIVER_NAME"
-        GridViewTextBoxColumn22.ReadOnly = True
-        GridViewTextBoxColumn22.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn22.Width = 200
-        GridViewTextBoxColumn23.EnableExpressionEditor = False
-        GridViewTextBoxColumn23.FieldName = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn23.HeaderText = "Last Name"
-        GridViewTextBoxColumn23.IsAutoGenerated = True
-        GridViewTextBoxColumn23.MinWidth = 200
-        GridViewTextBoxColumn23.Name = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn23.ReadOnly = True
-        GridViewTextBoxColumn23.Width = 200
-        GridViewTextBoxColumn24.EnableExpressionEditor = False
-        GridViewTextBoxColumn24.FieldName = "DRIVER_LICENSE"
-        GridViewTextBoxColumn24.HeaderText = "License No."
-        GridViewTextBoxColumn24.IsAutoGenerated = True
-        GridViewTextBoxColumn24.IsVisible = False
-        GridViewTextBoxColumn24.Name = "DRIVER_LICENSE"
-        GridViewTextBoxColumn24.ReadOnly = True
-        GridViewTextBoxColumn24.Width = 131
-        Me.Driver.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn21, GridViewTextBoxColumn22, GridViewTextBoxColumn23, GridViewTextBoxColumn24})
+        GridViewTextBoxColumn144.EnableExpressionEditor = False
+        GridViewTextBoxColumn144.FieldName = "Driver_Number"
+        GridViewTextBoxColumn144.HeaderText = "DriverNumber"
+        GridViewTextBoxColumn144.IsVisible = False
+        GridViewTextBoxColumn144.Name = "DriverNumber"
+        GridViewTextBoxColumn144.ReadOnly = True
+        GridViewTextBoxColumn144.Width = 135
+        GridViewTextBoxColumn145.EnableExpressionEditor = False
+        GridViewTextBoxColumn145.FieldName = "DRIVER_NAME"
+        GridViewTextBoxColumn145.HeaderText = "First Name"
+        GridViewTextBoxColumn145.IsAutoGenerated = True
+        GridViewTextBoxColumn145.MinWidth = 200
+        GridViewTextBoxColumn145.Name = "DRIVER_NAME"
+        GridViewTextBoxColumn145.ReadOnly = True
+        GridViewTextBoxColumn145.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn145.Width = 200
+        GridViewTextBoxColumn146.EnableExpressionEditor = False
+        GridViewTextBoxColumn146.FieldName = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn146.HeaderText = "Last Name"
+        GridViewTextBoxColumn146.IsAutoGenerated = True
+        GridViewTextBoxColumn146.MinWidth = 200
+        GridViewTextBoxColumn146.Name = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn146.ReadOnly = True
+        GridViewTextBoxColumn146.Width = 200
+        GridViewTextBoxColumn147.EnableExpressionEditor = False
+        GridViewTextBoxColumn147.FieldName = "DRIVER_LICENSE"
+        GridViewTextBoxColumn147.HeaderText = "License No."
+        GridViewTextBoxColumn147.IsAutoGenerated = True
+        GridViewTextBoxColumn147.IsVisible = False
+        GridViewTextBoxColumn147.Name = "DRIVER_LICENSE"
+        GridViewTextBoxColumn147.ReadOnly = True
+        GridViewTextBoxColumn147.Width = 131
+        Me.Driver.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn144, GridViewTextBoxColumn145, GridViewTextBoxColumn146, GridViewTextBoxColumn147})
         Me.Driver.EditorControl.MasterTemplate.DataSource = Me.TDriverBindingSource
         Me.Driver.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Driver.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Driver.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Driver.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor5.PropertyName = "DRIVER_NAME"
-        Me.Driver.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor5})
-        Me.Driver.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition6
+        SortDescriptor23.PropertyName = "DRIVER_NAME"
+        Me.Driver.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor23})
+        Me.Driver.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition41
         Me.Driver.EditorControl.Name = "NestedRadGridView"
         Me.Driver.EditorControl.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.Driver.EditorControl.ReadOnly = True
@@ -2826,24 +3114,21 @@ Partial Class Advisenote
         Me.Driver.ThemeName = "Windows8"
         Me.Driver.ValueMember = "ID"
         '
-        'TDriverBindingSource
-        '
-        Me.TDriverBindingSource.DataMember = "T_DRIVER"
-        Me.TDriverBindingSource.DataSource = Me.DataSet_Table
-        '
         'RadGroupBox5
         '
         Me.RadGroupBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox5.Controls.Add(Me.RadTextBox4)
         Me.RadGroupBox5.Controls.Add(Me.Cbn7)
         Me.RadGroupBox5.Controls.Add(Me.Label24)
         Me.RadGroupBox5.Controls.Add(Me.Label44)
-        Me.RadGroupBox5.Controls.Add(Me.Cbn8)
+        Me.RadGroupBox5.Controls.Add(Me.Reference)
         Me.RadGroupBox5.Controls.Add(Me.Update_date)
         Me.RadGroupBox5.Controls.Add(Me.Label5)
         Me.RadGroupBox5.Controls.Add(Me.Label2)
         Me.RadGroupBox5.Controls.Add(Me.Dateedit)
         Me.RadGroupBox5.Controls.Add(Me.Update_by)
         Me.RadGroupBox5.Controls.Add(Me.Label4)
+        Me.RadGroupBox5.Controls.Add(Me.Label17)
         Me.RadGroupBox5.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.RadGroupBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadGroupBox5.HeaderText = "Loading Log"
@@ -2889,20 +3174,20 @@ Partial Class Advisenote
         Me.Label44.Text = "Load No. :"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'Cbn8
+        'Reference
         '
-        Me.Cbn8.BackColor = System.Drawing.SystemColors.Control
-        Me.Cbn8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cbn8.Location = New System.Drawing.Point(101, 29)
-        Me.Cbn8.Name = "Cbn8"
-        Me.Cbn8.ReadOnly = True
-        Me.Cbn8.Size = New System.Drawing.Size(187, 23)
-        Me.Cbn8.TabIndex = 19
-        Me.Cbn8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.Cbn8.ThemeName = "Windows8"
-        CType(Me.Cbn8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        CType(Me.Cbn8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        CType(Me.Cbn8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Reference.BackColor = System.Drawing.SystemColors.Control
+        Me.Reference.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Reference.Location = New System.Drawing.Point(101, 29)
+        Me.Reference.Name = "Reference"
+        Me.Reference.ReadOnly = True
+        Me.Reference.Size = New System.Drawing.Size(187, 23)
+        Me.Reference.TabIndex = 19
+        Me.Reference.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Reference.ThemeName = "Windows8"
+        CType(Me.Reference.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        CType(Me.Reference.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        CType(Me.Reference.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Update_date
         '
@@ -3121,12 +3406,12 @@ Partial Class Advisenote
         Me.DO_Type.DisplayMember = "G_ID"
         Me.DO_Type.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DO_Type.ForeColor = System.Drawing.Color.Black
-        RadListDataItem1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        RadListDataItem1.Text = "CUSTOMER"
-        RadListDataItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        RadListDataItem2.Text = "PTT"
-        Me.DO_Type.Items.Add(RadListDataItem1)
-        Me.DO_Type.Items.Add(RadListDataItem2)
+        RadListDataItem3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        RadListDataItem3.Text = "CUSTOMER"
+        RadListDataItem4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        RadListDataItem4.Text = "PTT"
+        Me.DO_Type.Items.Add(RadListDataItem3)
+        Me.DO_Type.Items.Add(RadListDataItem4)
         Me.DO_Type.Location = New System.Drawing.Point(101, 208)
         Me.DO_Type.Name = "DO_Type"
         Me.DO_Type.Size = New System.Drawing.Size(187, 23)
@@ -3177,25 +3462,25 @@ Partial Class Advisenote
         Me.Cbn3.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.Cbn3.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Cbn3.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn25.EnableExpressionEditor = False
-        GridViewTextBoxColumn25.FieldName = "COMPANY_CODE"
-        GridViewTextBoxColumn25.HeaderText = "Company Code"
-        GridViewTextBoxColumn25.IsAutoGenerated = True
-        GridViewTextBoxColumn25.MinWidth = 163
-        GridViewTextBoxColumn25.Name = "COMPANY_CODE"
-        GridViewTextBoxColumn25.Width = 200
-        GridViewTextBoxColumn26.EnableExpressionEditor = False
-        GridViewTextBoxColumn26.FieldName = "COMPANY_NAME"
-        GridViewTextBoxColumn26.HeaderText = "Company Name"
-        GridViewTextBoxColumn26.IsAutoGenerated = True
-        GridViewTextBoxColumn26.MinWidth = 200
-        GridViewTextBoxColumn26.Name = "COMPANY_NAME"
-        GridViewTextBoxColumn26.Width = 200
-        Me.Cbn3.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn25, GridViewTextBoxColumn26})
+        GridViewTextBoxColumn148.EnableExpressionEditor = False
+        GridViewTextBoxColumn148.FieldName = "COMPANY_CODE"
+        GridViewTextBoxColumn148.HeaderText = "Company Code"
+        GridViewTextBoxColumn148.IsAutoGenerated = True
+        GridViewTextBoxColumn148.MinWidth = 163
+        GridViewTextBoxColumn148.Name = "COMPANY_CODE"
+        GridViewTextBoxColumn148.Width = 200
+        GridViewTextBoxColumn149.EnableExpressionEditor = False
+        GridViewTextBoxColumn149.FieldName = "COMPANY_NAME"
+        GridViewTextBoxColumn149.HeaderText = "Company Name"
+        GridViewTextBoxColumn149.IsAutoGenerated = True
+        GridViewTextBoxColumn149.MinWidth = 200
+        GridViewTextBoxColumn149.Name = "COMPANY_NAME"
+        GridViewTextBoxColumn149.Width = 200
+        Me.Cbn3.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn148, GridViewTextBoxColumn149})
         Me.Cbn3.EditorControl.MasterTemplate.DataSource = Me.TCompanyBindingSource
         Me.Cbn3.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Cbn3.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.Cbn3.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition7
+        Me.Cbn3.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition42
         Me.Cbn3.EditorControl.Name = "NestedRadGridView"
         Me.Cbn3.EditorControl.ReadOnly = True
         Me.Cbn3.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -3210,11 +3495,6 @@ Partial Class Advisenote
         Me.Cbn3.TabStop = False
         Me.Cbn3.ThemeName = "Windows8"
         Me.Cbn3.ValueMember = "COMPANY_ID"
-        '
-        'TCompanyBindingSource
-        '
-        Me.TCompanyBindingSource.DataMember = "T_COMPANY"
-        Me.TCompanyBindingSource.DataSource = Me.DataSet_Table
         '
         'Label18
         '
@@ -3279,281 +3559,6 @@ Partial Class Advisenote
         Me.RadButton7.TabIndex = 268
         Me.RadButton7.Text = "Test Seal"
         Me.RadButton7.Visible = False
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.Controls.Add(Me.Company_sapcode)
-        Me.GroupBox6.Controls.Add(Me.P_Weight)
-        Me.GroupBox6.Controls.Add(Me.PackingId)
-        Me.GroupBox6.Controls.Add(Me.Shipment_id)
-        Me.GroupBox6.Controls.Add(Me.Cbn9)
-        Me.GroupBox6.Controls.Add(Me.Updatedate)
-        Me.GroupBox6.Controls.Add(Me.Cbn6)
-        Me.GroupBox6.Controls.Add(Me.TruckId)
-        Me.GroupBox6.Controls.Add(Me.Prono)
-        Me.GroupBox6.Controls.Add(Me.ProductId)
-        Me.GroupBox6.Controls.Add(Me.StatusId)
-        Me.GroupBox6.Controls.Add(Me.TruckCompanyId)
-        Me.GroupBox6.Controls.Add(Me.DriverID)
-        Me.GroupBox6.Controls.Add(Me.CustomerID)
-        Me.GroupBox6.Controls.Add(Me.ShipperId)
-        Me.GroupBox6.Controls.Add(Me.TextBox1)
-        Me.GroupBox6.Controls.Add(Me.DateeditTemp)
-        Me.GroupBox6.Controls.Add(Me.ComboBox1)
-        Me.GroupBox6.Controls.Add(Me.Label11)
-        Me.GroupBox6.Controls.Add(Me.ShipmentNo1)
-        Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(3, 563)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(205, 22)
-        Me.GroupBox6.TabIndex = 209
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Hidden"
-        Me.GroupBox6.Visible = False
-        '
-        'Company_sapcode
-        '
-        Me.Company_sapcode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.Company_sapcode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.Company_sapcode.DataSource = Me.TCompanyBindingSource
-        Me.Company_sapcode.DisplayMember = "COMPANY_NUMBER"
-        Me.Company_sapcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Company_sapcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Company_sapcode.FormattingEnabled = True
-        Me.Company_sapcode.Location = New System.Drawing.Point(67, 90)
-        Me.Company_sapcode.Name = "Company_sapcode"
-        Me.Company_sapcode.Size = New System.Drawing.Size(62, 21)
-        Me.Company_sapcode.TabIndex = 202
-        Me.Company_sapcode.ValueMember = "COMPANY_NUMBER"
-        '
-        'P_Weight
-        '
-        Me.P_Weight.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.P_Weight.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.P_Weight.DisplayMember = "P_WEIGHT"
-        Me.P_Weight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.P_Weight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.P_Weight.FormattingEnabled = True
-        Me.P_Weight.Location = New System.Drawing.Point(135, 90)
-        Me.P_Weight.Name = "P_Weight"
-        Me.P_Weight.Size = New System.Drawing.Size(62, 21)
-        Me.P_Weight.TabIndex = 199
-        Me.P_Weight.ValueMember = "P_WEIGHT"
-        '
-        'PackingId
-        '
-        Me.PackingId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.PackingId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.PackingId.DisplayMember = "P_ID"
-        Me.PackingId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.PackingId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.PackingId.FormattingEnabled = True
-        Me.PackingId.Location = New System.Drawing.Point(125, 49)
-        Me.PackingId.Name = "PackingId"
-        Me.PackingId.Size = New System.Drawing.Size(59, 21)
-        Me.PackingId.TabIndex = 180
-        Me.PackingId.ValueMember = "P_ID"
-        '
-        'Shipment_id
-        '
-        Me.Shipment_id.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.Shipment_id.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.Shipment_id.DisplayMember = "ID"
-        Me.Shipment_id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Shipment_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Shipment_id.FormattingEnabled = True
-        Me.Shipment_id.Location = New System.Drawing.Point(131, 72)
-        Me.Shipment_id.Name = "Shipment_id"
-        Me.Shipment_id.Size = New System.Drawing.Size(62, 21)
-        Me.Shipment_id.TabIndex = 201
-        Me.Shipment_id.ValueMember = "ID"
-        '
-        'Cbn9
-        '
-        Me.Cbn9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Cbn9.Location = New System.Drawing.Point(6, 480)
-        Me.Cbn9.Name = "Cbn9"
-        Me.Cbn9.Size = New System.Drawing.Size(77, 20)
-        Me.Cbn9.TabIndex = 158
-        Me.Cbn9.Visible = False
-        '
-        'Updatedate
-        '
-        Me.Updatedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Updatedate.Location = New System.Drawing.Point(6, 456)
-        Me.Updatedate.Name = "Updatedate"
-        Me.Updatedate.Size = New System.Drawing.Size(53, 20)
-        Me.Updatedate.TabIndex = 111
-        Me.Updatedate.Visible = False
-        '
-        'Cbn6
-        '
-        Me.Cbn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Cbn6.Location = New System.Drawing.Point(5, 428)
-        Me.Cbn6.Name = "Cbn6"
-        Me.Cbn6.Size = New System.Drawing.Size(55, 20)
-        Me.Cbn6.TabIndex = 149
-        Me.Cbn6.Visible = False
-        '
-        'TruckId
-        '
-        Me.TruckId.DisplayMember = "ID"
-        Me.TruckId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.TruckId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.TruckId.FormattingEnabled = True
-        Me.TruckId.Location = New System.Drawing.Point(6, 90)
-        Me.TruckId.Name = "TruckId"
-        Me.TruckId.Size = New System.Drawing.Size(55, 21)
-        Me.TruckId.TabIndex = 154
-        Me.TruckId.ValueMember = "ID"
-        '
-        'Prono
-        '
-        Me.Prono.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Prono.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Prono.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Prono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Prono.FormattingEnabled = True
-        Me.Prono.Location = New System.Drawing.Point(14, 117)
-        Me.Prono.Name = "Prono"
-        Me.Prono.Size = New System.Drawing.Size(152, 21)
-        Me.Prono.TabIndex = 160
-        '
-        'ProductId
-        '
-        Me.ProductId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ProductId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ProductId.DisplayMember = "ID"
-        Me.ProductId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ProductId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.ProductId.FormattingEnabled = True
-        Me.ProductId.Location = New System.Drawing.Point(66, 49)
-        Me.ProductId.Name = "ProductId"
-        Me.ProductId.Size = New System.Drawing.Size(53, 21)
-        Me.ProductId.TabIndex = 175
-        Me.ProductId.ValueMember = "ID"
-        '
-        'StatusId
-        '
-        Me.StatusId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.StatusId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.StatusId.DisplayMember = "STATUS_ID"
-        Me.StatusId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.StatusId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.StatusId.FormattingEnabled = True
-        Me.StatusId.Location = New System.Drawing.Point(66, 70)
-        Me.StatusId.Name = "StatusId"
-        Me.StatusId.Size = New System.Drawing.Size(59, 21)
-        Me.StatusId.TabIndex = 177
-        Me.StatusId.ValueMember = "STATUS_ID"
-        '
-        'TruckCompanyId
-        '
-        Me.TruckCompanyId.DataSource = Me.TCompanyBindingSource
-        Me.TruckCompanyId.DisplayMember = "COMPANY_ID"
-        Me.TruckCompanyId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.TruckCompanyId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.TruckCompanyId.FormattingEnabled = True
-        Me.TruckCompanyId.Location = New System.Drawing.Point(14, 25)
-        Me.TruckCompanyId.Name = "TruckCompanyId"
-        Me.TruckCompanyId.Size = New System.Drawing.Size(55, 21)
-        Me.TruckCompanyId.TabIndex = 156
-        Me.TruckCompanyId.ValueMember = "COMPANY_ID"
-        '
-        'DriverID
-        '
-        Me.DriverID.DataSource = Me.TDriverBindingSource
-        Me.DriverID.DisplayMember = "ID"
-        Me.DriverID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.DriverID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.DriverID.FormattingEnabled = True
-        Me.DriverID.Location = New System.Drawing.Point(40, 15)
-        Me.DriverID.Name = "DriverID"
-        Me.DriverID.Size = New System.Drawing.Size(55, 21)
-        Me.DriverID.TabIndex = 157
-        Me.DriverID.ValueMember = "ID"
-        '
-        'CustomerID
-        '
-        Me.CustomerID.DataSource = Me.TCUSTOMERTBindingSource
-        Me.CustomerID.DisplayMember = "ID"
-        Me.CustomerID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CustomerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.CustomerID.FormattingEnabled = True
-        Me.CustomerID.Location = New System.Drawing.Point(5, 49)
-        Me.CustomerID.Name = "CustomerID"
-        Me.CustomerID.Size = New System.Drawing.Size(55, 21)
-        Me.CustomerID.TabIndex = 170
-        Me.CustomerID.ValueMember = "ID"
-        '
-        'ShipperId
-        '
-        Me.ShipperId.DataSource = Me.TShipperBindingSource
-        Me.ShipperId.DisplayMember = "ID"
-        Me.ShipperId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ShipperId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.ShipperId.FormattingEnabled = True
-        Me.ShipperId.Location = New System.Drawing.Point(5, 70)
-        Me.ShipperId.Name = "ShipperId"
-        Me.ShipperId.Size = New System.Drawing.Size(55, 21)
-        Me.ShipperId.TabIndex = 155
-        Me.ShipperId.ValueMember = "ID"
-        '
-        'TShipperBindingSource
-        '
-        Me.TShipperBindingSource.DataMember = "T_SHIPPER"
-        Me.TShipperBindingSource.DataSource = Me.DataSet_Table
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(190, 50)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(31, 20)
-        Me.TextBox1.TabIndex = 174
-        '
-        'DateeditTemp
-        '
-        Me.DateeditTemp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.DateeditTemp.Location = New System.Drawing.Point(4, 402)
-        Me.DateeditTemp.Name = "DateeditTemp"
-        Me.DateeditTemp.Size = New System.Drawing.Size(57, 20)
-        Me.DateeditTemp.TabIndex = 139
-        Me.DateeditTemp.Visible = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"a", "b", "c"})
-        Me.ComboBox1.Location = New System.Drawing.Point(101, 22)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(46, 21)
-        Me.ComboBox1.TabIndex = 153
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label11.Location = New System.Drawing.Point(-75, 28)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(109, 20)
-        Me.Label11.TabIndex = 167
-        Me.Label11.Text = "Shipment No.:"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'ShipmentNo1
-        '
-        Me.ShipmentNo1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ShipmentNo1.Enabled = False
-        Me.ShipmentNo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.ShipmentNo1.Location = New System.Drawing.Point(40, 25)
-        Me.ShipmentNo1.Name = "ShipmentNo1"
-        Me.ShipmentNo1.Size = New System.Drawing.Size(264, 26)
-        Me.ShipmentNo1.TabIndex = 30
         '
         'Page_Temp
         '
@@ -5415,27 +5420,27 @@ Partial Class Advisenote
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.AllowDeleteRow = False
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.AllowEditRow = False
-        GridViewTextBoxColumn27.EnableExpressionEditor = False
-        GridViewTextBoxColumn27.FieldName = "CUSTOMER_CODE"
-        GridViewTextBoxColumn27.HeaderText = "บริษัท"
-        GridViewTextBoxColumn27.IsAutoGenerated = True
-        GridViewTextBoxColumn27.Name = "CUSTOMER_CODE"
-        GridViewTextBoxColumn27.ReadOnly = True
-        GridViewTextBoxColumn27.Width = 100
-        GridViewTextBoxColumn28.EnableExpressionEditor = False
-        GridViewTextBoxColumn28.FieldName = "CUSTOMER_NAME"
-        GridViewTextBoxColumn28.HeaderText = "บริษัทลูกค้า"
-        GridViewTextBoxColumn28.IsAutoGenerated = True
-        GridViewTextBoxColumn28.Name = "CUSTOMER_NAME"
-        GridViewTextBoxColumn28.ReadOnly = True
-        GridViewTextBoxColumn28.Width = 100
-        Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn27, GridViewTextBoxColumn28})
+        GridViewTextBoxColumn168.EnableExpressionEditor = False
+        GridViewTextBoxColumn168.FieldName = "CUSTOMER_CODE"
+        GridViewTextBoxColumn168.HeaderText = "บริษัท"
+        GridViewTextBoxColumn168.IsAutoGenerated = True
+        GridViewTextBoxColumn168.Name = "CUSTOMER_CODE"
+        GridViewTextBoxColumn168.ReadOnly = True
+        GridViewTextBoxColumn168.Width = 100
+        GridViewTextBoxColumn169.EnableExpressionEditor = False
+        GridViewTextBoxColumn169.FieldName = "CUSTOMER_NAME"
+        GridViewTextBoxColumn169.HeaderText = "บริษัทลูกค้า"
+        GridViewTextBoxColumn169.IsAutoGenerated = True
+        GridViewTextBoxColumn169.Name = "CUSTOMER_NAME"
+        GridViewTextBoxColumn169.ReadOnly = True
+        GridViewTextBoxColumn169.Width = 100
+        Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn168, GridViewTextBoxColumn169})
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.DataSource = Me.TCUSTOMERTBindingSource
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.EnableFiltering = True
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.EnableGrouping = False
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition8
+        Me.RadMultiColumnComboBox3.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition47
         Me.RadMultiColumnComboBox3.EditorControl.Name = "NestedRadGridView"
         Me.RadMultiColumnComboBox3.EditorControl.ReadOnly = True
         Me.RadMultiColumnComboBox3.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -5468,45 +5473,45 @@ Partial Class Advisenote
         Me.MultiColumnComboGridView4.MasterTemplate.AllowDeleteRow = False
         Me.MultiColumnComboGridView4.MasterTemplate.AllowEditRow = False
         Me.MultiColumnComboGridView4.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn29.EnableExpressionEditor = False
-        GridViewTextBoxColumn29.FieldName = "TRUCK_NUMBER"
-        GridViewTextBoxColumn29.HeaderText = "ทะเบียนรถ"
-        GridViewTextBoxColumn29.IsAutoGenerated = True
-        GridViewTextBoxColumn29.Name = "TRUCK_NUMBER"
-        GridViewTextBoxColumn29.ReadOnly = True
-        GridViewTextBoxColumn29.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn29.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        GridViewTextBoxColumn29.Width = 55
-        GridViewDecimalColumn5.HeaderText = "column1"
-        GridViewDecimalColumn5.Name = "column1"
-        GridViewDecimalColumn6.DataType = GetType(Double)
-        GridViewDecimalColumn6.EnableExpressionEditor = False
-        GridViewDecimalColumn6.FieldName = "TRUCK_CAPASITY"
-        GridViewDecimalColumn6.HeaderText = "ความจุ"
-        GridViewDecimalColumn6.IsAutoGenerated = True
-        GridViewDecimalColumn6.Name = "TRUCK_CAPASITY"
-        GridViewDecimalColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-        GridViewDecimalColumn7.DataType = GetType(Double)
-        GridViewDecimalColumn7.EnableExpressionEditor = False
-        GridViewDecimalColumn7.FieldName = "TRUCK_COMP_NUM"
-        GridViewDecimalColumn7.HeaderText = "จำนวนช่องเติม"
-        GridViewDecimalColumn7.IsAutoGenerated = True
-        GridViewDecimalColumn7.Name = "TRUCK_COMP_NUM"
-        GridViewDecimalColumn7.Width = 69
-        GridViewDecimalColumn8.DataType = GetType(String)
-        GridViewDecimalColumn8.EnableExpressionEditor = False
-        GridViewDecimalColumn8.FieldName = "TRUCK_COMPANY"
-        GridViewDecimalColumn8.HeaderText = "บริษัท"
-        GridViewDecimalColumn8.IsAutoGenerated = True
-        GridViewDecimalColumn8.Name = "TRUCK_COMPANY"
-        Me.MultiColumnComboGridView4.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn29, GridViewDecimalColumn5, GridViewDecimalColumn6, GridViewDecimalColumn7, GridViewDecimalColumn8})
+        GridViewTextBoxColumn170.EnableExpressionEditor = False
+        GridViewTextBoxColumn170.FieldName = "TRUCK_NUMBER"
+        GridViewTextBoxColumn170.HeaderText = "ทะเบียนรถ"
+        GridViewTextBoxColumn170.IsAutoGenerated = True
+        GridViewTextBoxColumn170.Name = "TRUCK_NUMBER"
+        GridViewTextBoxColumn170.ReadOnly = True
+        GridViewTextBoxColumn170.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn170.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        GridViewTextBoxColumn170.Width = 55
+        GridViewDecimalColumn113.HeaderText = "column1"
+        GridViewDecimalColumn113.Name = "column1"
+        GridViewDecimalColumn114.DataType = GetType(Double)
+        GridViewDecimalColumn114.EnableExpressionEditor = False
+        GridViewDecimalColumn114.FieldName = "TRUCK_CAPASITY"
+        GridViewDecimalColumn114.HeaderText = "ความจุ"
+        GridViewDecimalColumn114.IsAutoGenerated = True
+        GridViewDecimalColumn114.Name = "TRUCK_CAPASITY"
+        GridViewDecimalColumn114.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        GridViewDecimalColumn115.DataType = GetType(Double)
+        GridViewDecimalColumn115.EnableExpressionEditor = False
+        GridViewDecimalColumn115.FieldName = "TRUCK_COMP_NUM"
+        GridViewDecimalColumn115.HeaderText = "จำนวนช่องเติม"
+        GridViewDecimalColumn115.IsAutoGenerated = True
+        GridViewDecimalColumn115.Name = "TRUCK_COMP_NUM"
+        GridViewDecimalColumn115.Width = 69
+        GridViewDecimalColumn116.DataType = GetType(String)
+        GridViewDecimalColumn116.EnableExpressionEditor = False
+        GridViewDecimalColumn116.FieldName = "TRUCK_COMPANY"
+        GridViewDecimalColumn116.HeaderText = "บริษัท"
+        GridViewDecimalColumn116.IsAutoGenerated = True
+        GridViewDecimalColumn116.Name = "TRUCK_COMPANY"
+        Me.MultiColumnComboGridView4.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn170, GridViewDecimalColumn113, GridViewDecimalColumn114, GridViewDecimalColumn115, GridViewDecimalColumn116})
         Me.MultiColumnComboGridView4.MasterTemplate.EnableFiltering = True
         Me.MultiColumnComboGridView4.MasterTemplate.EnableGrouping = False
         Me.MultiColumnComboGridView4.MasterTemplate.ShowFilteringRow = False
         Me.MultiColumnComboGridView4.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor6.PropertyName = "TRUCK_NUMBER"
-        Me.MultiColumnComboGridView4.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor6})
-        Me.MultiColumnComboGridView4.MasterTemplate.ViewDefinition = TableViewDefinition9
+        SortDescriptor27.PropertyName = "TRUCK_NUMBER"
+        Me.MultiColumnComboGridView4.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor27})
+        Me.MultiColumnComboGridView4.MasterTemplate.ViewDefinition = TableViewDefinition48
         Me.MultiColumnComboGridView4.Name = "MultiColumnComboGridView4"
         Me.MultiColumnComboGridView4.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MultiColumnComboGridView4.ReadOnly = True
@@ -5540,52 +5545,52 @@ Partial Class Advisenote
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.AllowDeleteRow = False
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.AllowEditRow = False
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn30.EnableExpressionEditor = False
-        GridViewTextBoxColumn30.FieldName = "DRIVER_NAME"
-        GridViewTextBoxColumn30.HeaderText = "ชื่อ"
-        GridViewTextBoxColumn30.IsAutoGenerated = True
-        GridViewTextBoxColumn30.Name = "DRIVER_NAME"
-        GridViewTextBoxColumn30.ReadOnly = True
-        GridViewTextBoxColumn30.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn30.Width = 80
-        GridViewTextBoxColumn31.EnableExpressionEditor = False
-        GridViewTextBoxColumn31.FieldName = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn31.HeaderText = "นามสกุล"
-        GridViewTextBoxColumn31.IsAutoGenerated = True
-        GridViewTextBoxColumn31.Name = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn31.ReadOnly = True
-        GridViewTextBoxColumn31.Width = 80
-        GridViewTextBoxColumn32.EnableExpressionEditor = False
-        GridViewTextBoxColumn32.FieldName = "DRIVER_BLACK_LIST"
-        GridViewTextBoxColumn32.HeaderText = "BLACK LIST"
-        GridViewTextBoxColumn32.IsAutoGenerated = True
-        GridViewTextBoxColumn32.Name = "DRIVER_BLACK_LIST"
-        GridViewTextBoxColumn32.ReadOnly = True
-        GridViewDecimalColumn9.DataType = GetType(Double)
-        GridViewDecimalColumn9.EnableExpressionEditor = False
-        GridViewDecimalColumn9.FieldName = "DRIVER_COMPANY"
-        GridViewDecimalColumn9.HeaderText = "บริษัท"
-        GridViewDecimalColumn9.IsAutoGenerated = True
-        GridViewDecimalColumn9.Name = "DRIVER_COMPANY"
-        GridViewDecimalColumn9.ReadOnly = True
-        GridViewDecimalColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-        GridViewDecimalColumn9.Width = 80
-        GridViewTextBoxColumn33.EnableExpressionEditor = False
-        GridViewTextBoxColumn33.FieldName = "DRIVER_LICENSE"
-        GridViewTextBoxColumn33.HeaderText = "เลขที่ใบขับขี่"
-        GridViewTextBoxColumn33.IsAutoGenerated = True
-        GridViewTextBoxColumn33.Name = "DRIVER_LICENSE"
-        GridViewTextBoxColumn33.ReadOnly = True
-        GridViewTextBoxColumn33.Width = 80
-        Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn30, GridViewTextBoxColumn31, GridViewTextBoxColumn32, GridViewDecimalColumn9, GridViewTextBoxColumn33})
+        GridViewTextBoxColumn171.EnableExpressionEditor = False
+        GridViewTextBoxColumn171.FieldName = "DRIVER_NAME"
+        GridViewTextBoxColumn171.HeaderText = "ชื่อ"
+        GridViewTextBoxColumn171.IsAutoGenerated = True
+        GridViewTextBoxColumn171.Name = "DRIVER_NAME"
+        GridViewTextBoxColumn171.ReadOnly = True
+        GridViewTextBoxColumn171.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn171.Width = 80
+        GridViewTextBoxColumn172.EnableExpressionEditor = False
+        GridViewTextBoxColumn172.FieldName = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn172.HeaderText = "นามสกุล"
+        GridViewTextBoxColumn172.IsAutoGenerated = True
+        GridViewTextBoxColumn172.Name = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn172.ReadOnly = True
+        GridViewTextBoxColumn172.Width = 80
+        GridViewTextBoxColumn173.EnableExpressionEditor = False
+        GridViewTextBoxColumn173.FieldName = "DRIVER_BLACK_LIST"
+        GridViewTextBoxColumn173.HeaderText = "BLACK LIST"
+        GridViewTextBoxColumn173.IsAutoGenerated = True
+        GridViewTextBoxColumn173.Name = "DRIVER_BLACK_LIST"
+        GridViewTextBoxColumn173.ReadOnly = True
+        GridViewDecimalColumn117.DataType = GetType(Double)
+        GridViewDecimalColumn117.EnableExpressionEditor = False
+        GridViewDecimalColumn117.FieldName = "DRIVER_COMPANY"
+        GridViewDecimalColumn117.HeaderText = "บริษัท"
+        GridViewDecimalColumn117.IsAutoGenerated = True
+        GridViewDecimalColumn117.Name = "DRIVER_COMPANY"
+        GridViewDecimalColumn117.ReadOnly = True
+        GridViewDecimalColumn117.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        GridViewDecimalColumn117.Width = 80
+        GridViewTextBoxColumn174.EnableExpressionEditor = False
+        GridViewTextBoxColumn174.FieldName = "DRIVER_LICENSE"
+        GridViewTextBoxColumn174.HeaderText = "เลขที่ใบขับขี่"
+        GridViewTextBoxColumn174.IsAutoGenerated = True
+        GridViewTextBoxColumn174.Name = "DRIVER_LICENSE"
+        GridViewTextBoxColumn174.ReadOnly = True
+        GridViewTextBoxColumn174.Width = 80
+        Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn171, GridViewTextBoxColumn172, GridViewTextBoxColumn173, GridViewDecimalColumn117, GridViewTextBoxColumn174})
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.DataSource = Me.TDriverBindingSource
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.EnableFiltering = True
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.EnableGrouping = False
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor7.PropertyName = "DRIVER_NAME"
-        Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor7})
-        Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition10
+        SortDescriptor28.PropertyName = "DRIVER_NAME"
+        Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor28})
+        Me.RadMultiColumnComboBox4.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition49
         Me.RadMultiColumnComboBox4.EditorControl.Name = "NestedRadGridView"
         Me.RadMultiColumnComboBox4.EditorControl.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.RadMultiColumnComboBox4.EditorControl.ReadOnly = True
@@ -5621,173 +5626,173 @@ Partial Class Advisenote
         Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.AllowAddNewRow = False
         Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.AllowColumnChooser = False
-        GridViewDecimalColumn10.DataType = GetType(Double)
-        GridViewDecimalColumn10.FieldName = "ID"
-        GridViewDecimalColumn10.HeaderText = "ID"
-        GridViewDecimalColumn10.IsAutoGenerated = True
-        GridViewDecimalColumn10.Name = "ID"
-        GridViewTextBoxColumn34.FieldName = "TRUCK_NUMBER"
-        GridViewTextBoxColumn34.HeaderText = "TRUCK_NUMBER"
-        GridViewTextBoxColumn34.IsAutoGenerated = True
-        GridViewTextBoxColumn34.Name = "TRUCK_NUMBER"
-        GridViewTextBoxColumn35.FieldName = "TRUCK_TYPE"
-        GridViewTextBoxColumn35.HeaderText = "TRUCK_TYPE"
-        GridViewTextBoxColumn35.IsAutoGenerated = True
-        GridViewTextBoxColumn35.Name = "TRUCK_TYPE"
-        GridViewDecimalColumn11.DataType = GetType(Double)
-        GridViewDecimalColumn11.FieldName = "TRUCK_CAPASITY"
-        GridViewDecimalColumn11.HeaderText = "TRUCK_CAPASITY"
-        GridViewDecimalColumn11.IsAutoGenerated = True
-        GridViewDecimalColumn11.Name = "TRUCK_CAPASITY"
-        GridViewDecimalColumn12.DataType = GetType(Double)
-        GridViewDecimalColumn12.FieldName = "TRUCK_COMP_NUM"
-        GridViewDecimalColumn12.HeaderText = "TRUCK_COMP_NUM"
-        GridViewDecimalColumn12.IsAutoGenerated = True
-        GridViewDecimalColumn12.Name = "TRUCK_COMP_NUM"
-        GridViewTextBoxColumn36.FieldName = "TRUCK_BLACK_LIST"
-        GridViewTextBoxColumn36.HeaderText = "TRUCK_BLACK_LIST"
-        GridViewTextBoxColumn36.IsAutoGenerated = True
-        GridViewTextBoxColumn36.Name = "TRUCK_BLACK_LIST"
-        GridViewTextBoxColumn37.FieldName = "TRUCK_COMPANY"
-        GridViewTextBoxColumn37.HeaderText = "TRUCK_COMPANY"
-        GridViewTextBoxColumn37.IsAutoGenerated = True
-        GridViewTextBoxColumn37.Name = "TRUCK_COMPANY"
-        GridViewTextBoxColumn38.FieldName = "TRUCK_DRIVER"
-        GridViewTextBoxColumn38.HeaderText = "TRUCK_DRIVER"
-        GridViewTextBoxColumn38.IsAutoGenerated = True
-        GridViewTextBoxColumn38.Name = "TRUCK_DRIVER"
-        GridViewDateTimeColumn2.FieldName = "TRUCK_DATE"
-        GridViewDateTimeColumn2.HeaderText = "TRUCK_DATE"
-        GridViewDateTimeColumn2.IsAutoGenerated = True
-        GridViewDateTimeColumn2.Name = "TRUCK_DATE"
-        GridViewTextBoxColumn39.FieldName = "TYPE_ARM"
-        GridViewTextBoxColumn39.HeaderText = "TYPE_ARM"
-        GridViewTextBoxColumn39.IsAutoGenerated = True
-        GridViewTextBoxColumn39.Name = "TYPE_ARM"
-        GridViewDecimalColumn13.DataType = GetType(Double)
-        GridViewDecimalColumn13.FieldName = "DRIVER_ID"
-        GridViewDecimalColumn13.HeaderText = "DRIVER_ID"
-        GridViewDecimalColumn13.IsAutoGenerated = True
-        GridViewDecimalColumn13.Name = "DRIVER_ID"
-        GridViewDecimalColumn14.DataType = GetType(Double)
-        GridViewDecimalColumn14.FieldName = "TRUCK_CAPA_COPM1"
-        GridViewDecimalColumn14.HeaderText = "TRUCK_CAPA_COPM1"
-        GridViewDecimalColumn14.IsAutoGenerated = True
-        GridViewDecimalColumn14.Name = "TRUCK_CAPA_COPM1"
-        GridViewDecimalColumn15.DataType = GetType(Double)
-        GridViewDecimalColumn15.FieldName = "TRUCK_CAPA_COPM2"
-        GridViewDecimalColumn15.HeaderText = "TRUCK_CAPA_COPM2"
-        GridViewDecimalColumn15.IsAutoGenerated = True
-        GridViewDecimalColumn15.Name = "TRUCK_CAPA_COPM2"
-        GridViewDecimalColumn16.DataType = GetType(Double)
-        GridViewDecimalColumn16.FieldName = "TRUCK_CAPA_COPM3"
-        GridViewDecimalColumn16.HeaderText = "TRUCK_CAPA_COPM3"
-        GridViewDecimalColumn16.IsAutoGenerated = True
-        GridViewDecimalColumn16.Name = "TRUCK_CAPA_COPM3"
-        GridViewDecimalColumn17.DataType = GetType(Double)
-        GridViewDecimalColumn17.FieldName = "TRUCK_CAPA_COPM4"
-        GridViewDecimalColumn17.HeaderText = "TRUCK_CAPA_COPM4"
-        GridViewDecimalColumn17.IsAutoGenerated = True
-        GridViewDecimalColumn17.Name = "TRUCK_CAPA_COPM4"
-        GridViewDecimalColumn18.DataType = GetType(Double)
-        GridViewDecimalColumn18.FieldName = "TRUCK_CAPA_COPM5"
-        GridViewDecimalColumn18.HeaderText = "TRUCK_CAPA_COPM5"
-        GridViewDecimalColumn18.IsAutoGenerated = True
-        GridViewDecimalColumn18.Name = "TRUCK_CAPA_COPM5"
-        GridViewDecimalColumn19.DataType = GetType(Double)
-        GridViewDecimalColumn19.FieldName = "TRUCK_CAPA_COPM6"
-        GridViewDecimalColumn19.HeaderText = "TRUCK_CAPA_COPM6"
-        GridViewDecimalColumn19.IsAutoGenerated = True
-        GridViewDecimalColumn19.Name = "TRUCK_CAPA_COPM6"
-        GridViewDecimalColumn20.DataType = GetType(Double)
-        GridViewDecimalColumn20.FieldName = "TRUCK_CAPA_COPM7"
-        GridViewDecimalColumn20.HeaderText = "TRUCK_CAPA_COPM7"
-        GridViewDecimalColumn20.IsAutoGenerated = True
-        GridViewDecimalColumn20.Name = "TRUCK_CAPA_COPM7"
-        GridViewDecimalColumn21.DataType = GetType(Double)
-        GridViewDecimalColumn21.FieldName = "TRUCK_CAPA_COPM8"
-        GridViewDecimalColumn21.HeaderText = "TRUCK_CAPA_COPM8"
-        GridViewDecimalColumn21.IsAutoGenerated = True
-        GridViewDecimalColumn21.Name = "TRUCK_CAPA_COPM8"
-        GridViewDecimalColumn22.DataType = GetType(Double)
-        GridViewDecimalColumn22.FieldName = "TRUCK_CAPA_COPM9"
-        GridViewDecimalColumn22.HeaderText = "TRUCK_CAPA_COPM9"
-        GridViewDecimalColumn22.IsAutoGenerated = True
-        GridViewDecimalColumn22.Name = "TRUCK_CAPA_COPM9"
-        GridViewDecimalColumn23.DataType = GetType(Double)
-        GridViewDecimalColumn23.FieldName = "TRUCK_CAPA_COPM10"
-        GridViewDecimalColumn23.HeaderText = "TRUCK_CAPA_COPM10"
-        GridViewDecimalColumn23.IsAutoGenerated = True
-        GridViewDecimalColumn23.Name = "TRUCK_CAPA_COPM10"
-        GridViewDecimalColumn24.DataType = GetType(Double)
-        GridViewDecimalColumn24.FieldName = "TRUCK_CAPA_COPM11"
-        GridViewDecimalColumn24.HeaderText = "TRUCK_CAPA_COPM11"
-        GridViewDecimalColumn24.IsAutoGenerated = True
-        GridViewDecimalColumn24.Name = "TRUCK_CAPA_COPM11"
-        GridViewDecimalColumn25.DataType = GetType(Double)
-        GridViewDecimalColumn25.FieldName = "TRUCK_CAPA_COPM12"
-        GridViewDecimalColumn25.HeaderText = "TRUCK_CAPA_COPM12"
-        GridViewDecimalColumn25.IsAutoGenerated = True
-        GridViewDecimalColumn25.Name = "TRUCK_CAPA_COPM12"
-        GridViewDecimalColumn26.DataType = GetType(Double)
-        GridViewDecimalColumn26.FieldName = "TRUCK_CAPA_COPM13"
-        GridViewDecimalColumn26.HeaderText = "TRUCK_CAPA_COPM13"
-        GridViewDecimalColumn26.IsAutoGenerated = True
-        GridViewDecimalColumn26.Name = "TRUCK_CAPA_COPM13"
-        GridViewDecimalColumn27.DataType = GetType(Double)
-        GridViewDecimalColumn27.FieldName = "TRUCK_CAPA_COPM14"
-        GridViewDecimalColumn27.HeaderText = "TRUCK_CAPA_COPM14"
-        GridViewDecimalColumn27.IsAutoGenerated = True
-        GridViewDecimalColumn27.Name = "TRUCK_CAPA_COPM14"
-        GridViewDecimalColumn28.DataType = GetType(Double)
-        GridViewDecimalColumn28.FieldName = "TRUCK_CAPA_COPM15"
-        GridViewDecimalColumn28.HeaderText = "TRUCK_CAPA_COPM15"
-        GridViewDecimalColumn28.IsAutoGenerated = True
-        GridViewDecimalColumn28.Name = "TRUCK_CAPA_COPM15"
-        GridViewDecimalColumn29.DataType = GetType(Double)
-        GridViewDecimalColumn29.FieldName = "TRUCK_CAPA_COPM16"
-        GridViewDecimalColumn29.HeaderText = "TRUCK_CAPA_COPM16"
-        GridViewDecimalColumn29.IsAutoGenerated = True
-        GridViewDecimalColumn29.Name = "TRUCK_CAPA_COPM16"
-        GridViewDecimalColumn30.DataType = GetType(Double)
-        GridViewDecimalColumn30.FieldName = "TRUCK_CAPA_COPM17"
-        GridViewDecimalColumn30.HeaderText = "TRUCK_CAPA_COPM17"
-        GridViewDecimalColumn30.IsAutoGenerated = True
-        GridViewDecimalColumn30.Name = "TRUCK_CAPA_COPM17"
-        GridViewDecimalColumn31.DataType = GetType(Double)
-        GridViewDecimalColumn31.FieldName = "TRUCK_CAPA_COPM18"
-        GridViewDecimalColumn31.HeaderText = "TRUCK_CAPA_COPM18"
-        GridViewDecimalColumn31.IsAutoGenerated = True
-        GridViewDecimalColumn31.Name = "TRUCK_CAPA_COPM18"
-        GridViewDecimalColumn32.DataType = GetType(Double)
-        GridViewDecimalColumn32.FieldName = "TRUCK_CAPA_COPM19"
-        GridViewDecimalColumn32.HeaderText = "TRUCK_CAPA_COPM19"
-        GridViewDecimalColumn32.IsAutoGenerated = True
-        GridViewDecimalColumn32.Name = "TRUCK_CAPA_COPM19"
-        GridViewDecimalColumn33.DataType = GetType(Double)
-        GridViewDecimalColumn33.FieldName = "TRUCK_CAPA_COPM20"
-        GridViewDecimalColumn33.HeaderText = "TRUCK_CAPA_COPM20"
-        GridViewDecimalColumn33.IsAutoGenerated = True
-        GridViewDecimalColumn33.Name = "TRUCK_CAPA_COPM20"
-        GridViewDecimalColumn34.DataType = GetType(Double)
-        GridViewDecimalColumn34.FieldName = "TRUCK_SHIPPER"
-        GridViewDecimalColumn34.HeaderText = "TRUCK_SHIPPER"
-        GridViewDecimalColumn34.IsAutoGenerated = True
-        GridViewDecimalColumn34.Name = "TRUCK_SHIPPER"
-        GridViewTextBoxColumn40.FieldName = "SP_CODE"
-        GridViewTextBoxColumn40.HeaderText = "SP_CODE"
-        GridViewTextBoxColumn40.IsAutoGenerated = True
-        GridViewTextBoxColumn40.Name = "SP_CODE"
-        GridViewDecimalColumn35.DataType = GetType(Double)
-        GridViewDecimalColumn35.FieldName = "TRUCK_COMPANYID"
-        GridViewDecimalColumn35.HeaderText = "TRUCK_COMPANYID"
-        GridViewDecimalColumn35.IsAutoGenerated = True
-        GridViewDecimalColumn35.Name = "TRUCK_COMPANYID"
-        Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn10, GridViewTextBoxColumn34, GridViewTextBoxColumn35, GridViewDecimalColumn11, GridViewDecimalColumn12, GridViewTextBoxColumn36, GridViewTextBoxColumn37, GridViewTextBoxColumn38, GridViewDateTimeColumn2, GridViewTextBoxColumn39, GridViewDecimalColumn13, GridViewDecimalColumn14, GridViewDecimalColumn15, GridViewDecimalColumn16, GridViewDecimalColumn17, GridViewDecimalColumn18, GridViewDecimalColumn19, GridViewDecimalColumn20, GridViewDecimalColumn21, GridViewDecimalColumn22, GridViewDecimalColumn23, GridViewDecimalColumn24, GridViewDecimalColumn25, GridViewDecimalColumn26, GridViewDecimalColumn27, GridViewDecimalColumn28, GridViewDecimalColumn29, GridViewDecimalColumn30, GridViewDecimalColumn31, GridViewDecimalColumn32, GridViewDecimalColumn33, GridViewDecimalColumn34, GridViewTextBoxColumn40, GridViewDecimalColumn35})
+        GridViewDecimalColumn118.DataType = GetType(Double)
+        GridViewDecimalColumn118.FieldName = "ID"
+        GridViewDecimalColumn118.HeaderText = "ID"
+        GridViewDecimalColumn118.IsAutoGenerated = True
+        GridViewDecimalColumn118.Name = "ID"
+        GridViewTextBoxColumn175.FieldName = "TRUCK_NUMBER"
+        GridViewTextBoxColumn175.HeaderText = "TRUCK_NUMBER"
+        GridViewTextBoxColumn175.IsAutoGenerated = True
+        GridViewTextBoxColumn175.Name = "TRUCK_NUMBER"
+        GridViewTextBoxColumn176.FieldName = "TRUCK_TYPE"
+        GridViewTextBoxColumn176.HeaderText = "TRUCK_TYPE"
+        GridViewTextBoxColumn176.IsAutoGenerated = True
+        GridViewTextBoxColumn176.Name = "TRUCK_TYPE"
+        GridViewDecimalColumn119.DataType = GetType(Double)
+        GridViewDecimalColumn119.FieldName = "TRUCK_CAPASITY"
+        GridViewDecimalColumn119.HeaderText = "TRUCK_CAPASITY"
+        GridViewDecimalColumn119.IsAutoGenerated = True
+        GridViewDecimalColumn119.Name = "TRUCK_CAPASITY"
+        GridViewDecimalColumn120.DataType = GetType(Double)
+        GridViewDecimalColumn120.FieldName = "TRUCK_COMP_NUM"
+        GridViewDecimalColumn120.HeaderText = "TRUCK_COMP_NUM"
+        GridViewDecimalColumn120.IsAutoGenerated = True
+        GridViewDecimalColumn120.Name = "TRUCK_COMP_NUM"
+        GridViewTextBoxColumn177.FieldName = "TRUCK_BLACK_LIST"
+        GridViewTextBoxColumn177.HeaderText = "TRUCK_BLACK_LIST"
+        GridViewTextBoxColumn177.IsAutoGenerated = True
+        GridViewTextBoxColumn177.Name = "TRUCK_BLACK_LIST"
+        GridViewTextBoxColumn178.FieldName = "TRUCK_COMPANY"
+        GridViewTextBoxColumn178.HeaderText = "TRUCK_COMPANY"
+        GridViewTextBoxColumn178.IsAutoGenerated = True
+        GridViewTextBoxColumn178.Name = "TRUCK_COMPANY"
+        GridViewTextBoxColumn179.FieldName = "TRUCK_DRIVER"
+        GridViewTextBoxColumn179.HeaderText = "TRUCK_DRIVER"
+        GridViewTextBoxColumn179.IsAutoGenerated = True
+        GridViewTextBoxColumn179.Name = "TRUCK_DRIVER"
+        GridViewDateTimeColumn11.FieldName = "TRUCK_DATE"
+        GridViewDateTimeColumn11.HeaderText = "TRUCK_DATE"
+        GridViewDateTimeColumn11.IsAutoGenerated = True
+        GridViewDateTimeColumn11.Name = "TRUCK_DATE"
+        GridViewTextBoxColumn180.FieldName = "TYPE_ARM"
+        GridViewTextBoxColumn180.HeaderText = "TYPE_ARM"
+        GridViewTextBoxColumn180.IsAutoGenerated = True
+        GridViewTextBoxColumn180.Name = "TYPE_ARM"
+        GridViewDecimalColumn121.DataType = GetType(Double)
+        GridViewDecimalColumn121.FieldName = "DRIVER_ID"
+        GridViewDecimalColumn121.HeaderText = "DRIVER_ID"
+        GridViewDecimalColumn121.IsAutoGenerated = True
+        GridViewDecimalColumn121.Name = "DRIVER_ID"
+        GridViewDecimalColumn122.DataType = GetType(Double)
+        GridViewDecimalColumn122.FieldName = "TRUCK_CAPA_COPM1"
+        GridViewDecimalColumn122.HeaderText = "TRUCK_CAPA_COPM1"
+        GridViewDecimalColumn122.IsAutoGenerated = True
+        GridViewDecimalColumn122.Name = "TRUCK_CAPA_COPM1"
+        GridViewDecimalColumn123.DataType = GetType(Double)
+        GridViewDecimalColumn123.FieldName = "TRUCK_CAPA_COPM2"
+        GridViewDecimalColumn123.HeaderText = "TRUCK_CAPA_COPM2"
+        GridViewDecimalColumn123.IsAutoGenerated = True
+        GridViewDecimalColumn123.Name = "TRUCK_CAPA_COPM2"
+        GridViewDecimalColumn124.DataType = GetType(Double)
+        GridViewDecimalColumn124.FieldName = "TRUCK_CAPA_COPM3"
+        GridViewDecimalColumn124.HeaderText = "TRUCK_CAPA_COPM3"
+        GridViewDecimalColumn124.IsAutoGenerated = True
+        GridViewDecimalColumn124.Name = "TRUCK_CAPA_COPM3"
+        GridViewDecimalColumn125.DataType = GetType(Double)
+        GridViewDecimalColumn125.FieldName = "TRUCK_CAPA_COPM4"
+        GridViewDecimalColumn125.HeaderText = "TRUCK_CAPA_COPM4"
+        GridViewDecimalColumn125.IsAutoGenerated = True
+        GridViewDecimalColumn125.Name = "TRUCK_CAPA_COPM4"
+        GridViewDecimalColumn126.DataType = GetType(Double)
+        GridViewDecimalColumn126.FieldName = "TRUCK_CAPA_COPM5"
+        GridViewDecimalColumn126.HeaderText = "TRUCK_CAPA_COPM5"
+        GridViewDecimalColumn126.IsAutoGenerated = True
+        GridViewDecimalColumn126.Name = "TRUCK_CAPA_COPM5"
+        GridViewDecimalColumn127.DataType = GetType(Double)
+        GridViewDecimalColumn127.FieldName = "TRUCK_CAPA_COPM6"
+        GridViewDecimalColumn127.HeaderText = "TRUCK_CAPA_COPM6"
+        GridViewDecimalColumn127.IsAutoGenerated = True
+        GridViewDecimalColumn127.Name = "TRUCK_CAPA_COPM6"
+        GridViewDecimalColumn128.DataType = GetType(Double)
+        GridViewDecimalColumn128.FieldName = "TRUCK_CAPA_COPM7"
+        GridViewDecimalColumn128.HeaderText = "TRUCK_CAPA_COPM7"
+        GridViewDecimalColumn128.IsAutoGenerated = True
+        GridViewDecimalColumn128.Name = "TRUCK_CAPA_COPM7"
+        GridViewDecimalColumn129.DataType = GetType(Double)
+        GridViewDecimalColumn129.FieldName = "TRUCK_CAPA_COPM8"
+        GridViewDecimalColumn129.HeaderText = "TRUCK_CAPA_COPM8"
+        GridViewDecimalColumn129.IsAutoGenerated = True
+        GridViewDecimalColumn129.Name = "TRUCK_CAPA_COPM8"
+        GridViewDecimalColumn130.DataType = GetType(Double)
+        GridViewDecimalColumn130.FieldName = "TRUCK_CAPA_COPM9"
+        GridViewDecimalColumn130.HeaderText = "TRUCK_CAPA_COPM9"
+        GridViewDecimalColumn130.IsAutoGenerated = True
+        GridViewDecimalColumn130.Name = "TRUCK_CAPA_COPM9"
+        GridViewDecimalColumn131.DataType = GetType(Double)
+        GridViewDecimalColumn131.FieldName = "TRUCK_CAPA_COPM10"
+        GridViewDecimalColumn131.HeaderText = "TRUCK_CAPA_COPM10"
+        GridViewDecimalColumn131.IsAutoGenerated = True
+        GridViewDecimalColumn131.Name = "TRUCK_CAPA_COPM10"
+        GridViewDecimalColumn132.DataType = GetType(Double)
+        GridViewDecimalColumn132.FieldName = "TRUCK_CAPA_COPM11"
+        GridViewDecimalColumn132.HeaderText = "TRUCK_CAPA_COPM11"
+        GridViewDecimalColumn132.IsAutoGenerated = True
+        GridViewDecimalColumn132.Name = "TRUCK_CAPA_COPM11"
+        GridViewDecimalColumn133.DataType = GetType(Double)
+        GridViewDecimalColumn133.FieldName = "TRUCK_CAPA_COPM12"
+        GridViewDecimalColumn133.HeaderText = "TRUCK_CAPA_COPM12"
+        GridViewDecimalColumn133.IsAutoGenerated = True
+        GridViewDecimalColumn133.Name = "TRUCK_CAPA_COPM12"
+        GridViewDecimalColumn134.DataType = GetType(Double)
+        GridViewDecimalColumn134.FieldName = "TRUCK_CAPA_COPM13"
+        GridViewDecimalColumn134.HeaderText = "TRUCK_CAPA_COPM13"
+        GridViewDecimalColumn134.IsAutoGenerated = True
+        GridViewDecimalColumn134.Name = "TRUCK_CAPA_COPM13"
+        GridViewDecimalColumn135.DataType = GetType(Double)
+        GridViewDecimalColumn135.FieldName = "TRUCK_CAPA_COPM14"
+        GridViewDecimalColumn135.HeaderText = "TRUCK_CAPA_COPM14"
+        GridViewDecimalColumn135.IsAutoGenerated = True
+        GridViewDecimalColumn135.Name = "TRUCK_CAPA_COPM14"
+        GridViewDecimalColumn136.DataType = GetType(Double)
+        GridViewDecimalColumn136.FieldName = "TRUCK_CAPA_COPM15"
+        GridViewDecimalColumn136.HeaderText = "TRUCK_CAPA_COPM15"
+        GridViewDecimalColumn136.IsAutoGenerated = True
+        GridViewDecimalColumn136.Name = "TRUCK_CAPA_COPM15"
+        GridViewDecimalColumn137.DataType = GetType(Double)
+        GridViewDecimalColumn137.FieldName = "TRUCK_CAPA_COPM16"
+        GridViewDecimalColumn137.HeaderText = "TRUCK_CAPA_COPM16"
+        GridViewDecimalColumn137.IsAutoGenerated = True
+        GridViewDecimalColumn137.Name = "TRUCK_CAPA_COPM16"
+        GridViewDecimalColumn138.DataType = GetType(Double)
+        GridViewDecimalColumn138.FieldName = "TRUCK_CAPA_COPM17"
+        GridViewDecimalColumn138.HeaderText = "TRUCK_CAPA_COPM17"
+        GridViewDecimalColumn138.IsAutoGenerated = True
+        GridViewDecimalColumn138.Name = "TRUCK_CAPA_COPM17"
+        GridViewDecimalColumn139.DataType = GetType(Double)
+        GridViewDecimalColumn139.FieldName = "TRUCK_CAPA_COPM18"
+        GridViewDecimalColumn139.HeaderText = "TRUCK_CAPA_COPM18"
+        GridViewDecimalColumn139.IsAutoGenerated = True
+        GridViewDecimalColumn139.Name = "TRUCK_CAPA_COPM18"
+        GridViewDecimalColumn140.DataType = GetType(Double)
+        GridViewDecimalColumn140.FieldName = "TRUCK_CAPA_COPM19"
+        GridViewDecimalColumn140.HeaderText = "TRUCK_CAPA_COPM19"
+        GridViewDecimalColumn140.IsAutoGenerated = True
+        GridViewDecimalColumn140.Name = "TRUCK_CAPA_COPM19"
+        GridViewDecimalColumn141.DataType = GetType(Double)
+        GridViewDecimalColumn141.FieldName = "TRUCK_CAPA_COPM20"
+        GridViewDecimalColumn141.HeaderText = "TRUCK_CAPA_COPM20"
+        GridViewDecimalColumn141.IsAutoGenerated = True
+        GridViewDecimalColumn141.Name = "TRUCK_CAPA_COPM20"
+        GridViewDecimalColumn142.DataType = GetType(Double)
+        GridViewDecimalColumn142.FieldName = "TRUCK_SHIPPER"
+        GridViewDecimalColumn142.HeaderText = "TRUCK_SHIPPER"
+        GridViewDecimalColumn142.IsAutoGenerated = True
+        GridViewDecimalColumn142.Name = "TRUCK_SHIPPER"
+        GridViewTextBoxColumn181.FieldName = "SP_CODE"
+        GridViewTextBoxColumn181.HeaderText = "SP_CODE"
+        GridViewTextBoxColumn181.IsAutoGenerated = True
+        GridViewTextBoxColumn181.Name = "SP_CODE"
+        GridViewDecimalColumn143.DataType = GetType(Double)
+        GridViewDecimalColumn143.FieldName = "TRUCK_COMPANYID"
+        GridViewDecimalColumn143.HeaderText = "TRUCK_COMPANYID"
+        GridViewDecimalColumn143.IsAutoGenerated = True
+        GridViewDecimalColumn143.Name = "TRUCK_COMPANYID"
+        Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn118, GridViewTextBoxColumn175, GridViewTextBoxColumn176, GridViewDecimalColumn119, GridViewDecimalColumn120, GridViewTextBoxColumn177, GridViewTextBoxColumn178, GridViewTextBoxColumn179, GridViewDateTimeColumn11, GridViewTextBoxColumn180, GridViewDecimalColumn121, GridViewDecimalColumn122, GridViewDecimalColumn123, GridViewDecimalColumn124, GridViewDecimalColumn125, GridViewDecimalColumn126, GridViewDecimalColumn127, GridViewDecimalColumn128, GridViewDecimalColumn129, GridViewDecimalColumn130, GridViewDecimalColumn131, GridViewDecimalColumn132, GridViewDecimalColumn133, GridViewDecimalColumn134, GridViewDecimalColumn135, GridViewDecimalColumn136, GridViewDecimalColumn137, GridViewDecimalColumn138, GridViewDecimalColumn139, GridViewDecimalColumn140, GridViewDecimalColumn141, GridViewDecimalColumn142, GridViewTextBoxColumn181, GridViewDecimalColumn143})
         Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.EnableFiltering = True
         Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.EnableGrouping = False
         Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition11
+        Me.RadMultiColumnComboBox5.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition50
         Me.RadMultiColumnComboBox5.EditorControl.Name = "NestedRadGridView"
         Me.RadMultiColumnComboBox5.EditorControl.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.RadMultiColumnComboBox5.EditorControl.ReadOnly = True
@@ -5810,60 +5815,60 @@ Partial Class Advisenote
         Me.NestedRadGridView.AllowColumnChooser = False
         Me.NestedRadGridView.AllowColumnResize = False
         Me.NestedRadGridView.AutoGenerateColumns = False
-        GridViewTextBoxColumn41.FieldName = "DRIVER_NAME"
-        GridViewTextBoxColumn41.HeaderText = "DRIVER_NAME"
-        GridViewTextBoxColumn41.IsAutoGenerated = True
-        GridViewTextBoxColumn41.Name = "DRIVER_NAME"
-        GridViewTextBoxColumn41.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn42.FieldName = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn42.HeaderText = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn42.IsAutoGenerated = True
-        GridViewTextBoxColumn42.Name = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn42.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewDecimalColumn36.DataType = GetType(Double)
-        GridViewDecimalColumn36.FieldName = "DRIVER_COMPANY"
-        GridViewDecimalColumn36.HeaderText = "DRIVER_COMPANY"
-        GridViewDecimalColumn36.IsAutoGenerated = True
-        GridViewDecimalColumn36.Name = "DRIVER_COMPANY"
-        GridViewTextBoxColumn43.FieldName = "DRIVER_ADDRESS"
-        GridViewTextBoxColumn43.HeaderText = "DRIVER_ADDRESS"
-        GridViewTextBoxColumn43.IsAutoGenerated = True
-        GridViewTextBoxColumn43.Name = "DRIVER_ADDRESS"
-        GridViewTextBoxColumn43.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn44.FieldName = "DRIVER_BLACK_LIST"
-        GridViewTextBoxColumn44.HeaderText = "DRIVER_BLACK_LIST"
-        GridViewTextBoxColumn44.IsAutoGenerated = True
-        GridViewTextBoxColumn44.Name = "DRIVER_BLACK_LIST"
-        GridViewTextBoxColumn44.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewDateTimeColumn3.FieldName = "DRIVER_DATE_END"
-        GridViewDateTimeColumn3.HeaderText = "DRIVER_DATE_END"
-        GridViewDateTimeColumn3.IsAutoGenerated = True
-        GridViewDateTimeColumn3.Name = "DRIVER_DATE_END"
-        GridViewDateTimeColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn45.FieldName = "DRIVER_PICTURE"
-        GridViewTextBoxColumn45.HeaderText = "DRIVER_PICTURE"
-        GridViewTextBoxColumn45.IsAutoGenerated = True
-        GridViewTextBoxColumn45.Name = "DRIVER_PICTURE"
-        GridViewTextBoxColumn45.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn46.EnableExpressionEditor = False
-        GridViewTextBoxColumn46.FieldName = "SP_NAMETH"
-        GridViewTextBoxColumn46.HeaderText = "ชื่อผู้ขนส่ง"
-        GridViewTextBoxColumn46.IsAutoGenerated = True
-        GridViewTextBoxColumn46.Name = "SP_NAMETH"
-        GridViewTextBoxColumn46.Width = 415
-        GridViewTextBoxColumn47.AllowResize = False
-        GridViewTextBoxColumn47.EnableExpressionEditor = False
-        GridViewTextBoxColumn47.FieldName = "SP_CODE"
-        GridViewTextBoxColumn47.HeaderText = "รหัสผู้ขนส่ง"
-        GridViewTextBoxColumn47.IsAutoGenerated = True
-        GridViewTextBoxColumn47.Name = "SP_CODE"
-        GridViewTextBoxColumn47.Width = 190
-        Me.NestedRadGridView.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn41, GridViewTextBoxColumn42, GridViewDecimalColumn36, GridViewTextBoxColumn43, GridViewTextBoxColumn44, GridViewDateTimeColumn3, GridViewTextBoxColumn45, GridViewTextBoxColumn46, GridViewTextBoxColumn47})
+        GridViewTextBoxColumn182.FieldName = "DRIVER_NAME"
+        GridViewTextBoxColumn182.HeaderText = "DRIVER_NAME"
+        GridViewTextBoxColumn182.IsAutoGenerated = True
+        GridViewTextBoxColumn182.Name = "DRIVER_NAME"
+        GridViewTextBoxColumn182.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn183.FieldName = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn183.HeaderText = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn183.IsAutoGenerated = True
+        GridViewTextBoxColumn183.Name = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn183.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewDecimalColumn144.DataType = GetType(Double)
+        GridViewDecimalColumn144.FieldName = "DRIVER_COMPANY"
+        GridViewDecimalColumn144.HeaderText = "DRIVER_COMPANY"
+        GridViewDecimalColumn144.IsAutoGenerated = True
+        GridViewDecimalColumn144.Name = "DRIVER_COMPANY"
+        GridViewTextBoxColumn184.FieldName = "DRIVER_ADDRESS"
+        GridViewTextBoxColumn184.HeaderText = "DRIVER_ADDRESS"
+        GridViewTextBoxColumn184.IsAutoGenerated = True
+        GridViewTextBoxColumn184.Name = "DRIVER_ADDRESS"
+        GridViewTextBoxColumn184.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn185.FieldName = "DRIVER_BLACK_LIST"
+        GridViewTextBoxColumn185.HeaderText = "DRIVER_BLACK_LIST"
+        GridViewTextBoxColumn185.IsAutoGenerated = True
+        GridViewTextBoxColumn185.Name = "DRIVER_BLACK_LIST"
+        GridViewTextBoxColumn185.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewDateTimeColumn12.FieldName = "DRIVER_DATE_END"
+        GridViewDateTimeColumn12.HeaderText = "DRIVER_DATE_END"
+        GridViewDateTimeColumn12.IsAutoGenerated = True
+        GridViewDateTimeColumn12.Name = "DRIVER_DATE_END"
+        GridViewDateTimeColumn12.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn186.FieldName = "DRIVER_PICTURE"
+        GridViewTextBoxColumn186.HeaderText = "DRIVER_PICTURE"
+        GridViewTextBoxColumn186.IsAutoGenerated = True
+        GridViewTextBoxColumn186.Name = "DRIVER_PICTURE"
+        GridViewTextBoxColumn186.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn187.EnableExpressionEditor = False
+        GridViewTextBoxColumn187.FieldName = "SP_NAMETH"
+        GridViewTextBoxColumn187.HeaderText = "ชื่อผู้ขนส่ง"
+        GridViewTextBoxColumn187.IsAutoGenerated = True
+        GridViewTextBoxColumn187.Name = "SP_NAMETH"
+        GridViewTextBoxColumn187.Width = 415
+        GridViewTextBoxColumn188.AllowResize = False
+        GridViewTextBoxColumn188.EnableExpressionEditor = False
+        GridViewTextBoxColumn188.FieldName = "SP_CODE"
+        GridViewTextBoxColumn188.HeaderText = "รหัสผู้ขนส่ง"
+        GridViewTextBoxColumn188.IsAutoGenerated = True
+        GridViewTextBoxColumn188.Name = "SP_CODE"
+        GridViewTextBoxColumn188.Width = 190
+        Me.NestedRadGridView.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn182, GridViewTextBoxColumn183, GridViewDecimalColumn144, GridViewTextBoxColumn184, GridViewTextBoxColumn185, GridViewDateTimeColumn12, GridViewTextBoxColumn186, GridViewTextBoxColumn187, GridViewTextBoxColumn188})
         Me.NestedRadGridView.DataSource = Me.TShipperBindingSource
         Me.NestedRadGridView.EnableFiltering = True
         Me.NestedRadGridView.EnableGrouping = False
         Me.NestedRadGridView.ShowFilteringRow = False
-        Me.NestedRadGridView.ViewDefinition = TableViewDefinition12
+        Me.NestedRadGridView.ViewDefinition = TableViewDefinition51
         '
         'RadMultiColumnComboBox1
         '
@@ -5884,7 +5889,7 @@ Partial Class Advisenote
         Me.RadMultiColumnComboBox1.EditorControl.MasterTemplate.DataSource = Me.TDriverBindingSource
         Me.RadMultiColumnComboBox1.EditorControl.MasterTemplate.EnableGrouping = False
         Me.RadMultiColumnComboBox1.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.RadMultiColumnComboBox1.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition13
+        Me.RadMultiColumnComboBox1.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition52
         Me.RadMultiColumnComboBox1.EditorControl.Name = "NestedRadGridView"
         Me.RadMultiColumnComboBox1.EditorControl.ReadOnly = True
         Me.RadMultiColumnComboBox1.EditorControl.ShowGroupPanel = False
@@ -6208,6 +6213,90 @@ Partial Class Advisenote
         '
         Me.V_TRUCK2TableAdapter.ClearBeforeFill = True
         '
+        'PresetTotal
+        '
+        Me.PresetTotal.BackColor = System.Drawing.SystemColors.Control
+        Me.PresetTotal.Enabled = False
+        Me.PresetTotal.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PresetTotal.Location = New System.Drawing.Point(597, 575)
+        Me.PresetTotal.Name = "PresetTotal"
+        Me.PresetTotal.Size = New System.Drawing.Size(187, 23)
+        Me.PresetTotal.TabIndex = 253
+        Me.PresetTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.PresetTotal.ThemeName = "Windows8"
+        '
+        'RadTextBox4
+        '
+        Me.RadTextBox4.BackColor = System.Drawing.SystemColors.Control
+        Me.RadTextBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadTextBox4.Location = New System.Drawing.Point(101, 175)
+        Me.RadTextBox4.Name = "RadTextBox4"
+        Me.RadTextBox4.ReadOnly = True
+        Me.RadTextBox4.Size = New System.Drawing.Size(187, 23)
+        Me.RadTextBox4.TabIndex = 254
+        Me.RadTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.RadTextBox4.ThemeName = "Windows8"
+        CType(Me.RadTextBox4.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        CType(Me.RadTextBox4.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        CType(Me.RadTextBox4.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'RadDropDownList3
+        '
+        Me.RadDropDownList3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadDropDownList3.AutoCompleteDisplayMember = "PRODUCT_CODE"
+        Me.RadDropDownList3.AutoCompleteValueMember = "ID"
+        Me.RadDropDownList3.DataSource = Me.TProductBindingSource1
+        Me.RadDropDownList3.DisplayMember = "PRODUCT_CODE"
+        Me.RadDropDownList3.DropDownMinSize = New System.Drawing.Size(0, 150)
+        Me.RadDropDownList3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.RadDropDownList3.Location = New System.Drawing.Point(21, 495)
+        Me.RadDropDownList3.Name = "RadDropDownList3"
+        '
+        '
+        '
+        Me.RadDropDownList3.RootElement.StretchVertically = True
+        Me.RadDropDownList3.Size = New System.Drawing.Size(198, 24)
+        Me.RadDropDownList3.TabIndex = 2197
+        Me.RadDropDownList3.ThemeName = "Office2010Blue"
+        Me.RadDropDownList3.ValueMember = "ID"
+        '
+        'RadButton8
+        '
+        Me.RadButton8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton8.Location = New System.Drawing.Point(534, 494)
+        Me.RadButton8.Name = "RadButton8"
+        Me.RadButton8.Size = New System.Drawing.Size(64, 25)
+        Me.RadButton8.TabIndex = 187
+        Me.RadButton8.Text = "ORDER"
+        Me.RadButton8.ThemeName = "Breeze"
+        CType(Me.RadButton8.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "ORDER"
+        CType(Me.RadButton8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor2 = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.RadButton8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor3 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.RadButton8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor4 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        CType(Me.RadButton8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).NumberOfColors = 4
+        CType(Me.RadButton8.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'RadTextBox5
+        '
+        Me.RadTextBox5.Enabled = False
+        Me.RadTextBox5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadTextBox5.Location = New System.Drawing.Point(294, 500)
+        Me.RadTextBox5.Name = "RadTextBox5"
+        Me.RadTextBox5.Size = New System.Drawing.Size(234, 21)
+        Me.RadTextBox5.TabIndex = 2198
+        Me.RadTextBox5.ThemeName = "TelerikMetro"
+        '
+        'RadTextBox6
+        '
+        Me.RadTextBox6.Enabled = False
+        Me.RadTextBox6.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadTextBox6.Location = New System.Drawing.Point(604, 500)
+        Me.RadTextBox6.Name = "RadTextBox6"
+        Me.RadTextBox6.Size = New System.Drawing.Size(180, 21)
+        Me.RadTextBox6.TabIndex = 2199
+        Me.RadTextBox6.ThemeName = "TelerikMetro"
+        '
         'Advisenote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -6261,6 +6350,12 @@ Partial Class Advisenote
         CType(Me.AdviseDetail_G, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AdviseDetail_G.ResumeLayout(False)
         Me.AdviseDetail_G.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        CType(Me.TCompanyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TDriverBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TCUSTOMERTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TShipperBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox8.ResumeLayout(False)
         Me.RadGroupBox8.PerformLayout()
@@ -6341,13 +6436,11 @@ Partial Class Advisenote
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         CType(Me.DOval, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PresetTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Seal_Total, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Seal_No, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EdCustomer.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EdCustomer.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EdCustomer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TCUSTOMERTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox6.ResumeLayout(False)
@@ -6357,12 +6450,11 @@ Partial Class Advisenote
         CType(Me.Driver.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Driver.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Driver, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TDriverBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox5.ResumeLayout(False)
         Me.RadGroupBox5.PerformLayout()
         CType(Me.Cbn7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Cbn8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Reference, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Update_date, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dateedit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Update_by, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6376,12 +6468,8 @@ Partial Class Advisenote
         CType(Me.Cbn3.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn3.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Cbn3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TCompanyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Container, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        CType(Me.TShipperBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Page_Temp.ResumeLayout(False)
         Me.GDetail.ResumeLayout(False)
         Me.Panel16.ResumeLayout(False)
@@ -6559,6 +6647,12 @@ Partial Class Advisenote
         CType(Me.Edit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VLoading_StatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TTruckBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PresetTotal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDropDownList3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -6608,7 +6702,7 @@ Partial Class Advisenote
     Friend WithEvents Shipment_id As System.Windows.Forms.ComboBox
     Friend WithEvents Cbn9 As System.Windows.Forms.TextBox
     Friend WithEvents Updatedate As System.Windows.Forms.TextBox
-    Friend WithEvents Cbn6 As System.Windows.Forms.TextBox
+    Friend WithEvents Loadid As System.Windows.Forms.TextBox
     Friend WithEvents TruckId As System.Windows.Forms.ComboBox
     Friend WithEvents Prono As System.Windows.Forms.ComboBox
     Friend WithEvents ProductId As System.Windows.Forms.ComboBox
@@ -6700,7 +6794,7 @@ Partial Class Advisenote
     'Friend WithEvents Cbn3 As Telerik.WinControls.UI.RadMultiColumnComboBox
     'Friend WithEvents Cbn2 As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents RadPanel3 As Telerik.WinControls.UI.RadPanel
-    Friend WithEvents Cbn8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents Reference As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Update_by As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Update_date As Telerik.WinControls.UI.RadTextBox
@@ -6722,7 +6816,6 @@ Partial Class Advisenote
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Cbn3 As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents Container As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents PresetTotal As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Capacity As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents DOval As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Cbn7 As Telerik.WinControls.UI.RadTextBox
@@ -6977,5 +7070,11 @@ Partial Class Advisenote
     Friend WithEvents W_Weightintime As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBox3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents PresetTotal As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBox4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadDropDownList3 As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents RadTextBox6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBox5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadButton8 As Telerik.WinControls.UI.RadButton
 End Class
 
