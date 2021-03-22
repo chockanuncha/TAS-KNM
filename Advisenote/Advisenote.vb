@@ -487,7 +487,7 @@ Public Class Advisenote
 
     Sub ClearData()
         Try
-            PictureBox1.Image = Nothing
+            'PictureBox1.Image = Nothing
             AuthorRemark = ""
             AuthorRemarkDriver = ""
             authorize_Remark.Text = ""
@@ -920,8 +920,6 @@ Public Class Advisenote
         End Try
     End Sub
 
-
-
     Sub Refresh()
         Try
             Me.T_STATUSTableAdapter1.Fill(Me.DataSet_Table.T_STATUS)
@@ -1085,18 +1083,16 @@ Public Class Advisenote
                 Trucktype.Text = TTruckTypeBindingSource.Item(TTruckTypeBindingSource.Position)("TYPE").ToString
 
                 Driver.Text = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_NAME").ToString
-                Try
-                    Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
-                    Dim Ms As MemoryStream = New MemoryStream(ArrPic)
-                    PictureBox1.Image = Image.FromStream(Ms)
-                    Ms.Dispose()
-                Catch ex As Exception
-                    PictureBox1.Image = Nothing
-                End Try
-
+                'Try
+                '    Dim ArrPic() As Byte = TDriverBindingSource.Item(TDriverBindingSource.Position)("DRIVER_PICTURE")
+                '    Dim Ms As MemoryStream = New MemoryStream(ArrPic)
+                '    PictureBox1.Image = Image.FromStream(Ms)
+                '    Ms.Dispose()
+                'Catch ex As Exception
+                '    PictureBox1.Image = Nothing
+                'End Try
 
                 Status.Text = TStatusBindingSource.Item(TStatusBindingSource.Position)("STATUS_NAME").ToString
-
                 TruckH.Text = dt.Rows(0).Item("Container").ToString
                 Edremark.Text = dt.Rows(0).Item("REMARK").ToString
             Catch ex As Exception
@@ -1643,9 +1639,6 @@ Public Class Advisenote
 
     End Sub
 
-
-
-
     Function Listbay(ByVal ProductID() As String) As DataRow()
         Dim sql As String
         Dim DtInBay As New DataTable
@@ -1722,7 +1715,6 @@ Public Class Advisenote
         Ds.Dispose()
         Return Dr
     End Function
-
 
     Private Sub ToolStripButton9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton9.Click
         SelectVLoadingNote()
@@ -2925,7 +2917,7 @@ Public Class Advisenote
 
     Private Sub RadButton8_Click_1(sender As Object, e As EventArgs) Handles RadButton8.Click
         RadTextBox5.Text = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
-        RadTextBox6.Text = Product.Text & "" & Product.SelectedIndex & "" & Product.SelectedValue  ' & "" & Product.SelectedItem().ToString
+        RadTextBox6.Text = "Text :" & Product.Text & "SelectedIndex :" & Product.SelectedIndex & " SelectedValue :" & Product.SelectedValue  ' & "" & Product.SelectedItem().ToString
     End Sub
 
     Private Sub IslandBay9_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -3051,6 +3043,7 @@ Public Class Advisenote
     Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton16.Click
         EDW_IN.Text = WeightScal.Text
         LawWeightIn.Text = EDW_IN.Text
+        W_Weightintime.Text = Now()
     End Sub
 
     Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
@@ -3058,7 +3051,7 @@ Public Class Advisenote
         LawWeightout.Text = EDW_Out.Text
         EDW_NET.Text = Int(EDW_Out.Text) - Int(EDW_IN.Text)
         _Weightouttime.Text = Now()
-
+        W_Weightouttime.Text = Now()
     End Sub
 
     Private Sub OrderBut_Click(sender As Object, e As EventArgs) Handles OrderBut.Click
@@ -3296,6 +3289,7 @@ Public Class Advisenote
 #Region "Save,Update,Delete"
 
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bsave.Click
+
         If DOval.Text = "" Then
             MessageBox.Show("Please specify DO.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             DOval.Focus()
@@ -3327,16 +3321,11 @@ Public Class Advisenote
 
         Dim q, sc, sql As String
         Dim i, SL, ST, r, j As Integer
-
         Dim s_day, s_month, s_year As String
-
-
         Update_date.Text = Date.Now
-
         s_day = Date.Now.Day
         s_month = Date.Now.Month
         s_year = Date.Now.Year
-
         Dim yearthai As String
         Dim tmp As DataTable
 
@@ -3962,8 +3951,6 @@ Public Class Advisenote
         Myreport = New ReportDocument
 
         q = cls_data.SelectPrintLoadingNote(Reference.Text)
-
-
         Dim ds As New DataSet
         ds = cls.Query_DS(q, "V_Loadingnote")
 
