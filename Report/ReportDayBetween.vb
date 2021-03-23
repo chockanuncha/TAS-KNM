@@ -29,8 +29,9 @@ Public Class ReportDayBetween
         n_year = 543
         Try
             '' Between ''
-            If chk = 1 Then
-                If Reportmain.Report_Type = "productpay" Then
+
+
+            If Reportmain.Report_Type = "productpay" Then
 
                     Dim Myreport As New ReportDocument
                     Myreport = New ReportDocument
@@ -59,47 +60,102 @@ Public Class ReportDayBetween
 
                 If Reportmain.Report_Type = "time" Then
 
+                    'Dim Myreport As New ReportDocument
+                    'Myreport = New ReportDocument
+                    'sql = ""
+                    'sql = "select max(Reference) as Reference,"
+                    'sql &= "max(St_ST_date) as St_ST_date,sum(Gross_m1) as Gross_m1,Sum(Net_m1) as Net_m1,Sum(Net86f) as NET86F,"
+                    'sql &= "(max(lc_preset)-Sum(Gross_m1)) as LOSS_M1,Sum(Loss_M1) as LOSS_M1xx,min(Startm1) as Startm1,max(Stopm1) as Stopm1,min(Startm1_net) as Startm1_net,max(Stopm1_net) as Stopm1_net, "
+                    'sql &= "min(St_ST_time_start) as St_ST_time_start,max(St_ST_time_stop) as St_ST_time_stop,max(Batch_name) as Batch_name,max(Lc_Compartment) as Lc_Compartment,max(LC_preset) as LC_preset,max(Load_driver) as Load_driver,max(load_customer) as load_customer,max(load_Vehicle) as load_Vehicle,max(Product_code) as Product_code,max(lc_tank) as lc_tank,"
+                    'sql &= "max(Avg_temp_m1) as Avg_temp_m1,max(load_dofull) as load_dofull,max(addnotedate) as addnotedate,min(Q_time) as Q_time,min(Checkin_time) as Checkin_time,max(VCF_M1) as VCF_M1,max(Density30C_M1) as Density30C_M1,max(DO_TYPE) as DO_TYPE,max(Product_name) as Product_name,max(LC_Seal) as LC_Seal"
+                    'sql &= ",max(Customer_name) as Customer_Name,sum(Gross_M1) as Gross_M1 "
+                    'sql &= " from v_bol_m1m2_new where addnotedate between "
+                    'sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                    'sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                    'sql &= "and lc_status in(3,4) "
+                    'sql &= "group by Reference,Lc_Compartment order by reference,Lc_Compartment"
+
+                    'Dim MyDataSet As New DataSet
+                    'MyDataSet = cls.Query_DS(sql, "V_BOL_M1M2_NEW")
+
+                    'If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    '    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    '    Exit Sub
+                    'Else
+                    '    Myreport.Load("BOLToday.rpt")
+                    '    Myreport.SetDataSource(MyDataSet)
+                    '    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    '    ReportPrint.ShowDialog()
+                    '    MyDataSet.Dispose()
+                    'End If
+
                     Dim Myreport As New ReportDocument
                     Myreport = New ReportDocument
-                    sql = ""
-                    sql = "select max(Reference) as Reference,"
-                    sql &= "max(St_ST_date) as St_ST_date,sum(Gross_m1) as Gross_m1,Sum(Net_m1) as Net_m1,Sum(Net86f) as NET86F,"
-                    sql &= "(max(lc_preset)-Sum(Gross_m1)) as LOSS_M1,Sum(Loss_M1) as LOSS_M1xx,min(Startm1) as Startm1,max(Stopm1) as Stopm1,min(Startm1_net) as Startm1_net,max(Stopm1_net) as Stopm1_net, "
-                    sql &= "min(St_ST_time_start) as St_ST_time_start,max(St_ST_time_stop) as St_ST_time_stop,max(Batch_name) as Batch_name,max(Lc_Compartment) as Lc_Compartment,max(LC_preset) as LC_preset,max(Load_driver) as Load_driver,max(load_customer) as load_customer,max(load_Vehicle) as load_Vehicle,max(Product_code) as Product_code,max(lc_tank) as lc_tank,"
-                    sql &= "max(Avg_temp_m1) as Avg_temp_m1,max(load_dofull) as load_dofull,max(addnotedate) as addnotedate,min(Q_time) as Q_time,min(Checkin_time) as Checkin_time,max(VCF_M1) as VCF_M1,max(Density30C_M1) as Density30C_M1,max(DO_TYPE) as DO_TYPE,max(Product_name) as Product_name,max(LC_Seal) as LC_Seal"
-                    sql &= ",max(Customer_name) as Customer_Name,sum(Gross_M1) as Gross_M1 "
-                    sql &= " from v_bol_m1m2_new where addnotedate between "
-                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-                    sql &= "and lc_status in(3,4) "
-                    sql &= "group by Reference,Lc_Compartment order by reference,Lc_Compartment"
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "V_BOL_M1M2_NEW")
+                sql = "select max(load_date) as dt1,"
+                sql &= "max(lc_compartment) as int4, "
+                sql &= "max(reference) as int1,"
+                sql &= "max(load_dofull) as int2,"
+                sql &= "max(customer_name) as st1,"
+                sql &= "max(product_name) as st2,"
+                sql &= "max(avg_temp) as f1,"
+                sql &= "max(t_loadingnotecompartment.lc_preset) as f2,"
+                sql &= "sum(mass) as f3,"
+                sql &= "max(meter_factor) as f4,"
+                sql &= "max(average_data_specified_by_parameter_n21041) as f5,"
+                sql &= "sum(total_mass_start) as f7,"
+                sql &= "sum(total_mass_end) as f8,"
+                sql &= "sum(lc_batchmassbase) as f9,"
+                sql &= "max(truck_number) as int3,"
+                sql &= "isnull( max (driver_name), '' ) + '  ' + isnull( max (driver_lastname), '' ) as st3,"
+                sql &= "max(weightin_time) as dt2,"
+                sql &= "max(date_end) as dt4 ,"
+                sql &= "min(date_start) as dt3, "
+                sql &= "max(weightout_time) as dt5 "
+                sql &= "from( select * from t_loadingnote where load_date between "
+                sql &= "convert(datetime, '" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "') and "
+                sql &= "convert(datetime, '" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "') and load_status in (3,4)) t_loadingnote "
+                sql &= "left join (select * from t_loadingnotecompartment where lc_status in(2,3,4)) t_loadingnotecompartment  on t_loadingnote.load_id = t_loadingnotecompartment.lc_load "
+                sql &= "left join t_truck on t_loadingnote.load_vehicle = t_truck.id "
+                sql &= "left join t_customer on t_loadingnote.load_customer = t_customer.id "
+                sql &= "left join t_driver on t_loadingnote.load_driver = t_driver.id "
+                sql &= "left join t_card on t_loadingnote.load_card = t_card.card_number "
+                sql &= "left join t_product on t_loadingnotecompartment.lc_pro = t_product.id "
+                sql &= "left join t_status on t_loadingnote.load_status = t_status.status_id "
+                sql &= "left join  t_batchmeter on t_loadingnotecompartment.lc_meter = t_batchmeter.id "
+                sql &= "left join t_log_batch_data on t_loadingnotecompartment.lc_id = t_log_batch_data.lc_id "
+                sql &= "group by load_id, lc_compartment "
+                sql &= "order by load_id, lc_compartment"
+
+                Dim MyDataSet As New DataSet
+                    MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
+                    'MyDataSet = cls.Query_DS(sql, "DataTable_Report")
 
                     If MyDataSet.Tables(0).Rows.Count = 0 Then
                         MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
                         Exit Sub
                     Else
-                        Myreport.Load("BOLToday.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                    'Myreport.Load("BOLToday.rpt")
+                    Myreport.Load("Report_File/DailyReport.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
+
+                End If
                 End If
                 If Reportmain.Report_Type = "customer" Then
                     Dim Myreport As New ReportDocument
                     Myreport = New ReportDocument
-                    sql = ""
-                    sql = "select L_date,load_customer,Product_name,max(company_name) as company_name, "
-                    sql &= "Sum(Presets) as PRESETs,Sum(Grosss) as Grosss,Sum(net) as Net,Sum(loss) as Loss from V_TRUCK_LOADING_REPORT "
-                    sql &= "where L_Date between CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-                    sql &= "Group by L_date,load_customer,product_name Order by L_date,load_customer,product_name"
+                sql = ""
+                sql = "select l_date,load_customer,product_name,max(company_name) as company_name, "
+                sql &= "sum(presets) as presets,sum(grosss) as grosss,sum(net) as net,sum(loss) as loss from v_truck_loading_report "
+                sql &= "where l_date between convert (datetime,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd hh24:mi:ss') and "
+                sql &= "convert (datetime,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd hh24:mi:ss')  "
+                sql &= "group by l_date,load_customer,product_name order by l_date,load_customer,product_name"
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "V_TRUCK_LOADING_REPORT")
+                Dim myDataSet As New DataSet
+                myDataSet = cls.Query_DS(sql, "V_TRUCK_LOADING_REPORT")
 
                     If MyDataSet.Tables(0).Rows.Count = 0 Then
                         MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
@@ -117,32 +173,65 @@ Public Class ReportDayBetween
                 If Reportmain.Report_Type = "meter" Then
                     Dim Myreport As New ReportDocument
                     Myreport = New ReportDocument
+                'sql = "select t1.batch_name,max(load_date) as l_date,max(product_code) as product_code,"
+                'sql &= "max(t1.addnotedate) as st_date,"
+                'sql &= "convert (datetime,max(t1.addnotedate), 'dd/mm/yyyy') as st_date1,"
+                'sql &= "sum(t1.lc_preset) as presets,sum(t2.gross) as gross,sum(t2.net86f) as net,sum(t1.lc_preset-t2.gross) as loss "
+                'sql &= ",min(sy_start_total_m1) as sy_start_total_m1,max(sy_stop_total_m1) as sy_stop_total_m1 "
+                'sql &= "from (select * from v_loadingnote where  advisenote_type<>'topup' and lc_status in(3,4)) t1  left join (select * from v_report_meter) t2 "
+                'sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
+                'sql &= "where t1.addnotedate between "
+                'sql &= "convert (datetime,'" & dtp2.value.year & "/" & dtp2.value.month & "/" & dtp2.value.day & " 00:00:00" & "', 'yyyy/mm/dd hh24:mi:ss') and "
+                'sql &= "convert (datetime,'" & dtp3.value.year & "/" & dtp3.value.month & "/" & dtp3.value.day & " 23:59:59" & "', 'yyyy/mm/dd hh24:mi:ss')  "
+                'sql &= "group by t1.batch_name order by t1.batch_name"
+                'dim mydataset as new dataset
+                'mydataset = cls.query_ds(sql, "v_meter_controlling")
 
-                    sql = "select t1.batch_name,max(load_date) as L_Date,max(Product_code) as Product_code,"
-                    sql &= "max(t1.addnotedate) as ST_DATE,"
-                    sql &= "CONVERT (DATETIME,max(t1.addnotedate), 'dd/mm/yyyy') as ST_DATE1,"
-                    sql &= "Sum(t1.lc_preset) as Presets,Sum(t2.Gross) as Gross,Sum(t2.net86f) as net,Sum(t1.lc_preset-t2.gross) as Loss "
-                    sql &= ",min(Sy_Start_total_m1) as Sy_Start_total_m1,max(Sy_Stop_total_m1) as Sy_Stop_total_m1 "
-                    sql &= "from (select * from v_loadingnote where  advisenote_type<>'TOPUP' and lc_status in(3,4)) t1  left join (select * from V_report_meter) t2 "
-                    sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
-                    sql &= "where T1.addnotedate between "
-                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-                    sql &= "group by t1.batch_name order by t1.batch_name"
+                'if mydataset.tables(0).rows.count = 0 then
+                '    msgbox("no data, cannot print!", vbokonly + vbdefaultbutton3, "error")
+                '    exit sub
+                'else
+                '    myreport.load("metersum_btw.rpt")
+                '    myreport.setdatasource(mydataset)
+                '    reportprint.crystalreportviewer3.reportsource = myreport
+                '    reportprint.showdialog()
+                '    mydataset.dispose()
+                'end if
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "v_meter_controlling")
+
+                sql = "select max(ldate) as dt1,"
+                sql &= "max(product_code) as st1,"
+                sql &= "batch_name as st2,"
+                sql &= "sum(t_log_batch_data.preset) as f1,"
+                sql &= "sum(mass) as f2,"
+                sql &= "min(total_mass_start) as f3,"
+                sql &= "max(total_mass_end) as f4 "
+                sql &= "from(select * from t_log_batch_data where ldate between "
+                sql &= "convert(datetime, '" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "') and "
+                sql &= "convert(datetime, '" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "')) t_log_batch_data "
+                sql &= "left join t_batchmeter on t_log_batch_data.batch_number = t_batchmeter.batch_number "
+                sql &= "left join t_product on t_log_batch_data.delivered_product = t_product.id "
+                sql &= "group by batch_name"
+
+                Dim MyDataSet As New DataSet
+                    MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
+                    ' MyDataSet = cls.Query_DS(sql, "v_meter_controlling")
 
                     If MyDataSet.Tables(0).Rows.Count = 0 Then
                         MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
                         Exit Sub
                     Else
-                        Myreport.Load("Metersum_BTW.rpt")
-                        Myreport.SetDataSource(MyDataSet)
+                    'Myreport.Load("Metersum_BTW.rpt")
+
+                    Myreport.Load("Report_File/MeterReport.rpt")
+                    Myreport.SetDataSource(MyDataSet)
                         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
                         ReportPrint.ShowDialog()
+                        'ReportPrint.ShowDialog()
                         MyDataSet.Dispose()
                     End If
+
+
                 End If
                 If Reportmain.Report_Type = "tank" Then
                     Dim Myreport As New ReportDocument
@@ -266,7 +355,8 @@ Public Class ReportDayBetween
                         MyDataSet.Dispose()
                     End If
                 End If
-            End If
+
+
         Catch ex As Exception
         End Try
 

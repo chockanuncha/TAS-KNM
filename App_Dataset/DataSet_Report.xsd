@@ -29,6 +29,109 @@ FROM            T_LOG_BATCH_DATA</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable_Report1TableAdapter" GeneratorDataComponentClassName="DataTable_Report1TableAdapter" Name="DataTable_Report1" UserDataComponentName="DataTable_Report1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select '' as ST1,'' as ST2,'' as ST3,'' as ST4,'' as ST5,'' as ST6,'' as ST7,'' as ST8,'' as ST9,'' as ST10
+,1 as INT1,1 as INT2,1 as INT3,1 as INT4,1 as INT5,1 as INT6,1 as INT7,1 as INT8,1 as INT9,1 as INT10
+,1.0 as F1,1.0 as F2,1.0 as F3,1.0 as F4,1.0 as F5,1.0 as F6,1.0 as F7,1.0 as F8,1.0 as F9,1.0 as F10,1.0 as F11,1.0 as F12,1.0 as F13,1.0 as F14,1.0 as F15,1.0 as F16,1.0 as F17,1.0 as F18,1.0 as F19,1.0 as F20
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ST1" DataSetColumn="ST1" />
+              <Mapping SourceColumn="ST2" DataSetColumn="ST2" />
+              <Mapping SourceColumn="ST3" DataSetColumn="ST3" />
+              <Mapping SourceColumn="ST4" DataSetColumn="ST4" />
+              <Mapping SourceColumn="ST5" DataSetColumn="ST5" />
+              <Mapping SourceColumn="ST6" DataSetColumn="ST6" />
+              <Mapping SourceColumn="ST7" DataSetColumn="ST7" />
+              <Mapping SourceColumn="ST8" DataSetColumn="ST8" />
+              <Mapping SourceColumn="ST9" DataSetColumn="ST9" />
+              <Mapping SourceColumn="ST10" DataSetColumn="ST10" />
+              <Mapping SourceColumn="INT1" DataSetColumn="INT1" />
+              <Mapping SourceColumn="INT2" DataSetColumn="INT2" />
+              <Mapping SourceColumn="INT3" DataSetColumn="INT3" />
+              <Mapping SourceColumn="INT4" DataSetColumn="INT4" />
+              <Mapping SourceColumn="INT5" DataSetColumn="INT5" />
+              <Mapping SourceColumn="INT6" DataSetColumn="INT6" />
+              <Mapping SourceColumn="INT7" DataSetColumn="INT7" />
+              <Mapping SourceColumn="INT8" DataSetColumn="INT8" />
+              <Mapping SourceColumn="INT9" DataSetColumn="INT9" />
+              <Mapping SourceColumn="INT10" DataSetColumn="INT10" />
+              <Mapping SourceColumn="F1" DataSetColumn="F1" />
+              <Mapping SourceColumn="F2" DataSetColumn="F2" />
+              <Mapping SourceColumn="F3" DataSetColumn="F3" />
+              <Mapping SourceColumn="F4" DataSetColumn="F4" />
+              <Mapping SourceColumn="F5" DataSetColumn="F5" />
+              <Mapping SourceColumn="F6" DataSetColumn="F6" />
+              <Mapping SourceColumn="F7" DataSetColumn="F7" />
+              <Mapping SourceColumn="F8" DataSetColumn="F8" />
+              <Mapping SourceColumn="F9" DataSetColumn="F9" />
+              <Mapping SourceColumn="F10" DataSetColumn="F10" />
+              <Mapping SourceColumn="F11" DataSetColumn="F11" />
+              <Mapping SourceColumn="F12" DataSetColumn="F12" />
+              <Mapping SourceColumn="F13" DataSetColumn="F13" />
+              <Mapping SourceColumn="F14" DataSetColumn="F14" />
+              <Mapping SourceColumn="F15" DataSetColumn="F15" />
+              <Mapping SourceColumn="F16" DataSetColumn="F16" />
+              <Mapping SourceColumn="F17" DataSetColumn="F17" />
+              <Mapping SourceColumn="F18" DataSetColumn="F18" />
+              <Mapping SourceColumn="F19" DataSetColumn="F19" />
+              <Mapping SourceColumn="F20" DataSetColumn="F20" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable_ReportTableAdapter" GeneratorDataComponentClassName="DataTable_ReportTableAdapter" Name="DataTable_Report" UserDataComponentName="DataTable_ReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select '' as ST_1,'' as ST_2,'' as ST_3,'' as ST_4, '' as ST_5,'' as ST_6,'' as ST_7,'' as ST_8,'' as ST_9,'' as ST_10, 1 as INT_1, 1 as INT_2,1 as INT_3,1 as INT_4, 1 as INT_5,1.0 as F_6,1.0 as F_7,1.0 as F_8,1.0 as F_9,1.0 as F_10,1.0 as F_11,1.0 as F_12,1.0 as F_13,1.0 as F_14,1.0 as F_15,1.0 as F_16,1.0 as F_17,1.0 as F_18,1.0 as F_19,1.0 as F_20</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ST_1" DataSetColumn="ST_1" />
+              <Mapping SourceColumn="ST_2" DataSetColumn="ST_2" />
+              <Mapping SourceColumn="ST_3" DataSetColumn="ST_3" />
+              <Mapping SourceColumn="ST_4" DataSetColumn="ST_4" />
+              <Mapping SourceColumn="ST_5" DataSetColumn="ST_5" />
+              <Mapping SourceColumn="ST_6" DataSetColumn="ST_6" />
+              <Mapping SourceColumn="ST_7" DataSetColumn="ST_7" />
+              <Mapping SourceColumn="ST_8" DataSetColumn="ST_8" />
+              <Mapping SourceColumn="ST_9" DataSetColumn="ST_9" />
+              <Mapping SourceColumn="ST_10" DataSetColumn="ST_10" />
+              <Mapping SourceColumn="INT_1" DataSetColumn="INT_1" />
+              <Mapping SourceColumn="INT_2" DataSetColumn="INT_2" />
+              <Mapping SourceColumn="INT_3" DataSetColumn="INT_3" />
+              <Mapping SourceColumn="INT_4" DataSetColumn="INT_4" />
+              <Mapping SourceColumn="INT_5" DataSetColumn="INT_5" />
+              <Mapping SourceColumn="F_6" DataSetColumn="F_6" />
+              <Mapping SourceColumn="F_7" DataSetColumn="F_7" />
+              <Mapping SourceColumn="F_8" DataSetColumn="F_8" />
+              <Mapping SourceColumn="F_9" DataSetColumn="F_9" />
+              <Mapping SourceColumn="F_10" DataSetColumn="F_10" />
+              <Mapping SourceColumn="F_11" DataSetColumn="F_11" />
+              <Mapping SourceColumn="F_12" DataSetColumn="F_12" />
+              <Mapping SourceColumn="F_13" DataSetColumn="F_13" />
+              <Mapping SourceColumn="F_14" DataSetColumn="F_14" />
+              <Mapping SourceColumn="F_15" DataSetColumn="F_15" />
+              <Mapping SourceColumn="F_16" DataSetColumn="F_16" />
+              <Mapping SourceColumn="F_17" DataSetColumn="F_17" />
+              <Mapping SourceColumn="F_18" DataSetColumn="F_18" />
+              <Mapping SourceColumn="F_19" DataSetColumn="F_19" />
+              <Mapping SourceColumn="F_20" DataSetColumn="F_20" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -37,7 +140,7 @@ FROM            T_LOG_BATCH_DATA</CommandText>
   <xs:element name="DataSet_Report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Report" msprop:Generator_UserDSName="DataSet_Report">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Daily_Report" msprop:Generator_TableClassName="Daily_ReportDataTable" msprop:Generator_TableVarName="tableDaily_Report" msprop:Generator_TablePropName="Daily_Report" msprop:Generator_RowDeletingName="Daily_ReportRowDeleting" msprop:Generator_RowChangingName="Daily_ReportRowChanging" msprop:Generator_RowEvHandlerName="Daily_ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Daily_ReportRowDeleted" msprop:Generator_UserTableName="Daily_Report" msprop:Generator_RowChangedName="Daily_ReportRowChanged" msprop:Generator_RowEvArgName="Daily_ReportRowChangeEvent" msprop:Generator_RowClassName="Daily_ReportRow">
+        <xs:element name="Daily_Report" msprop:Generator_TableClassName="Daily_ReportDataTable" msprop:Generator_TableVarName="tableDaily_Report" msprop:Generator_RowChangedName="Daily_ReportRowChanged" msprop:Generator_TablePropName="Daily_Report" msprop:Generator_RowDeletingName="Daily_ReportRowDeleting" msprop:Generator_RowChangingName="Daily_ReportRowChanging" msprop:Generator_RowEvHandlerName="Daily_ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Daily_ReportRowDeleted" msprop:Generator_RowClassName="Daily_ReportRow" msprop:Generator_UserTableName="Daily_Report" msprop:Generator_RowEvArgName="Daily_ReportRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="A" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnA" msprop:Generator_ColumnPropNameInRow="A" msprop:Generator_ColumnPropNameInTable="AColumn" msprop:Generator_UserColumnName="A" minOccurs="0">
@@ -76,6 +179,208 @@ FROM            T_LOG_BATCH_DATA</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="G" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnG" msprop:Generator_ColumnPropNameInRow="G" msprop:Generator_ColumnPropNameInTable="GColumn" msprop:Generator_UserColumnName="G" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable_Report1" msprop:Generator_TableClassName="DataTable_Report1DataTable" msprop:Generator_TableVarName="tableDataTable_Report1" msprop:Generator_TablePropName="DataTable_Report1" msprop:Generator_RowDeletingName="DataTable_Report1RowDeleting" msprop:Generator_RowChangingName="DataTable_Report1RowChanging" msprop:Generator_RowEvHandlerName="DataTable_Report1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable_Report1RowDeleted" msprop:Generator_UserTableName="DataTable_Report1" msprop:Generator_RowChangedName="DataTable_Report1RowChanged" msprop:Generator_RowEvArgName="DataTable_Report1RowChangeEvent" msprop:Generator_RowClassName="DataTable_Report1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ST1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST1" msprop:Generator_ColumnPropNameInRow="ST1" msprop:Generator_ColumnPropNameInTable="ST1Column" msprop:Generator_UserColumnName="ST1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST2" msprop:Generator_ColumnPropNameInRow="ST2" msprop:Generator_ColumnPropNameInTable="ST2Column" msprop:Generator_UserColumnName="ST2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST3" msprop:Generator_ColumnPropNameInRow="ST3" msprop:Generator_ColumnPropNameInTable="ST3Column" msprop:Generator_UserColumnName="ST3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST4" msprop:Generator_ColumnPropNameInRow="ST4" msprop:Generator_ColumnPropNameInTable="ST4Column" msprop:Generator_UserColumnName="ST4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST5" msprop:Generator_ColumnPropNameInRow="ST5" msprop:Generator_ColumnPropNameInTable="ST5Column" msprop:Generator_UserColumnName="ST5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST6" msprop:Generator_ColumnPropNameInRow="ST6" msprop:Generator_ColumnPropNameInTable="ST6Column" msprop:Generator_UserColumnName="ST6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST7" msprop:Generator_ColumnPropNameInRow="ST7" msprop:Generator_ColumnPropNameInTable="ST7Column" msprop:Generator_UserColumnName="ST7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST8" msprop:Generator_ColumnPropNameInRow="ST8" msprop:Generator_ColumnPropNameInTable="ST8Column" msprop:Generator_UserColumnName="ST8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST9" msprop:Generator_ColumnPropNameInRow="ST9" msprop:Generator_ColumnPropNameInTable="ST9Column" msprop:Generator_UserColumnName="ST9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST10" msprop:Generator_ColumnPropNameInRow="ST10" msprop:Generator_ColumnPropNameInTable="ST10Column" msprop:Generator_UserColumnName="ST10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INT1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT1" msprop:Generator_ColumnPropNameInRow="INT1" msprop:Generator_ColumnPropNameInTable="INT1Column" msprop:Generator_UserColumnName="INT1" type="xs:int" minOccurs="0" />
+              <xs:element name="INT2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT2" msprop:Generator_ColumnPropNameInRow="INT2" msprop:Generator_ColumnPropNameInTable="INT2Column" msprop:Generator_UserColumnName="INT2" type="xs:int" minOccurs="0" />
+              <xs:element name="INT3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT3" msprop:Generator_ColumnPropNameInRow="INT3" msprop:Generator_ColumnPropNameInTable="INT3Column" msprop:Generator_UserColumnName="INT3" type="xs:int" minOccurs="0" />
+              <xs:element name="INT4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT4" msprop:Generator_ColumnPropNameInRow="INT4" msprop:Generator_ColumnPropNameInTable="INT4Column" msprop:Generator_UserColumnName="INT4" type="xs:int" minOccurs="0" />
+              <xs:element name="INT5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT5" msprop:Generator_ColumnPropNameInRow="INT5" msprop:Generator_ColumnPropNameInTable="INT5Column" msprop:Generator_UserColumnName="INT5" type="xs:int" minOccurs="0" />
+              <xs:element name="INT6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT6" msprop:Generator_ColumnPropNameInRow="INT6" msprop:Generator_ColumnPropNameInTable="INT6Column" msprop:Generator_UserColumnName="INT6" type="xs:int" minOccurs="0" />
+              <xs:element name="INT7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT7" msprop:Generator_ColumnPropNameInRow="INT7" msprop:Generator_ColumnPropNameInTable="INT7Column" msprop:Generator_UserColumnName="INT7" type="xs:int" minOccurs="0" />
+              <xs:element name="INT8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT8" msprop:Generator_ColumnPropNameInRow="INT8" msprop:Generator_ColumnPropNameInTable="INT8Column" msprop:Generator_UserColumnName="INT8" type="xs:int" minOccurs="0" />
+              <xs:element name="INT9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT9" msprop:Generator_ColumnPropNameInRow="INT9" msprop:Generator_ColumnPropNameInTable="INT9Column" msprop:Generator_UserColumnName="INT9" type="xs:int" minOccurs="0" />
+              <xs:element name="INT10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT10" msprop:Generator_ColumnPropNameInRow="INT10" msprop:Generator_ColumnPropNameInTable="INT10Column" msprop:Generator_UserColumnName="INT10" type="xs:int" minOccurs="0" />
+              <xs:element name="F1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF1" msprop:Generator_ColumnPropNameInRow="F1" msprop:Generator_ColumnPropNameInTable="F1Column" msprop:Generator_UserColumnName="F1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF2" msprop:Generator_ColumnPropNameInRow="F2" msprop:Generator_ColumnPropNameInTable="F2Column" msprop:Generator_UserColumnName="F2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF3" msprop:Generator_ColumnPropNameInRow="F3" msprop:Generator_ColumnPropNameInTable="F3Column" msprop:Generator_UserColumnName="F3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF4" msprop:Generator_ColumnPropNameInRow="F4" msprop:Generator_ColumnPropNameInTable="F4Column" msprop:Generator_UserColumnName="F4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF5" msprop:Generator_ColumnPropNameInRow="F5" msprop:Generator_ColumnPropNameInTable="F5Column" msprop:Generator_UserColumnName="F5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF6" msprop:Generator_ColumnPropNameInRow="F6" msprop:Generator_ColumnPropNameInTable="F6Column" msprop:Generator_UserColumnName="F6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF7" msprop:Generator_ColumnPropNameInRow="F7" msprop:Generator_ColumnPropNameInTable="F7Column" msprop:Generator_UserColumnName="F7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF8" msprop:Generator_ColumnPropNameInRow="F8" msprop:Generator_ColumnPropNameInTable="F8Column" msprop:Generator_UserColumnName="F8" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF9" msprop:Generator_ColumnPropNameInRow="F9" msprop:Generator_ColumnPropNameInTable="F9Column" msprop:Generator_UserColumnName="F9" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF10" msprop:Generator_ColumnPropNameInRow="F10" msprop:Generator_ColumnPropNameInTable="F10Column" msprop:Generator_UserColumnName="F10" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F11" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF11" msprop:Generator_ColumnPropNameInRow="F11" msprop:Generator_ColumnPropNameInTable="F11Column" msprop:Generator_UserColumnName="F11" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F12" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF12" msprop:Generator_ColumnPropNameInRow="F12" msprop:Generator_ColumnPropNameInTable="F12Column" msprop:Generator_UserColumnName="F12" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F13" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF13" msprop:Generator_ColumnPropNameInRow="F13" msprop:Generator_ColumnPropNameInTable="F13Column" msprop:Generator_UserColumnName="F13" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F14" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF14" msprop:Generator_ColumnPropNameInRow="F14" msprop:Generator_ColumnPropNameInTable="F14Column" msprop:Generator_UserColumnName="F14" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F15" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF15" msprop:Generator_ColumnPropNameInRow="F15" msprop:Generator_ColumnPropNameInTable="F15Column" msprop:Generator_UserColumnName="F15" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F16" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF16" msprop:Generator_ColumnPropNameInRow="F16" msprop:Generator_ColumnPropNameInTable="F16Column" msprop:Generator_UserColumnName="F16" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F17" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF17" msprop:Generator_ColumnPropNameInRow="F17" msprop:Generator_ColumnPropNameInTable="F17Column" msprop:Generator_UserColumnName="F17" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F18" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF18" msprop:Generator_ColumnPropNameInRow="F18" msprop:Generator_ColumnPropNameInTable="F18Column" msprop:Generator_UserColumnName="F18" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F19" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF19" msprop:Generator_ColumnPropNameInRow="F19" msprop:Generator_ColumnPropNameInTable="F19Column" msprop:Generator_UserColumnName="F19" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F20" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF20" msprop:Generator_ColumnPropNameInRow="F20" msprop:Generator_ColumnPropNameInTable="F20Column" msprop:Generator_UserColumnName="F20" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable_Report" msprop:Generator_TableClassName="DataTable_ReportDataTable" msprop:Generator_TableVarName="tableDataTable_Report" msprop:Generator_TablePropName="DataTable_Report" msprop:Generator_RowDeletingName="DataTable_ReportRowDeleting" msprop:Generator_RowChangingName="DataTable_ReportRowChanging" msprop:Generator_RowEvHandlerName="DataTable_ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable_ReportRowDeleted" msprop:Generator_UserTableName="DataTable_Report" msprop:Generator_RowChangedName="DataTable_ReportRowChanged" msprop:Generator_RowEvArgName="DataTable_ReportRowChangeEvent" msprop:Generator_RowClassName="DataTable_ReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ST_1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_1" msprop:Generator_ColumnPropNameInRow="ST_1" msprop:Generator_ColumnPropNameInTable="ST_1Column" msprop:Generator_UserColumnName="ST_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_2" msprop:Generator_ColumnPropNameInRow="ST_2" msprop:Generator_ColumnPropNameInTable="ST_2Column" msprop:Generator_UserColumnName="ST_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_3" msprop:Generator_ColumnPropNameInRow="ST_3" msprop:Generator_ColumnPropNameInTable="ST_3Column" msprop:Generator_UserColumnName="ST_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_4" msprop:Generator_ColumnPropNameInRow="ST_4" msprop:Generator_ColumnPropNameInTable="ST_4Column" msprop:Generator_UserColumnName="ST_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_5" msprop:Generator_ColumnPropNameInRow="ST_5" msprop:Generator_ColumnPropNameInTable="ST_5Column" msprop:Generator_UserColumnName="ST_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_6" msprop:Generator_ColumnPropNameInRow="ST_6" msprop:Generator_ColumnPropNameInTable="ST_6Column" msprop:Generator_UserColumnName="ST_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_7" msprop:Generator_ColumnPropNameInRow="ST_7" msprop:Generator_ColumnPropNameInTable="ST_7Column" msprop:Generator_UserColumnName="ST_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_8" msprop:Generator_ColumnPropNameInRow="ST_8" msprop:Generator_ColumnPropNameInTable="ST_8Column" msprop:Generator_UserColumnName="ST_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_9" msprop:Generator_ColumnPropNameInRow="ST_9" msprop:Generator_ColumnPropNameInTable="ST_9Column" msprop:Generator_UserColumnName="ST_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ST_10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnST_10" msprop:Generator_ColumnPropNameInRow="ST_10" msprop:Generator_ColumnPropNameInTable="ST_10Column" msprop:Generator_UserColumnName="ST_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INT_1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT_1" msprop:Generator_ColumnPropNameInRow="INT_1" msprop:Generator_ColumnPropNameInTable="INT_1Column" msprop:Generator_UserColumnName="INT_1" type="xs:int" minOccurs="0" />
+              <xs:element name="INT_2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT_2" msprop:Generator_ColumnPropNameInRow="INT_2" msprop:Generator_ColumnPropNameInTable="INT_2Column" msprop:Generator_UserColumnName="INT_2" type="xs:int" minOccurs="0" />
+              <xs:element name="INT_3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT_3" msprop:Generator_ColumnPropNameInRow="INT_3" msprop:Generator_ColumnPropNameInTable="INT_3Column" msprop:Generator_UserColumnName="INT_3" type="xs:int" minOccurs="0" />
+              <xs:element name="INT_4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT_4" msprop:Generator_ColumnPropNameInRow="INT_4" msprop:Generator_ColumnPropNameInTable="INT_4Column" msprop:Generator_UserColumnName="INT_4" type="xs:int" minOccurs="0" />
+              <xs:element name="INT_5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINT_5" msprop:Generator_ColumnPropNameInRow="INT_5" msprop:Generator_ColumnPropNameInTable="INT_5Column" msprop:Generator_UserColumnName="INT_5" type="xs:int" minOccurs="0" />
+              <xs:element name="F_6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_6" msprop:Generator_ColumnPropNameInRow="F_6" msprop:Generator_ColumnPropNameInTable="F_6Column" msprop:Generator_UserColumnName="F_6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_7" msprop:Generator_ColumnPropNameInRow="F_7" msprop:Generator_ColumnPropNameInTable="F_7Column" msprop:Generator_UserColumnName="F_7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_8" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_8" msprop:Generator_ColumnPropNameInRow="F_8" msprop:Generator_ColumnPropNameInTable="F_8Column" msprop:Generator_UserColumnName="F_8" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_9" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_9" msprop:Generator_ColumnPropNameInRow="F_9" msprop:Generator_ColumnPropNameInTable="F_9Column" msprop:Generator_UserColumnName="F_9" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_10" msprop:Generator_ColumnPropNameInRow="F_10" msprop:Generator_ColumnPropNameInTable="F_10Column" msprop:Generator_UserColumnName="F_10" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_11" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_11" msprop:Generator_ColumnPropNameInRow="F_11" msprop:Generator_ColumnPropNameInTable="F_11Column" msprop:Generator_UserColumnName="F_11" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_12" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_12" msprop:Generator_ColumnPropNameInRow="F_12" msprop:Generator_ColumnPropNameInTable="F_12Column" msprop:Generator_UserColumnName="F_12" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_13" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_13" msprop:Generator_ColumnPropNameInRow="F_13" msprop:Generator_ColumnPropNameInTable="F_13Column" msprop:Generator_UserColumnName="F_13" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_14" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_14" msprop:Generator_ColumnPropNameInRow="F_14" msprop:Generator_ColumnPropNameInTable="F_14Column" msprop:Generator_UserColumnName="F_14" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_15" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_15" msprop:Generator_ColumnPropNameInRow="F_15" msprop:Generator_ColumnPropNameInTable="F_15Column" msprop:Generator_UserColumnName="F_15" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_16" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_16" msprop:Generator_ColumnPropNameInRow="F_16" msprop:Generator_ColumnPropNameInTable="F_16Column" msprop:Generator_UserColumnName="F_16" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_17" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_17" msprop:Generator_ColumnPropNameInRow="F_17" msprop:Generator_ColumnPropNameInTable="F_17Column" msprop:Generator_UserColumnName="F_17" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_18" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_18" msprop:Generator_ColumnPropNameInRow="F_18" msprop:Generator_ColumnPropNameInTable="F_18Column" msprop:Generator_UserColumnName="F_18" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_19" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_19" msprop:Generator_ColumnPropNameInRow="F_19" msprop:Generator_ColumnPropNameInTable="F_19Column" msprop:Generator_UserColumnName="F_19" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F_20" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnF_20" msprop:Generator_ColumnPropNameInRow="F_20" msprop:Generator_ColumnPropNameInTable="F_20Column" msprop:Generator_UserColumnName="F_20" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

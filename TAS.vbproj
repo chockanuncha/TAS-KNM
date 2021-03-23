@@ -446,22 +446,22 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="bin\Debug\Report_File\BOL.vb">
+    <Compile Include="bin\Debug\Report_File\BOL_R2.vb">
+      <SubType>Component</SubType>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BOL.rpt</DependentUpon>
+      <DependentUpon>BOL_R2.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\Report_File\DailyReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="bin\Debug\Report_File\Daily Report1.vb">
+    <Compile Include="bin\Debug\Report_File\MeterReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Daily Report.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report_File\Meter Report1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Meter Report.rpt</DependentUpon>
+      <DependentUpon>MeterReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="bin\Debug\TruckTimeResult1.vb">
@@ -931,17 +931,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AdvisenoteReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report_File\BOL.rpt">
+    <EmbeddedResource Include="bin\Debug\Report_File\BOL_R2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>BOL.vb</LastGenOutput>
+      <LastGenOutput>BOL_R2.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report_File\Daily Report.rpt">
+    <EmbeddedResource Include="bin\Debug\Report_File\DailyReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Daily Report1.vb</LastGenOutput>
+      <LastGenOutput>DailyReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report_File\Meter Report.rpt">
+    <EmbeddedResource Include="bin\Debug\Report_File\MeterReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Meter Report1.vb</LastGenOutput>
+      <LastGenOutput>MeterReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\TruckTimeResult1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

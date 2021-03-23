@@ -79,7 +79,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.10")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("KNM_TASSERVER")>  _
         Public Property LicServer() As String
             Get
                 Return CType(Me("LicServer"),String)

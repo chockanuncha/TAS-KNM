@@ -282,8 +282,8 @@ Partial Public Class MAIN
         'Supervisor.Enabled = False
         ToolGroup.Enabled = False
 
-        'PrepareExamples()
-        'FReShipment()
+        PrepareExamples()
+        FReShipment()
     End Sub
 
     Private Sub PreloadControls()
