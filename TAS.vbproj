@@ -339,6 +339,12 @@
     <Compile Include="Advisenote\Advisenote.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Advisenote\Advisenote_Topup.designer.vb">
+      <DependentUpon>Advisenote_Topup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Advisenote\Advisenote_Topup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Advisenote\Loginauthorize.Designer.vb">
       <DependentUpon>Loginauthorize.vb</DependentUpon>
     </Compile>
@@ -445,6 +451,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="bin\Debug\Report_File\AdvisenoteReport_Topup.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvisenoteReport_Topup.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="bin\Debug\Report_File\BOL_R2.vb">
       <SubType>Component</SubType>
@@ -882,6 +894,9 @@
     <EmbeddedResource Include="Advisenote\Advisenote.resx">
       <DependentUpon>Advisenote.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Advisenote\Advisenote_Topup.resx">
+      <DependentUpon>Advisenote_Topup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\Loginauthorize.resx">
       <DependentUpon>Loginauthorize.vb</DependentUpon>
     </EmbeddedResource>
@@ -930,6 +945,10 @@
     <EmbeddedResource Include="bin\Debug\Report_File\AdvisenoteReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AdvisenoteReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report_File\AdvisenoteReport_Topup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdvisenoteReport_Topup.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Report_File\BOL_R2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

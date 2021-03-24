@@ -635,7 +635,7 @@ Partial Class MAIN
         Me.radPanorama1.ScrollBarThickness = 10
         Me.radPanorama1.ScrollingBackground = True
         Me.radPanorama1.ShowGroups = True
-        Me.radPanorama1.Size = New System.Drawing.Size(1912, 991)
+        Me.radPanorama1.Size = New System.Drawing.Size(1912, 1047)
         Me.radPanorama1.TabIndex = 1
         Me.radPanorama1.ThemeName = "Breeze"
         CType(Me.radPanorama1.GetChildAt(0), Telerik.WinControls.UI.RadPanoramaElement).ScrollBarThickness = 10
@@ -754,42 +754,42 @@ Partial Class MAIN
         '
         'M_GROUP
         '
-        Me.M_GROUP.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.M_GROUP.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.M_GROUP.ForeColor = System.Drawing.Color.RoyalBlue
         Me.M_GROUP.Location = New System.Drawing.Point(92, 32)
         Me.M_GROUP.Name = "M_GROUP"
-        Me.M_GROUP.Size = New System.Drawing.Size(65, 29)
+        Me.M_GROUP.Size = New System.Drawing.Size(80, 31)
         Me.M_GROUP.TabIndex = 9
         Me.M_GROUP.Text = "Group"
         '
         'RadLabel6
         '
-        Me.RadLabel6.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel6.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.RadLabel6.ForeColor = System.Drawing.Color.Black
         Me.RadLabel6.Location = New System.Drawing.Point(32, 7)
         Me.RadLabel6.Name = "RadLabel6"
-        Me.RadLabel6.Size = New System.Drawing.Size(60, 29)
+        Me.RadLabel6.Size = New System.Drawing.Size(94, 31)
         Me.RadLabel6.TabIndex = 7
         Me.RadLabel6.Text = "User :"
         Me.RadLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         '
         'M_NAME
         '
-        Me.M_NAME.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.M_NAME.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.M_NAME.ForeColor = System.Drawing.Color.RoyalBlue
         Me.M_NAME.Location = New System.Drawing.Point(92, 7)
         Me.M_NAME.Name = "M_NAME"
-        Me.M_NAME.Size = New System.Drawing.Size(49, 29)
+        Me.M_NAME.Size = New System.Drawing.Size(66, 31)
         Me.M_NAME.TabIndex = 8
         Me.M_NAME.Text = "User"
         '
         'RadLabel5
         '
-        Me.RadLabel5.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel5.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.RadLabel5.ForeColor = System.Drawing.Color.Black
         Me.RadLabel5.Location = New System.Drawing.Point(14, 32)
         Me.RadLabel5.Name = "RadLabel5"
-        Me.RadLabel5.Size = New System.Drawing.Size(76, 29)
+        Me.RadLabel5.Size = New System.Drawing.Size(108, 31)
         Me.RadLabel5.TabIndex = 6
         Me.RadLabel5.Text = "Group :"
         Me.RadLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
@@ -872,7 +872,7 @@ Partial Class MAIN
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(1767, 889)
+        Me.PictureBox1.Location = New System.Drawing.Point(1767, 946)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(143, 65)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -883,7 +883,7 @@ Partial Class MAIN
         '
         Me.RadClock1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadClock1.BackColor = System.Drawing.Color.Transparent
-        Me.RadClock1.Location = New System.Drawing.Point(1776, 746)
+        Me.RadClock1.Location = New System.Drawing.Point(1776, 803)
         Me.RadClock1.Name = "RadClock1"
         Me.RadClock1.Size = New System.Drawing.Size(134, 135)
         Me.RadClock1.TabIndex = 8
@@ -895,7 +895,7 @@ Partial Class MAIN
         Me.LoadingGroup.AccessibleName = "การจ่ายผลิตภัณฑ์"
         Me.LoadingGroup.AutoToolTip = True
         Me.LoadingGroup.CellSize = New System.Drawing.Size(140, 120)
-        Me.LoadingGroup.Font = New System.Drawing.Font("Courier New", 17.0!)
+        Me.LoadingGroup.Font = New System.Drawing.Font("Courier New", 18.0!)
         Me.LoadingGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LoadingGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_truck
         Me.LoadingGroup.ImageAlignment = System.Drawing.ContentAlignment.TopRight
@@ -984,7 +984,7 @@ Partial Class MAIN
         Me.Advisenote_Menu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Advisenote_Menu.Name = "Advisenote_Menu"
         Me.Advisenote_Menu.Padding = New System.Windows.Forms.Padding(5)
-        Me.Advisenote_Menu.Text = "Loading Advisenote"
+        Me.Advisenote_Menu.Text = "Loading Advisory note"
         Me.Advisenote_Menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Advisenote_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
@@ -995,7 +995,7 @@ Partial Class MAIN
         Me.ToolGroup.AutoSize = True
         Me.ToolGroup.CellSize = New System.Drawing.Size(140, 120)
         Me.ToolGroup.EnableImageTransparency = True
-        Me.ToolGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolGroup.Font = New System.Drawing.Font("Courier New", 18.0!)
         Me.ToolGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ToolGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_new
         Me.ToolGroup.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1021,7 +1021,7 @@ Partial Class MAIN
         Me.themeViewerTile.Column = 2
         Me.themeViewerTile.DrawBorder = True
         Me.themeViewerTile.EnableImageTransparency = True
-        Me.themeViewerTile.Font = New System.Drawing.Font("Consolas", 14.0!)
+        Me.themeViewerTile.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.themeViewerTile.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.themeViewerTile.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.tabs_48
         Me.themeViewerTile.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1044,7 +1044,7 @@ Partial Class MAIN
         Me.RadLiveTileElement11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.RadLiveTileElement11.ColSpan = 2
         Me.RadLiveTileElement11.EnableImageTransparency = True
-        Me.RadLiveTileElement11.Font = New System.Drawing.Font("Consolas", 14.0!)
+        Me.RadLiveTileElement11.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement11.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement11.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_tankorder
         Me.RadLiveTileElement11.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1067,7 +1067,7 @@ Partial Class MAIN
         Me.RadLiveTileElement12.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.RadLiveTileElement12.ColSpan = 2
         Me.RadLiveTileElement12.EnableImageTransparency = True
-        Me.RadLiveTileElement12.Font = New System.Drawing.Font("Consolas", 14.0!)
+        Me.RadLiveTileElement12.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement12.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement12.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_new1
         Me.RadLiveTileElement12.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1089,7 +1089,7 @@ Partial Class MAIN
         Me.BaySetting_Menu.ColSpan = 2
         Me.BaySetting_Menu.Column = 2
         Me.BaySetting_Menu.EnableImageTransparency = True
-        Me.BaySetting_Menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.BaySetting_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.BaySetting_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.BaySetting_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking_baysettings
         Me.BaySetting_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1106,7 +1106,7 @@ Partial Class MAIN
         Me.MMIGroups.AccessibleName = "Controls"
         Me.MMIGroups.AutoSize = True
         Me.MMIGroups.CellSize = New System.Drawing.Size(140, 120)
-        Me.MMIGroups.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.MMIGroups.Font = New System.Drawing.Font("Courier New", 18.0!)
         Me.MMIGroups.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MMIGroups.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem
         Me.MMIGroups.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1200,7 +1200,7 @@ Partial Class MAIN
         Me.Report.AccessibleDescription = "<html><span style=""color: #ffffff"">รายงาน"
         Me.Report.AccessibleName = "<html><span style=""color: #ffffff"">รายงาน"
         Me.Report.CellSize = New System.Drawing.Size(140, 120)
-        Me.Report.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Report.Font = New System.Drawing.Font("Courier New", 18.0!)
         Me.Report.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Report.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking1
         Me.Report.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight
@@ -1222,7 +1222,7 @@ Partial Class MAIN
         Me.RadLiveTileElement10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.RadLiveTileElement10.ColSpan = 2
         Me.RadLiveTileElement10.EnableImageTransparency = True
-        Me.RadLiveTileElement10.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement10.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement10.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement10.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_datatracking
         Me.RadLiveTileElement10.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1241,7 +1241,7 @@ Partial Class MAIN
         Me.RadLiveTileElement3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.RadLiveTileElement3.ColSpan = 2
         Me.RadLiveTileElement3.EnableImageTransparency = True
-        Me.RadLiveTileElement3.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement3.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement3.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement3.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Report31
         Me.RadLiveTileElement3.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1262,7 +1262,7 @@ Partial Class MAIN
         Me.RadLiveTileElement31.BorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.RadLiveTileElement31.ColSpan = 2
         Me.RadLiveTileElement31.EnableImageTransparency = True
-        Me.RadLiveTileElement31.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement31.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement31.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement31.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Report31
         Me.RadLiveTileElement31.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1283,7 +1283,7 @@ Partial Class MAIN
         Me.RecordGroup.CellSize = New System.Drawing.Size(140, 120)
         Me.RecordGroup.EnableImageTransparency = False
         Me.RecordGroup.FocusBorderWidth = 3
-        Me.RecordGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.RecordGroup.Font = New System.Drawing.Font("Courier New", 18.0!)
         Me.RecordGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RecordGroup.HorizontalLineWidth = 1
         Me.RecordGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata
@@ -1306,7 +1306,7 @@ Partial Class MAIN
         Me.Truck_Menu.ColSpan = 2
         Me.Truck_Menu.Column = 2
         Me.Truck_Menu.EnableImageTransparency = True
-        Me.Truck_Menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Truck_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.Truck_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.Truck_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_truck
         Me.Truck_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1327,7 +1327,7 @@ Partial Class MAIN
         Me.Card_Menu.ColSpan = 2
         Me.Card_Menu.DrawBorder = True
         Me.Card_Menu.EnableImageTransparency = True
-        Me.Card_Menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Card_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.Card_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.Card_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.card_reader2
         Me.Card_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1351,7 +1351,7 @@ Partial Class MAIN
         Me.Driver_Menu.ColSpan = 2
         Me.Driver_Menu.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.Driver_Menu.EnableImageTransparency = True
-        Me.Driver_Menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Driver_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.Driver_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.Driver_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata_driver
         Me.Driver_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1376,7 +1376,7 @@ Partial Class MAIN
         Me.Customer_Menu.ColSpan = 2
         Me.Customer_Menu.DrawBorder = True
         Me.Customer_Menu.EnableImageTransparency = True
-        Me.Customer_Menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Customer_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.Customer_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.Customer_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata_customer
         Me.Customer_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1403,7 +1403,7 @@ Partial Class MAIN
         Me.TruckCompany_Menu.DrawBorder = True
         Me.TruckCompany_Menu.EnableImageTransparency = True
         Me.TruckCompany_Menu.FitToSizeMode = Telerik.WinControls.RadFitToSizeMode.FitToParentContent
-        Me.TruckCompany_Menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.TruckCompany_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.TruckCompany_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.TruckCompany_Menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata_truckcompany
         Me.TruckCompany_Menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1426,10 +1426,9 @@ Partial Class MAIN
         Me.Tank_menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.Tank_menu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.Tank_menu.ColSpan = 2
-        Me.Tank_menu.Column = 2
         Me.Tank_menu.DrawBorder = True
         Me.Tank_menu.EnableImageTransparency = True
-        Me.Tank_menu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Tank_menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.Tank_menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.Tank_menu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Oil_tank
         Me.Tank_menu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1437,7 +1436,7 @@ Partial Class MAIN
         Me.Tank_menu.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Tank_menu.Name = "Tank_menu"
         Me.Tank_menu.Padding = New System.Windows.Forms.Padding(5)
-        Me.Tank_menu.Row = 3
+        Me.Tank_menu.Row = 2
         Me.Tank_menu.Text = "Tank"
         Me.Tank_menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Tank_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1452,7 +1451,7 @@ Partial Class MAIN
         Me.ProductMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.ProductMenu.ColSpan = 2
         Me.ProductMenu.Column = 4
-        Me.ProductMenu.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
+        Me.ProductMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.ProductMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ProductMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_tankoverview
         Me.ProductMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1466,10 +1465,9 @@ Partial Class MAIN
         '
         'LiveTileFrameElement1
         '
-        Me.LiveTileFrameElement1.AccessibleDescription = "LPG"
         Me.LiveTileFrameElement1.Alignment = System.Drawing.ContentAlignment.TopRight
         Me.LiveTileFrameElement1.Name = "LiveTileFrameElement1"
-        Me.LiveTileFrameElement1.Text = "HSD"
+        Me.LiveTileFrameElement1.Text = "LPG"
         Me.LiveTileFrameElement1.TextWrap = True
         '
         'LiveTileFrameElement2
@@ -1496,7 +1494,7 @@ Partial Class MAIN
         Me.MeterMenu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.MeterMenu.ColSpan = 2
         Me.MeterMenu.Column = 2
-        Me.MeterMenu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.MeterMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.MeterMenu.ForeColor = System.Drawing.Color.White
         Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.MeterMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.VeGa_T_48
@@ -1516,7 +1514,7 @@ Partial Class MAIN
         Me.BayMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.BayMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.BayMenu.ColSpan = 2
-        Me.BayMenu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.BayMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.BayMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.BayMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_bay
         Me.BayMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1534,7 +1532,7 @@ Partial Class MAIN
         Me.RadLiveTileElement21.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.RadLiveTileElement21.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.RadLiveTileElement21.ColSpan = 2
-        Me.RadLiveTileElement21.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
+        Me.RadLiveTileElement21.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement21.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement21.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.COM
         Me.RadLiveTileElement21.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1555,7 +1553,7 @@ Partial Class MAIN
         Me.ShipperMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.ShipperMenu.ColSpan = 2
         Me.ShipperMenu.Column = 2
-        Me.ShipperMenu.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
+        Me.ShipperMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.ShipperMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ShipperMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Company2
         Me.ShipperMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1575,7 +1573,6 @@ Partial Class MAIN
         Me.StatusMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.StatusMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.StatusMenu.ColSpan = 2
-        Me.StatusMenu.Column = 2
         Me.StatusMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.StatusMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_status1
         Me.StatusMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1601,7 +1598,7 @@ Partial Class MAIN
         Me.HistoryMenu.Column = 2
         Me.HistoryMenu.DrawBorder = True
         Me.HistoryMenu.EnableImageTransparency = True
-        Me.HistoryMenu.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.HistoryMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.HistoryMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.HistoryMenu.Image = CType(resources.GetObject("HistoryMenu.Image"), System.Drawing.Image)
         Me.HistoryMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1619,7 +1616,7 @@ Partial Class MAIN
         Me.ConfigGroup.AccessibleDescription = "Config"
         Me.ConfigGroup.AccessibleName = "Config"
         Me.ConfigGroup.CellSize = New System.Drawing.Size(140, 120)
-        Me.ConfigGroup.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.ConfigGroup.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.ConfigGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ConfigGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config
         Me.ConfigGroup.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight
@@ -1637,13 +1634,14 @@ Partial Class MAIN
         Me.BannerMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.BannerMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.BannerMenu.ColSpan = 2
+        Me.BannerMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.BannerMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.BannerMenu.Image = CType(resources.GetObject("BannerMenu.Image"), System.Drawing.Image)
         Me.BannerMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.BannerMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BannerMenu.Name = "BannerMenu"
         Me.BannerMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.BannerMenu.Row = 3
+        Me.BannerMenu.Row = 2
         Me.BannerMenu.Text = "Banner"
         Me.BannerMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.BannerMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1663,7 +1661,7 @@ Partial Class MAIN
         Me.QueueMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.QueueMenu.Name = "QueueMenu"
         Me.QueueMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.QueueMenu.Row = 3
+        Me.QueueMenu.Row = 2
         Me.QueueMenu.Text = "Queue"
         Me.QueueMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.QueueMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1682,7 +1680,7 @@ Partial Class MAIN
         Me.OverrideMenu.Margin = New System.Windows.Forms.Padding(0)
         Me.OverrideMenu.Name = "OverrideMenu"
         Me.OverrideMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.OverrideMenu.Row = 4
+        Me.OverrideMenu.Row = 2
         Me.OverrideMenu.Text = "Override"
         Me.OverrideMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.OverrideMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1695,6 +1693,7 @@ Partial Class MAIN
         Me.UserMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.UserMenu.ColSpan = 2
         Me.UserMenu.Column = 2
+        Me.UserMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.UserMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.UserMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_user
         Me.UserMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1712,7 +1711,7 @@ Partial Class MAIN
         Me.Unloading.AccessibleName = "TileGroupElement5"
         Me.Unloading.CellSize = New System.Drawing.Size(140, 120)
         Me.Unloading.EnableImageTransparency = True
-        Me.Unloading.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.Unloading.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.Unloading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Unloading.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.tanker_New
         Me.Unloading.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1735,7 +1734,7 @@ Partial Class MAIN
         Me.RadTileElement40.BorderColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.RadTileElement40.ColSpan = 2
         Me.RadTileElement40.EnableImageTransparency = True
-        Me.RadTileElement40.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadTileElement40.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadTileElement40.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadTileElement40.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.tanker_New
         Me.RadTileElement40.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1754,7 +1753,7 @@ Partial Class MAIN
         Me.RadLiveTileElement6.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
         Me.RadLiveTileElement6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.RadLiveTileElement6.EnableImageTransparency = True
-        Me.RadLiveTileElement6.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement6.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement6.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement6.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Batch_48_x_48
         Me.RadLiveTileElement6.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1776,7 +1775,7 @@ Partial Class MAIN
         Me.RadLiveTileElement7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.RadLiveTileElement7.Column = 1
         Me.RadLiveTileElement7.EnableImageTransparency = True
-        Me.RadLiveTileElement7.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement7.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement7.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement7.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Oil_tank
         Me.RadLiveTileElement7.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1798,7 +1797,7 @@ Partial Class MAIN
         Me.RadLiveTileElement8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.RadLiveTileElement8.ColSpan = 2
         Me.RadLiveTileElement8.EnableImageTransparency = True
-        Me.RadLiveTileElement8.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement8.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement8.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement8.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Stock
         Me.RadLiveTileElement8.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1848,7 +1847,7 @@ Partial Class MAIN
         Me.RadTileElement27.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.RadTileElement27.CellPadding = New System.Windows.Forms.Padding(5)
         Me.RadTileElement27.DrawBorder = True
-        Me.RadTileElement27.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadTileElement27.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadTileElement27.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadTileElement27.Image = CType(resources.GetObject("RadTileElement27.Image"), System.Drawing.Image)
         Me.RadTileElement27.ImageAlignment = System.Drawing.ContentAlignment.BottomCenter
@@ -1889,7 +1888,7 @@ Partial Class MAIN
         Me.RadLiveTileElement32.BorderColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
         Me.RadLiveTileElement32.ColSpan = 2
         Me.RadLiveTileElement32.EnableImageTransparency = True
-        Me.RadLiveTileElement32.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement32.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement32.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement32.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Truck2
         Me.RadLiveTileElement32.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1911,7 +1910,7 @@ Partial Class MAIN
         Me.RadLiveTileElement33.ColSpan = 2
         Me.RadLiveTileElement33.Column = 2
         Me.RadLiveTileElement33.EnableImageTransparency = True
-        Me.RadLiveTileElement33.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement33.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement33.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement33.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Truck2
         Me.RadLiveTileElement33.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1930,7 +1929,7 @@ Partial Class MAIN
         Me.RadLiveTileElement34.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
         Me.RadLiveTileElement34.Column = 2
         Me.RadLiveTileElement34.EnableImageTransparency = True
-        Me.RadLiveTileElement34.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement34.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement34.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement34.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.RadLiveTileElement34.ImageLayout = System.Windows.Forms.ImageLayout.None
@@ -1948,7 +1947,7 @@ Partial Class MAIN
         Me.RadLiveTileElement35.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.RadLiveTileElement35.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(160, Byte), Integer))
         Me.RadLiveTileElement35.EnableImageTransparency = True
-        Me.RadLiveTileElement35.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement35.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement35.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement35.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.RadLiveTileElement35.ImageLayout = System.Windows.Forms.ImageLayout.None
@@ -1993,7 +1992,7 @@ Partial Class MAIN
         Me.RadLiveTileElement28.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(238, Byte), Integer))
         Me.RadLiveTileElement28.ColSpan = 2
         Me.RadLiveTileElement28.EnableImageTransparency = True
-        Me.RadLiveTileElement28.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement28.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement28.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement28.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.RadLiveTileElement28.Name = "RadLiveTileElement28"
@@ -2040,7 +2039,7 @@ Partial Class MAIN
         Me.RadLiveTileElement14.ColSpan = 2
         Me.RadLiveTileElement14.DrawBorder = True
         Me.RadLiveTileElement14.EnableImageTransparency = True
-        Me.RadLiveTileElement14.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement14.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement14.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement14.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.warning_48x48
         Me.RadLiveTileElement14.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2062,7 +2061,7 @@ Partial Class MAIN
         Me.RadLiveTileElement15.Column = 3
         Me.RadLiveTileElement15.DrawBorder = True
         Me.RadLiveTileElement15.EnableImageTransparency = True
-        Me.RadLiveTileElement15.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement15.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement15.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement15.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.tabs_48
         Me.RadLiveTileElement15.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2084,7 +2083,7 @@ Partial Class MAIN
         Me.RadLiveTileElement16.ColSpan = 2
         Me.RadLiveTileElement16.DrawBorder = True
         Me.RadLiveTileElement16.EnableImageTransparency = True
-        Me.RadLiveTileElement16.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement16.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement16.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement16.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.camill_reload_New
         Me.RadLiveTileElement16.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2108,7 +2107,7 @@ Partial Class MAIN
         Me.RadLiveTileElement17.ColSpan = 2
         Me.RadLiveTileElement17.Column = 2
         Me.RadLiveTileElement17.EnableImageTransparency = True
-        Me.RadLiveTileElement17.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement17.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement17.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement17.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.rt_21
         Me.RadLiveTileElement17.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2128,7 +2127,7 @@ Partial Class MAIN
         Me.RadLiveTileElement18.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.RadLiveTileElement18.ColSpan = 2
         Me.RadLiveTileElement18.EnableImageTransparency = True
-        Me.RadLiveTileElement18.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement18.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement18.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement18.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Calendar_48x48
         Me.RadLiveTileElement18.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2149,7 +2148,7 @@ Partial Class MAIN
         Me.RadLiveTileElement19.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.RadLiveTileElement19.Column = 2
         Me.RadLiveTileElement19.EnableImageTransparency = True
-        Me.RadLiveTileElement19.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement19.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement19.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement19.Image = Nothing
         Me.RadLiveTileElement19.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2172,7 +2171,7 @@ Partial Class MAIN
         Me.RadLiveTileElement20.ColSpan = 2
         Me.RadLiveTileElement20.Column = 2
         Me.RadLiveTileElement20.EnableImageTransparency = True
-        Me.RadLiveTileElement20.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement20.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement20.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement20.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Traffic_light_icon_New
         Me.RadLiveTileElement20.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2194,7 +2193,7 @@ Partial Class MAIN
         Me.RadLiveTileElement13.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.RadLiveTileElement13.ColSpan = 2
         Me.RadLiveTileElement13.EnableImageTransparency = True
-        Me.RadLiveTileElement13.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement13.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement13.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement13.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.rt_21
         Me.RadLiveTileElement13.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2277,7 +2276,7 @@ Partial Class MAIN
         Me.RadLiveTileElement29.ColSpan = 2
         Me.RadLiveTileElement29.DrawBorder = True
         Me.RadLiveTileElement29.EnableImageTransparency = True
-        Me.RadLiveTileElement29.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement29.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement29.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement29.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.warning_48x48
         Me.RadLiveTileElement29.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2302,7 +2301,7 @@ Partial Class MAIN
         Me.RadLiveTileElement30.Column = 2
         Me.RadLiveTileElement30.DrawBorder = True
         Me.RadLiveTileElement30.EnableImageTransparency = True
-        Me.RadLiveTileElement30.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement30.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement30.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement30.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.tabs_48
         Me.RadLiveTileElement30.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2325,7 +2324,7 @@ Partial Class MAIN
         Me.RadLiveTileElement36.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.RadLiveTileElement36.ColSpan = 2
         Me.RadLiveTileElement36.EnableImageTransparency = True
-        Me.RadLiveTileElement36.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement36.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement36.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement36.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.rt_21
         Me.RadLiveTileElement36.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2347,7 +2346,7 @@ Partial Class MAIN
         Me.RadLiveTileElement37.ColSpan = 2
         Me.RadLiveTileElement37.Column = 2
         Me.RadLiveTileElement37.EnableImageTransparency = True
-        Me.RadLiveTileElement37.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement37.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement37.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement37.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.rt_21
         Me.RadLiveTileElement37.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2371,7 +2370,7 @@ Partial Class MAIN
         Me.RadLiveTileElement38.ColSpan = 2
         Me.RadLiveTileElement38.Column = 2
         Me.RadLiveTileElement38.EnableImageTransparency = True
-        Me.RadLiveTileElement38.Font = New System.Drawing.Font("Consolas", 13.0!)
+        Me.RadLiveTileElement38.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.RadLiveTileElement38.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement38.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources._DO
         Me.RadLiveTileElement38.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2486,7 +2485,7 @@ Partial Class MAIN
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1912, 991)
+        Me.ClientSize = New System.Drawing.Size(1912, 1047)
         Me.Controls.Add(Me.radPanorama1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

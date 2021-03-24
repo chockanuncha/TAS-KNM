@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Advisenote
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Advisenote_Topup
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Advisenote
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim GridViewTextBoxColumn142 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
@@ -46,7 +46,7 @@ Partial Class Advisenote
         Dim GridViewTextBoxColumn156 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim SortDescriptor22 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
         Dim TableViewDefinition40 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Advisenote))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Advisenote_Topup))
         Dim GridViewTextBoxColumn165 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim SortDescriptor25 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
         Dim TableViewDefinition44 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
@@ -138,7 +138,7 @@ Partial Class Advisenote
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
         Me.RadPageViewPage1 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.DatetimePicker2 = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.MasterGridAdvisenote = New Telerik.WinControls.UI.RadGridView()
+        Me.MasterGridAdvisenote_Topup = New Telerik.WinControls.UI.RadGridView()
         Me.V_LoadingnoteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -511,8 +511,8 @@ Partial Class Advisenote
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
         CType(Me.DatetimePicker2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MasterGridAdvisenote, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MasterGridAdvisenote.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MasterGridAdvisenote_Topup, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MasterGridAdvisenote_Topup.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.V_LoadingnoteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateTimePicker1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -837,7 +837,7 @@ Partial Class Advisenote
         '
         Me.RadPageViewPage1.BackColor = System.Drawing.SystemColors.Control
         Me.RadPageViewPage1.Controls.Add(Me.DatetimePicker2)
-        Me.RadPageViewPage1.Controls.Add(Me.MasterGridAdvisenote)
+        Me.RadPageViewPage1.Controls.Add(Me.MasterGridAdvisenote_Topup)
         Me.RadPageViewPage1.Controls.Add(Me.Label15)
         Me.RadPageViewPage1.Controls.Add(Me.DateTimePicker1)
         Me.RadPageViewPage1.Controls.Add(Me.Label40)
@@ -864,26 +864,26 @@ Partial Class Advisenote
         Me.DatetimePicker2.ThemeName = "Windows7"
         Me.DatetimePicker2.Value = New Date(2021, 3, 1, 16, 51, 31, 724)
         '
-        'MasterGridAdvisenote
+        'MasterGridAdvisenote_Topup
         '
-        Me.MasterGridAdvisenote.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
-        Me.MasterGridAdvisenote.BackColor = System.Drawing.SystemColors.Control
-        Me.MasterGridAdvisenote.ColumnChooserSortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        Me.MasterGridAdvisenote.Cursor = System.Windows.Forms.Cursors.Default
-        Me.MasterGridAdvisenote.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MasterGridAdvisenote.EnableCustomGrouping = True
-        Me.MasterGridAdvisenote.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.MasterGridAdvisenote.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.MasterGridAdvisenote.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.MasterGridAdvisenote.Location = New System.Drawing.Point(250, 27)
+        Me.MasterGridAdvisenote_Topup.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor
+        Me.MasterGridAdvisenote_Topup.BackColor = System.Drawing.SystemColors.Control
+        Me.MasterGridAdvisenote_Topup.ColumnChooserSortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        Me.MasterGridAdvisenote_Topup.Cursor = System.Windows.Forms.Cursors.Default
+        Me.MasterGridAdvisenote_Topup.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MasterGridAdvisenote_Topup.EnableCustomGrouping = True
+        Me.MasterGridAdvisenote_Topup.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.MasterGridAdvisenote_Topup.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.MasterGridAdvisenote_Topup.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.MasterGridAdvisenote_Topup.Location = New System.Drawing.Point(250, 27)
         '
         '
         '
-        Me.MasterGridAdvisenote.MasterTemplate.AllowAddNewRow = False
-        Me.MasterGridAdvisenote.MasterTemplate.AllowColumnReorder = False
-        Me.MasterGridAdvisenote.MasterTemplate.AllowColumnResize = False
-        Me.MasterGridAdvisenote.MasterTemplate.AllowRowResize = False
-        Me.MasterGridAdvisenote.MasterTemplate.AutoGenerateColumns = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.AllowAddNewRow = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.AllowColumnReorder = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.AllowColumnResize = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.AllowRowResize = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.AutoGenerateColumns = False
         GridViewTextBoxColumn142.DataType = GetType(Decimal)
         GridViewTextBoxColumn142.EnableExpressionEditor = False
         GridViewTextBoxColumn142.FieldName = "REFERENCE"
@@ -1063,23 +1063,23 @@ Partial Class Advisenote
         GridViewTextBoxColumn156.HeaderText = "Load No."
         GridViewTextBoxColumn156.IsVisible = False
         GridViewTextBoxColumn156.Name = "load_id"
-        Me.MasterGridAdvisenote.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn142, GridViewTextBoxColumn143, GridViewTextBoxColumn144, GridViewTextBoxColumn145, GridViewDecimalColumn112, GridViewTextBoxColumn146, GridViewDecimalColumn113, GridViewDecimalColumn114, GridViewTextBoxColumn147, GridViewDateTimeColumn10, GridViewTextBoxColumn148, GridViewTextBoxColumn149, GridViewDecimalColumn115, GridViewTextBoxColumn150, GridViewDecimalColumn116, GridViewTextBoxColumn151, GridViewTextBoxColumn152, GridViewTextBoxColumn153, GridViewTextBoxColumn154, GridViewTextBoxColumn155, GridViewTextBoxColumn156})
-        Me.MasterGridAdvisenote.MasterTemplate.DataSource = Me.V_LoadingnoteBindingSource
-        Me.MasterGridAdvisenote.MasterTemplate.EnableCustomGrouping = True
-        Me.MasterGridAdvisenote.MasterTemplate.EnableFiltering = True
-        Me.MasterGridAdvisenote.MasterTemplate.EnableGrouping = False
-        Me.MasterGridAdvisenote.MasterTemplate.ShowGroupedColumns = True
-        Me.MasterGridAdvisenote.MasterTemplate.ShowRowHeaderColumn = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn142, GridViewTextBoxColumn143, GridViewTextBoxColumn144, GridViewTextBoxColumn145, GridViewDecimalColumn112, GridViewTextBoxColumn146, GridViewDecimalColumn113, GridViewDecimalColumn114, GridViewTextBoxColumn147, GridViewDateTimeColumn10, GridViewTextBoxColumn148, GridViewTextBoxColumn149, GridViewDecimalColumn115, GridViewTextBoxColumn150, GridViewDecimalColumn116, GridViewTextBoxColumn151, GridViewTextBoxColumn152, GridViewTextBoxColumn153, GridViewTextBoxColumn154, GridViewTextBoxColumn155, GridViewTextBoxColumn156})
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.DataSource = Me.V_LoadingnoteBindingSource
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.EnableCustomGrouping = True
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.EnableFiltering = True
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.EnableGrouping = False
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.ShowGroupedColumns = True
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.ShowRowHeaderColumn = False
         SortDescriptor22.PropertyName = "REFERENCE"
-        Me.MasterGridAdvisenote.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor22})
-        Me.MasterGridAdvisenote.MasterTemplate.ViewDefinition = TableViewDefinition40
-        Me.MasterGridAdvisenote.Name = "MasterGridAdvisenote"
-        Me.MasterGridAdvisenote.ReadOnly = True
-        Me.MasterGridAdvisenote.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.MasterGridAdvisenote.Size = New System.Drawing.Size(1096, 619)
-        Me.MasterGridAdvisenote.TabIndex = 1
-        Me.MasterGridAdvisenote.ThemeName = "Breeze"
-        Me.MasterGridAdvisenote.UseScrollbarsInHierarchy = True
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor22})
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.ViewDefinition = TableViewDefinition40
+        Me.MasterGridAdvisenote_Topup.Name = "MasterGridAdvisenote_Topup"
+        Me.MasterGridAdvisenote_Topup.ReadOnly = True
+        Me.MasterGridAdvisenote_Topup.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.MasterGridAdvisenote_Topup.Size = New System.Drawing.Size(1096, 619)
+        Me.MasterGridAdvisenote_Topup.TabIndex = 1
+        Me.MasterGridAdvisenote_Topup.ThemeName = "Breeze"
+        Me.MasterGridAdvisenote_Topup.UseScrollbarsInHierarchy = True
         '
         'V_LoadingnoteBindingSource
         '
@@ -1429,12 +1429,12 @@ Partial Class Advisenote
         Me.AdviseDetail_G.Controls.Add(Me.EdCustomer)
         Me.AdviseDetail_G.Controls.Add(Me.Label25)
         Me.AdviseDetail_G.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AdviseDetail_G.HeaderText = "Loading advisory note Details"
+        Me.AdviseDetail_G.HeaderText = "Top up Details"
         Me.AdviseDetail_G.Location = New System.Drawing.Point(366, 12)
         Me.AdviseDetail_G.Name = "AdviseDetail_G"
         Me.AdviseDetail_G.Size = New System.Drawing.Size(977, 597)
         Me.AdviseDetail_G.TabIndex = 304
-        Me.AdviseDetail_G.Text = "Loading advisory note Details"
+        Me.AdviseDetail_G.Text = "Top up Details"
         Me.AdviseDetail_G.ThemeName = "Windows7"
         '
         'load_q
@@ -6022,9 +6022,9 @@ Partial Class Advisenote
         Me.RadPanel2.Name = "RadPanel2"
         Me.RadPanel2.Size = New System.Drawing.Size(1370, 100)
         Me.RadPanel2.TabIndex = 1
-        Me.RadPanel2.Text = "Loading advisory note"
+        Me.RadPanel2.Text = "Top up"
         Me.RadPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadPanel2.GetChildAt(0), Telerik.WinControls.UI.RadPanelElement).Text = "Loading advisory note"
+        CType(Me.RadPanel2.GetChildAt(0), Telerik.WinControls.UI.RadPanelElement).Text = "Top up"
         CType(Me.RadPanel2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor2 = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(255, Byte), Integer))
         CType(Me.RadPanel2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor3 = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(248, Byte), Integer))
         CType(Me.RadPanel2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor4 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(244, Byte), Integer))
@@ -6288,7 +6288,7 @@ Partial Class Advisenote
         '
         Me.V_TRUCK2TableAdapter.ClearBeforeFill = True
         '
-        'Advisenote
+        'Advisenote_Topup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -6306,22 +6306,22 @@ Partial Class Advisenote
         Me.MaximumSize = New System.Drawing.Size(1378, 812)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1378, 812)
-        Me.Name = "Advisenote"
+        Me.Name = "Advisenote_Topup"
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.RootElement.MaxSize = New System.Drawing.Size(1378, 812)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " Loading Advisory note"
+        Me.Text = " Top up"
         Me.ThemeName = "Office2010Blue"
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageView1.ResumeLayout(False)
         Me.RadPageViewPage1.ResumeLayout(False)
         Me.RadPageViewPage1.PerformLayout()
         CType(Me.DatetimePicker2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MasterGridAdvisenote.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MasterGridAdvisenote, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MasterGridAdvisenote_Topup.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MasterGridAdvisenote_Topup, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.V_LoadingnoteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateTimePicker1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6761,7 +6761,7 @@ Partial Class Advisenote
     Friend WithEvents TBatchmeterBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VLoading_StatusBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RadPanel2 As Telerik.WinControls.UI.RadPanel
-    'Friend WithEvents MasterGridAdvisenote As Telerik.WinControls.UI.RadGridView
+    'Friend WithEvents MasterGridAdvisenote_Topup As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
     Friend WithEvents Seal_Count As Telerik.WinControls.UI.RadTextBox
     'Friend WithEvents Container As Telerik.WinControls.UI.RadTextBox
@@ -6821,7 +6821,7 @@ Partial Class Advisenote
     Friend WithEvents RadButton7 As Telerik.WinControls.UI.RadButton
     Friend WithEvents Seal_Total As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents MasterGridAdvisenote As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents MasterGridAdvisenote_Topup As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents Printdata As Telerik.WinControls.UI.RadButton
     Friend WithEvents Canceldata As Telerik.WinControls.UI.RadButton

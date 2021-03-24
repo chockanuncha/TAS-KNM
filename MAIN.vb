@@ -624,11 +624,12 @@ Partial Public Class MAIN
     End Sub
 
     Private Sub Topup_Menu_Click(sender As Object, e As EventArgs) Handles Topup_Menu.Click
-        Me.AddOwnedForm(Topup)
-        If Topup.Chk_View() = False Then
+        Me.AddOwnedForm(Advisenote_Topup)
+        If Advisenote_Topup.Chk_View() = False Then
             Exit Sub
+
         Else
-            Topup.Show()
+            Advisenote_Topup.Show()
         End If
     End Sub
 

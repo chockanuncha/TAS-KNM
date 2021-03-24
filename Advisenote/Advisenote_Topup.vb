@@ -10,7 +10,7 @@ Imports Telerik.WinControls.Data
 
 #End Region
 
-Public Class Advisenote
+Public Class Advisenote_Topup
     Private cls As New Class_SQLSERVERDB
     Private cls_role As New Class_Permission
     Private cls_data As New Class_SelectData
@@ -22,7 +22,7 @@ Public Class Advisenote
     Dim QLOAD As Integer = 0
     Dim ProductCom(12) As String
     Private product_Do, Seal_Last, Checkin_ID, Truck_id, Call_Tergets As String
-    Private Property Advisenote As Object
+    Private Property Advisenote_Topup As Object
     Public authorizeUser As Integer = 0
     Private QTIME, Checkintime As String
     Public AuthorRemark, AuthorRemarkDriver As String
@@ -35,7 +35,7 @@ Public Class Advisenote
         '------------------------------------------- Start Check Permission
         RadMessageBox.SetThemeName("Office2010Blue")
 
-        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 1)
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 2)
 
         If cls_role.ChkView = False Then
             Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
@@ -45,7 +45,7 @@ Public Class Advisenote
         '------------------------------------------- End Check Permission
         Return True
     End Function
-    Private Sub Advisenote_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Advisenote_Topup_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         MAIN.U_GROUP_ID = 5
         Chk_View()
@@ -117,7 +117,7 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub Advisenote_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
+    Private Sub Advisenote_Topup_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
         'Dim x As Integer = 0
         'Dim y As Integer = 5
         'x = RadPanel2.Height + y
@@ -140,9 +140,9 @@ Public Class Advisenote
         Kiosk = 0
         QLOAD = 0
         authorizeUser = 0
-        Me.MasterGridAdvisenote.TableElement.RowHeight = 25
-        Me.MasterGridAdvisenote.TableElement.TableHeaderHeight = 30
-        MasterGridAdvisenote.FilterDescriptors.Clear()
+        Me.MasterGridAdvisenote_Topup.TableElement.RowHeight = 25
+        Me.MasterGridAdvisenote_Topup.TableElement.TableHeaderHeight = 30
+        MasterGridAdvisenote_Topup.FilterDescriptors.Clear()
         Status.Enabled = True
         Dim s_day, s_month, s_year As String
         s_day = Date.Now.Day
@@ -180,7 +180,7 @@ Public Class Advisenote
             q &= "FROM T_Customer  RIGHT OUTER JOIN (Select * from T_LOADINGNOTE  Where T_LOADINGNOTE.AddnoteDate between "
             q &= "convert(datetime, '" & DateTimePicker1.Value.Year & "/" & DateTimePicker1.Value.Month & "/" & DateTimePicker1.Value.Day & " 00:00:00" & "') And "
             q &= "convert(datetime, '" & DatetimePicker2.Value.Year & "/" & DatetimePicker2.Value.Month & "/" & DatetimePicker2.Value.Day & " 23:59:59" & "')  "
-            q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and advisenote_type='Advisenote') T1 ON T_Customer.ID = T1.LOAD_CUSTOMER "
+            q &= "And Load_type<>1009 And Load_status in(1,2,3,4,5) and Advisenote_type='Topup') T1 ON T_Customer.ID = T1.LOAD_CUSTOMER "
             q &= "LEFT OUTER JOIN T_STATUS  ON T1.LOAD_STATUS = T_STATUS.STATUS_ID   "
             q &= "LEFT OUTER JOIN T_TRUCK ON T1.LOAD_VEHICLE = T_TRUCK.ID   "
             q &= "LEFT OUTER JOIN T_DRIVER ON T1.LOAD_DRIVER = T_DRIVER.ID   "
@@ -227,7 +227,7 @@ Public Class Advisenote
         If EditType <> 1 And CanExit = 0 Then
 
             '''''''' Check Truck in Loading
-            sql = "select load_vehicle From t_loadingnote where load_vehicle= '" & dt5(0)("ID").ToString & "' and load_status < 3 and Advisenote_type='Advisenote' "
+            sql = "select load_vehicle From t_loadingnote where load_vehicle= '" & dt5(0)("ID").ToString & "' and load_status < 3 and Advisenote_type='Topup' "
             Dim dt2 As DataTable = cls.Query(sql)
 
             If dt2.Rows.Count > 0 Then
@@ -562,8 +562,8 @@ Public Class Advisenote
             MyErrorProvider.ClearAllErrorMessages()
             'ClearData()
             'CompClear()
-            'Me.Advisenote_Load(sender, e)
-            Me.Advisenote_Shown(sender, e)
+            'Me.Advisenote_Topup_Load(sender, e)
+            Me.Advisenote_Topup_Shown(sender, e)
             'EditType = 0
         Catch ex As Exception
         End Try
@@ -678,14 +678,14 @@ Public Class Advisenote
         tmp = cls.Query(sql)
         Select Case tmp(0)("STATUS")
             Case 0
-                Load_q.Text = "0"
+                load_q.Text = "0"
                 Cbn7.Text = "0"
             Case 1
                 sql = ""
                 sql = "select Q_NO+1 as Q_NO from T_Q "
 
                 dt_tmp = cls.Query(sql)
-                Load_q.Text = dt_tmp(0)("Q_NO").ToString
+                load_q.Text = dt_tmp(0)("Q_NO").ToString
 
                 yearthai = Str(Int(s_year + 543))
 
@@ -800,7 +800,7 @@ Public Class Advisenote
         'Try
         Dim ref As String
         Try
-            ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+            ref = MasterGridAdvisenote_Topup.CurrentRow.Cells("reference").Value.ToString
         Catch ex As Exception
             Exit Sub
         End Try
@@ -813,7 +813,7 @@ Public Class Advisenote
         Dim ds As New DataSet
         ds = cls.Query_DS(q, "V_Loadingnote")
 
-        Myreport.Load("Report_File/AdvisenoteReport.rpt")
+        Myreport.Load("Report_File/Advisenote_TopupReport.rpt")
         Myreport.SetDataSource(ds)
         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
         ReportPrint.ShowDialog()
@@ -987,7 +987,7 @@ Public Class Advisenote
     '    Driver.MultiColumnComboBoxElement.ShowPopup()
     'End Sub
 
-    Private Sub MasterGridAdvisenote_CellFormatting(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles MasterGridAdvisenote.CellFormatting
+    Private Sub MasterGridAdvisenote_Topup_CellFormatting(ByVal sender As System.Object, ByVal e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles MasterGridAdvisenote_Topup.CellFormatting
         e.CellElement.NumberOfColors = 4
         e.CellElement.BackColor = Color.FromArgb(253, 141, 142)
         e.CellElement.BackColor2 = Color.FromArgb(254, 86, 86)
@@ -3206,7 +3206,7 @@ Public Class Advisenote
             q &= "RAW_WEIGHT_IN,"
             q &= "RAW_WEIGHT_Out,"
             q &= "WEIGHTin_Time,"
-
+            q &= "Advisenote_type, "
 
             q &= " LOAD_TYPE )"
             q &= " Values ("
@@ -3286,8 +3286,8 @@ Public Class Advisenote
             q &= "'" & (Seal_No.Text) & "',"
             q &= " Getdate() ,"
 
-            q &= "'" & (Load_q.Text) & "',"
-            q &= "'" & (Load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
 
             If Chkin = 0 Then
                 q &= "CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", QTIME)) & "')," 'DD/MM/YYYY HH24:MI:SS')" & ","
@@ -3308,6 +3308,7 @@ Public Class Advisenote
             q &= "'" & (LawWeightIn.Text) & "',"
             q &= "'" & (LawWeightout.Text) & "',"
             q &= " Getdate() ,"
+            q &= "'Topup',"
             ' Weight
 
 
@@ -3383,7 +3384,7 @@ Public Class Advisenote
                 q = "delete t_loadingnotecompartment where lc_load = "
                 q &= Loadid.Text
                 cls.Delete(q)
-                MessageBox.Show("Invalid tank open '" & Product.Text & "', Cannot create advisenote, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Invalid tank open '" & Product.Text & "', Cannot create Top up, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Cursor = Cursors.Default
                 If Tank_Order.Chk_View() = False Then
                     Exit Sub
@@ -3459,7 +3460,7 @@ Public Class Advisenote
             End Try
             q &= " 1,"
             q &= "'" & DOval.Text & "',"
-            q &= "'" & Load_q.Text & "',"
+            q &= "'" & load_q.Text & "',"
             If Kiosk = 1 Then
                 q &= " 0,"
             Else
@@ -3483,7 +3484,7 @@ Public Class Advisenote
             q &= Loadid.Text
             cls.Delete(q)
 
-            MessageBox.Show("Cannot create advisenote, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Cannot create Advisenote_Topup, Please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             MsgBox(ex.Message())
             Cursor = Cursors.Default
             Exit Sub
@@ -3496,7 +3497,7 @@ Public Class Advisenote
         cls.Update(q)
 
         If QLOAD = 1 Then
-            q = "Update T_Q Set Q_NO='" & Load_q.Text & "'"
+            q = "Update T_Q Set Q_NO='" & load_q.Text & "'"
             cls.Update(q)
         End If
 
@@ -3518,7 +3519,7 @@ Public Class Advisenote
         Dim ds As New DataSet
         ds = cls.Query_DS(q, "V_Loadingnote")
 
-        Myreport.Load("Report_File/AdvisenoteReport.rpt")
+        Myreport.Load("Report_File/AdvisenoteReport_Topup.rpt")
         Myreport.SetDataSource(ds)
         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
         ReportPrint.ShowDialog()
@@ -3529,7 +3530,7 @@ Public Class Advisenote
         tmp.Dispose()
 
         Try
-            Advisenote_Shown(sender, e)
+            Advisenote_Topup_Shown(sender, e)
             SelectVLoadingNote()
         Catch ex As Exception
         End Try
@@ -3540,7 +3541,7 @@ Public Class Advisenote
         Dim i, r, j As Integer
 
         Update_date.Text = Date.Now
-        ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+        ref = MasterGridAdvisenote_Topup.CurrentRow.Cells("reference").Value.ToString
 
         sql = ""
         sql = "select load_id,load_card from t_loadingnote where reference='" & ref & "' "
@@ -3550,7 +3551,7 @@ Public Class Advisenote
         Dim loadID, loadcard As String
         loadID = tmp(0)("load_id")
         loadcard = tmp(0)("load_card")
-        If MsgBox("Edit advisenote Load No.: ' " & ref & " '?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
+        If MsgBox("Edit Advisenote_Topup Load No.: ' " & ref & " '?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
 
             'Try
             '    sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
@@ -3639,9 +3640,9 @@ Public Class Advisenote
             q &= " Update_date = "
             q &= " Getdate(), "
             q &= " LOAD_Q = "
-            q &= "'" & (Load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
             q &= " LOAD_QDASHBOARD = "
-            q &= "'" & (Load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
             'LOAD_QDASHBOARD
             q &= " LOAD_TYPE = "
             q &= "'" & (TTruckTypeBindingSource.Item(TTruckTypeBindingSource.Position)("ID").ToString()) & "',"
@@ -3839,7 +3840,7 @@ Public Class Advisenote
             Catch ex As Exception
 
             End Try
-            Advisenote_Shown(sender, e)
+            Advisenote_Topup_Shown(sender, e)
             SelectVLoadingNote()
         End If
     End Sub
@@ -3863,7 +3864,7 @@ Public Class Advisenote
             Dim ref, LC_ID, load_do, load_status As String
 
             Try
-                ref = MasterGridAdvisenote.CurrentRow.Cells("reference").Value.ToString
+                ref = MasterGridAdvisenote_Topup.CurrentRow.Cells("reference").Value.ToString
             Catch ex As Exception
                 Exit Sub
             End Try
@@ -3883,7 +3884,7 @@ Public Class Advisenote
                 Exit Sub
             Else
 
-                If MsgBox("Cancel advisenote load no. : " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
+                If MsgBox("Cancel Advisenote_Topup load no. : " + ref + " ?", vbYesNo + vbDefaultButton2, "Confirmation") = vbYes Then
 
                     Try
 
@@ -3954,7 +3955,7 @@ Public Class Advisenote
         Dim q, ref, load_status As String
         'Dim truck As Integer
         Try
-            ref = MasterGridAdvisenote.CurrentRow.Cells("REFERENCE").Value.ToString
+            ref = MasterGridAdvisenote_Topup.CurrentRow.Cells("REFERENCE").Value.ToString
         Catch ex As Exception
             Exit Sub
         End Try
