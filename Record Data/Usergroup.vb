@@ -22,7 +22,7 @@ Public Class Usergroup
         '    Me.Text = ds.ToString()
         '    Return False
         'End If
-        ''------------------------------------------- End Check Permission
+        ''------------------------------------------- End Check Permission 12334343434
         'Return True
     End Function
 
