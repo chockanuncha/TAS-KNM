@@ -265,7 +265,17 @@ Partial Public Class MAIN
         Me.radPanorama1.Enabled = True
         Unloading.Visibility = ElementVisibility.Collapsed
         Count_ConnectLicense = 0
-        Initiallicense()
+
+        '/////////// Comment For Test Role User Jorn 2021/03/25 //////////////'
+
+
+        'Initiallicense()
+
+
+        '/////////// End Comment For Test Role User Jorn 2021/03/25 //////////////'
+
+
+
         Try
             'Memory = New MemoryManagement.Manage
             'Memory.FlushMemory()

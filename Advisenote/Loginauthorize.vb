@@ -68,63 +68,33 @@ Public Class Loginauthorize
 
                 End If
 
-                If Topup.authorizeUser = 1 Then
-                    Topup.authorize_Remark.Text = Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Topup.Cbn2.Text & " , "
+                If Advisenote_Topup.authorizeUser = 1 Then
+                    Advisenote_Topup.authorize_Remark.Text = Advisenote_Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
 
-                    Topup.AuthorRemark = Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Topup.Cbn2.Text & " , "
+                    Advisenote_Topup.AuthorRemark = Advisenote_Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
                 End If
-                If Topup.authorizeUser = 2 Then
-                    Topup.authorize_Remark.Text = Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Topup.Cbn2.Text & " , "
-                    Topup.AuthorRemark = Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Topup.Cbn2.Text & " , "
+                If Advisenote_Topup.authorizeUser = 2 Then
+                    Advisenote_Topup.authorize_Remark.Text = Advisenote_Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
+                    Advisenote_Topup.AuthorRemark = Advisenote_Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
                 End If
-                If Topup.authorizeUser = 3 Then
-                    Topup.authorize_Remark.Text = Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Topup.Cbn2.Text & " , "
-                    Topup.AuthorRemark = Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Topup.Cbn2.Text & " , "
+                If Advisenote_Topup.authorizeUser = 3 Then
+                    Advisenote_Topup.authorize_Remark.Text = Advisenote_Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
+                    Advisenote_Topup.AuthorRemark = Advisenote_Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
                 End If
-                If Topup.authorizeUser = 4 Then
-                    Topup.authorize_Remark.Text = Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Topup.Cbn2.Text & " , "
-                    Topup.AuthorRemark = Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Topup.Cbn2.Text & " , "
-                End If
-
-                If Topup.authorizeUser = 5 Then
-                    Topup.AuthorRemarkDriver = "User : " & Userauthorize & " Authorize ประวัติใบขับขี่ของ พขร. : " & Topup.Driver.Text & " , "
-                    Topup.authorize_Remark.Text = Topup.AuthorRemark & Topup.AuthorRemarkDriver
+                If Advisenote_Topup.authorizeUser = 4 Then
+                    Advisenote_Topup.authorize_Remark.Text = Advisenote_Topup.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
+                    Advisenote_Topup.AuthorRemark = Advisenote_Topup.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Advisenote_Topup.Cbn2.Text & " , "
                 End If
 
-                If Topup.authorizeUser = 6 Then
-                    Topup.AuthorRemarkDriver = Topup.AuthorRemarkDriver & "User : " & Userauthorize & " Authorize ประวัติบัตรอบรมของ พขร. : " & Topup.Driver.Text & " , "
-                    Topup.authorize_Remark.Text = Topup.AuthorRemark & Topup.AuthorRemarkDriver
+                If Advisenote_Topup.authorizeUser = 5 Then
+                    Advisenote_Topup.AuthorRemarkDriver = "User : " & Userauthorize & " Authorize ประวัติใบขับขี่ของ พขร. : " & Advisenote_Topup.Driver.Text & " , "
+                    Advisenote_Topup.authorize_Remark.Text = Advisenote_Topup.AuthorRemark & Advisenote_Topup.AuthorRemarkDriver
                 End If
 
-
-                'If Unloadingnote.authorizeUser = 1 Then
-                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-
-                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการเช็คอินของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                'End If
-                'If Unloadingnote.authorizeUser = 2 Then
-                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติประกันภัยของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                'End If
-                'If Unloadingnote.authorizeUser = 3 Then
-                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการวัดน้ำของรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                'End If
-                'If Unloadingnote.authorizeUser = 4 Then
-                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.authorize_Remark.Text & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                '    Unloadingnote.AuthorRemark = Unloadingnote.AuthorRemark & "User : " & Userauthorize & " Authorize ประวัติการตรวจสภาพรถทะเบียน : " & Unloadingnote.Cbn2.Text & " , "
-                'End If
-
-                'If Unloadingnote.authorizeUser = 5 Then
-                '    Unloadingnote.AuthorRemarkDriver = "User : " & Userauthorize & " Authorize ประวัติใบขับขี่ของ พขร. : " & Unloadingnote.Driver.Text & " , "
-                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.AuthorRemark & Unloadingnote.AuthorRemarkDriver
-                'End If
-
-                'If Unloadingnote.authorizeUser = 6 Then
-                '    Unloadingnote.AuthorRemarkDriver = Unloadingnote.AuthorRemarkDriver & "User : " & Userauthorize & " Authorize ประวัติบัตรอบรมของ พขร. : " & Unloadingnote.Driver.Text & " , "
-                '    Unloadingnote.authorize_Remark.Text = Unloadingnote.AuthorRemark & Unloadingnote.AuthorRemarkDriver
-                'End If
-
+                If Advisenote_Topup.authorizeUser = 6 Then
+                    Advisenote_Topup.AuthorRemarkDriver = Advisenote_Topup.AuthorRemarkDriver & "User : " & Userauthorize & " Authorize ประวัติบัตรอบรมของ พขร. : " & Advisenote_Topup.Driver.Text & " , "
+                    Advisenote_Topup.authorize_Remark.Text = Advisenote_Topup.AuthorRemark & Advisenote_Topup.AuthorRemarkDriver
+                End If
 
                 Me.Close()
 
@@ -158,13 +128,13 @@ Public Class Loginauthorize
 
 
 
-        If Topup.authorizeUser < 5 Then
-            Topup.Cbn2.SelectedIndex = -1
-            Topup.Cbn2.Focus()
+        If Advisenote_Topup.authorizeUser < 5 Then
+            Advisenote_Topup.Cbn2.SelectedIndex = -1
+            Advisenote_Topup.Cbn2.Focus()
 
         Else
-            Topup.Driver.SelectedIndex = -1
-            Topup.Driver.Focus()
+            Advisenote_Topup.Driver.SelectedIndex = -1
+            Advisenote_Topup.Driver.Focus()
         End If
 
         Success = 0
