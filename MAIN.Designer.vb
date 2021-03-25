@@ -655,9 +655,9 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(0).GetChildAt(5), Telerik.WinControls.Primitives.BorderPrimitive).AutoSize = True
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).Alignment = System.Drawing.ContentAlignment.TopLeft
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).RightToLeft = False
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(820.6618!, 0!)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(-1240.0!, 0!)
         '
         'RichTextBox1
         '
@@ -1450,7 +1450,6 @@ Partial Class MAIN
         Me.ProductMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.ProductMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.ProductMenu.ColSpan = 2
-        Me.ProductMenu.Column = 4
         Me.ProductMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.ProductMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ProductMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_tankoverview
@@ -1624,7 +1623,7 @@ Partial Class MAIN
         Me.ConfigGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.ConfigGroup.Name = "ConfigGroup"
         Me.ConfigGroup.Padding = New System.Windows.Forms.Padding(0)
-        Me.ConfigGroup.RowsCount = 5
+        Me.ConfigGroup.RowsCount = 3
         Me.ConfigGroup.Text = "Configurations"
         Me.ConfigGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '

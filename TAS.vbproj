@@ -357,12 +357,6 @@
     <Compile Include="Advisenote\PrintSelect.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Advisenote\Topup.designer.vb">
-      <DependentUpon>Topup.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Advisenote\Topup.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Advisenote\UnloadtankValue.Designer.vb">
       <DependentUpon>UnloadtankValue.vb</DependentUpon>
     </Compile>
@@ -902,9 +896,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\PrintSelect.resx">
       <DependentUpon>PrintSelect.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Advisenote\Topup.resx">
-      <DependentUpon>Topup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Advisenote\UnloadtankValue.resx">
       <DependentUpon>UnloadtankValue.vb</DependentUpon>
