@@ -655,9 +655,9 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(0).GetChildAt(5), Telerik.WinControls.Primitives.BorderPrimitive).AutoSize = True
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).Alignment = System.Drawing.ContentAlignment.TopLeft
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).RightToLeft = False
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(820.6618!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(-1240.0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         '
         'RichTextBox1
         '
@@ -746,7 +746,7 @@ Partial Class MAIN
         '
         '
         Me.RadPanel1.RootElement.BorderHighlightThickness = 5
-        Me.RadPanel1.Size = New System.Drawing.Size(300, 68)
+        Me.RadPanel1.Size = New System.Drawing.Size(315, 68)
         Me.RadPanel1.TabIndex = 200
         Me.RadPanel1.ThemeName = "Office2010Blue"
         CType(Me.RadPanel1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.BorderPrimitive).BoxStyle = Telerik.WinControls.BorderBoxStyle.OuterInnerBorders
@@ -756,7 +756,7 @@ Partial Class MAIN
         '
         Me.M_GROUP.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.M_GROUP.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.M_GROUP.Location = New System.Drawing.Point(92, 32)
+        Me.M_GROUP.Location = New System.Drawing.Point(127, 32)
         Me.M_GROUP.Name = "M_GROUP"
         Me.M_GROUP.Size = New System.Drawing.Size(80, 31)
         Me.M_GROUP.TabIndex = 9
@@ -766,7 +766,7 @@ Partial Class MAIN
         '
         Me.RadLabel6.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.RadLabel6.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel6.Location = New System.Drawing.Point(32, 7)
+        Me.RadLabel6.Location = New System.Drawing.Point(20, 7)
         Me.RadLabel6.Name = "RadLabel6"
         Me.RadLabel6.Size = New System.Drawing.Size(94, 31)
         Me.RadLabel6.TabIndex = 7
@@ -777,7 +777,7 @@ Partial Class MAIN
         '
         Me.M_NAME.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.M_NAME.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.M_NAME.Location = New System.Drawing.Point(92, 7)
+        Me.M_NAME.Location = New System.Drawing.Point(127, 7)
         Me.M_NAME.Name = "M_NAME"
         Me.M_NAME.Size = New System.Drawing.Size(66, 31)
         Me.M_NAME.TabIndex = 8
@@ -787,7 +787,7 @@ Partial Class MAIN
         '
         Me.RadLabel5.Font = New System.Drawing.Font("Courier New", 17.0!)
         Me.RadLabel5.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel5.Location = New System.Drawing.Point(14, 32)
+        Me.RadLabel5.Location = New System.Drawing.Point(6, 32)
         Me.RadLabel5.Name = "RadLabel5"
         Me.RadLabel5.Size = New System.Drawing.Size(108, 31)
         Me.RadLabel5.TabIndex = 6
@@ -1450,6 +1450,7 @@ Partial Class MAIN
         Me.ProductMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.ProductMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.ProductMenu.ColSpan = 2
+        Me.ProductMenu.Column = 4
         Me.ProductMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.ProductMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ProductMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_tankoverview
