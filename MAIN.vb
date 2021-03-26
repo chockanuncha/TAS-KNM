@@ -266,11 +266,14 @@ Partial Public Class MAIN
         Unloading.Visibility = ElementVisibility.Collapsed
         Count_ConnectLicense = 0
 
-        '//////////// Comment Check License /////////////'
+        '/////////// Comment For Test Role User Jorn 2021/03/25 //////////////'
 
-        ' Initiallicense()
 
-        '//////////// End Comment Check License /////////////'
+        'Initiallicense()
+
+
+        '/////////// End Comment For Test Role User Jorn 2021/03/25 //////////////'
+
 
 
         Try

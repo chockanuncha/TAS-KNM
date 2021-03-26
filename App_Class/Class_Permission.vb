@@ -69,7 +69,11 @@
 
     Public Sub Chk_Permission(ByVal u_group As Integer, ByVal p_num As Integer)
         Dim cls As New Class_SQLSERVERDB
-        Dim dt As DataTable = cls.Query("SELECT * FROM V_UGRP_ROLE WHERE G_ID=" & u_group & " AND MENUID=" & p_num)
+
+        'Dim dt As DataTable = cls.Query("SELECT * FROM V_UGRP_ROLE WHERE G_ID=" & u_group & " AND MENUID=" & p_num)
+
+        Dim dt As DataTable = cls.Query("SELECT * FROM V_UGRP_ROLE WHERE G_ID=" & u_group & "")
+        'And MENUID=" & p_num)
 
         ChkAdd = ChkEdit = ChkDel = ChkPrint = ChkView = False
         For Each dr As DataRow In dt.Rows
