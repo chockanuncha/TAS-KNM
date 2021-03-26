@@ -813,7 +813,7 @@ Public Class Advisenote_Topup
         Dim ds As New DataSet
         ds = cls.Query_DS(q, "V_Loadingnote")
 
-        Myreport.Load("Report_File/Advisenote_TopupReport.rpt")
+        Myreport.Load("Report_File/AdvisenoteReport_Topup.rpt")
         Myreport.SetDataSource(ds)
         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
         ReportPrint.ShowDialog()
