@@ -15,7 +15,7 @@ Public Class Usergroup
         '------------------------------------------- Start Check Permission
         RadMessageBox.SetThemeName("Office2010Blue")
 
-        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 16)
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 15)
 
         If cls_role.ChkView = False Then
             Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
