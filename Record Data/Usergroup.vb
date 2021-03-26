@@ -12,18 +12,18 @@ Public Class Usergroup
 
     Dim EditDoc, AddDoc As Boolean
     Public Function Chk_View()
-        ''------------------------------------------- Start Check Permission
-        'RadMessageBox.SetThemeName("Office2010Blue")
+        '------------------------------------------- Start Check Permission
+        RadMessageBox.SetThemeName("Office2010Blue")
 
-        ''cls_role.Chk_Permission(MAIN.U_GROUP_ID, 28)
+        cls_role.Chk_Permission(MAIN.U_GROUP_ID, 16)
 
-        'If cls_role.ChkView = False Then
-        '    Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
-        '    Me.Text = ds.ToString()
-        '    Return False
-        'End If
-        ''------------------------------------------- End Check Permission 12334343434
-        'Return True
+        If cls_role.ChkView = False Then
+            Dim ds As DialogResult = RadMessageBox.Show(Me, "Your group not have permission to view this menu.", "Permission Denied!", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            Me.Text = ds.ToString()
+            Return False
+        End If
+        '------------------------------------------- End Check Permission 12334343434
+        Return True
     End Function
 
 
