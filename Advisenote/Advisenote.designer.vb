@@ -828,7 +828,7 @@ Partial Class Advisenote
         '
         '
         Me.RadPageView1.RootElement.Shape = Nothing
-        Me.RadPageView1.SelectedPage = Me.RadPageViewPage2
+        Me.RadPageView1.SelectedPage = Me.RadPageViewPage1
         Me.RadPageView1.Size = New System.Drawing.Size(1370, 698)
         Me.RadPageView1.TabIndex = 95
         Me.RadPageView1.ThemeName = "Office2010Blue"
