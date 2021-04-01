@@ -83,9 +83,9 @@ Public Class Advisenote_Topup
         Bay.EditorControl.FilterDescriptors.Add(descriptor6)
         Bay.DropDownStyle = RadDropDownStyle.DropDown
 
-        Dim descriptor7 As New FilterDescriptor(Meter.DisplayMember, FilterOperator.StartsWith, String.Empty)
-        Meter.EditorControl.FilterDescriptors.Add(descriptor7)
-        Meter.DropDownStyle = RadDropDownStyle.DropDown
+        Dim descriptor7 As New FilterDescriptor(Meterlistbox.DisplayMember, FilterOperator.StartsWith, String.Empty)
+        Meterlistbox.EditorControl.FilterDescriptors.Add(descriptor7)
+        Meterlistbox.DropDownStyle = RadDropDownStyle.DropDown
 
         Cbn2.Enabled = True
         TruckH.Enabled = False
@@ -492,8 +492,8 @@ Public Class Advisenote_Topup
             AuthorRemarkDriver = ""
             authorize_Remark.Text = ""
             Bay.SelectedIndex = -1
-            Meter.Text = ""
-            Meter.SelectedIndex = -1
+            Meterlistbox.Text = ""
+            Meterlistbox.SelectedIndex = -1
             EdCustomer.SelectedIndex = -1
             EdCustomer.Text = ""
             sealEdit = 0
@@ -724,7 +724,7 @@ Public Class Advisenote_Topup
         GDetail.Enabled = True
         Product.SelectedIndex = -1
         Bay.SelectedIndex = -1
-        Meter.SelectedIndex = -1
+        Meterlistbox.SelectedIndex = -1
 
         Dim Comp_Num As Integer
         Comp_Num = TRUCK_COMP_NUM
@@ -1043,9 +1043,9 @@ Public Class Advisenote_Topup
             TBatchmeterBindingSource.DataSource = MyDataSet
             TBatchmeterBindingSource.DataMember = "T_batchmeter"
             MyDataSet.Dispose()
-            Meter.DisplayMember = "Batch_name"
+            Meterlistbox.DisplayMember = "Batch_name"
             'TBatchmeterBindingSource.Position = 0
-            Meter.SelectedIndex = 0
+            Meterlistbox.SelectedIndex = 0
 
             TBatchmeterBindingSource1.DataSource = Nothing
             TBatchmeterBindingSource1.DataMember = Nothing
@@ -1532,7 +1532,7 @@ Public Class Advisenote_Topup
 
     Private Sub Bay_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
-            Meter.SelectedIndex = -1
+            Meterlistbox.SelectedIndex = -1
             Dim Bay_Number, Product_ID As Integer
             Dim Sql As String
 
@@ -1548,7 +1548,7 @@ Public Class Advisenote_Topup
             TBatchmeterBindingSource.DataMember = "T_batchmeter"
             MyDataSet.Dispose()
             'TBatchmeterBindingSource.Position = 0
-            Meter.SelectedIndex = 0
+            Meterlistbox.SelectedIndex = 0
 
         Catch ex As Exception
         End Try
@@ -2862,7 +2862,7 @@ Public Class Advisenote_Topup
 
 
                     'DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Meter.SelectedIndex
-                    Batchmeter = Meter.Text
+                    Batchmeter = Meterlistbox.Text
                     Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
                     DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
 
@@ -2877,7 +2877,7 @@ Public Class Advisenote_Topup
                         BayIndex = Bay.Text
                         Index = DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).FindString(BayIndex)
                         DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
-                        Batchmeter = Meter.Text
+                        Batchmeter = Meterlistbox.Text
                         Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
                         DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
 
@@ -3037,7 +3037,7 @@ Public Class Advisenote_Topup
         End Try
     End Sub
 
-    Private Sub Meter_Click(sender As Object, e As EventArgs) Handles Meter.Click
+    Private Sub Meter_Click(sender As Object, e As EventArgs) Handles Meterlistbox.Click
 
         Try
             'Meter.MultiColumnComboBoxElement.ShowPopup()
@@ -3394,7 +3394,7 @@ Public Class Advisenote_Topup
                 Exit Sub
             End Try
             '' LC_METER ''
-            sql = "select batch_number from t_batchmeter where Batch_name ='" & Meter.Text & "'"
+            sql = "select batch_number from t_batchmeter where Batch_name ='" & Meterlistbox.Text & "'"
             Dim dt2 As DataTable = cls.Query(sql)
             q &= "'" & dt2.Rows(0).Item("batch_number").ToString & "')"
             cls.Insert(q)
@@ -3562,21 +3562,23 @@ Public Class Advisenote_Topup
             'End Try
 
             Dim Preset As Integer = 0
-            For i = 0 To TRUCK_COMP_NUM - 1
-                Try
-                    If ((DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Or
-                        (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text) <> "") And
-                         ((DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Or
-                         (DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text) <> "") Then
-                        Preset = Preset + Int(DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text)
-                        ProductCom(i) = (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text)
-                    Else
-                        ProductCom(i) = ""
-                    End If
-                Catch ex As Exception
-                End Try
-            Next
+            'For i = 0 To TRUCK_COMP_NUM - 1
+            '    Try
+            '        If ((DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Or
+            '            (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text) <> "") And
+            '             ((DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex) <> -1 Or
+            '             (DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).Text) <> "") Then
+            '            Preset = Preset + Int(DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text)
+            '            ProductCom(i) = (DirectCast(Me.GroupBox14.Controls.Item("ProductList" + (i + 1).ToString), RadDropDownList).Text)
+            '        Else
+            '            ProductCom(i) = ""
+            '        End If
+            '    Catch ex As Exception
+            '    End Try
+            'Next
 
+
+            Preset = Int(PresetVal.Text)
             q = ""
             q = "UPDATE T_LOADINGNOTE "
             q &= "SET LOAD_CARD = "
@@ -4126,14 +4128,18 @@ Public Class Advisenote_Topup
                 Dim dt1 As DataTable = cls.Query(q)
 
                 Cbn2_Leave(sender, e)
-                Dim productlist, Meter, Bay As String
+                Dim productlist, Meter1, Bay1 As String
                 Dim index As Integer
 
                 If (dt1.Rows(0).Item("Product_code").ToString) <> "" Then
-                    TProductBindingSource.Position = TProductBindingSource.Find("Product_code", dt1.Rows(0).Item("Product_code").ToString)
-                    'TProductBindingSource.Position = TProductBindingSource.Find("ID", dt1.Rows(0).Item("LC_Pro").ToString)
+                    '                    TProductBindingSource.Position = TProductBindingSource.Find("Product_code", dt1.Rows(0).Item("Product_code").ToString)
+                    TProductBindingSource.Position = TProductBindingSource.Find("ID", dt1.Rows(0).Item("LC_Pro").ToString)
+                    Product.SelectedIndex = TProductBindingSource.Position
                     TBayBindingSource.Position = TBayBindingSource.Find("bay_number", dt1.Rows(0).Item("lc_bay").ToString)
+                    Bay.SelectedIndex = TBayBindingSource.Position
                     TBatchmeterBindingSource.Position = TBatchmeterBindingSource.Find("Batch_name", dt1.Rows(0).Item("Batch_name").ToString)
+                    Meterlistbox.SelectedIndex = TBatchmeterBindingSource.Position
+                    'Meterlistbox
                 End If
 
 
@@ -4153,9 +4159,9 @@ Public Class Advisenote_Topup
                 For i = 0 To dt1.Rows.Count - 1
 
                     If (dt1.Rows(i).Item("LC_Bay").ToString) <> "0" Then
-                        Bay = ""
-                        Bay = (dt1.Rows(i).Item("LC_BAY").ToString)
-                        index = DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).FindString(Bay)
+                        Bay1 = ""
+                        Bay1 = (dt1.Rows(i).Item("LC_BAY").ToString)
+                        index = DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).FindString(Bay1)
                         DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
 
                     Else
@@ -4165,9 +4171,9 @@ Public Class Advisenote_Topup
                     DirectCast(Me.GroupBox13.Controls.Item("Preset" + (i + 1).ToString), RadTextBox).Text = (dt1.Rows(i).Item("LC_PRESET").ToString)
 
                     If (dt1.Rows(i).Item("LC_Meter").ToString) <> "0" Then
-                        Meter = ""
-                        Meter = (dt1.Rows(i).Item("Batch_name").ToString)
-                        index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Meter)
+                        Meter1 = ""
+                        Meter1 = (dt1.Rows(i).Item("Batch_name").ToString)
+                        index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Meter1)
                         DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
 
                     Else

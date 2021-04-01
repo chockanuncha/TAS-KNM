@@ -74,15 +74,10 @@ Partial Class ReportBOL
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportBOL))
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.RadCalendar1 = New Telerik.WinControls.UI.RadCalendar()
-        Me.RoundRectShape1 = New Telerik.WinControls.RoundRectShape(Me.components)
         Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
         Me.DonutShape1 = New Telerik.WinControls.Tests.DonutShape()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.BClose = New Telerik.WinControls.UI.RadButton()
         Me.BPrint = New Telerik.WinControls.UI.RadButton()
@@ -97,6 +92,11 @@ Partial Class ReportBOL
         Me.BreezeTheme1 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.BreezeTheme2 = New Telerik.WinControls.Themes.BreezeTheme()
         Me.BOL_ReportTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.BOL_ReportTableAdapter()
+        Me.CrystalTheme1 = New Telerik.WinControls.Themes.CrystalTheme()
+        Me.FluentDarkTheme1 = New Telerik.WinControls.Themes.FluentDarkTheme()
+        Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
+        Me.VisualStudio2012DarkTheme1 = New Telerik.WinControls.Themes.VisualStudio2012DarkTheme()
+        Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,7 +104,6 @@ Partial Class ReportBOL
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel3.SuspendLayout()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BPrint, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,7 +125,7 @@ Partial Class ReportBOL
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.RadPanel1.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(505, 524)
+        Me.RadPanel1.Size = New System.Drawing.Size(505, 520)
         Me.RadPanel1.TabIndex = 0
         CType(Me.RadPanel1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
         CType(Me.RadPanel1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -136,30 +135,29 @@ Partial Class ReportBOL
         Me.RadCalendar1.Culture = New System.Globalization.CultureInfo("en-GB")
         Me.RadCalendar1.DayNameFormat = Telerik.WinControls.UI.DayNameFormat.[Short]
         Me.RadCalendar1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadCalendar1.Font = New System.Drawing.Font("Tahoma", 14.0!)
-        Me.RadCalendar1.HeaderHeight = 50
+        Me.RadCalendar1.FocusedDate = New Date(2021, 4, 1, 0, 0, 0, 0)
+        Me.RadCalendar1.HeaderHeight = 100
+        Me.RadCalendar1.HeaderWidth = 30
         Me.RadCalendar1.Location = New System.Drawing.Point(0, 0)
         Me.RadCalendar1.Name = "RadCalendar1"
         '
         '
         '
+        Me.RadCalendar1.RootElement.CustomFont = "Roboto"
         Me.RadCalendar1.RootElement.FitToSizeMode = Telerik.WinControls.RadFitToSizeMode.FitToParentContent
-        Me.RadCalendar1.RootElement.Shape = Me.RoundRectShape1
         Me.RadCalendar1.ShowFooter = True
-        Me.RadCalendar1.Size = New System.Drawing.Size(505, 524)
+        Me.RadCalendar1.Size = New System.Drawing.Size(505, 520)
         Me.RadCalendar1.TabIndex = 0
-        Me.RadCalendar1.ThemeName = "Office2010Blue"
-        Me.RadCalendar1.TitleFormat = " MMMM  yyyy"
+        Me.RadCalendar1.ThemeName = "Crystal"
         Me.RadCalendar1.UseCompatibleTextRendering = False
         CType(Me.RadCalendar1.GetChildAt(0), Telerik.WinControls.UI.RadCalendarElement).ZoomFactor = 1.3!
-        CType(Me.RadCalendar1.GetChildAt(0), Telerik.WinControls.UI.RadCalendarElement).HeaderHeight = 50
+        CType(Me.RadCalendar1.GetChildAt(0), Telerik.WinControls.UI.RadCalendarElement).HeaderWidth = 30
+        CType(Me.RadCalendar1.GetChildAt(0), Telerik.WinControls.UI.RadCalendarElement).HeaderHeight = 100
         CType(Me.RadCalendar1.GetChildAt(0), Telerik.WinControls.UI.RadCalendarElement).BorderDashStyle = System.Drawing.Drawing2D.DashStyle.Solid
         CType(Me.RadCalendar1.GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadCalendar1.GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(255, Byte), Integer))
-        '
-        'RoundRectShape1
-        '
-        Me.RoundRectShape1.IsRightToLeft = False
+        CType(Me.RadCalendar1.GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None
+        CType(Me.RadCalendar1.GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.RadButtonElement).CustomFontStyle = System.Drawing.FontStyle.Regular
         '
         'RadTextBox1
         '
@@ -179,61 +177,14 @@ Partial Class ReportBOL
         '
         'RadPanel3
         '
-        Me.RadPanel3.Controls.Add(Me.TextBox3)
-        Me.RadPanel3.Controls.Add(Me.TextBox2)
-        Me.RadPanel3.Controls.Add(Me.TextBox1)
-        Me.RadPanel3.Controls.Add(Me.RadButton2)
         Me.RadPanel3.Controls.Add(Me.RadButton1)
         Me.RadPanel3.Controls.Add(Me.BClose)
         Me.RadPanel3.Controls.Add(Me.BPrint)
         Me.RadPanel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.RadPanel3.Location = New System.Drawing.Point(1186, 0)
+        Me.RadPanel3.Location = New System.Drawing.Point(1180, 0)
         Me.RadPanel3.Name = "RadPanel3"
-        Me.RadPanel3.Size = New System.Drawing.Size(172, 524)
+        Me.RadPanel3.Size = New System.Drawing.Size(172, 520)
         Me.RadPanel3.TabIndex = 4
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(36, 373)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 10
-        Me.TextBox3.Visible = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(36, 347)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 9
-        Me.TextBox2.Visible = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(36, 321)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.Visible = False
-        '
-        'RadButton2
-        '
-        Me.RadButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton2.Font = New System.Drawing.Font("Tahoma", 10.75!, System.Drawing.FontStyle.Bold)
-        Me.RadButton2.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Print32
-        Me.RadButton2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton2.Location = New System.Drawing.Point(13, 410)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(147, 63)
-        Me.RadButton2.TabIndex = 7
-        Me.RadButton2.Text = "Update Tank"
-        Me.RadButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton2.ThemeName = "Breeze"
-        CType(Me.RadButton2.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Print32
-        CType(Me.RadButton2.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton2.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton2.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Update Tank"
-        CType(Me.RadButton2.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).Shape = Me.RoundRectShape1
         '
         'RadButton1
         '
@@ -253,7 +204,6 @@ Partial Class ReportBOL
         CType(Me.RadButton1.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.RadButton1.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadButton1.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Print"
-        CType(Me.RadButton1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).Shape = Me.RoundRectShape1
         '
         'BClose
         '
@@ -272,7 +222,6 @@ Partial Class ReportBOL
         CType(Me.BClose.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.BClose.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.BClose.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Close"
-        CType(Me.BClose.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Me.RoundRectShape1
         '
         'BPrint
         '
@@ -291,7 +240,6 @@ Partial Class ReportBOL
         CType(Me.BPrint.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         CType(Me.BPrint.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.BPrint.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Print"
-        CType(Me.BPrint.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).Shape = Me.RoundRectShape1
         '
         'RadPanel2
         '
@@ -299,15 +247,15 @@ Partial Class ReportBOL
         Me.RadPanel2.Controls.Add(Me.P_SUM)
         Me.RadPanel2.Controls.Add(Me.Label3)
         Me.RadPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadPanel2.Location = New System.Drawing.Point(0, 524)
+        Me.RadPanel2.Location = New System.Drawing.Point(0, 520)
         Me.RadPanel2.Name = "RadPanel2"
-        Me.RadPanel2.Size = New System.Drawing.Size(1358, 39)
+        Me.RadPanel2.Size = New System.Drawing.Size(1352, 39)
         Me.RadPanel2.TabIndex = 5
         '
         'P_SUM
         '
         Me.P_SUM.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.P_SUM.Location = New System.Drawing.Point(1101, 6)
+        Me.P_SUM.Location = New System.Drawing.Point(1101, 7)
         Me.P_SUM.Name = "P_SUM"
         Me.P_SUM.Size = New System.Drawing.Size(85, 25)
         Me.P_SUM.TabIndex = 42
@@ -316,10 +264,10 @@ Partial Class ReportBOL
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(964, 9)
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(983, 11)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(134, 19)
+        Me.Label3.Size = New System.Drawing.Size(114, 17)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Total Load No.:"
         '
@@ -329,7 +277,7 @@ Partial Class ReportBOL
         Me.RadPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadPanel4.Location = New System.Drawing.Point(505, 0)
         Me.RadPanel4.Name = "RadPanel4"
-        Me.RadPanel4.Size = New System.Drawing.Size(681, 524)
+        Me.RadPanel4.Size = New System.Drawing.Size(675, 520)
         Me.RadPanel4.TabIndex = 6
         '
         'MasterGrid
@@ -352,6 +300,7 @@ Partial Class ReportBOL
         Me.MasterGrid.MasterTemplate.AllowDeleteRow = False
         Me.MasterGrid.MasterTemplate.AllowEditRow = False
         Me.MasterGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        GridViewTextBoxColumn1.DataType = GetType(Integer)
         GridViewTextBoxColumn1.EnableExpressionEditor = False
         GridViewTextBoxColumn1.FieldName = "INT1"
         GridViewTextBoxColumn1.HeaderText = "Load No."
@@ -369,6 +318,7 @@ Partial Class ReportBOL
         GridViewDateTimeColumn1.Name = "Date"
         GridViewDateTimeColumn1.ReadOnly = True
         GridViewDateTimeColumn1.Width = 150
+        GridViewTextBoxColumn2.DataType = GetType(Integer)
         GridViewTextBoxColumn2.EnableExpressionEditor = False
         GridViewTextBoxColumn2.FieldName = "Int2"
         GridViewTextBoxColumn2.HeaderText = "Truck No."
@@ -733,9 +683,9 @@ Partial Class ReportBOL
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.ReadOnly = True
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.MasterGrid.Size = New System.Drawing.Size(681, 524)
+        Me.MasterGrid.Size = New System.Drawing.Size(675, 520)
         Me.MasterGrid.TabIndex = 0
-        Me.MasterGrid.ThemeName = "Office2010Blue"
+        Me.MasterGrid.ThemeName = "Crystal"
         '
         'VBOLM1M2NewBindingSource
         '
@@ -761,7 +711,7 @@ Partial Class ReportBOL
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1358, 563)
+        Me.ClientSize = New System.Drawing.Size(1352, 559)
         Me.Controls.Add(Me.RadPanel4)
         Me.Controls.Add(Me.RadPanel1)
         Me.Controls.Add(Me.RadPanel3)
@@ -783,8 +733,6 @@ Partial Class ReportBOL
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel3.ResumeLayout(False)
-        Me.RadPanel3.PerformLayout()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BPrint, System.ComponentModel.ISupportInitialize).EndInit()
@@ -818,16 +766,16 @@ Partial Class ReportBOL
     Friend WithEvents VBOLM1M2NewBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents DonutShape1 As Telerik.WinControls.Tests.DonutShape
     Friend WithEvents CustomShape1 As Telerik.WinControls.OldShapeEditor.CustomShape
-    Friend WithEvents RoundRectShape1 As Telerik.WinControls.RoundRectShape
     Friend WithEvents BreezeTheme1 As Telerik.WinControls.Themes.BreezeTheme
     Friend WithEvents BreezeTheme2 As Telerik.WinControls.Themes.BreezeTheme
     Friend WithEvents MasterGrid As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents DataSet_View As DataSet_View
     Friend WithEvents BOL_ReportTableAdapter As DataSet_ViewTableAdapters.BOL_ReportTableAdapter
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents CrystalTheme1 As Telerik.WinControls.Themes.CrystalTheme
+    Friend WithEvents FluentDarkTheme1 As Telerik.WinControls.Themes.FluentDarkTheme
+    Friend WithEvents Office2010BlueTheme1 As Telerik.WinControls.Themes.Office2010BlueTheme
+    Friend WithEvents VisualStudio2012DarkTheme1 As Telerik.WinControls.Themes.VisualStudio2012DarkTheme
+    Friend WithEvents MaterialBlueGreyTheme1 As Telerik.WinControls.Themes.MaterialBlueGreyTheme
 End Class
 

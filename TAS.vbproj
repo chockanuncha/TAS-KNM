@@ -242,6 +242,7 @@
       <HintPath>lib\RCWF\2020.1.218.40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>lib\RCWF\2020.1.218.40\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
       <Private>True</Private>
@@ -250,6 +251,7 @@
       <HintPath>lib\RCWF\2020.1.218.40\Telerik.WinControls.Themes.Material.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>lib\RCWF\2020.1.218.40\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
       <Private>True</Private>
@@ -444,6 +446,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="bin\Debug\Report_File\AdvisenoteReport_BK.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvisenoteReport_BK.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="bin\Debug\Report_File\AdvisenoteReport_Topup.vb">
       <AutoGen>True</AutoGen>
@@ -940,6 +948,10 @@
     <EmbeddedResource Include="bin\Debug\Report_File\AdvisenoteReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AdvisenoteReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report_File\AdvisenoteReport_BK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdvisenoteReport_BK.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Report_File\AdvisenoteReport_Topup.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1603,12 +1615,12 @@
   <ItemGroup>
     <PublishFile Include="IRPCTAS.exe">
       <Visible>False</Visible>
-      <PublishState>Auto</PublishState>
-      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
       <FileType>ManifestEntryPoint</FileType>
     </PublishFile>
   </ItemGroup>

@@ -113,6 +113,7 @@ Public Class Truck
         Try
             Try
                 If Evens = 0 Then
+                    VE_COMNUM.Text = "1"
                     TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("update_date") = Now
                     TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_COMPANY") = TCOMPANYBindingSource.Item(TCOMPANYBindingSource.Position)("COMPANY_ID")
                     TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_OWNER") = Owner.Text
@@ -310,6 +311,7 @@ Public Class Truck
 
                 For i = 1 To Int(VE_COMNUM.Text)
                     DataComp.Rows.Add(i, 0, 0)
+                    SumVal = SumVal + Int(DataComp.Rows.Item(i - 1).Cells(1).Value.ToString)
                 Next
 
                 VE_CAPA.Text = SumVal
@@ -481,7 +483,7 @@ Public Class Truck
         Try
             Me.MasterGrid.TableElement.RowHeight = 25
             Me.MasterGrid.TableElement.TableHeaderHeight = 30
-
+            VE_COMNUM.Enabled = False
             Dim sql As String
             sql = "UPDATE T_USERLOGIN SET Update_date=Getdate(),USERNAME='" & MAIN.U_NAME & "'" _
               & ",USERGROUP='" & MAIN.U_GROUP & "'"

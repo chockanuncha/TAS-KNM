@@ -2907,8 +2907,7 @@ Public Class Advisenote
             Dim ProductID As String = ""
             Dim sql As String
             Dim ProductCount As Integer = 0
-            TBayBindingSource.DataSource = Nothing
-            TBayBindingSource.DataMember = Nothing
+
 
             Dim Product_ID As Integer = 0
             Product_ID = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
@@ -2928,6 +2927,8 @@ Public Class Advisenote
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(sql, "T_bay")
 
+            TBayBindingSource.DataSource = Nothing
+            TBayBindingSource.DataMember = Nothing
             TBayBindingSource.DataSource = MyDataSet
             TBayBindingSource.DataMember = "T_bay"
 
@@ -3607,17 +3608,12 @@ Public Class Advisenote
             q &= " LOAD_STARTTIME = "
             q &= "'" & (Cbn9.Text) & "',"
             q &= " AddnoteDate = "
-            Dim n_year As Integer = 0
-            'If Date.Now.Year > "2500" Then
-            n_year = 543
-            'End If
-
             q &= "Getdate(),"
             'q &= "CONVERT (DATETIME,'" & (String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateAdd(DateInterval.Year, -n_year, Dateedit.Value))) + "','DD/MM/YYYY HH24:MI:SS')" + ","
             q &= " LOAD_DRIVER = "
             q &= "'" & (TDriverBindingSource.Item(TDriverBindingSource.Position)("ID").ToString()) & "',"
             q &= " LOAD_PRESET = "
-            q &= "'" & Preset.ToString & "',"
+            q &= "'" & PresetTotal.Text & "',"
             q &= " LOAD_DOfull = "
             q &= "'" & (DOval.Text) & "',"
             q &= " LOADDO = "
@@ -3648,6 +3644,10 @@ Public Class Advisenote
             q &= "'" & (Update_by.Text) & "',"
             q &= " LOAD_AUTHORIZE = "
             q &= "'" & (authorize_Remark.Text) & "',"
+            ' Weight
+            q &= "RAW_WEIGHT_IN = '" & (LawWeightIn.Text) & "',"
+            q &= "RAW_WEIGHT_Out = '" & (LawWeightout.Text) & "',"
+            q &= "WEIGHTin_Time = Getdate() ,"
             q &= " LOAD_TRUCKCOMPANY = "
             q &= "'" & (TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID").ToString()) & "' "
             q &= "WHERE reference=  " & ref & ""
@@ -3706,7 +3706,11 @@ Public Class Advisenote
                         q = "Update T_LOADINGNOTECOMPARTMENT Set "
                         q &= " LC_STATUS=" & LC_status & ","
                         q &= " LC_BASE='" & PresetVal.Text & "',"
-                        q &= " LC_PRO='" & ProductId.ToString & "',"
+
+                        Dim Product_ID As Integer = 0
+                        Product_ID = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
+
+                        q &= " LC_PRO=" & Product_ID & ","
                         q &= " LC_PRODUCTNAME='" & Product.Text & "',"
                         q &= " LC_CAPACITY='" & Capacity.Text & "',"
                         q &= " LC_PRESET= '" & PresetVal.Text & "',"
@@ -4032,14 +4036,18 @@ Public Class Advisenote
                 Dim dt1 As DataTable = cls.Query(q)
 
                 Cbn2_Leave(sender, e)
-                Dim productlist, Meter, Bay As String
-                Dim index As Integer
+            Dim productlist, Meter, Bay_Var As String
+            Dim index As Integer
 
                 If (dt1.Rows(0).Item("Product_code").ToString) <> "" Then
-                    TProductBindingSource.Position = TProductBindingSource.Find("Product_code", dt1.Rows(0).Item("Product_code").ToString)
-                    'TProductBindingSource.Position = TProductBindingSource.Find("ID", dt1.Rows(0).Item("LC_Pro").ToString)
-                    TBayBindingSource.Position = TBayBindingSource.Find("bay_number", dt1.Rows(0).Item("lc_bay").ToString)
-                    TBatchmeterBindingSource.Position = TBatchmeterBindingSource.Find("Batch_name", dt1.Rows(0).Item("Batch_name").ToString)
+                'TProductBindingSource.Position = TProductBindingSource.Find("Product_code", dt1.Rows(0).Item("Product_code").ToString)
+                index = dt1.Rows(0).Item("lc_bay").ToString
+                TProductBindingSource.Position = TProductBindingSource.Find("ID", dt1.Rows(0).Item("LC_Pro").ToString)
+                Product.SelectedIndex = TProductBindingSource.Position
+                Product_Leave(sender, e)
+                TBayBindingSource.Position = TBayBindingSource.Find("BAY_NUMBER", index)
+                Bay.SelectedIndex = TBayBindingSource.Position
+                TBatchmeterBindingSource.Position = TBatchmeterBindingSource.Find("Batch_name", dt1.Rows(0).Item("Batch_name").ToString)
                 End If
 
 
@@ -4059,10 +4067,10 @@ Public Class Advisenote
                 For i = 0 To dt1.Rows.Count - 1
 
                     If (dt1.Rows(i).Item("LC_Bay").ToString) <> "0" Then
-                        Bay = ""
-                        Bay = (dt1.Rows(i).Item("LC_BAY").ToString)
-                        index = DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).FindString(Bay)
-                        DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
+                    Bay_Var = ""
+                    Bay_Var = (dt1.Rows(i).Item("LC_BAY").ToString)
+                    index = DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).FindString(Bay_Var)
+                    DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).SelectedIndex = index
 
                     Else
                         DirectCast(Me.GroupBox11.Controls.Item("Islandbay" + (i + 1).ToString), RadDropDownList).SelectedIndex = -1
