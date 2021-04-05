@@ -544,7 +544,11 @@ Public Class Advisenote
                 End Try
             Next i
 
-
+            EDW_IN.Text = "0"
+            EDW_Out.Text = "0"
+            EDW_NET.Text = "0"
+            LawWeightIn.Text = "0"
+            LawWeightout.Text = "0"
             Try
                 Memory = New MemoryManagement.Manage
                 Memory.FlushMemory()
