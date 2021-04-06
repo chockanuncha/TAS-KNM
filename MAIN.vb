@@ -137,7 +137,10 @@ Partial Public Class MAIN
         If TextBox2.Text <> "OK" Then
             'Me.radPanorama1.Enabled = False
             Eventext.Text = TextBox2.Text & "  " & Eventext.Text
-            Initiallicense()
+
+            'Initiallicense()
+
+
             BackendSend()
             'ElseIf TextBox2.Text = "OK" And Me.radPanorama1.Enabled = False Then
             '   Me.radPanorama1.Enabled = True
