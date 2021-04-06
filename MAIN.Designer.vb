@@ -630,7 +630,7 @@ Partial Class MAIN
         Me.radPanorama1.MouseWheelBehavior = Telerik.WinControls.UI.PanoramaMouseWheelBehavior.Scroll
         Me.radPanorama1.Name = "radPanorama1"
         Me.radPanorama1.PanelImageSize = New System.Drawing.Size(1092, 768)
-        Me.radPanorama1.RowsCount = 5
+        Me.radPanorama1.RowsCount = 24
         Me.radPanorama1.ScrollBarAlignment = Telerik.WinControls.UI.HorizontalScrollAlignment.Bottom
         Me.radPanorama1.ScrollBarThickness = 10
         Me.radPanorama1.ScrollingBackground = True
@@ -1004,7 +1004,7 @@ Partial Class MAIN
         Me.ToolGroup.Name = "ToolGroup"
         Me.ToolGroup.NumberOfColors = 3
         Me.ToolGroup.Padding = New System.Windows.Forms.Padding(0)
-        Me.ToolGroup.RowsCount = 4
+        Me.ToolGroup.RowsCount = 24
         Me.ToolGroup.Text = "Data Tracking"
         Me.ToolGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.ToolGroup.TextOrientation = System.Windows.Forms.Orientation.Horizontal
@@ -1018,7 +1018,6 @@ Partial Class MAIN
         Me.themeViewerTile.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.themeViewerTile.CellPadding = New System.Windows.Forms.Padding(5)
         Me.themeViewerTile.ColSpan = 2
-        Me.themeViewerTile.Column = 2
         Me.themeViewerTile.DrawBorder = True
         Me.themeViewerTile.EnableImageTransparency = True
         Me.themeViewerTile.Font = New System.Drawing.Font("Courier New", 13.0!)
@@ -1075,9 +1074,11 @@ Partial Class MAIN
         Me.RadLiveTileElement12.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RadLiveTileElement12.Name = "RadLiveTileElement12"
         Me.RadLiveTileElement12.Padding = New System.Windows.Forms.Padding(1, 5, 5, 5)
+        Me.RadLiveTileElement12.Row = 23
         Me.RadLiveTileElement12.Text = "Truck Tracking"
         Me.RadLiveTileElement12.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLiveTileElement12.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.RadLiveTileElement12.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'BaySetting_Menu
         '
@@ -1087,7 +1088,6 @@ Partial Class MAIN
         Me.BaySetting_Menu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BaySetting_Menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BaySetting_Menu.ColSpan = 2
-        Me.BaySetting_Menu.Column = 2
         Me.BaySetting_Menu.EnableImageTransparency = True
         Me.BaySetting_Menu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.BaySetting_Menu.GradientStyle = Telerik.WinControls.GradientStyles.Linear

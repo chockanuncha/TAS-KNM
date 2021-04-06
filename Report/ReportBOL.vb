@@ -33,7 +33,7 @@ Public Class ReportBOL
             sql &= "max(LC_COMPARTMENT) As INT5,"
             sql &= "max(LOADDO) As INT6,"
             sql &= "max(BATCH_NAME) As ST3,"
-            sql &= "cast(max(T_LOADINGNOTECOMPARTMENT.LC_PRESET)) as float As F2,"
+            sql &= "cast(max(T_LOADINGNOTECOMPARTMENT.LC_PRESET) as float) As F2,"
             sql &= "sum(MASS) As F3,"
             sql &= "sum(GROSS_M1) As F4,"
             sql &= "max(AVG_TEMP) As F5,"
