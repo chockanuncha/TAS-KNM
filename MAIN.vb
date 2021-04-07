@@ -123,7 +123,7 @@ Partial Public Class MAIN
 
             Try
                 Me.BeginInvoke(CallBlackShipment)
-                Thread.Sleep(10000)
+                Thread.Sleep(1000)
             Catch ex As Exception
             End Try
         End While
