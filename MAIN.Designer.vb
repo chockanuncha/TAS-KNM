@@ -1436,7 +1436,7 @@ Partial Class MAIN
         Me.Tank_menu.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Tank_menu.Name = "Tank_menu"
         Me.Tank_menu.Padding = New System.Windows.Forms.Padding(5)
-        Me.Tank_menu.Row = 2
+        Me.Tank_menu.Row = 3
         Me.Tank_menu.Text = "Tank"
         Me.Tank_menu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.Tank_menu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1582,7 +1582,6 @@ Partial Class MAIN
         Me.StatusMenu.Text = "Status"
         Me.StatusMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.StatusMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.StatusMenu.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'HistoryMenu
         '
@@ -1623,7 +1622,7 @@ Partial Class MAIN
         Me.ConfigGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.ConfigGroup.Name = "ConfigGroup"
         Me.ConfigGroup.Padding = New System.Windows.Forms.Padding(0)
-        Me.ConfigGroup.RowsCount = 3
+        Me.ConfigGroup.RowsCount = 4
         Me.ConfigGroup.Text = "Configurations"
         Me.ConfigGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -1655,13 +1654,14 @@ Partial Class MAIN
         Me.QueueMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.QueueMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.QueueMenu.ColSpan = 2
+        Me.QueueMenu.Column = 2
         Me.QueueMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.QueueMenu.Image = CType(resources.GetObject("QueueMenu.Image"), System.Drawing.Image)
         Me.QueueMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
         Me.QueueMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.QueueMenu.Name = "QueueMenu"
         Me.QueueMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.QueueMenu.Row = 2
+        Me.QueueMenu.Row = 3
         Me.QueueMenu.Text = "Queue"
         Me.QueueMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.QueueMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1673,6 +1673,7 @@ Partial Class MAIN
         Me.OverrideMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.OverrideMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.OverrideMenu.ColSpan = 2
+        Me.OverrideMenu.Column = 2
         Me.OverrideMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.OverrideMenu.Image = CType(resources.GetObject("OverrideMenu.Image"), System.Drawing.Image)
         Me.OverrideMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -1680,7 +1681,7 @@ Partial Class MAIN
         Me.OverrideMenu.Margin = New System.Windows.Forms.Padding(0)
         Me.OverrideMenu.Name = "OverrideMenu"
         Me.OverrideMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.OverrideMenu.Row = 2
+        Me.OverrideMenu.Row = 3
         Me.OverrideMenu.Text = "Override"
         Me.OverrideMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.OverrideMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
