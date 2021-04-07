@@ -655,9 +655,9 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(0).GetChildAt(5), Telerik.WinControls.Primitives.BorderPrimitive).AutoSize = True
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).Alignment = System.Drawing.ContentAlignment.TopLeft
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).RightToLeft = False
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(820.855!, 0!)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(-960.0!, 0!)
         '
         'RichTextBox1
         '
@@ -1287,12 +1287,12 @@ Partial Class MAIN
         Me.RecordGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RecordGroup.HorizontalLineWidth = 1
         Me.RecordGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata
-        Me.RecordGroup.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.RecordGroup.ImageAlignment = System.Drawing.ContentAlignment.MiddleLeft
         Me.RecordGroup.ImageTransparentColor = System.Drawing.Color.White
         Me.RecordGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Truck_Menu, Me.Card_Menu, Me.Driver_Menu, Me.Customer_Menu, Me.TruckCompany_Menu, Me.Tank_menu, Me.ProductMenu, Me.MeterMenu, Me.BayMenu, Me.RadLiveTileElement21, Me.ShipperMenu, Me.StatusMenu, Me.HistoryMenu})
         Me.RecordGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.RecordGroup.Name = "RecordGroup"
-        Me.RecordGroup.RowsCount = 4
+        Me.RecordGroup.RowsCount = 5
         Me.RecordGroup.Text = "Record Data"
         Me.RecordGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -1450,7 +1450,6 @@ Partial Class MAIN
         Me.ProductMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.ProductMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.ProductMenu.ColSpan = 2
-        Me.ProductMenu.Column = 4
         Me.ProductMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.ProductMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.ProductMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_mmisystem_tankoverview
@@ -1459,6 +1458,7 @@ Partial Class MAIN
         Me.ProductMenu.Items.AddRange(New Telerik.WinControls.RadItem() {Me.LiveTileFrameElement1, Me.LiveTileFrameElement2, Me.LiveTileFrameElement3})
         Me.ProductMenu.Name = "ProductMenu"
         Me.ProductMenu.Padding = New System.Windows.Forms.Padding(5, 5, 5, 8)
+        Me.ProductMenu.Row = 1
         Me.ProductMenu.Text = "Product"
         Me.ProductMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.ProductMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1493,7 +1493,6 @@ Partial Class MAIN
         Me.MeterMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.MeterMenu.CellPadding = New System.Windows.Forms.Padding(5)
         Me.MeterMenu.ColSpan = 2
-        Me.MeterMenu.Column = 2
         Me.MeterMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.MeterMenu.ForeColor = System.Drawing.Color.White
         Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
@@ -1514,6 +1513,7 @@ Partial Class MAIN
         Me.BayMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.BayMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.BayMenu.ColSpan = 2
+        Me.BayMenu.Column = 2
         Me.BayMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.BayMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.BayMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config_bay
@@ -1521,7 +1521,6 @@ Partial Class MAIN
         Me.BayMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BayMenu.Name = "BayMenu"
         Me.BayMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.BayMenu.Row = 1
         Me.BayMenu.Text = "Bay"
         Me.BayMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.BayMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -1634,6 +1633,7 @@ Partial Class MAIN
         Me.BannerMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.BannerMenu.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid
         Me.BannerMenu.ColSpan = 2
+        Me.BannerMenu.Column = 2
         Me.BannerMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
         Me.BannerMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.BannerMenu.Image = CType(resources.GetObject("BannerMenu.Image"), System.Drawing.Image)
