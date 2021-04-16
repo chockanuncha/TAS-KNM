@@ -127,6 +127,9 @@
   <data name="THSarabun_Bold_Italic_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\THSarabun Bold Italic_0.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="company3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ICON\company3-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Truck3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Truck3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,9 +147,6 @@
   </data>
   <data name="Shipper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shipper1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icc_recorddata_customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_recorddata_customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Setting2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,6 +172,9 @@
   <data name="Bay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="User_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User_48x481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="database-New" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-New.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,9 +184,6 @@
   <data name="COM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ICON\COM.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="document_delete_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_delete_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1352366575_Programming2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1352366575_Programming2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -192,9 +192,6 @@
   </data>
   <data name="Contacts-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contacts-48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Carender" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Carender.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Preferences1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preferences1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,17 +214,14 @@
   <data name="script_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\script-delete.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ship2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ship2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Note Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Note Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Traffic-light-icon-New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Traffic-light-icon-New.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Changer-d'utilisateur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Changer-d'utilisateur.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Configuration 48 x 48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configuration 48 x 48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gear_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tabs_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabs_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -240,6 +234,15 @@
   </data>
   <data name="DL8000 95x74" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DL8000 95x74.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Archive_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Archive_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shipper2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shipper2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_delete_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_delete_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="import" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,8 +265,8 @@
   <data name="Setting21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting21.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gears" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gears1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Supervisor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Supervisor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="database-New2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-New2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,6 +289,9 @@
   <data name="document_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="printer12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer12.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ship2 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ship2 48x48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -295,14 +301,14 @@
   <data name="Driver41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver41.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ICON\Contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tanker-New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tanker-New.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icc_config_status" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_config_status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Network3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,14 +316,14 @@
   <data name="Setting41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting4.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tank.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Card72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Card72.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rt-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rt-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Card7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card7.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tanker-New" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tanker-New.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Report1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,14 +337,17 @@
   <data name="Tank-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tank-5.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Setting3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Setting3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="oilandgas%20CryogenicandstorageTanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oilandgas%20CryogenicandstorageTanks.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Driver4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver4.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="company3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ICON\company3-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dossier-vierge1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dossier-vierge1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,8 +367,8 @@
   <data name="close_321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Archive_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Archive_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="camill_reload-Paint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camill_reload-Paint1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Utilities101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Utilities101.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -376,8 +385,11 @@
   <data name="Imac21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imac21.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camill_reload-Paint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camill_reload-Paint1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icc_recorddata_customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_recorddata_customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PTT OR-Cambodia Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PTT OR-Cambodia Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,26 +400,20 @@
   <data name="queue2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\queue2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Note Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Note Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="card-reader3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card-reader3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icc_recorddata_truckcompany" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_recorddata_truckcompany.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warning_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Oil_tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Oil_tank.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Actions-player-time-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-player-time-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Contact2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ICON\Contact2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Card7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Card7.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus_481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -421,14 +427,14 @@
   <data name="icc_recorddata_driver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icc_recorddata_driver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icc_loading_topup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_loading_topup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Alarm1 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alarm1 48x48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Company2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Company2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PTT OR-Cambodia Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PTT OR-Cambodia Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icc_datatracking_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icc_datatracking_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -442,17 +448,11 @@
   <data name="Edit_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="document-save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blacklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blacklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ICC Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICC Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="In 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In 48x48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="THSarabun_Bold_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\THSarabun Bold_0.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -460,11 +460,11 @@
   <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fuel_tanker21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fuel_tanker2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icc_datatracking1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icc_datatracking1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warning_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -478,8 +478,8 @@
   <data name="Setting42" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting41.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fuel_tanker21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fuel_tanker2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Database48x481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ICON\Database48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -508,8 +508,8 @@
   <data name="1212" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1212.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icc_config_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_config_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Comic Icons 3 files_edit 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Comic Icons 3 files_edit 32x32.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Print32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print32.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -538,11 +538,23 @@
   <data name="THSarabunIT๙_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\THSarabunIT๙_0.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Database48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ICON\Database48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="camill_reload1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camill_reload11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="write (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\write (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="database-backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-backup.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icc_mmisystem_tankoverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_mmisystem_tankoverview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Preferences" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preferences.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -550,14 +562,11 @@
   <data name="Queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Queue.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icc_config_bay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icc_config_bay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="write (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\write (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warning_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Report6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report6.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -568,8 +577,8 @@
   <data name="Driver2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver21.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Card72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card72.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ship2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ship2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="write" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\write.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -577,35 +586,32 @@
   <data name="Stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stock.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Database48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ICON\Database48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Traffic-light-icon-New" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Traffic-light-icon-New.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Network11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icc_datatracking_editmeter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_datatracking_editmeter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BRIGHTS PRINTER_II" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BRIGHTS PRINTER_II.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TOL.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Public" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Public.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BRIGHTS PRINTER_II" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BRIGHTS PRINTER_II.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icc_config_status" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_config_status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Batch 48 x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Batch 48 x481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User_48x481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\card.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DL8000 95x74 R1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DL8000 95x74 R1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icc_loading_topup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_loading_topup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button-Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Cancel.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -634,8 +640,8 @@
   <data name="car 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car 48x48.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TOL.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tank.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IRPC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IRPC.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -646,14 +652,17 @@
   <data name="setting5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Changer-d'utilisateur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Changer-d'utilisateur.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icc_datatracking_editmeter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_datatracking_editmeter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tank_terminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tank_terminal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sap 32 x 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sap 32 x 32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Card_Reader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Card_Reader.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rt.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -664,17 +673,14 @@
   <data name="report7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report7.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Truck4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Truck4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Text-Edit48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Text-Edit48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Driver3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="card-reader2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card-reader2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Setting1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -685,11 +691,11 @@
   <data name="Preferences2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preferences2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="printer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="document_add_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document_add_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -697,11 +703,11 @@
   <data name="Report3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="printer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DL8000 95x74 R1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DL8000 95x74 R1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="document_delete_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_delete_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICC Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICC Logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -712,8 +718,8 @@
   <data name="Truck2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Truck2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Card_Reader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card_Reader.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gears" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gears1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icc_config" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icc_config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -736,26 +742,20 @@
   <data name="address_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\address_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Setting3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Setting3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Truck4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Truck4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="document_delete_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_delete_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Comic Icons 3 files_edit 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Comic Icons 3 files_edit 32x32.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICC Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICC Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TruckYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TruckYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1-whiting-refinery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1-whiting-refinery.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icc_recorddata_truckcompany" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_recorddata_truckcompany.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="In 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\In 48x48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gear_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="camill_reload-New" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camill_reload-New.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -772,20 +772,20 @@
   <data name="HomeServer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HomeServer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="printer12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer12.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Contact2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ICON\Contact2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shipper2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shipper2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Oil_tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oil_tank.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Supervisor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Supervisor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icc_config_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icc_config_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VeGa-T-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VeGa-T-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="card-reader3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card-reader3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="document-save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -808,23 +808,23 @@
   <data name="Oil_tank 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oil_tank 48x481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="card-reader2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card-reader2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PTT OR-Cambodia Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PTT OR-Cambodia Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blacklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blacklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\down.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Card1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Setting4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setting4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icc_mmisystem_tankoverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icc_mmisystem_tankoverview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Carender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carender.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Report21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -841,10 +841,13 @@
   <data name="Calendar_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendar_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="weight-in-A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weight-in-A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1-whiting-refinery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1-whiting-refinery.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeGa-T-481" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeGa-T-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

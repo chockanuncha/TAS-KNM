@@ -496,7 +496,7 @@ Partial Public Class MAIN
         'USER.Show()
     End Sub
 
-    Private Sub RadLiveTileElement9_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MeterMenu.Click
+    Private Sub RadLiveTileElement9_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MeterMenux.Click
         Me.AddOwnedForm(BatchMeter)
         BatchMeter.Show()
     End Sub
@@ -615,8 +615,10 @@ Partial Public Class MAIN
     End Sub
 
     Private Sub listViewTile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles listViewTile.Click
+
         Dim SetupPath As String = Application.StartupPath & "\MMI\ICC_TASMMI.exe"
         Process.Start(SetupPath)
+
     End Sub
 
     Private Sub OverrideMenu_Click(sender As Object, e As EventArgs) Handles OverrideMenu.Click

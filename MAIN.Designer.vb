@@ -102,7 +102,7 @@ Partial Class MAIN
         Me.LiveTileFrameElement1 = New Telerik.WinControls.UI.LiveTileFrameElement()
         Me.LiveTileFrameElement2 = New Telerik.WinControls.UI.LiveTileFrameElement()
         Me.LiveTileFrameElement3 = New Telerik.WinControls.UI.LiveTileFrameElement()
-        Me.MeterMenu = New Telerik.WinControls.UI.RadLiveTileElement()
+        Me.MeterMenux = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.BayMenu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement21 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.ShipperMenu = New Telerik.WinControls.UI.RadLiveTileElement()
@@ -113,6 +113,7 @@ Partial Class MAIN
         Me.QueueMenu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.OverrideMenu = New Telerik.WinControls.UI.RadTileElement()
         Me.UserMenu = New Telerik.WinControls.UI.RadTileElement()
+        Me.MeterMenu = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.Unloading = New Telerik.WinControls.UI.TileGroupElement()
         Me.RadTileElement40 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadLiveTileElement6 = New Telerik.WinControls.UI.RadLiveTileElement()
@@ -1289,10 +1290,10 @@ Partial Class MAIN
         Me.RecordGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_recorddata
         Me.RecordGroup.ImageAlignment = System.Drawing.ContentAlignment.MiddleLeft
         Me.RecordGroup.ImageTransparentColor = System.Drawing.Color.White
-        Me.RecordGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Truck_Menu, Me.Card_Menu, Me.Driver_Menu, Me.Customer_Menu, Me.TruckCompany_Menu, Me.Tank_menu, Me.ProductMenu, Me.MeterMenu, Me.BayMenu, Me.RadLiveTileElement21, Me.ShipperMenu, Me.StatusMenu, Me.HistoryMenu})
+        Me.RecordGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.Truck_Menu, Me.Card_Menu, Me.Driver_Menu, Me.Customer_Menu, Me.TruckCompany_Menu, Me.Tank_menu, Me.ProductMenu, Me.MeterMenux, Me.BayMenu, Me.RadLiveTileElement21, Me.ShipperMenu, Me.StatusMenu, Me.HistoryMenu})
         Me.RecordGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.RecordGroup.Name = "RecordGroup"
-        Me.RecordGroup.RowsCount = 5
+        Me.RecordGroup.RowsCount = 6
         Me.RecordGroup.Text = "Record Data"
         Me.RecordGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -1484,26 +1485,26 @@ Partial Class MAIN
         Me.LiveTileFrameElement3.Name = "LiveTileFrameElement3"
         Me.LiveTileFrameElement3.Text = "G 95"
         '
-        'MeterMenu
+        'MeterMenux
         '
-        Me.MeterMenu.AccessibleDescription = "RadLiveTileElement9"
-        Me.MeterMenu.AccessibleName = "RadLiveTileElement9"
-        Me.MeterMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.MeterMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
-        Me.MeterMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.MeterMenu.CellPadding = New System.Windows.Forms.Padding(5)
-        Me.MeterMenu.ColSpan = 2
-        Me.MeterMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
-        Me.MeterMenu.ForeColor = System.Drawing.Color.White
-        Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
-        Me.MeterMenu.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.VeGa_T_48
-        Me.MeterMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
-        Me.MeterMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.MeterMenu.Name = "MeterMenu"
-        Me.MeterMenu.Padding = New System.Windows.Forms.Padding(5)
-        Me.MeterMenu.Text = "BatchMeter"
-        Me.MeterMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.MeterMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.MeterMenux.AccessibleDescription = "RadLiveTileElement9"
+        Me.MeterMenux.AccessibleName = "RadLiveTileElement9"
+        Me.MeterMenux.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.MeterMenux.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.MeterMenux.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.MeterMenux.ColSpan = 2
+        Me.MeterMenux.Font = New System.Drawing.Font("Courier New", 13.0!)
+        Me.MeterMenux.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.MeterMenux.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.VeGa_T_481
+        Me.MeterMenux.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.MeterMenux.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.MeterMenux.Name = "MeterMenux"
+        Me.MeterMenux.Padding = New System.Windows.Forms.Padding(5)
+        Me.MeterMenux.Row = 4
+        Me.MeterMenux.Text = "BatchMeter"
+        Me.MeterMenux.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.MeterMenux.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.MeterMenux.Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'BayMenu
         '
@@ -1618,11 +1619,11 @@ Partial Class MAIN
         Me.ConfigGroup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ConfigGroup.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.icc_config
         Me.ConfigGroup.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.ConfigGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.BannerMenu, Me.QueueMenu, Me.Tank_menu, Me.StatusMenu, Me.BayMenu, Me.ProductMenu, Me.MeterMenu, Me.OverrideMenu, Me.UserMenu})
+        Me.ConfigGroup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.BannerMenu, Me.QueueMenu, Me.Tank_menu, Me.StatusMenu, Me.BayMenu, Me.ProductMenu, Me.MeterMenux, Me.OverrideMenu, Me.UserMenu, Me.MeterMenu})
         Me.ConfigGroup.Margin = New System.Windows.Forms.Padding(0, 125, 50, 0)
         Me.ConfigGroup.Name = "ConfigGroup"
         Me.ConfigGroup.Padding = New System.Windows.Forms.Padding(0)
-        Me.ConfigGroup.RowsCount = 4
+        Me.ConfigGroup.RowsCount = 6
         Me.ConfigGroup.Text = "Configurations"
         Me.ConfigGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -1705,6 +1706,24 @@ Partial Class MAIN
         Me.UserMenu.Text = "User"
         Me.UserMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.UserMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        '
+        'MeterMenu
+        '
+        Me.MeterMenu.AccessibleDescription = "RadLiveTileElement4"
+        Me.MeterMenu.AccessibleName = "RadLiveTileElement4"
+        Me.MeterMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.MeterMenu.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.MeterMenu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.MeterMenu.ColSpan = 2
+        Me.MeterMenu.Font = New System.Drawing.Font("Courier New", 13.0!)
+        Me.MeterMenu.GradientStyle = Telerik.WinControls.GradientStyles.Linear
+        Me.MeterMenu.Image = CType(resources.GetObject("MeterMenu.Image"), System.Drawing.Image)
+        Me.MeterMenu.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
+        Me.MeterMenu.ImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.MeterMenu.Name = "MeterMenu"
+        Me.MeterMenu.Text = "BatchMeter"
+        Me.MeterMenu.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.MeterMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'Unloading
         '
@@ -2592,7 +2611,7 @@ Partial Class MAIN
     Friend WithEvents RadLiveTileElement35 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents ProductMenu As Telerik.WinControls.UI.RadLiveTileElement
     Private WithEvents RadLiveTileElement26 As Telerik.WinControls.UI.RadLiveTileElement
-    Friend WithEvents MeterMenu As Telerik.WinControls.UI.RadLiveTileElement
+    Friend WithEvents MeterMenux As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents BayMenu As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement28 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents LiveTileFrameElement1 As Telerik.WinControls.UI.LiveTileFrameElement
@@ -2665,6 +2684,7 @@ Partial Class MAIN
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents MeterMenu As Telerik.WinControls.UI.RadLiveTileElement
 End Class
 'End Namespace
 
