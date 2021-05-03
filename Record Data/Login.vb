@@ -13,10 +13,10 @@ Public Class Login
         'Dim row As String
 
 #If DEBUG Then
-        If UserName.Text = "" Then
-            UserName.Text = "ping"
-            Pass.Text = "p"
-        End If
+        'If UserName.Text = "" Then
+        '    UserName.Text = "ping"
+        '    Pass.Text = "p"
+        'End If
 #End If
 
         Try

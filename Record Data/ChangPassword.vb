@@ -33,7 +33,7 @@ Public Class ChangPassword
 
                 '///////// End Edit Get Date + 90 day ///////////'
 
-                sql = "UPDATE T_USER SET Update_date=Getdate() ,U_PASSWD_DATE=GETDATE() "
+                sql = "UPDATE T_USER SET Update_date=Now.AddDays(90) ,U_PASSWD_DATE=GETDATE() "
                 sql &=",U_PASSWD='" & U_passnew.Text & "' Where U_ID='" & UserID.ToString & "'"
 
                 'sql &= " from v_bol_m1m2_new where addnotedate between "
