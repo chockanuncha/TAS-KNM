@@ -2515,7 +2515,7 @@ Partial Class MAIN
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "   Terminal Automation System (TAS)"
+        Me.Text = "   Terminal Automation System (TAS) XXX"
         Me.ThemeName = "Office2010Blue"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).EndInit()
