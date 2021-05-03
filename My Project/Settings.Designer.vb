@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=KNM_TASSERVER;Initial Catalog=TAS;Persist Security Info=True;User ID="& _ 
-            "icc;Password=P@$$w0rd")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-12ISJTN\MSSQLSERVER_TAS;Initial Catalog=TAS;Persist Security "& _ 
+            "Info=True;User ID=sa;Password=Admin1234")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)

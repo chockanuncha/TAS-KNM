@@ -741,13 +741,13 @@ Partial Class MAIN
         Me.RadPanel1.Controls.Add(Me.RadLabel6)
         Me.RadPanel1.Controls.Add(Me.M_NAME)
         Me.RadPanel1.Controls.Add(Me.RadLabel5)
-        Me.RadPanel1.Location = New System.Drawing.Point(1412, 9)
+        Me.RadPanel1.Location = New System.Drawing.Point(1326, 9)
         Me.RadPanel1.Name = "RadPanel1"
         '
         '
         '
         Me.RadPanel1.RootElement.BorderHighlightThickness = 5
-        Me.RadPanel1.Size = New System.Drawing.Size(315, 68)
+        Me.RadPanel1.Size = New System.Drawing.Size(401, 68)
         Me.RadPanel1.TabIndex = 200
         Me.RadPanel1.ThemeName = "Office2010Blue"
         CType(Me.RadPanel1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.BorderPrimitive).BoxStyle = Telerik.WinControls.BorderBoxStyle.OuterInnerBorders
@@ -826,7 +826,7 @@ Partial Class MAIN
         Me.RadButton1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.RadButton1.Font = New System.Drawing.Font("Leelawadee", 12.0!, System.Drawing.FontStyle.Bold)
         Me.RadButton1.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.script_edit
-        Me.RadButton1.Location = New System.Drawing.Point(1183, 18)
+        Me.RadButton1.Location = New System.Drawing.Point(1105, 18)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(200, 50)
         Me.RadButton1.TabIndex = 197
@@ -841,7 +841,7 @@ Partial Class MAIN
         Me.PictureBox2.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo
         Me.PictureBox2.Location = New System.Drawing.Point(11, 6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(254, 75)
+        Me.PictureBox2.Size = New System.Drawing.Size(168, 75)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 193
         Me.PictureBox2.TabStop = False
@@ -1990,7 +1990,7 @@ Partial Class MAIN
         Me.RadLiveTileElement26.ColSpan = 2
         Me.RadLiveTileElement26.DrawBorder = True
         Me.RadLiveTileElement26.EnableImageTransparency = True
-        Me.RadLiveTileElement26.Font = New System.Drawing.Font("TH SarabunIT๙", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.RadLiveTileElement26.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadLiveTileElement26.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement26.HorizontalLineColor = System.Drawing.SystemColors.Control
         Me.RadLiveTileElement26.Image = Nothing
@@ -2033,7 +2033,7 @@ Partial Class MAIN
         Me.TileGroupElement4.AutoSize = True
         Me.TileGroupElement4.CellSize = New System.Drawing.Size(140, 120)
         Me.TileGroupElement4.EnableImageTransparency = True
-        Me.TileGroupElement4.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileGroupElement4.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TileGroupElement4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TileGroupElement4.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Comic_Icons_New
         Me.TileGroupElement4.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2231,7 +2231,7 @@ Partial Class MAIN
         Me.RadLiveTileElement22.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.RadLiveTileElement22.ColSpan = 2
         Me.RadLiveTileElement22.Column = 2
-        Me.RadLiveTileElement22.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
+        Me.RadLiveTileElement22.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
         Me.RadLiveTileElement22.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement22.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.COM
         Me.RadLiveTileElement22.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2250,7 +2250,7 @@ Partial Class MAIN
         Me.RadLiveTileElement27.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.RadLiveTileElement27.ColSpan = 2
         Me.RadLiveTileElement27.Column = 2
-        Me.RadLiveTileElement27.Font = New System.Drawing.Font("TH SarabunPSK", 20.0!)
+        Me.RadLiveTileElement27.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
         Me.RadLiveTileElement27.GradientStyle = Telerik.WinControls.GradientStyles.Linear
         Me.RadLiveTileElement27.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.COM
         Me.RadLiveTileElement27.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
@@ -2270,7 +2270,7 @@ Partial Class MAIN
         Me.TileGroupElement5.AutoSize = True
         Me.TileGroupElement5.CellSize = New System.Drawing.Size(140, 120)
         Me.TileGroupElement5.EnableImageTransparency = True
-        Me.TileGroupElement5.Font = New System.Drawing.Font("TH SarabunIT๙", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileGroupElement5.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TileGroupElement5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TileGroupElement5.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.Comic_Icons_New
         Me.TileGroupElement5.ImageAlignment = System.Drawing.ContentAlignment.BottomRight
