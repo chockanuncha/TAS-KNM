@@ -55,7 +55,6 @@ Partial Class MAIN
         Me.radPanorama1 = New Telerik.WinControls.UI.RadPanorama()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -164,7 +163,6 @@ Partial Class MAIN
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.radPanorama1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
@@ -675,7 +673,6 @@ Partial Class MAIN
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel1.Controls.Add(Me.RadLabel2)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -691,15 +688,6 @@ Partial Class MAIN
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1912, 86)
         Me.Panel1.TabIndex = 198
-        '
-        'RadLabel2
-        '
-        Me.RadLabel2.Font = New System.Drawing.Font("Leelawadee", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel2.Location = New System.Drawing.Point(193, 26)
-        Me.RadLabel2.Name = "RadLabel2"
-        Me.RadLabel2.Size = New System.Drawing.Size(56, 34)
-        Me.RadLabel2.TabIndex = 206
-        Me.RadLabel2.Text = "TAS"
         '
         'TextBox2
         '
@@ -2535,7 +2523,6 @@ Partial Class MAIN
         Me.radPanorama1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
@@ -2698,7 +2685,6 @@ Partial Class MAIN
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents MeterMenu As Telerik.WinControls.UI.RadLiveTileElement
-    Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
 End Class
 'End Namespace
 
