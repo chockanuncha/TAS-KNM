@@ -55,6 +55,7 @@ Partial Class MAIN
         Me.radPanorama1 = New Telerik.WinControls.UI.RadPanorama()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -160,10 +161,10 @@ Partial Class MAIN
         Me.TAlarmsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Dataset_table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCHTableAdapter()
-        Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.radPanorama1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
@@ -181,7 +182,6 @@ Partial Class MAIN
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TAlarmsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -691,6 +691,15 @@ Partial Class MAIN
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1912, 86)
         Me.Panel1.TabIndex = 198
+        '
+        'RadLabel2
+        '
+        Me.RadLabel2.Font = New System.Drawing.Font("Leelawadee", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadLabel2.Location = New System.Drawing.Point(193, 26)
+        Me.RadLabel2.Name = "RadLabel2"
+        Me.RadLabel2.Size = New System.Drawing.Size(56, 34)
+        Me.RadLabel2.TabIndex = 206
+        Me.RadLabel2.Text = "TAS"
         '
         'TextBox2
         '
@@ -2503,15 +2512,6 @@ Partial Class MAIN
         '
         Me.T_ALARMS_BATCHTableAdapter.ClearBeforeFill = True
         '
-        'RadLabel2
-        '
-        Me.RadLabel2.Font = New System.Drawing.Font("Leelawadee", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel2.Location = New System.Drawing.Point(193, 26)
-        Me.RadLabel2.Name = "RadLabel2"
-        Me.RadLabel2.Size = New System.Drawing.Size(56, 34)
-        Me.RadLabel2.TabIndex = 206
-        Me.RadLabel2.Text = "TAS"
-        '
         'MAIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2527,7 +2527,7 @@ Partial Class MAIN
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "   Terminal Automation System (TAS) XXX"
+        Me.Text = "   Terminal Automation System (TAS)"
         Me.ThemeName = "Office2010Blue"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2535,6 +2535,7 @@ Partial Class MAIN
         Me.radPanorama1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
@@ -2554,7 +2555,6 @@ Partial Class MAIN
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TAlarmsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dataset_table, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
