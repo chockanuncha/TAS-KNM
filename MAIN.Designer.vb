@@ -741,13 +741,13 @@ Partial Class MAIN
         Me.RadPanel1.Controls.Add(Me.RadLabel6)
         Me.RadPanel1.Controls.Add(Me.M_NAME)
         Me.RadPanel1.Controls.Add(Me.RadLabel5)
-        Me.RadPanel1.Location = New System.Drawing.Point(1326, 9)
+        Me.RadPanel1.Location = New System.Drawing.Point(1292, 9)
         Me.RadPanel1.Name = "RadPanel1"
         '
         '
         '
         Me.RadPanel1.RootElement.BorderHighlightThickness = 5
-        Me.RadPanel1.Size = New System.Drawing.Size(401, 68)
+        Me.RadPanel1.Size = New System.Drawing.Size(435, 68)
         Me.RadPanel1.TabIndex = 200
         Me.RadPanel1.ThemeName = "Office2010Blue"
         CType(Me.RadPanel1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.BorderPrimitive).BoxStyle = Telerik.WinControls.BorderBoxStyle.OuterInnerBorders
@@ -826,7 +826,7 @@ Partial Class MAIN
         Me.RadButton1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.RadButton1.Font = New System.Drawing.Font("Leelawadee", 12.0!, System.Drawing.FontStyle.Bold)
         Me.RadButton1.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.script_edit
-        Me.RadButton1.Location = New System.Drawing.Point(1105, 18)
+        Me.RadButton1.Location = New System.Drawing.Point(1071, 18)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(200, 50)
         Me.RadButton1.TabIndex = 197
@@ -841,7 +841,7 @@ Partial Class MAIN
         Me.PictureBox2.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo
         Me.PictureBox2.Location = New System.Drawing.Point(11, 6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(168, 75)
+        Me.PictureBox2.Size = New System.Drawing.Size(164, 75)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 193
         Me.PictureBox2.TabStop = False

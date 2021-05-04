@@ -54,22 +54,6 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-<<<<<<< HEAD
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ping;Initial Catalog=TAS;Persist Security Info=True;User ID=sa;Passwo"& _ 
-            "rd=P@$$w0rd")>  _
-=======
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-12ISJTN\MSSQLSERVER_TAS;Initial Catalog=TAS;Persist Security "& _ 
-            "Info=True;User ID=sa;Password=Admin1234")>  _
->>>>>>> f99b38f469672c1db8675964bcd7367d140c28d2
-        Public ReadOnly Property ConnectionString() As String
-            Get
-                Return CType(Me("ConnectionString"),String)
-            End Get
-        End Property
-        
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Disconnect")>  _
@@ -104,6 +88,17 @@ Namespace My
             Set
                 Me("LicOverride") = value
             End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-12ISJTN\MSSQLSERVER_TAS;Initial Catalog=TAS;Persist Security "& _ 
+            "Info=True;User ID=sa;Password=Admin1234")>  _
+        Public ReadOnly Property ConnectionString() As String
+            Get
+                Return CType(Me("ConnectionString"),String)
+            End Get
         End Property
     End Class
 End Namespace

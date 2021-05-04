@@ -50,6 +50,7 @@ Public Class Advisenote
         MAIN.U_GROUP_ID = 5
         Chk_View()
 
+        Timer2.Enabled = True
 
         EditDoc = False
         AddDoc = False
@@ -2719,6 +2720,58 @@ Public Class Advisenote
         End If
     End Sub
 
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim cls As New Class_SQLSERVERDB
+        Dim dt As DataTable = cls.Query("SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] ORDER BY [W_DATETIME] DESC")
+
+        WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
+    End Sub
+
+    Private Sub Advisenote_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Timer2.Enabled = False
+    End Sub
+
+    Private Sub chb_key_id_CheckedChanged(sender As Object, e As EventArgs) Handles chb_key_id.CheckedChanged
+        If chb_key_id.Checked = True Then
+            rtb_key_id.Enabled = True
+            Timer2.Enabled = False
+            rtb_key_id.Text = ""
+        End If
+
+        If chb_key_id.Checked = False Then
+            rtb_key_id.Enabled = False
+            Timer2.Enabled = True
+            rtb_key_id.Text = ""
+        End If
+
+
+    End Sub
+
+    Private Sub rtb_key_id_KeyPress(sender As Object, e As KeyPressEventArgs) Handles rtb_key_id.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+
+        If Asc(e.KeyChar) = 13 Then
+            e.Handled = True
+
+            Dim id As Integer = rtb_key_id.Text
+            Dim cls As New Class_SQLSERVERDB
+            Dim Sql As String
+            Sql = "SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] WHERE  LOG_ID = '" & id & "' "
+
+            Dim dt As DataTable = cls.Query(Sql)
+            WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
+
+        Else
+            e.Handled = False
+        End If
+
+
+    End Sub
+
     Private Sub IslandBay10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
@@ -2734,7 +2787,7 @@ Public Class Advisenote
                 Sql = ""
                 Sql = "Select ID,Batch_name from T_batchmeter where Batch_bay='" & Bay_Number & "' and batch_pro='" & Product_ID & "' and Batch_Status=10 Order by Batch_name"
 
-                Dim MyDataSet As New DataSet
+            Dim MyDataSet As New DataSet
                 MyDataSet = cls.Query_DS(Sql, "T_batchmeter")
 
                 TBatchmeterBindingSource10.DataSource = MyDataSet
