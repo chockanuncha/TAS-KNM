@@ -1122,7 +1122,6 @@
     <EmbeddedResource Include="Other\Manual.resx">
       <DependentUpon>Manual.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
