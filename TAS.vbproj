@@ -986,6 +986,7 @@
     <EmbeddedResource Include="Config\GroupRole.resx">
       <DependentUpon>GroupRole.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="Record Data\ChangPassword.resx">
       <DependentUpon>ChangPassword.vb</DependentUpon>
     </EmbeddedResource>
