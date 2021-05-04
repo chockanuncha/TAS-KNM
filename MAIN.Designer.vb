@@ -656,9 +656,9 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(0).GetChildAt(5), Telerik.WinControls.Primitives.BorderPrimitive).AutoSize = True
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).Alignment = System.Drawing.ContentAlignment.TopLeft
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).RightToLeft = False
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(820.855!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.ImagePrimitive).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
-        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(-960.0!, 0!)
+        CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         '
         'RichTextBox1
         '
@@ -2515,7 +2515,7 @@ Partial Class MAIN
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "   Terminal Automation System (TAS) XXX"
+        Me.Text = "   Terminal Automation System (TAS)"
         Me.ThemeName = "Office2010Blue"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).EndInit()
