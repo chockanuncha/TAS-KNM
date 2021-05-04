@@ -2747,29 +2747,27 @@ Public Class Advisenote
 
     End Sub
 
-    Private Sub rtb_key_id_KeyPress(sender As Object, e As KeyPressEventArgs) Handles rtb_key_id.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
+    Private Sub rtb_key_id_KeyDown(sender As Object, e As KeyEventArgs) Handles rtb_key_id.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If rtb_key_id.Text <> "" Then
+                Dim id As Integer = rtb_key_id.Text
+                Dim cls As New Class_SQLSERVERDB
+                Dim Sql As String
+                Sql = "SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] WHERE  LOG_ID = '" & id & "' "
+
+                Dim dt As DataTable = cls.Query(Sql)
+                If dt.Rows.Count > 0 Then
+                    WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
+                End If
             End If
         End If
+    End Sub
 
-        If Asc(e.KeyChar) = 13 Then
+    Private Sub rtb_key_id_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles rtb_key_id.KeyPress
+        Dim ch As Char = e.KeyChar
+        If Not Char.IsDigit(ch) AndAlso Asc(ch) <> 8 Then
             e.Handled = True
-
-            Dim id As Integer = rtb_key_id.Text
-            Dim cls As New Class_SQLSERVERDB
-            Dim Sql As String
-            Sql = "SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] WHERE  LOG_ID = '" & id & "' "
-
-            Dim dt As DataTable = cls.Query(Sql)
-            WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
-
-        Else
-            e.Handled = False
         End If
-
-
     End Sub
 
     Private Sub IslandBay10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -2787,7 +2785,7 @@ Public Class Advisenote
                 Sql = ""
                 Sql = "Select ID,Batch_name from T_batchmeter where Batch_bay='" & Bay_Number & "' and batch_pro='" & Product_ID & "' and Batch_Status=10 Order by Batch_name"
 
-            Dim MyDataSet As New DataSet
+                Dim MyDataSet As New DataSet
                 MyDataSet = cls.Query_DS(Sql, "T_batchmeter")
 
                 TBatchmeterBindingSource10.DataSource = MyDataSet
