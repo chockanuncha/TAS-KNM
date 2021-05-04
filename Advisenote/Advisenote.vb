@@ -2968,7 +2968,8 @@ Public Class Advisenote
             Product_ID = TProductBindingSource.Item(TProductBindingSource.Position)("ID").ToString()
 
             sql = ""
-            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            'sql = "select bay_number,bay_status  from t_bay where bay_status=1 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
+            sql = "select bay_number,bay_status  from t_bay where bay_status=1 and [BAY_QUEUE] <> 0 and  bay_meter1 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
             sql &= " bay_meter2 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
             sql &= "bay_meter3 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
             sql &= "bay_meter4 in(select batch_number from t_batchmeter where batch_pro='" & Product_ID & "' and batch_Status='10') or "
