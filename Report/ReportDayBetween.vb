@@ -174,9 +174,8 @@ Public Class ReportDayBetween
                     'ReportPrint.ShowDialog()
                     MyDataSet.Dispose()
                 End If
-
-
             End If
+
             If Reportmain.Report_Type = "tank" Then
                 Dim Myreport As New ReportDocument
                 Myreport = New ReportDocument
@@ -225,6 +224,7 @@ Public Class ReportDayBetween
                     MyDataSet.Dispose()
                 End If
             End If
+
             If Reportmain.Report_Type = "product" Then
                 Dim Myreport As New ReportDocument
                 Myreport = New ReportDocument
@@ -275,19 +275,15 @@ Public Class ReportDayBetween
             End If
 
             If Reportmain.Report_Type = "Event" Then
-
                 Dim Myreport As New ReportDocument
                 Myreport = New ReportDocument
-
                 sql = "Select * from V_EVENT "
                 sql &= "where EV_DATE between "
                 sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
                 sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
                 sql &= " order by EV_ID"
-
                 Dim MyDataSet As New DataSet
                 MyDataSet = cls.Query_DS(sql, "V_EVENT")
-
                 If MyDataSet.Tables(0).Rows.Count = 0 Then
                     MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
                     Exit Sub
@@ -300,6 +296,9 @@ Public Class ReportDayBetween
                 End If
             End If
 
+            If Reportmain.Report_Type = "Manual" Then
+                ManualReport()
+            End If
 
         Catch ex As Exception
         End Try
@@ -348,17 +347,18 @@ Public Class ReportDayBetween
         Dim sql As String = ""
         sql = "select max(ldate) as dt1,"
         Sql &= "max(product_code) as st1,"
-        Sql &= "batch_name as st2,"
-        Sql &= "sum(t_log_batch_data.preset) as f1,"
+        sql &= "max(batch_name) as st2,"
+        sql &= "sum(t_log_batch_data.preset) as f1,"
         Sql &= "sum(mass) as f2,"
         Sql &= "min(total_mass_start) as f3,"
-        Sql &= "max(total_mass_end) as f4 "
-        Sql &= "from(select * from t_log_batch_data where ldate between "
+        sql &= "max(total_mass_end) as f4,Cast(CAST(MIN (date_start ) as time) as varchar(8)) as ST3 ,	cast(CAST(MAX ( date_end ) as time) as varchar(8))  as ST4 "
+        sql &= "from(select * from t_log_batch_data where ldate between "
         Sql &= "convert(datetime, '" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "') and "
-        Sql &= "convert(datetime, '" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "')) t_log_batch_data "
-        Sql &= "left join t_batchmeter on t_log_batch_data.batch_number = t_batchmeter.batch_number "
+        sql &= "convert(datetime, '" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "' )"
+        sql &= "and lc_id is null) t_log_batch_data "
+        sql &= "left join t_batchmeter on t_log_batch_data.batch_number = t_batchmeter.batch_number "
         Sql &= "left join t_product on t_log_batch_data.delivered_product = t_product.id "
-        Sql &= "group by batch_name"
+        sql &= "group by t_log_batch_data.id order by t_log_batch_data.id"
 
         Dim MyDataSet As New DataSet
         MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
@@ -366,14 +366,10 @@ Public Class ReportDayBetween
             MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
             Exit Sub
         Else
-            'Myreport.Load("Metersum_BTW.rpt")
-
-            Myreport.Load("Report_File/MeterReport.rpt")
+            Myreport.Load("Report_File/Manualreport.rpt")
             Myreport.SetDataSource(MyDataSet)
             ReportPrint.CrystalReportViewer3.ReportSource = Myreport
             ReportPrint.ShowDialog()
-            'ReportPrint.ShowDialog()
-
         End If
         MyDataSet.Dispose()
 
