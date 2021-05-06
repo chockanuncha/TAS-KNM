@@ -130,7 +130,7 @@ Partial Class F_Status
         Me.MasterGrid.MasterTemplate.AllowRowResize = False
         Me.MasterGrid.MasterTemplate.AutoGenerateColumns = False
         Me.MasterGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewDecimalColumn1.DataType = GetType(Long)
+        GridViewDecimalColumn1.DataType = GetType(Integer)
         GridViewDecimalColumn1.EnableExpressionEditor = False
         GridViewDecimalColumn1.FieldName = "STATUS_ID"
         GridViewDecimalColumn1.HeaderText = "STATUS NO."
@@ -281,6 +281,7 @@ Partial Class F_Status
         Me.BtEdit.RightToLeftAutoMirrorImage = True
         Me.BtEdit.Size = New System.Drawing.Size(36, 36)
         Me.BtEdit.Text = "Edit"
+        Me.BtEdit.Visible = False
         '
         'ToolStripButton1
         '
@@ -291,6 +292,7 @@ Partial Class F_Status
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.ToolStripButton1.Visible = False
         '
         'RadPanel1
         '
@@ -312,7 +314,6 @@ Partial Class F_Status
         Me.P_SUM.Name = "P_SUM"
         Me.P_SUM.Size = New System.Drawing.Size(85, 25)
         Me.P_SUM.TabIndex = 39
-        Me.P_SUM.TabStop = True
         Me.P_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -372,7 +373,6 @@ Partial Class F_Status
         '
         'BCancel
         '
-        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
@@ -403,7 +403,6 @@ Partial Class F_Status
         '
         'Bsave
         '
-        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.ForeColor = System.Drawing.Color.White
@@ -455,7 +454,6 @@ Partial Class F_Status
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(595, 694)
         Me.DetailGroup.TabIndex = 15
-        Me.DetailGroup.TabStop = True
         '
         'U_UPDATEBY
         '
@@ -467,7 +465,6 @@ Partial Class F_Status
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(291, 28)
         Me.U_UPDATEBY.TabIndex = 13
-        Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -483,7 +480,6 @@ Partial Class F_Status
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(291, 28)
         Me.U_UPDATE.TabIndex = 12
-        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Office2010Blue"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -497,7 +493,6 @@ Partial Class F_Status
         Me.Island_No.Name = "Island_No"
         Me.Island_No.Size = New System.Drawing.Size(291, 28)
         Me.Island_No.TabIndex = 1
-        Me.Island_No.TabStop = True
         Me.Island_No.ThemeName = "Office2010Blue"
         '
         'StatusId
@@ -508,7 +503,6 @@ Partial Class F_Status
         Me.StatusId.Name = "StatusId"
         Me.StatusId.Size = New System.Drawing.Size(291, 28)
         Me.StatusId.TabIndex = 0
-        Me.StatusId.TabStop = True
         Me.StatusId.ThemeName = "Office2010Blue"
         '
         'RoundRectShape1
@@ -521,7 +515,7 @@ Partial Class F_Status
         '
         'F_Status
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1101, 694)
         Me.Controls.Add(Me.DetailGroup)
