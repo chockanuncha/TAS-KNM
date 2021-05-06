@@ -419,7 +419,6 @@ Partial Public Class USER
         '
         'RadDateTimePicker1
         '
-        Me.RadDateTimePicker1.Culture = New System.Globalization.CultureInfo("en-GB")
         Me.RadDateTimePicker1.CustomFormat = "dd/MM/yyyy"
         Me.RadDateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TUSERBindingSource, "U_EXPIRE_DATE", True))
         Me.RadDateTimePicker1.Enabled = False
@@ -429,7 +428,7 @@ Partial Public Class USER
         Me.RadDateTimePicker1.Name = "RadDateTimePicker1"
         Me.RadDateTimePicker1.Size = New System.Drawing.Size(300, 32)
         Me.RadDateTimePicker1.TabIndex = 73
-        Me.RadDateTimePicker1.Text = "01/04/2020"
+        Me.RadDateTimePicker1.Text = "01/04/2563"
         Me.RadDateTimePicker1.ThemeName = "Breeze"
         Me.RadDateTimePicker1.Value = New Date(2020, 4, 1, 11, 23, 38, 842)
         '
@@ -829,7 +828,7 @@ Partial Public Class USER
         '
         'USER
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control

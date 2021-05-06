@@ -477,6 +477,12 @@
       <DependentUpon>DailyReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="bin\Debug\Report_File\ManualReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManualReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="bin\Debug\Report_File\MeterReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -970,6 +976,10 @@
     <EmbeddedResource Include="bin\Debug\Report_File\DailyReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DailyReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report_File\ManualReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ManualReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Report_File\MeterReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -16,6 +16,7 @@ Public Class ReportDayBetween
     Dim n_year As Integer = 543
     Dim Memory As MemoryManagement.Manage
 
+#Region "Windows event"
     Private Sub CHKBetween_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CHKBetween.Click
         chk = 1
         GB1.Enabled = False
@@ -29,68 +30,37 @@ Public Class ReportDayBetween
         n_year = 543
         Try
             '' Between ''
-
-
             If Reportmain.Report_Type = "productpay" Then
 
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
-                    sql = "select min(load_date) as MinL_Date,max(load_date) as L_Date,Product_code,max(t1.lc_tank) as Batch_pro,Sum(t1.lc_preset) as Presets,Sum(t2.Gross) as Gross,Sum(t2.net86f) as net,Sum(t1.lc_preset-t2.gross) as Loss "
-                    sql &= "from (select * from v_loadingnote where lc_status in(3,4)) t1  left join (select * from V_report_meter) t2  "
-                    sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
-                    sql &= "where t1.load_date between "
-                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  and lc_status in(3,4)  "
-                    sql &= "group by t1.Product_code,lc_tank order by t1.Product_code,lc_tank"
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
+                sql = "select min(load_date) as MinL_Date,max(load_date) as L_Date,Product_code,max(t1.lc_tank) as Batch_pro,Sum(t1.lc_preset) as Presets,Sum(t2.Gross) as Gross,Sum(t2.net86f) as net,Sum(t1.lc_preset-t2.gross) as Loss "
+                sql &= "from (select * from v_loadingnote where lc_status in(3,4)) t1  left join (select * from V_report_meter) t2  "
+                sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
+                sql &= "where t1.load_date between "
+                sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  and lc_status in(3,4)  "
+                sql &= "group by t1.Product_code,lc_tank order by t1.Product_code,lc_tank"
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "V_Product_total")
+                Dim MyDataSet As New DataSet
+                MyDataSet = cls.Query_DS(sql, "V_Product_total")
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("Productsum.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("Productsum.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
+            End If
 
-                If Reportmain.Report_Type = "time" Then
+            If Reportmain.Report_Type = "time" Then
 
-                    'Dim Myreport As New ReportDocument
-                    'Myreport = New ReportDocument
-                    'sql = ""
-                    'sql = "select max(Reference) as Reference,"
-                    'sql &= "max(St_ST_date) as St_ST_date,sum(Gross_m1) as Gross_m1,Sum(Net_m1) as Net_m1,Sum(Net86f) as NET86F,"
-                    'sql &= "(max(lc_preset)-Sum(Gross_m1)) as LOSS_M1,Sum(Loss_M1) as LOSS_M1xx,min(Startm1) as Startm1,max(Stopm1) as Stopm1,min(Startm1_net) as Startm1_net,max(Stopm1_net) as Stopm1_net, "
-                    'sql &= "min(St_ST_time_start) as St_ST_time_start,max(St_ST_time_stop) as St_ST_time_stop,max(Batch_name) as Batch_name,max(Lc_Compartment) as Lc_Compartment,max(LC_preset) as LC_preset,max(Load_driver) as Load_driver,max(load_customer) as load_customer,max(load_Vehicle) as load_Vehicle,max(Product_code) as Product_code,max(lc_tank) as lc_tank,"
-                    'sql &= "max(Avg_temp_m1) as Avg_temp_m1,max(load_dofull) as load_dofull,max(addnotedate) as addnotedate,min(Q_time) as Q_time,min(Checkin_time) as Checkin_time,max(VCF_M1) as VCF_M1,max(Density30C_M1) as Density30C_M1,max(DO_TYPE) as DO_TYPE,max(Product_name) as Product_name,max(LC_Seal) as LC_Seal"
-                    'sql &= ",max(Customer_name) as Customer_Name,sum(Gross_M1) as Gross_M1 "
-                    'sql &= " from v_bol_m1m2_new where addnotedate between "
-                    'sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    'sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-                    'sql &= "and lc_status in(3,4) "
-                    'sql &= "group by Reference,Lc_Compartment order by reference,Lc_Compartment"
-
-                    'Dim MyDataSet As New DataSet
-                    'MyDataSet = cls.Query_DS(sql, "V_BOL_M1M2_NEW")
-
-                    'If MyDataSet.Tables(0).Rows.Count = 0 Then
-                    '    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                    '    Exit Sub
-                    'Else
-                    '    Myreport.Load("BOLToday.rpt")
-                    '    Myreport.SetDataSource(MyDataSet)
-                    '    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                    '    ReportPrint.ShowDialog()
-                    '    MyDataSet.Dispose()
-                    'End If
-
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
 
                 sql = "select max(load_date) as dt1,"
                 sql &= "max(lc_compartment) as int4, "
@@ -128,13 +98,13 @@ Public Class ReportDayBetween
                 sql &= "order by load_id, lc_compartment"
 
                 Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
-                    'MyDataSet = cls.Query_DS(sql, "DataTable_Report")
+                MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
+                'MyDataSet = cls.Query_DS(sql, "DataTable_Report")
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
                     'Myreport.Load("BOLToday.rpt")
                     Myreport.Load("Report_File/DailyReport.rpt")
                     Myreport.SetDataSource(MyDataSet)
@@ -143,10 +113,10 @@ Public Class ReportDayBetween
                     MyDataSet.Dispose()
 
                 End If
-                End If
-                If Reportmain.Report_Type = "customer" Then
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
+            End If
+            If Reportmain.Report_Type = "customer" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
                 sql = ""
                 sql = "select l_date,load_customer,product_name,max(company_name) as company_name, "
                 sql &= "sum(presets) as presets,sum(grosss) as grosss,sum(net) as net,sum(loss) as loss from v_truck_loading_report "
@@ -157,48 +127,22 @@ Public Class ReportDayBetween
                 Dim myDataSet As New DataSet
                 myDataSet = cls.Query_DS(sql, "V_TRUCK_LOADING_REPORT")
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("Customerreport.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                If myDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("Customerreport.rpt")
+                    Myreport.SetDataSource(myDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    myDataSet.Dispose()
                 End If
+            End If
 
 
-                If Reportmain.Report_Type = "meter" Then
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
-                'sql = "select t1.batch_name,max(load_date) as l_date,max(product_code) as product_code,"
-                'sql &= "max(t1.addnotedate) as st_date,"
-                'sql &= "convert (datetime,max(t1.addnotedate), 'dd/mm/yyyy') as st_date1,"
-                'sql &= "sum(t1.lc_preset) as presets,sum(t2.gross) as gross,sum(t2.net86f) as net,sum(t1.lc_preset-t2.gross) as loss "
-                'sql &= ",min(sy_start_total_m1) as sy_start_total_m1,max(sy_stop_total_m1) as sy_stop_total_m1 "
-                'sql &= "from (select * from v_loadingnote where  advisenote_type<>'topup' and lc_status in(3,4)) t1  left join (select * from v_report_meter) t2 "
-                'sql &= "on t1.reference=t2.st_ref_no and t1.lc_compartment=t2.sy_comp "
-                'sql &= "where t1.addnotedate between "
-                'sql &= "convert (datetime,'" & dtp2.value.year & "/" & dtp2.value.month & "/" & dtp2.value.day & " 00:00:00" & "', 'yyyy/mm/dd hh24:mi:ss') and "
-                'sql &= "convert (datetime,'" & dtp3.value.year & "/" & dtp3.value.month & "/" & dtp3.value.day & " 23:59:59" & "', 'yyyy/mm/dd hh24:mi:ss')  "
-                'sql &= "group by t1.batch_name order by t1.batch_name"
-                'dim mydataset as new dataset
-                'mydataset = cls.query_ds(sql, "v_meter_controlling")
-
-                'if mydataset.tables(0).rows.count = 0 then
-                '    msgbox("no data, cannot print!", vbokonly + vbdefaultbutton3, "error")
-                '    exit sub
-                'else
-                '    myreport.load("metersum_btw.rpt")
-                '    myreport.setdatasource(mydataset)
-                '    reportprint.crystalreportviewer3.reportsource = myreport
-                '    reportprint.showdialog()
-                '    mydataset.dispose()
-                'end if
-
-
+            If Reportmain.Report_Type = "meter" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
                 sql = "select max(ldate) as dt1,"
                 sql &= "max(product_code) as st1,"
                 sql &= "batch_name as st2,"
@@ -214,148 +158,147 @@ Public Class ReportDayBetween
                 sql &= "group by batch_name"
 
                 Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
-                    ' MyDataSet = cls.Query_DS(sql, "v_meter_controlling")
+                MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
+                ' MyDataSet = cls.Query_DS(sql, "v_meter_controlling")
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
                     'Myreport.Load("Metersum_BTW.rpt")
 
                     Myreport.Load("Report_File/MeterReport.rpt")
                     Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        'ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
-
-
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    'ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
-                If Reportmain.Report_Type = "tank" Then
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
+            End If
 
-                    sql = ""
-                    sql = "select * from v_Tankstock Where "
-                    sql &= "CAST(EXTRACT(YEAR FROM V_tankstock.creatdate) AS VARCHAR2(10)) || '-' || "
-                    sql &= "CAST(EXTRACT(MONTH FROM V_tankstock.creatdate) AS VARCHAR2(10)) || '-' || "
-                    sql &= "CAST(EXTRACT(DAY FROM V_tankstock.creatdate) AS VARCHAR2(10)) between '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP2.Value)) + "' and '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP3.Value)) + "'"
+            If Reportmain.Report_Type = "tank" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "v_Tankstock")
+                sql = ""
+                sql = "select * from v_Tankstock Where "
+                sql &= "CAST(EXTRACT(YEAR FROM V_tankstock.creatdate) AS VARCHAR2(10)) || '-' || "
+                sql &= "CAST(EXTRACT(MONTH FROM V_tankstock.creatdate) AS VARCHAR2(10)) || '-' || "
+                sql &= "CAST(EXTRACT(DAY FROM V_tankstock.creatdate) AS VARCHAR2(10)) between '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP2.Value)) + "' and '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP3.Value)) + "'"
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("tankstock.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                Dim MyDataSet As New DataSet
+                MyDataSet = cls.Query_DS(sql, "v_Tankstock")
+
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("tankstock.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
-                If Reportmain.Report_Type = "unloading" Then
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
-                    sql = ""
-                    sql = "Select * from v_unloadreport "
+            End If
+            If Reportmain.Report_Type = "unloading" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
+                sql = ""
+                sql = "Select * from v_unloadreport "
 
-                    sql &= "where load_Date between CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-                    sql &= " order by load_id"
+                sql &= "where load_Date between CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                sql &= " order by load_id"
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "v_unloadreport")
+                Dim MyDataSet As New DataSet
+                MyDataSet = cls.Query_DS(sql, "v_unloadreport")
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("ReportUnloadingDay.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("ReportUnloadingDay.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
-                If Reportmain.Report_Type = "product" Then
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
-                    sql = ""
-                    sql = "Select * from v_unloadreport where "
-                    sql &= "CAST(EXTRACT(YEAR FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
-                    sql &= "CAST(EXTRACT(MONTH FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
-                    sql &= "CAST(EXTRACT(DAY FROM v_unloadreport.load_date) AS VARCHAR2(10)) between '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP2.Value)) + "' and '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP3.Value)) + "'"
+            End If
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "v_unloadreport")
+            If Reportmain.Report_Type = "product" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
+                sql = ""
+                sql = "Select * from v_unloadreport where "
+                sql &= "CAST(EXTRACT(YEAR FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
+                sql &= "CAST(EXTRACT(MONTH FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
+                sql &= "CAST(EXTRACT(DAY FROM v_unloadreport.load_date) AS VARCHAR2(10)) between '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP2.Value)) + "' and '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP3.Value)) + "'"
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("ReportProductDay.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                Dim MyDataSet As New DataSet
+                MyDataSet = cls.Query_DS(sql, "v_unloadreport")
+
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("ReportProductDay.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
+            End If
 
 
-                If Reportmain.Report_Type = "customerrut" Then
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
-                    sql = ""
-                    sql = "Select * from v_unloadreport where "
-                    sql &= "CAST(EXTRACT(YEAR FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
-                    sql &= "CAST(EXTRACT(MONTH FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
-                    sql &= "CAST(EXTRACT(DAY FROM v_unloadreport.load_date) AS VARCHAR2(10)) between '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP2.Value)) + "' and '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP3.Value)) + "'"
+            If Reportmain.Report_Type = "customerrut" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
+                sql = ""
+                sql = "Select * from v_unloadreport where "
+                sql &= "CAST(EXTRACT(YEAR FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
+                sql &= "CAST(EXTRACT(MONTH FROM v_unloadreport.load_date) AS VARCHAR2(10)) || '-' || "
+                sql &= "CAST(EXTRACT(DAY FROM v_unloadreport.load_date) AS VARCHAR2(10)) between '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP2.Value)) + "' and '" + String.Format("{0:yyyy-M-d}", DateAdd(DateInterval.Year, -n_year, DTP3.Value)) + "'"
 
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "v_unloadreport")
+                Dim MyDataSet As New DataSet
+                MyDataSet = cls.Query_DS(sql, "v_unloadreport")
 
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("ReportCustomerDay.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("ReportCustomerDay.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
+            End If
 
-                If Reportmain.Report_Type = "Event" Then
-
-                    Dim Myreport As New ReportDocument
-                    Myreport = New ReportDocument
-
-                    sql = "Select * from V_EVENT "
-                    sql &= "where EV_DATE between "
-                    sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
-                    sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
-                    sql &= " order by EV_ID"
-
-                    Dim MyDataSet As New DataSet
-                    MyDataSet = cls.Query_DS(sql, "V_EVENT")
-
-                    If MyDataSet.Tables(0).Rows.Count = 0 Then
-                        MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
-                        Exit Sub
-                    Else
-                        Myreport.Load("Event.rpt")
-                        Myreport.SetDataSource(MyDataSet)
-                        ReportPrint.CrystalReportViewer3.ReportSource = Myreport
-                        ReportPrint.ShowDialog()
-                        MyDataSet.Dispose()
-                    End If
+            If Reportmain.Report_Type = "Event" Then
+                Dim Myreport As New ReportDocument
+                Myreport = New ReportDocument
+                sql = "Select * from V_EVENT "
+                sql &= "where EV_DATE between "
+                sql &= "CONVERT (DATETIME,'" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "', 'yyyy/mm/dd HH24:MI:SS') And "
+                sql &= "CONVERT (DATETIME,'" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "', 'yyyy/mm/dd HH24:MI:SS')  "
+                sql &= " order by EV_ID"
+                Dim MyDataSet As New DataSet
+                MyDataSet = cls.Query_DS(sql, "V_EVENT")
+                If MyDataSet.Tables(0).Rows.Count = 0 Then
+                    MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+                    Exit Sub
+                Else
+                    Myreport.Load("Event.rpt")
+                    Myreport.SetDataSource(MyDataSet)
+                    ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+                    ReportPrint.ShowDialog()
+                    MyDataSet.Dispose()
                 End If
+            End If
 
+            If Reportmain.Report_Type = "Manual" Then
+                ManualReport()
+            End If
 
         Catch ex As Exception
         End Try
@@ -395,4 +338,42 @@ Public Class ReportDayBetween
         Me.AddOwnedForm(ExportExcel)
         ExportExcel.Show()
     End Sub
+#End Region
+
+#Region "Funtion"
+    Sub ManualReport()
+        Dim Myreport As New ReportDocument
+        Myreport = New ReportDocument
+        Dim sql As String = ""
+        sql = "select max(ldate) as dt1,"
+        Sql &= "max(product_code) as st1,"
+        sql &= "max(batch_name) as st2,"
+        sql &= "sum(t_log_batch_data.preset) as f1,"
+        Sql &= "sum(mass) as f2,"
+        Sql &= "min(total_mass_start) as f3,"
+        sql &= "max(total_mass_end) as f4,Cast(CAST(MIN (date_start ) as time) as varchar(8)) as ST3 ,	cast(CAST(MAX ( date_end ) as time) as varchar(8))  as ST4 "
+        sql &= "from(select * from t_log_batch_data where ldate between "
+        Sql &= "convert(datetime, '" & DTP2.Value.Year & "/" & DTP2.Value.Month & "/" & DTP2.Value.Day & " 00:00:00" & "') and "
+        sql &= "convert(datetime, '" & DTP3.Value.Year & "/" & DTP3.Value.Month & "/" & DTP3.Value.Day & " 23:59:59" & "' )"
+        sql &= "and lc_id is null) t_log_batch_data "
+        sql &= "left join t_batchmeter on t_log_batch_data.batch_number = t_batchmeter.batch_number "
+        Sql &= "left join t_product on t_log_batch_data.delivered_product = t_product.id "
+        sql &= "group by t_log_batch_data.id order by t_log_batch_data.id"
+
+        Dim MyDataSet As New DataSet
+        MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
+        If MyDataSet.Tables(0).Rows.Count = 0 Then
+            MsgBox("No Data, Cannot Print!", vbOKOnly + vbDefaultButton3, "Error")
+            Exit Sub
+        Else
+            Myreport.Load("Report_File/Manualreport.rpt")
+            Myreport.SetDataSource(MyDataSet)
+            ReportPrint.CrystalReportViewer3.ReportSource = Myreport
+            ReportPrint.ShowDialog()
+        End If
+        MyDataSet.Dispose()
+
+    End Sub
+#End Region
+
 End Class

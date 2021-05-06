@@ -260,7 +260,7 @@ Partial Public Class MAIN
 
     Private Sub main_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        ''My.Application.ChangeCulture("th-TH")
+        ''My.Application.ChangeCulture("en-GB")
         M_NAME.Text = U_NAME
         M_GROUP.Text = U_GROUP
         Eventext.Left = 1850
@@ -330,7 +330,7 @@ Partial Public Class MAIN
     End Sub
 
     Private Sub main_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
-        'My.Application.ChangeCulture("th-TH")
+        'My.Application.ChangeCulture("en-GB")
         Timer1.Enabled = True
     End Sub
 

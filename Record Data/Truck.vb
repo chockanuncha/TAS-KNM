@@ -142,22 +142,38 @@ Public Class Truck
                     End If
                     TRUCK_ID = dt(0)("TRUCK_ID")
 
-                    Dim i As Integer
-                    For i = 0 To DataComp.Rows.Count - 1
-                        q = ""
-                        q = "insert into T_Truckcompartment ("
-                        q &= "T_TRUCKID,"
-                        q &= "T_TRUCKCOMPNO,"
-                        q &= "T_TRUCKCOMPCAP,"
-                        q &= "T_TRUCKCOMPCAP_L "
-                        q &= ") values("
-                        q &= "" & TRUCK_ID & ","
-                        q &= "" & DataComp.Rows.Item(i).Cells(0).Value & ","
-                        q &= "" & DataComp.Rows.Item(i).Cells(1).Value & ","
-                        q &= "" & DataComp.Rows.Item(i).Cells(2).Value & ")"
 
-                        cls.Insert(q)
-                    Next
+                    '' Update by ping 06052021
+
+                    'Dim i As Integer
+                    'For i = 0 To DataComp.Rows.Count - 1
+                    '    q = "insert into T_Truckcompartment ("
+                    '    q &= "T_TRUCKID,"
+                    '    q &= "T_TRUCKCOMPNO,"
+                    '    q &= "T_TRUCKCOMPCAP,"
+                    '    q &= "T_TRUCKCOMPCAP_L "
+                    '    q &= ") values("
+                    '    q &= "" & TRUCK_ID & ","
+                    '    q &= "" & DataComp.Rows.Item(i).Cells(0).Value & ","
+                    '    q &= "" & DataComp.Rows.Item(i).Cells(1).Value & ","
+                    '    q &= "" & DataComp.Rows.Item(i).Cells(2).Value & ")"
+                    '    cls.Insert(q)
+                    'Next
+
+
+                    q = "insert into T_Truckcompartment ("
+                    q &= "T_TRUCKID,"
+                    q &= "T_TRUCKCOMPNO,"
+                    q &= "T_TRUCKCOMPCAP,"
+                    q &= "T_TRUCKCOMPCAP_L "
+                    q &= ") values("
+                    q &= "" & TRUCK_ID & ","
+                    q &= "1, "
+                    q &= "" & VE_CAPA.Text & ","
+                    q &= "0)"
+                    cls.Insert(q)
+
+                    '''''''''''''''''''
                 End If
 
             Catch ex As Exception
@@ -258,23 +274,38 @@ Public Class Truck
 
                     cls.Delete(q)
 
-                    Dim i As Integer
-                    For i = 0 To DataComp.Rows.Count - 1
-                        q = ""
-                        q = "insert into T_Truckcompartment ("
-                        q &= "T_TRUCKID,"
-                        q &= "T_TRUCKCOMPNO,"
-                        q &= "T_TRUCKCOMPCAP,"
-                        q &= "T_TRUCKCOMPCAP_L "
-                        q &= ") values("
-                        q &= "" & TRUCK_ID & ","
-                        q &= "" & DataComp.Rows.Item(i).Cells(0).Value & ","
-                        q &= "" & DataComp.Rows.Item(i).Cells(1).Value & ","
-                        q &= "" & DataComp.Rows.Item(i).Cells(2).Value & ")"
+                    '' Update by ping 06052021
 
-                        cls.Insert(q)
+                    'Dim i As Integer
+                    'For i = 0 To DataComp.Rows.Count - 1
+                    '    q = ""
+                    '    q = "insert into T_Truckcompartment ("
+                    '    q &= "T_TRUCKID,"
+                    '    q &= "T_TRUCKCOMPNO,"
+                    '    q &= "T_TRUCKCOMPCAP,"
+                    '    q &= "T_TRUCKCOMPCAP_L "
+                    '    q &= ") values("
+                    '    q &= "" & TRUCK_ID & ","
+                    '    q &= "" & DataComp.Rows.Item(i).Cells(0).Value & ","
+                    '    q &= "" & DataComp.Rows.Item(i).Cells(1).Value & ","
+                    '    q &= "" & DataComp.Rows.Item(i).Cells(2).Value & ")"
+                    '    cls.Insert(q)
+                    'Next
 
-                    Next
+                    q = "insert into T_Truckcompartment ("
+                    q &= "T_TRUCKID,"
+                    q &= "T_TRUCKCOMPNO,"
+                    q &= "T_TRUCKCOMPCAP,"
+                    q &= "T_TRUCKCOMPCAP_L "
+                    q &= ") values("
+                    q &= "" & TRUCK_ID & ","
+                    q &= "1, "
+                    q &= "" & VE_CAPA.Text & ","
+                    q &= "0)"
+                    cls.Insert(q)
+
+                    '''''''
+                    '''
                 End If
             End If
 
@@ -314,7 +345,7 @@ Public Class Truck
                     SumVal = SumVal + Int(DataComp.Rows.Item(i - 1).Cells(1).Value.ToString)
                 Next
 
-                VE_CAPA.Text = SumVal
+                'VE_CAPA.Text = SumVal
             End If
             If Evens = 1 Then
 
@@ -338,6 +369,7 @@ Public Class Truck
                         Catch ex As Exception
                             DataComp.Rows.Add(i, 0, 0)
                         End Try
+
                     Next
                 End If
             End If
@@ -438,18 +470,20 @@ Public Class Truck
     End Sub
 
     Private Sub DataComp_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Try
-            Dim i As Integer = 1
-            Dim Capa As Integer = 0
+        'Try
+        '    Dim i As Integer = 1
+        '    Dim Capa As Integer = 0
 
-            For i = 1 To DataComp.RowCount
-                Capa = Capa + Int(DataComp.Rows.Item(i - 1).Cells(1).Value.ToString)
-            Next
-            VE_CAPA.Text = Capa.ToString
+        '    For i = 1 To DataComp.RowCount
+        '        Capa = Capa + Int(DataComp.Rows.Item(i - 1).Cells(1).Value.ToString)
+        '    Next
+        '    VE_CAPA.Text = Capa.ToString
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
+
+
     End Sub
 
 

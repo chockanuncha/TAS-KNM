@@ -77,8 +77,7 @@ Partial Class ReportDayBetween
         Me.DTP1.Name = "DTP1"
         Me.DTP1.Size = New System.Drawing.Size(164, 28)
         Me.DTP1.TabIndex = 9
-        Me.DTP1.TabStop = True
-        Me.DTP1.Text = "16/06/2014"
+        Me.DTP1.Text = "16/06/2557"
         Me.DTP1.ThemeName = "Office2010Blue"
         Me.DTP1.Value = New Date(2014, 6, 16, 15, 4, 17, 1)
         '
@@ -122,6 +121,7 @@ Partial Class ReportDayBetween
         '
         'DTP2
         '
+        Me.DTP2.Culture = New System.Globalization.CultureInfo("en-GB")
         Me.DTP2.CustomFormat = "dd/MM/yyyy"
         Me.DTP2.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.DTP2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
@@ -129,13 +129,13 @@ Partial Class ReportDayBetween
         Me.DTP2.Name = "DTP2"
         Me.DTP2.Size = New System.Drawing.Size(146, 28)
         Me.DTP2.TabIndex = 0
-        Me.DTP2.TabStop = True
-        Me.DTP2.Text = "16/06/2014"
+        Me.DTP2.Text = "06/05/2021"
         Me.DTP2.ThemeName = "Office2010Blue"
-        Me.DTP2.Value = New Date(2014, 6, 16, 15, 4, 17, 1)
+        Me.DTP2.Value = New Date(2021, 5, 6, 0, 0, 0, 0)
         '
         'DTP3
         '
+        Me.DTP3.Culture = New System.Globalization.CultureInfo("en-GB")
         Me.DTP3.CustomFormat = "dd/MM/yyyy"
         Me.DTP3.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.DTP3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
@@ -143,10 +143,9 @@ Partial Class ReportDayBetween
         Me.DTP3.Name = "DTP3"
         Me.DTP3.Size = New System.Drawing.Size(146, 28)
         Me.DTP3.TabIndex = 1
-        Me.DTP3.TabStop = True
-        Me.DTP3.Text = "16/06/2014"
+        Me.DTP3.Text = "06/05/2021"
         Me.DTP3.ThemeName = "Office2010Blue"
-        Me.DTP3.Value = New Date(2014, 6, 16, 15, 4, 17, 1)
+        Me.DTP3.Value = New Date(2021, 5, 6, 0, 0, 0, 0)
         '
         'RadLabel2
         '
@@ -208,7 +207,6 @@ Partial Class ReportDayBetween
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(69, 41)
         Me.GroupBox4.TabIndex = 20
-        Me.GroupBox4.TabStop = True
         Me.GroupBox4.Tag = ""
         Me.GroupBox4.Text = "Type report"
         Me.GroupBox4.Visible = False
@@ -259,7 +257,7 @@ Partial Class ReportDayBetween
         '
         'ReportDayBetween
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(608, 256)
         Me.Controls.Add(Me.GB2)

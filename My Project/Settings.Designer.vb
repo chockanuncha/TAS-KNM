@@ -93,8 +93,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=7.14.197.124;Initial Catalog=TAS;Persist Security Info=True;User ID=i"& _ 
-            "cc;Password=P@$$w0rd")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=Ping;Initial Catalog=TAS;Persist Security Info=True;User ID=sa;Passwo"& _ 
+            "rd=P@$$w0rd")>  _
         Public ReadOnly Property ConnectionString() As String
             Get
                 Return CType(Me("ConnectionString"),String)

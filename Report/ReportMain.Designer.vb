@@ -46,6 +46,7 @@ Partial Class Reportmain
         Me.RadClock1 = New Telerik.WinControls.UI.RadClock()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
         Me.object_95eeafae_8b76_4636_aa6d_87e4c4f7fea0 = New Telerik.WinControls.RootRadElement()
+        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +69,7 @@ Partial Class Reportmain
         Me.RadPanel3.SuspendLayout()
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -150,6 +152,7 @@ Partial Class Reportmain
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.RadGroupBox1.Controls.Add(Me.RadButton3)
         Me.RadGroupBox1.Controls.Add(Me.RadButton2)
         Me.RadGroupBox1.Controls.Add(Me.RadButton13)
         Me.RadGroupBox1.Controls.Add(Me.RadButton23)
@@ -228,7 +231,7 @@ Partial Class Reportmain
         'RadButton6
         '
         Me.RadButton6.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton6.Location = New System.Drawing.Point(366, 21)
+        Me.RadButton6.Location = New System.Drawing.Point(131, 21)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(375, 118)
         Me.RadButton6.TabIndex = 5
@@ -320,9 +323,21 @@ Partial Class Reportmain
         Me.object_95eeafae_8b76_4636_aa6d_87e4c4f7fea0.StretchHorizontally = True
         Me.object_95eeafae_8b76_4636_aa6d_87e4c4f7fea0.StretchVertically = True
         '
+        'RadButton3
+        '
+        Me.RadButton3.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadButton3.Location = New System.Drawing.Point(616, 21)
+        Me.RadButton3.Name = "RadButton3"
+        Me.RadButton3.Size = New System.Drawing.Size(375, 118)
+        Me.RadButton3.TabIndex = 14
+        Me.RadButton3.Text = "Manual Loading Report"
+        Me.RadButton3.ThemeName = "Breeze"
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Manual Loading Report"
+        CType(Me.RadButton3.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).Shape = Me.RoundRectShape1
+        '
         'Reportmain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1106, 542)
@@ -363,6 +378,7 @@ Partial Class Reportmain
         Me.RadPanel3.PerformLayout()
         CType(Me.RadCalendar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -389,5 +405,6 @@ Partial Class Reportmain
     Friend WithEvents Office2010BlueTheme1 As Telerik.WinControls.Themes.Office2010BlueTheme
     Friend WithEvents object_95eeafae_8b76_4636_aa6d_87e4c4f7fea0 As Telerik.WinControls.RootRadElement
     Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
 End Class
 
