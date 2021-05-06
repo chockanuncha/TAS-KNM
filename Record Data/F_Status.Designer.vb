@@ -113,7 +113,7 @@ Partial Class F_Status
         Me.MasterGrid.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.MasterGrid.ForeColor = System.Drawing.Color.Black
         Me.MasterGrid.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.MasterGrid.Location = New System.Drawing.Point(0, 39)
+        Me.MasterGrid.Location = New System.Drawing.Point(0, 25)
         '
         '
         '
@@ -156,7 +156,7 @@ Partial Class F_Status
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.MasterGrid.ShowGroupPanel = False
-        Me.MasterGrid.Size = New System.Drawing.Size(508, 600)
+        Me.MasterGrid.Size = New System.Drawing.Size(508, 614)
         Me.MasterGrid.TabIndex = 40
         Me.MasterGrid.ThemeName = "Office2010Blue"
         '
@@ -189,7 +189,7 @@ Partial Class F_Status
         Me.BindingNavigator1.MovePreviousItem = Me.Btprevious
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(508, 39)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(508, 25)
         Me.BindingNavigator1.TabIndex = 49
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -199,7 +199,7 @@ Partial Class F_Status
         Me.Btfirst.Image = CType(resources.GetObject("Btfirst.Image"), System.Drawing.Image)
         Me.Btfirst.Name = "Btfirst"
         Me.Btfirst.RightToLeftAutoMirrorImage = True
-        Me.Btfirst.Size = New System.Drawing.Size(23, 36)
+        Me.Btfirst.Size = New System.Drawing.Size(23, 22)
         Me.Btfirst.Text = "Move first"
         '
         'Btprevious
@@ -208,13 +208,13 @@ Partial Class F_Status
         Me.Btprevious.Image = CType(resources.GetObject("Btprevious.Image"), System.Drawing.Image)
         Me.Btprevious.Name = "Btprevious"
         Me.Btprevious.RightToLeftAutoMirrorImage = True
-        Me.Btprevious.Size = New System.Drawing.Size(23, 36)
+        Me.Btprevious.Size = New System.Drawing.Size(23, 22)
         Me.Btprevious.Text = "Move previous"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripTextBox1
         '
@@ -229,14 +229,14 @@ Partial Class F_Status
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 36)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Btnext
         '
@@ -244,7 +244,7 @@ Partial Class F_Status
         Me.Btnext.Image = CType(resources.GetObject("Btnext.Image"), System.Drawing.Image)
         Me.Btnext.Name = "Btnext"
         Me.Btnext.RightToLeftAutoMirrorImage = True
-        Me.Btnext.Size = New System.Drawing.Size(23, 36)
+        Me.Btnext.Size = New System.Drawing.Size(23, 22)
         Me.Btnext.Text = "Move next"
         '
         'BtLast
@@ -253,13 +253,13 @@ Partial Class F_Status
         Me.BtLast.Image = CType(resources.GetObject("BtLast.Image"), System.Drawing.Image)
         Me.BtLast.Name = "BtLast"
         Me.BtLast.RightToLeftAutoMirrorImage = True
-        Me.BtLast.Size = New System.Drawing.Size(23, 36)
+        Me.BtLast.Size = New System.Drawing.Size(23, 22)
         Me.BtLast.Text = "Move last"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
         'Btadd
         '
@@ -270,6 +270,7 @@ Partial Class F_Status
         Me.Btadd.RightToLeftAutoMirrorImage = True
         Me.Btadd.Size = New System.Drawing.Size(36, 36)
         Me.Btadd.Text = "Add new"
+        Me.Btadd.Visible = False
         '
         'BtEdit
         '
@@ -454,6 +455,7 @@ Partial Class F_Status
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(595, 694)
         Me.DetailGroup.TabIndex = 15
+        Me.DetailGroup.TabStop = False
         '
         'U_UPDATEBY
         '

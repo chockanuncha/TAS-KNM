@@ -59,6 +59,8 @@ Partial Class Truck
         Me.DataSet_View = New RadControlsWinFormsApp1.DataSet_View()
         Me.GridViewTemplate2 = New Telerik.WinControls.UI.GridViewTemplate()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.TTRUCKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
         Me.Btfirst = New System.Windows.Forms.ToolStripButton()
         Me.Btprevious = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -80,11 +82,12 @@ Partial Class Truck
         Me.RadLabel29 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel28 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.VE_CAPA = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBox2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.TRuckType = New Telerik.WinControls.UI.RadDropDownList()
+        Me.TTRUCKTYPEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.VE_CAPA = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
         Me.VE_COMNUM = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
@@ -96,6 +99,7 @@ Partial Class Truck
         Me.VE_ARMTOP = New System.Windows.Forms.RadioButton()
         Me.GCompartment = New System.Windows.Forms.GroupBox()
         Me.DataComp = New Telerik.WinControls.UI.RadGridView()
+        Me.TTRUCKCOMPARTMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
         Me.Condition_VALID_TO = New Telerik.WinControls.UI.RadDateTimePicker()
@@ -115,6 +119,7 @@ Partial Class Truck
         Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel24 = New Telerik.WinControls.UI.RadLabel()
         Me.Ve_tran1 = New Telerik.WinControls.UI.RadMultiColumnComboBox()
+        Me.TCOMPANYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.U_REMARK = New System.Windows.Forms.RichTextBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
@@ -154,11 +159,6 @@ Partial Class Truck
         Me.RadPanel5 = New Telerik.WinControls.UI.RadPanel()
         Me.Windows8Theme1 = New Telerik.WinControls.Themes.Windows8Theme()
         Me.V_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
-        Me.TTRUCKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet_Table = New RadControlsWinFormsApp1.DataSet_Table()
-        Me.TTRUCKTYPEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TTRUCKCOMPARTMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TCOMPANYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.T_TRUCKTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKTableAdapter()
         Me.T_TRUCKCOMPARTMENTTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_TRUCKCOMPARTMENTTableAdapter()
         Me.T_COMPANYTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_COMPANYTableAdapter()
@@ -173,6 +173,8 @@ Partial Class Truck
         CType(Me.GridViewTemplate2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
+        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel3.SuspendLayout()
         CType(Me.G_SUM, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,11 +186,12 @@ Partial Class Truck
         CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox3.SuspendLayout()
+        CType(Me.VE_CAPA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TRuckType, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VE_CAPA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VE_COMNUM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,6 +202,7 @@ Partial Class Truck
         Me.GCompartment.SuspendLayout()
         CType(Me.DataComp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataComp.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox2.SuspendLayout()
         CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,6 +226,7 @@ Partial Class Truck
         CType(Me.Ve_tran1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ve_tran1.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ve_tran1.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,11 +258,6 @@ Partial Class Truck
         CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel5.SuspendLayout()
-        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -270,7 +270,7 @@ Partial Class Truck
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadPanel1.Location = New System.Drawing.Point(0, 0)
         Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(597, 817)
+        Me.RadPanel1.Size = New System.Drawing.Size(704, 817)
         Me.RadPanel1.TabIndex = 11
         '
         'RadButton3
@@ -318,23 +318,23 @@ Partial Class Truck
         GridViewDecimalColumn1.MinWidth = 80
         GridViewDecimalColumn1.Name = "column1"
         GridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewDecimalColumn1.Width = 87
+        GridViewDecimalColumn1.Width = 122
         GridViewTextBoxColumn1.EnableExpressionEditor = False
         GridViewTextBoxColumn1.FieldName = "TRUCK_NUMBER"
         GridViewTextBoxColumn1.HeaderText = "Register No."
         GridViewTextBoxColumn1.MinWidth = 75
         GridViewTextBoxColumn1.Name = "column2"
-        GridViewTextBoxColumn1.Width = 88
+        GridViewTextBoxColumn1.Width = 114
         GridViewTextBoxColumn2.FieldName = "TRUCK_COMPANY"
         GridViewTextBoxColumn2.HeaderText = "Company"
         GridViewTextBoxColumn2.Name = "column6"
-        GridViewTextBoxColumn2.Width = 119
+        GridViewTextBoxColumn2.Width = 55
         GridViewTextBoxColumn3.EnableExpressionEditor = False
         GridViewTextBoxColumn3.FieldName = "TRUCK_LOADTYPE"
         GridViewTextBoxColumn3.HeaderText = "Loading Type"
         GridViewTextBoxColumn3.MinWidth = 100
         GridViewTextBoxColumn3.Name = "column3"
-        GridViewTextBoxColumn3.Width = 108
+        GridViewTextBoxColumn3.Width = 152
         GridViewDecimalColumn2.DataType = GetType(Double)
         GridViewDecimalColumn2.DecimalPlaces = 0
         GridViewDecimalColumn2.EnableExpressionEditor = False
@@ -342,13 +342,13 @@ Partial Class Truck
         GridViewDecimalColumn2.HeaderText = "Capacity"
         GridViewDecimalColumn2.MinWidth = 80
         GridViewDecimalColumn2.Name = "column4"
-        GridViewDecimalColumn2.Width = 87
+        GridViewDecimalColumn2.Width = 122
         GridViewTextBoxColumn4.EnableExpressionEditor = False
         GridViewTextBoxColumn4.FieldName = "TRUCK_BLACK_LIST"
         GridViewTextBoxColumn4.HeaderText = "Black List"
         GridViewTextBoxColumn4.MinWidth = 80
         GridViewTextBoxColumn4.Name = "column5"
-        GridViewTextBoxColumn4.Width = 86
+        GridViewTextBoxColumn4.Width = 120
         Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn1, GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewDecimalColumn2, GridViewTextBoxColumn4})
         Me.MasterGrid.MasterTemplate.DataSource = Me.VTRUCKBindingSource
         Me.MasterGrid.MasterTemplate.EnableFiltering = True
@@ -358,7 +358,7 @@ Partial Class Truck
         Me.MasterGrid.Name = "MasterGrid"
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.MasterGrid.Size = New System.Drawing.Size(597, 714)
+        Me.MasterGrid.Size = New System.Drawing.Size(704, 714)
         Me.MasterGrid.TabIndex = 43
         Me.MasterGrid.ThemeName = "Office2010Blue"
         '
@@ -392,9 +392,19 @@ Partial Class Truck
         Me.BindingNavigator1.MovePreviousItem = Me.Btprevious
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(597, 39)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(704, 39)
         Me.BindingNavigator1.TabIndex = 44
         Me.BindingNavigator1.Text = "BindingNavigator1"
+        '
+        'TTRUCKBindingSource
+        '
+        Me.TTRUCKBindingSource.DataMember = "T_TRUCK"
+        Me.TTRUCKBindingSource.DataSource = Me.DataSet_Table
+        '
+        'DataSet_Table
+        '
+        Me.DataSet_Table.DataSetName = "DataSet_Table"
+        Me.DataSet_Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Btfirst
         '
@@ -423,7 +433,6 @@ Partial Class Truck
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -502,18 +511,17 @@ Partial Class Truck
         Me.RadPanel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.RadPanel3.Location = New System.Drawing.Point(0, 753)
         Me.RadPanel3.Name = "RadPanel3"
-        Me.RadPanel3.Size = New System.Drawing.Size(597, 64)
+        Me.RadPanel3.Size = New System.Drawing.Size(704, 64)
         Me.RadPanel3.TabIndex = 42
         '
         'G_SUM
         '
         Me.G_SUM.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.G_SUM.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.G_SUM.Location = New System.Drawing.Point(474, 20)
+        Me.G_SUM.Location = New System.Drawing.Point(-614, 20)
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(106, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.G_SUM.ThemeName = "Windows8"
         '
@@ -522,7 +530,7 @@ Partial Class Truck
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(369, 22)
+        Me.Label3.Location = New System.Drawing.Point(-719, 22)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 21)
         Me.Label3.TabIndex = 36
@@ -536,7 +544,7 @@ Partial Class Truck
         Me.RadPageView1.Location = New System.Drawing.Point(3, 18)
         Me.RadPageView1.Name = "RadPageView1"
         Me.RadPageView1.SelectedPage = Me.RadPageViewPage1
-        Me.RadPageView1.Size = New System.Drawing.Size(1189, 735)
+        Me.RadPageView1.Size = New System.Drawing.Size(866, 735)
         Me.RadPageView1.TabIndex = 0
         Me.RadPageView1.ThemeName = "Office2010Blue"
         CType(Me.RadPageView1.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -546,10 +554,10 @@ Partial Class Truck
         Me.RadPageViewPage1.AutoSize = True
         Me.RadPageViewPage1.Controls.Add(Me.DetailGroup)
         Me.RadPageViewPage1.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(62.0!, 29.0!)
-        Me.RadPageViewPage1.Location = New System.Drawing.Point(12, 39)
+        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(62.0!, 30.0!)
+        Me.RadPageViewPage1.Location = New System.Drawing.Point(12, 40)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(1165, 684)
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(842, 683)
         Me.RadPageViewPage1.Text = "พาหนะ"
         '
         'DetailGroup
@@ -589,16 +597,16 @@ Partial Class Truck
         Me.DetailGroup.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.DetailGroup.Location = New System.Drawing.Point(0, 0)
         Me.DetailGroup.Name = "DetailGroup"
-        Me.DetailGroup.Size = New System.Drawing.Size(1165, 684)
+        Me.DetailGroup.Size = New System.Drawing.Size(842, 683)
         Me.DetailGroup.TabIndex = 13
-        Me.DetailGroup.TabStop = True
+        Me.DetailGroup.TabStop = False
         '
         'RadLabel29
         '
         Me.RadLabel29.BackColor = System.Drawing.Color.Transparent
         Me.RadLabel29.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadLabel29.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
-        Me.RadLabel29.Location = New System.Drawing.Point(359, 194)
+        Me.RadLabel29.Location = New System.Drawing.Point(361, 194)
         Me.RadLabel29.Name = "RadLabel29"
         Me.RadLabel29.Size = New System.Drawing.Size(25, 21)
         Me.RadLabel29.TabIndex = 302
@@ -611,7 +619,7 @@ Partial Class Truck
         Me.RadLabel28.BackColor = System.Drawing.Color.Transparent
         Me.RadLabel28.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadLabel28.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
-        Me.RadLabel28.Location = New System.Drawing.Point(359, 160)
+        Me.RadLabel28.Location = New System.Drawing.Point(361, 160)
         Me.RadLabel28.Name = "RadLabel28"
         Me.RadLabel28.Size = New System.Drawing.Size(25, 21)
         Me.RadLabel28.TabIndex = 301
@@ -622,11 +630,11 @@ Partial Class Truck
         'RadGroupBox3
         '
         Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox3.Controls.Add(Me.VE_CAPA)
         Me.RadGroupBox3.Controls.Add(Me.RadTextBox2)
         Me.RadGroupBox3.Controls.Add(Me.RadLabel1)
         Me.RadGroupBox3.Controls.Add(Me.TRuckType)
         Me.RadGroupBox3.Controls.Add(Me.RadLabel8)
-        Me.RadGroupBox3.Controls.Add(Me.VE_CAPA)
         Me.RadGroupBox3.Controls.Add(Me.RadLabel16)
         Me.RadGroupBox3.Controls.Add(Me.VE_COMNUM)
         Me.RadGroupBox3.Controls.Add(Me.RadLabel15)
@@ -636,12 +644,22 @@ Partial Class Truck
         Me.RadGroupBox3.Controls.Add(Me.GroupBox4)
         Me.RadGroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadGroupBox3.HeaderText = "Compartment"
-        Me.RadGroupBox3.Location = New System.Drawing.Point(399, 356)
+        Me.RadGroupBox3.Location = New System.Drawing.Point(417, 356)
         Me.RadGroupBox3.Name = "RadGroupBox3"
-        Me.RadGroupBox3.Size = New System.Drawing.Size(430, 285)
+        Me.RadGroupBox3.Size = New System.Drawing.Size(430, 278)
         Me.RadGroupBox3.TabIndex = 131
         Me.RadGroupBox3.Text = "Compartment"
         Me.RadGroupBox3.ThemeName = "Breeze"
+        '
+        'VE_CAPA
+        '
+        Me.VE_CAPA.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TTRUCKBindingSource, "TRUCK_CAPASITY", True))
+        Me.VE_CAPA.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VE_CAPA.Location = New System.Drawing.Point(153, 149)
+        Me.VE_CAPA.Name = "VE_CAPA"
+        Me.VE_CAPA.Size = New System.Drawing.Size(235, 23)
+        Me.VE_CAPA.TabIndex = 156
+        Me.VE_CAPA.ThemeName = "Windows8"
         '
         'RadTextBox2
         '
@@ -682,6 +700,11 @@ Partial Class Truck
         Me.TRuckType.ThemeName = "Windows8"
         Me.TRuckType.ValueMember = "ID"
         '
+        'TTRUCKTYPEBindingSource
+        '
+        Me.TTRUCKTYPEBindingSource.DataMember = "T_TRUCKTYPE"
+        Me.TTRUCKTYPEBindingSource.DataSource = Me.DataSet_Table
+        '
         'RadLabel8
         '
         Me.RadLabel8.BackColor = System.Drawing.Color.Transparent
@@ -694,21 +717,6 @@ Partial Class Truck
         Me.RadLabel8.Text = "Truck Type :"
         Me.RadLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel8.TextWrap = False
-        '
-        'VE_CAPA
-        '
-        Me.VE_CAPA.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TTRUCKBindingSource, "TRUCK_CAPASITY", True))
-        Me.VE_CAPA.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VE_CAPA.Location = New System.Drawing.Point(153, 149)
-        Me.VE_CAPA.Name = "VE_CAPA"
-        Me.VE_CAPA.ReadOnly = True
-        Me.VE_CAPA.Size = New System.Drawing.Size(235, 23)
-        Me.VE_CAPA.TabIndex = 19
-        Me.VE_CAPA.TabStop = True
-        Me.VE_CAPA.ThemeName = "Windows8"
-        CType(Me.VE_CAPA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        CType(Me.VE_CAPA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        CType(Me.VE_CAPA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'RadLabel16
         '
@@ -769,7 +777,6 @@ Partial Class Truck
         Me.RadTextBox1.ReadOnly = True
         Me.RadTextBox1.Size = New System.Drawing.Size(235, 23)
         Me.RadTextBox1.TabIndex = 16
-        Me.RadTextBox1.TabStop = True
         Me.RadTextBox1.ThemeName = "Windows8"
         CType(Me.RadTextBox1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.RadTextBox1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -797,7 +804,7 @@ Partial Class Truck
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(235, 74)
         Me.GroupBox4.TabIndex = 0
-        Me.GroupBox4.TabStop = True
+        Me.GroupBox4.TabStop = False
         Me.GroupBox4.Tag = ""
         '
         'VE_ARMBOTH
@@ -829,14 +836,14 @@ Partial Class Truck
         'GCompartment
         '
         Me.GCompartment.Controls.Add(Me.DataComp)
-        Me.GCompartment.Dock = System.Windows.Forms.DockStyle.Right
         Me.GCompartment.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.GCompartment.Location = New System.Drawing.Point(844, 18)
+        Me.GCompartment.Location = New System.Drawing.Point(88, 550)
         Me.GCompartment.Name = "GCompartment"
-        Me.GCompartment.Size = New System.Drawing.Size(318, 663)
+        Me.GCompartment.Size = New System.Drawing.Size(156, 112)
         Me.GCompartment.TabIndex = 127
-        Me.GCompartment.TabStop = True
+        Me.GCompartment.TabStop = False
         Me.GCompartment.Text = "Compartment"
+        Me.GCompartment.Visible = False
         '
         'DataComp
         '
@@ -866,7 +873,6 @@ Partial Class Truck
         GridViewTextBoxColumn5.Name = "t_truckcompno"
         GridViewTextBoxColumn5.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
         GridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn5.Width = 87
         GridViewTextBoxColumn6.DataType = GetType(Decimal)
         GridViewTextBoxColumn6.EnableExpressionEditor = False
         GridViewTextBoxColumn6.FieldName = "t_truckcompcap"
@@ -874,7 +880,7 @@ Partial Class Truck
         GridViewTextBoxColumn6.MinWidth = 100
         GridViewTextBoxColumn6.Name = "t_truckcompcap"
         GridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn6.Width = 109
+        GridViewTextBoxColumn6.Width = 100
         GridViewTextBoxColumn7.DataType = GetType(Decimal)
         GridViewTextBoxColumn7.EnableExpressionEditor = False
         GridViewTextBoxColumn7.FieldName = "t_truckcompcap_l"
@@ -882,7 +888,7 @@ Partial Class Truck
         GridViewTextBoxColumn7.MinWidth = 100
         GridViewTextBoxColumn7.Name = "t_truckcompcap_l"
         GridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn7.Width = 114
+        GridViewTextBoxColumn7.Width = 100
         GridViewTextBoxColumn8.DataType = GetType(Decimal)
         GridViewTextBoxColumn8.EnableExpressionEditor = False
         GridViewTextBoxColumn8.FieldName = "T_TRUCKID"
@@ -905,9 +911,14 @@ Partial Class Truck
         Me.DataComp.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.DataComp.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.DataComp.ShowGroupPanel = False
-        Me.DataComp.Size = New System.Drawing.Size(312, 639)
+        Me.DataComp.Size = New System.Drawing.Size(150, 88)
         Me.DataComp.TabIndex = 0
         Me.DataComp.ThemeName = "Office2010Blue"
+        '
+        'TTRUCKCOMPARTMENTBindingSource
+        '
+        Me.TTRUCKCOMPARTMENTBindingSource.DataMember = "T_TRUCKCOMPARTMENT"
+        Me.TTRUCKCOMPARTMENTBindingSource.DataSource = Me.DataSet_Table
         '
         'RadGroupBox2
         '
@@ -918,7 +929,7 @@ Partial Class Truck
         Me.RadGroupBox2.Controls.Add(Me.Condition_VALID_FORM)
         Me.RadGroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadGroupBox2.HeaderText = "Vehicle Inspection"
-        Me.RadGroupBox2.Location = New System.Drawing.Point(399, 228)
+        Me.RadGroupBox2.Location = New System.Drawing.Point(417, 228)
         Me.RadGroupBox2.Name = "RadGroupBox2"
         Me.RadGroupBox2.Size = New System.Drawing.Size(430, 122)
         Me.RadGroupBox2.TabIndex = 126
@@ -949,7 +960,7 @@ Partial Class Truck
         Me.Condition_VALID_TO.Name = "Condition_VALID_TO"
         Me.Condition_VALID_TO.Size = New System.Drawing.Size(235, 23)
         Me.Condition_VALID_TO.TabIndex = 15
-        Me.Condition_VALID_TO.TabStop = True
+        Me.Condition_VALID_TO.TabStop = False
         Me.Condition_VALID_TO.Text = "25/01/2021"
         Me.Condition_VALID_TO.ThemeName = "Windows8"
         Me.Condition_VALID_TO.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -978,7 +989,7 @@ Partial Class Truck
         Me.Condition_VALID_FORM.Name = "Condition_VALID_FORM"
         Me.Condition_VALID_FORM.Size = New System.Drawing.Size(235, 23)
         Me.Condition_VALID_FORM.TabIndex = 14
-        Me.Condition_VALID_FORM.TabStop = True
+        Me.Condition_VALID_FORM.TabStop = False
         Me.Condition_VALID_FORM.Text = "25/01/2021"
         Me.Condition_VALID_FORM.ThemeName = "Windows8"
         Me.Condition_VALID_FORM.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1042,7 +1053,7 @@ Partial Class Truck
         Me.RadGroupBox1.Controls.Add(Me.RadLabel24)
         Me.RadGroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.RadGroupBox1.HeaderText = "Insurance"
-        Me.RadGroupBox1.Location = New System.Drawing.Point(399, 13)
+        Me.RadGroupBox1.Location = New System.Drawing.Point(417, 13)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         Me.RadGroupBox1.Size = New System.Drawing.Size(430, 202)
         Me.RadGroupBox1.TabIndex = 101
@@ -1073,7 +1084,7 @@ Partial Class Truck
         Me.INSURANCE_VALID_TO.Name = "INSURANCE_VALID_TO"
         Me.INSURANCE_VALID_TO.Size = New System.Drawing.Size(235, 23)
         Me.INSURANCE_VALID_TO.TabIndex = 13
-        Me.INSURANCE_VALID_TO.TabStop = True
+        Me.INSURANCE_VALID_TO.TabStop = False
         Me.INSURANCE_VALID_TO.Text = "25/01/2021"
         Me.INSURANCE_VALID_TO.ThemeName = "Windows8"
         Me.INSURANCE_VALID_TO.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1102,7 +1113,7 @@ Partial Class Truck
         Me.INSURANCE_VALID_FORM.Name = "INSURANCE_VALID_FORM"
         Me.INSURANCE_VALID_FORM.Size = New System.Drawing.Size(235, 23)
         Me.INSURANCE_VALID_FORM.TabIndex = 12
-        Me.INSURANCE_VALID_FORM.TabStop = True
+        Me.INSURANCE_VALID_FORM.TabStop = False
         Me.INSURANCE_VALID_FORM.Text = "25/01/2021"
         Me.INSURANCE_VALID_FORM.ThemeName = "Windows8"
         Me.INSURANCE_VALID_FORM.Value = New Date(2021, 1, 25, 0, 0, 0, 0)
@@ -1219,9 +1230,14 @@ Partial Class Truck
         Me.Ve_tran1.Name = "Ve_tran1"
         Me.Ve_tran1.Size = New System.Drawing.Size(235, 23)
         Me.Ve_tran1.TabIndex = 2
-        Me.Ve_tran1.TabStop = True
+        Me.Ve_tran1.TabStop = False
         Me.Ve_tran1.ThemeName = "Windows8"
         Me.Ve_tran1.ValueMember = "COMPANY_ID"
+        '
+        'TCOMPANYBindingSource
+        '
+        Me.TCOMPANYBindingSource.DataMember = "T_COMPANY"
+        Me.TCOMPANYBindingSource.DataSource = Me.DataSet_Table
         '
         'RadLabel13
         '
@@ -1284,7 +1300,7 @@ Partial Class Truck
         Me.VE_EXPIREDATE.Name = "VE_EXPIREDATE"
         Me.VE_EXPIREDATE.Size = New System.Drawing.Size(235, 23)
         Me.VE_EXPIREDATE.TabIndex = 8
-        Me.VE_EXPIREDATE.TabStop = True
+        Me.VE_EXPIREDATE.TabStop = False
         Me.VE_EXPIREDATE.Text = "25/01/2021"
         Me.VE_EXPIREDATE.ThemeName = "Windows8"
         Me.VE_EXPIREDATE.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1314,7 +1330,7 @@ Partial Class Truck
         Me.VE_ISSUEDATE.Name = "VE_ISSUEDATE"
         Me.VE_ISSUEDATE.Size = New System.Drawing.Size(235, 23)
         Me.VE_ISSUEDATE.TabIndex = 7
-        Me.VE_ISSUEDATE.TabStop = True
+        Me.VE_ISSUEDATE.TabStop = False
         Me.VE_ISSUEDATE.Text = "25/01/2021"
         Me.VE_ISSUEDATE.ThemeName = "Windows8"
         Me.VE_ISSUEDATE.Value = New Date(2021, 1, 25, 18, 19, 2, 0)
@@ -1342,7 +1358,6 @@ Partial Class Truck
         Me.T_UPDATEBY.ReadOnly = True
         Me.T_UPDATEBY.Size = New System.Drawing.Size(235, 23)
         Me.T_UPDATEBY.TabIndex = 0
-        Me.T_UPDATEBY.TabStop = True
         Me.T_UPDATEBY.ThemeName = "Windows8"
         CType(Me.T_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.T_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1357,7 +1372,6 @@ Partial Class Truck
         Me.T_ID.ReadOnly = True
         Me.T_ID.Size = New System.Drawing.Size(235, 23)
         Me.T_ID.TabIndex = 0
-        Me.T_ID.TabStop = True
         Me.T_ID.ThemeName = "Windows8"
         CType(Me.T_ID.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.T_ID.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1372,7 +1386,6 @@ Partial Class Truck
         Me.T_UPDATE.ReadOnly = True
         Me.T_UPDATE.Size = New System.Drawing.Size(235, 23)
         Me.T_UPDATE.TabIndex = 0
-        Me.T_UPDATE.TabStop = True
         Me.T_UPDATE.ThemeName = "Windows8"
         CType(Me.T_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.T_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -1470,7 +1483,7 @@ Partial Class Truck
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(235, 50)
         Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = True
+        Me.GroupBox1.TabStop = False
         Me.GroupBox1.Tag = ""
         '
         'VE_BACKNO
@@ -1505,11 +1518,11 @@ Partial Class Truck
         Me.GroupBox2.Controls.Add(Me.RadPageView1)
         Me.GroupBox2.Controls.Add(Me.RadPanel4)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupBox2.Location = New System.Drawing.Point(597, 0)
+        Me.GroupBox2.Location = New System.Drawing.Point(704, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1195, 817)
+        Me.GroupBox2.Size = New System.Drawing.Size(872, 817)
         Me.GroupBox2.TabIndex = 17
-        Me.GroupBox2.TabStop = True
+        Me.GroupBox2.TabStop = False
         '
         'Label7
         '
@@ -1517,7 +1530,7 @@ Partial Class Truck
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
         Me.Label7.Location = New System.Drawing.Point(3, 18)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(1189, 37)
+        Me.Label7.Size = New System.Drawing.Size(866, 37)
         Me.Label7.TabIndex = 132
         Me.Label7.Text = "Database System>>Truck"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1529,19 +1542,18 @@ Partial Class Truck
         Me.RadPanel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.RadPanel4.Location = New System.Drawing.Point(3, 753)
         Me.RadPanel4.Name = "RadPanel4"
-        Me.RadPanel4.Size = New System.Drawing.Size(1189, 61)
+        Me.RadPanel4.Size = New System.Drawing.Size(866, 61)
         Me.RadPanel4.TabIndex = 15
         '
         'Bsave
         '
         Me.Bsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.ForeColor = System.Drawing.Color.White
         Me.Bsave.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
         Me.Bsave.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Bsave.Location = New System.Drawing.Point(904, 6)
+        Me.Bsave.Location = New System.Drawing.Point(581, 6)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(128, 50)
         Me.Bsave.TabIndex = 0
@@ -1557,12 +1569,11 @@ Partial Class Truck
         'BCancel
         '
         Me.BCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
         Me.BCancel.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BCancel.Location = New System.Drawing.Point(1046, 6)
+        Me.BCancel.Location = New System.Drawing.Point(723, 6)
         Me.BCancel.Name = "BCancel"
         Me.BCancel.Size = New System.Drawing.Size(128, 50)
         Me.BCancel.TabIndex = 1
@@ -1710,31 +1721,6 @@ Partial Class Truck
         '
         Me.V_TRUCKTableAdapter.ClearBeforeFill = True
         '
-        'TTRUCKBindingSource
-        '
-        Me.TTRUCKBindingSource.DataMember = "T_TRUCK"
-        Me.TTRUCKBindingSource.DataSource = Me.DataSet_Table
-        '
-        'DataSet_Table
-        '
-        Me.DataSet_Table.DataSetName = "DataSet_Table"
-        Me.DataSet_Table.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TTRUCKTYPEBindingSource
-        '
-        Me.TTRUCKTYPEBindingSource.DataMember = "T_TRUCKTYPE"
-        Me.TTRUCKTYPEBindingSource.DataSource = Me.DataSet_Table
-        '
-        'TTRUCKCOMPARTMENTBindingSource
-        '
-        Me.TTRUCKCOMPARTMENTBindingSource.DataMember = "T_TRUCKCOMPARTMENT"
-        Me.TTRUCKCOMPARTMENTBindingSource.DataSource = Me.DataSet_Table
-        '
-        'TCOMPANYBindingSource
-        '
-        Me.TCOMPANYBindingSource.DataMember = "T_COMPANY"
-        Me.TCOMPANYBindingSource.DataSource = Me.DataSet_Table
-        '
         'T_TRUCKTableAdapter
         '
         Me.T_TRUCKTableAdapter.ClearBeforeFill = True
@@ -1753,10 +1739,10 @@ Partial Class Truck
         '
         'Truck
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1792, 817)
+        Me.ClientSize = New System.Drawing.Size(1576, 817)
         Me.Controls.Add(Me.RadPanel1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1781,6 +1767,8 @@ Partial Class Truck
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
+        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel3.ResumeLayout(False)
         Me.RadPanel3.PerformLayout()
@@ -1796,11 +1784,12 @@ Partial Class Truck
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox3.ResumeLayout(False)
         Me.RadGroupBox3.PerformLayout()
+        CType(Me.VE_CAPA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TRuckType, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VE_CAPA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VE_COMNUM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1812,6 +1801,7 @@ Partial Class Truck
         Me.GCompartment.ResumeLayout(False)
         CType(Me.DataComp.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataComp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox2.ResumeLayout(False)
         Me.RadGroupBox2.PerformLayout()
@@ -1837,6 +1827,7 @@ Partial Class Truck
         CType(Me.Ve_tran1.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ve_tran1.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ve_tran1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1870,11 +1861,6 @@ Partial Class Truck
         CType(Me.RadPanel5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel5.ResumeLayout(False)
         Me.RadPanel5.PerformLayout()
-        CType(Me.TTRUCKBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet_Table, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TTRUCKTYPEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TTRUCKCOMPARTMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TCOMPANYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1993,7 +1979,6 @@ Partial Class Truck
     Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents TRuckType As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents VE_CAPA As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel16 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents VE_COMNUM As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel15 As Telerik.WinControls.UI.RadLabel
@@ -2021,5 +2006,6 @@ Partial Class Truck
     Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadTextBox2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents VE_CAPA As Telerik.WinControls.UI.RadTextBox
 End Class
 
