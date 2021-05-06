@@ -29,7 +29,7 @@ Public Class Login
             Dim isPassExpire As Integer = 0
 
             If dt.Rows.Count > 0 Then
-                dt_user = cls.Query("SELECT * FROM T_USER WHERE U_NAME='" & dt(0)("U_NAME") & "'")
+                dt_user = cls.Query("SELECT DATEDIFF(day,getdate() , U_PASSWD_DATE) as U_PASSWD_DATE_count,* FROM T_USER WHERE U_NAME='" & dt(0)("U_NAME") & "'")
 
                 'Check expire user
                 If dt_user(0)("U_EXPIRE").ToString = "1" Then
@@ -39,7 +39,9 @@ Public Class Login
                     End If
                 End If
                 'Check password expire
-                isPassExpire = DateDiff(DateInterval.Day, dt_user(0)("U_PASSWD_DATE"), Now)
+
+                'isPassExpire = DateDiff(DateInterval.Day, dt_user(0)("U_PASSWD_DATE_count"), Now)
+                isPassExpire = dt_user(0)("U_PASSWD_DATE_count")
 
                 Dim tmp As String = dt(0)("U_NAME").ToString
                 Dim ftmp As String = tmp.Substring(0, 1).ToUpper
