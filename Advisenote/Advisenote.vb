@@ -56,7 +56,7 @@ Public Class Advisenote
         AddDoc = False
 
         'My.Application.ChangeCulture("en-GB")
-        'My.Application.ChangeCulture("th-TH")
+        'My.Application.ChangeCulture("en-GB")
 
 
         RadPageView1.SelectedPage = RadPageViewPage1

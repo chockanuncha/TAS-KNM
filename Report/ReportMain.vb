@@ -31,12 +31,7 @@ Public Class Reportmain
         ReportDayBetween.ShowDialog()
     End Sub
 
-    Private Sub RadButton12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadButton12.Click
-        Report_Type = "Statics"
-        Me.AddOwnedForm(ReportSeal)
-        ReportSeal.ShowDialog()
-        ReportSeal.Text = "รายงานสถิติน้ำมันใส"
-    End Sub
+
 
     Private Sub RadButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadButton4.Click
         Header_name = RadButton4.Text
@@ -68,6 +63,13 @@ Public Class Reportmain
     Private Sub RadButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadButton2.Click
         Header_name = RadButton23.Text
         Report_Type = "Event"
+        Me.AddOwnedForm(ReportDayBetween)
+        ReportDayBetween.ShowDialog()
+    End Sub
+
+    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
+        Header_name = RadButton4.Text
+        Report_Type = "Manual"
         Me.AddOwnedForm(ReportDayBetween)
         ReportDayBetween.ShowDialog()
     End Sub

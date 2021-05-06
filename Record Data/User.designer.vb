@@ -368,7 +368,6 @@ Partial Public Class USER
         Me.G_SUM.Name = "G_SUM"
         Me.G_SUM.Size = New System.Drawing.Size(85, 25)
         Me.G_SUM.TabIndex = 39
-        Me.G_SUM.TabStop = True
         Me.G_SUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -398,7 +397,6 @@ Partial Public Class USER
         Me.DetailGroup.Name = "DetailGroup"
         Me.DetailGroup.Size = New System.Drawing.Size(552, 777)
         Me.DetailGroup.TabIndex = 5
-        Me.DetailGroup.TabStop = True
         '
         'RadGroupBox5
         '
@@ -430,7 +428,6 @@ Partial Public Class USER
         Me.RadDateTimePicker1.Name = "RadDateTimePicker1"
         Me.RadDateTimePicker1.Size = New System.Drawing.Size(300, 32)
         Me.RadDateTimePicker1.TabIndex = 73
-        Me.RadDateTimePicker1.TabStop = True
         Me.RadDateTimePicker1.Text = "01/04/2563"
         Me.RadDateTimePicker1.ThemeName = "Breeze"
         Me.RadDateTimePicker1.Value = New Date(2020, 4, 1, 11, 23, 38, 842)
@@ -475,7 +472,6 @@ Partial Public Class USER
         Me.U_UPDATE.ReadOnly = True
         Me.U_UPDATE.Size = New System.Drawing.Size(300, 27)
         Me.U_UPDATE.TabIndex = 68
-        Me.U_UPDATE.TabStop = True
         Me.U_UPDATE.ThemeName = "Windows8"
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATE.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -510,7 +506,6 @@ Partial Public Class USER
         Me.U_UPDATEBY.ReadOnly = True
         Me.U_UPDATEBY.Size = New System.Drawing.Size(300, 27)
         Me.U_UPDATEBY.TabIndex = 69
-        Me.U_UPDATEBY.TabStop = True
         Me.U_UPDATEBY.ThemeName = "Windows8"
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         CType(Me.U_UPDATEBY.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -535,6 +530,7 @@ Partial Public Class USER
         '
         'RadDateTimePicker2
         '
+        Me.RadDateTimePicker2.Culture = New System.Globalization.CultureInfo("en-GB")
         Me.RadDateTimePicker2.CustomFormat = "dd/MM/yyyy"
         Me.RadDateTimePicker2.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TUSERBindingSource, "U_PASSWD_DATE", True))
         Me.RadDateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
@@ -543,8 +539,7 @@ Partial Public Class USER
         Me.RadDateTimePicker2.Name = "RadDateTimePicker2"
         Me.RadDateTimePicker2.Size = New System.Drawing.Size(300, 32)
         Me.RadDateTimePicker2.TabIndex = 74
-        Me.RadDateTimePicker2.TabStop = True
-        Me.RadDateTimePicker2.Text = "01/04/2563"
+        Me.RadDateTimePicker2.Text = "01/04/2020"
         Me.RadDateTimePicker2.ThemeName = "Breeze"
         Me.RadDateTimePicker2.Value = New Date(2020, 4, 1, 11, 23, 38, 842)
         '
@@ -776,7 +771,6 @@ Partial Public Class USER
         '
         'Bsave
         '
-        'Me.BSAVE.BackColor = System.Drawing.Color.Transparent
         Me.Bsave.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Bsave.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.ForeColor = System.Drawing.Color.White
@@ -796,9 +790,12 @@ Partial Public Class USER
         CType(Me.Bsave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
         CType(Me.Bsave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Me.RoundRectShape1
         '
+        'RoundRectShape1
+        '
+        Me.RoundRectShape1.IsRightToLeft = False
+        '
         'BCancel
         '
-        'Me.BCANCEL.BackColor = System.Drawing.Color.Transparent
         Me.BCancel.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancel.ForeColor = System.Drawing.Color.White
         Me.BCancel.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.cancel
@@ -831,7 +828,7 @@ Partial Public Class USER
         '
         'USER
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
