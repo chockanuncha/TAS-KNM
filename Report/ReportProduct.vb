@@ -24,7 +24,7 @@ Public Class ReportProduct
             Dim Myreport As New ReportDocument
             Myreport = New ReportDocument
             Dim n_year As Integer = 0
-            If My.Application.Culture.ToString = "th-TH" Then
+            If My.Application.Culture.ToString = "en-GB" Then
                 n_year = 543
             End If
             sql = "Select * from V_Product_total where LDATE ='" & String.Format("{0:yyyy-MM-d}", DateAdd(DateInterval.Year, -n_year, RadCalendar1.SelectedDate)) & "'"
