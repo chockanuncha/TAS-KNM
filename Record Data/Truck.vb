@@ -248,7 +248,7 @@ Public Class Truck
                     q &= "MAX_LOAD_WEIGHT='" & Max_WEIGHT.Text & "', "
                     q &= "Truck_owner= '" & Owner.Text & "',"
                     If VE_ARMTOP.Checked = True Then
-                        q &= "TRUCK_LOADTYPE ='TOP', "
+                        q &= "TRUCK_LOADTYPE ='BOTH', "
                     Else
                         q &= "TRUCK_LOADTYPE ='BOTH', "
                     End If
@@ -436,7 +436,7 @@ Public Class Truck
     Private Sub VE_ARMTOP_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VE_ARMTOP.Click
 
         Try
-            If sender.Checked = True Then TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_LOADTYPE") = "TOP"
+            If sender.Checked = True Then TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_LOADTYPE") = "BOTH"
         Catch ex As Exception
 
         End Try
@@ -553,7 +553,7 @@ Public Class Truck
             If BtEdit.Enabled = False Then TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("update_date") = Now
 
             If UCase(TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_LOADTYPE").ToString()) = "TOP" Then
-                VE_ARMTOP.Checked = True
+                VE_ARMBOTH.Checked = True
             Else
                 VE_ARMBOTH.Checked = True
             End If
@@ -684,7 +684,7 @@ Public Class Truck
             VE_BACKNO.Checked = True
 
             Try
-                TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_LOADTYPE") = "TOP"
+                TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_LOADTYPE") = "BOTH"
                 TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_BLACK_LIST") = "NO"
                 TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_DATE") = Now
                 TTRUCKBindingSource.Item(TTRUCKBindingSource.Position)("TRUCK_TYPE") = "1"

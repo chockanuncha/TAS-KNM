@@ -23,34 +23,35 @@ Partial Class Truck
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewDecimalColumn1 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn2 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewDecimalColumn3 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn15 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn16 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn4 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor3 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Truck))
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor1 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn19 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn20 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn21 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn22 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor4 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim GridViewTextBoxColumn23 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn24 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn25 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn11 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn12 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn13 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn14 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn26 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn27 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn28 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.Office2010BlueTheme1 = New Telerik.WinControls.Themes.Office2010BlueTheme()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
@@ -276,12 +277,13 @@ Partial Class Truck
         'RadButton3
         '
         Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton3.Location = New System.Drawing.Point(476, 6)
+        Me.RadButton3.Location = New System.Drawing.Point(588, 6)
         Me.RadButton3.Name = "RadButton3"
         Me.RadButton3.Size = New System.Drawing.Size(110, 27)
         Me.RadButton3.TabIndex = 45
         Me.RadButton3.Text = "Export to Excel"
         Me.RadButton3.ThemeName = "Breeze"
+        Me.RadButton3.Visible = False
         '
         'MasterGrid
         '
@@ -310,51 +312,57 @@ Partial Class Truck
         Me.MasterGrid.MasterTemplate.AllowRowResize = False
         Me.MasterGrid.MasterTemplate.AutoGenerateColumns = False
         Me.MasterGrid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewDecimalColumn1.DataType = GetType(Double)
-        GridViewDecimalColumn1.DecimalPlaces = 0
-        GridViewDecimalColumn1.EnableExpressionEditor = False
-        GridViewDecimalColumn1.FieldName = "ID"
-        GridViewDecimalColumn1.HeaderText = "Truck No."
-        GridViewDecimalColumn1.MinWidth = 80
-        GridViewDecimalColumn1.Name = "column1"
-        GridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewDecimalColumn1.Width = 122
-        GridViewTextBoxColumn1.EnableExpressionEditor = False
-        GridViewTextBoxColumn1.FieldName = "TRUCK_NUMBER"
-        GridViewTextBoxColumn1.HeaderText = "Register No."
-        GridViewTextBoxColumn1.MinWidth = 75
-        GridViewTextBoxColumn1.Name = "column2"
-        GridViewTextBoxColumn1.Width = 114
-        GridViewTextBoxColumn2.FieldName = "TRUCK_COMPANY"
-        GridViewTextBoxColumn2.HeaderText = "Company"
-        GridViewTextBoxColumn2.Name = "column6"
-        GridViewTextBoxColumn2.Width = 55
-        GridViewTextBoxColumn3.EnableExpressionEditor = False
-        GridViewTextBoxColumn3.FieldName = "TRUCK_LOADTYPE"
-        GridViewTextBoxColumn3.HeaderText = "Loading Type"
-        GridViewTextBoxColumn3.MinWidth = 100
-        GridViewTextBoxColumn3.Name = "column3"
-        GridViewTextBoxColumn3.Width = 152
-        GridViewDecimalColumn2.DataType = GetType(Double)
-        GridViewDecimalColumn2.DecimalPlaces = 0
-        GridViewDecimalColumn2.EnableExpressionEditor = False
-        GridViewDecimalColumn2.FieldName = "TRUCK_CAPASITY"
-        GridViewDecimalColumn2.HeaderText = "Capacity"
-        GridViewDecimalColumn2.MinWidth = 80
-        GridViewDecimalColumn2.Name = "column4"
-        GridViewDecimalColumn2.Width = 122
-        GridViewTextBoxColumn4.EnableExpressionEditor = False
-        GridViewTextBoxColumn4.FieldName = "TRUCK_BLACK_LIST"
-        GridViewTextBoxColumn4.HeaderText = "Black List"
-        GridViewTextBoxColumn4.MinWidth = 80
-        GridViewTextBoxColumn4.Name = "column5"
-        GridViewTextBoxColumn4.Width = 120
-        Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn1, GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewDecimalColumn2, GridViewTextBoxColumn4})
+        GridViewDecimalColumn3.DataType = GetType(Double)
+        GridViewDecimalColumn3.DecimalPlaces = 0
+        GridViewDecimalColumn3.EnableExpressionEditor = False
+        GridViewDecimalColumn3.FieldName = "ID"
+        GridViewDecimalColumn3.HeaderText = "Truck No."
+        GridViewDecimalColumn3.MinWidth = 80
+        GridViewDecimalColumn3.Name = "column1"
+        GridViewDecimalColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewDecimalColumn3.Width = 156
+        GridViewTextBoxColumn15.EnableExpressionEditor = False
+        GridViewTextBoxColumn15.FieldName = "TRUCK_NUMBER"
+        GridViewTextBoxColumn15.HeaderText = "Register No."
+        GridViewTextBoxColumn15.MinWidth = 75
+        GridViewTextBoxColumn15.Name = "column2"
+        GridViewTextBoxColumn15.Width = 147
+        GridViewTextBoxColumn16.EnableExpressionEditor = False
+        GridViewTextBoxColumn16.FieldName = "TRUCK_COMPANY"
+        GridViewTextBoxColumn16.HeaderText = "Company"
+        GridViewTextBoxColumn16.MinWidth = 100
+        GridViewTextBoxColumn16.Name = "column6"
+        GridViewTextBoxColumn16.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn16.Width = 118
+        GridViewTextBoxColumn17.EnableExpressionEditor = False
+        GridViewTextBoxColumn17.FieldName = "TRUCK_LOADTYPE"
+        GridViewTextBoxColumn17.HeaderText = "Loading Type"
+        GridViewTextBoxColumn17.IsVisible = False
+        GridViewTextBoxColumn17.MinWidth = 100
+        GridViewTextBoxColumn17.Name = "column3"
+        GridViewTextBoxColumn17.Width = 165
+        GridViewDecimalColumn4.DataType = GetType(Double)
+        GridViewDecimalColumn4.DecimalPlaces = 0
+        GridViewDecimalColumn4.EnableExpressionEditor = False
+        GridViewDecimalColumn4.FieldName = "TRUCK_CAPASITY"
+        GridViewDecimalColumn4.HeaderText = "Capacity"
+        GridViewDecimalColumn4.MinWidth = 80
+        GridViewDecimalColumn4.Name = "column4"
+        GridViewDecimalColumn4.Width = 156
+        GridViewTextBoxColumn18.EnableExpressionEditor = False
+        GridViewTextBoxColumn18.FieldName = "TRUCK_BLACK_LIST"
+        GridViewTextBoxColumn18.HeaderText = "Black List"
+        GridViewTextBoxColumn18.MinWidth = 80
+        GridViewTextBoxColumn18.Name = "column5"
+        GridViewTextBoxColumn18.Width = 107
+        Me.MasterGrid.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn3, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewDecimalColumn4, GridViewTextBoxColumn18})
         Me.MasterGrid.MasterTemplate.DataSource = Me.VTRUCKBindingSource
         Me.MasterGrid.MasterTemplate.EnableFiltering = True
         Me.MasterGrid.MasterTemplate.ShowRowHeaderColumn = False
+        SortDescriptor3.PropertyName = "column6"
+        Me.MasterGrid.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor3})
         Me.MasterGrid.MasterTemplate.Templates.AddRange(New Telerik.WinControls.UI.GridViewTemplate() {Me.GridViewTemplate2})
-        Me.MasterGrid.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.MasterGrid.MasterTemplate.ViewDefinition = TableViewDefinition7
         Me.MasterGrid.Name = "MasterGrid"
         Me.MasterGrid.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.MasterGrid.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -374,7 +382,7 @@ Partial Class Truck
         '
         'GridViewTemplate2
         '
-        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition1
+        Me.GridViewTemplate2.ViewDefinition = TableViewDefinition6
         '
         'BindingNavigator1
         '
@@ -433,6 +441,7 @@ Partial Class Truck
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -766,6 +775,7 @@ Partial Class Truck
         Me.RadLabel11.Text = "Loading Type :"
         Me.RadLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.RadLabel11.TextWrap = False
+        Me.RadLabel11.Visible = False
         '
         'RadTextBox1
         '
@@ -806,6 +816,7 @@ Partial Class Truck
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Tag = ""
+        Me.GroupBox4.Visible = False
         '
         'VE_ARMBOTH
         '
@@ -865,38 +876,38 @@ Partial Class Truck
         Me.DataComp.MasterTemplate.AllowRowResize = False
         Me.DataComp.MasterTemplate.AutoGenerateColumns = False
         Me.DataComp.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn5.DataType = GetType(Decimal)
-        GridViewTextBoxColumn5.EnableExpressionEditor = False
-        GridViewTextBoxColumn5.FieldName = "t_truckcompno"
-        GridViewTextBoxColumn5.HeaderText = "No."
-        GridViewTextBoxColumn5.MinWidth = 50
-        GridViewTextBoxColumn5.Name = "t_truckcompno"
-        GridViewTextBoxColumn5.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn6.DataType = GetType(Decimal)
-        GridViewTextBoxColumn6.EnableExpressionEditor = False
-        GridViewTextBoxColumn6.FieldName = "t_truckcompcap"
-        GridViewTextBoxColumn6.HeaderText = "Top Load"
-        GridViewTextBoxColumn6.MinWidth = 100
-        GridViewTextBoxColumn6.Name = "t_truckcompcap"
-        GridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn6.Width = 100
-        GridViewTextBoxColumn7.DataType = GetType(Decimal)
-        GridViewTextBoxColumn7.EnableExpressionEditor = False
-        GridViewTextBoxColumn7.FieldName = "t_truckcompcap_l"
-        GridViewTextBoxColumn7.HeaderText = "Bottom Load"
-        GridViewTextBoxColumn7.MinWidth = 100
-        GridViewTextBoxColumn7.Name = "t_truckcompcap_l"
-        GridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn7.Width = 100
-        GridViewTextBoxColumn8.DataType = GetType(Decimal)
-        GridViewTextBoxColumn8.EnableExpressionEditor = False
-        GridViewTextBoxColumn8.FieldName = "T_TRUCKID"
-        GridViewTextBoxColumn8.HeaderText = "T_TRUCKID"
-        GridViewTextBoxColumn8.IsVisible = False
-        GridViewTextBoxColumn8.Name = "T_TRUCKID"
-        GridViewTextBoxColumn8.Width = 43
-        Me.DataComp.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8})
+        GridViewTextBoxColumn19.DataType = GetType(Decimal)
+        GridViewTextBoxColumn19.EnableExpressionEditor = False
+        GridViewTextBoxColumn19.FieldName = "t_truckcompno"
+        GridViewTextBoxColumn19.HeaderText = "No."
+        GridViewTextBoxColumn19.MinWidth = 50
+        GridViewTextBoxColumn19.Name = "t_truckcompno"
+        GridViewTextBoxColumn19.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn20.DataType = GetType(Decimal)
+        GridViewTextBoxColumn20.EnableExpressionEditor = False
+        GridViewTextBoxColumn20.FieldName = "t_truckcompcap"
+        GridViewTextBoxColumn20.HeaderText = "Top Load"
+        GridViewTextBoxColumn20.MinWidth = 100
+        GridViewTextBoxColumn20.Name = "t_truckcompcap"
+        GridViewTextBoxColumn20.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn20.Width = 100
+        GridViewTextBoxColumn21.DataType = GetType(Decimal)
+        GridViewTextBoxColumn21.EnableExpressionEditor = False
+        GridViewTextBoxColumn21.FieldName = "t_truckcompcap_l"
+        GridViewTextBoxColumn21.HeaderText = "Bottom Load"
+        GridViewTextBoxColumn21.MinWidth = 100
+        GridViewTextBoxColumn21.Name = "t_truckcompcap_l"
+        GridViewTextBoxColumn21.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn21.Width = 100
+        GridViewTextBoxColumn22.DataType = GetType(Decimal)
+        GridViewTextBoxColumn22.EnableExpressionEditor = False
+        GridViewTextBoxColumn22.FieldName = "T_TRUCKID"
+        GridViewTextBoxColumn22.HeaderText = "T_TRUCKID"
+        GridViewTextBoxColumn22.IsVisible = False
+        GridViewTextBoxColumn22.Name = "T_TRUCKID"
+        GridViewTextBoxColumn22.Width = 43
+        Me.DataComp.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn19, GridViewTextBoxColumn20, GridViewTextBoxColumn21, GridViewTextBoxColumn22})
         Me.DataComp.MasterTemplate.DataSource = Me.TTRUCKCOMPARTMENTBindingSource
         Me.DataComp.MasterTemplate.EnableGrouping = False
         Me.DataComp.MasterTemplate.EnableSorting = False
@@ -904,9 +915,9 @@ Partial Class Truck
         Me.DataComp.MasterTemplate.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect
         Me.DataComp.MasterTemplate.ShowFilteringRow = False
         Me.DataComp.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor1.PropertyName = "t_truckcompno"
-        Me.DataComp.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor1})
-        Me.DataComp.MasterTemplate.ViewDefinition = TableViewDefinition3
+        SortDescriptor4.PropertyName = "t_truckcompno"
+        Me.DataComp.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor4})
+        Me.DataComp.MasterTemplate.ViewDefinition = TableViewDefinition8
         Me.DataComp.Name = "DataComp"
         Me.DataComp.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.DataComp.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1132,12 +1143,12 @@ Partial Class Truck
         '
         Me.INSURANCE_Type.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TTRUCKBindingSource, "INSURANCE_TYPE", True))
         Me.INSURANCE_Type.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem1.Text = "1"
-        RadListDataItem2.Text = "2"
-        RadListDataItem3.Text = "3"
-        Me.INSURANCE_Type.Items.Add(RadListDataItem1)
-        Me.INSURANCE_Type.Items.Add(RadListDataItem2)
-        Me.INSURANCE_Type.Items.Add(RadListDataItem3)
+        RadListDataItem6.Text = "1"
+        RadListDataItem7.Text = "2"
+        RadListDataItem8.Text = "3"
+        Me.INSURANCE_Type.Items.Add(RadListDataItem6)
+        Me.INSURANCE_Type.Items.Add(RadListDataItem7)
+        Me.INSURANCE_Type.Items.Add(RadListDataItem8)
         Me.INSURANCE_Type.Location = New System.Drawing.Point(153, 79)
         Me.INSURANCE_Type.Name = "INSURANCE_Type"
         Me.INSURANCE_Type.Size = New System.Drawing.Size(235, 23)
@@ -1193,32 +1204,32 @@ Partial Class Truck
         Me.Ve_tran1.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Ve_tran1.EditorControl.MasterTemplate.AutoGenerateColumns = False
         Me.Ve_tran1.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn9.EnableExpressionEditor = False
-        GridViewTextBoxColumn9.FieldName = "COMPANY_NAME"
-        GridViewTextBoxColumn9.HeaderText = "COMPANY_NAME"
-        GridViewTextBoxColumn9.IsAutoGenerated = True
-        GridViewTextBoxColumn9.MinWidth = 200
-        GridViewTextBoxColumn9.Name = "COMPANY_NAME"
-        GridViewTextBoxColumn9.Width = 200
-        GridViewTextBoxColumn10.EnableExpressionEditor = False
-        GridViewTextBoxColumn10.FieldName = "COMPANY_CODE"
-        GridViewTextBoxColumn10.HeaderText = "COMPANY_CODE"
-        GridViewTextBoxColumn10.IsAutoGenerated = True
-        GridViewTextBoxColumn10.MinWidth = 120
-        GridViewTextBoxColumn10.Name = "COMPANY_CODE"
-        GridViewTextBoxColumn10.Width = 120
-        GridViewTextBoxColumn11.DataType = GetType(Decimal)
-        GridViewTextBoxColumn11.EnableExpressionEditor = False
-        GridViewTextBoxColumn11.FieldName = "Company_id"
-        GridViewTextBoxColumn11.HeaderText = "Company_id"
-        GridViewTextBoxColumn11.Name = "Company_id"
-        GridViewTextBoxColumn11.Width = 5
-        Me.Ve_tran1.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11})
+        GridViewTextBoxColumn23.EnableExpressionEditor = False
+        GridViewTextBoxColumn23.FieldName = "COMPANY_NAME"
+        GridViewTextBoxColumn23.HeaderText = "COMPANY_NAME"
+        GridViewTextBoxColumn23.IsAutoGenerated = True
+        GridViewTextBoxColumn23.MinWidth = 200
+        GridViewTextBoxColumn23.Name = "COMPANY_NAME"
+        GridViewTextBoxColumn23.Width = 200
+        GridViewTextBoxColumn24.EnableExpressionEditor = False
+        GridViewTextBoxColumn24.FieldName = "COMPANY_CODE"
+        GridViewTextBoxColumn24.HeaderText = "COMPANY_CODE"
+        GridViewTextBoxColumn24.IsAutoGenerated = True
+        GridViewTextBoxColumn24.MinWidth = 120
+        GridViewTextBoxColumn24.Name = "COMPANY_CODE"
+        GridViewTextBoxColumn24.Width = 120
+        GridViewTextBoxColumn25.DataType = GetType(Decimal)
+        GridViewTextBoxColumn25.EnableExpressionEditor = False
+        GridViewTextBoxColumn25.FieldName = "Company_id"
+        GridViewTextBoxColumn25.HeaderText = "Company_id"
+        GridViewTextBoxColumn25.Name = "Company_id"
+        GridViewTextBoxColumn25.Width = 5
+        Me.Ve_tran1.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn23, GridViewTextBoxColumn24, GridViewTextBoxColumn25})
         Me.Ve_tran1.EditorControl.MasterTemplate.DataSource = Me.TCOMPANYBindingSource
         Me.Ve_tran1.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Ve_tran1.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Ve_tran1.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.Ve_tran1.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.Ve_tran1.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition9
         Me.Ve_tran1.EditorControl.Name = "NestedRadGridView"
         Me.Ve_tran1.EditorControl.ReadOnly = True
         Me.Ve_tran1.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1339,10 +1350,10 @@ Partial Class Truck
         '
         Me.Owner.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TTRUCKBindingSource, "TRUCK_OWNER", True))
         Me.Owner.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem4.Text = "COD"
-        RadListDataItem5.Text = "By Themself"
-        Me.Owner.Items.Add(RadListDataItem4)
-        Me.Owner.Items.Add(RadListDataItem5)
+        RadListDataItem1.Text = "COD"
+        RadListDataItem2.Text = "By Themself"
+        Me.Owner.Items.Add(RadListDataItem1)
+        Me.Owner.Items.Add(RadListDataItem2)
         Me.Owner.Location = New System.Drawing.Point(120, 125)
         Me.Owner.Name = "Owner"
         Me.Owner.Size = New System.Drawing.Size(235, 23)
@@ -1633,34 +1644,34 @@ Partial Class Truck
         Me.RadGridView1.AllowColumnReorder = False
         Me.RadGridView1.AutoGenerateColumns = False
         Me.RadGridView1.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn12.DataType = GetType(Double)
-        GridViewTextBoxColumn12.EnableExpressionEditor = False
-        GridViewTextBoxColumn12.FieldName = "Truck_comp"
-        GridViewTextBoxColumn12.HeaderText = "ช่องเติมที่"
-        GridViewTextBoxColumn12.MinWidth = 100
-        GridViewTextBoxColumn12.Name = "t_truckcompno"
-        GridViewTextBoxColumn12.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn12.Width = 151
-        GridViewTextBoxColumn13.DataType = GetType(Double)
-        GridViewTextBoxColumn13.EnableExpressionEditor = False
-        GridViewTextBoxColumn13.FieldName = "Capasity"
-        GridViewTextBoxColumn13.HeaderText = "ความจุ"
-        GridViewTextBoxColumn13.MinWidth = 150
-        GridViewTextBoxColumn13.Name = "t_truckcompcap"
-        GridViewTextBoxColumn13.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn13.Width = 224
-        GridViewTextBoxColumn14.EnableExpressionEditor = False
-        GridViewTextBoxColumn14.FieldName = "remark"
-        GridViewTextBoxColumn14.HeaderText = "หมายเหตุ"
-        GridViewTextBoxColumn14.MinWidth = 150
-        GridViewTextBoxColumn14.Name = "t_truckcompcap_l"
-        GridViewTextBoxColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        GridViewTextBoxColumn14.Width = 238
-        Me.RadGridView1.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14})
+        GridViewTextBoxColumn26.DataType = GetType(Double)
+        GridViewTextBoxColumn26.EnableExpressionEditor = False
+        GridViewTextBoxColumn26.FieldName = "Truck_comp"
+        GridViewTextBoxColumn26.HeaderText = "ช่องเติมที่"
+        GridViewTextBoxColumn26.MinWidth = 100
+        GridViewTextBoxColumn26.Name = "t_truckcompno"
+        GridViewTextBoxColumn26.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn26.Width = 151
+        GridViewTextBoxColumn27.DataType = GetType(Double)
+        GridViewTextBoxColumn27.EnableExpressionEditor = False
+        GridViewTextBoxColumn27.FieldName = "Capasity"
+        GridViewTextBoxColumn27.HeaderText = "ความจุ"
+        GridViewTextBoxColumn27.MinWidth = 150
+        GridViewTextBoxColumn27.Name = "t_truckcompcap"
+        GridViewTextBoxColumn27.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn27.Width = 224
+        GridViewTextBoxColumn28.EnableExpressionEditor = False
+        GridViewTextBoxColumn28.FieldName = "remark"
+        GridViewTextBoxColumn28.HeaderText = "หมายเหตุ"
+        GridViewTextBoxColumn28.MinWidth = 150
+        GridViewTextBoxColumn28.Name = "t_truckcompcap_l"
+        GridViewTextBoxColumn28.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        GridViewTextBoxColumn28.Width = 238
+        Me.RadGridView1.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn26, GridViewTextBoxColumn27, GridViewTextBoxColumn28})
         Me.RadGridView1.MultiSelect = True
         Me.RadGridView1.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect
         Me.RadGridView1.ShowRowHeaderColumn = False
-        Me.RadGridView1.ViewDefinition = TableViewDefinition5
+        Me.RadGridView1.ViewDefinition = TableViewDefinition10
         '
         'RadButton2
         '
