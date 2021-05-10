@@ -50,7 +50,7 @@ Public Class Advisenote
         MAIN.U_GROUP_ID = 5
         Chk_View()
 
-        Timer2.Enabled = True
+        'Timer2.Enabled = True
 
         EditDoc = False
         AddDoc = False
@@ -130,9 +130,9 @@ Public Class Advisenote
         End Try
 
 
-
+        WeightScal.Text = "0"
         Timer1.Enabled = True
-
+        Timer2.Enabled = False
         baycheck = 0
         Cbn2.Enabled = True
         TruckH.Enabled = False
@@ -1045,9 +1045,11 @@ Public Class Advisenote
             Dim MyDataSet As New DataSet
             MyDataSet = cls.Query_DS(Sql, "T_batchmeter")
 
+            TBatchmeterBindingSource.DataSource = Nothing
+            TBatchmeterBindingSource.DataMember = Nothing
             TBatchmeterBindingSource.DataSource = MyDataSet
             TBatchmeterBindingSource.DataMember = "T_batchmeter"
-            MyDataSet.Dispose()
+
             Meter.DisplayMember = "Batch_name"
             'TBatchmeterBindingSource.Position = 0
             Meter.SelectedIndex = 0
@@ -1136,6 +1138,8 @@ Public Class Advisenote
             TBatchmeterBindingSource12.DataMember = "T_batchmeter"
             Meter12.DisplayMember = "Batch_name"
             Meter12.SelectedIndex = -1
+
+            MyDataSet.Dispose()
 
             baycheck = 1
         Catch ex As Exception
@@ -2725,6 +2729,7 @@ Public Class Advisenote
         Dim dt As DataTable = cls.Query("SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] ORDER BY [W_DATETIME] DESC")
 
         WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
+
     End Sub
 
     Private Sub Advisenote_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -2736,6 +2741,7 @@ Public Class Advisenote
             rtb_key_id.Enabled = True
             Timer2.Enabled = False
             rtb_key_id.Text = ""
+            WeightScal.Text = "0"
         End If
 
         If chb_key_id.Checked = False Then
@@ -2753,11 +2759,13 @@ Public Class Advisenote
                 Dim id As Integer = rtb_key_id.Text
                 Dim cls As New Class_SQLSERVERDB
                 Dim Sql As String
-                Sql = "SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] WHERE  LOG_ID = '" & id & "' "
+                Sql = "SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] WHERE  W_TRIPID = '" & id & "' "
 
                 Dim dt As DataTable = cls.Query(Sql)
                 If dt.Rows.Count > 0 Then
                     WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
+                Else
+                    WeightScal.Text = "0"
                 End If
             End If
         End If
@@ -4104,7 +4112,7 @@ Public Class Advisenote
                 TBayBindingSource.Position = TBayBindingSource.Find("BAY_NUMBER", index)
                 Bay.SelectedIndex = TBayBindingSource.Position
                 TBatchmeterBindingSource.Position = TBatchmeterBindingSource.Find("Batch_name", dt1.Rows(0).Item("Batch_name").ToString)
-                End If
+            End If
 
 
 

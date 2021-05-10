@@ -1337,6 +1337,8 @@
     <None Include="Resources\History.jpg" />
     <None Include="Resources\browse.png" />
     <None Include="Resources\Changer-d%27utilisateur.ico" />
+    <None Include="Resources\CECA-Logo.png" />
+    <None Include="Resources\CECA-Logo-Tran.png" />
     <Content Include="Resources\home_32.gif" />
     <None Include="Resources\Imac2.bmp" />
     <None Include="Resources\Imac21.bmp" />

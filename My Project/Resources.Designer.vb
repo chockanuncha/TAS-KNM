@@ -503,6 +503,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property CECA_Logo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CECA-Logo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CECA_Logo_Tran() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CECA-Logo-Tran", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Changer_d_utilisateur() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Changer-d'utilisateur", resourceCulture)

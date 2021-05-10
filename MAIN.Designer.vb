@@ -53,8 +53,11 @@ Partial Class MAIN
         Me.RadTileElement25 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.RadTileElement37 = New Telerik.WinControls.UI.RadLiveTileElement()
         Me.radPanorama1 = New Telerik.WinControls.UI.RadPanorama()
+        Me.RadProgressBar1 = New Telerik.WinControls.UI.RadProgressBar()
+        Me.Eventext = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -68,9 +71,6 @@ Partial Class MAIN
         Me.BLogin = New Telerik.WinControls.UI.RadButton()
         Me.BLogout = New Telerik.WinControls.UI.RadButton()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.RadProgressBar1 = New Telerik.WinControls.UI.RadProgressBar()
-        Me.Eventext = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadClock1 = New Telerik.WinControls.UI.RadClock()
         Me.LoadingGroup = New Telerik.WinControls.UI.TileGroupElement()
@@ -162,7 +162,10 @@ Partial Class MAIN
         Me.T_ALARMS_BATCHTableAdapter = New RadControlsWinFormsApp1.DataSet_TableTableAdapters.T_ALARMS_BATCHTableAdapter()
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.radPanorama1.SuspendLayout()
+        CType(Me.RadProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadProgressBar1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
@@ -173,9 +176,6 @@ Partial Class MAIN
         CType(Me.BLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadProgressBar1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TAlarmsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -618,9 +618,9 @@ Partial Class MAIN
         Me.radPanorama1.AutoScroll = True
         Me.radPanorama1.BackgroundImage = Global.RadControlsWinFormsApp1.My.Resources.Resources.irpc1
         Me.radPanorama1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.radPanorama1.Controls.Add(Me.RadProgressBar1)
         Me.radPanorama1.Controls.Add(Me.RichTextBox1)
         Me.radPanorama1.Controls.Add(Me.Panel1)
-        Me.radPanorama1.Controls.Add(Me.RadProgressBar1)
         Me.radPanorama1.Controls.Add(Me.PictureBox1)
         Me.radPanorama1.Controls.Add(Me.RadClock1)
         Me.radPanorama1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -660,6 +660,28 @@ Partial Class MAIN
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).Padding = New System.Windows.Forms.Padding(0)
         CType(Me.radPanorama1.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Layouts.StackLayoutPanel).PositionOffset = New System.Drawing.SizeF(0!, 0!)
         '
+        'RadProgressBar1
+        '
+        Me.RadProgressBar1.BackColor = System.Drawing.Color.LightBlue
+        Me.RadProgressBar1.Controls.Add(Me.Eventext)
+        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 999)
+        Me.RadProgressBar1.Name = "RadProgressBar1"
+        Me.RadProgressBar1.SeparatorColor1 = System.Drawing.Color.Black
+        Me.RadProgressBar1.Size = New System.Drawing.Size(1912, 30)
+        Me.RadProgressBar1.TabIndex = 197
+        Me.RadProgressBar1.ThemeName = "Office2010Blue"
+        '
+        'Eventext
+        '
+        Me.Eventext.AutoSize = True
+        Me.Eventext.BackColor = System.Drawing.Color.Transparent
+        Me.Eventext.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Eventext.Location = New System.Drawing.Point(1843, 6)
+        Me.Eventext.Name = "Eventext"
+        Me.Eventext.Size = New System.Drawing.Size(69, 19)
+        Me.Eventext.TabIndex = 0
+        Me.Eventext.Text = "#####"
+        '
         'RichTextBox1
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(442, 905)
@@ -673,6 +695,7 @@ Partial Class MAIN
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -682,16 +705,27 @@ Partial Class MAIN
         Me.Panel1.Controls.Add(Me.BLogin)
         Me.Panel1.Controls.Add(Me.BLogout)
         Me.Panel1.Controls.Add(Me.RadButton1)
-        Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1912, 86)
         Me.Panel1.TabIndex = 198
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.CECA_Logo_Tran
+        Me.PictureBox3.Location = New System.Drawing.Point(10, 9)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(125, 68)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 206
+        Me.PictureBox3.TabStop = False
+        '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(453, 9)
+        Me.TextBox2.Location = New System.Drawing.Point(524, -2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(164, 20)
         Me.TextBox2.TabIndex = 205
@@ -699,7 +733,7 @@ Partial Class MAIN
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(283, 41)
+        Me.Button2.Location = New System.Drawing.Point(429, 50)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 204
@@ -709,7 +743,7 @@ Partial Class MAIN
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(364, 41)
+        Me.Button1.Location = New System.Drawing.Point(510, 50)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 203
@@ -719,7 +753,7 @@ Partial Class MAIN
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(283, 9)
+        Me.TextBox1.Location = New System.Drawing.Point(901, 0)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(164, 20)
         Me.TextBox1.TabIndex = 202
@@ -833,40 +867,6 @@ Partial Class MAIN
         Me.RadButton1.Text = "Change Password   "
         Me.RadButton1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadButton1.ThemeName = "Breeze"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.ICC_Logo
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 6)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(164, 75)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 193
-        Me.PictureBox2.TabStop = False
-        '
-        'RadProgressBar1
-        '
-        Me.RadProgressBar1.BackColor = System.Drawing.Color.LightBlue
-        Me.RadProgressBar1.Controls.Add(Me.Eventext)
-        Me.RadProgressBar1.Location = New System.Drawing.Point(0, 962)
-        Me.RadProgressBar1.Name = "RadProgressBar1"
-        Me.RadProgressBar1.SeparatorColor1 = System.Drawing.Color.Black
-        Me.RadProgressBar1.Size = New System.Drawing.Size(1912, 30)
-        Me.RadProgressBar1.TabIndex = 197
-        Me.RadProgressBar1.ThemeName = "Office2010Blue"
-        '
-        'Eventext
-        '
-        Me.Eventext.AutoSize = True
-        Me.Eventext.BackColor = System.Drawing.Color.Transparent
-        Me.Eventext.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Eventext.Location = New System.Drawing.Point(1843, 6)
-        Me.Eventext.Name = "Eventext"
-        Me.Eventext.Size = New System.Drawing.Size(69, 19)
-        Me.Eventext.TabIndex = 0
-        Me.Eventext.Text = "#####"
         '
         'PictureBox1
         '
@@ -1282,6 +1282,7 @@ Partial Class MAIN
         Me.RecordGroup.AccessibleDescription = "Links"
         Me.RecordGroup.AccessibleName = "Links"
         Me.RecordGroup.CellSize = New System.Drawing.Size(140, 120)
+        Me.RecordGroup.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.RecordGroup.EnableImageTransparency = False
         Me.RecordGroup.FocusBorderWidth = 3
         Me.RecordGroup.Font = New System.Drawing.Font("Courier New", 18.0!)
@@ -1296,6 +1297,8 @@ Partial Class MAIN
         Me.RecordGroup.RowsCount = 6
         Me.RecordGroup.Text = "Record Data"
         Me.RecordGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.RecordGroup.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.RecordGroup.UseCompatibleTextRendering = False
         '
         'Truck_Menu
         '
@@ -2521,8 +2524,12 @@ Partial Class MAIN
         CType(Me.radPanorama1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.radPanorama1.ResumeLayout(False)
         Me.radPanorama1.PerformLayout()
+        CType(Me.RadProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadProgressBar1.ResumeLayout(False)
+        Me.RadProgressBar1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
@@ -2534,10 +2541,6 @@ Partial Class MAIN
         CType(Me.BLogin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadProgressBar1.ResumeLayout(False)
-        Me.RadProgressBar1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadClock1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TAlarmsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2604,7 +2607,6 @@ Partial Class MAIN
     Friend WithEvents RadLabel5 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel6 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadClock1 As Telerik.WinControls.UI.RadClock
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents RadLiveTileElement32 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement33 As Telerik.WinControls.UI.RadLiveTileElement
     Friend WithEvents RadLiveTileElement34 As Telerik.WinControls.UI.RadLiveTileElement
@@ -2685,6 +2687,7 @@ Partial Class MAIN
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents MeterMenu As Telerik.WinControls.UI.RadLiveTileElement
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
 'End Namespace
 

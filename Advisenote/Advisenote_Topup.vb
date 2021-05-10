@@ -2727,7 +2727,7 @@ Public Class Advisenote_Topup
         Timer2.Enabled = False
     End Sub
 
-    Private Sub chb_key_id_CheckedChanged(sender As Object, e As EventArgs) Handles chb_key_id.CheckedChanged
+    Private Sub chb_key_id_CheckedChanged(sender As Object, e As EventArgs)
         If chb_key_id.Checked = True Then
             rtb_key_id.Enabled = True
             Timer2.Enabled = False
@@ -2741,7 +2741,7 @@ Public Class Advisenote_Topup
         End If
     End Sub
 
-    Private Sub rtb_key_id_KeyDown(sender As Object, e As KeyEventArgs) Handles rtb_key_id.KeyDown
+    Private Sub rtb_key_id_KeyDown(sender As Object, e As KeyEventArgs)
 
         If e.KeyCode = Keys.Enter Then
             If rtb_key_id.Text <> "" Then
@@ -2758,10 +2758,32 @@ Public Class Advisenote_Topup
         End If
     End Sub
 
-    Private Sub rtb_key_id_KeyPress(sender As Object, e As KeyPressEventArgs) Handles rtb_key_id.KeyPress
+    Private Sub rtb_key_id_KeyPress(sender As Object, e As KeyPressEventArgs)
         Dim ch As Char = e.KeyChar
         If Not Char.IsDigit(ch) AndAlso Asc(ch) <> 8 Then
             e.Handled = True
+        End If
+    End Sub
+
+    Private Sub AdviseDetail_G_Click(sender As Object, e As EventArgs) Handles AdviseDetail_G.Click
+
+    End Sub
+
+    Private Sub rtb_key_id_KeyDown_1(sender As Object, e As KeyEventArgs) Handles rtb_key_id.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If rtb_key_id.Text <> "" Then
+                Dim id As Integer = rtb_key_id.Text
+                Dim cls As New Class_SQLSERVERDB
+                Dim Sql As String
+                Sql = "SELECT [W_DATETIME],[W_WEIGHT],[W_TRIPID]  FROM [TAS].[dbo].[T_WEIGHT_LOG] WHERE  W_TRIPID = '" & id & "' "
+
+                Dim dt As DataTable = cls.Query(Sql)
+                If dt.Rows.Count > 0 Then
+                    WeightScal.Text = dt.Rows(0).Item("W_WEIGHT").ToString
+                Else
+                    WeightScal.Text = "0"
+                End If
+            End If
         End If
     End Sub
 
@@ -2852,17 +2874,17 @@ Public Class Advisenote_Topup
         End If
     End Sub
 
-    Private Sub WeightScal_TextChanged(sender As Object, e As EventArgs) Handles WeightScal.TextChanged
+    Private Sub WeightScal_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub RadButton8_Click(sender As Object, e As EventArgs) Handles RadButton16.Click
+    Private Sub RadButton8_Click(sender As Object, e As EventArgs)
         EDW_IN.Text = WeightScal.Text
         LawWeightIn.Text = EDW_IN.Text
         W_Weightintime.Text = Now()
     End Sub
 
-    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
+    Private Sub RadButton3_Click(sender As Object, e As EventArgs)
         EDW_Out.Text = WeightScal.Text
         LawWeightout.Text = EDW_Out.Text
         EDW_NET.Text = Int(EDW_Out.Text) - Int(EDW_IN.Text)
