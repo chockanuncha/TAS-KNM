@@ -471,10 +471,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BOL_R2.rpt</DependentUpon>
     </Compile>
-    <Compile Include="bin\Debug\Report_File\BOL_Topup.vb">
+    <Compile Include="bin\Debug\Report_File\BOL_Topup_02.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BOL_Topup.rpt</DependentUpon>
+      <DependentUpon>BOL_Topup_02.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="bin\Debug\Report_File\DailyReport.vb">
@@ -979,9 +979,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BOL_R2.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report_File\BOL_Topup.rpt">
+    <EmbeddedResource Include="bin\Debug\Report_File\BOL_Topup_02.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>BOL_Topup.vb</LastGenOutput>
+      <LastGenOutput>BOL_Topup_02.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\Report_File\DailyReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

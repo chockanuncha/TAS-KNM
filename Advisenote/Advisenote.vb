@@ -683,14 +683,14 @@ Public Class Advisenote
         tmp = cls.Query(sql)
         Select Case tmp(0)("STATUS")
             Case 0
-                Load_q.Text = "0"
+                load_q.Text = "0"
                 Cbn7.Text = "0"
             Case 1
                 sql = ""
                 sql = "select Q_NO+1 as Q_NO from T_Q "
 
                 dt_tmp = cls.Query(sql)
-                Load_q.Text = dt_tmp(0)("Q_NO").ToString
+                load_q.Text = dt_tmp(0)("Q_NO").ToString
 
                 yearthai = Str(Int(s_year + 543))
 
@@ -2925,7 +2925,7 @@ Public Class Advisenote
 
 
                     'DirectCast(Me.GroupBox10.Controls.Item("Meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Meter.SelectedIndex
-                    Batchmeter = Meter.Text
+                    Batchmeter = Me.Meter.Text
                     Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
                     DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
 
@@ -2940,7 +2940,7 @@ Public Class Advisenote
                         BayIndex = Bay.Text
                         Index = DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).FindString(BayIndex)
                         DirectCast(Me.GroupBox11.Controls.Item("IslandBay" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
-                        Batchmeter = Meter.Text
+                        Batchmeter = Me.Meter.Text
                         Index = DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).FindString(Batchmeter)
                         DirectCast(Me.GroupBox10.Controls.Item("meter" + (i + 1).ToString), RadDropDownList).SelectedIndex = Index
 
@@ -3271,6 +3271,7 @@ Public Class Advisenote
             q &= "RAW_WEIGHT_IN,"
             q &= "RAW_WEIGHT_Out,"
             q &= "WEIGHTin_Time,"
+            'q &= "WEIGHTout_Time,"
 
 
             q &= " LOAD_TYPE )"
@@ -3351,8 +3352,8 @@ Public Class Advisenote
             q &= "'" & (Seal_No.Text) & "',"
             q &= " Getdate() ,"
 
-            q &= "'" & (Load_q.Text) & "',"
-            q &= "'" & (Load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
 
             If Chkin = 0 Then
                 q &= "CONVERT (DATETIME,'" & (String.Format("{0:MM/dd/yyyy HH:mm:ss}", QTIME)) & "')," 'DD/MM/YYYY HH24:MI:SS')" & ","
@@ -3372,7 +3373,8 @@ Public Class Advisenote
 
             q &= "'" & (LawWeightIn.Text) & "',"
             q &= "'" & (LawWeightout.Text) & "',"
-            q &= " Getdate() ,"
+            q &= "'" & W_Weightintime.Text & "',"
+            'q &= "'" & W_Weightouttime.Text & "',"
             ' Weight
 
 
@@ -3523,7 +3525,7 @@ Public Class Advisenote
             End Try
             q &= " 1,"
             q &= "'" & DOval.Text & "',"
-            q &= "'" & Load_q.Text & "',"
+            q &= "'" & load_q.Text & "',"
             If Kiosk = 1 Then
                 q &= " 0,"
             Else
@@ -3560,7 +3562,7 @@ Public Class Advisenote
         cls.Update(q)
 
         If QLOAD = 1 Then
-            q = "Update T_Q Set Q_NO='" & Load_q.Text & "'"
+            q = "Update T_Q Set Q_NO='" & load_q.Text & "'"
             cls.Update(q)
         End If
 
@@ -3697,7 +3699,7 @@ Public Class Advisenote
             q &= " Update_date = "
             q &= " Getdate(), "
             q &= " LOAD_Q = "
-            q &= "'" & (Load_q.Text) & "',"
+            q &= "'" & (load_q.Text) & "',"
             q &= " LOAD_QDASHBOARD = "
             q &= "'" & (load_q.Text) & "',"
             q &= " LOAD_TYPE = "
@@ -3711,7 +3713,9 @@ Public Class Advisenote
             ' Weight
             q &= "RAW_WEIGHT_IN = '" & (LawWeightIn.Text) & "',"
             q &= "RAW_WEIGHT_Out = '" & (LawWeightout.Text) & "',"
-            q &= "WEIGHTin_Time = Getdate() ,"
+            q &= "WEIGHTin_Time = '" & W_Weightintime.Text & " ' ,"
+            q &= "WEIGHTout_Time = '" & W_Weightouttime.Text & " ' ,"
+            'q &= "'" & Weightouttime.Text & " '"
             q &= " LOAD_TRUCKCOMPANY = "
             q &= "'" & (TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID").ToString()) & "' "
             q &= "WHERE reference=  " & ref & ""
@@ -4070,9 +4074,9 @@ Public Class Advisenote
                 LawWeightIn.Text = dt.Rows(0).Item("RAW_WEIGHT_IN").ToString
                 LawWeightout.Text = dt.Rows(0).Item("RAW_WEIGHT_out").ToString
                 W_Weightintime.Text = dt.Rows(0).Item("WEIGHTin_Time").ToString
-                W_Weightouttime.Text = dt.Rows(0).Item("WEIGHTou_Time").ToString
 
-            Catch ex As Exception
+
+        Catch ex As Exception
 
             End Try
 
@@ -4112,6 +4116,9 @@ Public Class Advisenote
                 TBayBindingSource.Position = TBayBindingSource.Find("BAY_NUMBER", index)
                 Bay.SelectedIndex = TBayBindingSource.Position
                 TBatchmeterBindingSource.Position = TBatchmeterBindingSource.Find("Batch_name", dt1.Rows(0).Item("Batch_name").ToString)
+                Me.Meter.SelectedIndex = TBatchmeterBindingSource.Position
+
+
             End If
 
 

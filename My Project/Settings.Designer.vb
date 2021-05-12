@@ -93,7 +93,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=knm_tasserver;Initial Catalog=TAS;Persist Security Info=True;User ID="& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=KNM_TAsserver;Initial Catalog=TAS;Persist Security Info=True;User ID="& _ 
             "sa;Password=P@$$w0rd")>  _
         Public ReadOnly Property ConnectionString() As String
             Get

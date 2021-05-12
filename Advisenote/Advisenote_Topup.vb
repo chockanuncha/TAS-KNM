@@ -2787,6 +2787,36 @@ Public Class Advisenote_Topup
         End If
     End Sub
 
+    Private Sub chb_key_id_CheckedChanged_1(sender As Object, e As EventArgs) Handles chb_key_id.CheckedChanged
+        If chb_key_id.Checked = True Then
+            rtb_key_id.Enabled = True
+            Timer2.Enabled = False
+            rtb_key_id.Text = ""
+            WeightScal.Text = "0"
+        End If
+
+        If chb_key_id.Checked = False Then
+            rtb_key_id.Enabled = False
+            Timer2.Enabled = True
+            rtb_key_id.Text = ""
+        End If
+
+    End Sub
+
+    Private Sub RadButton16_Click(sender As Object, e As EventArgs) Handles RadButton16.Click
+        EDW_IN.Text = WeightScal.Text
+        LawWeightIn.Text = EDW_IN.Text
+        W_Weightintime.Text = Now()
+    End Sub
+
+    Private Sub RadButton3_Click_1(sender As Object, e As EventArgs) Handles RadButton3.Click
+        EDW_Out.Text = WeightScal.Text
+        LawWeightout.Text = EDW_Out.Text
+        EDW_NET.Text = Int(EDW_Out.Text) - Int(EDW_IN.Text)
+        _Weightouttime.Text = Now()
+        W_Weightouttime.Text = Now()
+    End Sub
+
     Private Sub IslandBay10_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If EditType = 0 And baycheck = 1 Then
             Try
@@ -3279,6 +3309,8 @@ Public Class Advisenote_Topup
             q &= "RAW_WEIGHT_IN,"
             q &= "RAW_WEIGHT_Out,"
             q &= "WEIGHTin_Time,"
+            'q &= "WEightout_time,"
+
             q &= "Advisenote_type, "
 
             q &= " LOAD_TYPE )"
@@ -3380,7 +3412,8 @@ Public Class Advisenote_Topup
 
             q &= "'" & (LawWeightIn.Text) & "',"
             q &= "'" & (LawWeightout.Text) & "',"
-            q &= " Getdate() ,"
+            q &= "'" & W_Weightintime.Text & "' ,"
+            'q &= "'" & W_Weightouttime.Text & "' ,"
             q &= "'Topup',"
             ' Weight
 
@@ -3727,6 +3760,22 @@ Public Class Advisenote_Topup
             q &= "'" & (Update_by.Text) & "',"
             q &= " LOAD_AUTHORIZE = "
             q &= "'" & (authorize_Remark.Text) & "',"
+            ' Weight
+            q &= "RAW_WEIGHT_IN = '" & (LawWeightIn.Text) & "',"
+            q &= "RAW_WEIGHT_Out = '" & (LawWeightout.Text) & "',"
+            q &= "WEIGHTin_Time = '" & W_Weightintime.Text & "' ,"
+            Try
+                If W_Weightouttime.Text <> "dd/mm/yyyy hh:mm:ss" Then
+                    q &= "WEIGHTout_Time = '" & W_Weightouttime.Text & "' ,"
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+
+
+
             q &= " LOAD_TRUCKCOMPANY = "
             q &= "'" & (TCompanyBindingSource.Item(TCompanyBindingSource.Position)("COMPANY_ID").ToString()) & "' "
             q &= "WHERE reference= "
@@ -4041,7 +4090,7 @@ Public Class Advisenote_Topup
         Dim tmp As DataTable = cls.Query(sql)
 
         load_status = tmp(0)("load_status")
-        If load_status = 3 Then
+        If load_status = 30 Then
             MsgBox("This truck no. loading ended, Cannot edit", vbOKOnly + vbDefaultButton3, "Error")
             Exit Sub
         Else

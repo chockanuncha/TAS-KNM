@@ -23,54 +23,55 @@ Partial Class Advisenote_Topup
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn56 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn57 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn58 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn59 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn38 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
         Dim GridViewTextBoxColumn60 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn61 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn62 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn38 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn63 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewDecimalColumn39 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
         Dim GridViewDecimalColumn40 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn61 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDateTimeColumn4 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
-        Dim GridViewTextBoxColumn62 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn63 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn41 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
         Dim GridViewTextBoxColumn64 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn42 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDateTimeColumn4 As Telerik.WinControls.UI.GridViewDateTimeColumn = New Telerik.WinControls.UI.GridViewDateTimeColumn()
         Dim GridViewTextBoxColumn65 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn66 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn41 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
         Dim GridViewTextBoxColumn67 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn42 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
         Dim GridViewTextBoxColumn68 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn69 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn70 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor10 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition17 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim GridViewTextBoxColumn71 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor11 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition18 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewMultiComboBoxColumn3 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
-        Dim GridViewMultiComboBoxColumn4 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
-        Dim TableViewDefinition19 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim GridViewTextBoxColumn72 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn73 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim SortDescriptor12 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
         Dim TableViewDefinition20 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Advisenote_Topup))
         Dim GridViewTextBoxColumn48 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn49 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim SortDescriptor8 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
         Dim TableViewDefinition14 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewMultiComboBoxColumn3 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
+        Dim GridViewMultiComboBoxColumn4 As Telerik.WinControls.UI.GridViewMultiComboBoxColumn = New Telerik.WinControls.UI.GridViewMultiComboBoxColumn()
+        Dim TableViewDefinition15 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn49 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn50 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor9 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition16 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim GridViewTextBoxColumn51 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn52 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor10 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition17 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim GridViewTextBoxColumn53 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor9 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition15 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim GridViewTextBoxColumn54 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn55 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition16 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn56 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim SortDescriptor11 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim TableViewDefinition18 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim GridViewTextBoxColumn57 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn58 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition19 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim GridViewTextBoxColumn74 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn75 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition21 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
@@ -134,7 +135,6 @@ Partial Class Advisenote_Topup
         Dim GridViewTextBoxColumn94 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition25 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim TableViewDefinition26 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Advisenote_Topup))
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
         Me.RadPageViewPage1 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.DatetimePicker2 = New Telerik.WinControls.UI.RadDateTimePicker()
@@ -166,6 +166,40 @@ Partial Class Advisenote_Topup
         Me.RadPageViewPage2 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadPanel3 = New Telerik.WinControls.UI.RadPanel()
         Me.AdviseDetail_G = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadGroupBox8 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.WeightScal = New Telerik.WinControls.UI.RadTextBox()
+        Me.rtb_key_id = New Telerik.WinControls.UI.RadTextBox()
+        Me.chb_key_id = New System.Windows.Forms.CheckBox()
+        Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
+        Me.EDW_Out = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadGroupBox11 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.W_Weightouttime = New Telerik.WinControls.UI.RadLabel()
+        Me.RadButton16 = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton17 = New Telerik.WinControls.UI.RadButton()
+        Me.W_Weightintime = New Telerik.WinControls.UI.RadLabel()
+        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton6 = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton10 = New Telerik.WinControls.UI.RadButton()
+        Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel29 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel39 = New Telerik.WinControls.UI.RadLabel()
+        Me.UpdateWeightOut = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.LawWeightout = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel31 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel28 = New Telerik.WinControls.UI.RadLabel()
+        Me.LawWeightIn = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
+        Me.EDW_IN = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
+        Me.EDW_NET = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel32 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel33 = New Telerik.WinControls.UI.RadLabel()
         Me.load_q = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBox6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBox5 = New Telerik.WinControls.UI.RadTextBox()
@@ -474,40 +508,6 @@ Partial Class Advisenote_Topup
         Me.V_TRUCK2TableAdapter = New RadControlsWinFormsApp1.DataSet_ViewTableAdapters.V_TRUCKTableAdapter()
         Me.Windows8Theme1 = New Telerik.WinControls.Themes.Windows8Theme()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.RadGroupBox8 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.WeightScal = New Telerik.WinControls.UI.RadTextBox()
-        Me.rtb_key_id = New Telerik.WinControls.UI.RadTextBox()
-        Me.chb_key_id = New System.Windows.Forms.CheckBox()
-        Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
-        Me.EDW_Out = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadGroupBox11 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.W_Weightouttime = New Telerik.WinControls.UI.RadLabel()
-        Me.RadButton16 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton17 = New Telerik.WinControls.UI.RadButton()
-        Me.W_Weightintime = New Telerik.WinControls.UI.RadLabel()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton6 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton10 = New Telerik.WinControls.UI.RadButton()
-        Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel29 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel39 = New Telerik.WinControls.UI.RadLabel()
-        Me.UpdateWeightOut = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
-        Me.LawWeightout = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel31 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel28 = New Telerik.WinControls.UI.RadLabel()
-        Me.LawWeightIn = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
-        Me.EDW_IN = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
-        Me.EDW_NET = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadLabel32 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel33 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
@@ -531,6 +531,44 @@ Partial Class Advisenote_Topup
         Me.RadPanel3.SuspendLayout()
         CType(Me.AdviseDetail_G, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AdviseDetail_G.SuspendLayout()
+        CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox8.SuspendLayout()
+        CType(Me.WeightScal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rtb_key_id, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EDW_Out, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox11.SuspendLayout()
+        CType(Me.W_Weightouttime, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton16, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadButton16.SuspendLayout()
+        CType(Me.RadButton17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.W_Weightintime, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadButton3.SuspendLayout()
+        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadLabel29.SuspendLayout()
+        CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UpdateWeightOut, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LawWeightout, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LawWeightIn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EDW_IN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EDW_NET, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.load_q, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -775,44 +813,6 @@ Partial Class Advisenote_Topup
         CType(Me.Edit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VLoading_StatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TTruckBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox8.SuspendLayout()
-        CType(Me.WeightScal, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rtb_key_id, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EDW_Out, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox11.SuspendLayout()
-        CType(Me.W_Weightouttime, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton16, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadButton16.SuspendLayout()
-        CType(Me.RadButton17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.W_Weightintime, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadButton3.SuspendLayout()
-        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadLabel29.SuspendLayout()
-        CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UpdateWeightOut, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LawWeightout, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LawWeightIn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EDW_IN, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EDW_NET, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -884,42 +884,42 @@ Partial Class Advisenote_Topup
         Me.MasterGridAdvisenote_Topup.MasterTemplate.AllowColumnResize = False
         Me.MasterGridAdvisenote_Topup.MasterTemplate.AllowRowResize = False
         Me.MasterGridAdvisenote_Topup.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn56.DataType = GetType(Decimal)
-        GridViewTextBoxColumn56.EnableExpressionEditor = False
-        GridViewTextBoxColumn56.FieldName = "REFERENCE"
-        GridViewTextBoxColumn56.HeaderText = "Load No."
-        GridViewTextBoxColumn56.IsAutoGenerated = True
-        GridViewTextBoxColumn56.MaxWidth = 100
-        GridViewTextBoxColumn56.MinWidth = 100
-        GridViewTextBoxColumn56.Name = "REFERENCE"
-        GridViewTextBoxColumn56.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn56.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn56.Width = 100
-        GridViewTextBoxColumn57.DataType = GetType(Decimal)
-        GridViewTextBoxColumn57.EnableExpressionEditor = False
-        GridViewTextBoxColumn57.FieldName = "LOAD_Q"
-        GridViewTextBoxColumn57.HeaderText = "Queue No."
-        GridViewTextBoxColumn57.IsVisible = False
-        GridViewTextBoxColumn57.MinWidth = 100
-        GridViewTextBoxColumn57.Name = "LOAD_Q"
-        GridViewTextBoxColumn57.Width = 100
-        GridViewTextBoxColumn58.DataType = GetType(Decimal)
-        GridViewTextBoxColumn58.EnableExpressionEditor = False
-        GridViewTextBoxColumn58.FieldName = "LC_BAY"
-        GridViewTextBoxColumn58.HeaderText = "Bay No."
-        GridViewTextBoxColumn58.MinWidth = 60
-        GridViewTextBoxColumn58.Name = "LC_BAY"
-        GridViewTextBoxColumn58.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn58.Width = 60
+        GridViewTextBoxColumn59.DataType = GetType(Decimal)
         GridViewTextBoxColumn59.EnableExpressionEditor = False
-        GridViewTextBoxColumn59.FieldName = "LOAD_VEHICLE"
-        GridViewTextBoxColumn59.HeaderText = "Truck No."
+        GridViewTextBoxColumn59.FieldName = "REFERENCE"
+        GridViewTextBoxColumn59.HeaderText = "Load No."
         GridViewTextBoxColumn59.IsAutoGenerated = True
-        GridViewTextBoxColumn59.MaxWidth = 200
-        GridViewTextBoxColumn59.MinWidth = 200
-        GridViewTextBoxColumn59.Name = "LOAD_VEHICLE"
-        GridViewTextBoxColumn59.ReadOnly = True
-        GridViewTextBoxColumn59.Width = 200
+        GridViewTextBoxColumn59.MaxWidth = 100
+        GridViewTextBoxColumn59.MinWidth = 100
+        GridViewTextBoxColumn59.Name = "REFERENCE"
+        GridViewTextBoxColumn59.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn59.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn59.Width = 100
+        GridViewTextBoxColumn60.DataType = GetType(Decimal)
+        GridViewTextBoxColumn60.EnableExpressionEditor = False
+        GridViewTextBoxColumn60.FieldName = "LOAD_Q"
+        GridViewTextBoxColumn60.HeaderText = "Queue No."
+        GridViewTextBoxColumn60.IsVisible = False
+        GridViewTextBoxColumn60.MinWidth = 100
+        GridViewTextBoxColumn60.Name = "LOAD_Q"
+        GridViewTextBoxColumn60.Width = 100
+        GridViewTextBoxColumn61.DataType = GetType(Decimal)
+        GridViewTextBoxColumn61.EnableExpressionEditor = False
+        GridViewTextBoxColumn61.FieldName = "LC_BAY"
+        GridViewTextBoxColumn61.HeaderText = "Bay No."
+        GridViewTextBoxColumn61.MinWidth = 60
+        GridViewTextBoxColumn61.Name = "LC_BAY"
+        GridViewTextBoxColumn61.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn61.Width = 60
+        GridViewTextBoxColumn62.EnableExpressionEditor = False
+        GridViewTextBoxColumn62.FieldName = "LOAD_VEHICLE"
+        GridViewTextBoxColumn62.HeaderText = "Truck No."
+        GridViewTextBoxColumn62.IsAutoGenerated = True
+        GridViewTextBoxColumn62.MaxWidth = 200
+        GridViewTextBoxColumn62.MinWidth = 200
+        GridViewTextBoxColumn62.Name = "LOAD_VEHICLE"
+        GridViewTextBoxColumn62.ReadOnly = True
+        GridViewTextBoxColumn62.Width = 200
         GridViewDecimalColumn38.DataType = GetType(String)
         GridViewDecimalColumn38.EnableExpressionEditor = False
         GridViewDecimalColumn38.FieldName = "CARD_Serial"
@@ -931,14 +931,14 @@ Partial Class Advisenote_Topup
         GridViewDecimalColumn38.ReadOnly = True
         GridViewDecimalColumn38.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         GridViewDecimalColumn38.Width = 120
-        GridViewTextBoxColumn60.EnableExpressionEditor = False
-        GridViewTextBoxColumn60.FieldName = "LOAD_DRIVER"
-        GridViewTextBoxColumn60.HeaderText = "Driver Name"
-        GridViewTextBoxColumn60.IsAutoGenerated = True
-        GridViewTextBoxColumn60.MinWidth = 200
-        GridViewTextBoxColumn60.Name = "LOAD_DRIVER"
-        GridViewTextBoxColumn60.ReadOnly = True
-        GridViewTextBoxColumn60.Width = 200
+        GridViewTextBoxColumn63.EnableExpressionEditor = False
+        GridViewTextBoxColumn63.FieldName = "LOAD_DRIVER"
+        GridViewTextBoxColumn63.HeaderText = "Driver Name"
+        GridViewTextBoxColumn63.IsAutoGenerated = True
+        GridViewTextBoxColumn63.MinWidth = 200
+        GridViewTextBoxColumn63.Name = "LOAD_DRIVER"
+        GridViewTextBoxColumn63.ReadOnly = True
+        GridViewTextBoxColumn63.Width = 200
         GridViewDecimalColumn39.EnableExpressionEditor = False
         GridViewDecimalColumn39.FieldName = "LOAD_PRESET"
         GridViewDecimalColumn39.FormatString = "{0:#,###}"
@@ -956,14 +956,14 @@ Partial Class Advisenote_Topup
         GridViewDecimalColumn40.MinWidth = 100
         GridViewDecimalColumn40.Name = "Weight in"
         GridViewDecimalColumn40.Width = 100
-        GridViewTextBoxColumn61.EnableExpressionEditor = False
-        GridViewTextBoxColumn61.FieldName = "STATUS_NAME"
-        GridViewTextBoxColumn61.HeaderText = "Loading Status"
-        GridViewTextBoxColumn61.IsAutoGenerated = True
-        GridViewTextBoxColumn61.MinWidth = 120
-        GridViewTextBoxColumn61.Name = "STATUS"
-        GridViewTextBoxColumn61.ReadOnly = True
-        GridViewTextBoxColumn61.Width = 120
+        GridViewTextBoxColumn64.EnableExpressionEditor = False
+        GridViewTextBoxColumn64.FieldName = "STATUS_NAME"
+        GridViewTextBoxColumn64.HeaderText = "Loading Status"
+        GridViewTextBoxColumn64.IsAutoGenerated = True
+        GridViewTextBoxColumn64.MinWidth = 120
+        GridViewTextBoxColumn64.Name = "STATUS"
+        GridViewTextBoxColumn64.ReadOnly = True
+        GridViewTextBoxColumn64.Width = 120
         GridViewDateTimeColumn4.EnableExpressionEditor = False
         GridViewDateTimeColumn4.FieldName = "ADDNOTEDATE"
         GridViewDateTimeColumn4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
@@ -974,22 +974,22 @@ Partial Class Advisenote_Topup
         GridViewDateTimeColumn4.Name = "ADDNOTEDATE"
         GridViewDateTimeColumn4.ReadOnly = True
         GridViewDateTimeColumn4.Width = 200
-        GridViewTextBoxColumn62.EnableExpressionEditor = False
-        GridViewTextBoxColumn62.FieldName = "LOAD_DOFULL"
-        GridViewTextBoxColumn62.HeaderText = "DO. No."
-        GridViewTextBoxColumn62.IsAutoGenerated = True
-        GridViewTextBoxColumn62.MinWidth = 120
-        GridViewTextBoxColumn62.Name = "LOAD_DOFULL"
-        GridViewTextBoxColumn62.ReadOnly = True
-        GridViewTextBoxColumn62.Width = 120
-        GridViewTextBoxColumn63.EnableExpressionEditor = False
-        GridViewTextBoxColumn63.FieldName = "PRODUCT_CODE"
-        GridViewTextBoxColumn63.HeaderText = "Product"
-        GridViewTextBoxColumn63.IsAutoGenerated = True
-        GridViewTextBoxColumn63.MinWidth = 150
-        GridViewTextBoxColumn63.Name = "PRODUCT_CODE"
-        GridViewTextBoxColumn63.ReadOnly = True
-        GridViewTextBoxColumn63.Width = 150
+        GridViewTextBoxColumn65.EnableExpressionEditor = False
+        GridViewTextBoxColumn65.FieldName = "LOAD_DOFULL"
+        GridViewTextBoxColumn65.HeaderText = "DO. No."
+        GridViewTextBoxColumn65.IsAutoGenerated = True
+        GridViewTextBoxColumn65.MinWidth = 120
+        GridViewTextBoxColumn65.Name = "LOAD_DOFULL"
+        GridViewTextBoxColumn65.ReadOnly = True
+        GridViewTextBoxColumn65.Width = 120
+        GridViewTextBoxColumn66.EnableExpressionEditor = False
+        GridViewTextBoxColumn66.FieldName = "PRODUCT_CODE"
+        GridViewTextBoxColumn66.HeaderText = "Product"
+        GridViewTextBoxColumn66.IsAutoGenerated = True
+        GridViewTextBoxColumn66.MinWidth = 150
+        GridViewTextBoxColumn66.Name = "PRODUCT_CODE"
+        GridViewTextBoxColumn66.ReadOnly = True
+        GridViewTextBoxColumn66.Width = 150
         GridViewDecimalColumn41.DecimalPlaces = 5
         GridViewDecimalColumn41.EnableExpressionEditor = True
         GridViewDecimalColumn41.FieldName = "LOAD_CAPACITY"
@@ -1000,14 +1000,14 @@ Partial Class Advisenote_Topup
         GridViewDecimalColumn41.Name = "LOAD_CAPACITY"
         GridViewDecimalColumn41.ReadOnly = True
         GridViewDecimalColumn41.Width = 95
-        GridViewTextBoxColumn64.EnableExpressionEditor = False
-        GridViewTextBoxColumn64.FieldName = "BATCH_NAME"
-        GridViewTextBoxColumn64.HeaderText = "Meter"
-        GridViewTextBoxColumn64.IsAutoGenerated = True
-        GridViewTextBoxColumn64.MinWidth = 90
-        GridViewTextBoxColumn64.Name = "BATCH_NAME"
-        GridViewTextBoxColumn64.ReadOnly = True
-        GridViewTextBoxColumn64.Width = 90
+        GridViewTextBoxColumn67.EnableExpressionEditor = False
+        GridViewTextBoxColumn67.FieldName = "BATCH_NAME"
+        GridViewTextBoxColumn67.HeaderText = "Meter"
+        GridViewTextBoxColumn67.IsAutoGenerated = True
+        GridViewTextBoxColumn67.MinWidth = 90
+        GridViewTextBoxColumn67.Name = "BATCH_NAME"
+        GridViewTextBoxColumn67.ReadOnly = True
+        GridViewTextBoxColumn67.Width = 90
         GridViewDecimalColumn42.EnableExpressionEditor = False
         GridViewDecimalColumn42.FieldName = "LOAD_SEALCOUNT"
         GridViewDecimalColumn42.HeaderText = "Total Seal"
@@ -1016,63 +1016,63 @@ Partial Class Advisenote_Topup
         GridViewDecimalColumn42.Name = "LOAD_SEALCOUNT"
         GridViewDecimalColumn42.ReadOnly = True
         GridViewDecimalColumn42.Width = 80
-        GridViewTextBoxColumn65.EnableExpressionEditor = False
-        GridViewTextBoxColumn65.FieldName = "LOAD_SEAL"
-        GridViewTextBoxColumn65.HeaderText = "Seal No."
-        GridViewTextBoxColumn65.IsAutoGenerated = True
-        GridViewTextBoxColumn65.MinWidth = 125
-        GridViewTextBoxColumn65.Name = "LOAD_SEAL"
-        GridViewTextBoxColumn65.ReadOnly = True
-        GridViewTextBoxColumn65.Width = 125
-        GridViewTextBoxColumn66.EnableExpressionEditor = False
-        GridViewTextBoxColumn66.FieldName = "LOAD_TRUCKCOMPANY"
-        GridViewTextBoxColumn66.HeaderText = "Truck's Company"
-        GridViewTextBoxColumn66.IsAutoGenerated = True
-        GridViewTextBoxColumn66.IsVisible = False
-        GridViewTextBoxColumn66.MinWidth = 200
-        GridViewTextBoxColumn66.Name = "LOAD_TRUCKCOMPANY"
-        GridViewTextBoxColumn66.ReadOnly = True
-        GridViewTextBoxColumn66.Width = 200
-        GridViewTextBoxColumn67.EnableExpressionEditor = False
-        GridViewTextBoxColumn67.FieldName = "CUSTOMER_NAME"
-        GridViewTextBoxColumn67.HeaderText = "Destination"
-        GridViewTextBoxColumn67.IsAutoGenerated = True
-        GridViewTextBoxColumn67.MinWidth = 250
-        GridViewTextBoxColumn67.Name = "CUSTOMER_NAME"
-        GridViewTextBoxColumn67.ReadOnly = True
-        GridViewTextBoxColumn67.Width = 250
         GridViewTextBoxColumn68.EnableExpressionEditor = False
-        GridViewTextBoxColumn68.FieldName = "LC_STARTTIME"
-        GridViewTextBoxColumn68.HeaderText = "Begin Loading"
+        GridViewTextBoxColumn68.FieldName = "LOAD_SEAL"
+        GridViewTextBoxColumn68.HeaderText = "Seal No."
         GridViewTextBoxColumn68.IsAutoGenerated = True
-        GridViewTextBoxColumn68.MinWidth = 90
-        GridViewTextBoxColumn68.Name = "LC_STARTTIME"
+        GridViewTextBoxColumn68.MinWidth = 125
+        GridViewTextBoxColumn68.Name = "LOAD_SEAL"
         GridViewTextBoxColumn68.ReadOnly = True
-        GridViewTextBoxColumn68.Width = 90
+        GridViewTextBoxColumn68.Width = 125
         GridViewTextBoxColumn69.EnableExpressionEditor = False
-        GridViewTextBoxColumn69.FieldName = "LC_ENDTIME"
-        GridViewTextBoxColumn69.HeaderText = "End Loading"
+        GridViewTextBoxColumn69.FieldName = "LOAD_TRUCKCOMPANY"
+        GridViewTextBoxColumn69.HeaderText = "Truck's Company"
         GridViewTextBoxColumn69.IsAutoGenerated = True
-        GridViewTextBoxColumn69.MinWidth = 90
-        GridViewTextBoxColumn69.Name = "LC_ENDTIME"
+        GridViewTextBoxColumn69.IsVisible = False
+        GridViewTextBoxColumn69.MinWidth = 200
+        GridViewTextBoxColumn69.Name = "LOAD_TRUCKCOMPANY"
         GridViewTextBoxColumn69.ReadOnly = True
-        GridViewTextBoxColumn69.Width = 90
-        GridViewTextBoxColumn70.DataType = GetType(Decimal)
+        GridViewTextBoxColumn69.Width = 200
         GridViewTextBoxColumn70.EnableExpressionEditor = False
-        GridViewTextBoxColumn70.FieldName = "load_id"
-        GridViewTextBoxColumn70.HeaderText = "Load No."
-        GridViewTextBoxColumn70.IsVisible = False
-        GridViewTextBoxColumn70.Name = "load_id"
-        Me.MasterGridAdvisenote_Topup.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn56, GridViewTextBoxColumn57, GridViewTextBoxColumn58, GridViewTextBoxColumn59, GridViewDecimalColumn38, GridViewTextBoxColumn60, GridViewDecimalColumn39, GridViewDecimalColumn40, GridViewTextBoxColumn61, GridViewDateTimeColumn4, GridViewTextBoxColumn62, GridViewTextBoxColumn63, GridViewDecimalColumn41, GridViewTextBoxColumn64, GridViewDecimalColumn42, GridViewTextBoxColumn65, GridViewTextBoxColumn66, GridViewTextBoxColumn67, GridViewTextBoxColumn68, GridViewTextBoxColumn69, GridViewTextBoxColumn70})
+        GridViewTextBoxColumn70.FieldName = "CUSTOMER_NAME"
+        GridViewTextBoxColumn70.HeaderText = "Destination"
+        GridViewTextBoxColumn70.IsAutoGenerated = True
+        GridViewTextBoxColumn70.MinWidth = 250
+        GridViewTextBoxColumn70.Name = "CUSTOMER_NAME"
+        GridViewTextBoxColumn70.ReadOnly = True
+        GridViewTextBoxColumn70.Width = 250
+        GridViewTextBoxColumn71.EnableExpressionEditor = False
+        GridViewTextBoxColumn71.FieldName = "LC_STARTTIME"
+        GridViewTextBoxColumn71.HeaderText = "Begin Loading"
+        GridViewTextBoxColumn71.IsAutoGenerated = True
+        GridViewTextBoxColumn71.MinWidth = 90
+        GridViewTextBoxColumn71.Name = "LC_STARTTIME"
+        GridViewTextBoxColumn71.ReadOnly = True
+        GridViewTextBoxColumn71.Width = 90
+        GridViewTextBoxColumn72.EnableExpressionEditor = False
+        GridViewTextBoxColumn72.FieldName = "LC_ENDTIME"
+        GridViewTextBoxColumn72.HeaderText = "End Loading"
+        GridViewTextBoxColumn72.IsAutoGenerated = True
+        GridViewTextBoxColumn72.MinWidth = 90
+        GridViewTextBoxColumn72.Name = "LC_ENDTIME"
+        GridViewTextBoxColumn72.ReadOnly = True
+        GridViewTextBoxColumn72.Width = 90
+        GridViewTextBoxColumn73.DataType = GetType(Decimal)
+        GridViewTextBoxColumn73.EnableExpressionEditor = False
+        GridViewTextBoxColumn73.FieldName = "load_id"
+        GridViewTextBoxColumn73.HeaderText = "Load No."
+        GridViewTextBoxColumn73.IsVisible = False
+        GridViewTextBoxColumn73.Name = "load_id"
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn59, GridViewTextBoxColumn60, GridViewTextBoxColumn61, GridViewTextBoxColumn62, GridViewDecimalColumn38, GridViewTextBoxColumn63, GridViewDecimalColumn39, GridViewDecimalColumn40, GridViewTextBoxColumn64, GridViewDateTimeColumn4, GridViewTextBoxColumn65, GridViewTextBoxColumn66, GridViewDecimalColumn41, GridViewTextBoxColumn67, GridViewDecimalColumn42, GridViewTextBoxColumn68, GridViewTextBoxColumn69, GridViewTextBoxColumn70, GridViewTextBoxColumn71, GridViewTextBoxColumn72, GridViewTextBoxColumn73})
         Me.MasterGridAdvisenote_Topup.MasterTemplate.DataSource = Me.V_LoadingnoteBindingSource
         Me.MasterGridAdvisenote_Topup.MasterTemplate.EnableCustomGrouping = True
         Me.MasterGridAdvisenote_Topup.MasterTemplate.EnableFiltering = True
         Me.MasterGridAdvisenote_Topup.MasterTemplate.EnableGrouping = False
         Me.MasterGridAdvisenote_Topup.MasterTemplate.ShowGroupedColumns = True
         Me.MasterGridAdvisenote_Topup.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor10.PropertyName = "REFERENCE"
-        Me.MasterGridAdvisenote_Topup.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor10})
-        Me.MasterGridAdvisenote_Topup.MasterTemplate.ViewDefinition = TableViewDefinition17
+        SortDescriptor12.PropertyName = "REFERENCE"
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor12})
+        Me.MasterGridAdvisenote_Topup.MasterTemplate.ViewDefinition = TableViewDefinition20
         Me.MasterGridAdvisenote_Topup.Name = "MasterGridAdvisenote_Topup"
         Me.MasterGridAdvisenote_Topup.ReadOnly = True
         Me.MasterGridAdvisenote_Topup.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1436,6 +1436,485 @@ Partial Class Advisenote_Topup
         Me.AdviseDetail_G.TabIndex = 304
         Me.AdviseDetail_G.Text = "Top up Details"
         Me.AdviseDetail_G.ThemeName = "Windows7"
+        '
+        'RadGroupBox8
+        '
+        Me.RadGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox8.Controls.Add(Me.WeightScal)
+        Me.RadGroupBox8.Controls.Add(Me.rtb_key_id)
+        Me.RadGroupBox8.Controls.Add(Me.chb_key_id)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel9)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel8)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel6)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel4)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel1)
+        Me.RadGroupBox8.Controls.Add(Me.EDW_Out)
+        Me.RadGroupBox8.Controls.Add(Me.RadGroupBox11)
+        Me.RadGroupBox8.Controls.Add(Me.EDW_IN)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel5)
+        Me.RadGroupBox8.Controls.Add(Me.EDW_NET)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel32)
+        Me.RadGroupBox8.Controls.Add(Me.RadLabel33)
+        Me.RadGroupBox8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadGroupBox8.ForeColor = System.Drawing.Color.Black
+        Me.RadGroupBox8.HeaderText = "WEIGHT :"
+        Me.RadGroupBox8.Location = New System.Drawing.Point(304, 21)
+        Me.RadGroupBox8.Name = "RadGroupBox8"
+        Me.RadGroupBox8.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
+        Me.RadGroupBox8.Size = New System.Drawing.Size(655, 331)
+        Me.RadGroupBox8.TabIndex = 2201
+        Me.RadGroupBox8.Text = "WEIGHT :"
+        Me.RadGroupBox8.ThemeName = "Breeze"
+        CType(Me.RadGroupBox8.GetChildAt(0), Telerik.WinControls.UI.RadGroupBoxElement).Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
+        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "WEIGHT :"
+        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
+        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'WeightScal
+        '
+        Me.WeightScal.AutoSize = False
+        Me.WeightScal.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.WeightScal.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.WeightScal.ForeColor = System.Drawing.Color.Lime
+        Me.WeightScal.Location = New System.Drawing.Point(129, 75)
+        Me.WeightScal.Margin = New System.Windows.Forms.Padding(0)
+        Me.WeightScal.Name = "WeightScal"
+        Me.WeightScal.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.WeightScal.Size = New System.Drawing.Size(158, 42)
+        Me.WeightScal.TabIndex = 8
+        Me.WeightScal.Text = "0"
+        Me.WeightScal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.WeightScal.ThemeName = "TelerikMetro"
+        '
+        'rtb_key_id
+        '
+        Me.rtb_key_id.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.rtb_key_id.Enabled = False
+        Me.rtb_key_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!)
+        Me.rtb_key_id.ForeColor = System.Drawing.Color.Lime
+        Me.rtb_key_id.Location = New System.Drawing.Point(129, 25)
+        Me.rtb_key_id.Name = "rtb_key_id"
+        Me.rtb_key_id.Size = New System.Drawing.Size(158, 42)
+        Me.rtb_key_id.TabIndex = 7
+        Me.rtb_key_id.Text = "#"
+        Me.rtb_key_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'chb_key_id
+        '
+        Me.chb_key_id.AutoSize = True
+        Me.chb_key_id.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.chb_key_id.Location = New System.Drawing.Point(6, 32)
+        Me.chb_key_id.Name = "chb_key_id"
+        Me.chb_key_id.Size = New System.Drawing.Size(117, 29)
+        Me.chb_key_id.TabIndex = 2218
+        Me.chb_key_id.Text = "Weight Id"
+        Me.chb_key_id.UseVisualStyleBackColor = True
+        '
+        'RadLabel9
+        '
+        Me.RadLabel9.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel9.ForeColor = System.Drawing.Color.Black
+        Me.RadLabel9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.RadLabel9.Location = New System.Drawing.Point(612, 129)
+        Me.RadLabel9.Name = "RadLabel9"
+        Me.RadLabel9.Size = New System.Drawing.Size(38, 29)
+        Me.RadLabel9.TabIndex = 2216
+        Me.RadLabel9.Text = "Kg."
+        Me.RadLabel9.ThemeName = "TelerikMetro"
+        '
+        'RadLabel8
+        '
+        Me.RadLabel8.AutoSize = False
+        Me.RadLabel8.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel8.ForeColor = System.Drawing.Color.Black
+        Me.RadLabel8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.RadLabel8.Location = New System.Drawing.Point(293, 81)
+        Me.RadLabel8.Name = "RadLabel8"
+        Me.RadLabel8.Size = New System.Drawing.Size(39, 31)
+        Me.RadLabel8.TabIndex = 2217
+        Me.RadLabel8.Text = "Kg."
+        Me.RadLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel8.ThemeName = "TelerikMetro"
+        '
+        'RadLabel6
+        '
+        Me.RadLabel6.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel6.ForeColor = System.Drawing.Color.Black
+        Me.RadLabel6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.RadLabel6.Location = New System.Drawing.Point(612, 80)
+        Me.RadLabel6.Name = "RadLabel6"
+        Me.RadLabel6.Size = New System.Drawing.Size(38, 29)
+        Me.RadLabel6.TabIndex = 2216
+        Me.RadLabel6.Text = "Kg."
+        Me.RadLabel6.ThemeName = "TelerikMetro"
+        '
+        'RadLabel4
+        '
+        Me.RadLabel4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel4.ForeColor = System.Drawing.Color.Black
+        Me.RadLabel4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.RadLabel4.Location = New System.Drawing.Point(612, 32)
+        Me.RadLabel4.Name = "RadLabel4"
+        Me.RadLabel4.Size = New System.Drawing.Size(38, 29)
+        Me.RadLabel4.TabIndex = 2215
+        Me.RadLabel4.Text = "Kg."
+        Me.RadLabel4.ThemeName = "TelerikMetro"
+        '
+        'RadLabel1
+        '
+        Me.RadLabel1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel1.Location = New System.Drawing.Point(5, 81)
+        Me.RadLabel1.Name = "RadLabel1"
+        Me.RadLabel1.Size = New System.Drawing.Size(118, 29)
+        Me.RadLabel1.TabIndex = 2214
+        Me.RadLabel1.Text = "Raw Weight"
+        Me.RadLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel1.ThemeName = "TelerikMetro"
+        '
+        'EDW_Out
+        '
+        Me.EDW_Out.BackColor = System.Drawing.Color.Black
+        Me.EDW_Out.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.EDW_Out.ForeColor = System.Drawing.Color.Lime
+        Me.EDW_Out.Location = New System.Drawing.Point(453, 78)
+        Me.EDW_Out.Name = "EDW_Out"
+        Me.EDW_Out.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.EDW_Out.Size = New System.Drawing.Size(156, 33)
+        Me.EDW_Out.TabIndex = 2212
+        Me.EDW_Out.Text = "0"
+        Me.EDW_Out.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.EDW_Out.ThemeName = "TelerikMetro"
+        '
+        'RadGroupBox11
+        '
+        Me.RadGroupBox11.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox11.Controls.Add(Me.W_Weightouttime)
+        Me.RadGroupBox11.Controls.Add(Me.RadButton16)
+        Me.RadGroupBox11.Controls.Add(Me.W_Weightintime)
+        Me.RadGroupBox11.Controls.Add(Me.RadButton3)
+        Me.RadGroupBox11.Controls.Add(Me.RadButton10)
+        Me.RadGroupBox11.Controls.Add(Me.RadLabel27)
+        Me.RadGroupBox11.Controls.Add(Me.RadLabel29)
+        Me.RadGroupBox11.Controls.Add(Me.UpdateWeightOut)
+        Me.RadGroupBox11.Controls.Add(Me.RadTextBox3)
+        Me.RadGroupBox11.Controls.Add(Me.LawWeightout)
+        Me.RadGroupBox11.Controls.Add(Me.RadLabel30)
+        Me.RadGroupBox11.Controls.Add(Me.RadLabel31)
+        Me.RadGroupBox11.Controls.Add(Me.RadLabel28)
+        Me.RadGroupBox11.Controls.Add(Me.LawWeightIn)
+        Me.RadGroupBox11.Controls.Add(Me.RadLabel26)
+        Me.RadGroupBox11.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadGroupBox11.HeaderText = "WEIGHT LOG :"
+        Me.RadGroupBox11.Location = New System.Drawing.Point(7, 166)
+        Me.RadGroupBox11.Name = "RadGroupBox11"
+        Me.RadGroupBox11.Size = New System.Drawing.Size(634, 153)
+        Me.RadGroupBox11.TabIndex = 10
+        Me.RadGroupBox11.Text = "WEIGHT LOG :"
+        Me.RadGroupBox11.ThemeName = "Breeze"
+        '
+        'W_Weightouttime
+        '
+        Me.W_Weightouttime.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.W_Weightouttime.AutoSize = False
+        Me.W_Weightouttime.Font = New System.Drawing.Font("Segoe UI", 8.25!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.W_Weightouttime.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.W_Weightouttime.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.W_Weightouttime.Location = New System.Drawing.Point(136, 127)
+        Me.W_Weightouttime.Name = "W_Weightouttime"
+        Me.W_Weightouttime.Size = New System.Drawing.Size(156, 16)
+        Me.W_Weightouttime.TabIndex = 2211
+        Me.W_Weightouttime.Text = "dd/mm/yyyy hh:mm:ss"
+        Me.W_Weightouttime.ThemeName = "TelerikMetro"
+        '
+        'RadButton16
+        '
+        Me.RadButton16.Controls.Add(Me.RadButton17)
+        Me.RadButton16.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.RadButton16.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.RadButton16.ForeColor = System.Drawing.Color.White
+        Me.RadButton16.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.weight_in_A
+        Me.RadButton16.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton16.Location = New System.Drawing.Point(333, 20)
+        Me.RadButton16.Name = "RadButton16"
+        Me.RadButton16.Size = New System.Drawing.Size(129, 49)
+        Me.RadButton16.TabIndex = 1
+        Me.RadButton16.Text = "Weight in"
+        Me.RadButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RadButton16.TextWrap = True
+        Me.RadButton16.ThemeName = "Breeze"
+        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.weight_in_A
+        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight in"
+        '
+        'RadButton17
+        '
+        Me.RadButton17.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.RadButton17.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton17.ForeColor = System.Drawing.Color.White
+        Me.RadButton17.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
+        Me.RadButton17.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton17.Location = New System.Drawing.Point(554, 311)
+        Me.RadButton17.Name = "RadButton17"
+        Me.RadButton17.Size = New System.Drawing.Size(132, 49)
+        Me.RadButton17.TabIndex = 20
+        Me.RadButton17.Text = "Save"
+        Me.RadButton17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RadButton17.ThemeName = "Breeze"
+        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
+        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
+        '
+        'W_Weightintime
+        '
+        Me.W_Weightintime.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.W_Weightintime.AutoSize = False
+        Me.W_Weightintime.Font = New System.Drawing.Font("Segoe UI", 8.25!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.W_Weightintime.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.W_Weightintime.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.W_Weightintime.Location = New System.Drawing.Point(136, 64)
+        Me.W_Weightintime.Name = "W_Weightintime"
+        Me.W_Weightintime.Size = New System.Drawing.Size(156, 16)
+        Me.W_Weightintime.TabIndex = 2210
+        Me.W_Weightintime.Text = "03/03/2021 00:03:00"
+        Me.W_Weightintime.ThemeName = "TelerikMetro"
+        '
+        'RadButton3
+        '
+        Me.RadButton3.Controls.Add(Me.RadButton6)
+        Me.RadButton3.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.RadButton3.ForeColor = System.Drawing.Color.White
+        Me.RadButton3.Image = CType(resources.GetObject("RadButton3.Image"), System.Drawing.Image)
+        Me.RadButton3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton3.Location = New System.Drawing.Point(333, 83)
+        Me.RadButton3.Name = "RadButton3"
+        Me.RadButton3.Size = New System.Drawing.Size(129, 49)
+        Me.RadButton3.TabIndex = 2
+        Me.RadButton3.Text = "Weight out"
+        Me.RadButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RadButton3.TextWrap = True
+        Me.RadButton3.ThemeName = "Breeze"
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight out"
+        '
+        'RadButton6
+        '
+        Me.RadButton6.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.RadButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton6.ForeColor = System.Drawing.Color.White
+        Me.RadButton6.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
+        Me.RadButton6.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton6.Location = New System.Drawing.Point(554, 311)
+        Me.RadButton6.Name = "RadButton6"
+        Me.RadButton6.Size = New System.Drawing.Size(132, 49)
+        Me.RadButton6.TabIndex = 20
+        Me.RadButton6.Text = "Save"
+        Me.RadButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RadButton6.ThemeName = "Breeze"
+        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
+        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
+        '
+        'RadButton10
+        '
+        Me.RadButton10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton10.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton10.Location = New System.Drawing.Point(353, 171)
+        Me.RadButton10.Name = "RadButton10"
+        Me.RadButton10.Size = New System.Drawing.Size(34, 10)
+        Me.RadButton10.TabIndex = 2150
+        Me.RadButton10.ThemeName = "TelerikMetro"
+        '
+        'RadLabel27
+        '
+        Me.RadLabel27.Location = New System.Drawing.Point(102, 148)
+        Me.RadLabel27.Name = "RadLabel27"
+        Me.RadLabel27.Size = New System.Drawing.Size(61, 18)
+        Me.RadLabel27.TabIndex = 2130
+        Me.RadLabel27.Text = "Update In :"
+        Me.RadLabel27.ThemeName = "TelerikMetro"
+        '
+        'RadLabel29
+        '
+        Me.RadLabel29.Controls.Add(Me.RadLabel39)
+        Me.RadLabel29.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.RadLabel29.Location = New System.Drawing.Point(302, 98)
+        Me.RadLabel29.Name = "RadLabel29"
+        Me.RadLabel29.Size = New System.Drawing.Size(22, 19)
+        Me.RadLabel29.TabIndex = 2149
+        Me.RadLabel29.Text = "Kg"
+        Me.RadLabel29.ThemeName = "TelerikMetro"
+        '
+        'RadLabel39
+        '
+        Me.RadLabel39.Location = New System.Drawing.Point(23, 2)
+        Me.RadLabel39.Name = "RadLabel39"
+        Me.RadLabel39.Size = New System.Drawing.Size(60, 18)
+        Me.RadLabel39.TabIndex = 2130
+        Me.RadLabel39.Text = "Weight In :"
+        Me.RadLabel39.ThemeName = "TelerikMetro"
+        '
+        'UpdateWeightOut
+        '
+        Me.UpdateWeightOut.Enabled = False
+        Me.UpdateWeightOut.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UpdateWeightOut.Location = New System.Drawing.Point(182, 175)
+        Me.UpdateWeightOut.Name = "UpdateWeightOut"
+        Me.UpdateWeightOut.Size = New System.Drawing.Size(164, 21)
+        Me.UpdateWeightOut.TabIndex = 2147
+        Me.UpdateWeightOut.ThemeName = "TelerikMetro"
+        '
+        'RadTextBox3
+        '
+        Me.RadTextBox3.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.RadTextBox3.Enabled = False
+        Me.RadTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.RadTextBox3.ForeColor = System.Drawing.Color.Lime
+        Me.RadTextBox3.Location = New System.Drawing.Point(476, 55)
+        Me.RadTextBox3.Name = "RadTextBox3"
+        Me.RadTextBox3.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.RadTextBox3.Size = New System.Drawing.Size(158, 39)
+        Me.RadTextBox3.TabIndex = 0
+        Me.RadTextBox3.Text = "1"
+        Me.RadTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.RadTextBox3.ThemeName = "Breeze"
+        Me.RadTextBox3.Visible = False
+        '
+        'LawWeightout
+        '
+        Me.LawWeightout.Enabled = False
+        Me.LawWeightout.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LawWeightout.Location = New System.Drawing.Point(136, 94)
+        Me.LawWeightout.Name = "LawWeightout"
+        Me.LawWeightout.Size = New System.Drawing.Size(156, 26)
+        Me.LawWeightout.TabIndex = 2145
+        Me.LawWeightout.ThemeName = "Breeze"
+        '
+        'RadLabel30
+        '
+        Me.RadLabel30.Location = New System.Drawing.Point(105, 178)
+        Me.RadLabel30.Name = "RadLabel30"
+        Me.RadLabel30.Size = New System.Drawing.Size(70, 18)
+        Me.RadLabel30.TabIndex = 2148
+        Me.RadLabel30.Text = "Update Out :"
+        Me.RadLabel30.ThemeName = "TelerikMetro"
+        '
+        'RadLabel31
+        '
+        Me.RadLabel31.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.RadLabel31.Location = New System.Drawing.Point(43, 98)
+        Me.RadLabel31.Name = "RadLabel31"
+        Me.RadLabel31.Size = New System.Drawing.Size(83, 19)
+        Me.RadLabel31.TabIndex = 2146
+        Me.RadLabel31.Text = "Weight Out :"
+        Me.RadLabel31.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel31.ThemeName = "TelerikMetro"
+        '
+        'RadLabel28
+        '
+        Me.RadLabel28.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.RadLabel28.Location = New System.Drawing.Point(302, 35)
+        Me.RadLabel28.Name = "RadLabel28"
+        Me.RadLabel28.Size = New System.Drawing.Size(22, 19)
+        Me.RadLabel28.TabIndex = 7
+        Me.RadLabel28.Text = "Kg"
+        Me.RadLabel28.ThemeName = "TelerikMetro"
+        '
+        'LawWeightIn
+        '
+        Me.LawWeightIn.Enabled = False
+        Me.LawWeightIn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LawWeightIn.Location = New System.Drawing.Point(136, 31)
+        Me.LawWeightIn.Name = "LawWeightIn"
+        Me.LawWeightIn.Size = New System.Drawing.Size(156, 26)
+        Me.LawWeightIn.TabIndex = 3
+        Me.LawWeightIn.ThemeName = "Breeze"
+        '
+        'RadLabel26
+        '
+        Me.RadLabel26.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.RadLabel26.Location = New System.Drawing.Point(52, 35)
+        Me.RadLabel26.Name = "RadLabel26"
+        Me.RadLabel26.Size = New System.Drawing.Size(74, 19)
+        Me.RadLabel26.TabIndex = 2128
+        Me.RadLabel26.Text = "Weight In :"
+        Me.RadLabel26.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel26.ThemeName = "TelerikMetro"
+        '
+        'EDW_IN
+        '
+        Me.EDW_IN.BackColor = System.Drawing.Color.Black
+        Me.EDW_IN.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.EDW_IN.ForeColor = System.Drawing.Color.Lime
+        Me.EDW_IN.Location = New System.Drawing.Point(453, 30)
+        Me.EDW_IN.Name = "EDW_IN"
+        Me.EDW_IN.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.EDW_IN.Size = New System.Drawing.Size(156, 33)
+        Me.EDW_IN.TabIndex = 2208
+        Me.EDW_IN.Text = "0"
+        Me.EDW_IN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.EDW_IN.ThemeName = "TelerikMetro"
+        CType(Me.EDW_IN.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Text = "0"
+        CType(Me.EDW_IN.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        '
+        'RadLabel5
+        '
+        Me.RadLabel5.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel5.Location = New System.Drawing.Point(338, 129)
+        Me.RadLabel5.Name = "RadLabel5"
+        Me.RadLabel5.Size = New System.Drawing.Size(109, 29)
+        Me.RadLabel5.TabIndex = 2204
+        Me.RadLabel5.Text = "Net weight"
+        Me.RadLabel5.ThemeName = "TelerikMetro"
+        '
+        'EDW_NET
+        '
+        Me.EDW_NET.BackColor = System.Drawing.Color.Black
+        Me.EDW_NET.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.EDW_NET.ForeColor = System.Drawing.Color.Lime
+        Me.EDW_NET.Location = New System.Drawing.Point(453, 127)
+        Me.EDW_NET.Name = "EDW_NET"
+        Me.EDW_NET.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.EDW_NET.Size = New System.Drawing.Size(156, 33)
+        Me.EDW_NET.TabIndex = 2200
+        Me.EDW_NET.Text = "0"
+        Me.EDW_NET.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.EDW_NET.ThemeName = "TelerikMetro"
+        '
+        'RadLabel32
+        '
+        Me.RadLabel32.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel32.Location = New System.Drawing.Point(350, 32)
+        Me.RadLabel32.Name = "RadLabel32"
+        Me.RadLabel32.Size = New System.Drawing.Size(97, 29)
+        Me.RadLabel32.TabIndex = 2201
+        Me.RadLabel32.Text = "Weight in"
+        Me.RadLabel32.ThemeName = "TelerikMetro"
+        '
+        'RadLabel33
+        '
+        Me.RadLabel33.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.RadLabel33.Location = New System.Drawing.Point(336, 80)
+        Me.RadLabel33.Name = "RadLabel33"
+        Me.RadLabel33.Size = New System.Drawing.Size(111, 29)
+        Me.RadLabel33.TabIndex = 2202
+        Me.RadLabel33.Text = "Weight out"
+        Me.RadLabel33.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadLabel33.TextWrap = False
+        Me.RadLabel33.ThemeName = "TelerikMetro"
         '
         'load_q
         '
@@ -1877,10 +2356,10 @@ Partial Class Advisenote_Topup
         Me.GroupProduct.Controls.Add(Me.Bsave)
         Me.GroupProduct.Controls.Add(Me.RadGroupBox4)
         Me.GroupProduct.Controls.Add(Me.RadGroupBox3)
+        Me.GroupProduct.Controls.Add(Me.Update)
         Me.GroupProduct.Controls.Add(Me.RadGroupBox2)
         Me.GroupProduct.Controls.Add(Me.RadGroupBox1)
         Me.GroupProduct.Controls.Add(Me.Label49)
-        Me.GroupProduct.Controls.Add(Me.Update)
         Me.GroupProduct.Controls.Add(Me.BCancel)
         Me.GroupProduct.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupProduct.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
@@ -2019,25 +2498,25 @@ Partial Class Advisenote_Topup
         Me.Meterlistbox.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.Meterlistbox.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Meterlistbox.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn71.EnableExpressionEditor = False
-        GridViewTextBoxColumn71.FieldName = "BATCH_NAME"
-        GridViewTextBoxColumn71.HeaderText = "Meter Name"
-        GridViewTextBoxColumn71.IsAutoGenerated = True
-        GridViewTextBoxColumn71.MaxWidth = 120
-        GridViewTextBoxColumn71.MinWidth = 120
-        GridViewTextBoxColumn71.Name = "BATCH_NAME"
-        GridViewTextBoxColumn71.ReadOnly = True
-        GridViewTextBoxColumn71.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn71.Width = 120
-        Me.Meterlistbox.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn71})
+        GridViewTextBoxColumn48.EnableExpressionEditor = False
+        GridViewTextBoxColumn48.FieldName = "BATCH_NAME"
+        GridViewTextBoxColumn48.HeaderText = "Meter Name"
+        GridViewTextBoxColumn48.IsAutoGenerated = True
+        GridViewTextBoxColumn48.MaxWidth = 120
+        GridViewTextBoxColumn48.MinWidth = 120
+        GridViewTextBoxColumn48.Name = "BATCH_NAME"
+        GridViewTextBoxColumn48.ReadOnly = True
+        GridViewTextBoxColumn48.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn48.Width = 120
+        Me.Meterlistbox.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn48})
         Me.Meterlistbox.EditorControl.MasterTemplate.DataSource = Me.TBatchmeterBindingSource
         Me.Meterlistbox.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Meterlistbox.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Meterlistbox.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Meterlistbox.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor11.PropertyName = "BATCH_NAME"
-        Me.Meterlistbox.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor11})
-        Me.Meterlistbox.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition18
+        SortDescriptor8.PropertyName = "BATCH_NAME"
+        Me.Meterlistbox.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor8})
+        Me.Meterlistbox.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition14
         Me.Meterlistbox.EditorControl.Name = "NestedRadGridView"
         Me.Meterlistbox.EditorControl.ReadOnly = True
         Me.Meterlistbox.EditorControl.ShowGroupPanel = False
@@ -2150,7 +2629,7 @@ Partial Class Advisenote_Topup
         Me.Bay.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Bay.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Bay.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        Me.Bay.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition19
+        Me.Bay.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition15
         Me.Bay.EditorControl.Name = "NestedRadGridView"
         Me.Bay.EditorControl.ReadOnly = True
         Me.Bay.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2245,32 +2724,32 @@ Partial Class Advisenote_Topup
         Me.Product.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Product.EditorControl.MasterTemplate.AutoGenerateColumns = False
         Me.Product.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn72.EnableExpressionEditor = False
-        GridViewTextBoxColumn72.FieldName = "PRODUCT_CODE"
-        GridViewTextBoxColumn72.HeaderText = "PRODUCT-CODE"
-        GridViewTextBoxColumn72.IsAutoGenerated = True
-        GridViewTextBoxColumn72.MinWidth = 100
-        GridViewTextBoxColumn72.Name = "PRODUCT_CODE"
-        GridViewTextBoxColumn72.ReadOnly = True
-        GridViewTextBoxColumn72.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn72.Width = 120
-        GridViewTextBoxColumn73.EnableExpressionEditor = False
-        GridViewTextBoxColumn73.FieldName = "PRODUCT_NAME"
-        GridViewTextBoxColumn73.HeaderText = "PRODUCT-NAME"
-        GridViewTextBoxColumn73.IsAutoGenerated = True
-        GridViewTextBoxColumn73.MinWidth = 100
-        GridViewTextBoxColumn73.Name = "PRODUCT_NAME"
-        GridViewTextBoxColumn73.ReadOnly = True
-        GridViewTextBoxColumn73.Width = 120
-        Me.Product.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn72, GridViewTextBoxColumn73})
+        GridViewTextBoxColumn49.EnableExpressionEditor = False
+        GridViewTextBoxColumn49.FieldName = "PRODUCT_CODE"
+        GridViewTextBoxColumn49.HeaderText = "PRODUCT-CODE"
+        GridViewTextBoxColumn49.IsAutoGenerated = True
+        GridViewTextBoxColumn49.MinWidth = 100
+        GridViewTextBoxColumn49.Name = "PRODUCT_CODE"
+        GridViewTextBoxColumn49.ReadOnly = True
+        GridViewTextBoxColumn49.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn49.Width = 120
+        GridViewTextBoxColumn50.EnableExpressionEditor = False
+        GridViewTextBoxColumn50.FieldName = "PRODUCT_NAME"
+        GridViewTextBoxColumn50.HeaderText = "PRODUCT-NAME"
+        GridViewTextBoxColumn50.IsAutoGenerated = True
+        GridViewTextBoxColumn50.MinWidth = 100
+        GridViewTextBoxColumn50.Name = "PRODUCT_NAME"
+        GridViewTextBoxColumn50.ReadOnly = True
+        GridViewTextBoxColumn50.Width = 120
+        Me.Product.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn49, GridViewTextBoxColumn50})
         Me.Product.EditorControl.MasterTemplate.DataSource = Me.TProductBindingSource
         Me.Product.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Product.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Product.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Product.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor12.PropertyName = "PRODUCT_CODE"
-        Me.Product.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor12})
-        Me.Product.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition20
+        SortDescriptor9.PropertyName = "PRODUCT_CODE"
+        Me.Product.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor9})
+        Me.Product.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition16
         Me.Product.EditorControl.Name = "NestedRadGridView"
         Me.Product.EditorControl.ReadOnly = True
         Me.Product.EditorControl.ShowGroupPanel = False
@@ -2478,33 +2957,33 @@ Partial Class Advisenote_Topup
         Me.EdCustomer.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.EdCustomer.EditorControl.MasterTemplate.AutoGenerateColumns = False
         Me.EdCustomer.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn48.AllowResize = False
-        GridViewTextBoxColumn48.EnableExpressionEditor = False
-        GridViewTextBoxColumn48.FieldName = "CUSTOMER_CODE"
-        GridViewTextBoxColumn48.HeaderText = "Destination Code"
-        GridViewTextBoxColumn48.IsAutoGenerated = True
-        GridViewTextBoxColumn48.MinWidth = 210
-        GridViewTextBoxColumn48.Name = "CUSTOMER_CODE"
-        GridViewTextBoxColumn48.ReadOnly = True
-        GridViewTextBoxColumn48.Width = 210
-        GridViewTextBoxColumn49.AllowResize = False
-        GridViewTextBoxColumn49.EnableExpressionEditor = False
-        GridViewTextBoxColumn49.FieldName = "CUSTOMER_NAME"
-        GridViewTextBoxColumn49.HeaderText = "Destination Name"
-        GridViewTextBoxColumn49.IsAutoGenerated = True
-        GridViewTextBoxColumn49.MinWidth = 210
-        GridViewTextBoxColumn49.Name = "CUSTOMER_NAME"
-        GridViewTextBoxColumn49.ReadOnly = True
-        GridViewTextBoxColumn49.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn49.Width = 210
-        Me.EdCustomer.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn48, GridViewTextBoxColumn49})
+        GridViewTextBoxColumn51.AllowResize = False
+        GridViewTextBoxColumn51.EnableExpressionEditor = False
+        GridViewTextBoxColumn51.FieldName = "CUSTOMER_CODE"
+        GridViewTextBoxColumn51.HeaderText = "Destination Code"
+        GridViewTextBoxColumn51.IsAutoGenerated = True
+        GridViewTextBoxColumn51.MinWidth = 210
+        GridViewTextBoxColumn51.Name = "CUSTOMER_CODE"
+        GridViewTextBoxColumn51.ReadOnly = True
+        GridViewTextBoxColumn51.Width = 210
+        GridViewTextBoxColumn52.AllowResize = False
+        GridViewTextBoxColumn52.EnableExpressionEditor = False
+        GridViewTextBoxColumn52.FieldName = "CUSTOMER_NAME"
+        GridViewTextBoxColumn52.HeaderText = "Destination Name"
+        GridViewTextBoxColumn52.IsAutoGenerated = True
+        GridViewTextBoxColumn52.MinWidth = 210
+        GridViewTextBoxColumn52.Name = "CUSTOMER_NAME"
+        GridViewTextBoxColumn52.ReadOnly = True
+        GridViewTextBoxColumn52.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn52.Width = 210
+        Me.EdCustomer.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn51, GridViewTextBoxColumn52})
         Me.EdCustomer.EditorControl.MasterTemplate.DataSource = Me.TCUSTOMERTBindingSource
         Me.EdCustomer.EditorControl.MasterTemplate.EnableFiltering = True
         Me.EdCustomer.EditorControl.MasterTemplate.EnableGrouping = False
         Me.EdCustomer.EditorControl.MasterTemplate.ShowFilteringRow = False
-        SortDescriptor8.PropertyName = "CUSTOMER_NAME"
-        Me.EdCustomer.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor8})
-        Me.EdCustomer.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition14
+        SortDescriptor10.PropertyName = "CUSTOMER_NAME"
+        Me.EdCustomer.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor10})
+        Me.EdCustomer.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition17
         Me.EdCustomer.EditorControl.Name = "NestedRadGridView"
         Me.EdCustomer.EditorControl.ReadOnly = True
         Me.EdCustomer.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2647,47 +3126,47 @@ Partial Class Advisenote_Topup
         Me.Driver.EditorControl.MasterTemplate.AllowDeleteRow = False
         Me.Driver.EditorControl.MasterTemplate.AllowEditRow = False
         Me.Driver.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn50.EnableExpressionEditor = False
-        GridViewTextBoxColumn50.FieldName = "Driver_Number"
-        GridViewTextBoxColumn50.HeaderText = "DriverNumber"
-        GridViewTextBoxColumn50.IsVisible = False
-        GridViewTextBoxColumn50.Name = "DriverNumber"
-        GridViewTextBoxColumn50.ReadOnly = True
-        GridViewTextBoxColumn50.Width = 135
-        GridViewTextBoxColumn51.EnableExpressionEditor = False
-        GridViewTextBoxColumn51.FieldName = "DRIVER_NAME"
-        GridViewTextBoxColumn51.HeaderText = "First Name"
-        GridViewTextBoxColumn51.IsAutoGenerated = True
-        GridViewTextBoxColumn51.MinWidth = 200
-        GridViewTextBoxColumn51.Name = "DRIVER_NAME"
-        GridViewTextBoxColumn51.ReadOnly = True
-        GridViewTextBoxColumn51.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
-        GridViewTextBoxColumn51.Width = 200
-        GridViewTextBoxColumn52.EnableExpressionEditor = False
-        GridViewTextBoxColumn52.FieldName = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn52.HeaderText = "Last Name"
-        GridViewTextBoxColumn52.IsAutoGenerated = True
-        GridViewTextBoxColumn52.MinWidth = 200
-        GridViewTextBoxColumn52.Name = "DRIVER_LASTNAME"
-        GridViewTextBoxColumn52.ReadOnly = True
-        GridViewTextBoxColumn52.Width = 200
         GridViewTextBoxColumn53.EnableExpressionEditor = False
-        GridViewTextBoxColumn53.FieldName = "DRIVER_LICENSE"
-        GridViewTextBoxColumn53.HeaderText = "License No."
-        GridViewTextBoxColumn53.IsAutoGenerated = True
+        GridViewTextBoxColumn53.FieldName = "Driver_Number"
+        GridViewTextBoxColumn53.HeaderText = "DriverNumber"
         GridViewTextBoxColumn53.IsVisible = False
-        GridViewTextBoxColumn53.Name = "DRIVER_LICENSE"
+        GridViewTextBoxColumn53.Name = "DriverNumber"
         GridViewTextBoxColumn53.ReadOnly = True
-        GridViewTextBoxColumn53.Width = 131
-        Me.Driver.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn50, GridViewTextBoxColumn51, GridViewTextBoxColumn52, GridViewTextBoxColumn53})
+        GridViewTextBoxColumn53.Width = 135
+        GridViewTextBoxColumn54.EnableExpressionEditor = False
+        GridViewTextBoxColumn54.FieldName = "DRIVER_NAME"
+        GridViewTextBoxColumn54.HeaderText = "First Name"
+        GridViewTextBoxColumn54.IsAutoGenerated = True
+        GridViewTextBoxColumn54.MinWidth = 200
+        GridViewTextBoxColumn54.Name = "DRIVER_NAME"
+        GridViewTextBoxColumn54.ReadOnly = True
+        GridViewTextBoxColumn54.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending
+        GridViewTextBoxColumn54.Width = 200
+        GridViewTextBoxColumn55.EnableExpressionEditor = False
+        GridViewTextBoxColumn55.FieldName = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn55.HeaderText = "Last Name"
+        GridViewTextBoxColumn55.IsAutoGenerated = True
+        GridViewTextBoxColumn55.MinWidth = 200
+        GridViewTextBoxColumn55.Name = "DRIVER_LASTNAME"
+        GridViewTextBoxColumn55.ReadOnly = True
+        GridViewTextBoxColumn55.Width = 200
+        GridViewTextBoxColumn56.EnableExpressionEditor = False
+        GridViewTextBoxColumn56.FieldName = "DRIVER_LICENSE"
+        GridViewTextBoxColumn56.HeaderText = "License No."
+        GridViewTextBoxColumn56.IsAutoGenerated = True
+        GridViewTextBoxColumn56.IsVisible = False
+        GridViewTextBoxColumn56.Name = "DRIVER_LICENSE"
+        GridViewTextBoxColumn56.ReadOnly = True
+        GridViewTextBoxColumn56.Width = 131
+        Me.Driver.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn53, GridViewTextBoxColumn54, GridViewTextBoxColumn55, GridViewTextBoxColumn56})
         Me.Driver.EditorControl.MasterTemplate.DataSource = Me.TDriverBindingSource
         Me.Driver.EditorControl.MasterTemplate.EnableFiltering = True
         Me.Driver.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Driver.EditorControl.MasterTemplate.ShowFilteringRow = False
         Me.Driver.EditorControl.MasterTemplate.ShowRowHeaderColumn = False
-        SortDescriptor9.PropertyName = "DRIVER_NAME"
-        Me.Driver.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor9})
-        Me.Driver.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition15
+        SortDescriptor11.PropertyName = "DRIVER_NAME"
+        Me.Driver.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor11})
+        Me.Driver.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition18
         Me.Driver.EditorControl.Name = "NestedRadGridView"
         Me.Driver.EditorControl.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.Driver.EditorControl.ReadOnly = True
@@ -3078,25 +3557,25 @@ Partial Class Advisenote_Topup
         Me.Cbn3.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.Cbn3.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.Cbn3.EditorControl.MasterTemplate.AutoGenerateColumns = False
-        GridViewTextBoxColumn54.EnableExpressionEditor = False
-        GridViewTextBoxColumn54.FieldName = "COMPANY_CODE"
-        GridViewTextBoxColumn54.HeaderText = "Company Code"
-        GridViewTextBoxColumn54.IsAutoGenerated = True
-        GridViewTextBoxColumn54.MinWidth = 163
-        GridViewTextBoxColumn54.Name = "COMPANY_CODE"
-        GridViewTextBoxColumn54.Width = 200
-        GridViewTextBoxColumn55.EnableExpressionEditor = False
-        GridViewTextBoxColumn55.FieldName = "COMPANY_NAME"
-        GridViewTextBoxColumn55.HeaderText = "Company Name"
-        GridViewTextBoxColumn55.IsAutoGenerated = True
-        GridViewTextBoxColumn55.MinWidth = 200
-        GridViewTextBoxColumn55.Name = "COMPANY_NAME"
-        GridViewTextBoxColumn55.Width = 200
-        Me.Cbn3.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn54, GridViewTextBoxColumn55})
+        GridViewTextBoxColumn57.EnableExpressionEditor = False
+        GridViewTextBoxColumn57.FieldName = "COMPANY_CODE"
+        GridViewTextBoxColumn57.HeaderText = "Company Code"
+        GridViewTextBoxColumn57.IsAutoGenerated = True
+        GridViewTextBoxColumn57.MinWidth = 163
+        GridViewTextBoxColumn57.Name = "COMPANY_CODE"
+        GridViewTextBoxColumn57.Width = 200
+        GridViewTextBoxColumn58.EnableExpressionEditor = False
+        GridViewTextBoxColumn58.FieldName = "COMPANY_NAME"
+        GridViewTextBoxColumn58.HeaderText = "Company Name"
+        GridViewTextBoxColumn58.IsAutoGenerated = True
+        GridViewTextBoxColumn58.MinWidth = 200
+        GridViewTextBoxColumn58.Name = "COMPANY_NAME"
+        GridViewTextBoxColumn58.Width = 200
+        Me.Cbn3.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn57, GridViewTextBoxColumn58})
         Me.Cbn3.EditorControl.MasterTemplate.DataSource = Me.TCompanyBindingSource
         Me.Cbn3.EditorControl.MasterTemplate.EnableGrouping = False
         Me.Cbn3.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.Cbn3.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition16
+        Me.Cbn3.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition19
         Me.Cbn3.EditorControl.Name = "NestedRadGridView"
         Me.Cbn3.EditorControl.ReadOnly = True
         Me.Cbn3.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -5812,485 +6291,6 @@ Partial Class Advisenote_Topup
         'Timer2
         '
         '
-        'RadGroupBox8
-        '
-        Me.RadGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox8.Controls.Add(Me.WeightScal)
-        Me.RadGroupBox8.Controls.Add(Me.rtb_key_id)
-        Me.RadGroupBox8.Controls.Add(Me.chb_key_id)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel9)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel8)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel6)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel4)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel1)
-        Me.RadGroupBox8.Controls.Add(Me.EDW_Out)
-        Me.RadGroupBox8.Controls.Add(Me.RadGroupBox11)
-        Me.RadGroupBox8.Controls.Add(Me.EDW_IN)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel5)
-        Me.RadGroupBox8.Controls.Add(Me.EDW_NET)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel32)
-        Me.RadGroupBox8.Controls.Add(Me.RadLabel33)
-        Me.RadGroupBox8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadGroupBox8.ForeColor = System.Drawing.Color.Black
-        Me.RadGroupBox8.HeaderText = "WEIGHT :"
-        Me.RadGroupBox8.Location = New System.Drawing.Point(304, 21)
-        Me.RadGroupBox8.Name = "RadGroupBox8"
-        Me.RadGroupBox8.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
-        Me.RadGroupBox8.Size = New System.Drawing.Size(655, 331)
-        Me.RadGroupBox8.TabIndex = 2201
-        Me.RadGroupBox8.Text = "WEIGHT :"
-        Me.RadGroupBox8.ThemeName = "Breeze"
-        CType(Me.RadGroupBox8.GetChildAt(0), Telerik.WinControls.UI.RadGroupBoxElement).Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
-        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.Primitives.FillPrimitive).Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "WEIGHT :"
-        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
-        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        CType(Me.RadGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'WeightScal
-        '
-        Me.WeightScal.AutoSize = False
-        Me.WeightScal.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.WeightScal.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.WeightScal.ForeColor = System.Drawing.Color.Lime
-        Me.WeightScal.Location = New System.Drawing.Point(129, 75)
-        Me.WeightScal.Margin = New System.Windows.Forms.Padding(0)
-        Me.WeightScal.Name = "WeightScal"
-        Me.WeightScal.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.WeightScal.Size = New System.Drawing.Size(158, 42)
-        Me.WeightScal.TabIndex = 8
-        Me.WeightScal.Text = "0"
-        Me.WeightScal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.WeightScal.ThemeName = "TelerikMetro"
-        '
-        'rtb_key_id
-        '
-        Me.rtb_key_id.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.rtb_key_id.Enabled = False
-        Me.rtb_key_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!)
-        Me.rtb_key_id.ForeColor = System.Drawing.Color.Lime
-        Me.rtb_key_id.Location = New System.Drawing.Point(129, 25)
-        Me.rtb_key_id.Name = "rtb_key_id"
-        Me.rtb_key_id.Size = New System.Drawing.Size(158, 42)
-        Me.rtb_key_id.TabIndex = 7
-        Me.rtb_key_id.Text = "#"
-        Me.rtb_key_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'chb_key_id
-        '
-        Me.chb_key_id.AutoSize = True
-        Me.chb_key_id.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.chb_key_id.Location = New System.Drawing.Point(6, 32)
-        Me.chb_key_id.Name = "chb_key_id"
-        Me.chb_key_id.Size = New System.Drawing.Size(117, 29)
-        Me.chb_key_id.TabIndex = 2218
-        Me.chb_key_id.Text = "Weight Id"
-        Me.chb_key_id.UseVisualStyleBackColor = True
-        '
-        'RadLabel9
-        '
-        Me.RadLabel9.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel9.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.RadLabel9.Location = New System.Drawing.Point(612, 129)
-        Me.RadLabel9.Name = "RadLabel9"
-        Me.RadLabel9.Size = New System.Drawing.Size(38, 29)
-        Me.RadLabel9.TabIndex = 2216
-        Me.RadLabel9.Text = "Kg."
-        Me.RadLabel9.ThemeName = "TelerikMetro"
-        '
-        'RadLabel8
-        '
-        Me.RadLabel8.AutoSize = False
-        Me.RadLabel8.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel8.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.RadLabel8.Location = New System.Drawing.Point(293, 81)
-        Me.RadLabel8.Name = "RadLabel8"
-        Me.RadLabel8.Size = New System.Drawing.Size(39, 31)
-        Me.RadLabel8.TabIndex = 2217
-        Me.RadLabel8.Text = "Kg."
-        Me.RadLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabel8.ThemeName = "TelerikMetro"
-        '
-        'RadLabel6
-        '
-        Me.RadLabel6.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel6.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.RadLabel6.Location = New System.Drawing.Point(612, 80)
-        Me.RadLabel6.Name = "RadLabel6"
-        Me.RadLabel6.Size = New System.Drawing.Size(38, 29)
-        Me.RadLabel6.TabIndex = 2216
-        Me.RadLabel6.Text = "Kg."
-        Me.RadLabel6.ThemeName = "TelerikMetro"
-        '
-        'RadLabel4
-        '
-        Me.RadLabel4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel4.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.RadLabel4.Location = New System.Drawing.Point(612, 32)
-        Me.RadLabel4.Name = "RadLabel4"
-        Me.RadLabel4.Size = New System.Drawing.Size(38, 29)
-        Me.RadLabel4.TabIndex = 2215
-        Me.RadLabel4.Text = "Kg."
-        Me.RadLabel4.ThemeName = "TelerikMetro"
-        '
-        'RadLabel1
-        '
-        Me.RadLabel1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel1.Location = New System.Drawing.Point(5, 81)
-        Me.RadLabel1.Name = "RadLabel1"
-        Me.RadLabel1.Size = New System.Drawing.Size(118, 29)
-        Me.RadLabel1.TabIndex = 2214
-        Me.RadLabel1.Text = "Raw Weight"
-        Me.RadLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabel1.ThemeName = "TelerikMetro"
-        '
-        'EDW_Out
-        '
-        Me.EDW_Out.BackColor = System.Drawing.Color.Black
-        Me.EDW_Out.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.EDW_Out.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_Out.Location = New System.Drawing.Point(453, 78)
-        Me.EDW_Out.Name = "EDW_Out"
-        Me.EDW_Out.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.EDW_Out.Size = New System.Drawing.Size(156, 33)
-        Me.EDW_Out.TabIndex = 2212
-        Me.EDW_Out.Text = "0"
-        Me.EDW_Out.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.EDW_Out.ThemeName = "TelerikMetro"
-        '
-        'RadGroupBox11
-        '
-        Me.RadGroupBox11.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox11.Controls.Add(Me.W_Weightouttime)
-        Me.RadGroupBox11.Controls.Add(Me.RadButton16)
-        Me.RadGroupBox11.Controls.Add(Me.W_Weightintime)
-        Me.RadGroupBox11.Controls.Add(Me.RadButton3)
-        Me.RadGroupBox11.Controls.Add(Me.RadButton10)
-        Me.RadGroupBox11.Controls.Add(Me.RadLabel27)
-        Me.RadGroupBox11.Controls.Add(Me.RadLabel29)
-        Me.RadGroupBox11.Controls.Add(Me.UpdateWeightOut)
-        Me.RadGroupBox11.Controls.Add(Me.RadTextBox3)
-        Me.RadGroupBox11.Controls.Add(Me.LawWeightout)
-        Me.RadGroupBox11.Controls.Add(Me.RadLabel30)
-        Me.RadGroupBox11.Controls.Add(Me.RadLabel31)
-        Me.RadGroupBox11.Controls.Add(Me.RadLabel28)
-        Me.RadGroupBox11.Controls.Add(Me.LawWeightIn)
-        Me.RadGroupBox11.Controls.Add(Me.RadLabel26)
-        Me.RadGroupBox11.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadGroupBox11.HeaderText = "WEIGHT LOG :"
-        Me.RadGroupBox11.Location = New System.Drawing.Point(7, 166)
-        Me.RadGroupBox11.Name = "RadGroupBox11"
-        Me.RadGroupBox11.Size = New System.Drawing.Size(634, 153)
-        Me.RadGroupBox11.TabIndex = 10
-        Me.RadGroupBox11.Text = "WEIGHT LOG :"
-        Me.RadGroupBox11.ThemeName = "Breeze"
-        '
-        'W_Weightouttime
-        '
-        Me.W_Weightouttime.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.W_Weightouttime.AutoSize = False
-        Me.W_Weightouttime.Font = New System.Drawing.Font("Segoe UI", 8.25!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
-                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.W_Weightouttime.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.W_Weightouttime.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.W_Weightouttime.Location = New System.Drawing.Point(136, 127)
-        Me.W_Weightouttime.Name = "W_Weightouttime"
-        Me.W_Weightouttime.Size = New System.Drawing.Size(156, 16)
-        Me.W_Weightouttime.TabIndex = 2211
-        Me.W_Weightouttime.Text = "dd/mm/yyyy hh:mm:ss"
-        Me.W_Weightouttime.ThemeName = "TelerikMetro"
-        '
-        'RadButton16
-        '
-        Me.RadButton16.Controls.Add(Me.RadButton17)
-        Me.RadButton16.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton16.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton16.ForeColor = System.Drawing.Color.White
-        Me.RadButton16.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.weight_in_A
-        Me.RadButton16.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton16.Location = New System.Drawing.Point(333, 20)
-        Me.RadButton16.Name = "RadButton16"
-        Me.RadButton16.Size = New System.Drawing.Size(129, 49)
-        Me.RadButton16.TabIndex = 1
-        Me.RadButton16.Text = "Weight in"
-        Me.RadButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton16.TextWrap = True
-        Me.RadButton16.ThemeName = "Breeze"
-        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.weight_in_A
-        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton16.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight in"
-        '
-        'RadButton17
-        '
-        Me.RadButton17.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton17.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton17.ForeColor = System.Drawing.Color.White
-        Me.RadButton17.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        Me.RadButton17.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton17.Location = New System.Drawing.Point(554, 311)
-        Me.RadButton17.Name = "RadButton17"
-        Me.RadButton17.Size = New System.Drawing.Size(132, 49)
-        Me.RadButton17.TabIndex = 20
-        Me.RadButton17.Text = "Save"
-        Me.RadButton17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton17.ThemeName = "Breeze"
-        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton17.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
-        '
-        'W_Weightintime
-        '
-        Me.W_Weightintime.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.W_Weightintime.AutoSize = False
-        Me.W_Weightintime.Font = New System.Drawing.Font("Segoe UI", 8.25!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
-                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.W_Weightintime.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.W_Weightintime.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.W_Weightintime.Location = New System.Drawing.Point(136, 64)
-        Me.W_Weightintime.Name = "W_Weightintime"
-        Me.W_Weightintime.Size = New System.Drawing.Size(156, 16)
-        Me.W_Weightintime.TabIndex = 2210
-        Me.W_Weightintime.Text = "03/03/2021 00:03:00"
-        Me.W_Weightintime.ThemeName = "TelerikMetro"
-        '
-        'RadButton3
-        '
-        Me.RadButton3.Controls.Add(Me.RadButton6)
-        Me.RadButton3.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.RadButton3.ForeColor = System.Drawing.Color.White
-        Me.RadButton3.Image = CType(resources.GetObject("RadButton3.Image"), System.Drawing.Image)
-        Me.RadButton3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton3.Location = New System.Drawing.Point(333, 83)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(129, 49)
-        Me.RadButton3.TabIndex = 2
-        Me.RadButton3.Text = "Weight out"
-        Me.RadButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton3.TextWrap = True
-        Me.RadButton3.ThemeName = "Breeze"
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Weight out"
-        '
-        'RadButton6
-        '
-        Me.RadButton6.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.RadButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton6.ForeColor = System.Drawing.Color.White
-        Me.RadButton6.Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        Me.RadButton6.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton6.Location = New System.Drawing.Point(554, 311)
-        Me.RadButton6.Name = "RadButton6"
-        Me.RadButton6.Size = New System.Drawing.Size(132, 49)
-        Me.RadButton6.TabIndex = 20
-        Me.RadButton6.Text = "Save"
-        Me.RadButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton6.ThemeName = "Breeze"
-        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.RadControlsWinFormsApp1.My.Resources.Resources.save__2_
-        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButton6.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
-        '
-        'RadButton10
-        '
-        Me.RadButton10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton10.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton10.Location = New System.Drawing.Point(353, 171)
-        Me.RadButton10.Name = "RadButton10"
-        Me.RadButton10.Size = New System.Drawing.Size(34, 10)
-        Me.RadButton10.TabIndex = 2150
-        Me.RadButton10.ThemeName = "TelerikMetro"
-        '
-        'RadLabel27
-        '
-        Me.RadLabel27.Location = New System.Drawing.Point(102, 148)
-        Me.RadLabel27.Name = "RadLabel27"
-        Me.RadLabel27.Size = New System.Drawing.Size(61, 18)
-        Me.RadLabel27.TabIndex = 2130
-        Me.RadLabel27.Text = "Update In :"
-        Me.RadLabel27.ThemeName = "TelerikMetro"
-        '
-        'RadLabel29
-        '
-        Me.RadLabel29.Controls.Add(Me.RadLabel39)
-        Me.RadLabel29.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.RadLabel29.Location = New System.Drawing.Point(302, 98)
-        Me.RadLabel29.Name = "RadLabel29"
-        Me.RadLabel29.Size = New System.Drawing.Size(22, 19)
-        Me.RadLabel29.TabIndex = 2149
-        Me.RadLabel29.Text = "Kg"
-        Me.RadLabel29.ThemeName = "TelerikMetro"
-        '
-        'RadLabel39
-        '
-        Me.RadLabel39.Location = New System.Drawing.Point(23, 2)
-        Me.RadLabel39.Name = "RadLabel39"
-        Me.RadLabel39.Size = New System.Drawing.Size(60, 18)
-        Me.RadLabel39.TabIndex = 2130
-        Me.RadLabel39.Text = "Weight In :"
-        Me.RadLabel39.ThemeName = "TelerikMetro"
-        '
-        'UpdateWeightOut
-        '
-        Me.UpdateWeightOut.Enabled = False
-        Me.UpdateWeightOut.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateWeightOut.Location = New System.Drawing.Point(182, 175)
-        Me.UpdateWeightOut.Name = "UpdateWeightOut"
-        Me.UpdateWeightOut.Size = New System.Drawing.Size(164, 21)
-        Me.UpdateWeightOut.TabIndex = 2147
-        Me.UpdateWeightOut.ThemeName = "TelerikMetro"
-        '
-        'RadTextBox3
-        '
-        Me.RadTextBox3.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.RadTextBox3.Enabled = False
-        Me.RadTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.RadTextBox3.ForeColor = System.Drawing.Color.Lime
-        Me.RadTextBox3.Location = New System.Drawing.Point(476, 55)
-        Me.RadTextBox3.Name = "RadTextBox3"
-        Me.RadTextBox3.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.RadTextBox3.Size = New System.Drawing.Size(158, 39)
-        Me.RadTextBox3.TabIndex = 0
-        Me.RadTextBox3.Text = "1"
-        Me.RadTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.RadTextBox3.ThemeName = "Breeze"
-        Me.RadTextBox3.Visible = False
-        '
-        'LawWeightout
-        '
-        Me.LawWeightout.Enabled = False
-        Me.LawWeightout.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LawWeightout.Location = New System.Drawing.Point(136, 94)
-        Me.LawWeightout.Name = "LawWeightout"
-        Me.LawWeightout.Size = New System.Drawing.Size(156, 26)
-        Me.LawWeightout.TabIndex = 2145
-        Me.LawWeightout.ThemeName = "Breeze"
-        '
-        'RadLabel30
-        '
-        Me.RadLabel30.Location = New System.Drawing.Point(105, 178)
-        Me.RadLabel30.Name = "RadLabel30"
-        Me.RadLabel30.Size = New System.Drawing.Size(70, 18)
-        Me.RadLabel30.TabIndex = 2148
-        Me.RadLabel30.Text = "Update Out :"
-        Me.RadLabel30.ThemeName = "TelerikMetro"
-        '
-        'RadLabel31
-        '
-        Me.RadLabel31.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.RadLabel31.Location = New System.Drawing.Point(43, 98)
-        Me.RadLabel31.Name = "RadLabel31"
-        Me.RadLabel31.Size = New System.Drawing.Size(83, 19)
-        Me.RadLabel31.TabIndex = 2146
-        Me.RadLabel31.Text = "Weight Out :"
-        Me.RadLabel31.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabel31.ThemeName = "TelerikMetro"
-        '
-        'RadLabel28
-        '
-        Me.RadLabel28.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.RadLabel28.Location = New System.Drawing.Point(302, 35)
-        Me.RadLabel28.Name = "RadLabel28"
-        Me.RadLabel28.Size = New System.Drawing.Size(22, 19)
-        Me.RadLabel28.TabIndex = 7
-        Me.RadLabel28.Text = "Kg"
-        Me.RadLabel28.ThemeName = "TelerikMetro"
-        '
-        'LawWeightIn
-        '
-        Me.LawWeightIn.Enabled = False
-        Me.LawWeightIn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LawWeightIn.Location = New System.Drawing.Point(136, 31)
-        Me.LawWeightIn.Name = "LawWeightIn"
-        Me.LawWeightIn.Size = New System.Drawing.Size(156, 26)
-        Me.LawWeightIn.TabIndex = 3
-        Me.LawWeightIn.ThemeName = "Breeze"
-        '
-        'RadLabel26
-        '
-        Me.RadLabel26.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.RadLabel26.Location = New System.Drawing.Point(52, 35)
-        Me.RadLabel26.Name = "RadLabel26"
-        Me.RadLabel26.Size = New System.Drawing.Size(74, 19)
-        Me.RadLabel26.TabIndex = 2128
-        Me.RadLabel26.Text = "Weight In :"
-        Me.RadLabel26.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabel26.ThemeName = "TelerikMetro"
-        '
-        'EDW_IN
-        '
-        Me.EDW_IN.BackColor = System.Drawing.Color.Black
-        Me.EDW_IN.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.EDW_IN.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_IN.Location = New System.Drawing.Point(453, 30)
-        Me.EDW_IN.Name = "EDW_IN"
-        Me.EDW_IN.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.EDW_IN.Size = New System.Drawing.Size(156, 33)
-        Me.EDW_IN.TabIndex = 2208
-        Me.EDW_IN.Text = "0"
-        Me.EDW_IN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.EDW_IN.ThemeName = "TelerikMetro"
-        CType(Me.EDW_IN.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Text = "0"
-        CType(Me.EDW_IN.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        '
-        'RadLabel5
-        '
-        Me.RadLabel5.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel5.Location = New System.Drawing.Point(338, 129)
-        Me.RadLabel5.Name = "RadLabel5"
-        Me.RadLabel5.Size = New System.Drawing.Size(109, 29)
-        Me.RadLabel5.TabIndex = 2204
-        Me.RadLabel5.Text = "Net weight"
-        Me.RadLabel5.ThemeName = "TelerikMetro"
-        '
-        'EDW_NET
-        '
-        Me.EDW_NET.BackColor = System.Drawing.Color.Black
-        Me.EDW_NET.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.EDW_NET.ForeColor = System.Drawing.Color.Lime
-        Me.EDW_NET.Location = New System.Drawing.Point(453, 127)
-        Me.EDW_NET.Name = "EDW_NET"
-        Me.EDW_NET.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.EDW_NET.Size = New System.Drawing.Size(156, 33)
-        Me.EDW_NET.TabIndex = 2200
-        Me.EDW_NET.Text = "0"
-        Me.EDW_NET.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.EDW_NET.ThemeName = "TelerikMetro"
-        '
-        'RadLabel32
-        '
-        Me.RadLabel32.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel32.Location = New System.Drawing.Point(350, 32)
-        Me.RadLabel32.Name = "RadLabel32"
-        Me.RadLabel32.Size = New System.Drawing.Size(97, 29)
-        Me.RadLabel32.TabIndex = 2201
-        Me.RadLabel32.Text = "Weight in"
-        Me.RadLabel32.ThemeName = "TelerikMetro"
-        '
-        'RadLabel33
-        '
-        Me.RadLabel33.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.RadLabel33.Location = New System.Drawing.Point(336, 80)
-        Me.RadLabel33.Name = "RadLabel33"
-        Me.RadLabel33.Size = New System.Drawing.Size(111, 29)
-        Me.RadLabel33.TabIndex = 2202
-        Me.RadLabel33.Text = "Weight out"
-        Me.RadLabel33.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabel33.TextWrap = False
-        Me.RadLabel33.ThemeName = "TelerikMetro"
-        '
         'Advisenote_Topup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -6344,6 +6344,47 @@ Partial Class Advisenote_Topup
         CType(Me.AdviseDetail_G, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AdviseDetail_G.ResumeLayout(False)
         Me.AdviseDetail_G.PerformLayout()
+        CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox8.ResumeLayout(False)
+        Me.RadGroupBox8.PerformLayout()
+        CType(Me.WeightScal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rtb_key_id, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EDW_Out, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox11.ResumeLayout(False)
+        Me.RadGroupBox11.PerformLayout()
+        CType(Me.W_Weightouttime, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton16, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadButton16.ResumeLayout(False)
+        CType(Me.RadButton17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.W_Weightintime, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadButton3.ResumeLayout(False)
+        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadLabel29.ResumeLayout(False)
+        Me.RadLabel29.PerformLayout()
+        CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UpdateWeightOut, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LawWeightout, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LawWeightIn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EDW_IN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EDW_NET, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.load_q, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6604,47 +6645,6 @@ Partial Class Advisenote_Topup
         CType(Me.Edit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VLoading_StatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TTruckBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox8.ResumeLayout(False)
-        Me.RadGroupBox8.PerformLayout()
-        CType(Me.WeightScal, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rtb_key_id, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EDW_Out, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox11.ResumeLayout(False)
-        Me.RadGroupBox11.PerformLayout()
-        CType(Me.W_Weightouttime, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton16, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadButton16.ResumeLayout(False)
-        CType(Me.RadButton17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.W_Weightintime, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadButton3.ResumeLayout(False)
-        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadLabel29.ResumeLayout(False)
-        Me.RadLabel29.PerformLayout()
-        CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UpdateWeightOut, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LawWeightout, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LawWeightIn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EDW_IN, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EDW_NET, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

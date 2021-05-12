@@ -5,7 +5,9 @@ Public Class ReportBOL
     Private cls As New Class_SQLSERVERDB
 
     Dim Memory As MemoryManagement.Manage
-    Dim Reftopup As String = ""
+    Dim Reftopup, Refadvisenote As String
+    Dim W_InTime1, W_InTime2, W_outTime1, W_outTime2 As String
+    Dim Raw_weightIN1, Raw_weightIN2, Raw_weightout1, Raw_weightout2 As Double
 
     Private Sub RadButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BClose.Click
         Me.Close()
@@ -20,13 +22,40 @@ Public Class ReportBOL
             'q = "select Count(LOAD_DOFULL) as reftotal,LOAD_DOFULL,min(REFERENCE) as Ref,max(REFERENCE) as Ref2 " &
             '    ",Cast(min (REFERENCE) as Varchar) + ' , ' +  Cast(max (REFERENCE) as Varchar) as INT1 " &
 
-            q = "select reference,load_dofull from T_LOADINGNOTE where load_dofull= '" & loaddo & "' order by reference"
+            q = "select left(CONVERT(time, Weightin_time, 114 ),8) AS Weightin_time2, "
+            q &= " left(convert(time, Weightout_time, 114),8) as Weightout_time2, "
+            q &= " * from T_LOADINGNOTE where load_dofull= '" & loaddo & "'  and load_status in(3,4) order by reference"
 
             Dim dt As DataTable = cls.Query(q)
 
             If dt.Rows.Count > 1 Then
 
-                Reftopup = dt.Rows(0).Item("reference").ToString & " , " & dt.Rows(1).Item("reference").ToString
+                Reftopup = ""
+                Refadvisenote = ""
+
+                Refadvisenote = dt.Rows(0).Item("reference").ToString '& " , " & dt.Rows(1).Item("reference").ToString
+
+                Reftopup = dt.Rows(1).Item("reference").ToString
+
+
+                Raw_weightIN1 = CDbl(dt.Rows(0).Item("Raw_Weight_in").ToString)
+                Raw_weightIN2 = CDbl(dt.Rows(1).Item("Raw_Weight_in").ToString)
+                Raw_weightout1 = CDbl(dt.Rows(0).Item("Raw_Weight_out").ToString)
+                Raw_weightout2 = CInt(dt.Rows(1).Item("Raw_Weight_out").ToString)
+
+                W_InTime1 = dt.Rows(0).Item("Weightin_time2").ToString
+                'W_InTime1 = Format((dt.Rows(0).Item("Weightin_time").ToString), "hh:mm:ss")
+                '("{0:HH:mm:ss}",thisDate2)
+                'W_InTime1 = W_InTime1.ToString.Format(W_InTime1.ToString, "HH:MM:SS")
+                'String.Format("{0:MM/dd/yyyy HH:mm:ss}"
+
+
+                ' W_InTime2 = String.Format("{0:HH:mm:ss}", dt.Rows(1).Item("Weightin_time").ToString)
+                W_InTime2 = dt.Rows(1).Item("Weightin_time2").ToString
+                W_outTime1 = dt.Rows(0).Item("Weightout_time2").ToString
+                W_outTime2 = dt.Rows(1).Item("Weightout_time2").ToString
+
+
                 combine_report()
             Else
                 Dim Myreport As New ReportDocument
@@ -37,6 +66,7 @@ Public Class ReportBOL
                 'sql &= "max(Avg_temp_m1) as Avg_temp_m1,max(load_dofull) as load_dofull,max(addnotedate) as addnotedate,min(Q_time) as Q_time,min(Checkin_time) as Checkin_time,max(VCF_M1) as VCF_M1,max(Density30C_M1) as Density30C_M1,max(DO_TYPE) as DO_TYPE,max(Product_name) as Product_name,"
                 'sql &= "max(LC_Seal) as LC_Seal,MAX(lc_additive) as Lc_additive,max(checkout_time) as checkout_time "
                 'sql &= " from v_bol_m1m2_new where reference='" & ref & "' group by Reference,Lc_Compartment order by reference,Lc_Compartment"
+
 
                 sql = "Select max(CUSTOMER_NAME) As INT1,"
                 sql &= "Case MAX(Container) When NULL Then MAX (TRUCK_NUMBER) When '' THEN MAX (TRUCK_NUMBER) ELSE MAX (Container) + '/ ' + MAX (TRUCK_NUMBER) END AS INT2,"
@@ -59,8 +89,8 @@ Public Class ReportBOL
                 sql &= "max(DATE_END) As DT8,"
                 sql &= "min(WEIGHTIN_TIME) As DT6,"
                 sql &= "max(WEIGHTOUT_TIME) As DT9,"
-                sql &= "sum(RAW_WEIGHT_IN) As F8,"
-                sql &= "sum(RAW_WEIGHT_OUT) As F9 "
+                sql &= "Min(RAW_WEIGHT_IN) As F8,"
+                sql &= "max(RAW_WEIGHT_OUT) As F9 "
                 sql &= "FROM(Select * FROM T_LOADINGNOTE WHERE reference= '" & ref & "' ) T_LOADINGNOTE "
                 sql &= "Left Join (select * from T_LOADINGNOTECOMPARTMENT where lc_status in(2,3,4)) T_LOADINGNOTECOMPARTMENT On T_LOADINGNOTE.LOAD_ID = T_LOADINGNOTECOMPARTMENT.LC_LOAD "
                 sql &= "Left Join T_TRUCK On T_LOADINGNOTE.LOAD_VEHICLE = T_TRUCK.ID "
@@ -72,6 +102,7 @@ Public Class ReportBOL
                 sql &= "Left Join T_LOG_BATCH_DATA On T_LOADINGNOTECOMPARTMENT.LC_ID = T_LOG_BATCH_DATA.LC_ID "
                 sql &= "Group BY Reference, Lc_Compartment "
                 sql &= "ORDER BY reference, Lc_Compartment "
+
 
 
                 Dim MyDataSet As New DataSet
@@ -195,7 +226,7 @@ Public Class ReportBOL
         Try
             RadTextBox1.Text = RadCalendar1.SelectedDate  'RadCalendar1
             Dim sql As String
-            sql = "Select REFERENCE as REFERENCE,REFERENCE As INT1,isnull(Driver_NAME, '' ) + '  ' + isnull(Driver_Lastname, '' ) AS ST1,TRUCK_NUMBER As INT2,LOAD_DATE As DT1,LOAD_CARD As INT3,load_dofull as INT4  "
+            sql = "Select REFERENCE as REFERENCE,REFERENCE As INT1,isnull(Driver_NAME, '' ) + '  ' + isnull(Driver_Lastname, '' ) AS ST1,TRUCK_NUMBER As T_LOADINGNOTECOMPARTMENT,LOAD_DATE As DT1,LOAD_CARD As INT3,load_dofull as INT4  "
             sql &= "FROM (SELECT * FROM T_LOADINGNOTE WHERE (DAY(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Day & "' and MONTH(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Month & "' and YEAR(LOAD_DATE) = '" & RadCalendar1.SelectedDate.Year & "' ) and LOAD_STATUS in (3,4)) T_LOADINGNOTE "
             sql &= "Left join T_STATUS On T_STATUS.STATUS_ID = T_LOADINGNOTE.LOAD_STATUS "
             sql &= "Left Join T_TRUCK on T_LOADINGNOTE.LOAD_VEHICLE = T_TRUCK.ID "
@@ -230,19 +261,60 @@ Public Class ReportBOL
     End Sub
 
     Sub combine_report()
-        Dim ref, sql, loaddo As String
+        Dim ref, sql, loaddo, Ref_bol As String
         ref = MasterGrid.CurrentRow.Cells("reference").Value.ToString
         loaddo = MasterGrid.CurrentRow.Cells("INT4").Value.ToString
         Dim Myreport As New ReportDocument
         Myreport = New ReportDocument
-        sql = "Select max(CUSTOMER_NAME) As INT1,'" & Reftopup.ToString & "' as INT4,"
+
+        Ref_bol = Refadvisenote.ToString & " ," & Reftopup.ToString
+
+
+        'sql = "Select max(CUSTOMER_NAME) As INT1,'" & refbol.ToString & "' as INT4,"
+        ''sql = "Select max(CUSTOMER_NAME) As INT1,'" & Reftopup.ToString & "' as INT4,"
+        'sql &= "Case MAX(Container) When NULL Then MAX (TRUCK_NUMBER) When '' THEN MAX (TRUCK_NUMBER) ELSE MAX (Container) + '/ ' + MAX (TRUCK_NUMBER) END AS T_LOADINGNOTECOMPARTMENT,"
+        'sql &= "max(PRODUCT_CODE) As ST2,"
+        'sql &= "max(ADDNOTEDATE) As DT1,"
+        'sql &= "isnull(MAX(Driver_NAME), '' ) + '  ' + isnull( MAX (Driver_Lastname), '' ) AS ST1,"
+        'sql &= "max(REFERENCE) As INT3, "
+        'sql &= "max(LOAD_SEAL) As ST4,"
+        'sql &= "max(DATE_START) As DT2,"
+        'sql &= "max(LC_COMPARTMENT) As INT5,"
+        'sql &= "max(LOADDO) As INT6,"
+        'sql &= "max(BATCH_NAME) As ST3,"
+        'sql &= "cast(max(T_LOADINGNOTECOMPARTMENT.LC_PRESET) as float) As F2,"
+        'sql &= "sum(MASS) As F3,"
+        'sql &= "sum(GROSS_M1) As F4,"
+        'sql &= "max(AVG_TEMP) As F5,"
+        'sql &= "max(AVERAGE_DATA_SPECIFIED_BY_PARAMETER_N21041) As F6,"
+        'sql &= "max(METER_FACTOR) As F7,"
+        'sql &= "min(DATE_START) As DT7,"
+        'sql &= "max(DATE_END) As DT8,"
+        'sql &= "min(WEIGHTIN_TIME) As DT6,"
+        'sql &= "max(WEIGHTOUT_TIME) As DT9,"
+        'sql &= "Min(RAW_WEIGHT_IN) As F8,"
+        'sql &= "Max(RAW_WEIGHT_OUT) As F9 "
+        'sql &= "FROM(Select * FROM T_LOADINGNOTE WHERE load_dofull= '" & loaddo & "' ) T_LOADINGNOTE "
+        'sql &= "Left Join (select * from T_LOADINGNOTECOMPARTMENT where lc_status in(2,3,4)) T_LOADINGNOTECOMPARTMENT On T_LOADINGNOTE.LOAD_ID = T_LOADINGNOTECOMPARTMENT.LC_LOAD "
+        'sql &= "Left Join T_TRUCK On T_LOADINGNOTE.LOAD_VEHICLE = T_TRUCK.ID "
+        'sql &= "Left Join T_CUSTOMER On T_LOADINGNOTE.LOAD_CUSTOMER = T_CUSTOMER.ID "
+        'sql &= "Left Join T_DRIVER On T_LOADINGNOTE.LOAD_DRIVER = T_DRIVER.ID "
+        'sql &= "Left Join T_CARD On T_LOADINGNOTE.LOAD_CARD = T_CARD.CARD_NUMBER "
+        'sql &= "Left Join  T_BATCHMETER on T_LOADINGNOTECOMPARTMENT.LC_METER = T_BATCHMETER.ID "
+        'sql &= "Left Join T_PRODUCT On T_LOADINGNOTECOMPARTMENT.LC_PRO = T_PRODUCT.ID "
+        'sql &= "Left Join T_LOG_BATCH_DATA On T_LOADINGNOTECOMPARTMENT.LC_ID = T_LOG_BATCH_DATA.LC_ID "
+        'sql &= "Group BY Reference, Lc_Compartment "
+        'sql &= "ORDER BY reference, Lc_Compartment "
+
+        sql = "Select max(CUSTOMER_NAME) As INT1,"
+
         sql &= "Case MAX(Container) When NULL Then MAX (TRUCK_NUMBER) When '' THEN MAX (TRUCK_NUMBER) ELSE MAX (Container) + '/ ' + MAX (TRUCK_NUMBER) END AS INT2,"
         sql &= "max(PRODUCT_CODE) As ST2,"
         sql &= "max(ADDNOTEDATE) As DT1,"
         sql &= "isnull(MAX(Driver_NAME), '' ) + '  ' + isnull( MAX (Driver_Lastname), '' ) AS ST1,"
         sql &= "max(REFERENCE) As INT3, "
         sql &= "max(LOAD_SEAL) As ST4,"
-        sql &= "max(DATE_START) As DT2,"
+        'sql &= "max(DATE_START) As DT2,"
         sql &= "max(LC_COMPARTMENT) As INT5,"
         sql &= "max(LOADDO) As INT6,"
         sql &= "max(BATCH_NAME) As ST3,"
@@ -254,11 +326,15 @@ Public Class ReportBOL
         sql &= "max(METER_FACTOR) As F7,"
         sql &= "min(DATE_START) As DT7,"
         sql &= "max(DATE_END) As DT8,"
-        sql &= "min(WEIGHTIN_TIME) As DT6,"
-        sql &= "max(WEIGHTOUT_TIME) As DT9,"
-        sql &= "Min(RAW_WEIGHT_IN) As F8,"
-        sql &= "Max(RAW_WEIGHT_OUT) As F9 "
-        sql &= "FROM(Select * FROM T_LOADINGNOTE WHERE load_dofull= '" & loaddo & "' ) T_LOADINGNOTE "
+        'W_InTime1, W_InTime2, W_outTime1, W_outTime2,
+        'Raw_weightIN1, Raw_weightIN2, Raw_weightout1, Raw_weightout2
+        sql &= "'" & Refadvisenote.ToString & "' as INT7,'" & Reftopup.ToString & " ( Top up )' as INT8,'" & Ref_bol.ToString & " ( Top up )' as INT4,"
+        sql &= "'" & W_InTime1.ToString & "'  As DT6,'" & W_outTime1.ToString & "' As DT9,"
+        sql &= "'" & W_InTime2.ToString & "'  As DT2,'" & W_outTime2.ToString & "' As DT3,"
+        sql &= "" & Raw_weightIN1 & " As F8," & Raw_weightout1 & "  As F9,"
+        sql &= "" & Raw_weightIN2 & " As F10," & Raw_weightout2 & "   As F11 "
+
+        sql &= "FROM (Select * FROM T_LOADINGNOTE WHERE load_dofull= '" & loaddo & "' and load_status in(3,4) ) T_LOADINGNOTE  "
         sql &= "Left Join (select * from T_LOADINGNOTECOMPARTMENT where lc_status in(2,3,4)) T_LOADINGNOTECOMPARTMENT On T_LOADINGNOTE.LOAD_ID = T_LOADINGNOTECOMPARTMENT.LC_LOAD "
         sql &= "Left Join T_TRUCK On T_LOADINGNOTE.LOAD_VEHICLE = T_TRUCK.ID "
         sql &= "Left Join T_CUSTOMER On T_LOADINGNOTE.LOAD_CUSTOMER = T_CUSTOMER.ID "
@@ -270,13 +346,13 @@ Public Class ReportBOL
         sql &= "Group BY Reference, Lc_Compartment "
         sql &= "ORDER BY reference, Lc_Compartment "
 
-
         Dim MyDataSet As New DataSet
         'MyDataSet = cls.Query_DS(sql, "V_BOL_M1M2_NEW")
         MyDataSet = cls.Query_DS(sql, "DataTable_Report1")
 
-        Myreport.Load("Report_File/BOL_Topup.rpt")
+        Myreport.Load("Report_File/BOL_Topup_02.rpt")
         Myreport.SetDataSource(MyDataSet)
+
         ReportPrint.CrystalReportViewer3.ReportSource = Myreport
         ReportPrint.ShowDialog()
         MyDataSet.Dispose()
